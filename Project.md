@@ -23,6 +23,8 @@ When working on this repo:
 The follow dependencies are required in development activities, but they are not necessary just for building and running the project.
 
 These repos under the same organization must be cloned as sibling folders:
+- [Tools](https://github.com/vczh-libraries/Tools)
+- [GacUI](https://github.com/vczh-libraries/GacUI)
 - [Release](https://github.com/vczh-libraries/Release)
 
 ## Updating from Upstream Repos
@@ -70,6 +72,11 @@ If any script fails, it could be possible that manual maintained source files ne
       - `Main.cpp`: start the test app for demoing skins.
   - `TestApps.sln`
   - `GacUI.xml`
+- `Spec` folder
+  - `<SKIN-NAME>` folder
+    - `Animation.md`: Explaining animations for a skin.
+    - `ColorPackage.md`: Explaining colors for a skin.
+    - `TestGuidance.md`: Test guidance when changing a skin.
 
 The initial content of `GacUI.xml` is just one line `<GacUI/>`, other contents are added only when necessary.
 Only run `GacBuild.ps1` on `Source/GacUI.xml` when any files in `Source/<SKIN-NAME>/UI` is changed.
@@ -90,6 +97,12 @@ Project and compile options could copy from sln or vcxproj files in the `Release
   - debug profile
     - `VCZH_CHECK_MEMORY_LEAKS`
     - memory leaks checking should only be applied on debug profile with `_CrtDumpMemoryLeaks` in `WinMain`.
+
+## Verification
+
+Unless explicitly requested, follow the instruction to verify when a skin is changed:
+- When creating a skin, run the full test, otherwise collect affected test pages from `Spec/<SKIN-NAME>/TestGuidance.md`, and only verify against these test pages.
+- Follow `<GacUI-repo>/.github/Jobs/DebugRemoteProtocolSop.md` to verify `FullControlTest /D2D /Hosted`.
 
 <!-- SECTION-END: FROZEN -->
 

@@ -14,7 +14,7 @@ Additional material:
 When a request begins with `investigate` or `review`, follow `<Release-repo>/AGENTS.md` to find the related task:
 - Such task might request for maintain `Copilot_Investigate.md`, use the `.github` folder in this repo instead.
 
-When `job:*` is mentioned, it means `.github/Jobs/job.*.prompt.md`.
+When `job:*` is mentioned, it means `Jobs/job.*.prompt.md`.
 
 ## Maintaining Documents
 
