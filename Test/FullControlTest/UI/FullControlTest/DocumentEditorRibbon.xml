@@ -88,6 +88,7 @@
       </ref.Ctor>
       <TextListItemTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:72">
         <CustomControl ref.Name="containerControl">
+          <Label ref.Name="themeLabel" Visible="false"/>
           <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="LimitToElementAndChildren" CellPadding="5">
             <att.Rows>
@@ -99,14 +100,14 @@
             </att.Columns>
 
             <Cell Site="row:0 column:0">
-              <SolidLabel ref.Name="styleLabel" Text="AaBbCc" Ellipse="true" Color="#FFFFFF" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              <SolidLabel ref.Name="styleLabel" Text="AaBbCc" Ellipse="true" Color-eval="themeLabel.TextColor" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Cell>
 
             <Cell Site="row:1 column:0">
               <SolidLabel Text-bind="ViewModel.Name" Font-eval="containerControl.DisplayFont" Ellipse="true" HorizontalAlignment="Center">
-                <att.Color-bind>
-                  <![CDATA[cast Color (self.Selected ? "#FFFFFF" : "#808080")]]>
-                </att.Color-bind>
+                <att.Color-eval>
+                  <![CDATA[themeLabel.TextColor]]>
+                </att.Color-eval>
               </SolidLabel>
             </Cell>
           </Table>
@@ -114,7 +115,7 @@
           <att.TooltipControl>
             <CustomControl>
               <Bounds AlignmentToParent="left:5 top:5 right:5 bottom:5" MinSizeLimitation="LimitToElementAndChildren">
-                <SolidLabel Text-bind="ViewModel.Name" Color="#FFFFFF" Font-eval="containerControl.DisplayFont"/>
+                <Label Text-bind="ViewModel.Name" Font-eval="containerControl.DisplayFont"/>
               </Bounds>
             </CustomControl>
           </att.TooltipControl>
@@ -238,7 +239,7 @@
             <att.AfterHeaders-set>
               <Stack Direction="Horizontal" AlignmentToParent="left:0 top:-1 right:0 bottom:0" MinSizeLimitation="LimitToElementAndChildren">
                 <StackItem>
-                  <SolidLabel Font-bind="self.DisplayFont" Color="#FFFFFF" Text="Search: " HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                  <Label Font-bind="self.DisplayFont" Text="Search: "/>
                 </StackItem>
                 <StackItem>
                   <SinglelineTextBox Alt="S">

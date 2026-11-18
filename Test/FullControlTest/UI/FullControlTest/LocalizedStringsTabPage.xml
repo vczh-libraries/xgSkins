@@ -56,7 +56,7 @@
           </att.Columns>
 
           <Cell Site="row:0 column:0">
-            <SolidLabel Font-bind="self.DisplayFont" Color="#FFFFFF" Text-str="Label()" VerticalAlignment="Center"/>
+            <Label Font-bind="self.DisplayFont" Text-str="Label()"/>
           </Cell>
 
           <Cell Site="row:0 column:1">

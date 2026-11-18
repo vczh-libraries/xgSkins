@@ -43,7 +43,7 @@
             }]]></att.ExpectedBounds-bind>
             <SolidBackground Color-bind="self.VisuallyEnabled and self.Selected ? self.Colors.ItemBackgroundSelected : self.Colors.ContentBackground"/>
             <Bounds AlignmentToParent="left:16 top:12 right:16 bottom:12">
-              <SolidLabel Text-bind="ViewModel.Text" Color-bind="self.VisuallyEnabled ? self.TextColor : self.Colors.TextDisabled" Font-bind="self.Font" WrapLine="true" Multiline="true"/>
+              <SolidLabel Text-bind="ViewModel.Text" Color-bind="self.VisuallyEnabled ? self.Colors.TextNormal : self.Colors.TextDisabled" Font-bind="self.Font" WrapLine="true" Multiline="true"/>
             </Bounds>
           </Bounds>
         </Bounds>
