@@ -8,38 +8,30 @@ using namespace vl;
 
 namespace demo
 {
-	// DarkSkin supplies its ordinary menu factory to buttons. GacUI copies that
-	// factory into each new popup, which would pin it across showcase skin changes.
-	template<typename T>
-	void UseThemeMenu(presentation::TemplateProperty<T>& createTemplate)
+	void RegisterFctTheme(Ptr<presentation::theme::ThemeTemplates> selected)
 	{
-		createTemplate = [createTemplate](const reflection::description::Value& value)
+		for (auto name : { L"DarkSkin", L"Win7Skin", L"Win8Skin", L"WinXPSkin" })
 		{
-			auto controlTemplate = createTemplate(value);
-			controlTemplate->SetSubMenuTemplate({});
-			return controlTemplate;
-		};
+			presentation::theme::UnregisterTheme(name);
+		}
+		presentation::theme::RegisterTheme(selected);
+
+		// DarkSkin copies its stock menu template into popups when their owners create them.
+		for (auto window : presentation::controls::GetApplication()->GetWindows())
+		{
+			if (window->GetControlThemeName() == presentation::theme::ThemeName::Menu &&
+				window->GetControlTemplate() &&
+				dynamic_cast<darkskin::ToolstripMenuTemplate*>(window->GetControlTemplateObject()))
+			{
+				window->SetControlTemplate({});
+			}
+		}
 	}
 
 	void RegisterFctDarkSkin()
 	{
 		darkskin::SetColorPackage(darkskin::CreateDefaultColorPackage());
-		auto skin = Ptr(new darkskin::Theme);
-		UseThemeMenu(skin->ComboBox);
-		UseThemeMenu(skin->DateComboBox);
-		UseThemeMenu(skin->MenuBarButton);
-		UseThemeMenu(skin->MenuItemButton);
-		UseThemeMenu(skin->ToolstripButton);
-		UseThemeMenu(skin->ToolstripDropdownButton);
-		UseThemeMenu(skin->ToolstripSplitButton);
-		UseThemeMenu(skin->RibbonSmallButton);
-		UseThemeMenu(skin->RibbonSmallDropdownButton);
-		UseThemeMenu(skin->RibbonSmallSplitButton);
-		UseThemeMenu(skin->RibbonLargeButton);
-		UseThemeMenu(skin->RibbonLargeDropdownButton);
-		UseThemeMenu(skin->RibbonLargeSplitButton);
-		presentation::theme::UnregisterTheme(L"DarkSkin");
-		presentation::theme::RegisterTheme(skin);
+		RegisterFctTheme(Ptr(new darkskin::Theme));
 	}
 
 	void InitializeFctSkinItems(const Func<void(const WString&, const Func<void()>&, bool)>& addItem)
@@ -48,20 +40,17 @@ namespace demo
 		addItem(L"Win7Skin", []
 		{
 			win7skin::SetColorPackage(win7skin::CreateDefaultColorPackage());
-			presentation::theme::UnregisterTheme(L"Win7Skin");
-			presentation::theme::RegisterTheme(Ptr(new win7skin::Theme));
+			RegisterFctTheme(Ptr(new win7skin::Theme));
 		}, false);
 		addItem(L"Win8Skin", []
 		{
 			win8skin::SetColorPackage(win8skin::CreateDefaultColorPackage());
-			presentation::theme::UnregisterTheme(L"Win8Skin");
-			presentation::theme::RegisterTheme(Ptr(new win8skin::Theme));
+			RegisterFctTheme(Ptr(new win8skin::Theme));
 		}, false);
 		addItem(L"WinXPSkin", []
 		{
 			winxpskin::SetColorPackage(winxpskin::CreateDefaultColorPackage());
-			presentation::theme::UnregisterTheme(L"WinXPSkin");
-			presentation::theme::RegisterTheme(Ptr(new winxpskin::Theme));
+			RegisterFctTheme(Ptr(new winxpskin::Theme));
 		}, false);
 	}
 }

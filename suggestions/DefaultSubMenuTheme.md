@@ -17,13 +17,14 @@ and [<GacUI-repo>/Source/Application/Controls/GuiBasicControls.cpp](https://gith
 
 For ordinary popups, register the skin’s menu template in the theme’s `Menu`
 slot and leave the button’s `SubMenuTemplate` empty. An explicit template
-passed by the application still takes precedence. FullControlTest also clears
-the redundant stock submenu factory when it creates DarkSkin’s button and
-combo templates. Its startup theme and the DarkSkin selector use the same
-registration. See [FullControlTestEventHandlers.cpp](../Test/FullControlTest/FullControlTestEventHandlers.cpp).
+passed by the application still takes precedence. FullControlTest unregisters
+its four themes and registers the selected one. A registry reset alone left
+existing File and combo popups dark under both Win7Skin and Win8Skin. The
+showcase clears the copied template on ordinary DarkSkin menu windows so they
+can resolve through the selected theme’s `Menu` slot. See [FullControlTestEventHandlers.cpp](../Test/FullControlTest/FullControlTestEventHandlers.cpp).
 
 Upstream DarkSkin can use the same empty default for ordinary menus. That
-change would let the showcase remove its DarkSkin factory adapter. If a future
+change would let the showcase remove the popup reset. If a future
 skin needs a distinct inherited submenu template, GacUI could track whether
 the factory came from the owner or from the caller and refresh the inherited
 one when the owner template changes. Verify combo lists, nested menus and
