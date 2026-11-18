@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{9cdd5d13-56a2-41f5-90bf-e0f5d147d766}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Import">
+      <UniqueIdentifier>{AB6E6807-27D2-4AC1-8D99-FC31E93BD697}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FullControlTestEventHandlers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FullControlTestRawClockInterpretor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FullControlTestRawElement.Windows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SharedDocumentEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Source\DocumentEditorBase.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Source\FullControlTestPartialClasses.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Source\FullControlTestResource.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\Source\MainWindow.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Import\Release\GacUI.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Import\Release\GacUI.Windows.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Import\Release\Skins\DarkSkin\DarkSkin.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Import\Release\Vlpp.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Import\Release\Vlpp.Windows.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Import\Release\VlppGlrParser.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Import\Release\VlppOS.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Import\Release\VlppOS.Windows.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Import\Release\VlppReflection.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Import\Release\VlppRegex.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Import\Release\VlppWorkflowLibrary.cpp">
+      <Filter>Import</Filter>
+    </ClCompile>
+    <ClInclude Include="FullControlTestEventHandlers.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FullControlTestRawClockInterpretor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FullControlTestRawElement.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SharedDocumentEditor.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Source\DocumentEditorBase.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Source\FullControlTest.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Source\FullControlTestPartialClasses.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Source\FullControlTestPartialClasses1.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Source\FullControlTestReflection.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\Source\MainWindow.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Import\Release\GacUI.h">
+      <Filter>Import</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Import\Release\GacUI.Windows.h">
+      <Filter>Import</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Import\Release\Skins\DarkSkin\DarkSkin.h">
+      <Filter>Import</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Import\Release\Vlpp.h">
+      <Filter>Import</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Import\Release\VlppGlrParser.h">
+      <Filter>Import</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Import\Release\VlppOS.h">
+      <Filter>Import</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Import\Release\VlppOS.Windows.h">
+      <Filter>Import</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Import\Release\VlppReflection.h">
+      <Filter>Import</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Import\Release\VlppRegex.h">
+      <Filter>Import</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Import\Release\VlppWorkflowLibrary.h">
+      <Filter>Import</Filter>
+    </ClInclude>
+    <None Include="..\GacUI.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="UI\FullControlTest\Resource.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -3,8 +3,6 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
-# Repo-specific files
-
 # User-specific files
 *.rsuser
 *.suo
@@ -426,3 +424,9 @@ FodyWeavers.xsd
 
 # Official VS Code C# Dev Kit Extension exclusion
 #*.lscache
+
+# Repo-specific files
+!/Import/Release/
+!/Import/Release/**
+/Test/GacUI.xml.log/
+/Test/FullControlTest/UI/FullControlTest/Resource.xml.log/
