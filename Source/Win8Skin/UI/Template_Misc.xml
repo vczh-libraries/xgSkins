@@ -1,0 +1,95 @@
+<Folder>
+  <Script name="GroupCaptionState">
+    <Workflow><![CDATA[
+      module Win8GroupCaption;
+      using presentation::*;
+      namespace win8skin
+      {
+        class GroupCaptionState
+        {
+          prop Text : Color = {} {}
+          new() {}
+          new(color : Color) { Text = color; }
+        }
+      }
+    ]]></Workflow>
+  </Script>
+  <Animation name="GroupCaptionAnimation">
+    <Gradient ref.Class="win8skin::GroupCaptionAnimation" Type="win8skin::GroupCaptionState">
+      <Interpolation><![CDATA[[$1]]]></Interpolation>
+      <Targets><Target Name="Text"/></Targets>
+    </Gradient>
+  </Animation>
+  <Instance name="GroupBoxTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::GroupBoxTemplate" ref.Styles="res://Win8Skin/Style">
+      <ref.Members><![CDATA[
+        prop CaptionColor : Color = win8Colors.GroupText {}
+        var animation : GroupCaptionAnimation^ = new GroupCaptionAnimation^(new GroupCaptionState^(win8Colors.GroupText));
+        var lastAnimation : IGuiAnimation^ = null;
+      ]]></ref.Members>
+      <ControlTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.CaptionColor-bind>self.VisuallyEnabled ? win8Colors.GroupText : win8Colors.TextDisabled</att.CaptionColor-bind>
+        <ev.CaptionColorChanged-eval><![CDATA[{
+          self.KillAnimation(self.lastAnimation);
+          self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new GroupCaptionState^(self.CaptionColor), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
+          self.AddAnimation(self.lastAnimation);
+        }]]></ev.CaptionColorChanged-eval>
+        <SolidBackground ref.Style="generalBackground"/>
+        <Bounds AlignmentToParent-bind="{left:0 top:(titleBounds.CachedBounds.y2/2) right:0 bottom:0}">
+          <SolidBorder Color-eval="win8Colors.GroupBorder"/>
+          <Bounds ref.Name="container" AlignmentToParent-bind="{left:1 top:(1+titleBounds.CachedBounds.y2/2) right:1 bottom:1}"/>
+        </Bounds>
+        <Bounds ref.Name="titleBounds" AlignmentToParent="left:5 top:0 right:-1 bottom:-1">
+          <SolidBackground ref.Style="generalBackground"/>
+          <Bounds AlignmentToParent="left:2 top:0 right:2 bottom:0">
+            <SolidLabel Text-bind="self.Text" Color-bind="self.animation.Current.Text" Font-bind="self.Font" VerticalAlignment="Center"/>
+          </Bounds>
+        </Bounds>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="LabelTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::LabelTemplate" ref.Styles="res://Win8Skin/Style">
+      <LabelTemplate ref.Name="self" ref.Style="labelDefaultText" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidLabel Text-bind="self.Text" Font-bind="self.Font" ref.Style="labelText"/>
+      </LabelTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ShortcutKeyTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::ShortcutKeyTemplate" ref.Styles="res://Win8Skin/Style">
+      <LabelTemplate ref.Name="self" ref.Style="labelDefaultText" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBorder Color-eval="win8Colors.TooltipBorder"/>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <SolidBackground Color-eval="win8Colors.TooltipBackground"/>
+          <Bounds AlignmentToParent="left:0 top:0 right:1 bottom:0">
+            <SolidLabel Text-bind="self.Text" Font-bind="self.Font" Color-bind="self.TextColor"/>
+          </Bounds>
+        </Bounds>
+      </LabelTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="DateButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::DateButtonTemplate" xmlns:x="win8skin::*">
+      <x:ItemBackgroundTemplate ref.Name="self">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Focused">
+          <FocusRectangle/>
+        </Bounds>
+      </x:ItemBackgroundTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="DatePickerTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::DatePickerTemplate" ref.Styles="res://Win8Skin/Style">
+      <DatePickerTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" Date-bind="look.Date">
+        <CommonDatePickerLook ref.Name="look" ref.Style="datePickerColors" AlignmentToParent="left:0 top:0 right:0 bottom:0" Font-bind="self.Font" Date-bind="self.Date" DateLocale-bind="self.DateLocale" Commands-bind="self.Commands">
+          <att.DateButtonTemplate>win8skin::DateButtonTemplate</att.DateButtonTemplate>
+          <att.DateTextListTemplate>win8skin::TextListTemplate</att.DateTextListTemplate>
+          <att.DateComboBoxTemplate>win8skin::ComboBoxTemplate</att.DateComboBoxTemplate>
+        </CommonDatePickerLook>
+      </DatePickerTemplate>
+    </Instance>
+  </Instance>
+</Folder>

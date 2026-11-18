@@ -1,0 +1,111 @@
+<Styles>
+  <Style ref.Path="(//Bounds + //Table + //RepeatStack + //RepeatFlow)" MinSizeLimitation="LimitToElementAndChildren"/>
+  <Style ref.Path="//*.generalBackground" Color-eval="win8skin::win8Colors.GeneralBackground"/>
+  <Style ref.Path="//*.windowBorder">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color let margin = self.CustomFramePadding in (
+          (not self.Border) or (margin.left + margin.top + margin.right + margin.bottom == 0) ? win8skin::win8Colors.Transparent :
+          self.VisuallyEnabled and self.Activated ? win8skin::win8Colors.WindowBorderActive :
+          win8skin::win8Colors.WindowBorderInactive
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.windowTitle">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color (
+          self.VisuallyEnabled and self.Activated ? win8skin::win8Colors.TextNormal :
+          win8skin::win8Colors.TextDisabled
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.tooltipBorder" Color-eval="win8skin::win8Colors.TooltipBorder"/>
+  <Style ref.Path="//*.labelDefaultText" DefaultTextColor-eval="win8skin::win8Colors.TextNormal"/>
+  <Style ref.Path="//*.labelText">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color (
+          not self.VisuallyEnabled ? win8skin::win8Colors.TextDisabled :
+          self.TextColor
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.datePickerColors">
+    <att.BackgroundColor-eval>win8skin::win8Colors.GeneralBackground</att.BackgroundColor-eval>
+    <att.PrimaryTextColor-eval>win8skin::win8Colors.TextBright</att.PrimaryTextColor-eval>
+    <att.SecondaryTextColor-eval>win8skin::win8Colors.TextSecondary</att.SecondaryTextColor-eval>
+  </Style>
+  <Style ref.Path="//*.listBorder">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color (
+          not self.VisuallyEnabled ? win8skin::win8Colors.GeneralBorder :
+          self.Focused ? win8skin::win8Colors.ControlAccentHovered :
+          win8skin::win8Colors.ButtonBackgroundHovered
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.textListBackgroundAndColor">
+    <att.TextColor-eval>win8skin::win8Colors.TextNormal</att.TextColor-eval>
+    <SolidBackground Color-eval="win8skin::win8Colors.ContentBackground"/>
+  </Style>
+  <Style ref.Path="//*.listViewBackgroundAndColor">
+    <att.PrimaryTextColor-eval>win8skin::win8Colors.TextNormal</att.PrimaryTextColor-eval>
+    <att.SecondaryTextColor-eval>win8skin::win8Colors.TextDisabled</att.SecondaryTextColor-eval>
+    <att.ItemSeparatorColor-eval>win8skin::win8Colors.ListItemSeparator</att.ItemSeparatorColor-eval>
+    <SolidBackground Color-eval="win8skin::win8Colors.ContentBackground"/>
+  </Style>
+  <Style ref.Path="//*.treeViewBackgroundAndColor">
+    <att.TextColor-eval>win8skin::win8Colors.TextNormal</att.TextColor-eval>
+    <SolidBackground Color-eval="win8skin::win8Colors.ContentBackground"/>
+  </Style>
+  <Style ref.Path="//*.controlText">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color (
+          not self.VisuallyEnabled ? win8skin::win8Colors.TextDisabled :
+          win8skin::win8Colors.TextNormal
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.toolstripMenuBackground" Color-eval="win8skin::win8Colors.MenuBackground"/>
+  <Style ref.Path="//*.toolstripMenuBorder" Color-eval="win8skin::win8Colors.MenuBorder"/>
+  <Style ref.Path="//*.toolstripSplitter" Color-eval="win8skin::win8Colors.ToolstripSplitBorder"/>
+  <Style ref.Path="//*.toolstripArrow" BorderColor-bind="self.animation.Current.Text" BackgroundColor-bind="self.animation.Current.Text"/>
+  <Style ref.Path="//*.toolstripSplitArrow" BorderColor-bind="self.VisuallyEnabled ? win8skin::win8Colors.TextNormal : win8skin::win8Colors.TextDisabled" BackgroundColor-bind="self.VisuallyEnabled ? win8skin::win8Colors.TextNormal : win8skin::win8Colors.TextDisabled"/>
+  <Style ref.Path="//*.ribbonGroupBorder" Color-eval="win8skin::win8Colors.RibbonBorder"/>
+  <Style ref.Path="//*.ribbonGroupTitle" Color-eval="win8skin::win8Colors.RibbonGroupText"/>
+  <Style ref.Path="//*.ribbonMenuBorder" Color-eval="win8skin::win8Colors.MenuBorder"/>
+  <Style ref.Path="//*.ribbonExpandableArrow">
+    <att.BorderColor-bind>
+      <![CDATA[
+        cast Color let state = self.State in (
+          not self.VisuallyEnabled ? win8skin::win8Colors.RibbonExpandingArrow :
+          state == ButtonState::Pressed ? win8skin::win8Colors.RibbonExpandingArrowPressed :
+          state == ButtonState::Active ? win8skin::win8Colors.RibbonExpandingArrow :
+          win8skin::win8Colors.RibbonExpandingArrow
+        )
+      ]]>
+    </att.BorderColor-bind>
+    <att.BackgroundColor-bind>
+      <![CDATA[
+        cast Color let state = self.State in (
+          not self.VisuallyEnabled ? win8skin::win8Colors.Transparent :
+          state == ButtonState::Pressed ? win8skin::win8Colors.RibbonExpandingArrowPressed :
+          state == ButtonState::Active ? win8skin::win8Colors.RibbonExpandingArrow :
+          win8skin::win8Colors.Transparent
+        )
+      ]]>
+    </att.BackgroundColor-bind>
+  </Style>
+  <Style ref.Path="//*.documentBoxBackgroundAndColor" BaselineDocument-eval="win8skin::CreateBaselineDocument()">
+    <att.CaretColor-eval>win8skin::win8Colors.TextBright</att.CaretColor-eval>
+    <SolidBackground Color-eval="win8skin::win8Colors.ContentBackground"/>
+  </Style>
+</Styles>

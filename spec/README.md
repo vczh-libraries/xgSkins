@@ -6,3 +6,5 @@ use Window Manager to select another skin.
 
 - Win7Skin: [colors](Win7Skin/ColorPackage.md), [animation](Win7Skin/Animation.md),
   [test guidance](Win7Skin/TestGuidance.md).
+- Win8Skin: [colors](Win8Skin/ColorPackage.md), [animation](Win8Skin/Animation.md),
+  [test guidance](Win8Skin/TestGuidance.md).

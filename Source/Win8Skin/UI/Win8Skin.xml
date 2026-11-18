@@ -1,0 +1,552 @@
+<Folder>
+  <Script name="Palette">
+    <Workflow><![CDATA[
+    module Win8Palette;
+    using presentation::*;
+    namespace win8skin
+    {
+      struct ColorPackage
+      {
+        EditorNormal : EditorColors;
+        EditorHovered : EditorColors;
+        EditorFocused : EditorColors;
+        EditorDisabled : EditorColors;
+        HeaderBackground : Color;
+        HeaderBackgroundPressed : Color;
+        HeaderSeparatorTop : Color;
+        HeaderBorderPressed : Color;
+        HeaderBorderHovered : Color;
+        HeaderGradientPressedTop : Color;
+        HeaderGradientHoveredTop : Color;
+        HeaderGradientHoveredBottom : Color;
+        HeaderText : Color;
+        HeaderDropDownTop : Color;
+        HeaderDropDownBottom : Color;
+        TreeArrowBorder : Color;
+        TreeArrowBackground : Color;
+        TreeArrowBorderExpanded : Color;
+        TreeArrowBackgroundExpanded : Color;
+        TreeArrowBorderHovered : Color;
+        TreeArrowBackgroundHovered : Color;
+        ListItemSeparator : Color;
+        ItemNormal : ButtonColors;
+        ItemHovered : ButtonColors;
+        ItemSelected : ButtonColors;
+        ItemDisabled : ButtonColors;
+        TabNormal : ButtonColors;
+        TabHovered : ButtonColors;
+        TabSelected : ButtonColors;
+        ButtonNormal : ButtonColors;
+        ButtonHovered : ButtonColors;
+        ButtonPressed : ButtonColors;
+        ButtonDisabled : ButtonColors;
+        CheckedNormal : ButtonColors;
+        CheckedHovered : ButtonColors;
+        CheckedPressed : ButtonColors;
+        CheckedDisabled : ButtonColors;
+        RibbonButtonNormal : ButtonColors;
+        RibbonButtonActive : ButtonColors;
+        RibbonButtonPressed : ButtonColors;
+        RibbonButtonSelected : ButtonColors;
+        RibbonButtonDisabled : ButtonColors;
+        ToolstripButtonNormal : ButtonColors;
+        ToolstripButtonActive : ButtonColors;
+        ToolstripButtonPressed : ButtonColors;
+        ToolstripButtonSelected : ButtonColors;
+        ToolstripButtonDisabled : ButtonColors;
+        MenuBarButtonNormal : ButtonColors;
+        MenuBarButtonActive : ButtonColors;
+        MenuBarButtonPressed : ButtonColors;
+        MenuBarButtonDisabled : ButtonColors;
+        MenuItemButtonNormal : ButtonColors;
+        MenuItemButtonNormalActive : ButtonColors;
+        MenuItemButtonSelected : ButtonColors;
+        MenuItemButtonSelectedActive : ButtonColors;
+        MenuItemButtonDisabled : ButtonColors;
+        MenuItemButtonDisabledActive : ButtonColors;
+        GeneralBackground : Color;
+        GeneralBorder : Color;
+        GeneralAccent : Color;
+        ContentBackground : Color;
+        Transparent : Color;
+        WindowBorderActive : Color;
+        TextSecondary : Color;
+        TextDisabled : Color;
+        GroupText : Color;
+        TextNormal : Color;
+        TextBright : Color;
+        ButtonBackgroundHovered : Color;
+        ControlAccentHovered : Color;
+        TabHighlightedSelected : Color;
+        TabHighlightedHovered : Color;
+        TabHighlightedBackground : Color;
+        ScrollHandlePressed : ButtonColors;
+        ProgressBorder : Color;
+        MenuBackground : Color;
+        MenuBorder : Color;
+        RibbonExpandingArrow : Color;
+        RibbonExpandingArrowPressed : Color;
+        TooltipBackground : Color;
+        TooltipBorder : Color;
+        MenuInner : Color;
+        SelectionText : Color;
+        WindowCaptionInactive : Color;
+        WindowCloseHovered : Color;
+        WindowClosePressed : Color;
+        WindowCloseText : Color;
+        RibbonBorder : Color;
+        RibbonGroupText : Color;
+        ScrollHandleNormal : ButtonColors;
+        ScrollHandleActive : ButtonColors;
+        ScrollHandleDisabled : ButtonColors;
+        ScrollArrowNormal : ButtonColors;
+        ScrollArrowActive : ButtonColors;
+        ScrollArrowPressed : ButtonColors;
+        ScrollArrowDisabled : ButtonColors;
+        ScrollBackground : Color;
+        TrackerBackground : Color;
+        TrackerBorder : Color;
+        ProgressBackground : Color;
+        ProgressFilling : Color;
+        MenuBarBackground : Color;
+        MenuBarBorderDark : Color;
+        MenuBarBorderLight : Color;
+        ToolstripTopDark : Color;
+        ToolstripTopLight : Color;
+        ToolstripSplitBorder : Color;
+        MenuSplitter : Color;
+        GroupBorder : Color;
+        WindowCaption : Color;
+        WindowCaptionButtonHovered : Color;
+        WindowCaptionButtonPressed : Color;
+        WindowClose : Color;
+        WindowBorderInactive : Color;
+        RibbonBackground : Color;
+      }
+
+      func CreateDefaultColorPackage() : ColorPackage
+      {
+        return {
+          EditorNormal: {
+            Border: cast Color "#ABADB3";
+            Background: cast Color "#FFFFFF";
+          };
+          EditorHovered: {
+            Border: cast Color "#7EB4EA";
+            Background: cast Color "#FFFFFF";
+          };
+          EditorFocused: {
+            Border: cast Color "#569DE5";
+            Background: cast Color "#FFFFFF";
+          };
+          EditorDisabled: {
+            Border: cast Color "#D9D9D9";
+            Background: cast Color "#F0F0F0";
+          };
+          HeaderBackground: cast Color "#FCFCFC";
+          HeaderBackgroundPressed: cast Color "#F6F7F8";
+          HeaderSeparatorTop: cast Color "#DFEAF7";
+          HeaderBorderPressed: cast Color "#C0CBD9";
+          HeaderBorderHovered: cast Color "#DFE9F6";
+          HeaderGradientPressedTop: cast Color "#C1CCDA";
+          HeaderGradientHoveredTop: cast Color "#F3F8FD";
+          HeaderGradientHoveredBottom: cast Color "#EFF3F9";
+          HeaderText: cast Color "#4C607A";
+          HeaderDropDownTop: cast Color "#E6F1FF";
+          HeaderDropDownBottom: cast Color "#E0E2FD";
+          TreeArrowBorder: cast Color "#A6A6A6";
+          TreeArrowBackground: cast Color "#FFFFFF";
+          TreeArrowBorderExpanded: cast Color "#262626";
+          TreeArrowBackgroundExpanded: cast Color "#595959";
+          TreeArrowBorderHovered: cast Color "#1CC4F7";
+          TreeArrowBackgroundHovered: cast Color "#82DFFB";
+          ListItemSeparator: cast Color "#DCDCDC";
+          ItemNormal: {
+            Border: cast Color "#70C0E700";
+            G1: cast Color "#E5F3FB00";
+            G2: cast Color "#E5F3FB00";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          ItemHovered: {
+            Border: cast Color "#70C0E7";
+            G1: cast Color "#E5F3FB";
+            G2: cast Color "#E5F3FB";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          ItemSelected: {
+            Border: cast Color "#66A7E8";
+            G1: cast Color "#D1E8FF";
+            G2: cast Color "#D1E8FF";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          ItemDisabled: {
+            Border: cast Color "#70C0E700";
+            G1: cast Color "#E5F3FB00";
+            G2: cast Color "#E5F3FB00";
+            Text: cast Color "#838383";
+            Bullet: cast Color "#000000";
+          };
+          TabNormal: {
+            Border: cast Color "#ACACAC";
+            G1: cast Color "#EFEFEF";
+            G2: cast Color "#E5E5E5";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          TabHovered: {
+            Border: cast Color "#7EB4EA";
+            G1: cast Color "#ECF4FC";
+            G2: cast Color "#DDEDFC";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          TabSelected: {
+            Border: cast Color "#ACACAC";
+            G1: cast Color "#FFFFFF";
+            G2: cast Color "#FFFFFF";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          ButtonNormal: {
+            Border: cast Color "#ACACAC";
+            G1: cast Color "#EFEFEF";
+            G2: cast Color "#E5E5E5";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          ButtonHovered: {
+            Border: cast Color "#7EB4EA";
+            G1: cast Color "#EBF4FC";
+            G2: cast Color "#DCECFC";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          ButtonPressed: {
+            Border: cast Color "#569DE5";
+            G1: cast Color "#DAECFC";
+            G2: cast Color "#C4E0FC";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          ButtonDisabled: {
+            Border: cast Color "#ADB2B5";
+            G1: cast Color "#FCFCFC";
+            G2: cast Color "#FCFCFC";
+            Text: cast Color "#838383";
+            Bullet: cast Color "#000000";
+          };
+          CheckedNormal: {
+            Border: cast Color "#707070";
+            G1: cast Color "#FFFFFF";
+            G2: cast Color "#FFFFFF";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          CheckedHovered: {
+            Border: cast Color "#3399FF";
+            G1: cast Color "#F3F9FF";
+            G2: cast Color "#F3F9FF";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#212121";
+          };
+          CheckedPressed: {
+            Border: cast Color "#007CDE";
+            G1: cast Color "#D9ECFF";
+            G2: cast Color "#D9ECFF";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          CheckedDisabled: {
+            Border: cast Color "#BCBCBC";
+            G1: cast Color "#E6E6E6";
+            G2: cast Color "#E6E6E6";
+            Text: cast Color "#838383";
+            Bullet: cast Color "#707070";
+          };
+          RibbonButtonNormal: {
+            Border: cast Color "#F0F0F000";
+            G1: cast Color "#F0F0F000";
+            G2: cast Color "#F0F0F000";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          RibbonButtonActive: {
+            Border: cast Color "#78AEE5";
+            G1: cast Color "#D1E2F2";
+            G2: cast Color "#D1E2F2";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          RibbonButtonPressed: {
+            Border: cast Color "#60A1E2";
+            G1: cast Color "#B4D4F4";
+            G2: cast Color "#B4D4F4";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          RibbonButtonSelected: {
+            Border: cast Color "#60A1E2";
+            G1: cast Color "#E9F1FA";
+            G2: cast Color "#E9F1FA";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          RibbonButtonDisabled: {
+            Border: cast Color "#F0F0F000";
+            G1: cast Color "#F0F0F000";
+            G2: cast Color "#F0F0F000";
+            Text: cast Color "#838383";
+            Bullet: cast Color "#000000";
+          };
+          ToolstripButtonNormal: {
+            Border: cast Color "#F0F0F0";
+            G1: cast Color "#F0F0F0";
+            G2: cast Color "#F0F0F0";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          ToolstripButtonActive: {
+            Border: cast Color "#78AEE5";
+            G1: cast Color "#D1E2F2";
+            G2: cast Color "#D1E2F2";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          ToolstripButtonPressed: {
+            Border: cast Color "#60A1E2";
+            G1: cast Color "#B4D4F4";
+            G2: cast Color "#B4D4F4";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          ToolstripButtonSelected: {
+            Border: cast Color "#60A1E2";
+            G1: cast Color "#E9F1FA";
+            G2: cast Color "#E9F1FA";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          ToolstripButtonDisabled: {
+            Border: cast Color "#F0F0F0";
+            G1: cast Color "#F0F0F0";
+            G2: cast Color "#F0F0F0";
+            Text: cast Color "#838383";
+            Bullet: cast Color "#000000";
+          };
+          MenuBarButtonNormal: {
+            Border: cast Color "#F5F6F700";
+            G1: cast Color "#F5F6F700";
+            G2: cast Color "#F5F6F700";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          MenuBarButtonActive: {
+            Border: cast Color "#7AB1E8";
+            G1: cast Color "#D5E7F8";
+            G2: cast Color "#D5E7F8";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          MenuBarButtonPressed: {
+            Border: cast Color "#62A3E5";
+            G1: cast Color "#B8D8F9";
+            G2: cast Color "#B8D8F9";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          MenuBarButtonDisabled: {
+            Border: cast Color "#F5F6F700";
+            G1: cast Color "#F5F6F700";
+            G2: cast Color "#F5F6F700";
+            Text: cast Color "#838383";
+            Bullet: cast Color "#000000";
+          };
+          MenuItemButtonNormal: {
+            Border: cast Color "#F0F0F0";
+            G1: cast Color "#F0F0F0";
+            G2: cast Color "#F0F0F0";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#D7D7D7";
+          };
+          MenuItemButtonNormalActive: {
+            Border: cast Color "#78AEE5";
+            G1: cast Color "#D1E2F2";
+            G2: cast Color "#D1E2F2";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#BBCCDC";
+          };
+          MenuItemButtonSelected: {
+            Border: cast Color "#78AEE5";
+            G1: cast Color "#E9F1FA";
+            G2: cast Color "#E9F1FA";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#E9F1FA";
+          };
+          MenuItemButtonSelectedActive: {
+            Border: cast Color "#78AEE5";
+            G1: cast Color "#E9F1FA";
+            G2: cast Color "#E9F1FA";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#BBCCDC";
+          };
+          MenuItemButtonDisabled: {
+            Border: cast Color "#F0F0F0";
+            G1: cast Color "#F0F0F0";
+            G2: cast Color "#F0F0F0";
+            Text: cast Color "#838383";
+            Bullet: cast Color "#D7D7D7";
+          };
+          MenuItemButtonDisabledActive: {
+            Border: cast Color "#78AEE5";
+            G1: cast Color "#D1E2F2";
+            G2: cast Color "#D1E2F2";
+            Text: cast Color "#838383";
+            Bullet: cast Color "#D7D7D7";
+          };
+          GeneralBackground: cast Color "#F0F0F0";
+          GeneralBorder: cast Color "#ABADB3";
+          GeneralAccent: cast Color "#3399FF";
+          ContentBackground: cast Color "#FFFFFF";
+          Transparent: cast Color "#00000000";
+          WindowBorderActive: cast Color "#92ACC6";
+          TextSecondary: cast Color "#838383";
+          TextDisabled: cast Color "#838383";
+          GroupText: cast Color "#000000";
+          TextNormal: cast Color "#000000";
+          TextBright: cast Color "#000000";
+          ButtonBackgroundHovered: cast Color "#D1E2F2";
+          ControlAccentHovered: cast Color "#7EB4EA";
+          TabHighlightedSelected: cast Color "#FFF4C3";
+          TabHighlightedHovered: cast Color "#FFF8DE";
+          TabHighlightedBackground: cast Color "#F2E4B8";
+          ScrollHandlePressed: {
+            Border: cast Color "#A6A6A6";
+            G1: cast Color "#A6A6A6";
+            G2: cast Color "#A6A6A6";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          ProgressBorder: cast Color "#BCBCBC";
+          MenuBackground: cast Color "#F0F0F0";
+          MenuBorder: cast Color "#979797";
+          RibbonExpandingArrow: cast Color "#3B3B3B";
+          RibbonExpandingArrowPressed: cast Color "#000000";
+          TooltipBackground: cast Color "#FFFFE1";
+          TooltipBorder: cast Color "#646464";
+          MenuInner: cast Color "#F0F0F0";
+          SelectionText: cast Color "#FFFFFF";
+          WindowCaptionInactive: cast Color "#EBEBEB";
+          WindowCloseHovered: cast Color "#E04343";
+          WindowClosePressed: cast Color "#993D3D";
+          WindowCloseText: cast Color "#FFFFFF";
+          RibbonBorder: cast Color "#E2E3E5";
+          RibbonGroupText: cast Color "#3B3B3B";
+          ScrollHandleNormal: {
+            Border: cast Color "#CDCDCD";
+            G1: cast Color "#CDCDCD";
+            G2: cast Color "#CDCDCD";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          ScrollHandleActive: {
+            Border: cast Color "#A6A6A6";
+            G1: cast Color "#A6A6A6";
+            G2: cast Color "#A6A6A6";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          ScrollHandleDisabled: {
+            Border: cast Color "#F0F0F0";
+            G1: cast Color "#F0F0F0";
+            G2: cast Color "#F0F0F0";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          ScrollArrowNormal: {
+            Border: cast Color "#F0F0F0";
+            G1: cast Color "#F0F0F0";
+            G2: cast Color "#F0F0F0";
+            Text: cast Color "#606060";
+            Bullet: cast Color "#000000";
+          };
+          ScrollArrowActive: {
+            Border: cast Color "#DADADA";
+            G1: cast Color "#DADADA";
+            G2: cast Color "#DADADA";
+            Text: cast Color "#000000";
+            Bullet: cast Color "#000000";
+          };
+          ScrollArrowPressed: {
+            Border: cast Color "#606060";
+            G1: cast Color "#606060";
+            G2: cast Color "#606060";
+            Text: cast Color "#FFFFFF";
+            Bullet: cast Color "#000000";
+          };
+          ScrollArrowDisabled: {
+            Border: cast Color "#F0F0F0";
+            G1: cast Color "#F0F0F0";
+            G2: cast Color "#F0F0F0";
+            Text: cast Color "#BFBFBF";
+            Bullet: cast Color "#000000";
+          };
+          ScrollBackground: cast Color "#F0F0F0";
+          TrackerBackground: cast Color "#E7EAEA";
+          TrackerBorder: cast Color "#D6D6D6";
+          ProgressBackground: cast Color "#E6E6E6";
+          ProgressFilling: cast Color "#06B025";
+          MenuBarBackground: cast Color "#F5F6F7";
+          MenuBarBorderDark: cast Color "#E8E9EA";
+          MenuBarBorderLight: cast Color "#F0F0F0";
+          ToolstripTopDark: cast Color "#A0A0A0";
+          ToolstripTopLight: cast Color "#FFFFFF";
+          ToolstripSplitBorder: cast Color "#848484";
+          MenuSplitter: cast Color "#D7D7D7";
+          GroupBorder: cast Color "#DDDDDD";
+          WindowCaption: cast Color "#B0CBE8";
+          WindowCaptionButtonHovered: cast Color "#DCEEFF";
+          WindowCaptionButtonPressed: cast Color "#A6CEF5";
+          WindowClose: cast Color "#C75050";
+          WindowBorderInactive: cast Color "#D9D9D9";
+          RibbonBackground: cast Color "#F5F6F7";
+        };
+      }
+
+      var win8Colors : ColorPackage = CreateDefaultColorPackage();
+
+      /*
+      * Calling GuiApplication::GetApplication().RefreshThemes will reload the new baseline document.
+      */
+      func CreateBaselineDocument() : DocumentModel^
+      {
+        var document = new DocumentModel^();
+        var normal = new DocumentStyle^();
+        normal.styles = new DocumentStyleProperties^();
+        normal.styles.color = win8Colors.TextBright;
+        document.styles["#Default-Override"] = normal;
+        var selection = new DocumentStyle^();
+        selection.styles = new DocumentStyleProperties^();
+        selection.styles.color = win8Colors.SelectionText;
+        selection.styles.backgroundColor = win8Colors.GeneralAccent;
+        document.styles["#Selection-Override"] = selection;
+        return document;
+      }
+    }
+    ]]></Workflow>
+  </Script>
+  <Instance name="Win8SkinThemeResource" content="File">Index.xml</Instance>
+  <InstanceStyle name="Style" content="File">Style.xml</InstanceStyle>
+
+  <Folder name="Window" content="Link">Template_Window.xml</Folder>
+  <Folder name="Tab" content="Link">Template_Tab.xml</Folder>
+  <Folder name="Toolstrip" content="Link">Template_Toolstrip.xml</Folder>
+  <Folder name="Ribbon" content="Link">Template_Ribbon.xml</Folder>
+  <Folder name="Button" content="Link">Template_Button.xml</Folder>
+  <Folder name="Document" content="Link">Template_Document.xml</Folder>
+  <Folder name="Scroll" content="Link">Template_Scroll.xml</Folder>
+  <Folder name="List" content="Link">Template_List.xml</Folder>
+  <Folder name="Misc" content="Link">Template_Misc.xml</Folder>
+</Folder>

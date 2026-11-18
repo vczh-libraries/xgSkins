@@ -24,7 +24,7 @@ have these same behaviors. The skin follows the documented XML animation API.
 
 ## Local workaround
 
-Win7Skin keeps its XML `Gradient` resources and their linear 120 ms duration.
+Win7Skin and Win8Skin keep their XML `Gradient` resources and linear 120 ms duration.
 One small Workflow coroutine helper, `CompleteColorAnimation` in
 `Template_Button.xml`, wraps the animations. Its parameters are an
 `IGuiAnimation^` and a completion callback. The helper's signature uses only

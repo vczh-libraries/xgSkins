@@ -2,6 +2,7 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Win7Skin"><UniqueIdentifier>{7CF0E835-2C50-4F67-8ED1-7C212BFDB05F}</UniqueIdentifier></Filter>
+    <Filter Include="Win8Skin"><UniqueIdentifier>{C6F918DF-1686-47BF-8069-554545DD5B02}</UniqueIdentifier></Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
@@ -157,5 +158,14 @@
     <ClInclude Include="..\..\Source\Win7Skin\Source\Win7Skin.h"><Filter>Win7Skin</Filter></ClInclude>
     <ClInclude Include="..\..\Source\Win7Skin\Source\Win7SkinPartialClasses.h"><Filter>Win7Skin</Filter></ClInclude>
     <ClInclude Include="..\..\Source\Win7Skin\Source\Win7SkinReflection.h"><Filter>Win7Skin</Filter></ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Win8Skin\Win8SkinConfig.cpp"><Filter>Win8Skin</Filter></ClCompile>
+    <ClCompile Include="..\..\Source\Win8Skin\Source\Win8SkinPartialClasses.cpp"><Filter>Win8Skin</Filter></ClCompile>
+    <ClCompile Include="..\..\Source\Win8Skin\Source\Win8SkinResource.cpp"><Filter>Win8Skin</Filter></ClCompile>
+    <ClInclude Include="..\..\Source\Win8Skin\Win8SkinConfig.h"><Filter>Win8Skin</Filter></ClInclude>
+    <ClInclude Include="..\..\Source\Win8Skin\Source\Win8Skin.h"><Filter>Win8Skin</Filter></ClInclude>
+    <ClInclude Include="..\..\Source\Win8Skin\Source\Win8SkinPartialClasses.h"><Filter>Win8Skin</Filter></ClInclude>
+    <ClInclude Include="..\..\Source\Win8Skin\Source\Win8SkinReflection.h"><Filter>Win8Skin</Filter></ClInclude>
   </ItemGroup>
 </Project>

@@ -1,8 +1,8 @@
 # Responsive list rows retain their larger height
 
-The FullControlTest `ResponsiveWindow` scenario fails identically with DarkSkin
-and Win7Skin under `/D2D /Hosted`. This is a shared list-layout problem, not a
-Win7Skin decorative-gradient requirement. No skin or upstream source is changed
+The FullControlTest `ResponsiveWindow` scenario fails identically with DarkSkin,
+Win7Skin and Win8Skin under `/D2D /Hosted`. This is a shared list-layout problem.
+No skin or upstream source is changed
 to work around it.
 
 ## Reproduction
@@ -16,10 +16,18 @@ to work around it.
    visible instead of the initial nine.
 
 The existing
-[GacUI-repo/Test/UIA_CppTest_Shared.cs](https://github.com/vczh-libraries/GacUI/blob/master/Test/UIA_CppTest_Shared.cs)
+[GacUI/Test/UIA_CppTest_Shared.cs](https://github.com/vczh-libraries/GacUI/blob/master/Test/UIA_CppTest_Shared.cs)
 `ResponsiveLayout` assertion times out at
 `movie row height follows responsive appearance #0`. The same runner sequence
 reproduces the failure after switching to a fresh DarkSkin template tree.
+
+Win8Skin reproduced the same failure in process 13912: compact rows initially
+measured 26 pixels, expanded to 106 pixels at 680 by 320, then retained 106
+pixels after shrinking to 240 by 320. The three observed row bounds were
+332..438, 438..544 and 544..650. The Win8 evidence is retained in
+`%TEMP%/xgskins-verification/Win8Skin/ResponsiveWindow.log` and
+`responsive-shrink-failure.json`. Other responsive checks are run separately;
+their results do not turn this failed shrink assertion into a pass.
 
 ## Source diagnosis
 
@@ -29,7 +37,7 @@ the execution path has not been confirmed with a debugger:
 - The showcase's `movieGroup.CurrentLevelChanged` handler calls
   `movieList.Arranger.ReloadVisibleStyles()` after changing the responsive level.
 - In
-  [GacUI-repo/Source/GraphicsComposition/GuiGraphicsRepeatComposition_Virtual.cpp](https://github.com/vczh-libraries/GacUI/blob/master/Source/GraphicsComposition/GuiGraphicsRepeatComposition_Virtual.cpp),
+  [GacUI/Source/GraphicsComposition/GuiGraphicsRepeatComposition_Virtual.cpp](https://github.com/vczh-libraries/GacUI/blob/master/Source/GraphicsComposition/GuiGraphicsRepeatComposition_Virtual.cpp),
   `GuiVirtualRepeatCompositionBase::ReloadVisibleStyles` recreates visible
   styles while deliberately retaining the measured extent. It calls
   `InvalidateLayout`, which does not invalidate the item-size cache.
@@ -54,4 +62,4 @@ focused virtual-repeat regression that changes visible item preferred heights
 from 26 to 106 and back to 26. Verify the row height, realized item count,
 selection, and scrolling at the start and end of the list. Include a hidden-list
 reload case to ensure provisional text measurements do not lose the scroll
-anchor. Run the showcase regression with both DarkSkin and Win7Skin.
+anchor. Run the showcase regression with DarkSkin, Win7Skin and Win8Skin.

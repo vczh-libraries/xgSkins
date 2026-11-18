@@ -1,6 +1,7 @@
 #include "FullControlTestEventHandlers.h"
 #include <Skins/DarkSkin/DarkSkin.h>
 #include "../../Source/Win7Skin/Win7SkinConfig.h"
+#include "../../Source/Win8Skin/Win8SkinConfig.h"
 
 using namespace vl;
 
@@ -19,6 +20,12 @@ namespace demo
 			win7skin::SetColorPackage(win7skin::CreateDefaultColorPackage());
 			presentation::theme::UnregisterTheme(L"Win7Skin");
 			presentation::theme::RegisterTheme(Ptr(new win7skin::Theme));
+		}, false);
+		addItem(L"Win8Skin", []
+		{
+			win8skin::SetColorPackage(win8skin::CreateDefaultColorPackage());
+			presentation::theme::UnregisterTheme(L"Win8Skin");
+			presentation::theme::RegisterTheme(Ptr(new win8skin::Theme));
 		}, false);
 	}
 }

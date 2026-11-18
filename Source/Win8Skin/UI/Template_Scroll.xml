@@ -1,0 +1,529 @@
+<Folder>
+  <Instance name="LeftScrollButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::LeftScrollButtonTemplate" ref.Styles="res://Win8Skin/Style">
+      <ref.Members><![CDATA[
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(GetScrollButtonColors(true, ButtonState::Normal, true)));
+        var lastAnimation : IGuiAnimation^ = null;
+
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetScrollButtonColors(self.VisuallyEnabled, self.State, true)), cast UInt64 120), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
+        <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.animationBuilder.Current.Border"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+        </Bounds>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:9</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:5</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:1 column:1">
+            <Polygon BorderColor-bind="self.animationBuilder.Current.Text" BackgroundColor-bind="self.animationBuilder.Current.Text" Size="x:5 y:9">
+              <att.Points>
+                <Point>x:4 y:0</Point>
+                <Point>x:0 y:4</Point>
+                <Point>x:4 y:8</Point>
+              </att.Points>
+            </Polygon>
+          </Cell>
+        </Table>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RightScrollButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::RightScrollButtonTemplate" ref.Styles="res://Win8Skin/Style">
+      <ref.Members><![CDATA[
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(GetScrollButtonColors(true, ButtonState::Normal, true)));
+        var lastAnimation : IGuiAnimation^ = null;
+
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetScrollButtonColors(self.VisuallyEnabled, self.State, true)), cast UInt64 120), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
+        <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.animationBuilder.Current.Border"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+        </Bounds>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:9</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:5</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:1 column:1">
+            <Polygon BorderColor-bind="self.animationBuilder.Current.Text" BackgroundColor-bind="self.animationBuilder.Current.Text" Size="x:5 y:9">
+              <att.Points>
+                <Point>x:0 y:0</Point>
+                <Point>x:4 y:4</Point>
+                <Point>x:0 y:8</Point>
+              </att.Points>
+            </Polygon>
+          </Cell>
+        </Table>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="TopScrollButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::TopScrollButtonTemplate" ref.Styles="res://Win8Skin/Style">
+      <ref.Members><![CDATA[
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(GetScrollButtonColors(true, ButtonState::Normal, true)));
+        var lastAnimation : IGuiAnimation^ = null;
+
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetScrollButtonColors(self.VisuallyEnabled, self.State, true)), cast UInt64 120), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
+        <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.animationBuilder.Current.Border"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+        </Bounds>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:5</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:9</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:1 column:1">
+            <Polygon BorderColor-bind="self.animationBuilder.Current.Text" BackgroundColor-bind="self.animationBuilder.Current.Text" Size="x:9 y:5">
+              <att.Points>
+                <Point>x:0 y:4</Point>
+                <Point>x:4 y:0</Point>
+                <Point>x:8 y:4</Point>
+              </att.Points>
+            </Polygon>
+          </Cell>
+        </Table>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="BottomScrollButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::BottomScrollButtonTemplate" ref.Styles="res://Win8Skin/Style">
+      <ref.Members><![CDATA[
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(GetScrollButtonColors(true, ButtonState::Normal, true)));
+        var lastAnimation : IGuiAnimation^ = null;
+
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetScrollButtonColors(self.VisuallyEnabled, self.State, true)), cast UInt64 120), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
+        <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.animationBuilder.Current.Border"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+        </Bounds>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:5</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:9</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:1 column:1">
+            <Polygon BorderColor-bind="self.animationBuilder.Current.Text" BackgroundColor-bind="self.animationBuilder.Current.Text" Size="x:9 y:5">
+              <att.Points>
+                <Point>x:0 y:0</Point>
+                <Point>x:4 y:4</Point>
+                <Point>x:8 y:0</Point>
+              </att.Points>
+            </Polygon>
+          </Cell>
+        </Table>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="HScrollHandleTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::HScrollHandleTemplate" ref.Styles="res://Win8Skin/Style">
+      <ref.Members><![CDATA[
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(GetScrollButtonColors(true, ButtonState::Normal, false)));
+        var lastAnimation : IGuiAnimation^ = null;
+
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetScrollButtonColors(self.VisuallyEnabled, self.State, false)), cast UInt64 120), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
+        <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.animationBuilder.Current.Border"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+        </Bounds>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="VScrollHandleTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::VScrollHandleTemplate" ref.Styles="res://Win8Skin/Style">
+      <ref.Members><![CDATA[
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(GetScrollButtonColors(true, ButtonState::Normal, false)));
+        var lastAnimation : IGuiAnimation^ = null;
+
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetScrollButtonColors(self.VisuallyEnabled, self.State, false)), cast UInt64 120), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
+        <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.animationBuilder.Current.Border"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+        </Bounds>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="HScrollTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::HScrollTemplate" ref.Styles="res://Win8Skin/Style">
+      <ref.Ctor>
+        <![CDATA[
+          {
+            behavior.AttachScrollTemplate(self);
+            behavior.AttachDecreaseButton(buttonDecrease);
+            behavior.AttachIncreaseButton(buttonIncrease);
+            behavior.AttachHorizontalScrollHandle(handle);
+          }
+        ]]>
+      </ref.Ctor>
+      <ScrollTemplate ref.Name="self" PreferredMinSize="y:16" MinSizeLimitation="LimitToElementAndChildren">
+        <CommonScrollBehavior ref.Name="behavior"/>
+
+        <SolidBackground Color-eval="win8skin::win8Colors.ScrollBackground"/>
+
+        <SideAligned MaxLength="16" MaxRatio="0.5" Direction="Left">
+          <Button AutoFocus="false" ref.Name="buttonDecrease" ControlTemplate="win8skin::LeftScrollButtonTemplate">
+            <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          </Button>
+        </SideAligned>
+        <SideAligned MaxLength="16" MaxRatio="0.5" Direction="Right">
+          <Button AutoFocus="false" ref.Name="buttonIncrease" ControlTemplate="win8skin::RightScrollButtonTemplate">
+            <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          </Button>
+        </SideAligned>
+        <Bounds ref.Name="handleContainer" AlignmentToParent="left:16 top:0 right:16 bottom:0" MinSizeLimitation="NoLimit">
+          <PartialView ref.Name="handle" PreferredMinSize="x:16">
+            <att.WidthPageSize-bind>(cast double self.PageSize) / self.TotalSize</att.WidthPageSize-bind>
+            <att.WidthRatio-bind>(cast double self.Position) / self.TotalSize</att.WidthRatio-bind>
+            <Button AutoFocus="false" ControlTemplate="win8skin::HScrollHandleTemplate">
+              <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+            </Button>
+          </PartialView>
+        </Bounds>
+      </ScrollTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="VScrollTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::VScrollTemplate" ref.Styles="res://Win8Skin/Style">
+      <ref.Ctor>
+        <![CDATA[
+          {
+            behavior.AttachScrollTemplate(self);
+            behavior.AttachDecreaseButton(buttonDecrease);
+            behavior.AttachIncreaseButton(buttonIncrease);
+            behavior.AttachVerticalScrollHandle(handle);
+          }
+        ]]>
+      </ref.Ctor>
+      <ScrollTemplate ref.Name="self" PreferredMinSize="x:16" MinSizeLimitation="LimitToElementAndChildren">
+        <CommonScrollBehavior ref.Name="behavior"/>
+
+        <SolidBackground Color-eval="win8skin::win8Colors.ScrollBackground"/>
+
+        <SideAligned MaxLength="16" MaxRatio="0.5" Direction="Top">
+          <Button AutoFocus="false" ref.Name="buttonDecrease" ControlTemplate="win8skin::TopScrollButtonTemplate">
+            <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          </Button>
+        </SideAligned>
+        <SideAligned MaxLength="16" MaxRatio="0.5" Direction="Bottom">
+          <Button AutoFocus="false" ref.Name="buttonIncrease" ControlTemplate="win8skin::BottomScrollButtonTemplate">
+            <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          </Button>
+        </SideAligned>
+        <Bounds ref.Name="handleContainer" AlignmentToParent="left:0 top:16 right:0 bottom:16" MinSizeLimitation="NoLimit">
+          <PartialView ref.Name="handle" PreferredMinSize="y:16">
+            <att.HeightPageSize-bind>(cast double self.PageSize) / self.TotalSize</att.HeightPageSize-bind>
+            <att.HeightRatio-bind>(cast double self.Position) / self.TotalSize</att.HeightRatio-bind>
+            <Button AutoFocus="false" ControlTemplate="win8skin::VScrollHandleTemplate">
+              <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+            </Button>
+          </PartialView>
+        </Bounds>
+      </ScrollTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="HTrackerHandleTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::HTrackerHandleTemplate" ref.Styles="res://Win8Skin/Style">
+      <ref.Members><![CDATA[
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(win8Colors.ButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetButtonColors(self.VisuallyEnabled, self.State)), cast UInt64 120), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
+        <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.animationBuilder.Current.Border"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+        </Bounds>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="VTrackerHandleTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::VTrackerHandleTemplate" ref.Styles="res://Win8Skin/Style">
+      <ref.Members><![CDATA[
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(win8Colors.ButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetButtonColors(self.VisuallyEnabled, self.State)), cast UInt64 120), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
+        <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.animationBuilder.Current.Border"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+        </Bounds>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="HTrackerTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::HTrackerTemplate" ref.Styles="res://Win8Skin/Style">
+      <ref.Ctor>
+        <![CDATA[
+          {
+            behavior.AttachScrollTemplate(self);
+            behavior.AttachHorizontalTrackerHandle(handle);
+          }
+        ]]>
+      </ref.Ctor>
+      <ScrollTemplate ref.Name="self" PreferredMinSize="y:16" MinSizeLimitation="LimitToElementAndChildren">
+        <CommonScrollBehavior ref.Name="behavior"/>
+        <SolidBackground Color-eval="win8skin::win8Colors.GeneralBackground"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
+          <FocusRectangle/>
+        </Bounds>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="LimitToElementAndChildren">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:16</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Absolute absolute:6</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            <CellOption>composeType:Absolute absolute:6</CellOption>
+          </att.Columns>
+          <Cell Site="row:1 column:1">
+            <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <att.Rows>
+                <CellOption>composeType:Percentage percentage:0.5</CellOption>
+                <CellOption>composeType:Absolute absolute:4</CellOption>
+                <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              </att.Rows>
+              <att.Columns>
+                <CellOption>composeType:Percentage percentage:1.0</CellOption>
+              </att.Columns>
+              <Cell Site="row:1 column:0">
+                <SolidBackground Color-eval="win8skin::win8Colors.TrackerBackground"/>
+                <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+                  <SolidBorder Color-eval="win8skin::win8Colors.TrackerBorder"/>
+                </Bounds>
+              </Cell>
+            </Table>
+            <PartialView ref.Name="handle" PreferredMinSize="x:10 y:16" WidthPageSize="0">
+              <att.WidthRatio-bind>(cast double self.Position) / self.TotalSize</att.WidthRatio-bind>
+              <Button AutoFocus="false" ControlTemplate="win8skin::HTrackerHandleTemplate">
+                <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+              </Button>
+            </PartialView>
+          </Cell>
+        </Table>
+      </ScrollTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="VTrackerTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::VTrackerTemplate" ref.Styles="res://Win8Skin/Style">
+      <ref.Ctor>
+        <![CDATA[
+          {
+            behavior.AttachScrollTemplate(self);
+            behavior.AttachVerticalTrackerHandle(handle);
+          }
+        ]]>
+      </ref.Ctor>
+      <ScrollTemplate ref.Name="self" PreferredMinSize="x:16" MinSizeLimitation="LimitToElementAndChildren">
+        <CommonScrollBehavior ref.Name="behavior"/>
+        <SolidBackground Color-eval="win8skin::win8Colors.GeneralBackground"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
+          <FocusRectangle/>
+        </Bounds>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="LimitToElementAndChildren">
+          <att.Rows>
+            <CellOption>composeType:Absolute absolute:6</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            <CellOption>composeType:Absolute absolute:6</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:16</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Columns>
+          <Cell Site="row:1 column:1">
+            <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <att.Rows>
+                <CellOption>composeType:Percentage percentage:1.0</CellOption>
+              </att.Rows>
+              <att.Columns>
+                <CellOption>composeType:Percentage percentage:0.5</CellOption>
+                <CellOption>composeType:Absolute absolute:4</CellOption>
+                <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              </att.Columns>
+              <Cell Site="row:0 column:1">
+                <SolidBackground Color-eval="win8skin::win8Colors.TrackerBackground"/>
+                <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+                  <SolidBorder Color-eval="win8skin::win8Colors.TrackerBorder"/>
+                </Bounds>
+              </Cell>
+            </Table>
+            <PartialView ref.Name="handle" PreferredMinSize="x:16 y:10" HeightPageSize="0">
+              <att.HeightRatio-bind>(cast double self.Position) / self.TotalSize</att.HeightRatio-bind>
+              <Button AutoFocus="false" ControlTemplate="win8skin::VTrackerHandleTemplate">
+                <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+              </Button>
+            </PartialView>
+          </Cell>
+        </Table>
+      </ScrollTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ProgressBarTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::ProgressBarTemplate" ref.Styles="res://Win8Skin/Style">
+      <ScrollTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:14" MinSizeLimitation="LimitToElementAndChildren">
+        <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <SolidBackground Color-eval="win8skin::win8Colors.ProgressBackground"/>
+          <PartialView>
+            <att.WidthPageSize-bind><![CDATA[
+              self.Position < 0 ? 0.0 : self.Position >= self.TotalSize - self.PageSize ? 1.0 :
+              (cast double self.Position) / (self.TotalSize - self.PageSize)
+            ]]></att.WidthPageSize-bind>
+            <SolidBackground Color-eval="win8skin::win8Colors.ProgressFilling"/>
+          </PartialView>
+        </Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-eval="win8skin::win8Colors.ProgressBorder"/>
+        </Bounds>
+      </ScrollTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ScrollViewTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win8skin::ScrollViewTemplate" ref.Styles="res://Win8Skin/Style">
+      <ScrollViewTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+
+        <SolidBackground Color-eval="win8skin::win8Colors.GeneralBackground"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-eval="win8skin::win8Colors.GeneralBorder"/>
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:1 top:1 right:1 bottom:1">
+            <att.HScrollTemplate>win8skin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>win8skin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </Bounds>
+      </ScrollViewTemplate>
+    </Instance>
+  </Instance>
+</Folder>
