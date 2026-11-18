@@ -4343,6 +4343,8 @@ namespace vl
 				ATTRIBUTE_MEMBER(::vl::__vwsn::att_cpp_Protected)
 				CLASS_MEMBER_FIELD(styleLabel)
 				ATTRIBUTE_MEMBER(::vl::__vwsn::att_cpp_Protected)
+				CLASS_MEMBER_FIELD(themeLabel)
+				ATTRIBUTE_MEMBER(::vl::__vwsn::att_cpp_Protected)
 			END_CLASS_MEMBER(::demo::StyleItemTemplateConstructor)
 
 			BEGIN_CLASS_MEMBER(::demo::SubWindow)
