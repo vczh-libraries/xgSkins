@@ -430,3 +430,6 @@ FodyWeavers.xsd
 !/Import/Release/**
 /Test/GacUI.xml.log/
 /Test/FullControlTest/UI/FullControlTest/Resource.xml.log/
+
+/Source/GacUI.xml.log/
+/Source/Win7Skin/UI/Resource.xml.log/

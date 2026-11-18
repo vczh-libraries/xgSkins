@@ -235,6 +235,17 @@
     <None Include="..\GacUI.xml" />
     <None Include="UI\FullControlTest\Resource.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Win7Skin\Win7SkinConfig.cpp" />
+    <ClCompile Include="..\..\Source\Win7Skin\Source\Win7SkinPartialClasses.cpp">
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Win7Skin\Source\Win7SkinResource.cpp" />
+    <ClInclude Include="..\..\Source\Win7Skin\Win7SkinConfig.h" />
+    <ClInclude Include="..\..\Source\Win7Skin\Source\Win7Skin.h" />
+    <ClInclude Include="..\..\Source\Win7Skin\Source\Win7SkinPartialClasses.h" />
+    <ClInclude Include="..\..\Source\Win7Skin\Source\Win7SkinReflection.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

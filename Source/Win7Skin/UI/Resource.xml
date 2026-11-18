@@ -1,0 +1,12 @@
+<Resource>
+  <Folder name="GacGenConfig">
+    <Folder name="Cpp">
+      <Text name="SourceFolder">../Source</Text>
+      <Text name="NormalInclude">GacUI.h</Text>
+      <Text name="ReflectionInclude">GacUIReflection.h</Text>
+      <Text name="Name">Win7Skin</Text>
+      <Text name="CppResource">Win7SkinResource.cpp</Text>
+    </Folder>
+  </Folder>
+  <Folder name="Win7Skin" content="Link">Win7Skin.xml</Folder>
+</Resource>

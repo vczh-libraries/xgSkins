@@ -27,6 +27,14 @@ If the resource tools are missing, build
 in `Release|x64` using the upstream build wrapper, then run
 [Release/Tools/CopyExecutables.ps1](https://github.com/vczh-libraries/Release/blob/master/Tools/CopyExecutables.ps1).
 
+When a skin resource changes, regenerate its sources before building:
+
+```powershell
+& "C:/Code/VczhLibraries/Release/Tools/GacBuild.ps1" -FileName "$repoRoot/Source/GacUI.xml"
+```
+
+Use the absolute path to your sibling Release checkout when it differs.
+
 `build.ps1` builds `Test/TestApps.sln` using the upstream build wrapper. It defaults
 to `Debug|x64`; use `-Configuration Release` and/or `-Platform Win32` for the other
 configurations. The project compiles without reflection. Debug builds enable CRT
@@ -40,8 +48,9 @@ Use `/MultiWindow` for native windows or `/GDI` for the GDI renderer.
 `/Hosted` and `/MultiWindow` are mutually
 exclusive, as are `/D2D` and `/GDI`.
 
-The skin list contains only `DarkSkin`. The manually maintained
-`Test/FullControlTest/FullControlTestEventHandlers.cpp` owns this list. Future skins
+The skin list contains `DarkSkin` and `Win7Skin`, each with its default color theme.
+Startup always selects `DarkSkin`; choose a skin in `Window Manager`. The manually maintained
+`Test/FullControlTest/FullControlTestEventHandlers.cpp` owns this list. Skins
 belong in `Source/<SKIN-NAME>` following [Project.md](../Project.md).
 
 ## Automation
@@ -69,4 +78,4 @@ effect. Hosted mode uses `/IO` without a window ID. Multi-window mode also accep
 For a startup smoke check, inspect the initial `List` / `TextList` page, click
 `Add 10 items`, and verify that both lists contain ten items. `Clear` should empty
 both lists. On `Window Manager`, the `Color Theme` group should contain exactly
-one selected option, `DarkSkin`. Return to `List` to leave the initial page open.
+one selected option, `DarkSkin`, and an unselected `Win7Skin` option. Return to `List` to leave the initial page open.

@@ -1,9 +1,8 @@
 # Specification
 
-This extension provides additional skins for GacUI applications. No additional
-skins are included yet.
+This extension provides additional template-based skins for GacUI applications.
+Each skin supplies one default color theme. FullControlTest starts with DarkSkin;
+use Window Manager to select another skin.
 
-`FullControlTest` demonstrates the available skins using the upstream control
-showcase. Its skin list currently contains only `DarkSkin`, using the built-in
-default color theme. The application initially displays the text list showcase
-under the first `List` page.
+- Win7Skin: [colors](Win7Skin/ColorPackage.md), [animation](Win7Skin/Animation.md),
+  [test guidance](Win7Skin/TestGuidance.md).
