@@ -1,0 +1,206 @@
+<Folder>
+  <Instance name="CustomControlTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::CustomControlTemplate" ref.Styles="res://WinXPSkin/Style">
+      <ControlTemplate MinSizeLimitation="LimitToElementAndChildren"/>
+    </Instance>
+  </Instance>
+
+  <Instance name="TooltipTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::TooltipTemplate" ref.Styles="res://WinXPSkin/Style">
+      <WindowTemplate ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground Color-eval="winxpColors.TooltipBackground"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder ref.Style="tooltipBorder"/>
+          <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1"/>
+        </Bounds>
+      </WindowTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="SystemFrameWindowTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::SystemFrameWindowTemplate" ref.Styles="res://WinXPSkin/Style">
+      <WindowTemplate ContainerComposition-ref="container" CustomFrameEnabled="false" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground ref.Style="generalBackground"/>
+        <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+      </WindowTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="CustomFrameWindowTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::CustomFrameWindowTemplate" ref.Styles="res://WinXPSkin/Style">
+      <WindowTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.CustomFrameEnabled>true</att.CustomFrameEnabled>
+        <att.TooltipTemplate>winxpskin::TooltipTemplate</att.TooltipTemplate>
+
+        <ev.TitleBarChanged-eval>
+          <![CDATA[
+            {
+              if (self.TitleBar)
+              {
+                contentTable.SetRowOption(0, {composeType:MinSize});
+              }
+              else
+              {
+                contentTable.SetRowOption(0, {composeType:Absolute absolute:0});
+              }
+            }
+          ]]>
+        </ev.TitleBarChanged-eval>
+
+        <ev.CustomFramePaddingChanged-eval>
+          <![CDATA[
+            {
+              var margin = self.CustomFramePadding;
+              frameTable.SetRowOption(0, {composeType:Absolute absolute:margin.top});
+              frameTable.SetRowOption(2, {composeType:Absolute absolute:margin.bottom});
+              frameTable.SetColumnOption(0, {composeType:Absolute absolute:margin.left});
+              frameTable.SetColumnOption(2, {composeType:Absolute absolute:margin.right});
+            }
+          ]]>
+        </ev.CustomFramePaddingChanged-eval>
+
+        <SolidBackground Color-bind="self.Activated ? winxpColors.WindowFrameActive : winxpColors.WindowFrameInactive" Shape="shapeType:RoundRect radiusX:5 radiusY:5"/>
+        <Bounds AlignmentToParent="left:0 top:5 right:0 bottom:0"><SolidBackground Color-bind="self.Activated ? winxpColors.WindowFrameActive : winxpColors.WindowFrameInactive"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder ref.Style="windowBorder" Shape="shapeType:RoundRect radiusX:5 radiusY:5"/>
+
+          <Table ref.Name="frameTable" AlignmentToParent="left:0 top:0 right:0 bottom:0">
+            <att.Rows>
+              <CellOption>composeType:Absolute absolute:0</CellOption>
+              <CellOption>composeType:Percentage percentage:1.0</CellOption>
+              <CellOption>composeType:Absolute absolute:0</CellOption>
+            </att.Rows>
+            <att.Columns>
+              <CellOption>composeType:Absolute absolute:0</CellOption>
+              <CellOption>composeType:Percentage percentage:1.0</CellOption>
+              <CellOption>composeType:Absolute absolute:0</CellOption>
+            </att.Columns>
+
+            <Cell Site="row:0 column:0" AssociatedHitTestResult="BorderLeftTop"/>
+            <Cell Site="row:0 column:2" AssociatedHitTestResult="BorderRightTop"/>
+            <Cell Site="row:2 column:0" AssociatedHitTestResult="BorderLeftBottom"/>
+            <Cell Site="row:2 column:2" AssociatedHitTestResult="BorderRightBottom"/>
+
+            <Cell Site="row:1 column:0" AssociatedHitTestResult="BorderLeft"/>
+            <Cell Site="row:1 column:2" AssociatedHitTestResult="BorderRight"/>
+            <Cell Site="row:0 column:1" AssociatedHitTestResult="BorderTop"/>
+            <Cell Site="row:2 column:1" AssociatedHitTestResult="BorderBottom"/>
+          </Table>
+
+          <Table ref.Name="contentTable" AlignmentToParent-bind="self.CustomFramePadding">
+            <att.Rows>
+              <CellOption>composeType:MinSize</CellOption>
+              <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            </att.Rows>
+            <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+
+            <Cell Site="row:0 column:0">
+              <GradientBackground Direction="Vertical" Color1-bind="self.Activated ? winxpColors.WindowCaptionBodyTop : winxpColors.WindowInactiveBodyTop" Color2-bind="self.Activated ? winxpColors.WindowCaptionBodyBottom : winxpColors.WindowInactiveBodyBottom" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
+              <Bounds AlignmentToParent="left:0 top:5 right:0 bottom:0"><GradientBackground Direction="Vertical" Color1-bind="self.Activated ? winxpColors.WindowCaptionBodyTop : winxpColors.WindowInactiveBodyTop" Color2-bind="self.Activated ? winxpColors.WindowCaptionBodyBottom : winxpColors.WindowInactiveBodyBottom"/></Bounds>
+              <Bounds AlignmentToParent="left:2 top:0 right:2 bottom:-1" PreferredMinSize="x:0 y:3"><GradientBackground Direction="Vertical" Color1-bind="self.Activated ? winxpColors.WindowCaptionTop : winxpColors.WindowInactiveTop" Color2-bind="self.Activated ? winxpColors.WindowCaptionBodyTop : winxpColors.WindowInactiveBodyTop"/></Bounds>
+
+              <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+                <att.Rows><CellOption>composeType:MinSize</CellOption></att.Rows>
+                <att.Columns>
+                  <CellOption>composeType:MinSize</CellOption>
+                  <CellOption>composeType:Percentage percentage:1.0</CellOption>
+                  <CellOption>composeType:MinSize</CellOption>
+                  <CellOption>composeType:MinSize</CellOption>
+                  <CellOption>composeType:MinSize</CellOption>
+                </att.Columns>
+
+                <Cell Site="row:0 column:2">
+                  <att.AssociatedHitTestResult-bind>self.MinimizedBox ? ButtonMinimum : NoDecision</att.AssociatedHitTestResult-bind>
+                  <Bounds AlignmentToParent="left:1 top:2 right:2 bottom:2" PreferredMinSize="x:21 y:21" Visible-bind="self.MinimizedBox or self.MaximizedBox">
+                    <GradientBackground Direction="Vertical" Color1-bind="self.Activated and self.VisuallyEnabled and self.MinimizedBox ? winxpColors.CaptionNormalTop : winxpColors.CaptionInactiveTop" Color2-bind="self.Activated and self.VisuallyEnabled and self.MinimizedBox ? winxpColors.CaptionNormalBottom : winxpColors.CaptionInactiveBottom" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
+                    <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Activated and self.VisuallyEnabled and self.MinimizedBox ? winxpColors.CaptionRim : winxpColors.CaptionRimInactive" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/></Bounds>
+                    <Button AutoFocus="false" ControlTemplate="winxpskin::CaptionButtonTemplate" Enabled-bind="self.MinimizedBox">
+                      <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+                      <att.ContainerComposition-set>
+                        <BoundsComposition AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:17 y:17" MinSizeLimitation="LimitToElement"><Polygon BorderColor-bind="self.Activated and self.VisuallyEnabled and self.MinimizedBox ? winxpColors.WindowCaptionText : winxpColors.WindowCaptionTextInactive" BackgroundColor-bind="self.Activated and self.VisuallyEnabled and self.MinimizedBox ? winxpColors.WindowCaptionText : winxpColors.WindowCaptionTextInactive" Size="x:17 y:17"><att.Points><Point>x:3 y:12</Point><Point>x:13 y:12</Point><Point>x:13 y:14</Point><Point>x:3 y:14</Point></att.Points></Polygon></BoundsComposition>
+                      </att.ContainerComposition-set>
+                    </Button>
+                  </Bounds>
+                </Cell>
+                <Cell Site="row:0 column:3">
+                  <att.AssociatedHitTestResult-bind>self.MaximizedBox ? ButtonMaximum : NoDecision</att.AssociatedHitTestResult-bind>
+                  <Bounds AlignmentToParent="left:1 top:2 right:2 bottom:2" PreferredMinSize="x:21 y:21" Visible-bind="self.MinimizedBox or self.MaximizedBox">
+                    <GradientBackground Direction="Vertical" Color1-bind="self.Activated and self.VisuallyEnabled and self.MaximizedBox ? winxpColors.CaptionNormalTop : winxpColors.CaptionInactiveTop" Color2-bind="self.Activated and self.VisuallyEnabled and self.MaximizedBox ? winxpColors.CaptionNormalBottom : winxpColors.CaptionInactiveBottom" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
+                    <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Activated and self.VisuallyEnabled and self.MaximizedBox ? winxpColors.CaptionRim : winxpColors.CaptionRimInactive" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/></Bounds>
+                    <Button AutoFocus="false" ControlTemplate="winxpskin::CaptionButtonTemplate" Enabled-bind="self.MaximizedBox">
+                      <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+                      <att.ContainerComposition-set>
+                        <BoundsComposition Visible-bind="not self.Maximized" AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:17 y:17" MinSizeLimitation="LimitToElement"><Polygon BorderColor-bind="self.Activated and self.VisuallyEnabled and self.MaximizedBox ? winxpColors.WindowCaptionText : winxpColors.WindowCaptionTextInactive" BackgroundColor-bind="self.Activated and self.VisuallyEnabled and self.MaximizedBox ? winxpColors.WindowCaptionText : winxpColors.WindowCaptionTextInactive" Size="x:17 y:17"><att.Points><Point>x:3 y:3</Point><Point>x:14 y:3</Point><Point>x:14 y:14</Point><Point>x:3 y:14</Point><Point>x:3 y:3</Point><Point>x:4 y:5</Point><Point>x:4 y:13</Point><Point>x:13 y:13</Point><Point>x:13 y:5</Point><Point>x:4 y:5</Point></att.Points></Polygon></BoundsComposition>
+                        <BoundsComposition Visible-bind="self.Maximized" AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:17 y:17" MinSizeLimitation="LimitToElement"><Polygon BorderColor-bind="self.Activated and self.VisuallyEnabled and self.MaximizedBox ? winxpColors.WindowCaptionText : winxpColors.WindowCaptionTextInactive" BackgroundColor-bind="self.Activated and self.VisuallyEnabled and self.MaximizedBox ? winxpColors.WindowCaptionText : winxpColors.WindowCaptionTextInactive" Size="x:17 y:17"><att.Points><Point>x:5 y:2</Point><Point>x:15 y:2</Point><Point>x:15 y:11</Point><Point>x:12 y:11</Point><Point>x:12 y:10</Point><Point>x:14 y:10</Point><Point>x:14 y:4</Point><Point>x:6 y:4</Point><Point>x:6 y:5</Point><Point>x:5 y:5</Point><Point>x:5 y:2</Point><Point>x:2 y:6</Point><Point>x:12 y:6</Point><Point>x:12 y:15</Point><Point>x:2 y:15</Point><Point>x:2 y:6</Point><Point>x:3 y:8</Point><Point>x:3 y:14</Point><Point>x:11 y:14</Point><Point>x:11 y:8</Point><Point>x:3 y:8</Point></att.Points></Polygon></BoundsComposition>
+                      </att.ContainerComposition-set>
+                    </Button>
+                  </Bounds>
+                </Cell>
+                <Cell Site="row:0 column:4" AssociatedHitTestResult="ButtonClose">
+                  <Bounds AlignmentToParent="left:1 top:2 right:2 bottom:2" PreferredMinSize="x:21 y:21">
+                    <GradientBackground Direction="Vertical" Color1-bind="not self.VisuallyEnabled ? winxpColors.CaptionInactiveTop : self.Activated ? winxpColors.CloseNormalTop : winxpColors.CloseInactiveTop" Color2-bind="not self.VisuallyEnabled ? winxpColors.CaptionInactiveBottom : self.Activated ? winxpColors.CloseNormalBottom : winxpColors.CloseInactiveBottom" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
+                    <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Activated ? winxpColors.CaptionRim : winxpColors.CaptionRimInactive" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/></Bounds>
+                    <Button AutoFocus="false" ControlTemplate="winxpskin::CaptionCloseButtonTemplate">
+                      <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+                      <att.ContainerComposition-set>
+                        <BoundsComposition AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:17 y:17" MinSizeLimitation="LimitToElement"><Polygon BorderColor-bind="self.Activated and self.VisuallyEnabled ? winxpColors.WindowCaptionText : winxpColors.WindowCaptionTextInactive" BackgroundColor-bind="self.Activated and self.VisuallyEnabled ? winxpColors.WindowCaptionText : winxpColors.WindowCaptionTextInactive" Size="x:17 y:17"><att.Points><Point>x:4 y:3</Point><Point>x:8 y:7</Point><Point>x:12 y:3</Point><Point>x:14 y:5</Point><Point>x:10 y:9</Point><Point>x:14 y:13</Point><Point>x:12 y:15</Point><Point>x:8 y:11</Point><Point>x:4 y:15</Point><Point>x:2 y:13</Point><Point>x:6 y:9</Point><Point>x:2 y:5</Point></att.Points></Polygon></BoundsComposition>
+                      </att.ContainerComposition-set>
+                    </Button>
+                  </Bounds>
+                </Cell>
+
+                <Cell Site="row:0 column:0" MinSizeLimitation-bind="((self.Icon is not null) and self.IconVisible ? LimitToElementAndChildren : NoLimit) of (GuiGraphicsComposition::MinSizeLimitation)">
+                  <Table AlignmentToParent="left:0 top:0 right:2 bottom:0" MinSizeLimitation="LimitToElementAndChildren">
+                    <att.Rows>
+                      <CellOption>composeType:Percentage percentage:1.0</CellOption>
+                      <CellOption>composeType:Absolute absolute:16</CellOption>
+                      <CellOption>composeType:Percentage percentage:1.0</CellOption>
+                    </att.Rows>
+                    <att.Columns>
+                      <CellOption>composeType:Absolute absolute:16</CellOption>
+                    </att.Columns>
+
+                    <Cell Site="row:1 column:0" AssociatedHitTestResult="Icon">
+                      <ImageFrame Stretch="true" Image-bind="self.Icon is not null ? self.Icon.Image : null" FrameIndex-bind="self.Icon is not null ? self.Icon.FrameIndex : -1"/>
+                    </Cell>
+                  </Table>
+                </Cell>
+                <Cell Site="row:0 column:1" AssociatedHitTestResult="Title">
+                  <Bounds AlignmentToParent="left:4 top:5 right:4 bottom:4">
+                    <Bounds AlignmentToParent="left:1 top:1 right:0 bottom:0" Visible-bind="self.Activated"><SolidLabel Text-bind="self.Text" Color-eval="winxpColors.WindowCaptionShadow" Ellipse="true" Font-bind="{fontFamily:&quot;Trebuchet MS&quot; size:(self.Font.size &gt; 13 ? self.Font.size : 13) bold:true}" HorizontalAlignment="Left" VerticalAlignment="Center"/></Bounds>
+                    <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidLabel ref.Style="windowTitle" Text-bind="self.Text" Ellipse="true" Font-bind="{fontFamily:&quot;Trebuchet MS&quot; size:(self.Font.size &gt; 13 ? self.Font.size : 13) bold:true}" HorizontalAlignment="Left" VerticalAlignment="Center"/></Bounds>
+                  </Bounds>
+                </Cell>
+              </Table>
+            </Cell>
+            <Cell Site="row:1 column:0" AssociatedHitTestResult="Client">
+              <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBackground ref.Style="generalBackground"/></Bounds>
+            </Cell>
+          </Table>
+        </Bounds>
+      </WindowTemplate>
+    </Instance>
+  </Instance>
+  <Instance name="CaptionButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::CaptionButtonTemplate" ref.Styles="res://WinXPSkin/Style">
+      <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and self.State != ButtonState::Normal">
+          <GradientBackground Direction="Vertical" Color1-bind="self.State == ButtonState::Pressed ? winxpColors.CaptionPressedTop : winxpColors.CaptionHoveredTop" Color2-bind="self.State == ButtonState::Pressed ? winxpColors.CaptionPressedBottom : winxpColors.CaptionHoveredBottom" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
+          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-eval="winxpColors.CaptionRim" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/></Bounds>
+        </Bounds>
+        <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2"/>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+  <Instance name="CaptionCloseButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::CaptionCloseButtonTemplate" ref.Styles="res://WinXPSkin/Style">
+      <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and self.State != ButtonState::Normal">
+          <GradientBackground Direction="Vertical" Color1-bind="self.State == ButtonState::Pressed ? winxpColors.ClosePressedTop : winxpColors.CloseHoveredTop" Color2-bind="self.State == ButtonState::Pressed ? winxpColors.ClosePressedBottom : winxpColors.CloseHoveredBottom" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
+          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-eval="winxpColors.CaptionRim" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/></Bounds>
+        </Bounds>
+        <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2"/>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+</Folder>

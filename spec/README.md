@@ -8,3 +8,5 @@ use Window Manager to select another skin.
   [test guidance](Win7Skin/TestGuidance.md).
 - Win8Skin: [colors](Win8Skin/ColorPackage.md), [animation](Win8Skin/Animation.md),
   [test guidance](Win8Skin/TestGuidance.md).
+- WinXPSkin: [colors](WinXPSkin/ColorPackage.md), [animation](WinXPSkin/Animation.md),
+  [test guidance](WinXPSkin/TestGuidance.md).

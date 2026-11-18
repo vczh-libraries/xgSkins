@@ -1,0 +1,69 @@
+<Folder>
+  <Script name="EditorColors">
+    <Workflow><![CDATA[
+      module WinXPEditorColors;
+      using presentation::*;
+      namespace winxpskin
+      {
+        struct EditorColors
+        {
+          Border : Color;
+          Background : Color;
+        }
+      }
+    ]]></Workflow>
+  </Script>
+
+  <Instance name="EditorBorderTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::EditorBorderTemplate" ref.Styles="res://WinXPSkin/Style">
+      <ref.Members><![CDATA[
+        prop Hovered : bool = false {}
+        prop Colors : EditorColors = winxpColors.EditorNormal {}
+      ]]></ref.Members>
+      <ControlTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? winxpColors.EditorDisabled : self.Focused ? winxpColors.EditorFocused : self.Hovered ? winxpColors.EditorHovered : winxpColors.EditorNormal</att.Colors-bind>
+        <ev.mouseEnter-eval>self.Hovered = true;</ev.mouseEnter-eval>
+        <ev.mouseLeave-eval>self.Hovered = false;</ev.mouseLeave-eval>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <SolidBackground Color-bind="self.Colors.Background"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.Colors.Border"/>
+        </Bounds>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="DocumentLabelTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::DocumentLabelTemplate" ref.Styles="res://WinXPSkin/Style">
+      <DocumentLabelTemplate ref.Name="self" ref.Style="documentBoxBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren"/>
+    </Instance>
+  </Instance>
+
+  <Instance name="DocumentTextBoxTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::DocumentTextBoxTemplate" ref.Styles="res://WinXPSkin/Style" xmlns:x="winxpskin::*">
+      <DocumentLabelTemplate ref.Name="self" BaselineDocument-eval="winxpskin::CreateBaselineDocument()" CaretColor-eval="winxpskin::winxpColors.TextNormal" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2"/>
+        </x:EditorBorderTemplate>
+      </DocumentLabelTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="DocumentViewerTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::DocumentViewerTemplate" ref.Styles="res://WinXPSkin/Style" xmlns:x="winxpskin::*">
+      <DocumentViewerTemplate ref.Name="self" BaselineDocument-eval="winxpskin::CreateBaselineDocument()" CaretColor-eval="winxpskin::winxpColors.TextNormal" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>winxpskin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>winxpskin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>17</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </DocumentViewerTemplate>
+    </Instance>
+  </Instance>
+</Folder>

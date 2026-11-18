@@ -1,7 +1,7 @@
 # Responsive list rows retain their larger height
 
 The FullControlTest `ResponsiveWindow` scenario fails identically with DarkSkin,
-Win7Skin and Win8Skin under `/D2D /Hosted`. This is a shared list-layout problem.
+Win7Skin, Win8Skin and WinXPSkin under `/D2D /Hosted`. This is a shared list-layout problem.
 No skin or upstream source is changed
 to work around it.
 
@@ -28,6 +28,20 @@ pixels after shrinking to 240 by 320. The three observed row bounds were
 `%TEMP%/xgskins-verification/Win8Skin/ResponsiveWindow.log` and
 `responsive-shrink-failure.json`. Other responsive checks are run separately;
 their results do not turn this failed shrink assertion into a pass.
+
+WinXPSkin reproduced the same strict assertion in process 27980 on
+2026-11-18. The initial compact rows measured 26 pixels, the detailed rows
+106 pixels, and the returned compact rows still measured 106 pixels. The
+failure remains in `%TEMP%/xgskins-winxp-ResponsiveLevelsResume.log`, with
+`%TEMP%/xgskins-winxp-responsive-height-failure.json` and
+`%TEMP%/xgskins-verification/WinXPSkin/ResponsiveWindow-20261118-190354-240/uia-timeout.json`.
+After cancelling that modal, the separate `ResponsiveRemaining` continuation
+passed 877 additive assertions covering the remaining appearances, accounts,
+footer, selection and OK/Cancel/title-bar closure branches. It explicitly
+reported the known failure and omitted only the failed compact-row shrink
+check; the original predicate and failing invocation were retained unchanged.
+Its log is `%TEMP%/xgskins-winxp-ResponsiveRemaining.log`. This is combined
+coverage with a reproducible failure, not a complete responsive-scenario pass.
 
 ## Source diagnosis
 
@@ -62,4 +76,5 @@ focused virtual-repeat regression that changes visible item preferred heights
 from 26 to 106 and back to 26. Verify the row height, realized item count,
 selection, and scrolling at the start and end of the list. Include a hidden-list
 reload case to ensure provisional text measurements do not lose the scroll
-anchor. Run the showcase regression with DarkSkin, Win7Skin and Win8Skin.
+anchor. Run the showcase regression with DarkSkin, Win7Skin, Win8Skin and
+WinXPSkin.

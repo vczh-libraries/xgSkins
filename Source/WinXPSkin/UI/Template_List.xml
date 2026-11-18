@@ -1,0 +1,245 @@
+<Folder>
+  <Instance name="ItemBackgroundTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::ItemBackgroundTemplate" ref.Styles="res://WinXPSkin/Style">
+      <ref.Members><![CDATA[prop Colors : ButtonColors = winxpColors.ItemNormal {}]]></ref.Members>
+      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? winxpColors.ItemDisabled : self.Selected or self.State == ButtonState::Pressed ? winxpColors.ItemSelected : self.State == ButtonState::Active ? winxpColors.ItemHovered : winxpColors.ItemNormal</att.Colors-bind>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.Colors.Border"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
+        </Bounds>
+        <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="TextListTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::TextListTemplate" ref.Styles="res://WinXPSkin/Style" xmlns:x="winxpskin::*">
+      <TextListTemplate ref.Name="self" ref.Style="textListBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <att.BackgroundTemplate>winxpskin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.CheckBulletTemplate>winxpskin::CheckBoxTemplate</att.CheckBulletTemplate>
+        <att.RadioBulletTemplate>winxpskin::RadioButtonTemplate</att.RadioBulletTemplate>
+
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>winxpskin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>winxpskin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>17</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </TextListTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ComboBoxTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::ComboBoxTemplate" ref.Styles="res://WinXPSkin/Style">
+      <ref.Members><![CDATA[prop Colors : ButtonColors = winxpColors.ScrollArrowNormal {}]]></ref.Members>
+      <DateComboBoxTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.SubMenuTemplate>winxpskin::ToolstripMenuTemplate</att.SubMenuTemplate>
+        <att.DatePickerTemplate>winxpskin::DatePickerTemplate</att.DatePickerTemplate>
+        <att.Colors-bind>GetScrollButtonColors(self.VisuallyEnabled, self.SubMenuOpening ? ButtonState::Pressed : self.State, true)</att.Colors-bind>
+        <SolidBackground Color-bind="self.VisuallyEnabled ? winxpColors.ComboBackground : winxpColors.ComboDisabledBackground"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.VisuallyEnabled ? winxpColors.ComboBorder : winxpColors.ComboDisabledBorder"/>
+        </Bounds>
+        <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:20 bottom:2">
+          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.TextVisible">
+            <SolidBackground Color-bind="self.VisuallyEnabled and self.Focused ? winxpColors.GeneralAccent : winxpColors.Transparent"/>
+            <Bounds AlignmentToParent="left:2 top:0 right:2 bottom:0">
+              <SolidLabel Color-bind="not self.VisuallyEnabled ? winxpColors.TextDisabled : self.Focused ? winxpColors.SelectionText : winxpColors.TextNormal" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </Bounds>
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and self.Focused"><FocusRectangle/></Bounds>
+          </Bounds>
+        </Bounds>
+        <Bounds AlignmentToParent="left:-1 top:1 right:1 bottom:1" PreferredMinSize="x:17 y:17">
+          <SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
+          <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+            <SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/>
+            <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+              <GradientBackground Direction="Backslash" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
+            </Bounds>
+          </Bounds>
+          <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+            <att.Rows>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              <CellOption>composeType:Absolute absolute:4</CellOption>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            </att.Rows>
+            <att.Columns>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              <CellOption>composeType:Absolute absolute:7</CellOption>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            </att.Columns>
+            <Cell Site="row:1 column:1">
+              <Polygon BorderColor-bind="self.Colors.Bullet" BackgroundColor-bind="self.Colors.Bullet" Size="x:7 y:4">
+                <att.Points><Point>x:0 y:0</Point><Point>x:2 y:0</Point><Point>x:3 y:1</Point><Point>x:4 y:0</Point><Point>x:6 y:0</Point><Point>x:3 y:3</Point></att.Points>
+              </Polygon>
+            </Cell>
+          </Table>
+        </Bounds>
+      </DateComboBoxTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ListViewColumnHeaderTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::ListViewColumnHeaderTemplate" ref.Styles="res://WinXPSkin/Style">
+      <ListViewColumnHeaderTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:0 y:20">
+        <att.SubMenuTemplate>winxpskin::ToolstripMenuTemplate</att.SubMenuTemplate>
+        <SolidBackground Color-bind="not self.VisuallyEnabled or self.State == ButtonState::Normal ? winxpColors.HeaderBackground : self.State == ButtonState::Pressed ? winxpColors.HeaderBackgroundPressed : winxpColors.HeaderBackgroundHovered"/>
+        <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="x:0 y:3" Visible-bind="not self.VisuallyEnabled or self.State != ButtonState::Pressed">
+          <GradientBackground Direction="Vertical" Color1-bind="self.VisuallyEnabled and self.State == ButtonState::Active ? winxpColors.HeaderGradientHoveredTop : winxpColors.HeaderBackground" Color2-bind="self.VisuallyEnabled and self.State == ButtonState::Active ? winxpColors.HeaderGradientHoveredBottom : winxpColors.HeaderSeparatorTop"/>
+          <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="x:0 y:1">
+            <SolidBackground Color-bind="self.VisuallyEnabled and self.State == ButtonState::Active ? winxpColors.HeaderBorderHovered : winxpColors.HeaderSeparatorTop"/>
+          </Bounds>
+        </Bounds>
+        <Bounds AlignmentToParent="left:-1 top:3 right:0 bottom:4" PreferredMinSize="x:2 y:0" Visible-bind="not self.VisuallyEnabled or self.State == ButtonState::Normal">
+          <SolidBackground Color-eval="winxpColors.HeaderSeparatorTop"/>
+          <Bounds AlignmentToParent="left:1 top:0 right:0 bottom:0"><SolidBackground Color-eval="winxpColors.HeaderSeparatorLight"/></Bounds>
+        </Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and self.State == ButtonState::Pressed">
+          <SolidBorder Color-eval="winxpColors.HeaderBorderPressed"/>
+          <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:-1" PreferredMinSize="x:0 y:1"><SolidBackground Color-eval="winxpColors.HeaderGradientPressedTop"/></Bounds>
+        </Bounds>
+        <Bounds ref.Name="container" AlignmentToParent="left:5 top:1 right:15 bottom:4">
+          <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+            <att.Rows><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Rows>
+            <att.Columns>
+              <CellOption>composeType:Percentage percentage:1.0</CellOption>
+              <CellOption>composeType:MinSize</CellOption>
+            </att.Columns>
+            <Cell Site="row:0 column:0">
+              <SolidLabel Color-bind="self.VisuallyEnabled ? winxpColors.HeaderText : winxpColors.TextDisabled" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </Cell>
+            <Cell Site="row:0 column:1" PreferredMinSize="x:11 y:0" Visible-bind="self.SortingState != ColumnSortingState::NotSorted">
+              <Table AlignmentToParent="left:4 top:0 right:0 bottom:0">
+                <att.Rows>
+                  <CellOption>composeType:Percentage percentage:0.5</CellOption>
+                  <CellOption>composeType:Absolute absolute:4</CellOption>
+                  <CellOption>composeType:Percentage percentage:0.5</CellOption>
+                </att.Rows>
+                <att.Columns><CellOption>composeType:Absolute absolute:7</CellOption></att.Columns>
+                <Cell Site="row:1 column:0">
+                  <Bounds Visible-bind="self.SortingState == ColumnSortingState::Ascending">
+                    <Polygon BorderColor-bind="self.VisuallyEnabled ? winxpColors.HeaderBorderPressed : winxpColors.TextDisabled" BackgroundColor-bind="self.VisuallyEnabled ? winxpColors.HeaderBorderPressed : winxpColors.TextDisabled" Size="x:7 y:4">
+                      <att.Points><Point>x:0 y:3</Point><Point>x:3 y:0</Point><Point>x:6 y:3</Point></att.Points>
+                    </Polygon>
+                  </Bounds>
+                  <Bounds Visible-bind="self.SortingState == ColumnSortingState::Descending">
+                    <Polygon BorderColor-bind="self.VisuallyEnabled ? winxpColors.HeaderBorderPressed : winxpColors.TextDisabled" BackgroundColor-bind="self.VisuallyEnabled ? winxpColors.HeaderBorderPressed : winxpColors.TextDisabled" Size="x:7 y:4">
+                      <att.Points><Point>x:0 y:0</Point><Point>x:3 y:3</Point><Point>x:6 y:0</Point></att.Points>
+                    </Polygon>
+                  </Bounds>
+                </Cell>
+              </Table>
+            </Cell>
+          </Table>
+        </Bounds>
+        <Bounds AlignmentToParent="left:-1 top:0 right:0 bottom:0">
+          <CheckBox ref.Name="buttonArrow" AutoFocus="false" AutoSelection="false" ControlTemplate="winxpskin::ListViewColumnDropDownTemplate" Selected-bind="self.SubMenuOpening" Visible-bind="self.SubMenuExisting and (self.SubMenuOpening or self.State != ButtonState::Normal)">
+            <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          </CheckBox>
+        </Bounds>
+      </ListViewColumnHeaderTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ListViewTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::ListViewTemplate" ref.Styles="res://WinXPSkin/Style" xmlns:x="winxpskin::*">
+      <ListViewTemplate ref.Name="self" ref.Style="listViewBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <att.BackgroundTemplate>winxpskin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.ColumnHeaderTemplate>winxpskin::ListViewColumnHeaderTemplate</att.ColumnHeaderTemplate>
+
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>winxpskin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>winxpskin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>17</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </ListViewTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ExpandingDecoratorTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::ExpandingDecoratorTemplate" ref.Styles="res://WinXPSkin/Style">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:13 y:13">
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:9</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:9</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Columns>
+          <Cell Site="row:1 column:1">
+            <GradientBackground Direction="Backslash" Color1-eval="winxpColors.TreeGradientTop" Color2-eval="winxpColors.TreeGradientBottom"/>
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <SolidBorder Color-bind="self.VisuallyEnabled ? winxpColors.TreeBorder : winxpColors.TextDisabled"/>
+            </Bounds>
+            <Bounds AlignmentToParent="left:2 top:4 right:2 bottom:4"><SolidBackground Color-bind="self.VisuallyEnabled ? winxpColors.TreeGlyph : winxpColors.TextDisabled"/></Bounds>
+            <Bounds AlignmentToParent="left:4 top:2 right:4 bottom:2" Visible-bind="not self.Selected"><SolidBackground Color-bind="self.VisuallyEnabled ? winxpColors.TreeGlyph : winxpColors.TextDisabled"/></Bounds>
+          </Cell>
+        </Table>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="TreeViewTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::TreeViewTemplate" ref.Styles="res://WinXPSkin/Style" xmlns:x="winxpskin::*">
+      <TreeViewTemplate ref.Name="self" ref.Style="treeViewBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <att.BackgroundTemplate>winxpskin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.ExpandingDecoratorTemplate>winxpskin::ExpandingDecoratorTemplate</att.ExpandingDecoratorTemplate>
+
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>winxpskin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>winxpskin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>17</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </TreeViewTemplate>
+    </Instance>
+  </Instance>
+  <Instance name="ListViewColumnDropDownTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::ListViewColumnDropDownTemplate" ref.Styles="res://WinXPSkin/Style">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:13 y:0">
+        <Bounds AlignmentToParent="left:0 top:3 right:-1 bottom:4" PreferredMinSize="x:1 y:0">
+          <SolidBackground Color-eval="winxpColors.HeaderSeparatorTop"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:0 top:1 right:1 bottom:1" Visible-bind="self.VisuallyEnabled and (self.State != ButtonState::Normal or self.Selected)">
+          <SolidBorder Color-eval="winxpColors.HeaderBorderPressed"/>
+          <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+            <GradientBackground Direction="Vertical" Color1-eval="winxpColors.HeaderDropDownTop" Color2-eval="winxpColors.HeaderDropDownBottom"/>
+          </Bounds>
+        </Bounds>
+        <Table AlignmentToParent="left:3 top:3 right:3 bottom:3">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:4</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns><CellOption>composeType:Absolute absolute:7</CellOption></att.Columns>
+          <Cell Site="row:1 column:0">
+            <Polygon Size="x:7 y:4" BorderColor-bind="self.VisuallyEnabled ? winxpColors.HeaderText : winxpColors.TextDisabled" BackgroundColor-bind="self.VisuallyEnabled ? winxpColors.HeaderText : winxpColors.TextDisabled">
+              <att.Points><Point>x:0 y:0</Point><Point>x:3 y:3</Point><Point>x:6 y:0</Point></att.Points>
+            </Polygon>
+          </Cell>
+        </Table>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+</Folder>

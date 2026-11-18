@@ -28,6 +28,7 @@ Get-ChildItem -LiteralPath $source -File | Where-Object {
 
 # The upstream showcase assumes a dark palette in a few raw-element labels.
 # Keep ordinary readouts theme-aware, while preserving explicit custom demo styles.
+# Keep the tracker fixture large enough for the Win7 and XP templates as well.
 $readabilityReplacements = @{
     'DatePickerTabPage.xml' = @(
         @{ Before = '<SolidLabel Font-bind="self.DisplayFont" Color="#FFFFFF" Text-format='; After = '<Label Font-bind="self.DisplayFont" Text-format=' }
@@ -59,6 +60,28 @@ $readabilityReplacements = @{
     'TouchingListTabPage.xml' = @(
         @{ Before = 'self.VisuallyEnabled ? self.TextColor : self.Colors.TextDisabled'; After = 'self.VisuallyEnabled ? self.Colors.TextNormal : self.Colors.TextDisabled' }
     )
+    'RepeatTabPage.xml' = @(
+        @{ Before = '      <att.Rows>
+        <_>composeType:Percentage percentage:1.0</_>
+        <_>composeType:Absolute absolute:20</_>
+        <_>composeType:Absolute absolute:20</_>
+        <_>composeType:Absolute absolute:20</_>
+      </att.Rows>'; After = '      <att.Rows>
+        <_>composeType:Percentage percentage:1.0</_>
+        <_>composeType:Absolute absolute:20</_>
+        <_>composeType:Absolute absolute:21</_>
+        <_>composeType:Absolute absolute:20</_>
+      </att.Rows>' }
+        @{ Before = '      <att.Columns>
+        <_>composeType:Percentage percentage:1.0</_>
+        <_>composeType:Absolute absolute:20</_>
+        <_>composeType:Absolute absolute:20</_>
+      </att.Columns>'; After = '      <att.Columns>
+        <_>composeType:Percentage percentage:1.0</_>
+        <_>composeType:Absolute absolute:20</_>
+        <_>composeType:Absolute absolute:21</_>
+      </att.Columns>' }
+    )
 }
 foreach ($fileName in $readabilityReplacements.Keys) {
     $resourceFile = Join-Path $resourceDestination $fileName
@@ -68,7 +91,7 @@ foreach ($fileName in $readabilityReplacements.Keys) {
         $before = $replacement.Before.Replace("`r`n", "`n").Replace("`n", $newLine)
         $after = $replacement.After.Replace("`r`n", "`n").Replace("`n", $newLine)
         if (!$content.Contains($before)) {
-            throw "Upstream showcase changed; review the skin readability patch for $fileName."
+            throw "Upstream showcase changed; review the skin showcase patch for $fileName."
         }
         $content = $content.Replace($before, $after)
     }

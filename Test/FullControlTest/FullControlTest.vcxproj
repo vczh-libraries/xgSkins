@@ -257,6 +257,17 @@
     <ClInclude Include="..\..\Source\Win8Skin\Source\Win8SkinPartialClasses.h" />
     <ClInclude Include="..\..\Source\Win8Skin\Source\Win8SkinReflection.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\WinXPSkin\WinXPSkinConfig.cpp" />
+    <ClCompile Include="..\..\Source\WinXPSkin\Source\WinXPSkinPartialClasses.cpp">
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\WinXPSkin\Source\WinXPSkinResource.cpp" />
+    <ClInclude Include="..\..\Source\WinXPSkin\WinXPSkinConfig.h" />
+    <ClInclude Include="..\..\Source\WinXPSkin\Source\WinXPSkin.h" />
+    <ClInclude Include="..\..\Source\WinXPSkin\Source\WinXPSkinPartialClasses.h" />
+    <ClInclude Include="..\..\Source\WinXPSkin\Source\WinXPSkinReflection.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,0 +1,111 @@
+<Styles>
+  <Style ref.Path="(//Bounds + //Table + //RepeatStack + //RepeatFlow)" MinSizeLimitation="LimitToElementAndChildren"/>
+  <Style ref.Path="//*.generalBackground" Color-eval="winxpskin::winxpColors.GeneralBackground"/>
+  <Style ref.Path="//*.windowBorder">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color let margin = self.CustomFramePadding in (
+          (not self.Border) or (margin.left + margin.top + margin.right + margin.bottom == 0) ? winxpskin::winxpColors.Transparent :
+          self.VisuallyEnabled and self.Activated ? winxpskin::winxpColors.WindowBorderActive :
+          winxpskin::winxpColors.WindowBorderInactive
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.windowTitle">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color (
+          self.VisuallyEnabled and self.Activated ? winxpskin::winxpColors.WindowCaptionText :
+          winxpskin::winxpColors.WindowCaptionTextInactive
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.tooltipBorder" Color-eval="winxpskin::winxpColors.TooltipBorder"/>
+  <Style ref.Path="//*.labelDefaultText" DefaultTextColor-eval="winxpskin::winxpColors.TextNormal"/>
+  <Style ref.Path="//*.labelText">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color (
+          not self.VisuallyEnabled ? winxpskin::winxpColors.TextDisabled :
+          self.TextColor
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.datePickerColors">
+    <att.BackgroundColor-eval>winxpskin::winxpColors.GeneralBackground</att.BackgroundColor-eval>
+    <att.PrimaryTextColor-eval>winxpskin::winxpColors.TextBright</att.PrimaryTextColor-eval>
+    <att.SecondaryTextColor-eval>winxpskin::winxpColors.TextSecondary</att.SecondaryTextColor-eval>
+  </Style>
+  <Style ref.Path="//*.listBorder">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color (
+          not self.VisuallyEnabled ? winxpskin::winxpColors.GeneralBorder :
+          self.Focused ? winxpskin::winxpColors.ControlAccentHovered :
+          winxpskin::winxpColors.ButtonBackgroundHovered
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.textListBackgroundAndColor">
+    <att.TextColor-bind>self.VisuallyEnabled ? winxpskin::winxpColors.TextNormal : winxpskin::winxpColors.TextDisabled</att.TextColor-bind>
+    <SolidBackground Color-eval="winxpskin::winxpColors.ContentBackground"/>
+  </Style>
+  <Style ref.Path="//*.listViewBackgroundAndColor">
+    <att.PrimaryTextColor-bind>self.VisuallyEnabled ? winxpskin::winxpColors.TextNormal : winxpskin::winxpColors.TextDisabled</att.PrimaryTextColor-bind>
+    <att.SecondaryTextColor-eval>winxpskin::winxpColors.TextDisabled</att.SecondaryTextColor-eval>
+    <att.ItemSeparatorColor-eval>winxpskin::winxpColors.ListItemSeparator</att.ItemSeparatorColor-eval>
+    <SolidBackground Color-eval="winxpskin::winxpColors.ContentBackground"/>
+  </Style>
+  <Style ref.Path="//*.treeViewBackgroundAndColor">
+    <att.TextColor-bind>self.VisuallyEnabled ? winxpskin::winxpColors.TextNormal : winxpskin::winxpColors.TextDisabled</att.TextColor-bind>
+    <SolidBackground Color-eval="winxpskin::winxpColors.ContentBackground"/>
+  </Style>
+  <Style ref.Path="//*.controlText">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color (
+          not self.VisuallyEnabled ? winxpskin::winxpColors.TextDisabled :
+          winxpskin::winxpColors.TextNormal
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.toolstripMenuBackground" Color-eval="winxpskin::winxpColors.MenuBackground"/>
+  <Style ref.Path="//*.toolstripMenuBorder" Color-eval="winxpskin::winxpColors.MenuBorder"/>
+  <Style ref.Path="//*.toolstripSplitter" Color-eval="winxpskin::winxpColors.ToolstripSplitBorder"/>
+  <Style ref.Path="//*.toolstripArrow" BorderColor-bind="self.Colors.Text" BackgroundColor-bind="self.Colors.Text"/>
+  <Style ref.Path="//*.toolstripSplitArrow" BorderColor-bind="self.VisuallyEnabled ? winxpskin::winxpColors.TextNormal : winxpskin::winxpColors.TextDisabled" BackgroundColor-bind="self.VisuallyEnabled ? winxpskin::winxpColors.TextNormal : winxpskin::winxpColors.TextDisabled"/>
+  <Style ref.Path="//*.ribbonGroupBorder" Color-eval="winxpskin::winxpColors.RibbonBorder"/>
+  <Style ref.Path="//*.ribbonGroupTitle" Color-eval="winxpskin::winxpColors.RibbonGroupText"/>
+  <Style ref.Path="//*.ribbonMenuBorder" Color-eval="winxpskin::winxpColors.MenuBorder"/>
+  <Style ref.Path="//*.ribbonExpandableArrow">
+    <att.BorderColor-bind>
+      <![CDATA[
+        cast Color let state = self.State in (
+          not self.VisuallyEnabled ? winxpskin::winxpColors.RibbonExpandingArrow :
+          state == ButtonState::Pressed ? winxpskin::winxpColors.RibbonExpandingArrowPressed :
+          state == ButtonState::Active ? winxpskin::winxpColors.RibbonExpandingArrow :
+          winxpskin::winxpColors.RibbonExpandingArrow
+        )
+      ]]>
+    </att.BorderColor-bind>
+    <att.BackgroundColor-bind>
+      <![CDATA[
+        cast Color let state = self.State in (
+          not self.VisuallyEnabled ? winxpskin::winxpColors.Transparent :
+          state == ButtonState::Pressed ? winxpskin::winxpColors.RibbonExpandingArrowPressed :
+          state == ButtonState::Active ? winxpskin::winxpColors.RibbonExpandingArrow :
+          winxpskin::winxpColors.Transparent
+        )
+      ]]>
+    </att.BackgroundColor-bind>
+  </Style>
+  <Style ref.Path="//*.documentBoxBackgroundAndColor" BaselineDocument-eval="winxpskin::CreateBaselineDocument()">
+    <att.CaretColor-eval>winxpskin::winxpColors.TextBright</att.CaretColor-eval>
+    <SolidBackground Color-eval="winxpskin::winxpColors.ContentBackground"/>
+  </Style>
+</Styles>

@@ -93,3 +93,30 @@ existing `Updated table` payload. Geometry and retained-payload assertions are
 unchanged. Parameterize showcase
 palette names in reusable helpers so that extension test applications can
 provide their real selector entries without duplicating or weakening tests.
+
+## Shared keyboard payload field readiness
+
+The XP `SharedPayload` run stopped in `EditorSetValue` at the false
+`WaitForInputIdle` assertion `dialog input becomes idle before clicking a
+field`. The assertion precedes the field click and typing, so the payload had
+not been entered. The original failure is retained in
+`xgskins-winxp-final-SharedPayload.log` under the Windows temporary directory.
+
+The narrow temporary continuation waits up to 30 seconds for the target field
+to be enabled, visible and have positive bounds. It clicks once, requires
+logical keyboard focus, selects the line with Home/Shift+End and sends
+`!Type:Hello[Ab]{Cd}` once. It then requires that exact UIA `ValuePattern`
+value. `xgskins-winxp-final-SharedPayload-resume.log` records 32 passing
+assertions. This does not make the earlier idle assertion pass, replay typing,
+or suppress idle failures in other helpers. Service character-payload success
+does not verify physical keyboard or browser key-code handling. No application,
+skin, imported library or upstream source is changed.
+
+For the upstream `EditorSetValue` helper in
+[GacUI/Test/UIA_CppTest_Shared.cs](https://github.com/vczh-libraries/GacUI/blob/master/Test/UIA_CppTest_Shared.cs),
+separate global idle diagnostics from field readiness and exact input
+postconditions. Use bounded visible/enabled geometry checks, verify focus
+before typing, and retain exact payload assertions. Record a timed-out idle
+wait independently; never retry an input action merely because its completion
+wait failed. Regress this path after template replacement and with background
+timer activity.

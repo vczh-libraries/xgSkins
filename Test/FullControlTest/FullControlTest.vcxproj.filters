@@ -3,6 +3,7 @@
   <ItemGroup>
     <Filter Include="Win7Skin"><UniqueIdentifier>{7CF0E835-2C50-4F67-8ED1-7C212BFDB05F}</UniqueIdentifier></Filter>
     <Filter Include="Win8Skin"><UniqueIdentifier>{C6F918DF-1686-47BF-8069-554545DD5B02}</UniqueIdentifier></Filter>
+    <Filter Include="WinXPSkin"><UniqueIdentifier>{51A24327-68BB-4123-80BB-B533648A12EB}</UniqueIdentifier></Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
@@ -167,5 +168,14 @@
     <ClInclude Include="..\..\Source\Win8Skin\Source\Win8Skin.h"><Filter>Win8Skin</Filter></ClInclude>
     <ClInclude Include="..\..\Source\Win8Skin\Source\Win8SkinPartialClasses.h"><Filter>Win8Skin</Filter></ClInclude>
     <ClInclude Include="..\..\Source\Win8Skin\Source\Win8SkinReflection.h"><Filter>Win8Skin</Filter></ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\WinXPSkin\WinXPSkinConfig.cpp"><Filter>WinXPSkin</Filter></ClCompile>
+    <ClCompile Include="..\..\Source\WinXPSkin\Source\WinXPSkinPartialClasses.cpp"><Filter>WinXPSkin</Filter></ClCompile>
+    <ClCompile Include="..\..\Source\WinXPSkin\Source\WinXPSkinResource.cpp"><Filter>WinXPSkin</Filter></ClCompile>
+    <ClInclude Include="..\..\Source\WinXPSkin\WinXPSkinConfig.h"><Filter>WinXPSkin</Filter></ClInclude>
+    <ClInclude Include="..\..\Source\WinXPSkin\Source\WinXPSkin.h"><Filter>WinXPSkin</Filter></ClInclude>
+    <ClInclude Include="..\..\Source\WinXPSkin\Source\WinXPSkinPartialClasses.h"><Filter>WinXPSkin</Filter></ClInclude>
+    <ClInclude Include="..\..\Source\WinXPSkin\Source\WinXPSkinReflection.h"><Filter>WinXPSkin</Filter></ClInclude>
   </ItemGroup>
 </Project>
