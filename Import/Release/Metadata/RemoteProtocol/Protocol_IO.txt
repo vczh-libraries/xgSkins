@@ -1,0 +1,138 @@
+[@Cpp(::vl::presentation::NativeMouseButton)]
+enum IOMouseButton
+{
+    Left,
+    Middle,
+    Right,
+    Mouse4,
+    Mouse5,
+}
+
+[@Cpp(::vl::presentation::NativeWindowMouseInfo)]
+struct IOMouseInfo
+{
+    var ctrl: bool;
+    var shift: bool;
+    var alt: bool;
+    var osSuper: bool;
+    var left: bool;
+    var middle: bool;
+    var right: bool;
+    var x: NativeCoordinate;
+    var y: NativeCoordinate;
+    var wheel: int;
+    var nonClient: bool;
+}
+
+struct IOMouseInfoWithButton
+{
+    var button: IOMouseButton;
+    var info: IOMouseInfo;
+}
+
+[@Cpp(::vl::presentation::NativeWindowKeyInfo)]
+struct IOKeyInfo
+{
+    var code: key;
+    var ctrl: bool;
+    var shift: bool;
+    var alt: bool;
+    var osSuper: bool;
+    var capslock: bool;
+    var autoRepeatKeyDown: bool;
+}
+
+[@Cpp(::vl::presentation::NativeWindowCharInfo)]
+struct IOCharInfo
+{
+    var code: char;
+    var ctrl: bool;
+    var shift: bool;
+    var alt: bool;
+    var osSuper: bool;
+    var capslock: bool;
+}
+
+struct GlobalShortcutKey
+{
+    var id : int;
+    var ctrl : bool;
+    var shift : bool;
+    var alt : bool;
+    var osSuper : bool;
+    var code : key;
+}
+
+message IOUpdateGlobalShortcutKey       { request: GlobalShortcutKey[]; }
+event IOGlobalShortcutKey             { request: int; }
+
+message IORequireCapture    {}
+message IOReleaseCapture    {}
+message IOIsKeyPressing     { request: key; response: bool; }
+message IOIsKeyToggled      { request: key; response: bool; }
+
+event IOButtonDown          { request: IOMouseInfoWithButton; }
+event IOButtonDoubleClick   { request: IOMouseInfoWithButton; }
+event IOButtonUp            { request: IOMouseInfoWithButton; }
+event IOHWheel              { request: IOMouseInfo; }
+event IOVWheel              { request: IOMouseInfo; }
+
+[@DropConsecutive]
+event IOMouseMoving         { request: IOMouseInfo; }
+event IOMouseEntered        {}
+event IOMouseLeaved         {}
+
+event IOKeyDown             { request: IOKeyInfo; }
+event IOKeyUp               { request: IOKeyInfo; }
+event IOChar                { request: IOCharInfo; }
+
+[@Cpp(::vl::presentation::PointSequenceEndReason)]
+enum IOPointEndReason
+{
+    Succeeded,
+    Canceled_Unknown,
+    Canceled_PlatformCanceled,
+    Canceled_CaptureLost,
+    Canceled_WindowDestroyed,
+}
+
+struct IOPointInfo
+{
+    var sequenceId: string;
+    var pointId: int;
+    var timestamp: string;
+    var activePointCount: int;
+    var position: NativePoint;
+    var primary: bool;
+    var ctrl: bool;
+    var shift: bool;
+    var alt: bool;
+    var osSuper: bool;
+    var contactBounds: NativeRect?;
+    var pressure: double?;
+    var orientation: double?;
+    var platformFrameId: string?;
+}
+
+struct IOPointAction
+{
+    var eventIndex: int;
+    var info: IOPointInfo;
+}
+
+struct IOPointEnd
+{
+    var sequenceId: string;
+    var eventIndex: int;
+    var timestamp: string;
+    var accepted: bool;
+    var reason: IOPointEndReason;
+}
+
+event IOPointStarted        { request: IOPointAction; }
+event IOPointDown           { request: IOPointAction; }
+event IOPointUpdate         { request: IOPointAction; }
+event IOPointUp             { request: IOPointAction; }
+event IOPointEnter          { request: IOPointAction; }
+event IOPointLeave          { request: IOPointAction; }
+event IOPointEnded          { request: IOPointEnd; }
