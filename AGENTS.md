@@ -1,11 +1,20 @@
 # General Instructions
 
-Before You Start
+Must read instructions before starting:
 - [Project.md](./Project.md) -- Project structure, build commands, script descriptions.
-- [GacUIExtension.md](./GacUIExtension.md) -- The organization of this repo follow the general **GacUI Extension Convention**, currently supports platform for development activities:
-  - Windows
+- [GacUIExtension.md](./GacUIExtension.md) -- The organization of this repo follow the general **GacUI Extension Convention**.
+
+Supported platform for development activities:
+- Windows
+
+Additional material:
 - [spec/README.md](./spec/README.md) -- Specification of the extension.
 - [doc/README.md](./doc/README.md) -- Documentation of the extension.
+
+When a request begins with `investigate` or `review`, follow `<Release-repo>/AGENTS.md` to find the related task:
+- Such task might request for maintain `Copilot_Investigate.md`, use the `.github` folder in this repo instead.
+
+When `job:*` is mentioned, it means `.github/Jobs/job.*.prompt.md`.
 
 ## Maintaining Documents
 
@@ -18,14 +27,12 @@ Before You Start
   - API usage.
   - Background inside design.
   - It should focus on technical details.
+- Use a hyperlink `[<XXX-repo>/path/to/file](github-url)` to reference files that is not in this repo.
+  - If the target file is a document, you could skip the url path while quoting the path in a pair of (`).
+- `GacUIExtension.md` is not allowed to change.
 
-## Dependencies
+## Maintaining .gitignore
 
-The follow dependencies are required in development activities, but they are not necessary just for building and running the project.
-
-These repos under the same organization must be cloned as sibling folders:
-- [Tools](https://github.com/vczh-libraries/Tools)
-- [GacUI](https://github.com/vczh-libraries/GacUI)
-- [Release](https://github.com/vczh-libraries/Release)
-
-## Building
+You are only allowed to update the `# Repo-specific` section:
+- Files could be updated after running `GacBuild.ps1` or `GacGen.ps1`, log folders should be ignored, specify each log folder.
+- Files from building should not be committed, the `.gitignore` files already ignored common MSBuild generated files.
