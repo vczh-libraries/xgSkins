@@ -46888,7 +46888,7 @@ Class (::win7skin::HScrollTemplateConstructor)
 			::vl::__vwsn::This(this->__vwsn_precompile_7)->SetMaxRatio(static_cast<double>(0.5));
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_7)->SetMaxLength(static_cast<::vl::vint>(10));
+			::vl::__vwsn::This(this->__vwsn_precompile_7)->SetMaxLength(static_cast<::vl::vint>(18));
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_7)->SetDirection(::vl::presentation::compositions::GuiSideAlignedComposition::Direction::Left);
@@ -46918,7 +46918,7 @@ Class (::win7skin::HScrollTemplateConstructor)
 			::vl::__vwsn::This(this->__vwsn_precompile_9)->SetMaxRatio(static_cast<double>(0.5));
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_9)->SetMaxLength(static_cast<::vl::vint>(10));
+			::vl::__vwsn::This(this->__vwsn_precompile_9)->SetMaxLength(static_cast<::vl::vint>(18));
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_9)->SetDirection(::vl::presentation::compositions::GuiSideAlignedComposition::Direction::Right);
@@ -46946,7 +46946,7 @@ Class (::win7skin::HScrollTemplateConstructor)
 		(this->handleContainer = new ::vl::presentation::compositions::GuiBoundsComposition());
 		::vl::__vwsn::This(__vwsn_this_)->SetNamedObject(::vl::WString::Unmanaged(L"handleContainer"), ::vl::__vwsn::Box(this->handleContainer));
 		{
-			::vl::__vwsn::This(this->handleContainer)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(10); __vwsn_temp__.top = static_cast<::vl::vint>(0); __vwsn_temp__.right = static_cast<::vl::vint>(10); __vwsn_temp__.bottom = static_cast<::vl::vint>(0); return __vwsn_temp__; }());
+			::vl::__vwsn::This(this->handleContainer)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(18); __vwsn_temp__.top = static_cast<::vl::vint>(0); __vwsn_temp__.right = static_cast<::vl::vint>(18); __vwsn_temp__.bottom = static_cast<::vl::vint>(0); return __vwsn_temp__; }());
 		}
 		{
 			::vl::__vwsn::This(this->handleContainer)->SetMinSizeLimitation(::vl::presentation::compositions::GuiGraphicsComposition::MinSizeLimitation::NoLimit);
@@ -46954,7 +46954,7 @@ Class (::win7skin::HScrollTemplateConstructor)
 		(this->handle = new ::vl::presentation::compositions::GuiPartialViewComposition());
 		::vl::__vwsn::This(__vwsn_this_)->SetNamedObject(::vl::WString::Unmanaged(L"handle"), ::vl::__vwsn::Box(this->handle));
 		{
-			::vl::__vwsn::This(this->handle)->SetPreferredMinSize([&](){ ::vl::presentation::Size __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(10); return __vwsn_temp__; }());
+			::vl::__vwsn::This(this->handle)->SetPreferredMinSize([&](){ ::vl::presentation::Size __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(18); return __vwsn_temp__; }());
 		}
 		{
 			(this->__vwsn_precompile_11 = new ::vl::presentation::controls::GuiButton(::vl::presentation::theme::ThemeName::Button));
@@ -56965,7 +56965,7 @@ Class (::win7skin::VScrollTemplateConstructor)
 			::vl::__vwsn::This(this->__vwsn_precompile_7)->SetMaxRatio(static_cast<double>(0.5));
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_7)->SetMaxLength(static_cast<::vl::vint>(10));
+			::vl::__vwsn::This(this->__vwsn_precompile_7)->SetMaxLength(static_cast<::vl::vint>(18));
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_7)->SetDirection(::vl::presentation::compositions::GuiSideAlignedComposition::Direction::Top);
@@ -56995,7 +56995,7 @@ Class (::win7skin::VScrollTemplateConstructor)
 			::vl::__vwsn::This(this->__vwsn_precompile_9)->SetMaxRatio(static_cast<double>(0.5));
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_9)->SetMaxLength(static_cast<::vl::vint>(10));
+			::vl::__vwsn::This(this->__vwsn_precompile_9)->SetMaxLength(static_cast<::vl::vint>(18));
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_9)->SetDirection(::vl::presentation::compositions::GuiSideAlignedComposition::Direction::Bottom);
@@ -57023,7 +57023,7 @@ Class (::win7skin::VScrollTemplateConstructor)
 		(this->handleContainer = new ::vl::presentation::compositions::GuiBoundsComposition());
 		::vl::__vwsn::This(__vwsn_this_)->SetNamedObject(::vl::WString::Unmanaged(L"handleContainer"), ::vl::__vwsn::Box(this->handleContainer));
 		{
-			::vl::__vwsn::This(this->handleContainer)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(0); __vwsn_temp__.top = static_cast<::vl::vint>(10); __vwsn_temp__.right = static_cast<::vl::vint>(0); __vwsn_temp__.bottom = static_cast<::vl::vint>(10); return __vwsn_temp__; }());
+			::vl::__vwsn::This(this->handleContainer)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(0); __vwsn_temp__.top = static_cast<::vl::vint>(18); __vwsn_temp__.right = static_cast<::vl::vint>(0); __vwsn_temp__.bottom = static_cast<::vl::vint>(18); return __vwsn_temp__; }());
 		}
 		{
 			::vl::__vwsn::This(this->handleContainer)->SetMinSizeLimitation(::vl::presentation::compositions::GuiGraphicsComposition::MinSizeLimitation::NoLimit);
@@ -57031,7 +57031,7 @@ Class (::win7skin::VScrollTemplateConstructor)
 		(this->handle = new ::vl::presentation::compositions::GuiPartialViewComposition());
 		::vl::__vwsn::This(__vwsn_this_)->SetNamedObject(::vl::WString::Unmanaged(L"handle"), ::vl::__vwsn::Box(this->handle));
 		{
-			::vl::__vwsn::This(this->handle)->SetPreferredMinSize([&](){ ::vl::presentation::Size __vwsn_temp__; __vwsn_temp__.y = static_cast<::vl::vint>(10); return __vwsn_temp__; }());
+			::vl::__vwsn::This(this->handle)->SetPreferredMinSize([&](){ ::vl::presentation::Size __vwsn_temp__; __vwsn_temp__.y = static_cast<::vl::vint>(18); return __vwsn_temp__; }());
 		}
 		{
 			(this->__vwsn_precompile_11 = new ::vl::presentation::controls::GuiButton(::vl::presentation::theme::ThemeName::Button));
