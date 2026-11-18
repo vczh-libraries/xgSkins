@@ -77,6 +77,23 @@ Process 23496 closed normally through the application's Exit action with code
 for 1,001 unreleased interfaces; the CRT result is not an interface-lifetime
 verification.
 
+## Scrollbar geometry followup
+
+A later source audit verified that the historical
+[GacUI/Source/Controls/Styles/GuiCommonStyles.cpp](https://github.com/vczh-libraries/GacUI/blob/04743022c4e7e3e441cb67ac9177891c8f7cdf9f/Source/Controls/Styles/GuiCommonStyles.cpp)
+uses `defaultSize` for arrow length, minimum thumb size and track-end insets;
+its `arrowSize` parameter is unused. The Win7 horizontal and vertical templates
+were aligned to the actual 18-pixel geometry. They were regenerated for x32 and
+x64 and included in the combined Win7/Win8 `Debug|x64` build, which completed
+with zero warnings and zero errors in 36.41 seconds.
+
+Process 4044 checked Win7Skin before switching to Win8Skin. Scrollbars on
+`Layout / Repeat` had 18-pixel arrows and end insets. Both populated TextList
+scrollbars had 18-pixel widths, arrows and insets, with 468-pixel thumbs in the
+observed fixture. Evidence is retained in `followup-scroll-geometry.log` and
+the accompanying geometry snapshots under the Win7Skin evidence directory.
+The affected List suite also passed all 228 assertions in this process.
+
 ## Test adaptations and coverage limits
 
 The temporary verification adapter required these adjustments:

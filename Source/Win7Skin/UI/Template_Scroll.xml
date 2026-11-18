@@ -359,18 +359,18 @@
           <SolidBorder Color-eval="win7skin::win7Colors.ScrollSink"/>
         </Bounds>
 
-        <SideAligned MaxLength="10" MaxRatio="0.5" Direction="Left">
+        <SideAligned MaxLength="18" MaxRatio="0.5" Direction="Left">
           <Button AutoFocus="false" ref.Name="buttonDecrease" ControlTemplate="win7skin::LeftScrollButtonTemplate">
             <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           </Button>
         </SideAligned>
-        <SideAligned MaxLength="10" MaxRatio="0.5" Direction="Right">
+        <SideAligned MaxLength="18" MaxRatio="0.5" Direction="Right">
           <Button AutoFocus="false" ref.Name="buttonIncrease" ControlTemplate="win7skin::RightScrollButtonTemplate">
             <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           </Button>
         </SideAligned>
-        <Bounds ref.Name="handleContainer" AlignmentToParent="left:10 top:0 right:10 bottom:0" MinSizeLimitation="NoLimit">
-          <PartialView ref.Name="handle" PreferredMinSize="x:10">
+        <Bounds ref.Name="handleContainer" AlignmentToParent="left:18 top:0 right:18 bottom:0" MinSizeLimitation="NoLimit">
+          <PartialView ref.Name="handle" PreferredMinSize="x:18">
             <att.WidthPageSize-bind>(cast double self.PageSize) / self.TotalSize</att.WidthPageSize-bind>
             <att.WidthRatio-bind>(cast double self.Position) / self.TotalSize</att.WidthRatio-bind>
             <Button AutoFocus="false" ControlTemplate="win7skin::HScrollHandleTemplate">
@@ -408,18 +408,18 @@
           <SolidBorder Color-eval="win7skin::win7Colors.ScrollSink"/>
         </Bounds>
 
-        <SideAligned MaxLength="10" MaxRatio="0.5" Direction="Top">
+        <SideAligned MaxLength="18" MaxRatio="0.5" Direction="Top">
           <Button AutoFocus="false" ref.Name="buttonDecrease" ControlTemplate="win7skin::TopScrollButtonTemplate">
             <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           </Button>
         </SideAligned>
-        <SideAligned MaxLength="10" MaxRatio="0.5" Direction="Bottom">
+        <SideAligned MaxLength="18" MaxRatio="0.5" Direction="Bottom">
           <Button AutoFocus="false" ref.Name="buttonIncrease" ControlTemplate="win7skin::BottomScrollButtonTemplate">
             <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           </Button>
         </SideAligned>
-        <Bounds ref.Name="handleContainer" AlignmentToParent="left:0 top:10 right:0 bottom:10" MinSizeLimitation="NoLimit">
-          <PartialView ref.Name="handle" PreferredMinSize="y:10">
+        <Bounds ref.Name="handleContainer" AlignmentToParent="left:0 top:18 right:0 bottom:18" MinSizeLimitation="NoLimit">
+          <PartialView ref.Name="handle" PreferredMinSize="y:18">
             <att.HeightPageSize-bind>(cast double self.PageSize) / self.TotalSize</att.HeightPageSize-bind>
             <att.HeightRatio-bind>(cast double self.Position) / self.TotalSize</att.HeightRatio-bind>
             <Button AutoFocus="false" ControlTemplate="win7skin::VScrollHandleTemplate">
