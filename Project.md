@@ -14,6 +14,15 @@ When working on this repo:
   - If you find any useful workaround, you can use it, but you should list all workarounds, all upstream bugs and proposals to fix upstream repos in a suggestion file.
   - If you cannot find any useful workaround, you should list all upstream bugs and proposals to fix upstream repos in a suggestion file. In this case, you could ignore these bugs and continue to finish the other part.
   - The suggestion file should be put in the `suggestions` folder and commit.
+    - Use `suggestions/<REPO-NAME>` for any issue in the library release from `vczh-libraries/<REPO-NAME>`.
+    - Use `suggestions/FullControlTest` for any issue in the `FullControlTest` test app.
+    - Use `suggestions` for any uncategorized issue, which I would expect to be rare.
+    - The organization of a suggestion file should be:
+      - `# Issue Name`: description of the issue.
+      - `## Repro`: how to repro it using `FullControlTest.
+      - `## Workaround`: the workaround to fix the issue, if no workaround is available, write "N/A".
+      - `## Root Cause`: the root cause of the upstream issue.
+      - `## Proposal`: the proposal fix to upstream repos.
 - When committing any files, you should put generated files in a separated commit, its title would be the origin commit title followed by `[generated]`.
 - Changes caused by `import.ps1` should be committed with title `[import]`.
 - Changes caused by `syncProj.ps1` should be committed with title `[syncProj]`.
