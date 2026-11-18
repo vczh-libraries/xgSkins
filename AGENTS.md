@@ -16,6 +16,8 @@ When a request begins with `investigate` or `review`, follow `<Release-repo>/AGE
 
 When `job:*` is mentioned, it means `Jobs/job.*.prompt.md`.
 
+If conflict happens during `git push`, always rebase, DO NOT merge.
+
 ## Maintaining Documents
 
 - DO NOT mix up specification and documentation.

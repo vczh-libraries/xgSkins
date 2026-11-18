@@ -5,6 +5,7 @@ All generated C++ files should be put in `Source/<SKIN-NAME>/Source`.
 All manual maintained C++ files should be put in `Source/<SKIN-NAME>`.
 The predefined `DarkSkin` is a good example to follow for creating a new skin, follow the pattern of `DarkSkin`, including file organization and naming conventions to complete the requirements below.
 `DarkSkin` source files could be found at `<GacUI-repo>/Source/Skins/DarkSkin`.
+Try your best to use XML instead of workflow script when possible, follow `DarkSkin` for recommended coding pattern.
 
 ## Resource Files
 
