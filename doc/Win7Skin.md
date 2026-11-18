@@ -74,7 +74,7 @@ supplied callback, which calls its builder's `Interpolate(1.0)`.
 Killing the wrapper interrupts both animations;
 the cancelled coroutine does not transfer its old target, and the next
 transition continues from the displayed colors. See
-[FiniteAnimationEndpoint.md](../suggestions/FiniteAnimationEndpoint.md) for the
+[FiniteAnimationEndpoint.md](../suggestions/GacUI/FiniteAnimationEndpoint.md) for the
 upstream cause and removal condition for this local workaround.
 
 The [color specification](../spec/Win7Skin/ColorPackage.md),

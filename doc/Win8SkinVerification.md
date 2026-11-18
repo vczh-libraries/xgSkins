@@ -133,7 +133,8 @@ runtime defect. The isolated-output invocation uses
 The original exception's precise failing call remains unconfirmed because its
 stack was truncated. The evidence, temporary runner changes and proposed
 harness improvement are documented in
-[FullControlTestModalAutomation.md](../suggestions/FullControlTestModalAutomation.md).
+[modal discovery](../suggestions/FullControlTest/ModalDiscovery.md) and
+[resumed saves with existing files](../suggestions/FullControlTest/ResumedSaveOverwrite.md).
 
 ## Process exits
 
@@ -152,20 +153,20 @@ allocation-count warning for 1,001 live interfaces was again present.
 
 The imported runtime still contains the hosted-window focus lifetime defect
 documented in
-[HostedWindowLastFocusedWindow.md](../suggestions/HostedWindowLastFocusedWindow.md).
+[HostedWindowLastFocusedWindow.md](../suggestions/GacUI/HostedWindowLastFocusedWindow.md).
 That earlier focus-lifetime crash was not reproduced in the Win8 runs.
 The responsive movie-list row-height failure did reproduce with Win8Skin:
 240 x 320 compact rows measured 26 pixels, expanded to 106 pixels at
 680 x 320, then retained 106 pixels after returning to 240 x 320. The source
 diagnosis and earlier Win7Skin/DarkSkin evidence are in
-[ResponsiveListRowHeight.md](../suggestions/ResponsiveListRowHeight.md).
+[ResponsiveListRowHeight.md](../suggestions/GacUI/ResponsiveListRowHeight.md).
 `ResponsiveWindow.log` and `responsive-shrink-failure.json` preserve this
 failed assertion. Earlier responsive ribbon/document/view/stack/group,
 vertical-header and Alt+E checks completed before it; later isolated checks
 do not erase the failure.
 
 Win8Skin includes the local animation endpoint completion helper described in
-[FiniteAnimationEndpoint.md](../suggestions/FiniteAnimationEndpoint.md).
+[FiniteAnimationEndpoint.md](../suggestions/GacUI/FiniteAnimationEndpoint.md).
 The XML gradients retain linear 120 ms timing. The endpoint and interruption
 checks above verify the local completion behavior.
 
@@ -179,7 +180,7 @@ passing point-regression run or an established skin defect; the assertion was
 not removed. Source inspection confirms that both UIA reports use the controls'
 logical focus flags rather than treating gallery selection as focus. The
 retained-focus disconnection path and proposed regressions are documented in
-[RetainedLogicalFocus.md](../suggestions/RetainedLogicalFocus.md); that path has
+[RetainedLogicalFocus.md](../suggestions/GacUI/RetainedLogicalFocus.md); that path has
 not been traced as the trigger for this observation.
 After normal closure of process 4044, the unchanged point suite passed 2,479
 assertions when run first in fresh process 13912. This isolation does not erase
@@ -187,13 +188,12 @@ the earlier failure or prove its trigger. The initial run is preserved in
 `PointRegression-contaminated4044.log`; the fresh run is in
 `PointRegression.log` and `fresh13912-sweep.log`.
 
-The verification adapter used the existing
-[search-field shortcut routing](../suggestions/FullControlTestShortcutRouting.md)
-and [theme-derived document colors](../suggestions/FullControlTestSkinColors.md)
-adjustments. Popup gallery backgrounds do not expose UIA Invoke; their UIA
-discovery/scrolling plus service-pointer activation is mixed coverage, as
-described in
-[FullControlTestGalleryAutomation.md](../suggestions/FullControlTestGalleryAutomation.md).
+The verification adapter applied the documented adjustments for
+[search-field shortcut routing](../suggestions/FullControlTest/SingleLineShortcutRouting.md)
+and [theme-dependent document colors](../suggestions/FullControlTest/DocumentStyleBaseline.md).
+The gallery checks used UIA to find and scroll to popup items, then activated
+them through the service pointer because their backgrounds do not expose UIA
+Invoke. [Gallery item activation](../suggestions/FullControlTest/GalleryItemActivation.md).
 
 The initial focused List invocation inherited Radio mode from the earlier
 Win7Skin followup and stopped at its expected-no-Toggle assertion. The adapter
@@ -202,7 +202,7 @@ rerunning the unchanged assertions. The original failure is retained in
 `remaining-sweep.log`; the rerun passed 233 assertions in `List.log` and
 `focused-sweep.log`. The retained-state precondition and proposed harness
 regression are described in
-[FullControlTestFixtureState.md](../suggestions/FullControlTestFixtureState.md).
+[the TextList initial mode](../suggestions/FullControlTest/TextListInitialMode.md).
 
 The initial Touching invocation completed raw contact transforms, cancellation
 and rejected-sequence/fallback groups, then stopped at the ordinary ListView
@@ -210,11 +210,11 @@ scrollability precondition. The inherited 1,400 x 950 window gave both lists
 770-pixel viewports, enough for all 29 rows, so there was no vertical scroll
 range. The resumed adapter explicitly resized through UIA to 1,000 x 600 and
 continued at the ordinary ListView test, retaining its scrollability assertion
-and all subsequent checks. The same fixture-state note records this setup;
+and all subsequent checks. See the [ListView viewport setup](../suggestions/FullControlTest/TouchingListViewViewport.md).
 `Touching.log` and `focused-sweep.log` preserve the initial stop, while
 `TouchListAndText.log` records the resumed segment's 11,059 passing assertions.
 The adapter retained the previously documented
-[touch-list no-scroll guard](../suggestions/FullControlTestTouchAutomation.md),
+[touch-list no-scroll guard](../suggestions/FullControlTest/TouchListScrollReset.md),
 but its diagnostic branch did not execute in this Win8 run: the reset was valid
 at the explicit viewport. This is not Win8 coverage of that guard branch.
 
@@ -226,12 +226,13 @@ A subsequent snapshot showed the rebuilt DarkSkin Window Manager. The resumed
 adapter uses a bounded 30-second wait, reacquiring the root until its Window
 Manager tab exists, then keeps the existing palette-retention, geometry and
 table assertions. This settle condition is also documented in
-[FullControlTestFixtureState.md](../suggestions/FullControlTestFixtureState.md).
+[provider readiness after a theme change](../suggestions/FullControlTest/RebuiltThemeProviders.md).
 The resumed three-skin retention, table geometry, splitter and rebuild groups
 then completed before the separate upstream table-palette loop requested the
 nonexistent `Ember` entry. `EasyLayoutPaletteResume.log` preserves that harness
 configuration stop. The adapter maps the remaining loop to DarkSkin, Win7Skin
 and Win8Skin, retaining its table-payload, geometry and final resize assertions.
+See [EasyLayout palette names](../suggestions/FullControlTest/EasyLayoutPaletteNames.md).
 `EasyLayoutTablePaletteResume.log` completed with 277 passing assertions.
 Together these invocations cover the mixed/table scenario with the actual
 three-skin selector; they are not one uninterrupted EasyLayout pass.

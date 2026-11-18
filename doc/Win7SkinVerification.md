@@ -100,15 +100,15 @@ The temporary verification adapter required these adjustments:
 
 - Search-field `Ctrl+A` routes to the central document. The service-input path
   used `Home`, `Shift+End`, then typing to replace the field's current value.
-  See [single-line shortcut routing](../suggestions/FullControlTestShortcutRouting.md).
+  See [single-line shortcut routing](../suggestions/FullControlTest/SingleLineShortcutRouting.md).
 - Ordinary document-style foregrounds come from the active theme. The adapter
   obtained that baseline from the editor while retaining exact checks for
-  explicitly colored styles. See [showcase skin colors](../suggestions/FullControlTestSkinColors.md).
+  explicitly colored styles. See [the theme-dependent document-style baseline](../suggestions/FullControlTest/DocumentStyleBaseline.md).
 - After Clear/Add 5 Items, the touch-list rows fit the 720-pixel viewport. UIA
   reported no vertical scroll range, `NoScroll` and a 100 percent view size.
   The adapter asserted that state and omitted the inapplicable scroll reset,
   retaining the remaining gesture checks. See
-  [touch-list scroll reset](../suggestions/FullControlTestTouchAutomation.md).
+  [touch-list scroll reset](../suggestions/FullControlTest/TouchListScrollReset.md).
 
 The original Touching invocation completed contact-transform, cancellation,
 swipe, recycling and offscreen-completion groups before stopping at the scroll
@@ -118,7 +118,7 @@ cover the resumed segment.
 Popup gallery backgrounds expose UIA Toggle controls without Invoke. UIA
 located and scrolled these items, while service pointer input activated them.
 Those checks are mixed UIA/service coverage, not successful UIA Invoke tests;
-see [gallery activation](../suggestions/FullControlTestGalleryAutomation.md).
+see [gallery activation](../suggestions/FullControlTest/GalleryItemActivation.md).
 For nonactivating menus that did not dismiss through synthetic Escape, the
 adapter clicked outside the menu and verified dismissal.
 
@@ -140,7 +140,7 @@ completion coroutine whose callback applies `Interpolate(1.0)` after normal
 completion.
 Cancelled wrappers do not apply their old targets. The implementation and
 upstream proposal are documented in
-[FiniteAnimationEndpoint.md](../suggestions/FiniteAnimationEndpoint.md).
+[FiniteAnimationEndpoint.md](../suggestions/GacUI/FiniteAnimationEndpoint.md).
 This source change is separate from the earlier whitespace-only regeneration.
 
 ## Shared responsive-layout failure
@@ -153,7 +153,7 @@ showing three titles instead of the initial nine. The behavior is recorded in
 `ResponsiveWindow.log`, `ResponsiveWindow-DarkSkin-comparison.log` and
 `responsive-shrink-failure.json`; it is not counted as a passing resize check.
 The source-based explanation and proposed regression are in
-[ResponsiveListRowHeight.md](../suggestions/ResponsiveListRowHeight.md).
+[ResponsiveListRowHeight.md](../suggestions/GacUI/ResponsiveListRowHeight.md).
 
 ## Upstream focus failure
 
@@ -164,7 +164,7 @@ through `Activate` and `BringToFront`.
 
 `DestroyNativeWindow` clears `enteringWindow` where it should clear
 `lastFocusedWindow`. The source location, stack and proposed regression are in
-[HostedWindowLastFocusedWindow.md](../suggestions/HostedWindowLastFocusedWindow.md).
+[HostedWindowLastFocusedWindow.md](../suggestions/GacUI/HostedWindowLastFocusedWindow.md).
 The crashed process was terminated after diagnosis. Running Text first in a
 fresh process isolated the remaining checks; it did not repair the defect.
 No upstream or imported code was changed for this issue.

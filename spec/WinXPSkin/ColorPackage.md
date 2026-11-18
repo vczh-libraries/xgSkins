@@ -220,4 +220,4 @@ Disabled document-based editors use the gray-beige frame fill while retaining
 their configured document foregrounds. Plain text therefore stays black;
 explicit document formatting must remain intact. The current foreground
 limitation and proposed API support are documented in
-[DisabledDocumentForeground.md](../../suggestions/DisabledDocumentForeground.md).
+[DisabledDocumentForeground.md](../../suggestions/GacUI/DisabledDocumentForeground.md).

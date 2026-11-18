@@ -41,7 +41,9 @@ The integer-range workaround uses a native-integer range and a small
 parameterless `ProgressChunkTemplate`. The chunk count, spacing, gradients and composition
 layout remain in XML. The upstream limitations, including the boxed object
 constructor-parameter shorthand, and proposed fixes are documented in
-[GeneratedIntegerCastMerge.md](../suggestions/GeneratedIntegerCastMerge.md).
+[Workflow cast merging](../suggestions/Workflow/GeneratedIntegerCastMerge.md),
+[the Vlpp range enumerator](../suggestions/Vlpp/RangeEnumeratorIndex.md) and
+[GacUI boxed item-template parameters](../suggestions/GacUI/BoxedItemTemplateParameter.md).
 No upstream or generated C++ source was manually changed for this workaround.
 
 Resource generation for the first runtime build completed for x32 and x64, and
@@ -88,7 +90,8 @@ brushes, compressed-image caption samples and invented ribbon designs are
 distinguished there; the palette is not claimed to reproduce every native XP
 bitmap pixel exactly. The list/calendar selected-foreground limitation and
 safe palette workaround are documented in
-[SelectedItemForeground.md](../suggestions/SelectedItemForeground.md).
+[selected list-item text](../suggestions/GacUI/SelectedItemForeground.md) and
+[selected calendar-day text](../suggestions/GacUI/SelectedCalendarDayForeground.md).
 
 ## Runtime checks
 
@@ -177,7 +180,7 @@ The observed tracker clipping led to a guarded showcase synchronization change:
 only the horizontal tracker's row and the vertical tracker's column grow from
 20 to 21 pixels. The scrollbar and progress dimensions remain unchanged.
 The source transformation and upstream proposal are recorded in
-[FullControlTestTrackerSize.md](../suggestions/FullControlTestTrackerSize.md).
+[TrackerFixtureSize.md](../suggestions/FullControlTest/TrackerFixtureSize.md).
 That correction passed synchronization, both generation architectures, the
 generated-code merge and the rebuilt application as recorded above. Runtime
 geometry, ancestor clipping and interaction checks completed across the preserved
@@ -219,7 +222,7 @@ expected count. Successful saved states are
 native pixel verification. Both the original blank-refresh timeout and the
 later provider failure remain recorded; neither becomes a successful original
 invocation. The readiness limitation and source investigation proposal are in
-[ThemeRefreshLayoutReadiness.md](../suggestions/ThemeRefreshLayoutReadiness.md).
+[ThemeRefreshLayoutReadiness.md](../suggestions/GacUI/ThemeRefreshLayoutReadiness.md).
 
 The basic SOP result is recorded in `%TEMP%/xgskins-winxp-SopBasics.log` and its
 artifact directory under `%TEMP%/xgskins-verification/WinXPSkin`. The deeper
@@ -239,13 +242,14 @@ faces and `#7F9DB9` borders; modal-disabled editors used `#EBEBE4` faces with
 the same border. The disabled Operations group used `#A1A192` caption text and
 `#D0D0BF` border. UIA ForegroundColor returned 0 for both enabled and disabled
 editor text. Source review confirms that default-colored disabled document
-text retains the black baseline: the template has no disabled foreground paint
+text retains the black baseline. The template has no disabled foreground paint
 property, its baseline is consumed at installation, and the renderer uses the
-resolved model/run colors. This is an actual XP fidelity limitation, while
-native raster comparison remains unavailable. Explicit author styles remain
-intact; a template-only recoloring workaround would mutate or reinstall the
-document state. Details and the proposed renderer property are in
-[DisabledDocumentForeground.md](../suggestions/DisabledDocumentForeground.md).
+resolved model/run colors. The original run recorded composition and UIA data.
+A later hosted run captured the same field with its owner enabled and disabled.
+Explicit author styles remain intact. Recoloring through the template would
+require mutating or reinstalling the document state. The screenshots and
+proposed renderer property are in
+[DisabledDocumentForeground.md](../suggestions/GacUI/DisabledDocumentForeground.md).
 
 The disabled owner caption had `#7A96DF` to `#7FA0E7` body paint and
 `#A6BCEB` to `#7C9CDF` faces for minimize, maximize and Close. These saved values
@@ -450,7 +454,7 @@ and six sample entries. Catalog and styled-document private-format save/reload
 checks also completed. Popup backgrounds do not expose UIA Invoke: UIA
 discovery/scrolling plus service-pointer activation is mixed coverage, as
 described in
-[FullControlTestGalleryAutomation.md](../suggestions/FullControlTestGalleryAutomation.md).
+[GalleryItemActivation.md](../suggestions/FullControlTest/GalleryItemActivation.md).
 
 Immediately after the styled-document reload and refresh to DarkSkin, the
 adapter threw `ArgumentOutOfRangeException` in `DocumentStyles`, before loading
@@ -500,7 +504,7 @@ the exact-byte assertion pass. The native diagnostic found no owned Microsoft
 Visual C++ Runtime Library window. No skin source change was made.
 The independent binary comparison, plausible paragraph-normalization/undo
 path and proposed upstream checkpoints are documented in
-[DocumentUndoSerialization.md](../suggestions/DocumentUndoSerialization.md).
+[DocumentUndoSerialization.md](../suggestions/GacUI/DocumentUndoSerialization.md).
 
 Evidence is `%TEMP%/xgskins-winxp-DocumentExchange.log`, with artifacts in
 `DocumentExchange-20261118-181702-414` under the verification directory. The XML
@@ -543,7 +547,7 @@ verified that selection, sent Delete and verified an empty document. It then
 completed menu/formatting, modal Invoke and asynchronous logical-subwindow
 lifecycle checks. No skin source changed; the observation and targeted
 verification workaround are recorded in
-[FullControlTestShortcutRouting.md](../suggestions/FullControlTestShortcutRouting.md#winxpskin-window-fixture).
+[clearing the Toolstrip document fixture](../suggestions/FullControlTest/ToolstripDocumentClear.md).
 
 That continuation later stopped at the palette-replacement boundary because
 the immediate lookup could not find the rebuilt Window Manager tab. A final
@@ -637,7 +641,7 @@ keyboard input and ALT activation. It then failed the original strict row-height
 assertion: compact rows initially measured 26 pixels, detailed rows measured
 106 pixels, and compact rows retained 106 pixels after shrinking. This
 reproduces the shared behavior documented in
-[ResponsiveListRowHeight.md](../suggestions/ResponsiveListRowHeight.md).
+[ResponsiveListRowHeight.md](../suggestions/GacUI/ResponsiveListRowHeight.md).
 
 After modal cancellation, `ResponsiveRemaining` passed 877 additive assertions
 for the remaining responsive appearances, account/footer behavior, selection
@@ -701,7 +705,8 @@ bounded 60-second client requests for the remaining checks; that verification
 adjustment is not a fix for the response-send termination behavior.
 The source path, diagnostic gaps and proposed upstream failure policy are
 documented in
-[AutomationResponseFailure.md](../suggestions/AutomationResponseFailure.md).
+[the GacUI response-send failure](../suggestions/GacUI/AutomationResponseFailure.md) and
+[the missing VlppOS error code](../suggestions/VlppOS/HttpResponseErrorCode.md).
 
 Fresh process 25932 subsequently passed 160 Raw Clock assertions with zero
 unavailable dialog completions: navigation/data/timer/bounds, raw-element
@@ -753,7 +758,8 @@ The temporary `Pattern<T>` helper also stopped fetching `Current.Name` solely
 for a diagnostic message after successful `TryGetCurrentPattern`; the required
 pattern-availability assertion remains unchanged. The original failing call's
 pattern result was not retained. The precise adapter changes and limits are in
-[FullControlTestTouchAutomation.md](../suggestions/FullControlTestTouchAutomation.md#xp-document-touch-continuation).
+[touch pattern diagnostics](../suggestions/FullControlTest/TouchPatternDiagnostics.md) and
+[document-touch viewport checks](../suggestions/FullControlTest/DocumentTouchViewport.md).
 
 The final continuation, `%TEMP%/xgskins-winxp-final-TouchDarkRemaining-resume.log`,
 passed 157 assertions with zero unavailable dialog completions and normal
@@ -780,7 +786,7 @@ exact UIA Value and passed 32 assertions. Its log is
 `SharedPayload-20261118-193714-522`. This preserves the original idle failure
 without blanket suppression or replayed typing. It is synthetic input coverage,
 not a physical keyboard check. The scoped fixture adaptation is documented in
-[FullControlTestFixtureState.md](../suggestions/FullControlTestFixtureState.md).
+[keyboard payload field readiness](../suggestions/FullControlTest/KeyboardPayloadFieldReadiness.md).
 
 ## Window Manager payloads and native injected input
 
@@ -845,7 +851,7 @@ its queued flag and publishes the latest requested count. The template
 destructor marks the state inactive. There is no decorative animation or timer;
 the purpose is to rebuild children after the current layout traversal returns.
 The rationale and upstream proposal are in
-[ProgressChunkLayoutMutation.md](../suggestions/ProgressChunkLayoutMutation.md).
+[ProgressChunkLayoutMutation.md](../suggestions/GacUI/ProgressChunkLayoutMutation.md).
 
 Generation for this correction completed for x32 and x64, and the generated
 C++ files merged successfully. The corrected `Debug|x64` application built with

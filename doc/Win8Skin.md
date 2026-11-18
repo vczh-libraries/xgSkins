@@ -66,7 +66,7 @@ calls the builder's `Interpolate(1.0)`. Cancelling the wrapper also cancels its
 inner animation and prevents an obsolete target transfer. A replacement begins
 from the currently displayed colors. The shared upstream issue and local
 workaround are explained in
-[FiniteAnimationEndpoint.md](../suggestions/FiniteAnimationEndpoint.md).
+[FiniteAnimationEndpoint.md](../suggestions/GacUI/FiniteAnimationEndpoint.md).
 
 ## Exact legacy data
 

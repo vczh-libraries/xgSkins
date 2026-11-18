@@ -123,7 +123,8 @@ pair. Read-only editor mode is likewise not exposed as a distinct editor-border
 template state; the documented disabled fill does not imply a separate
 read-only rendering path. The upstream contracts, safe palette workaround and
 proposed foreground API are documented in
-[SelectedItemForeground.md](../suggestions/SelectedItemForeground.md).
+[selected list-item text](../suggestions/GacUI/SelectedItemForeground.md) and
+[selected calendar-day text](../suggestions/GacUI/SelectedCalendarDayForeground.md).
 
 Disabled document-based text boxes change their fill to `#EBEBE4`, but plain
 text retains the black document baseline instead of XP's gray disabled text.
@@ -133,7 +134,7 @@ reinstalling templates on each enabled-state change would disturb application
 formatting and document state. WinXPSkin preserves those contracts and records
 this fidelity limitation; explicit document colors remain intact. The source
 findings and proposed transient renderer property are in
-[DisabledDocumentForeground.md](../suggestions/DisabledDocumentForeground.md).
+[DisabledDocumentForeground.md](../suggestions/GacUI/DisabledDocumentForeground.md).
 
 Pushbuttons use a 23-pixel minimum height while retaining their content-driven
 width. A blue inner rim and dotted rectangle indicate keyboard focus; hover
@@ -151,7 +152,9 @@ The progress repeater uses a small Workflow factory that constructs a
 parameterless chunk template and ignores the ordinal argument. Its geometry,
 colors and layout remain declarative XML. This avoids the upstream integer
 range and generated-code limitations described in
-[GeneratedIntegerCastMerge.md](../suggestions/GeneratedIntegerCastMerge.md).
+[Workflow cast merging](../suggestions/Workflow/GeneratedIntegerCastMerge.md),
+[the Vlpp range enumerator](../suggestions/Vlpp/RangeEnumeratorIndex.md) and
+[GacUI boxed item-template parameters](../suggestions/GacUI/BoxedItemTemplateParameter.md).
 
 The requested chunk count is also calculated by an XML binding. A small
 `QueueChunkCount` helper coalesces requests and publishes the latest count
@@ -161,7 +164,7 @@ traversal. An independently captured shared state is marked inactive by the
 template destructor, and the callback checks it before accessing the template.
 This deferred structural update adds no decorative animation or timer. The
 observed layout failure and scheduling/lifetime contract are documented in
-[ProgressChunkLayoutMutation.md](../suggestions/ProgressChunkLayoutMutation.md).
+[ProgressChunkLayoutMutation.md](../suggestions/GacUI/ProgressChunkLayoutMutation.md).
 
 Generation, build and runtime evidence is tracked separately in
 [WinXPSkinVerification.md](WinXPSkinVerification.md).

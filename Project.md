@@ -19,10 +19,11 @@ When working on this repo:
     - Use `suggestions` for any uncategorized issue, which I would expect to be rare.
     - The organization of a suggestion file should be:
       - `# Issue Name`: description of the issue.
-      - `## Repro`: how to repro it using `FullControlTest.
+      - `## Repro`: how to repro it using `FullControlTest`.
       - `## Workaround`: the workaround to fix the issue, if no workaround is available, write "N/A".
       - `## Root Cause`: the root cause of the upstream issue.
       - `## Proposal`: the proposal fix to upstream repos.
+    - When it is more helpful you can add screenshots to a suggestion file, using the following naming convention: `<SUGGESTION-FILE>_<INDEX>.png`.
 - When committing any files, you should put generated files in a separated commit, its title would be the origin commit title followed by `[generated]`.
 - Changes caused by `import.ps1` should be committed with title `[import]`.
 - Changes caused by `syncProj.ps1` should be committed with title `[syncProj]`.
