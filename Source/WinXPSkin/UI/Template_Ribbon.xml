@@ -11,7 +11,6 @@
         <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
-        <att.SubMenuTemplate>winxpskin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
           <Table ref.Name ="container" CellPadding="3" AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -47,7 +46,6 @@
         <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
-        <att.SubMenuTemplate>winxpskin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
           <Bounds AlignmentToParent="left:0 top:0 right:10 bottom:0">
@@ -107,7 +105,6 @@
         <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
-        <att.SubMenuTemplate>winxpskin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <Bounds AlignmentToParent="left:1 top:1 right:11 bottom:1">
 
           <Table ref.Name ="container" CellPadding="3" AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -148,7 +145,6 @@
         <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
-        <att.SubMenuTemplate>winxpskin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
           <att.Rows>
@@ -189,7 +185,6 @@
         <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
-        <att.SubMenuTemplate>winxpskin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
           <att.Rows>
@@ -335,7 +330,6 @@
         <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
-        <att.SubMenuTemplate>winxpskin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <att.Rows>
             <CellOption>composeType:MinSize</CellOption>

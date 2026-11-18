@@ -109,9 +109,10 @@ red face; its two gradient samples come from the archived caption state sheet,
 where disabled caption controls instead have a muted blue face.
 
 The ribbon, its contextual tabs, group launchers and galleries are new designs.
-They combine Luna's beige panels, tab shapes, blue captions and orange hot
-accents with current GacUI layout contracts. They are not an XP-era ribbon or
-an Office 2007 reproduction.
+The ribbon pairs Luna’s beige panels, tab shapes and blue captions with the
+toolstrip’s command highlights. The default palette uses the same five button
+states for ribbon and toolstrip commands. Applications can customize their
+colors independently.
 
 Built-in list/tree/grid item foregrounds are not selected-state template
 properties, and calendar labels are separately owned by the date-picker look.

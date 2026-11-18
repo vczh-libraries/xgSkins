@@ -164,6 +164,46 @@
 
       func CreateDefaultColorPackage() : ColorPackage
       {
+        var toolstripButtonNormal : ButtonColors = {
+          Border: cast Color "#00000000";
+          Inner: cast Color "#00000000";
+          G1: cast Color "#00000000";
+          G2: cast Color "#00000000";
+          Text: cast Color "#000000";
+          Bullet: cast Color "#000000";
+        };
+        var toolstripButtonActive : ButtonColors = {
+          Border: cast Color "#316AC5";
+          Inner: cast Color "#C1D2EE";
+          G1: cast Color "#C1D2EE";
+          G2: cast Color "#C1D2EE";
+          Text: cast Color "#000000";
+          Bullet: cast Color "#000000";
+        };
+        var toolstripButtonPressed : ButtonColors = {
+          Border: cast Color "#4B4B6F";
+          Inner: cast Color "#98B5E2";
+          G1: cast Color "#98B5E2";
+          G2: cast Color "#98B5E2";
+          Text: cast Color "#000000";
+          Bullet: cast Color "#000000";
+        };
+        var toolstripButtonSelected : ButtonColors = {
+          Border: cast Color "#316AC5";
+          Inner: cast Color "#E1E6E8";
+          G1: cast Color "#E1E6E8";
+          G2: cast Color "#E1E6E8";
+          Text: cast Color "#000000";
+          Bullet: cast Color "#000000";
+        };
+        var toolstripButtonDisabled : ButtonColors = {
+          Border: cast Color "#00000000";
+          Inner: cast Color "#00000000";
+          G1: cast Color "#00000000";
+          G2: cast Color "#00000000";
+          Text: cast Color "#A1A192";
+          Bullet: cast Color "#A1A192";
+        };
         return {
           EditorNormal: {
             Border: cast Color "#7F9DB9";
@@ -413,86 +453,16 @@
             Text: cast Color "#A1A192";
             Bullet: cast Color "#A1A192";
           };
-          RibbonButtonNormal: {
-            Border: cast Color "#00000000";
-            Inner: cast Color "#00000000";
-            G1: cast Color "#00000000";
-            G2: cast Color "#00000000";
-            Text: cast Color "#000000";
-            Bullet: cast Color "#000000";
-          };
-          RibbonButtonActive: {
-            Border: cast Color "#003C74";
-            Inner: cast Color "#F8B73B";
-            G1: cast Color "#FFFFFF";
-            G2: cast Color "#F0F0EA";
-            Text: cast Color "#000000";
-            Bullet: cast Color "#000000";
-          };
-          RibbonButtonPressed: {
-            Border: cast Color "#003C74";
-            Inner: cast Color "#C5C5B9";
-            G1: cast Color "#E6E6E0";
-            G2: cast Color "#E2E2DA";
-            Text: cast Color "#000000";
-            Bullet: cast Color "#000000";
-          };
-          RibbonButtonSelected: {
-            Border: cast Color "#316AC5";
-            Inner: cast Color "#FFFFFF";
-            G1: cast Color "#E1E6E8";
-            G2: cast Color "#C1D2EE";
-            Text: cast Color "#000000";
-            Bullet: cast Color "#000000";
-          };
-          RibbonButtonDisabled: {
-            Border: cast Color "#00000000";
-            Inner: cast Color "#00000000";
-            G1: cast Color "#00000000";
-            G2: cast Color "#00000000";
-            Text: cast Color "#A1A192";
-            Bullet: cast Color "#A1A192";
-          };
-          ToolstripButtonNormal: {
-            Border: cast Color "#00000000";
-            Inner: cast Color "#00000000";
-            G1: cast Color "#00000000";
-            G2: cast Color "#00000000";
-            Text: cast Color "#000000";
-            Bullet: cast Color "#000000";
-          };
-          ToolstripButtonActive: {
-            Border: cast Color "#316AC5";
-            Inner: cast Color "#C1D2EE";
-            G1: cast Color "#C1D2EE";
-            G2: cast Color "#C1D2EE";
-            Text: cast Color "#000000";
-            Bullet: cast Color "#000000";
-          };
-          ToolstripButtonPressed: {
-            Border: cast Color "#4B4B6F";
-            Inner: cast Color "#98B5E2";
-            G1: cast Color "#98B5E2";
-            G2: cast Color "#98B5E2";
-            Text: cast Color "#000000";
-            Bullet: cast Color "#000000";
-          };
-          ToolstripButtonSelected: {
-            Border: cast Color "#316AC5";
-            Inner: cast Color "#E1E6E8";
-            G1: cast Color "#E1E6E8";
-            G2: cast Color "#E1E6E8";
-            Text: cast Color "#000000";
-            Bullet: cast Color "#000000";
-          };
-          ToolstripButtonDisabled: {
-            Border: cast Color "#00000000";
-            Inner: cast Color "#00000000";
-            G1: cast Color "#00000000";
-            G2: cast Color "#00000000";
-            Text: cast Color "#A1A192";
-            Bullet: cast Color "#A1A192";
-          };
+          RibbonButtonNormal: toolstripButtonNormal;
+          RibbonButtonActive: toolstripButtonActive;
+          RibbonButtonPressed: toolstripButtonPressed;
+          RibbonButtonSelected: toolstripButtonSelected;
+          RibbonButtonDisabled: toolstripButtonDisabled;
+          ToolstripButtonNormal: toolstripButtonNormal;
+          ToolstripButtonActive: toolstripButtonActive;
+          ToolstripButtonPressed: toolstripButtonPressed;
+          ToolstripButtonSelected: toolstripButtonSelected;
+          ToolstripButtonDisabled: toolstripButtonDisabled;
           MenuBarButtonNormal: {
             Border: cast Color "#00000000";
             Inner: cast Color "#00000000";

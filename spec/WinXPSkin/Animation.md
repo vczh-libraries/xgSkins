@@ -11,7 +11,8 @@ target later.
 - Pushbuttons, check boxes, radio buttons and combo boxes update their borders,
   inner accents, faces, text and marks immediately.
 - Scrollbar arrows/thumbs and tracker thumbs update their states immediately.
-  Pointer movement, scrolling and dragging remain governed by the controls.
+  Disabling a scrollbar hides its thumb at once. Pointer movement, scrolling
+  and dragging remain governed by the controls.
 - Editor and list/tree borders and backgrounds update focus and enabled-state
   colors immediately. Document foregrounds retain their configured colors;
   caret, text, selection and scrolling remain responsive.

@@ -46,7 +46,7 @@ outer borders of list/tree controls. It does not define item selection.
 | `ScrollHandleNormal` | Normal blue scrollbar thumb. |
 | `ScrollHandleActive` | Lighter hovered blue scrollbar thumb. |
 | `ScrollHandlePressed` | Pressed blue scrollbar thumb. |
-| `ScrollHandleDisabled` | Muted disabled scrollbar thumb. |
+| `ScrollHandleDisabled` | Disabled thumb palette. The scrollbar hides the thumb while disabled. |
 | `ScrollArrowNormal` | Normal scrollbar-arrow, combo-arrow and gallery-scroll button surface with a blue arrow. |
 | `ScrollArrowActive` | Hovered scrollbar-arrow, combo-arrow and gallery-scroll button surface with a blue arrow. |
 | `ScrollArrowPressed` | Pressed scrollbar-arrow, combo-arrow and gallery-scroll button surface with a dark arrow. |
@@ -69,10 +69,10 @@ outer borders of list/tree controls. It does not define item selection.
 | `TabHovered` | Hovered or pressed unselected tab header. |
 | `TabSelected` | Selected tab header joined visually to its near-white page. |
 | `TabDisabled` | Disabled tab face, outline and foreground. |
-| `RibbonButtonNormal` | Transparent normal ribbon command chrome over the beige ribbon surface. |
-| `RibbonButtonActive` | Hovered ribbon command chrome with a Luna hot accent. |
-| `RibbonButtonPressed` | Inset cream pressed ribbon command or open dropdown chrome. |
-| `RibbonButtonSelected` | Blue selected ribbon command chrome. |
+| `RibbonButtonNormal` | Transparent normal command face shared with the default toolstrip palette. |
+| `RibbonButtonActive` | Pale blue hovered command face with the toolstrip’s blue outline. |
+| `RibbonButtonPressed` | Deeper blue toolstrip face for a pressed command or open dropdown. |
+| `RibbonButtonSelected` | Selected command face with the toolstrip’s gray-blue fill and blue outline. |
 | `RibbonButtonDisabled` | Transparent disabled ribbon command chrome with disabled foreground. |
 
 ## Editor packages
@@ -156,7 +156,7 @@ outer borders of list/tree controls. It does not define item selection.
 | --- | --- |
 | `MenuBackground` | Menu content and toolbar-in-menu background. |
 | `MenuBorder` | Menu popup outline and ribbon popup outline. |
-| `MenuInner` | Thin inner menu-popup surface inside its border. |
+| `MenuInner` | Popup underlay behind its one-pixel border and content. |
 | `MenuBarBackground` | Beige menu-bar surface. |
 | `MenuBarBorderDark` | Upper line of the menu bar's two-pixel bottom edge. |
 | `MenuBarBorderLight` | Lower line of the menu bar's two-pixel bottom edge. |

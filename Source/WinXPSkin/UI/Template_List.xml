@@ -40,7 +40,6 @@
     <Instance ref.CodeBehind="false" ref.Class="winxpskin::ComboBoxTemplate" ref.Styles="res://WinXPSkin/Style">
       <ref.Members><![CDATA[prop Colors : ButtonColors = winxpColors.ScrollArrowNormal {}]]></ref.Members>
       <DateComboBoxTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <att.SubMenuTemplate>winxpskin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <att.DatePickerTemplate>winxpskin::DatePickerTemplate</att.DatePickerTemplate>
         <att.Colors-bind>GetScrollButtonColors(self.VisuallyEnabled, self.SubMenuOpening ? ButtonState::Pressed : self.State, true)</att.Colors-bind>
         <SolidBackground Color-bind="self.VisuallyEnabled ? winxpColors.ComboBackground : winxpColors.ComboDisabledBackground"/>
@@ -89,7 +88,6 @@
   <Instance name="ListViewColumnHeaderTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="winxpskin::ListViewColumnHeaderTemplate" ref.Styles="res://WinXPSkin/Style">
       <ListViewColumnHeaderTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:0 y:20">
-        <att.SubMenuTemplate>winxpskin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <SolidBackground Color-bind="not self.VisuallyEnabled or self.State == ButtonState::Normal ? winxpColors.HeaderBackground : self.State == ButtonState::Pressed ? winxpColors.HeaderBackgroundPressed : winxpColors.HeaderBackgroundHovered"/>
         <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="x:0 y:3" Visible-bind="not self.VisuallyEnabled or self.State != ButtonState::Pressed">
           <GradientBackground Direction="Vertical" Color1-bind="self.VisuallyEnabled and self.State == ButtonState::Active ? winxpColors.HeaderGradientHoveredTop : winxpColors.HeaderBackground" Color2-bind="self.VisuallyEnabled and self.State == ButtonState::Active ? winxpColors.HeaderGradientHoveredBottom : winxpColors.HeaderSeparatorTop"/>
