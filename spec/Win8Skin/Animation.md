@@ -11,7 +11,7 @@ current transition smoothly, without briefly returning to an older state.
   delay the actual checked state or its command.
 - Scrollbar arrows, scrollbar thumbs and tracker thumbs: use the same
   120-millisecond state-color transition as pushbuttons. Scrolling and dragging
-  must follow input immediately.
+  must follow input immediately. Disabling a scrollbar hides its thumb at once.
 - Combo boxes: blend the button colors over 120 milliseconds. Opening and
   closing the list must not wait for the color transition.
 - Text boxes, document editors and the outer borders of list/tree controls:

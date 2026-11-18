@@ -47,7 +47,7 @@ controls and list/tree outer borders. It does not change item selection colors.
 | `ScrollHandleNormal` | Flat normal gray scrollbar thumb. |
 | `ScrollHandleActive` | Flat darker hovered scrollbar thumb. |
 | `ScrollHandlePressed` | Flat darker pressed scrollbar thumb. |
-| `ScrollHandleDisabled` | Disabled scrollbar thumb matching the track. |
+| `ScrollHandleDisabled` | Disabled thumb palette. The scrollbar hides the thumb while disabled. |
 | `ScrollArrowNormal` | Normal scrollbar-arrow and gallery-scroll button surface with gray arrow. |
 | `ScrollArrowActive` | Hovered scrollbar-arrow and gallery-scroll button surface with black arrow. |
 | `ScrollArrowPressed` | Pressed scrollbar-arrow and gallery-scroll button surface with white arrow. |
@@ -137,7 +137,7 @@ controls and list/tree outer borders. It does not change item selection colors.
 | --- | --- |
 | `MenuBackground` | Menu content and toolbar-in-menu background. |
 | `MenuBorder` | Menu popup outline and ribbon popup outline. |
-| `MenuInner` | Thin inner menu-popup surface inside its border. |
+| `MenuInner` | Popup underlay behind its one-pixel border and content. |
 | `MenuBarBackground` | Flat pale-gray menu-bar surface. |
 | `MenuBarBorderDark` | Upper line of the menu bar's two-pixel bottom edge. |
 | `MenuBarBorderLight` | Lower line of the menu bar's two-pixel bottom edge. |

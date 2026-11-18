@@ -95,6 +95,16 @@ changes; creating the skin requires the full showcase verification described in
 
 ## Required observations
 
+- Switch from DarkSkin with the showcase already populated. Open the view selector
+  in `List / ListView`, then `File / Save as` in the toolstrip editor. Check the
+  thin popup frame, the resting row background, and the hover or selected row.
+  Open `Object` in the editor context menu and check the same colors at both levels.
+- In `Refresh List / TextList`, inspect both disabled scrollbars before moving
+  the pointer onto either track. Only the track and arrows should be visible.
+  In `Layout / Repeat`, drag both enabled thumbs and check their positions.
+- Repeat the disabled scrollbar check after switching from Win7Skin to Win8Skin.
+  Resting menu rows should blend into the popup background up to their edges.
+
 - Check flat light surfaces, square outlines, dark text, distinct disabled text,
   blue interaction states, gray scrollbars and solid green progress. Check keyboard focus and selected states as well
   as hover. Inspect the visible result, not only successful event dispatch.

@@ -38,7 +38,7 @@
         <SolidBackground Color-eval="win8Colors.MenuInner"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder ref.Style="toolstripMenuBorder"/>
-          <Bounds ref.Name="container" AlignmentToParent="left:3 top:3 right:3 bottom:3"><SolidBackground ref.Style="toolstripMenuBackground"/></Bounds>
+          <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground ref.Style="toolstripMenuBackground"/></Bounds>
         </Bounds>
       </MenuTemplate>
     </Instance>
@@ -102,7 +102,6 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
-        <att.SubMenuTemplate>win8skin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
           <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
@@ -131,7 +130,6 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
-        <att.SubMenuTemplate>win8skin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
           <Bounds AlignmentToParent="left:0 top:0 right:10 bottom:0">
@@ -211,7 +209,6 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
-        <att.SubMenuTemplate>win8skin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <Bounds AlignmentToParent="left:1 top:1 right:13 bottom:1">
 
           <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
@@ -238,7 +235,6 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
-        <att.SubMenuTemplate>win8skin::ToolstripMenuTemplate</att.SubMenuTemplate>
 
         <Bounds AlignmentToParent="left:10 top:3 right:10 bottom:3">
           <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -258,7 +254,6 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
-        <att.SubMenuTemplate>win8skin::ToolstripMenuTemplate</att.SubMenuTemplate>
 
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <att.Rows>

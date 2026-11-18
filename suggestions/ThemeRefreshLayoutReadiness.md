@@ -57,3 +57,17 @@ measurement after template replacement before choosing a source fix; expose
 or document a reliable readiness condition for automation. Retain the resize
 workaround only as an explicit test adaptation until steady-size refresh is
 verified independently.
+
+## Popup measurement in hosted automation
+
+In `FullControlTest /D2D /Hosted`, the File popup in an unmodified Release
+showcase reported zero width and height even though its menu rows existed.
+After a round trip to DarkSkin in the rebuilt Debug showcase, the same popup
+reported a 1-by-1 window with measured text outside its clip. Resizing the
+owner while the popup was open gave it a 201-by-56 rectangle.
+
+Some Win8Skin service checks similarly needed a one-pixel owner resize before
+the popup or a newly selected tab exposed its contents at usable coordinates.
+The checks then inspected the rendered frame, fill, row colors and bounds.
+Windows UI Automation could also expand File and its Save as submenu directly.
+Include hidden and reopened popups in the steady-size layout regression above.

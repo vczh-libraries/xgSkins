@@ -50,7 +50,6 @@
         }
       ]]></ref.Members>
       <DateComboBoxTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <att.SubMenuTemplate>win8skin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <att.DatePickerTemplate>win8skin::DatePickerTemplate</att.DatePickerTemplate>
         <att.Colors-bind>GetButtonColors(self.VisuallyEnabled, self.SubMenuOpening ? ButtonState::Pressed : self.State)</att.Colors-bind>
         <ev.ColorsChanged-eval>self.UpdateColors();</ev.ColorsChanged-eval>
@@ -98,7 +97,6 @@
   <Instance name="ListViewColumnHeaderTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win8skin::ListViewColumnHeaderTemplate" ref.Styles="res://Win8Skin/Style">
       <ListViewColumnHeaderTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
-        <att.SubMenuTemplate>win8skin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <SolidBackground Color-bind="self.VisuallyEnabled and self.State == ButtonState::Pressed ? win8Colors.HeaderBackgroundPressed : win8Colors.HeaderBackground"/>
         <Bounds AlignmentToParent="left:-1 top:0 right:0 bottom:0" PreferredMinSize="x:1 y:0" Visible-bind="not self.VisuallyEnabled or self.State == ButtonState::Normal">
           <GradientBackground Direction="Vertical" Color1-eval="win8Colors.HeaderSeparatorTop" Color2-eval="win8Colors.HeaderBackground"/>
