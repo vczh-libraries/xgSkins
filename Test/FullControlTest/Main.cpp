@@ -20,8 +20,7 @@ namespace fullcontroltest
 
 void GuiMain()
 {
-	darkskin::SetColorPackage(darkskin::CreateDefaultColorPackage());
-	theme::RegisterTheme(Ptr(new darkskin::Theme));
+	demo::RegisterFctDarkSkin();
 
 	demo::MainWindow window;
 	demo::AttachFctEvents<demo::DocumentEditorBase, demo::FctSkinItem>(&window);

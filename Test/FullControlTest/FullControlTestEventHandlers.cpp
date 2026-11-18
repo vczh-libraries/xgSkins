@@ -8,14 +8,43 @@ using namespace vl;
 
 namespace demo
 {
+	// DarkSkin supplies its ordinary menu factory to buttons. GacUI copies that
+	// factory into each new popup, which would pin it across showcase skin changes.
+	template<typename T>
+	void UseThemeMenu(presentation::TemplateProperty<T>& createTemplate)
+	{
+		createTemplate = [createTemplate](const reflection::description::Value& value)
+		{
+			auto controlTemplate = createTemplate(value);
+			controlTemplate->SetSubMenuTemplate({});
+			return controlTemplate;
+		};
+	}
+
+	void RegisterFctDarkSkin()
+	{
+		darkskin::SetColorPackage(darkskin::CreateDefaultColorPackage());
+		auto skin = Ptr(new darkskin::Theme);
+		UseThemeMenu(skin->ComboBox);
+		UseThemeMenu(skin->DateComboBox);
+		UseThemeMenu(skin->MenuBarButton);
+		UseThemeMenu(skin->MenuItemButton);
+		UseThemeMenu(skin->ToolstripButton);
+		UseThemeMenu(skin->ToolstripDropdownButton);
+		UseThemeMenu(skin->ToolstripSplitButton);
+		UseThemeMenu(skin->RibbonSmallButton);
+		UseThemeMenu(skin->RibbonSmallDropdownButton);
+		UseThemeMenu(skin->RibbonSmallSplitButton);
+		UseThemeMenu(skin->RibbonLargeButton);
+		UseThemeMenu(skin->RibbonLargeDropdownButton);
+		UseThemeMenu(skin->RibbonLargeSplitButton);
+		presentation::theme::UnregisterTheme(L"DarkSkin");
+		presentation::theme::RegisterTheme(skin);
+	}
+
 	void InitializeFctSkinItems(const Func<void(const WString&, const Func<void()>&, bool)>& addItem)
 	{
-		addItem(L"DarkSkin", []
-		{
-			darkskin::SetColorPackage(darkskin::CreateDefaultColorPackage());
-			presentation::theme::UnregisterTheme(L"DarkSkin");
-			presentation::theme::RegisterTheme(Ptr(new darkskin::Theme));
-		}, true);
+		addItem(L"DarkSkin", &RegisterFctDarkSkin, true);
 		addItem(L"Win7Skin", []
 		{
 			win7skin::SetColorPackage(win7skin::CreateDefaultColorPackage());

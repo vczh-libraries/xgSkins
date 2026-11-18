@@ -5,6 +5,7 @@
 
 namespace demo
 {
+	extern void RegisterFctDarkSkin();
 	extern void InitializeFctSkinItems(const vl::Func<void(const vl::WString&, const vl::Func<void()>&, bool)>& addItem);
 
 	// Each editor owns its viewer. Refreshing templates does not reattach these handlers.

@@ -329,12 +329,12 @@
             Bullet: cast Color "#B1B1B1";
           };
           RibbonButtonNormal: {
-            Border: cast Color "#00000000";
-            Background: cast Color "#00000000";
-            G1: cast Color "#00000000";
-            G2: cast Color "#00000000";
-            G3: cast Color "#00000000";
-            G4: cast Color "#00000000";
+            Border: cast Color "#FCC45B00";
+            Background: cast Color "#FFFFF100";
+            G1: cast Color "#FFFBD600";
+            G2: cast Color "#FFFBD600";
+            G3: cast Color "#FFE69F00";
+            G4: cast Color "#FFE69F00";
             Text: cast Color "#000000";
             Bullet: cast Color "#00000000";
           };
@@ -369,12 +369,12 @@
             Bullet: cast Color "#00000000";
           };
           RibbonButtonDisabled: {
-            Border: cast Color "#00000000";
-            Background: cast Color "#00000000";
-            G1: cast Color "#00000000";
-            G2: cast Color "#00000000";
-            G3: cast Color "#00000000";
-            G4: cast Color "#00000000";
+            Border: cast Color "#FCC45B00";
+            Background: cast Color "#FFFFF100";
+            G1: cast Color "#FFFBD600";
+            G2: cast Color "#FFFBD600";
+            G3: cast Color "#FFE69F00";
+            G4: cast Color "#FFE69F00";
             Text: cast Color "#838383";
             Bullet: cast Color "#00000000";
           };

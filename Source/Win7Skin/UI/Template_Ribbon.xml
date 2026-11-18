@@ -21,7 +21,6 @@
           <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
           <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
         </Table>
-        <att.SubMenuTemplate>win7skin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
           <Table ref.Name ="container" CellPadding="3" AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -67,7 +66,6 @@
           <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
           <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
         </Table>
-        <att.SubMenuTemplate>win7skin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
           <Bounds AlignmentToParent="left:0 top:0 right:10 bottom:0">
@@ -137,7 +135,6 @@
           <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
           <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
         </Table>
-        <att.SubMenuTemplate>win7skin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <Bounds AlignmentToParent="left:1 top:1 right:11 bottom:1">
 
           <Table ref.Name ="container" CellPadding="3" AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -188,7 +185,6 @@
           <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
           <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
         </Table>
-        <att.SubMenuTemplate>win7skin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
           <att.Rows>
@@ -239,7 +235,6 @@
           <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
           <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
         </Table>
-        <att.SubMenuTemplate>win7skin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
           <att.Rows>
@@ -415,7 +410,6 @@
           <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
           <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
         </Table>
-        <att.SubMenuTemplate>win7skin::ToolstripMenuTemplate</att.SubMenuTemplate>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <att.Rows>
             <CellOption>composeType:MinSize</CellOption>

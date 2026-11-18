@@ -143,7 +143,7 @@ item selection colors.
 | --- | --- |
 | `MenuBackground` | Menu content and toolbar-in-menu background. |
 | `MenuBorder` | Menu popup outline and ribbon popup outline. |
-| `MenuInner` | Thin inner menu-popup surface inside its border. |
+| `MenuInner` | Popup underlay behind its one-pixel border and content. |
 | `MenuBar1` | Upper endpoint of the menu bar's upper gradient. |
 | `MenuBar2` | Lower endpoint of the menu bar's upper gradient. |
 | `MenuBar3` | Upper endpoint of the menu bar's lower gradient. |

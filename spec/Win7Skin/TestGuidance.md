@@ -94,6 +94,17 @@ changes; creating the skin requires the full showcase verification described in
 
 ## Required observations
 
+- Switch from DarkSkin with the showcase already populated. Open the view selector
+  in `List / ListView`, then `File / Save as` in the toolstrip editor. Check the
+  thin popup frame, the resting row background, and the hover or selected row.
+  Open `Object` in the editor context menu and check the same colors at both levels.
+- In `Refresh List / TextList`, inspect both disabled scrollbars before moving
+  the pointer onto either track. Only the track and arrows should be visible.
+  In `Layout / Repeat`, drag both enabled thumbs and check their positions.
+- In the ribbon editor, move onto a command and back out halfway through its
+  hover transition. The yellow highlight should fade over the current surface
+  in both directions without a dark frame.
+
 - Check light surfaces, dark text, distinct disabled text, blue interaction
   states and green progress. Check keyboard focus and selected states as well
   as hover. Inspect the visible result, not only successful event dispatch.
