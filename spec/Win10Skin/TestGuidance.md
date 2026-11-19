@@ -86,9 +86,11 @@ In a fresh FullControlTest /D2D /Hosted session open Window Manager and choose W
 
 ## Visual and interaction checks
 
+- At 96 DPI, compare the default font in Window Manager, List / TextList and Control / TextBox. Unconstrained pushbuttons, read-only combos and single-line editors have a 23-unit minimum height. Checkbox and radio symbols are 13 by 13 within 17-unit rows. Larger fonts and application content can grow the controls. [Microsoft desktop control sizing](https://learn.microsoft.com/en-us/windows/win32/uxguide/vis-layout)
+- Compare the property-sheet and ribbon tabs, column headers, toolbars and open menus. A selected tab joins the page. Header labels, shortcut text, menu icons and submenu arrows must remain visible when the window narrows.
 - Switch from light to dark with an editor, a checked radio button and a selected list row already populated. Confirm the selection, edited text and scroll position survive in both directions. Open a second popup after switching to exercise newly created templates.
-- In Window Manager inspect the left-aligned title, minimize, maximize/restore and close symbols. Hover and press close, then move off it. Its face returns to the page color. Check chrome and inactive text while a modal is active.
-- On the text and data-entry pages, compare neutral, pointer-over, keyboard-focus and disabled controls. Focused editors have a two-pixel accent outline. Checkboxes fill blue when selected. Selected radio buttons retain an open center around the dot.
+- In Window Manager inspect the left-aligned title, minimize, maximize/restore and close symbols. Hover and press close, then move off it. Its face returns to the caption color. Check chrome and inactive text while a modal is active.
+- On the text and data-entry pages, compare neutral, pointer-over, keyboard-focus and disabled controls. Focused editors have a one-pixel accent outline. At rest, the checkbox tick and radio dot match their frame. Hover turns both the mark and frame blue. Pressing changes the face and edge.
 - On Layout / Repeat drag each slider and scrollbar to both ends. The slider's blue segment meets the thumb. Progress advances along a thin track and disabled scrollbars hide their thumbs.
 - Check list refresh, header sorting/filter menus and tree expander chevrons. Compare hovered rows with the blue selected row. Check calendar dates, combo lists, keyboard navigation, tooltips and dialog dismissal.
 - Exercise both document editors, including formatting, links, selections, context menus and save/reload. Resize the ribbon until groups collapse and test split buttons, gallery selection, keytips and reopening a popup under each palette.

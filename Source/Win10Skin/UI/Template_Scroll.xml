@@ -189,7 +189,7 @@
           }
         ]]>
       </ref.Ctor>
-      <ScrollTemplate ref.Name="self" PreferredMinSize="y:24" MinSizeLimitation="LimitToElementAndChildren">
+      <ScrollTemplate ref.Name="self" PreferredMinSize="y:16" MinSizeLimitation="LimitToElementAndChildren">
         <CommonScrollBehavior ref.Name="behavior"/>
         <SolidBackground Color-eval="win10skin::win10Colors.Page"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
@@ -198,7 +198,7 @@
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="LimitToElementAndChildren">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
-            <CellOption>composeType:Absolute absolute:24</CellOption>
+            <CellOption>composeType:Absolute absolute:16</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
           </att.Rows>
           <att.Columns>
@@ -224,7 +224,7 @@
                 </PartialView>
               </Cell>
             </Table>
-            <PartialView ref.Name="handle" PreferredMinSize="x:8 y:24" WidthPageSize="0">
+            <PartialView ref.Name="handle" PreferredMinSize="x:8 y:16" WidthPageSize="0">
               <att.WidthRatio-bind>self.TotalSize == 0 ? 0.0 : (cast double self.Position) / self.TotalSize</att.WidthRatio-bind>
               <Button AutoFocus="false" ControlTemplate="win10skin::HTrackerHandleTemplate">
                 <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
@@ -246,7 +246,7 @@
           }
         ]]>
       </ref.Ctor>
-      <ScrollTemplate ref.Name="self" PreferredMinSize="x:24" MinSizeLimitation="LimitToElementAndChildren">
+      <ScrollTemplate ref.Name="self" PreferredMinSize="x:16" MinSizeLimitation="LimitToElementAndChildren">
         <CommonScrollBehavior ref.Name="behavior"/>
         <SolidBackground Color-eval="win10skin::win10Colors.Page"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
@@ -260,7 +260,7 @@
           </att.Rows>
           <att.Columns>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
-            <CellOption>composeType:Absolute absolute:24</CellOption>
+            <CellOption>composeType:Absolute absolute:16</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
           </att.Columns>
           <Cell Site="row:1 column:1">
@@ -281,7 +281,7 @@
                 </PartialView>
               </Cell>
             </Table>
-            <PartialView ref.Name="handle" PreferredMinSize="x:24 y:8" HeightPageSize="0">
+            <PartialView ref.Name="handle" PreferredMinSize="x:16 y:8" HeightPageSize="0">
               <att.HeightRatio-bind>self.TotalSize == 0 ? 0.0 : (cast double self.Position) / self.TotalSize</att.HeightRatio-bind>
               <Button AutoFocus="false" ControlTemplate="win10skin::VTrackerHandleTemplate">
                 <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>

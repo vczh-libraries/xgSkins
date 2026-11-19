@@ -11,20 +11,20 @@
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <att.Highlighted-bind>(cast (RibbonTabPage*) self.Context).Highlighted ?? false</att.Highlighted-bind>
         <att.TabFocused-bind>(cast (TabPage*) self.Context).OwnerTab.Focused ?? false</att.TabFocused-bind>
-        <att.Colors-bind>self.Selected ? win10Colors.ItemNormal : self.VisuallyEnabled and self.State != ButtonState::Normal ? win10Colors.CommandHovered : win10Colors.CommandNormal</att.Colors-bind>
+        <att.Colors-bind>self.VisuallyEnabled and self.State != ButtonState::Normal ? win10Colors.TabHovered : win10Colors.TabNormal</att.Colors-bind>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBackground Color-bind="self.Colors.Fill"/>
+          <SolidBackground Color-bind="self.Colors.Border"/>
+          <Bounds AlignmentToParent-bind="self.Selected ? {left:1 top:1 right:1 bottom:0} : {left:1 top:1 right:1 bottom:1}">
+            <SolidBackground Color-bind="self.Selected ? win10Colors.Page : self.Colors.Fill"/>
+          </Bounds>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:-1" PreferredMinSize="x:0 y:2" Visible-bind="self.Highlighted">
           <SolidBackground Color-bind="self.Selected ? win10Colors.Accent : self.State != ButtonState::Normal ? win10Colors.Accent : win10Colors.ItemSelected.Fill"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:6 top:-1 right:6 bottom:0" PreferredMinSize="y:2" Visible-bind="self.Selected">
-          <SolidBackground Color-eval="win10Colors.Accent"/>
-        </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Selected and self.TabFocused">
           <FocusRectangle/>
         </Bounds>
-        <Bounds AlignmentToParent="left:8 top:5 right:8 bottom:5">
+        <Bounds AlignmentToParent="left:6 top:3 right:6 bottom:3">
           <SolidLabel Color-bind="self.VisuallyEnabled ? self.Colors.Text : win10Colors.DisabledText" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Bounds>
       </SelectableButtonTemplate>
@@ -73,7 +73,7 @@
         <att.Highlighted-bind>(cast (RibbonTabPage*) self.SelectedTabPage).Highlighted ?? false</att.Highlighted-bind>
 
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBackground Color-bind="win10Colors.Page"/>
+          <SolidBackground Color-bind="win10Colors.WindowSurface"/>
           <att.Rows>
             <CellOption>composeType:MinSize</CellOption>
             <CellOption>composeType:Absolute absolute:0</CellOption>

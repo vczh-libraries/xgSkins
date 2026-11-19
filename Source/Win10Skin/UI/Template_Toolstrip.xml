@@ -97,7 +97,7 @@
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
-          <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+          <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2">
             <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
           </Bounds>
         </Bounds>
@@ -119,7 +119,7 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
           <Bounds AlignmentToParent="left:0 top:0 right:10 bottom:0">
-            <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+            <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2">
               <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
             </Bounds>
           </Bounds>
@@ -190,7 +190,7 @@
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:13 bottom:1">
 
-          <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+          <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2">
             <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
           </Bounds>
         </Bounds>
@@ -215,7 +215,7 @@
           <SolidBackground Color-bind="self.Colors.Fill"/>
         </Bounds>
 
-        <Bounds AlignmentToParent="left:10 top:3 right:10 bottom:3">
+        <Bounds AlignmentToParent="left:6 top:2 right:6 bottom:2">
           <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Bounds>
       </ToolstripButtonTemplate>
@@ -228,7 +228,7 @@
         prop Colors : StateColors = win10Colors.CommandNormal {}
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? (self.State == ButtonState::Normal ? win10Colors.CommandDisabled : win10Colors.CommandDisabled) : self.SubMenuOpening ? win10Colors.CommandHovered : self.Selected ? (self.State == ButtonState::Normal ? win10Colors.ItemSelected : win10Colors.ItemSelectedHovered) : self.State != ButtonState::Normal ? win10Colors.CommandHovered : win10Colors.CommandNormal</att.Colors-bind>
+        <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.CommandDisabled : self.SubMenuOpening or self.State != ButtonState::Normal ? {Border: win10Colors.MenuHighlight; Fill: win10Colors.MenuHighlight; Text: win10Colors.Text;} : win10Colors.CommandNormal</att.Colors-bind>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <SolidBackground Color-bind="self.Colors.Fill"/>
@@ -236,11 +236,11 @@
 
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <att.Rows>
-            <CellOption>composeType:Absolute absolute:4</CellOption>
+            <CellOption>composeType:Absolute absolute:3</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
             <CellOption>composeType:MinSize</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
-            <CellOption>composeType:Absolute absolute:4</CellOption>
+            <CellOption>composeType:Absolute absolute:3</CellOption>
           </att.Rows>
           <att.Columns>
             <CellOption>composeType:Absolute absolute:2</CellOption>

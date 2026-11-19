@@ -20,7 +20,7 @@
   <Instance name="SystemFrameWindowTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win10skin::SystemFrameWindowTemplate" ref.Styles="res://Win10Skin/Style">
       <WindowTemplate ContainerComposition-ref="container" CustomFrameEnabled="false" MinSizeLimitation="LimitToElementAndChildren">
-        <SolidBackground ref.Style="generalBackground"/>
+        <SolidBackground Color-eval="win10Colors.WindowSurface"/>
         <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
       </WindowTemplate>
     </Instance>
@@ -156,7 +156,7 @@
               </Bounds>
             </Cell>
             <Cell Site="row:1 column:0 columnSpan:5" AssociatedHitTestResult="Client">
-              <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBackground ref.Style="generalBackground"/></Bounds>
+              <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBackground Color-eval="win10Colors.WindowSurface"/></Bounds>
             </Cell>
           </Table>
         </Bounds>

@@ -50,14 +50,18 @@
         ItemSelected : StateColors;
         ItemSelectedHovered : StateColors;
         ItemDisabled : StateColors;
+        WindowSurface : Color;
+        MenuHighlight : Color;
+        TabNormal : StateColors;
+        TabHovered : StateColors;
       }
 
       func CreateColorPackageInternal(dark : bool) : ColorPackage
       {
-        var page = dark ? cast Color "#000000" : cast Color "#FFFFFF";
-        var chrome = dark ? cast Color "#1F1F1F" : cast Color "#F2F2F2";
-        var divider = dark ? cast Color "#414141" : cast Color "#D6D6D6";
-        var outline = dark ? cast Color "#666666" : cast Color "#999999";
+        var page = dark ? cast Color "#202020" : cast Color "#FFFFFF";
+        var chrome = dark ? cast Color "#2B2B2B" : cast Color "#F2F2F2";
+        var divider = dark ? cast Color "#484848" : cast Color "#D9D9D9";
+        var outline = dark ? cast Color "#797979" : cast Color "#7A7A7A";
         var strongOutline = dark ? cast Color "#CCCCCC" : cast Color "#333333";
         var text = dark ? cast Color "#FFFFFF" : cast Color "#000000";
         var secondaryText = dark ? cast Color "#C2C2C2" : cast Color "#5C5C5C";
@@ -73,14 +77,18 @@
         var windowEdgeInactive = dark ? cast Color "#3A3A3A" : cast Color "#CCCCCC";
         var closeHovered = cast Color "#E81123";
         var closePressed = dark ? cast Color "#A00B18" : cast Color "#C50F1F";
-        var button = dark ? cast Color "#333333" : cast Color "#CCCCCC";
-        var hover = dark ? cast Color "#1A1A1A" : cast Color "#E6E6E6";
-        var pressed = dark ? cast Color "#666666" : cast Color "#999999";
-        var selected = dark ? cast Color "#003052" : cast Color "#CCE4F7";
-        var selectedHover = dark ? cast Color "#004370" : cast Color "#B2D7F4";
-        var disabledFace = dark ? cast Color "#262626" : cast Color "#E6E6E6";
-        var flyoutHover = dark ? cast Color "#373737" : cast Color "#DADADA";
-        var flyoutPress = dark ? cast Color "#545454" : cast Color "#BFBFBF";
+        var windowSurface = dark ? cast Color "#191919" : cast Color "#F0F0F0";
+        var button = dark ? cast Color "#333333" : cast Color "#E1E1E1";
+        var buttonEdge = dark ? cast Color "#9B9B9B" : cast Color "#ADADAD";
+        var buttonHot = dark ? cast Color "#454545" : cast Color "#E5F1FB";
+        var buttonDown = dark ? cast Color "#666666" : cast Color "#CCE4F7";
+        var disabledEdge = dark ? cast Color "#404040" : cast Color "#BFBFBF";
+        var disabledFace = dark ? button : cast Color "#CCCCCC";
+        var commandHot = dark ? cast Color "#383838" : cast Color "#E5F3FF";
+        var commandDown = dark ? cast Color "#494949" : cast Color "#CCE8FF";
+        var menuHighlight = dark ? cast Color "#414141" : cast Color "#99D1FF";
+        var selected = dark ? cast Color "#003052" : cast Color "#CCE8FF";
+        var selectedHover = dark ? cast Color "#004370" : cast Color "#B2DBFF";
         return {
           Page: page;
           Chrome: chrome;
@@ -101,23 +109,27 @@
           WindowEdgeInactive: windowEdgeInactive;
           CloseHovered: closeHovered;
           ClosePressed: closePressed;
-          ButtonNormal: {Border: button; Fill: button; Text: text;};
-          ButtonHovered: {Border: outline; Fill: button; Text: text;};
-          ButtonPressed: {Border: pressed; Fill: pressed; Text: text;};
-          ButtonDisabled: {Border: disabledFace; Fill: disabledFace; Text: disabledText;};
+          ButtonNormal: {Border: buttonEdge; Fill: button; Text: text;};
+          ButtonHovered: {Border: (dark ? buttonEdge : accent); Fill: buttonHot; Text: text;};
+          ButtonPressed: {Border: (dark ? buttonEdge : cast Color "#005499"); Fill: buttonDown; Text: text;};
+          ButtonDisabled: {Border: disabledEdge; Fill: disabledFace; Text: disabledText;};
           InputNormal: {Border: outline; Fill: page; Text: text;};
-          InputHovered: {Border: strongOutline; Fill: page; Text: text;};
+          InputHovered: {Border: (dark ? strongOutline : cast Color "#171717"); Fill: page; Text: text;};
           InputFocused: {Border: accent; Fill: page; Text: text;};
-          InputDisabled: {Border: disabledFace; Fill: disabledFace; Text: disabledText;};
+          InputDisabled: {Border: (dark ? disabledEdge : disabledFace); Fill: page; Text: disabledText;};
           CommandNormal: {Border: transparent; Fill: transparent; Text: text;};
-          CommandHovered: {Border: flyoutHover; Fill: flyoutHover; Text: text;};
-          CommandPressed: {Border: flyoutPress; Fill: flyoutPress; Text: text;};
+          CommandHovered: {Border: commandDown; Fill: commandHot; Text: text;};
+          CommandPressed: {Border: menuHighlight; Fill: commandDown; Text: text;};
           CommandDisabled: {Border: transparent; Fill: transparent; Text: disabledText;};
           ItemNormal: {Border: transparent; Fill: transparent; Text: text;};
-          ItemHovered: {Border: hover; Fill: hover; Text: text;};
+          ItemHovered: {Border: commandHot; Fill: commandHot; Text: text;};
           ItemSelected: {Border: selected; Fill: selected; Text: text;};
           ItemSelectedHovered: {Border: selectedHover; Fill: selectedHover; Text: text;};
           ItemDisabled: {Border: transparent; Fill: transparent; Text: disabledText;};
+          WindowSurface: windowSurface;
+          MenuHighlight: menuHighlight;
+          TabNormal: {Border: divider; Fill: windowSurface; Text: text;};
+          TabHovered: {Border: divider; Fill: (dark ? commandHot : cast Color "#D8EAF9"); Text: text;};
         };
       }
 

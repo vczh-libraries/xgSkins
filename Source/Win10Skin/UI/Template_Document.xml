@@ -10,7 +10,7 @@
         <ev.mouseEnter-eval>self.Hovered = true;</ev.mouseEnter-eval>
         <ev.mouseLeave-eval>self.Hovered = false;</ev.mouseLeave-eval>
         <SolidBackground Color-bind="self.Colors.Border"/>
-        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <SolidBackground Color-bind="self.Colors.Fill"/>
         </Bounds>
       </ControlTemplate>
@@ -25,9 +25,9 @@
 
   <Instance name="DocumentTextBoxTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win10skin::DocumentTextBoxTemplate" ref.Styles="res://Win10Skin/Style" xmlns:x="win10skin::*">
-      <DocumentLabelTemplate ref.Name="self" BaselineDocument-eval="win10skin::CreateBaselineDocument()" CaretColor-eval="win10skin::win10Colors.Text" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+      <DocumentLabelTemplate ref.Name="self" BaselineDocument-eval="win10skin::CreateBaselineDocument()" CaretColor-eval="win10skin::win10Colors.Text" ContainerComposition-ref="container" PreferredMinSize="y:23" MinSizeLimitation="LimitToElementAndChildren">
         <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
-          <Bounds ref.Name="container" AlignmentToParent="left:6 top:3 right:6 bottom:3"/>
+          <Bounds ref.Name="container" AlignmentToParent="left:3 top:2 right:3 bottom:2"/>
         </x:EditorBorderTemplate>
       </DocumentLabelTemplate>
     </Instance>
