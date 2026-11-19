@@ -15,17 +15,6 @@ namespace demo
 			presentation::theme::UnregisterTheme(name);
 		}
 		presentation::theme::RegisterTheme(selected);
-
-		// DarkSkin copies its stock menu template into popups when their owners create them.
-		for (auto window : presentation::controls::GetApplication()->GetWindows())
-		{
-			if (window->GetControlThemeName() == presentation::theme::ThemeName::Menu &&
-				window->GetControlTemplate() &&
-				dynamic_cast<darkskin::ToolstripMenuTemplate*>(window->GetControlTemplateObject()))
-			{
-				window->SetControlTemplate({});
-			}
-		}
 	}
 
 	void RegisterFctDarkSkin()
