@@ -290,6 +290,17 @@
     <ClInclude Include="..\..\Source\Win10Skin\Source\Win10SkinPartialClasses.h" />
     <ClInclude Include="..\..\Source\Win10Skin\Source\Win10SkinReflection.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Win11Skin\Win11SkinConfig.cpp" />
+    <ClCompile Include="..\..\Source\Win11Skin\Source\Win11SkinPartialClasses.cpp">
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Win11Skin\Source\Win11SkinResource.cpp" />
+    <ClInclude Include="..\..\Source\Win11Skin\Win11SkinConfig.h" />
+    <ClInclude Include="..\..\Source\Win11Skin\Source\Win11Skin.h" />
+    <ClInclude Include="..\..\Source\Win11Skin\Source\Win11SkinPartialClasses.h" />
+    <ClInclude Include="..\..\Source\Win11Skin\Source\Win11SkinReflection.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

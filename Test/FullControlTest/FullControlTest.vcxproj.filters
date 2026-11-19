@@ -4,6 +4,7 @@
     <Filter Include="Win7Skin"><UniqueIdentifier>{7CF0E835-2C50-4F67-8ED1-7C212BFDB05F}</UniqueIdentifier></Filter>
     <Filter Include="Win8Skin"><UniqueIdentifier>{C6F918DF-1686-47BF-8069-554545DD5B02}</UniqueIdentifier></Filter>
     <Filter Include="WinXPSkin"><UniqueIdentifier>{51A24327-68BB-4123-80BB-B533648A12EB}</UniqueIdentifier></Filter>
+    <Filter Include="Win11Skin"><UniqueIdentifier>{92F5369D-1A5A-48FC-8B59-ED74FC9EB0B3}</UniqueIdentifier></Filter>
     <Filter Include="Win10Skin"><UniqueIdentifier>{DCBA437F-4180-43AF-97C7-652E00733E18}</UniqueIdentifier></Filter>
     <Filter Include="WinVistaSkin"><UniqueIdentifier>{90D38037-5B6B-471E-A6FF-F3D11A52C27E}</UniqueIdentifier></Filter>
     <Filter Include="Source Files">
@@ -197,5 +198,14 @@
     <ClInclude Include="..\..\Source\Win10Skin\Source\Win10Skin.h"><Filter>Win10Skin</Filter></ClInclude>
     <ClInclude Include="..\..\Source\Win10Skin\Source\Win10SkinPartialClasses.h"><Filter>Win10Skin</Filter></ClInclude>
     <ClInclude Include="..\..\Source\Win10Skin\Source\Win10SkinReflection.h"><Filter>Win10Skin</Filter></ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Win11Skin\Win11SkinConfig.cpp"><Filter>Win11Skin</Filter></ClCompile>
+    <ClCompile Include="..\..\Source\Win11Skin\Source\Win11SkinPartialClasses.cpp"><Filter>Win11Skin</Filter></ClCompile>
+    <ClCompile Include="..\..\Source\Win11Skin\Source\Win11SkinResource.cpp"><Filter>Win11Skin</Filter></ClCompile>
+    <ClInclude Include="..\..\Source\Win11Skin\Win11SkinConfig.h"><Filter>Win11Skin</Filter></ClInclude>
+    <ClInclude Include="..\..\Source\Win11Skin\Source\Win11Skin.h"><Filter>Win11Skin</Filter></ClInclude>
+    <ClInclude Include="..\..\Source\Win11Skin\Source\Win11SkinPartialClasses.h"><Filter>Win11Skin</Filter></ClInclude>
+    <ClInclude Include="..\..\Source\Win11Skin\Source\Win11SkinReflection.h"><Filter>Win11Skin</Filter></ClInclude>
   </ItemGroup>
 </Project>

@@ -1,0 +1,167 @@
+<Folder>
+  <Script name="Palette">
+    <Workflow><![CDATA[
+    module Win11Palette;
+    using presentation::*;
+    namespace win11skin
+    {
+      struct ColorPackage
+      {
+        Canvas : Color;
+        Layer : Color;
+        Flyout : Color;
+        Stroke : Color;
+        StrongStroke : Color;
+        Foreground : Color;
+        Secondary : Color;
+        Disabled : Color;
+        Accent : Color;
+        OnAccent : Color;
+        CloseHover : Color;
+        ClosePressed : Color;
+        CloseGlyph : Color;
+        Transparent : Color;
+        ButtonNormal : ButtonColors;
+        ButtonHovered : ButtonColors;
+        ButtonPressed : ButtonColors;
+        ButtonDisabled : ButtonColors;
+        MarkNormal : ButtonColors;
+        MarkHovered : ButtonColors;
+        MarkPressed : ButtonColors;
+        MarkDisabled : ButtonColors;
+        CheckedNormal : ButtonColors;
+        CheckedHovered : ButtonColors;
+        CheckedPressed : ButtonColors;
+        CheckedDisabled : ButtonColors;
+        SubtleNormal : ButtonColors;
+        SubtleHovered : ButtonColors;
+        SubtlePressed : ButtonColors;
+        SubtleSelected : ButtonColors;
+        SubtleDisabled : ButtonColors;
+        ThumbNormal : ButtonColors;
+        ThumbHovered : ButtonColors;
+        ThumbPressed : ButtonColors;
+        EditorNormal : EditorColors;
+        EditorHovered : EditorColors;
+        EditorFocused : EditorColors;
+        EditorDisabled : EditorColors;
+      }
+
+      func CreateColorPackageInternal(dark : bool) : ColorPackage
+      {
+        var canvas = dark ? cast Color "#202020" : cast Color "#F3F3F3";
+        var layer = dark ? cast Color "#2B2B2B" : cast Color "#FFFFFF";
+        var flyout = dark ? cast Color "#2C2C2C" : cast Color "#F9F9F9";
+        var stroke = dark ? cast Color "#454545" : cast Color "#E1E1E1";
+        var strongStroke = dark ? cast Color "#9F9F9F" : cast Color "#8B8B8B";
+        var foreground = dark ? cast Color "#FFFFFF" : cast Color "#1B1B1B";
+        var secondary = dark ? cast Color "#CECECE" : cast Color "#606060";
+        var disabled = dark ? cast Color "#808080" : cast Color "#9B9B9B";
+        var accent = dark ? cast Color "#60CDFF" : cast Color "#005FB8";
+        var accentHover = dark ? cast Color "#76D4FF" : cast Color "#196EBF";
+        var accentPressed = dark ? cast Color "#90DCFF" : cast Color "#327EC6";
+        var onAccent = dark ? cast Color "#000000" : cast Color "#FFFFFF";
+        var closeHover = cast Color "#C42B1C";
+        var closePressed = cast Color "#AA2619";
+        var closeGlyph = cast Color "#FFFFFF";
+        var transparent = cast Color "#00000000";
+        var control = dark ? cast Color "#333333" : cast Color "#FDFDFD";
+        var controlHover = dark ? cast Color "#383838" : cast Color "#F9F9F9";
+        var controlPressed = dark ? cast Color "#2D2D2D" : cast Color "#F9F9F9";
+        var controlDisabled = dark ? cast Color "#303030" : cast Color "#F6F6F6";
+        var controlStroke = dark ? cast Color "#474747" : cast Color "#D9D9D9";
+        var disabledStroke = dark ? cast Color "#3D3D3D" : cast Color "#E5E5E5";
+        var subtleHover = dark ? cast Color "#FFFFFF0F" : cast Color "#00000009";
+        var subtlePressed = dark ? cast Color "#FFFFFF0A" : cast Color "#0000000F";
+        var selection = dark ? cast Color "#FFFFFF12" : cast Color "#0000000D";
+        var thumb = dark ? cast Color "#A0A0A0" : cast Color "#898989";
+        var thumbHover = dark ? cast Color "#CECECE" : cast Color "#606060";
+        var thumbPressed = dark ? cast Color "#DADADA" : cast Color "#5A5A5A";
+
+        return {
+          Canvas: canvas;
+          Layer: layer;
+          Flyout: flyout;
+          Stroke: stroke;
+          StrongStroke: strongStroke;
+          Foreground: foreground;
+          Secondary: secondary;
+          Disabled: disabled;
+          Accent: accent;
+          OnAccent: onAccent;
+          CloseHover: closeHover;
+          ClosePressed: closePressed;
+          CloseGlyph: closeGlyph;
+          Transparent: transparent;
+          ButtonNormal: {Border:controlStroke; Face:control; Text:foreground; Bullet:transparent;};
+          ButtonHovered: {Border:controlStroke; Face:controlHover; Text:foreground; Bullet:transparent;};
+          ButtonPressed: {Border:stroke; Face:controlPressed; Text:secondary; Bullet:transparent;};
+          ButtonDisabled: {Border:disabledStroke; Face:controlDisabled; Text:disabled; Bullet:transparent;};
+          MarkNormal: {Border:strongStroke; Face:control; Text:foreground; Bullet:transparent;};
+          MarkHovered: {Border:strongStroke; Face:controlHover; Text:foreground; Bullet:transparent;};
+          MarkPressed: {Border:strongStroke; Face:controlPressed; Text:foreground; Bullet:transparent;};
+          MarkDisabled: {Border:disabledStroke; Face:controlDisabled; Text:disabled; Bullet:transparent;};
+          CheckedNormal: {Border:accent; Face:accent; Text:foreground; Bullet:onAccent;};
+          CheckedHovered: {Border:accentHover; Face:accentHover; Text:foreground; Bullet:onAccent;};
+          CheckedPressed: {Border:accentPressed; Face:accentPressed; Text:foreground; Bullet:onAccent;};
+          CheckedDisabled: {Border:disabled; Face:disabled; Text:disabled; Bullet:layer;};
+          SubtleNormal: {Border:transparent; Face:transparent; Text:foreground; Bullet:transparent;};
+          SubtleHovered: {Border:transparent; Face:subtleHover; Text:foreground; Bullet:transparent;};
+          SubtlePressed: {Border:transparent; Face:subtlePressed; Text:secondary; Bullet:transparent;};
+          SubtleSelected: {Border:transparent; Face:selection; Text:foreground; Bullet:transparent;};
+          SubtleDisabled: {Border:transparent; Face:transparent; Text:disabled; Bullet:transparent;};
+          ThumbNormal: {Border:transparent; Face:thumb; Text:secondary; Bullet:transparent;};
+          ThumbHovered: {Border:transparent; Face:thumbHover; Text:foreground; Bullet:transparent;};
+          ThumbPressed: {Border:transparent; Face:thumbPressed; Text:foreground; Bullet:transparent;};
+          EditorNormal: {Border:stroke; Background:control;};
+          EditorHovered: {Border:controlStroke; Background:controlHover;};
+          EditorFocused: {Border:controlStroke; Background:layer;};
+          EditorDisabled: {Border:disabledStroke; Background:controlDisabled;};
+        };
+      }
+
+      func CreateDefaultColorPackage() : ColorPackage
+      {
+        return CreateColorPackageInternal(false);
+      }
+
+      func CreateDarkColorPackage() : ColorPackage
+      {
+        return CreateColorPackageInternal(true);
+      }
+
+      var win11Colors : ColorPackage = CreateDefaultColorPackage();
+
+      /*
+      * Calling GuiApplication::GetApplication().RefreshThemes will reload the new baseline document.
+      */
+      func CreateBaselineDocument() : DocumentModel^
+      {
+        var document = new DocumentModel^();
+        var normal = new DocumentStyle^();
+        normal.styles = new DocumentStyleProperties^();
+        normal.styles.color = win11Colors.Foreground;
+        document.styles["#Default-Override"] = normal;
+        var selection = new DocumentStyle^();
+        selection.styles = new DocumentStyleProperties^();
+        selection.styles.color = win11Colors.OnAccent;
+        selection.styles.backgroundColor = win11Colors.Accent;
+        document.styles["#Selection-Override"] = selection;
+        return document;
+      }
+    }
+    ]]></Workflow>
+  </Script>
+  <Instance name="Win11SkinThemeResource" content="File">Index.xml</Instance>
+  <InstanceStyle name="Style" content="File">Style.xml</InstanceStyle>
+
+  <Folder name="Window" content="Link">Template_Window.xml</Folder>
+  <Folder name="Tab" content="Link">Template_Tab.xml</Folder>
+  <Folder name="Toolstrip" content="Link">Template_Toolstrip.xml</Folder>
+  <Folder name="Ribbon" content="Link">Template_Ribbon.xml</Folder>
+  <Folder name="Button" content="Link">Template_Button.xml</Folder>
+  <Folder name="Document" content="Link">Template_Document.xml</Folder>
+  <Folder name="Scroll" content="Link">Template_Scroll.xml</Folder>
+  <Folder name="List" content="Link">Template_List.xml</Folder>
+  <Folder name="Misc" content="Link">Template_Misc.xml</Folder>
+</Folder>

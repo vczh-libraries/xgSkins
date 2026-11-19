@@ -1,0 +1,105 @@
+<Folder>
+  <Script name="EditorColors">
+    <Workflow><![CDATA[
+      module Win11EditorColors;
+      using presentation::*;
+      namespace win11skin
+      {
+        struct EditorColors
+        {
+          Border : Color;
+          Background : Color;
+        }
+
+        class EditorColorState
+        {
+          prop Border : Color = {} {}
+          prop Background : Color = {} {}
+          new() {}
+
+          new(colors : EditorColors)
+          {
+            Border = colors.Border;
+            Background = colors.Background;
+          }
+        }
+      }
+    ]]></Workflow>
+  </Script>
+
+  <Animation name="EditorColorAnimation">
+    <Gradient ref.Class="win11skin::EditorColorAnimation" Type="win11skin::EditorColorState">
+      <Interpolation><![CDATA[[$1]]]></Interpolation>
+      <Targets><Target Name="Border"/><Target Name="Background"/></Targets>
+    </Gradient>
+  </Animation>
+
+  <Instance name="EditorBorderTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win11skin::EditorBorderTemplate" ref.Styles="res://Win11Skin/Style">
+      <ref.Members><![CDATA[
+        prop Hovered : bool = false {}
+        prop InputUnderline : bool = false {}
+        prop Colors : EditorColors = win11Colors.EditorNormal {}
+        var animationBuilder : EditorColorAnimation^ = new EditorColorAnimation^(new EditorColorState^(win11Colors.EditorNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new EditorColorState^(self.Colors), cast UInt64 120), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <ControlTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.EditorDisabled : self.Focused ? win11Colors.EditorFocused : self.Hovered ? win11Colors.EditorHovered : win11Colors.EditorNormal</att.Colors-bind>
+        <ev.ColorsChanged-eval>self.UpdateColors();</ev.ColorsChanged-eval>
+        <ev.mouseEnter-eval>self.Hovered = true;</ev.mouseEnter-eval>
+        <ev.mouseLeave-eval>self.Hovered = false;</ev.mouseLeave-eval>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <SolidBackground Color-bind="self.animationBuilder.Current.Background" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:-1 right:1 bottom:0" PreferredMinSize="y:1" Visible-bind="self.InputUnderline and self.VisuallyEnabled">
+          <SolidBackground Color-eval="win11Colors.StrongStroke"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:-1 right:1 bottom:0" PreferredMinSize="y:2" Visible-bind="self.Focused and self.VisuallyEnabled">
+          <SolidBackground Color-eval="win11Colors.Accent" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/>
+        </Bounds>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="DocumentLabelTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win11skin::DocumentLabelTemplate" ref.Styles="res://Win11Skin/Style">
+      <DocumentLabelTemplate ref.Name="self" ref.Style="documentBoxBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren"/>
+    </Instance>
+  </Instance>
+
+  <Instance name="DocumentTextBoxTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win11skin::DocumentTextBoxTemplate" ref.Styles="res://Win11Skin/Style" xmlns:x="win11skin::*">
+      <DocumentLabelTemplate ref.Name="self" BaselineDocument-eval="win11skin::CreateBaselineDocument()" CaretColor-eval="win11skin::win11Colors.Foreground" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <x:EditorBorderTemplate InputUnderline="true" AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <Bounds ref.Name="container" AlignmentToParent="left:8 top:4 right:8 bottom:4"/>
+        </x:EditorBorderTemplate>
+      </DocumentLabelTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="DocumentViewerTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win11skin::DocumentViewerTemplate" ref.Styles="res://Win11Skin/Style" xmlns:x="win11skin::*">
+      <DocumentViewerTemplate ref.Name="self" BaselineDocument-eval="win11skin::CreateBaselineDocument()" CaretColor-eval="win11skin::win11Colors.Foreground" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <x:EditorBorderTemplate InputUnderline="true" AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>win11skin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>win11skin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </DocumentViewerTemplate>
+    </Instance>
+  </Instance>
+</Folder>

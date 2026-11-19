@@ -1,0 +1,108 @@
+<Styles>
+  <Style ref.Path="(//Bounds + //Table + //RepeatStack + //RepeatFlow)" MinSizeLimitation="LimitToElementAndChildren"/>
+  <Style ref.Path="//*.generalBackground" Color-eval="win11skin::win11Colors.Canvas"/>
+  <Style ref.Path="//*.windowBorder">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color let margin = self.CustomFramePadding in (
+          (not self.Border) or (margin.left + margin.top + margin.right + margin.bottom == 0) ? win11skin::win11Colors.Transparent :
+          win11skin::win11Colors.Stroke
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.windowTitle">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color (
+          not self.VisuallyEnabled ? win11skin::win11Colors.Disabled :
+          self.Activated ? win11skin::win11Colors.Foreground : win11skin::win11Colors.Secondary
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.tooltipBorder" Color-eval="win11skin::win11Colors.Stroke"/>
+  <Style ref.Path="//*.labelDefaultText" DefaultTextColor-eval="win11skin::win11Colors.Foreground"/>
+  <Style ref.Path="//*.labelText">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color (
+          not self.VisuallyEnabled ? win11skin::win11Colors.Disabled :
+          self.TextColor
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.datePickerColors">
+    <att.BackgroundColor-eval>win11skin::win11Colors.Canvas</att.BackgroundColor-eval>
+    <att.PrimaryTextColor-eval>win11skin::win11Colors.Foreground</att.PrimaryTextColor-eval>
+    <att.SecondaryTextColor-eval>win11skin::win11Colors.Secondary</att.SecondaryTextColor-eval>
+  </Style>
+  <Style ref.Path="//*.listBorder">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color (
+          self.VisuallyEnabled and self.Focused ? win11skin::win11Colors.Accent :
+          win11skin::win11Colors.Stroke
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.textListBackgroundAndColor">
+    <att.TextColor-eval>win11skin::win11Colors.Foreground</att.TextColor-eval>
+    <SolidBackground Color-eval="win11skin::win11Colors.Layer"/>
+  </Style>
+  <Style ref.Path="//*.listViewBackgroundAndColor">
+    <att.PrimaryTextColor-eval>win11skin::win11Colors.Foreground</att.PrimaryTextColor-eval>
+    <att.SecondaryTextColor-eval>win11skin::win11Colors.Secondary</att.SecondaryTextColor-eval>
+    <att.ItemSeparatorColor-eval>win11skin::win11Colors.Stroke</att.ItemSeparatorColor-eval>
+    <SolidBackground Color-eval="win11skin::win11Colors.Layer"/>
+  </Style>
+  <Style ref.Path="//*.treeViewBackgroundAndColor">
+    <att.TextColor-eval>win11skin::win11Colors.Foreground</att.TextColor-eval>
+    <SolidBackground Color-eval="win11skin::win11Colors.Layer"/>
+  </Style>
+  <Style ref.Path="//*.controlText">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color (
+          not self.VisuallyEnabled ? win11skin::win11Colors.Disabled :
+          win11skin::win11Colors.Foreground
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.toolstripMenuBackground" Color-eval="win11skin::win11Colors.Flyout"/>
+  <Style ref.Path="//*.toolstripMenuBorder" Color-eval="win11skin::win11Colors.Stroke"/>
+  <Style ref.Path="//*.toolstripSplitter" Color-eval="win11skin::win11Colors.Stroke"/>
+  <Style ref.Path="//*.toolstripArrow" BorderColor-bind="self.animation.Current.Text" BackgroundColor-bind="self.animation.Current.Text"/>
+  <Style ref.Path="//*.toolstripSplitArrow" BorderColor-bind="self.VisuallyEnabled ? win11skin::win11Colors.Foreground : win11skin::win11Colors.Disabled" BackgroundColor-bind="self.VisuallyEnabled ? win11skin::win11Colors.Foreground : win11skin::win11Colors.Disabled"/>
+  <Style ref.Path="//*.ribbonGroupBorder" Color-eval="win11skin::win11Colors.Stroke"/>
+  <Style ref.Path="//*.ribbonGroupTitle" Color-eval="win11skin::win11Colors.Secondary"/>
+  <Style ref.Path="//*.ribbonMenuBorder" Color-eval="win11skin::win11Colors.Stroke"/>
+  <Style ref.Path="//*.ribbonExpandableArrow">
+    <att.BorderColor-bind>
+      <![CDATA[
+        cast Color let state = self.State in (
+          not self.VisuallyEnabled ? win11skin::win11Colors.Disabled :
+          state == ButtonState::Pressed ? win11skin::win11Colors.Foreground :
+          win11skin::win11Colors.Secondary
+        )
+      ]]>
+    </att.BorderColor-bind>
+    <att.BackgroundColor-bind>
+      <![CDATA[
+        cast Color let state = self.State in (
+          not self.VisuallyEnabled ? win11skin::win11Colors.Transparent :
+          state == ButtonState::Pressed ? win11skin::win11Colors.Foreground :
+          state == ButtonState::Active ? win11skin::win11Colors.Secondary :
+          win11skin::win11Colors.Transparent
+        )
+      ]]>
+    </att.BackgroundColor-bind>
+  </Style>
+  <Style ref.Path="//*.documentBoxBackgroundAndColor" BaselineDocument-eval="win11skin::CreateBaselineDocument()">
+    <att.CaretColor-eval>win11skin::win11Colors.Foreground</att.CaretColor-eval>
+    <SolidBackground Color-eval="win11skin::win11Colors.Layer"/>
+  </Style>
+</Styles>

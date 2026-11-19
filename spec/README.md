@@ -14,3 +14,5 @@ use Window Manager to select another skin.
   [test guidance](WinVistaSkin/TestGuidance.md).
 - Win10Skin (light and dark): [colors](Win10Skin/ColorPackage.md), [animation](Win10Skin/Animation.md),
   [test guidance](Win10Skin/TestGuidance.md).
+- Win11Skin (light and dark): [colors](Win11Skin/ColorPackage.md), [animation](Win11Skin/Animation.md),
+  [test guidance](Win11Skin/TestGuidance.md).

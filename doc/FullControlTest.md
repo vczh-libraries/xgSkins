@@ -48,12 +48,14 @@ Use `/MultiWindow` for native windows or `/GDI` for the GDI renderer.
 `/Hosted` and `/MultiWindow` are mutually
 exclusive, as are `/D2D` and `/GDI`.
 
-The skin list contains `DarkSkin`, `Win7Skin`, `Win8Skin`, `WinXPSkin`, `WinVistaSkin`, `Win10Skin`, `Win10Skin/Dark`.
+The skin list contains `DarkSkin`, `Win7Skin`, `Win8Skin`, `WinXPSkin`, `WinVistaSkin`, `Win10Skin`, `Win10Skin/Dark`, `Win11Skin`, `Win11Skin/Dark`.
 Startup always selects `DarkSkin`; choose a skin in `Window Manager`. The manually maintained
 `Test/FullControlTest/FullControlTestEventHandlers.cpp` owns this list. Skins
 belong in `Source/<SKIN-NAME>` following [Project.md](../Project.md).
 
 The bare `Win10Skin` entry uses the light palette. Choose `Win10Skin/Dark` for dark mode. In C++, use `CreateDefaultColorPackage()` or `CreateDarkColorPackage()` from the `win10skin` namespace.
+
+The bare `Win11Skin` entry uses the light palette. Choose `Win11Skin/Dark` for dark mode. In C++, use `CreateDefaultColorPackage()` or `CreateDarkColorPackage()` from the `win11skin` namespace.
 
 ## Automation
 

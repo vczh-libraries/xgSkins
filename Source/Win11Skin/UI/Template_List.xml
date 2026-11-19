@@ -1,0 +1,231 @@
+﻿<Folder>
+  <Instance name="ItemBackgroundTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win11skin::ItemBackgroundTemplate" ref.Styles="res://Win11Skin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = win11Colors.SubtleNormal {}
+        prop ShowIndicator : bool = true {}
+      ]]></ref.Members>
+      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.SubtleDisabled : self.Selected or self.State == ButtonState::Pressed ? win11Colors.SubtleSelected : self.State == ButtonState::Active ? win11Colors.SubtleHovered : win11Colors.SubtleNormal</att.Colors-bind>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <SolidBackground Color-bind="self.Colors.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
+        </Bounds>
+        <SideAligned Direction="Left" MaxLength="3" Visible-bind="self.ShowIndicator and self.VisuallyEnabled and self.Selected">
+          <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+            <att.Rows><_>composeType:Percentage percentage:1.0</_><_>composeType:Absolute absolute:12</_><_>composeType:Percentage percentage:1.0</_></att.Rows>
+            <att.Columns><_>composeType:Percentage percentage:1.0</_></att.Columns>
+            <Cell Site="row:1 column:0"><SolidBackground Color-eval="win11Colors.Accent" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Cell>
+          </Table>
+        </SideAligned>
+        <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="TextListTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win11skin::TextListTemplate" ref.Styles="res://Win11Skin/Style" xmlns:x="win11skin::*">
+      <TextListTemplate ref.Name="self" ref.Style="textListBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <att.BackgroundTemplate>win11skin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.CheckBulletTemplate>win11skin::CheckBoxTemplate</att.CheckBulletTemplate>
+        <att.RadioBulletTemplate>win11skin::RadioButtonTemplate</att.RadioBulletTemplate>
+
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>win11skin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>win11skin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </TextListTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ComboBoxTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win11skin::ComboBoxTemplate" ref.Styles="res://Win11Skin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = win11Colors.ButtonNormal {}
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(win11Colors.ButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <DateComboBoxTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:32" MinSizeLimitation="LimitToElementAndChildren">
+        <att.DatePickerTemplate>win11skin::DatePickerTemplate</att.DatePickerTemplate>
+        <att.Colors-bind>GetButtonColors(self.VisuallyEnabled, self.SubMenuOpening ? ButtonState::Pressed : self.State)</att.Colors-bind>
+        <ev.ColorsChanged-eval>self.UpdateColors();</ev.ColorsChanged-eval>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <SolidBackground Color-bind="self.animationBuilder.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:3 top:3 right:16 bottom:3" Visible-bind="self.Focused"><SolidBorder Color-eval="win11Colors.Foreground" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <Bounds ref.Name="container" AlignmentToParent="left:9 top:4 right:26 bottom:4">
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.TextVisible">
+              <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </Bounds>
+          </Bounds>
+
+          <Table AlignmentToParent="left:-1 top:1 right:8 bottom:1" PreferredMinSize="x:13 y:0">
+            <att.Rows>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              <CellOption>composeType:Absolute absolute:6</CellOption>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            </att.Rows>
+            <att.Columns>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              <CellOption>composeType:Absolute absolute:9</CellOption>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            </att.Columns>
+
+            <Cell Site="row:1 column:1">
+              <Polygon BorderColor-bind="self.animationBuilder.Current.Text" BackgroundColor-bind="self.animationBuilder.Current.Text" Size="x:9 y:6">
+                <att.Points>
+                  <Point>x:0 y:0</Point>
+                  <Point>x:4 y:4</Point>
+                  <Point>x:8 y:0</Point>
+                  <Point>x:8 y:1</Point>
+                  <Point>x:4 y:5</Point>
+                  <Point>x:0 y:1</Point>
+                </att.Points>
+              </Polygon>
+            </Cell>
+          </Table>
+        </Bounds>
+      </DateComboBoxTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ListViewColumnHeaderTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win11skin::ListViewColumnHeaderTemplate" ref.Styles="res://Win11Skin/Style">
+      <ListViewColumnHeaderTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground Color-bind="not self.VisuallyEnabled ? win11Colors.Layer : self.State == ButtonState::Pressed ? win11Colors.SubtlePressed.Face : self.State == ButtonState::Active ? win11Colors.SubtleHovered.Face : win11Colors.Layer" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
+        <Bounds AlignmentToParent="left:-1 top:6 right:0 bottom:6" PreferredMinSize="x:1 y:0">
+          <SolidBackground Color-eval="win11Colors.Stroke"/>
+        </Bounds>
+        <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:11 bottom:1">
+          <Table AlignmentToParent="left:0 top:1 right:0 bottom:-1">
+            <att.Rows>
+              <_>composeType:MinSize</_>
+              <_>composeType:Percentage percentage:1.0</_>
+            </att.Rows>
+            <att.Columns>
+              <_>composeType:Percentage percentage:0.5</_>
+              <_>composeType:MinSize</_>
+              <_>composeType:Percentage percentage:0.5</_>
+            </att.Columns>
+
+            <Cell Site="row:0 column:1">
+              <Bounds Visible-bind="self.SortingState == ColumnSortingState::Ascending">
+                <Polygon BorderColor-eval="win11Colors.Secondary" BackgroundColor-eval="win11Colors.Secondary" Size="x:7 y:4">
+                  <att.Points>
+                    <Point>x:0 y:3</Point>
+                    <Point>x:3 y:0</Point>
+                    <Point>x:6 y:3</Point>
+                  </att.Points>
+                </Polygon>
+              </Bounds>
+              <Bounds Visible-bind="self.SortingState == ColumnSortingState::Descending">
+                <Polygon BorderColor-eval="win11Colors.Secondary" BackgroundColor-eval="win11Colors.Secondary" Size="x:7 y:4">
+                  <att.Points>
+                    <Point>x:0 y:0</Point>
+                    <Point>x:3 y:3</Point>
+                    <Point>x:6 y:0</Point>
+                  </att.Points>
+                </Polygon>
+              </Bounds>
+            </Cell>
+          </Table>
+          <Bounds AlignmentToParent="left:8 top:6 right:5 bottom:5">
+            <SolidLabel Color-bind="self.VisuallyEnabled ? win11Colors.Secondary : win11Colors.Disabled" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+          </Bounds>
+        </Bounds>
+        <Bounds AlignmentToParent="left:-1 top:0 right:0 bottom:0">
+          <CheckBox ref.Name="buttonArrow" AutoFocus="false" AutoSelection="false" ControlTemplate="win11skin::ListViewColumnDropDownTemplate" Selected-bind="self.SubMenuOpening" Visible-bind="self.SubMenuExisting and (self.SubMenuOpening or self.State != ButtonState::Normal)">
+            <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          </CheckBox>
+        </Bounds>
+      </ListViewColumnHeaderTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ListViewTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win11skin::ListViewTemplate" ref.Styles="res://Win11Skin/Style" xmlns:x="win11skin::*">
+      <ListViewTemplate ref.Name="self" ref.Style="listViewBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <att.BackgroundTemplate>win11skin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.ColumnHeaderTemplate>win11skin::ListViewColumnHeaderTemplate</att.ColumnHeaderTemplate>
+
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>win11skin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>win11skin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </ListViewTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ExpandingDecoratorTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win11skin::ExpandingDecoratorTemplate" ref.Styles="res://Win11Skin/Style">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidLabel Text-bind='self.Selected ? "" : ""' Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:9"
+          Color-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="TreeViewTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win11skin::TreeViewTemplate" ref.Styles="res://Win11Skin/Style" xmlns:x="win11skin::*">
+      <TreeViewTemplate ref.Name="self" ref.Style="treeViewBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <att.BackgroundTemplate>win11skin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.ExpandingDecoratorTemplate>win11skin::ExpandingDecoratorTemplate</att.ExpandingDecoratorTemplate>
+
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>win11skin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>win11skin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </TreeViewTemplate>
+    </Instance>
+  </Instance>
+  <Instance name="ListViewColumnDropDownTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win11skin::ListViewColumnDropDownTemplate" ref.Styles="res://Win11Skin/Style">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:13 y:0">
+        <SolidBackground Color-bind="self.VisuallyEnabled and (self.Selected or self.State != ButtonState::Normal) ? win11Colors.SubtleHovered.Face : win11Colors.Transparent" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
+        <Table AlignmentToParent="left:3 top:3 right:3 bottom:3">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns><CellOption>composeType:MinSize</CellOption></att.Columns>
+          <Cell Site="row:1 column:0">
+            <Polygon Size="x:7 y:4" BorderColor-eval="win11Colors.Secondary" BackgroundColor-eval="win11Colors.Secondary">
+              <att.Points><Point>x:0 y:0</Point><Point>x:3 y:3</Point><Point>x:6 y:0</Point></att.Points>
+            </Polygon>
+          </Cell>
+        </Table>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+</Folder>
