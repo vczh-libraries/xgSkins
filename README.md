@@ -14,4 +14,8 @@ color package and register its theme before creating controls. See the
 
 ## Screenshots
 
-<!-- to be edited -->
+FullControlTest at 96 DPI. Select a thumbnail to open the full-size capture.
+
+| Appearance | Selected checkbox and radio | Data grid | Ribbon context menu | Toolstrip File menu |
+| --- | --- | --- | --- | --- |
+| Windows Vista Aero | [![Windows Vista Aero, selected checkbox and radio](doc/screenshots/WinVistaSkin/controls.png)](doc/screenshots/WinVistaSkin/controls.png) | [![Windows Vista Aero, data grid](doc/screenshots/WinVistaSkin/data-grid.png)](doc/screenshots/WinVistaSkin/data-grid.png) | [![Windows Vista Aero, ribbon context menu](doc/screenshots/WinVistaSkin/ribbon-context.png)](doc/screenshots/WinVistaSkin/ribbon-context.png) | [![Windows Vista Aero, toolstrip file menu](doc/screenshots/WinVistaSkin/toolstrip-menu.png)](doc/screenshots/WinVistaSkin/toolstrip-menu.png) |

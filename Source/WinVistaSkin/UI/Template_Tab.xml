@@ -31,7 +31,7 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Selected and self.TabFocused">
           <FocusRectangle/>
         </Bounds>
-        <Bounds AlignmentToParent="left:6 top:3 right:6 bottom:3">
+        <Bounds AlignmentToParent="left:6 top:2 right:6 bottom:2">
           <SolidLabel Color-bind="self.VisuallyEnabled ? self.Colors.Text : vistaColors.TextDisabled" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Bounds>
       </SelectableButtonTemplate>

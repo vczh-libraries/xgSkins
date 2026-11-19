@@ -5,6 +5,12 @@ DarkSkin. Select `WinVistaSkin` under `Window Manager / Color Theme`; there is o
 WinVistaSkin entry and no alternate WinVistaSkin color theme. The application state must
 survive switching between the skins.
 
+At 96 DPI with the showcase font, check for a 23-pixel command button and
+closed combo box. The checkbox and radio marks are 13 pixels square in a
+17-pixel row. Check the marked and unmarked examples side by side on
+`List / TextList`. Larger fonts and embedded button content can expand the
+controls. [Microsoft desktop layout guidance](https://learn.microsoft.com/en-us/windows/win32/uxguide/vis-layout)
+
 The paths below use visible tab captions. A modal or popup named after a page is
 opened from that page. They identify the minimum affected pages when a template
 changes; creating the skin requires the full showcase verification described in
