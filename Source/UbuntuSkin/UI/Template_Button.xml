@@ -1,0 +1,243 @@
+<Folder>
+  <Script name="ButtonColorsScript">
+    <Workflow><![CDATA[
+    module UbuntuButtonColors;
+    using presentation::*;
+    using presentation::controls::*;
+    namespace ubuntuskin
+    {
+      struct ButtonColors
+      {
+        Border : Color;
+        G1 : Color;
+        G2 : Color;
+        Text : Color;
+        Bullet : Color;
+      }
+
+      class ButtonColorState
+      {
+        prop Border : Color = {} {}
+        prop G1 : Color = {} {}
+        prop G2 : Color = {} {}
+        prop Text : Color = {} {}
+        prop Bullet : Color = {} {}
+
+        new() {}
+
+        new(colors : ButtonColors)
+        {
+          Border = colors.Border;
+          G1 = colors.G1;
+          G2 = colors.G2;
+          Text = colors.Text;
+          Bullet = colors.Bullet;
+        }
+      }
+
+      func CompleteColorAnimation(animation : IGuiAnimation^, completed : func():void) : IGuiAnimation^
+      ${
+        $PlayAndWait animation;
+        completed();
+      }
+
+      func GetButtonColors(enabled : bool, state : ButtonState) : ButtonColors
+      {
+        return not enabled ? ubuntuColors.ButtonDisabled :
+          state == ButtonState::Pressed ? ubuntuColors.ButtonPressed :
+          state == ButtonState::Active ? ubuntuColors.ButtonHovered : ubuntuColors.ButtonNormal;
+      }
+
+      func GetCheckedColors(enabled : bool, state : ButtonState, selected : bool) : ButtonColors
+      {
+        var colors = not enabled ? ubuntuColors.CheckedDisabled :
+          state == ButtonState::Pressed ? ubuntuColors.CheckedPressed :
+          state == ButtonState::Active ? ubuntuColors.CheckedHovered : ubuntuColors.CheckedNormal;
+        var checkedFace = enabled ? (state == ButtonState::Pressed ? ubuntuColors.AccentPressed : ubuntuColors.Accent) : ubuntuColors.DisabledInk;
+        return {
+          Border: selected ? checkedFace : colors.Border;
+          G1: selected ? checkedFace : colors.G1;
+          G2: selected ? checkedFace : colors.G2;
+          Text: colors.Text;
+          Bullet: selected ? colors.Bullet : {r:colors.Bullet.r; g:colors.Bullet.g; b:colors.Bullet.b; a:ubuntuColors.Clear.a;};
+        };
+      }
+
+      func GetScrollButtonColors(enabled : bool, state : ButtonState, arrow : bool) : ButtonColors
+      {
+        if (arrow)
+        {
+          return not enabled ? ubuntuColors.CommandDisabled :
+            state == ButtonState::Pressed ? ubuntuColors.CommandPressed :
+            state == ButtonState::Active ? ubuntuColors.CommandHovered : ubuntuColors.CommandNormal;
+        }
+        return not enabled ? ubuntuColors.ScrollHandleDisabled :
+          state == ButtonState::Pressed ? ubuntuColors.ScrollHandlePressed :
+          state == ButtonState::Active ? ubuntuColors.ScrollHandleActive : ubuntuColors.ScrollHandleNormal;
+      }
+    }
+    ]]></Workflow>
+  </Script>
+  <Animation name="ButtonColorAnimationResource">
+    <Gradient ref.Class="ubuntuskin::ButtonColorAnimation" Type="ubuntuskin::ButtonColorState">
+      <Interpolation><![CDATA[[$1]]]></Interpolation>
+      <Targets>
+        <Target Name="Border"/>
+        <Target Name="G1"/>
+        <Target Name="G2"/>
+        <Target Name="Text"/>
+        <Target Name="Bullet"/>
+      </Targets>
+    </Gradient>
+  </Animation>
+
+  <Instance name="ButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::ButtonTemplate" ref.Styles="res://UbuntuSkin/Style">
+      <ref.Members><![CDATA[
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(ubuntuColors.ButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetButtonColors(self.VisuallyEnabled, self.State)), cast UInt64 150), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
+        <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Shape="shapeType:RoundRect radiusX:5 radiusY:5" Color-bind="self.animationBuilder.Current.Border"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <GradientBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Focused">
+          <SolidBorder Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-eval="ubuntuskin::ubuntuColors.Focus"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:8 top:4 right:8 bottom:4">
+          <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+        </Bounds>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="CheckBoxTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::CheckBoxTemplate" ref.Styles="res://UbuntuSkin/Style">
+      <ref.Members><![CDATA[
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(GetCheckedColors(true, ButtonState::Normal, false)));
+        var lastAnimation : IGuiAnimation^ = null;
+
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetCheckedColors(self.VisuallyEnabled, self.State, self.Selected)), cast UInt64 150), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
+        <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
+        <ev.SelectedChanged-eval>self.UpdateColors();</ev.SelectedChanged-eval>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            <CellOption>composeType:Absolute absolute:16</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Absolute absolute:22</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:1 column:0">
+            <Bounds AlignmentToParent="left:3 top:0 right:3 bottom:0">
+              <SolidBorder Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-bind="self.animationBuilder.Current.Border"/>
+              <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+                <GradientBackground Shape="shapeType:RoundRect radiusX:2 radiusY:2" Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+              </Bounds>
+            </Bounds>
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <Polygon Size="x:11 y:10" BorderColor-bind="self.animationBuilder.Current.Bullet" BackgroundColor-bind="self.animationBuilder.Current.Bullet">
+                <att.Points>
+                  <Point>x:0 y:5</Point><Point>x:1 y:4</Point><Point>x:4 y:7</Point>
+                  <Point>x:9 y:1</Point><Point>x:10 y:2</Point><Point>x:4 y:9</Point>
+                </att.Points>
+              </Polygon>
+            </Bounds>
+          </Cell>
+
+          <Cell Site="row:0 column:1 rowSpan:3 columnSpan:1">
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
+                <SolidBorder Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-eval="ubuntuskin::ubuntuColors.Focus"/>
+              </Bounds>
+              <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
+                <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+              </Bounds>
+            </Bounds>
+          </Cell>
+        </Table>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RadioButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::RadioButtonTemplate" ref.Styles="res://UbuntuSkin/Style">
+      <ref.Members><![CDATA[
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(GetCheckedColors(true, ButtonState::Normal, false)));
+        var lastAnimation : IGuiAnimation^ = null;
+
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetCheckedColors(self.VisuallyEnabled, self.State, self.Selected)), cast UInt64 150), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
+        <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
+        <ev.SelectedChanged-eval>self.UpdateColors();</ev.SelectedChanged-eval>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            <CellOption>composeType:Absolute absolute:16</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Absolute absolute:22</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:1 column:0">
+            <Bounds AlignmentToParent="left:3 top:0 right:3 bottom:0">
+              <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:Ellipse"/>
+              <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+                <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2" Shape="shapeType:Ellipse"/>
+              </Bounds>
+            </Bounds>
+            <Bounds AlignmentToParent="left:8 top:5 right:8 bottom:5">
+              <SolidBackground Color-bind="self.animationBuilder.Current.Bullet" Shape="shapeType:Ellipse"/>
+            </Bounds>
+          </Cell>
+
+          <Cell Site="row:0 column:1 rowSpan:3 columnSpan:1">
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
+                <SolidBorder Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-eval="ubuntuskin::ubuntuColors.Focus"/>
+              </Bounds>
+              <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
+                <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+              </Bounds>
+            </Bounds>
+          </Cell>
+        </Table>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+</Folder>

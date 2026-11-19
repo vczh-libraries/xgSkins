@@ -1,0 +1,12 @@
+<Resource>
+  <Folder name="GacGenConfig">
+    <Folder name="Cpp">
+      <Text name="SourceFolder">../Source</Text>
+      <Text name="NormalInclude">GacUI.h</Text>
+      <Text name="ReflectionInclude">GacUIReflection.h</Text>
+      <Text name="Name">UbuntuSkin</Text>
+      <Text name="CppResource">UbuntuSkinResource.cpp</Text>
+    </Folder>
+  </Folder>
+  <Folder name="UbuntuSkin" content="Link">UbuntuSkin.xml</Folder>
+</Resource>

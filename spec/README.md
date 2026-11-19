@@ -16,3 +16,5 @@ use Window Manager to select another skin.
   [test guidance](Win10Skin/TestGuidance.md).
 - Win11Skin (light and dark): [colors](Win11Skin/ColorPackage.md), [animation](Win11Skin/Animation.md),
   [test guidance](Win11Skin/TestGuidance.md).
+- UbuntuSkin: [colors](UbuntuSkin/ColorPackage.md), [animation](UbuntuSkin/Animation.md),
+  [test guidance](UbuntuSkin/TestGuidance.md).

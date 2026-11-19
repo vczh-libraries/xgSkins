@@ -1,0 +1,260 @@
+<Folder>
+  <Instance name="ItemBackgroundTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::ItemBackgroundTemplate" ref.Styles="res://UbuntuSkin/Style">
+      <ref.Members><![CDATA[prop Colors : ButtonColors = ubuntuColors.ItemNormal {}]]></ref.Members>
+      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.ItemDisabled : self.Selected or self.State == ButtonState::Pressed ? ubuntuColors.ItemSelected : self.State == ButtonState::Active ? ubuntuColors.ItemHovered : ubuntuColors.ItemNormal</att.Colors-bind>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.Colors.Border"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:-1 bottom:0" PreferredMinSize="x:3 y:0" Visible-bind="self.VisuallyEnabled and self.Selected">
+          <SolidBackground Color-eval="ubuntuColors.Accent"/>
+        </Bounds>
+        <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="TextListTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::TextListTemplate" ref.Styles="res://UbuntuSkin/Style" xmlns:x="ubuntuskin::*">
+      <TextListTemplate ref.Name="self" ref.Style="textListBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <att.BackgroundTemplate>ubuntuskin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.CheckBulletTemplate>ubuntuskin::CheckBoxTemplate</att.CheckBulletTemplate>
+        <att.RadioBulletTemplate>ubuntuskin::RadioButtonTemplate</att.RadioBulletTemplate>
+
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>ubuntuskin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>ubuntuskin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>12</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </TextListTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ComboBoxTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::ComboBoxTemplate" ref.Styles="res://UbuntuSkin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = ubuntuColors.ButtonNormal {}
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(ubuntuColors.ButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 150), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <DateComboBoxTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.DatePickerTemplate>ubuntuskin::DatePickerTemplate</att.DatePickerTemplate>
+        <att.Colors-bind>GetButtonColors(self.VisuallyEnabled, self.SubMenuOpening ? ButtonState::Pressed : self.State)</att.Colors-bind>
+        <ev.ColorsChanged-eval>self.UpdateColors();</ev.ColorsChanged-eval>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Shape="shapeType:RoundRect radiusX:5 radiusY:5" Color-bind="self.animationBuilder.Current.Border"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <GradientBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:3 top:3 right:16 bottom:3" Visible-bind="self.Focused"><SolidBorder Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-eval="ubuntuskin::ubuntuColors.Focus"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <Bounds ref.Name="container" AlignmentToParent="left:3 top:3 right:18 bottom:3">
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.TextVisible">
+              <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </Bounds>
+          </Bounds>
+
+          <Table AlignmentToParent="left:-1 top:1 right:3 bottom:1" PreferredMinSize="x:13 y:0">
+            <att.Rows>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              <CellOption>composeType:Absolute absolute:3</CellOption>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            </att.Rows>
+            <att.Columns>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              <CellOption>composeType:Absolute absolute:5</CellOption>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            </att.Columns>
+
+            <Cell Site="row:1 column:1">
+              <Polygon BorderColor-bind="self.animationBuilder.Current.Text" BackgroundColor-bind="self.animationBuilder.Current.Text" Size="x:5 y:3">
+                <att.Points>
+                  <Point>x:0 y:0</Point>
+                  <Point>x:2 y:2</Point>
+                  <Point>x:4 y:0</Point>
+                </att.Points>
+              </Polygon>
+            </Cell>
+          </Table>
+        </Bounds>
+      </DateComboBoxTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ListViewColumnHeaderTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::ListViewColumnHeaderTemplate" ref.Styles="res://UbuntuSkin/Style">
+      <ListViewColumnHeaderTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground Color-bind="self.State == ButtonState::Pressed ? ubuntuColors.PressedSurface : self.State == ButtonState::Active ? ubuntuColors.HoverSurface : ubuntuColors.WindowBackground"/>
+        <Bounds AlignmentToParent="left:-1 top:3 right:0 bottom:3" PreferredMinSize="x:1 y:0">
+          <SolidBackground Color-eval="ubuntuColors.Divider"/>
+        </Bounds>
+        <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:11 bottom:1">
+          <Table AlignmentToParent="left:0 top:1 right:0 bottom:-1">
+            <att.Rows>
+              <_>composeType:MinSize</_>
+              <_>composeType:Percentage percentage:1.0</_>
+            </att.Rows>
+            <att.Columns>
+              <_>composeType:Percentage percentage:0.5</_>
+              <_>composeType:MinSize</_>
+              <_>composeType:Percentage percentage:0.5</_>
+            </att.Columns>
+
+            <Cell Site="row:0 column:1">
+              <Bounds Visible-bind="self.SortingState == ColumnSortingState::Ascending">
+                <Polygon BorderColor-eval="ubuntuColors.Ink" BackgroundColor-eval="ubuntuColors.Ink" Size="x:7 y:4">
+                  <att.Points>
+                    <Point>x:0 y:3</Point>
+                    <Point>x:3 y:0</Point>
+                    <Point>x:6 y:3</Point>
+                  </att.Points>
+                </Polygon>
+              </Bounds>
+              <Bounds Visible-bind="self.SortingState == ColumnSortingState::Descending">
+                <Polygon BorderColor-eval="ubuntuColors.Ink" BackgroundColor-eval="ubuntuColors.Ink" Size="x:7 y:4">
+                  <att.Points>
+                    <Point>x:0 y:0</Point>
+                    <Point>x:3 y:3</Point>
+                    <Point>x:6 y:0</Point>
+                  </att.Points>
+                </Polygon>
+              </Bounds>
+            </Cell>
+          </Table>
+          <Bounds AlignmentToParent="left:8 top:6 right:5 bottom:5">
+            <SolidLabel Color-bind="self.VisuallyEnabled ? ubuntuColors.Ink : ubuntuColors.DisabledInk" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+          </Bounds>
+        </Bounds>
+        <Bounds AlignmentToParent="left:-1 top:0 right:0 bottom:0">
+          <CheckBox ref.Name="buttonArrow" AutoFocus="false" AutoSelection="false" ControlTemplate="ubuntuskin::ListViewColumnDropDownTemplate" Selected-bind="self.SubMenuOpening" Visible-bind="self.SubMenuExisting and (self.SubMenuOpening or self.State != ButtonState::Normal)">
+            <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          </CheckBox>
+        </Bounds>
+      </ListViewColumnHeaderTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ListViewTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::ListViewTemplate" ref.Styles="res://UbuntuSkin/Style" xmlns:x="ubuntuskin::*">
+      <ListViewTemplate ref.Name="self" ref.Style="listViewBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <att.BackgroundTemplate>ubuntuskin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.ColumnHeaderTemplate>ubuntuskin::ListViewColumnHeaderTemplate</att.ColumnHeaderTemplate>
+
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>ubuntuskin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>ubuntuskin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>12</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </ListViewTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ExpandingDecoratorTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::ExpandingDecoratorTemplate" ref.Styles="res://UbuntuSkin/Style">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:11</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:6</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:1 column:1">
+            <Bounds Visible-bind="not self.Selected">
+              <Polygon Size="x:6 y:11" BorderColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? ubuntuColors.Ink : self.Selected ? ubuntuColors.SecondaryInk : ubuntuColors.SecondaryInk" BackgroundColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? ubuntuColors.Ink : self.Selected ? ubuntuColors.SecondaryInk : ubuntuColors.SecondaryInk">
+                <att.Points>
+                  <Point>x:0 y:1</Point>
+                  <Point>x:4 y:5</Point>
+                  <Point>x:0 y:9</Point>
+                </att.Points>
+              </Polygon>
+            </Bounds>
+            <Bounds Visible-bind="self.Selected">
+              <Polygon Size="x:6 y:11" BorderColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? ubuntuColors.Ink : self.Selected ? ubuntuColors.SecondaryInk : ubuntuColors.SecondaryInk" BackgroundColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? ubuntuColors.Ink : self.Selected ? ubuntuColors.SecondaryInk : ubuntuColors.SecondaryInk">
+                <att.Points>
+                  <Point>x:5 y:2</Point>
+                  <Point>x:5 y:7</Point>
+                  <Point>x:0 y:7</Point>
+                </att.Points>
+              </Polygon>
+            </Bounds>
+          </Cell>
+        </Table>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="TreeViewTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::TreeViewTemplate" ref.Styles="res://UbuntuSkin/Style" xmlns:x="ubuntuskin::*">
+      <TreeViewTemplate ref.Name="self" ref.Style="treeViewBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <att.BackgroundTemplate>ubuntuskin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.ExpandingDecoratorTemplate>ubuntuskin::ExpandingDecoratorTemplate</att.ExpandingDecoratorTemplate>
+
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>ubuntuskin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>ubuntuskin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>12</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </TreeViewTemplate>
+    </Instance>
+  </Instance>
+  <Instance name="ListViewColumnDropDownTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::ListViewColumnDropDownTemplate" ref.Styles="res://UbuntuSkin/Style">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:13 y:0">
+        <Bounds AlignmentToParent="left:0 top:1 right:-1 bottom:1" PreferredMinSize="x:1 y:0" Visible-bind="not self.VisuallyEnabled or (self.State == ButtonState::Normal and not self.Selected)">
+          <GradientBackground Direction="Vertical" Color1-eval="ubuntuColors.Divider" Color2-eval="ubuntuColors.WindowBackground"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and (self.State != ButtonState::Normal or self.Selected)">
+          <SolidBorder Color-eval="ubuntuColors.Border"/>
+          <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <GradientBackground Direction="Vertical" Color1-eval="ubuntuColors.HoverSurface" Color2-eval="ubuntuColors.HoverSurface"/>
+          </Bounds>
+        </Bounds>
+        <Table AlignmentToParent="left:3 top:3 right:3 bottom:3">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns><CellOption>composeType:MinSize</CellOption></att.Columns>
+          <Cell Site="row:1 column:0">
+            <Polygon Size="x:7 y:4" BorderColor-eval="ubuntuColors.Ink" BackgroundColor-eval="ubuntuColors.Ink">
+              <att.Points><Point>x:0 y:0</Point><Point>x:3 y:3</Point><Point>x:6 y:0</Point></att.Points>
+            </Polygon>
+          </Cell>
+        </Table>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+</Folder>

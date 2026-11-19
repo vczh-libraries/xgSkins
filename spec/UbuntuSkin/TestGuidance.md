@@ -1,0 +1,90 @@
+# UbuntuSkin test guidance
+
+Start `FullControlTest /D2D /Hosted`, open **Window Manager / Color Theme** and select **UbuntuSkin**. New skins require the full showcase run. Use this mapping for subsequent changes. [Verification instructions](../../Project.md).
+
+## Instance-to-page mapping
+
+- ubuntuskin::Theme: Window Manager, List / TextList, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Layout / Repeat, Misc / DatePicker.
+- ubuntuskin::CustomControlTemplate: Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Layout / Responsive, Misc / TouchingList.
+- ubuntuskin::TooltipTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::SystemFrameWindowTemplate: Window Manager, Misc / Dialogs.
+- ubuntuskin::CustomFrameWindowTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
+- ubuntuskin::CaptionButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
+- ubuntuskin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager.
+- ubuntuskin::LabelTemplate: List / TextList, Layout / Easy Layout, Window Manager, Misc / Localization.
+- ubuntuskin::ShortcutKeyTemplate: Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Window Manager.
+- ubuntuskin::DateButtonTemplate: Misc / DatePicker, List / BindableDataGrid.
+- ubuntuskin::DatePickerTemplate: Misc / DatePicker, List / BindableDataGrid.
+- ubuntuskin::ButtonTemplate: List / TextList, Layout / Easy Layout, Control / TextBox, Misc / Dialogs.
+- ubuntuskin::CheckBoxTemplate: List / TextList, Layout / Easy Layout, Control / TextBox, Misc / TouchingList.
+- ubuntuskin::RadioButtonTemplate: List / TextList, Window Manager.
+- ubuntuskin::DocumentLabelTemplate: Control / TextBox / Document, Control / Embedded Controls.
+- ubuntuskin::DocumentTextBoxTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Layout / Easy Layout.
+- ubuntuskin::DocumentViewerTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Control / Embedded Controls.
+- ubuntuskin::EditorBorderTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Layout / Easy Layout, List / TextList, List / ListView, List / TreeView.
+- ubuntuskin::TabHeaderButtonTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- ubuntuskin::TabHeaderTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- ubuntuskin::TabTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- ubuntuskin::RibbonTabTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::ItemBackgroundTemplate: List / TextList, List / ListView, List / TreeView, List / BindableDataGrid, Control / Document Editor (Ribbon).
+- ubuntuskin::TextListTemplate: List / TextList, Refresh List / TextList, Refresh List / BindableTextList, Layout / Easy Layout.
+- ubuntuskin::ComboBoxTemplate: List / ListView, List / BindableDataGrid, Layout / Easy Layout, Misc / DatePicker, Misc / Localization.
+- ubuntuskin::ListViewColumnHeaderTemplate: List / ListView, List / BindableDataGrid, Refresh List / ListView, Refresh List / BindableDataGrid.
+- ubuntuskin::ListViewColumnDropDownTemplate: List / BindableDataGrid, Refresh List / BindableDataGrid.
+- ubuntuskin::ListViewTemplate: List / ListView, List / BindableDataGrid, Refresh List / ListView, Refresh List / BindableListView, Refresh List / BindableDataGrid.
+- ubuntuskin::ExpandingDecoratorTemplate: List / TreeView, Refresh List / TreeView, Refresh List / BindableTreeView, List / BindableDataGrid.
+- ubuntuskin::TreeViewTemplate: List / TreeView, Refresh List / TreeView, Refresh List / BindableTreeView, List / BindableDataGrid.
+- ubuntuskin::TopScrollButtonTemplate: Layout / Repeat, List / TextList.
+- ubuntuskin::BottomScrollButtonTemplate: Layout / Repeat, List / TextList.
+- ubuntuskin::HScrollHandleTemplate: Layout / Repeat, List / ListView.
+- ubuntuskin::VScrollHandleTemplate: Layout / Repeat, List / TextList.
+- ubuntuskin::HTrackerHandleTemplate: Layout / Repeat.
+- ubuntuskin::VTrackerHandleTemplate: Layout / Repeat.
+- ubuntuskin::HScrollTemplate: Layout / Repeat, List / ListView, Control / TextBox.
+- ubuntuskin::VScrollTemplate: Layout / Repeat, List / TextList, Control / TextBox, Control / Document Editor (Ribbon).
+- ubuntuskin::HTrackerTemplate: Layout / Repeat.
+- ubuntuskin::VTrackerTemplate: Layout / Repeat.
+- ubuntuskin::ProgressBarTemplate: Layout / Repeat.
+- ubuntuskin::ScrollViewTemplate: Layout / Repeat, Layout / Responsive, Control / Embedded Controls, Misc / TouchingList.
+- ubuntuskin::ToolstripTemplate: Control / Document Editor (Toolstrip), Layout / Easy Layout (Responsive).
+- ubuntuskin::MenuBarTemplate: Control / Document Editor (Toolstrip), Layout / Easy Layout (Responsive).
+- ubuntuskin::ToolstripInMenuTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::ToolstripMenuTemplate: Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), List / BindableDataGrid.
+- ubuntuskin::ToolstripSplitterTemplate: Control / Document Editor (Toolstrip), Control / Document Editor (Ribbon).
+- ubuntuskin::ToolstripSplitterInMenuTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::MenuSplitterTemplate: Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip).
+- ubuntuskin::ToolstripButtonTemplate: Control / Document Editor (Toolstrip), Control / Document Editor (Ribbon).
+- ubuntuskin::ToolstripDropdownButtonTemplate: Control / Document Editor (Toolstrip), Control / Document Editor (Ribbon).
+- ubuntuskin::ToolstripSplitArrowTemplate: Control / Document Editor (Toolstrip), Control / Document Editor (Ribbon).
+- ubuntuskin::ToolstripSplitButtonTemplate: Control / Document Editor (Toolstrip), Control / Document Editor (Ribbon).
+- ubuntuskin::MenuBarButtonTemplate: Control / Document Editor (Toolstrip), Layout / Easy Layout (Responsive).
+- ubuntuskin::MenuItemButtonTemplate: Control / Document Editor (Toolstrip), Control / Document Editor (Ribbon), List / BindableDataGrid.
+- ubuntuskin::RibbonSmallButtonTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonSmallDropdownButtonTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonSmallSplitButtonTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonSmallSplitArrowTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonLargeButtonTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonLargeDropdownButtonTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonSplitArrowTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonLargeSplitButtonTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonSmallIconLabelTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonIconLabelTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonSplitterTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonGroupTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonGroupExpandButtonTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonGroupMenuTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonButtonsTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonToolstripsTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonToolstripHeaderTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonGalleryTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonGalleryItemListTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonToolstripMenuTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::RibbonGalleryDropdownButtonTemplate: Control / Document Editor (Ribbon).
+
+## Visual and interaction checks
+
+- In Window Manager, inspect the white header, centered title and circular window actions. Check maximize, restore, minimize where available, resize and close.
+- In TextList and TreeView, check the orange marks on selected controls, white glyphs, grayscale disabled indicators and tinted selected rows. Change selection using the keyboard and pointer.
+- In TextBox and the two document editors, inspect focus, selected text, menus, keytips, toolbar toggles and collapsed ribbon groups. In DatePicker, verify a selected day and adjacent-month numerals stay legible.
+- In Layout / Repeat, drag each scale and thumb. Check the orange filled part of the scale and progress bar at both ends and between them. Page the arrowless scrollbars by clicking their troughs.
+- Visit all pages in the project verification SOP, open their popups, and recheck existing content after switching to another theme and back. Edits, selected rows and the selected calendar date should survive the switch.

@@ -3,6 +3,7 @@
 #include "../../Source/Win7Skin/Win7SkinConfig.h"
 #include "../../Source/Win8Skin/Win8SkinConfig.h"
 #include "../../Source/WinXPSkin/WinXPSkinConfig.h"
+#include "../../Source/UbuntuSkin/UbuntuSkinConfig.h"
 #include "../../Source/Win11Skin/Win11SkinConfig.h"
 #include "../../Source/Win10Skin/Win10SkinConfig.h"
 #include "../../Source/WinVistaSkin/WinVistaSkinConfig.h"
@@ -13,7 +14,7 @@ namespace demo
 {
 	void RegisterFctTheme(Ptr<presentation::theme::ThemeTemplates> selected)
 	{
-		for (auto name : { L"DarkSkin", L"Win7Skin", L"Win8Skin", L"WinXPSkin", L"WinVistaSkin", L"Win10Skin", L"Win11Skin" })
+		for (auto name : { L"DarkSkin", L"Win7Skin", L"Win8Skin", L"WinXPSkin", L"WinVistaSkin", L"Win10Skin", L"Win11Skin", L"UbuntuSkin" })
 		{
 			presentation::theme::UnregisterTheme(name);
 		}
@@ -68,6 +69,11 @@ namespace demo
 		{
 			win11skin::SetColorPackage(win11skin::CreateDarkColorPackage());
 			RegisterFctTheme(Ptr(new win11skin::Theme));
+		}, false);
+		addItem(L"UbuntuSkin", []
+		{
+			ubuntuskin::SetColorPackage(ubuntuskin::CreateDefaultColorPackage());
+			RegisterFctTheme(Ptr(new ubuntuskin::Theme));
 		}, false);
 	}
 }

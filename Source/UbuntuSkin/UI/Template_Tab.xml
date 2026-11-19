@@ -1,0 +1,126 @@
+<Folder>
+  <Instance name="TabHeaderButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::TabHeaderButtonTemplate" ref.Styles="res://UbuntuSkin/Style">
+      <ref.Members>
+        <![CDATA[
+          prop Highlighted: bool = false {}
+          prop TabFocused: bool = false {}
+          prop Colors : ButtonColors = ubuntuColors.TabNormal {}
+        ]]>
+      </ref.Members>
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Highlighted-bind>(cast (RibbonTabPage*) self.Context).Highlighted ?? false</att.Highlighted-bind>
+        <att.TabFocused-bind>(cast (TabPage*) self.Context).OwnerTab.Focused ?? false</att.TabFocused-bind>
+        <att.Colors-bind>self.Selected ? ubuntuColors.TabSelected : self.VisuallyEnabled and self.State != ButtonState::Normal ? ubuntuColors.TabHovered : ubuntuColors.TabNormal</att.Colors-bind>
+        <SolidBackground Color-bind="self.Colors.G1"/>
+        <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="x:0 y:3" Visible-bind="self.Selected or self.Highlighted">
+          <SolidBackground Color-bind="self.Selected ? ubuntuColors.Accent : self.State != ButtonState::Normal ? ubuntuColors.Focus : ubuntuColors.SelectedSurface"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Selected and self.TabFocused">
+          <SolidBorder Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-eval="ubuntuskin::ubuntuColors.Focus"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:10 top:5 right:10 bottom:5">
+          <SolidLabel Color-bind="self.VisuallyEnabled ? self.Colors.Text : ubuntuColors.DisabledInk" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Bounds>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="TabHeaderTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::TabHeaderTemplate" ref.Styles="res://UbuntuSkin/Style">
+      <ref.Parameter Name="CurrentTabPage" Class="presentation::controls::GuiTabPage"/>
+      <ref.Members>
+        <![CDATA[
+          prop Commands : ITabCommandExecutor* = null {}
+        ]]>
+      </ref.Members>
+      <ControlTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <CheckBox ControlTemplate="ubuntuskin::TabHeaderButtonTemplate" AutoFocus="false" AutoSelection="false">
+          <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          <att.Context-ref>CurrentTabPage</att.Context-ref>
+          <att.Text-bind>CurrentTabPage.Text</att.Text-bind>
+          <att.Alt-bind>CurrentTabPage.Alt</att.Alt-bind>
+          <att.Selected-bind>CurrentTabPage.OwnerTab.SelectedPage == CurrentTabPage</att.Selected-bind>
+          <ev.Clicked-eval>
+            <![CDATA[
+              {
+                self.Commands.ShowTab(CurrentTabPage.OwnerTab.Pages.IndexOf(CurrentTabPage), true);
+              }
+            ]]>
+          </ev.Clicked-eval>
+        </CheckBox>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="TabTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::TabTemplate" ref.Styles="res://UbuntuSkin/Style">
+      <ref.Members>
+        <![CDATA[
+          prop Highlighted: bool = false {}
+          prop IsRibbon: bool = false {}
+        ]]>
+      </ref.Members>
+      <RibbonTabTemplate ref.Name="self" ContainerComposition-ref="container" TabOrder="LeftToRight" MinSizeLimitation="LimitToElementAndChildren">
+        <att.BeforeHeadersContainer-ref>beforeHeadersContainer</att.BeforeHeadersContainer-ref>
+        <att.AfterHeadersContainer-ref>afterHeadersContainer</att.AfterHeadersContainer-ref>
+        <att.Highlighted-bind>(cast (RibbonTabPage*) self.SelectedTabPage).Highlighted ?? false</att.Highlighted-bind>
+
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBackground Color-bind="self.IsRibbon ? ubuntuColors.TabSelected.G1 : ubuntuColors.WindowBackground"/>
+          <att.Rows>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Absolute absolute:0</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+          </att.Columns>
+
+          <Cell ref.Name="beforeHeadersContainer" Site="row:0 column:0">
+            <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="x:0 y:1">
+              <SolidBackground Color-bind="self.IsRibbon ? ubuntuColors.Divider : ubuntuColors.TabNormal.Border"/>
+            </Bounds>
+          </Cell>
+          <Cell ref.Name="afterHeadersContainer" Site="row:0 column:2">
+            <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="x:0 y:1">
+              <SolidBackground Color-bind="self.IsRibbon ? ubuntuColors.Divider : ubuntuColors.TabNormal.Border"/>
+            </Bounds>
+          </Cell>
+
+          <Cell Site="row:0 column:1">
+            <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="x:0 y:1">
+              <SolidBackground Color-bind="self.IsRibbon ? ubuntuColors.Divider : ubuntuColors.TabNormal.Border"/>
+            </Bounds>
+            <RepeatFlow ref.Name="header" AlignmentToParent="left:0 top:-1 right:0 bottom:0">
+              <att.ItemTemplate>ubuntuskin::TabHeaderTemplate</att.ItemTemplate>
+              <att.ItemSource-bind>self.TabPages</att.ItemSource-bind>
+              <ev.ItemInserted-eval>
+                <![CDATA[
+                  {
+                    var flowItem = header.FlowItems[arguments.itemIndex];
+                    var item = cast (TabHeaderTemplate*) flowItem.Children[0];
+                    item.Commands = self.Commands;
+                  }
+                ]]>
+              </ev.ItemInserted-eval>
+            </RepeatFlow>
+          </Cell>
+          <Cell Site="row:2 column:0 columnSpan:3">
+            <SolidBorder Color-bind="self.IsRibbon ? ubuntuColors.Divider : ubuntuColors.TabNormal.Border"/>
+            <Bounds ref.Name="container" AlignmentToParent="left:1 top:0 right:1 bottom:1">
+              <SolidBackground Color-bind="self.IsRibbon ? ubuntuColors.HeaderBackground : ubuntuColors.TabSelected.G1"/>
+            </Bounds>
+          </Cell>
+        </Table>
+      </RibbonTabTemplate>
+    </Instance>
+  </Instance>
+  <Instance name="RibbonTabTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::RibbonTabTemplate" xmlns:x="ubuntuskin::*">
+      <x:TabTemplate IsRibbon="true"/>
+    </Instance>
+  </Instance>
+</Folder>

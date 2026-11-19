@@ -1,0 +1,294 @@
+<Folder>
+  <Script name="Palette">
+    <Workflow><![CDATA[
+    module UbuntuPalette;
+    using presentation::*;
+    namespace ubuntuskin
+    {
+      struct ColorPackage
+      {
+        WindowBackground : Color;
+        ViewBackground : Color;
+        HeaderBackground : Color;
+        Border : Color;
+        Divider : Color;
+        Ink : Color;
+        DocumentInk : Color;
+        SecondaryInk : Color;
+        DisabledInk : Color;
+        Accent : Color;
+        AccentPressed : Color;
+        Focus : Color;
+        SelectedText : Color;
+        Clear : Color;
+        HoverSurface : Color;
+        PressedSurface : Color;
+        SelectedSurface : Color;
+        CaptionButtonSurface : Color;
+        Track : Color;
+        KeytipBackground : Color;
+        KeytipText : Color;
+        EditorNormal : EditorColors;
+        EditorHovered : EditorColors;
+        EditorFocused : EditorColors;
+        EditorDisabled : EditorColors;
+        ButtonNormal : ButtonColors;
+        ButtonHovered : ButtonColors;
+        ButtonPressed : ButtonColors;
+        ButtonDisabled : ButtonColors;
+        CheckedNormal : ButtonColors;
+        CheckedHovered : ButtonColors;
+        CheckedPressed : ButtonColors;
+        CheckedDisabled : ButtonColors;
+        ItemNormal : ButtonColors;
+        ItemHovered : ButtonColors;
+        ItemSelected : ButtonColors;
+        ItemDisabled : ButtonColors;
+        TabNormal : ButtonColors;
+        TabHovered : ButtonColors;
+        TabSelected : ButtonColors;
+        CommandNormal : ButtonColors;
+        CommandHovered : ButtonColors;
+        CommandPressed : ButtonColors;
+        CommandSelected : ButtonColors;
+        CommandDisabled : ButtonColors;
+        ScrollHandleNormal : ButtonColors;
+        ScrollHandleActive : ButtonColors;
+        ScrollHandlePressed : ButtonColors;
+        ScrollHandleDisabled : ButtonColors;
+      }
+
+      func CreateDefaultColorPackage() : ColorPackage
+      {
+        return {
+          WindowBackground: cast Color "#FAFAFA";
+          ViewBackground: cast Color "#FFFFFF";
+          HeaderBackground: cast Color "#FFFFFF";
+          Border: cast Color "#C7C7C7";
+          Divider: cast Color "#DEDEDE";
+          Ink: cast Color "#3D3D3D";
+          DocumentInk: cast Color "#111111";
+          SecondaryInk: cast Color "#646464";
+          DisabledInk: cast Color "#929292";
+          Accent: cast Color "#E95420";
+          AccentPressed: cast Color "#C23F12";
+          Focus: cast Color "#ED835E";
+          SelectedText: cast Color "#FFFFFF";
+          Clear: cast Color "#00000000";
+          HoverSurface: cast Color "#EDEDED";
+          PressedSurface: cast Color "#DCDCDC";
+          SelectedSurface: cast Color "#FBE7DF";
+          CaptionButtonSurface: cast Color "#EAEAEA";
+          Track: cast Color "#DFDFDF";
+          KeytipBackground: cast Color "#353535";
+          KeytipText: cast Color "#FFFFFF";
+          EditorNormal: { Border: cast Color "#C7C7C7"; Background: cast Color "#FFFFFF"; };
+          EditorHovered: { Border: cast Color "#B5B5B5"; Background: cast Color "#FFFFFF"; };
+          EditorFocused: { Border: cast Color "#ED835E"; Background: cast Color "#FFFFFF"; };
+          EditorDisabled: { Border: cast Color "#DEDEDE"; Background: cast Color "#F7F7F7"; };
+          ButtonNormal: {
+            Border: cast Color "#C7C7C7";
+            G1: cast Color "#FFFFFF";
+            G2: cast Color "#F7F7F7";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          ButtonHovered: {
+            Border: cast Color "#B8B8B8";
+            G1: cast Color "#FFFFFF";
+            G2: cast Color "#FFFFFF";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          ButtonPressed: {
+            Border: cast Color "#B8B8B8";
+            G1: cast Color "#DBDBDB";
+            G2: cast Color "#E4E4E4";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          ButtonDisabled: {
+            Border: cast Color "#DDDDDD";
+            G1: cast Color "#F7F7F7";
+            G2: cast Color "#F7F7F7";
+            Text: cast Color "#929292";
+            Bullet: cast Color "#00000000";
+          };
+          CheckedNormal: {
+            Border: cast Color "#B5B5B5";
+            G1: cast Color "#FFFFFF";
+            G2: cast Color "#F8F8F8";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#FFFFFF";
+          };
+          CheckedHovered: {
+            Border: cast Color "#9E9E9E";
+            G1: cast Color "#FFFFFF";
+            G2: cast Color "#FFFFFF";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#FFFFFF";
+          };
+          CheckedPressed: {
+            Border: cast Color "#A3A3A3";
+            G1: cast Color "#DDDDDD";
+            G2: cast Color "#DDDDDD";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#FFFFFF";
+          };
+          CheckedDisabled: {
+            Border: cast Color "#D8D8D8";
+            G1: cast Color "#F4F4F4";
+            G2: cast Color "#F4F4F4";
+            Text: cast Color "#929292";
+            Bullet: cast Color "#FBFBFB";
+          };
+          ItemNormal: {
+            Border: cast Color "#00000000";
+            G1: cast Color "#00000000";
+            G2: cast Color "#00000000";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          ItemHovered: {
+            Border: cast Color "#00000000";
+            G1: cast Color "#EDEDED";
+            G2: cast Color "#EDEDED";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          ItemSelected: {
+            Border: cast Color "#00000000";
+            G1: cast Color "#FBE7DF";
+            G2: cast Color "#FBE7DF";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          ItemDisabled: {
+            Border: cast Color "#00000000";
+            G1: cast Color "#00000000";
+            G2: cast Color "#00000000";
+            Text: cast Color "#929292";
+            Bullet: cast Color "#00000000";
+          };
+          TabNormal: {
+            Border: cast Color "#DEDEDE";
+            G1: cast Color "#FAFAFA";
+            G2: cast Color "#FAFAFA";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          TabHovered: {
+            Border: cast Color "#DEDEDE";
+            G1: cast Color "#EDEDED";
+            G2: cast Color "#EDEDED";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          TabSelected: {
+            Border: cast Color "#DEDEDE";
+            G1: cast Color "#FFFFFF";
+            G2: cast Color "#FFFFFF";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          CommandNormal: {
+            Border: cast Color "#00000000";
+            G1: cast Color "#00000000";
+            G2: cast Color "#00000000";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          CommandHovered: {
+            Border: cast Color "#00000000";
+            G1: cast Color "#EDEDED";
+            G2: cast Color "#EDEDED";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          CommandPressed: {
+            Border: cast Color "#00000000";
+            G1: cast Color "#DCDCDC";
+            G2: cast Color "#DCDCDC";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          CommandSelected: {
+            Border: cast Color "#00000000";
+            G1: cast Color "#FBE7DF";
+            G2: cast Color "#FBE7DF";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          CommandDisabled: {
+            Border: cast Color "#00000000";
+            G1: cast Color "#00000000";
+            G2: cast Color "#00000000";
+            Text: cast Color "#929292";
+            Bullet: cast Color "#00000000";
+          };
+          ScrollHandleNormal: {
+            Border: cast Color "#888888";
+            G1: cast Color "#888888";
+            G2: cast Color "#888888";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          ScrollHandleActive: {
+            Border: cast Color "#626262";
+            G1: cast Color "#626262";
+            G2: cast Color "#626262";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          ScrollHandlePressed: {
+            Border: cast Color "#C23F12";
+            G1: cast Color "#C23F12";
+            G2: cast Color "#C23F12";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          ScrollHandleDisabled: {
+            Border: cast Color "#00000000";
+            G1: cast Color "#00000000";
+            G2: cast Color "#00000000";
+            Text: cast Color "#929292";
+            Bullet: cast Color "#00000000";
+          };
+        };
+      }
+
+      var ubuntuColors : ColorPackage = CreateDefaultColorPackage();
+
+      /*
+      * Calling GuiApplication::GetApplication().RefreshThemes will reload the new baseline document.
+      */
+      func CreateBaselineDocument() : DocumentModel^
+      {
+        var document = new DocumentModel^();
+        var normal = new DocumentStyle^();
+        normal.styles = new DocumentStyleProperties^();
+        normal.styles.color = ubuntuColors.DocumentInk;
+        document.styles["#Default-Override"] = normal;
+        var selection = new DocumentStyle^();
+        selection.styles = new DocumentStyleProperties^();
+        selection.styles.color = ubuntuColors.SelectedText;
+        selection.styles.backgroundColor = ubuntuColors.Accent;
+        document.styles["#Selection-Override"] = selection;
+        return document;
+      }
+    }
+    ]]></Workflow>
+  </Script>
+  <Instance name="UbuntuSkinThemeResource" content="File">Index.xml</Instance>
+  <InstanceStyle name="Style" content="File">Style.xml</InstanceStyle>
+
+  <Folder name="Window" content="Link">Template_Window.xml</Folder>
+  <Folder name="Tab" content="Link">Template_Tab.xml</Folder>
+  <Folder name="Toolstrip" content="Link">Template_Toolstrip.xml</Folder>
+  <Folder name="Ribbon" content="Link">Template_Ribbon.xml</Folder>
+  <Folder name="Button" content="Link">Template_Button.xml</Folder>
+  <Folder name="Document" content="Link">Template_Document.xml</Folder>
+  <Folder name="Scroll" content="Link">Template_Scroll.xml</Folder>
+  <Folder name="List" content="Link">Template_List.xml</Folder>
+  <Folder name="Misc" content="Link">Template_Misc.xml</Folder>
+</Folder>

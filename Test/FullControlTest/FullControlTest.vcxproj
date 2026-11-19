@@ -301,6 +301,17 @@
     <ClInclude Include="..\..\Source\Win11Skin\Source\Win11SkinPartialClasses.h" />
     <ClInclude Include="..\..\Source\Win11Skin\Source\Win11SkinReflection.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\UbuntuSkin\UbuntuSkinConfig.cpp" />
+    <ClCompile Include="..\..\Source\UbuntuSkin\Source\UbuntuSkinPartialClasses.cpp">
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\UbuntuSkin\Source\UbuntuSkinResource.cpp" />
+    <ClInclude Include="..\..\Source\UbuntuSkin\UbuntuSkinConfig.h" />
+    <ClInclude Include="..\..\Source\UbuntuSkin\Source\UbuntuSkin.h" />
+    <ClInclude Include="..\..\Source\UbuntuSkin\Source\UbuntuSkinPartialClasses.h" />
+    <ClInclude Include="..\..\Source\UbuntuSkin\Source\UbuntuSkinReflection.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
