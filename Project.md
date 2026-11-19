@@ -24,9 +24,17 @@ When working on this repo:
       - `## Root Cause`: the root cause of the upstream issue.
       - `## Proposal`: the proposal fix to upstream repos.
     - When it is more helpful you can add screenshots to a suggestion file, using the following naming convention: `<SUGGESTION-FILE>_<INDEX>.png`.
-- When committing any files, you should put generated files in a separated commit, its title would be the origin commit title followed by `[generated]`.
+
+When you are explicitly asked to fix upstream repos, follow the instruction:
+- Fix the repo and verify by running unit test.
+- If the repo is not `GacUI`, release to `GacUI` and run unit test.
+- Release the repo to `Release`.
+- Follow `## Updating from Upstream Repos` to import the work to this repo.
+
+When committing any files, you should put generated files in a separated commit, its title would be the origin commit title followed by `[generated]`.
 - Changes caused by `import.ps1` should be committed with title `[import]`.
 - Changes caused by `syncProj.ps1` should be committed with title `[syncProj]`.
+- `syncProj.ps1` may update generated files, no need to make a separated `[syncProj] [generate]`.
 
 ## Dependencies
 
