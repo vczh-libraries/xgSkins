@@ -1,0 +1,281 @@
+<Folder>
+  <Instance name="ItemBackgroundTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ItemBackgroundTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[prop Colors : ButtonColors = vistaColors.ItemNormal {}]]></ref.Members>
+      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? vistaColors.ItemDisabled : self.Selected or self.State == ButtonState::Pressed ? vistaColors.ItemSelected : self.State == ButtonState::Active ? vistaColors.ItemHovered : vistaColors.ItemNormal</att.Colors-bind>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <SolidBackground Color-bind="self.Colors.Background"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
+        </Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/></Cell>
+          <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.Colors.G3" Color2-bind="self.Colors.G4"/></Cell>
+        </Table>
+        <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="TextListTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::TextListTemplate" ref.Styles="res://WinVistaSkin/Style" xmlns:x="winvistaskin::*">
+      <TextListTemplate ref.Name="self" ref.Style="textListBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <att.BackgroundTemplate>winvistaskin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.CheckBulletTemplate>winvistaskin::CheckBoxTemplate</att.CheckBulletTemplate>
+        <att.RadioBulletTemplate>winvistaskin::RadioButtonTemplate</att.RadioBulletTemplate>
+
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>winvistaskin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>winvistaskin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>17</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </TextListTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ComboBoxTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ComboBoxTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = vistaColors.ButtonNormal {}
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(vistaColors.ButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <DateComboBoxTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.DatePickerTemplate>winvistaskin::DatePickerTemplate</att.DatePickerTemplate>
+        <att.Colors-bind>GetButtonColors(self.VisuallyEnabled, self.SubMenuOpening ? ButtonState::Pressed : self.State)</att.Colors-bind>
+        <ev.ColorsChanged-eval>self.UpdateColors();</ev.ColorsChanged-eval>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <SolidBackground Color-bind="self.animationBuilder.Current.Background"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
+        </Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/></Cell>
+          <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G3" Color2-bind="self.animationBuilder.Current.G4"/></Cell>
+        </Table>
+        <Bounds AlignmentToParent="left:3 top:3 right:16 bottom:3" Visible-bind="self.Focused"><FocusRectangle/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <Bounds ref.Name="container" AlignmentToParent="left:3 top:3 right:18 bottom:3">
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.TextVisible">
+              <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </Bounds>
+          </Bounds>
+
+          <Table AlignmentToParent="left:-1 top:1 right:3 bottom:1" PreferredMinSize="x:13 y:0">
+            <att.Rows>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              <CellOption>composeType:Absolute absolute:3</CellOption>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            </att.Rows>
+            <att.Columns>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              <CellOption>composeType:Absolute absolute:5</CellOption>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            </att.Columns>
+
+            <Cell Site="row:1 column:1">
+              <Polygon BorderColor-bind="self.animationBuilder.Current.Text" BackgroundColor-bind="self.animationBuilder.Current.Text" Size="x:5 y:3">
+                <att.Points>
+                  <Point>x:0 y:0</Point>
+                  <Point>x:2 y:2</Point>
+                  <Point>x:4 y:0</Point>
+                </att.Points>
+              </Polygon>
+            </Cell>
+          </Table>
+        </Bounds>
+      </DateComboBoxTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ListViewColumnHeaderTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ListViewColumnHeaderTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ListViewColumnHeaderTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground Color-bind="self.VisuallyEnabled and self.State == ButtonState::Pressed ? vistaColors.HeaderBackgroundPressed : vistaColors.HeaderBackground"/>
+        <Bounds AlignmentToParent="left:-1 top:0 right:0 bottom:0" PreferredMinSize="x:1 y:0" Visible-bind="not self.VisuallyEnabled or self.State == ButtonState::Normal">
+          <GradientBackground Direction="Vertical" Color1-eval="vistaColors.HeaderSeparatorTop" Color2-eval="vistaColors.HeaderBackground"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and self.State != ButtonState::Normal">
+          <SolidBorder Color-bind="self.State == ButtonState::Pressed ? vistaColors.HeaderBorderPressed : vistaColors.HeaderBorderHovered"/>
+          <Bounds AlignmentToParent-bind="self.State == ButtonState::Pressed ? {left:1 top:0 right:1 bottom:-1} : {left:2 top:2 right:2 bottom:2}" PreferredMinSize="x:0 y:4">
+            <GradientBackground Direction="Vertical" Color1-bind="self.State == ButtonState::Pressed ? vistaColors.HeaderGradientPressedTop : vistaColors.HeaderGradientHoveredTop" Color2-bind="self.State == ButtonState::Pressed ? vistaColors.HeaderBackground : vistaColors.HeaderGradientHoveredBottom"/>
+          </Bounds>
+        </Bounds>
+        <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:11 bottom:1">
+          <Table AlignmentToParent="left:0 top:1 right:0 bottom:-1">
+            <att.Rows>
+              <_>composeType:MinSize</_>
+              <_>composeType:Percentage percentage:1.0</_>
+            </att.Rows>
+            <att.Columns>
+              <_>composeType:Percentage percentage:0.5</_>
+              <_>composeType:MinSize</_>
+              <_>composeType:Percentage percentage:0.5</_>
+            </att.Columns>
+
+            <Cell Site="row:0 column:1">
+              <Bounds Visible-bind="self.SortingState == ColumnSortingState::Ascending">
+                <Polygon BorderColor-eval="vistaColors.HeaderText" BackgroundColor-eval="vistaColors.HeaderText" Size="x:7 y:4">
+                  <att.Points>
+                    <Point>x:0 y:3</Point>
+                    <Point>x:3 y:0</Point>
+                    <Point>x:6 y:3</Point>
+                  </att.Points>
+                </Polygon>
+              </Bounds>
+              <Bounds Visible-bind="self.SortingState == ColumnSortingState::Descending">
+                <Polygon BorderColor-eval="vistaColors.HeaderText" BackgroundColor-eval="vistaColors.HeaderText" Size="x:7 y:4">
+                  <att.Points>
+                    <Point>x:0 y:0</Point>
+                    <Point>x:3 y:3</Point>
+                    <Point>x:6 y:0</Point>
+                  </att.Points>
+                </Polygon>
+              </Bounds>
+            </Cell>
+          </Table>
+          <Bounds AlignmentToParent="left:8 top:6 right:5 bottom:5">
+            <SolidLabel Color-bind="self.VisuallyEnabled ? vistaColors.HeaderText : vistaColors.TextDisabled" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+          </Bounds>
+        </Bounds>
+        <Bounds AlignmentToParent="left:-1 top:0 right:0 bottom:0">
+          <CheckBox ref.Name="buttonArrow" AutoFocus="false" AutoSelection="false" ControlTemplate="winvistaskin::ListViewColumnDropDownTemplate" Selected-bind="self.SubMenuOpening" Visible-bind="self.SubMenuExisting and (self.SubMenuOpening or self.State != ButtonState::Normal)">
+            <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          </CheckBox>
+        </Bounds>
+      </ListViewColumnHeaderTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ListViewTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ListViewTemplate" ref.Styles="res://WinVistaSkin/Style" xmlns:x="winvistaskin::*">
+      <ListViewTemplate ref.Name="self" ref.Style="listViewBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <att.BackgroundTemplate>winvistaskin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.ColumnHeaderTemplate>winvistaskin::ListViewColumnHeaderTemplate</att.ColumnHeaderTemplate>
+
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>winvistaskin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>winvistaskin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>17</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </ListViewTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ExpandingDecoratorTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ExpandingDecoratorTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:11</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:6</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:1 column:1">
+            <Bounds Visible-bind="not self.Selected">
+              <Polygon Size="x:6 y:11" BorderColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? vistaColors.TreeArrowBorderHovered : self.Selected ? vistaColors.TreeArrowBorderExpanded : vistaColors.TreeArrowBorder" BackgroundColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? vistaColors.TreeArrowBackgroundHovered : self.Selected ? vistaColors.TreeArrowBackgroundExpanded : vistaColors.TreeArrowBackground">
+                <att.Points>
+                  <Point>x:0 y:1</Point>
+                  <Point>x:4 y:5</Point>
+                  <Point>x:0 y:9</Point>
+                </att.Points>
+              </Polygon>
+            </Bounds>
+            <Bounds Visible-bind="self.Selected">
+              <Polygon Size="x:6 y:11" BorderColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? vistaColors.TreeArrowBorderHovered : self.Selected ? vistaColors.TreeArrowBorderExpanded : vistaColors.TreeArrowBorder" BackgroundColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? vistaColors.TreeArrowBackgroundHovered : self.Selected ? vistaColors.TreeArrowBackgroundExpanded : vistaColors.TreeArrowBackground">
+                <att.Points>
+                  <Point>x:5 y:2</Point>
+                  <Point>x:5 y:7</Point>
+                  <Point>x:0 y:7</Point>
+                </att.Points>
+              </Polygon>
+            </Bounds>
+          </Cell>
+        </Table>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="TreeViewTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::TreeViewTemplate" ref.Styles="res://WinVistaSkin/Style" xmlns:x="winvistaskin::*">
+      <TreeViewTemplate ref.Name="self" ref.Style="treeViewBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <att.BackgroundTemplate>winvistaskin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.ExpandingDecoratorTemplate>winvistaskin::ExpandingDecoratorTemplate</att.ExpandingDecoratorTemplate>
+
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>winvistaskin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>winvistaskin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>17</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </TreeViewTemplate>
+    </Instance>
+  </Instance>
+  <Instance name="ListViewColumnDropDownTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ListViewColumnDropDownTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:13 y:0">
+        <Bounds AlignmentToParent="left:0 top:1 right:-1 bottom:1" PreferredMinSize="x:1 y:0" Visible-bind="not self.VisuallyEnabled or (self.State == ButtonState::Normal and not self.Selected)">
+          <GradientBackground Direction="Vertical" Color1-eval="vistaColors.HeaderSeparatorTop" Color2-eval="vistaColors.HeaderBackground"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and (self.State != ButtonState::Normal or self.Selected)">
+          <SolidBorder Color-eval="vistaColors.HeaderBorderPressed"/>
+          <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <GradientBackground Direction="Vertical" Color1-eval="vistaColors.HeaderDropDownTop" Color2-eval="vistaColors.HeaderDropDownBottom"/>
+          </Bounds>
+        </Bounds>
+        <Table AlignmentToParent="left:3 top:3 right:3 bottom:3">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns><CellOption>composeType:MinSize</CellOption></att.Columns>
+          <Cell Site="row:1 column:0">
+            <Polygon Size="x:7 y:4" BorderColor-eval="vistaColors.HeaderText" BackgroundColor-eval="vistaColors.HeaderText">
+              <att.Points><Point>x:0 y:0</Point><Point>x:3 y:3</Point><Point>x:6 y:0</Point></att.Points>
+            </Polygon>
+          </Cell>
+        </Table>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+</Folder>

@@ -8,3 +8,4 @@
 - [Win8Skin verification results and limitations](Win8SkinVerification.md)
 - [Using WinXPSkin and its design references](WinXPSkin.md)
 - [WinXPSkin verification results and limitations](WinXPSkinVerification.md)
+- [Using WinVistaSkin and its design references](WinVistaSkin.md)

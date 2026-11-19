@@ -48,7 +48,7 @@ Use `/MultiWindow` for native windows or `/GDI` for the GDI renderer.
 `/Hosted` and `/MultiWindow` are mutually
 exclusive, as are `/D2D` and `/GDI`.
 
-The skin list contains `DarkSkin`, `Win7Skin`, `Win8Skin` and `WinXPSkin`, each with its default color theme.
+The skin list contains `DarkSkin`, `Win7Skin`, `Win8Skin`, `WinXPSkin`, `WinVistaSkin`.
 Startup always selects `DarkSkin`; choose a skin in `Window Manager`. The manually maintained
 `Test/FullControlTest/FullControlTestEventHandlers.cpp` owns this list. Skins
 belong in `Source/<SKIN-NAME>` following [Project.md](../Project.md).
@@ -78,4 +78,4 @@ effect. Hosted mode uses `/IO` without a window ID. Multi-window mode also accep
 For a startup smoke check, inspect the initial `List` / `TextList` page, click
 `Add 10 items`, and verify that both lists contain ten items. `Clear` should empty
 both lists. On `Window Manager`, the `Color Theme` group should contain exactly
-one selected option, `DarkSkin`, and unselected `Win7Skin`, `Win8Skin` and `WinXPSkin` options. Return to `List` to leave the initial page open.
+one selected option, `DarkSkin`, when first opened. Return to `List` to leave the initial page open.

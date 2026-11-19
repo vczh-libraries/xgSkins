@@ -1,0 +1,295 @@
+<Folder>
+  <Script name="ButtonColorsScript">
+    <Workflow><![CDATA[
+    module VistaButtonColors;
+    using presentation::*;
+    using presentation::controls::*;
+    namespace winvistaskin
+    {
+      struct ButtonColors
+      {
+        Border : Color;
+        Background : Color;
+        G1 : Color;
+        G2 : Color;
+        G3 : Color;
+        G4 : Color;
+        Text : Color;
+        Bullet : Color;
+      }
+
+      class ButtonColorState
+      {
+        prop Border : Color = {} {}
+        prop Background : Color = {} {}
+        prop G1 : Color = {} {}
+        prop G2 : Color = {} {}
+        prop G3 : Color = {} {}
+        prop G4 : Color = {} {}
+        prop Text : Color = {} {}
+        prop Bullet : Color = {} {}
+
+        new() {}
+
+        new(colors : ButtonColors)
+        {
+          Border = colors.Border;
+          Background = colors.Background;
+          G1 = colors.G1;
+          G2 = colors.G2;
+          G3 = colors.G3;
+          G4 = colors.G4;
+          Text = colors.Text;
+          Bullet = colors.Bullet;
+        }
+      }
+
+      func CompleteColorAnimation(animation : IGuiAnimation^, completed : func():void) : IGuiAnimation^
+      ${
+        $PlayAndWait animation;
+        completed();
+      }
+
+      func GetButtonColors(enabled : bool, state : ButtonState) : ButtonColors
+      {
+        return not enabled ? vistaColors.ButtonDisabled :
+          state == ButtonState::Pressed ? vistaColors.ButtonPressed :
+          state == ButtonState::Active ? vistaColors.ButtonHovered : vistaColors.ButtonNormal;
+      }
+
+      func GetCheckedColors(enabled : bool, state : ButtonState, selected : bool) : ButtonColors
+      {
+        var colors = not enabled ? vistaColors.CheckedDisabled :
+          state == ButtonState::Pressed ? vistaColors.CheckedPressed :
+          state == ButtonState::Active ? vistaColors.CheckedHovered : vistaColors.CheckedNormal;
+        return {
+          Border: colors.Border;
+          Background: colors.Background;
+          G1: colors.G1;
+          G2: colors.G2;
+          G3: colors.G3;
+          G4: colors.G4;
+          Text: colors.Text;
+          Bullet: selected ? colors.Bullet : {r:colors.Bullet.r; g:colors.Bullet.g; b:colors.Bullet.b; a:vistaColors.Transparent.a;};
+        };
+      }
+
+      func GetScrollButtonColors(enabled : bool, state : ButtonState, arrow : bool) : ButtonColors
+      {
+        var colors = GetButtonColors(enabled, state);
+        if (not enabled or (arrow and state == ButtonState::Normal))
+        {
+          return {
+            Border: {r:colors.Border.r; g:colors.Border.g; b:colors.Border.b; a:vistaColors.Transparent.a;};
+            Background: {r:colors.Background.r; g:colors.Background.g; b:colors.Background.b; a:vistaColors.Transparent.a;};
+            G1: {r:colors.G1.r; g:colors.G1.g; b:colors.G1.b; a:vistaColors.Transparent.a;};
+            G2: {r:colors.G2.r; g:colors.G2.g; b:colors.G2.b; a:vistaColors.Transparent.a;};
+            G3: {r:colors.G3.r; g:colors.G3.g; b:colors.G3.b; a:vistaColors.Transparent.a;};
+            G4: {r:colors.G4.r; g:colors.G4.g; b:colors.G4.b; a:vistaColors.Transparent.a;};
+            Text: colors.Text;
+            Bullet: colors.Bullet;
+          };
+        }
+        return colors;
+      }
+    }
+    ]]></Workflow>
+  </Script>
+  <Animation name="ButtonColorAnimationResource">
+    <Gradient ref.Class="winvistaskin::ButtonColorAnimation" Type="winvistaskin::ButtonColorState">
+      <Interpolation><![CDATA[[$1]]]></Interpolation>
+      <Targets>
+        <Target Name="Border"/>
+        <Target Name="Background"/>
+        <Target Name="G1"/>
+        <Target Name="G2"/>
+        <Target Name="G3"/>
+        <Target Name="G4"/>
+        <Target Name="Text"/>
+        <Target Name="Bullet"/>
+      </Targets>
+    </Gradient>
+  </Animation>
+
+  <Instance name="ButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(vistaColors.ButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetButtonColors(self.VisuallyEnabled, self.State)), cast UInt64 120), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
+        <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <SolidBackground Color-bind="self.animationBuilder.Current.Background"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
+        </Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+          <Cell Site="row:0 column:0">
+            <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+          </Cell>
+          <Cell Site="row:1 column:0">
+            <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G3" Color2-bind="self.animationBuilder.Current.G4"/>
+          </Cell>
+        </Table>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Focused">
+          <FocusRectangle/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:4 top:2 right:4 bottom:2">
+          <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+        </Bounds>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="CheckBoxTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::CheckBoxTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(GetCheckedColors(true, ButtonState::Normal, false)));
+        var lastAnimation : IGuiAnimation^ = null;
+
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetCheckedColors(self.VisuallyEnabled, self.State, self.Selected)), cast UInt64 120), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
+        <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
+        <ev.SelectedChanged-eval>self.UpdateColors();</ev.SelectedChanged-eval>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            <CellOption>composeType:Absolute absolute:17</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Absolute absolute:17</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:1 column:0">
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+              <SolidBackground Color-bind="self.animationBuilder.Current.Background"/>
+              <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+                <SolidBorder Color-bind="self.animationBuilder.Current.Border"/>
+              </Bounds>
+              <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+                <GradientBackground Direction="Backslash" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+              </Bounds>
+              <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
+                <GradientBackground Direction="Backslash" Color1-bind="self.animationBuilder.Current.G3" Color2-bind="self.animationBuilder.Current.G4"/>
+              </Bounds>
+            </Bounds>
+            <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
+              <Polygon BorderColor-bind="self.animationBuilder.Current.Bullet" BackgroundColor-bind="self.animationBuilder.Current.Bullet" Size="x:11 y:11">
+                <att.Points>
+                  <Point>x:0 y:6</Point>
+                  <Point>x:3 y:9</Point>
+                  <Point>x:10 y:2</Point>
+
+                  <Point>x:10 y:1</Point>
+                  <Point>x:3 y:8</Point>
+                  <Point>x:0 y:5</Point>
+                </att.Points>
+              </Polygon>
+            </Bounds>
+          </Cell>
+
+          <Cell Site="row:0 column:1 rowSpan:3 columnSpan:1">
+            <Bounds AlignmentToParent="left:2 top:0 right:-1 bottom:0">
+              <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
+                <FocusRectangle/>
+              </Bounds>
+              <Bounds AlignmentToParent="left:4 top:2 right:4 bottom:2">
+                <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+              </Bounds>
+            </Bounds>
+          </Cell>
+        </Table>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RadioButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RadioButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(GetCheckedColors(true, ButtonState::Normal, false)));
+        var lastAnimation : IGuiAnimation^ = null;
+
+        func UpdateColors() : void
+        {
+          KillAnimation(lastAnimation);
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetCheckedColors(self.VisuallyEnabled, self.State, self.Selected)), cast UInt64 120), func():void { animationBuilder.Interpolate(1.0); });
+          AddAnimation(lastAnimation);
+        }
+      ]]></ref.Members>
+      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
+        <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
+        <ev.SelectedChanged-eval>self.UpdateColors();</ev.SelectedChanged-eval>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            <CellOption>composeType:Absolute absolute:17</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Absolute absolute:17</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:1 column:0">
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+              <SolidBackground Color-bind="self.animationBuilder.Current.Background" Shape="shapeType:Ellipse"/>
+              <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+                <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:Ellipse"/>
+              </Bounds>
+              <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+                <GradientBackground Direction="Backslash" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2" Shape="shapeType:Ellipse"/>
+              </Bounds>
+              <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
+                <GradientBackground Direction="Backslash" Color1-bind="self.animationBuilder.Current.G3" Color2-bind="self.animationBuilder.Current.G4" Shape="shapeType:Ellipse"/>
+              </Bounds>
+            </Bounds>
+            <Bounds AlignmentToParent="left:5 top:5 right:5 bottom:5">
+              <SolidBackground Color-bind="self.animationBuilder.Current.Bullet" Shape="shapeType:Ellipse"/>
+            </Bounds>
+          </Cell>
+
+          <Cell Site="row:0 column:1 rowSpan:3 columnSpan:1">
+            <Bounds AlignmentToParent="left:2 top:0 right:-1 bottom:0">
+              <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
+                <FocusRectangle/>
+              </Bounds>
+              <Bounds AlignmentToParent="left:4 top:2 right:4 bottom:2">
+                <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+              </Bounds>
+            </Bounds>
+          </Cell>
+        </Table>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+</Folder>

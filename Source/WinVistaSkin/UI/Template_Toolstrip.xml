@@ -1,0 +1,325 @@
+<Folder>
+  <Instance name="MenuBarTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::MenuBarTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ControlTemplate ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground Color-eval="vistaColors.MenuBarBorder"/>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:1">
+          <att.Rows><CellOption>composeType:Percentage percentage:0.5</CellOption><CellOption>composeType:Percentage percentage:0.5</CellOption></att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-eval="vistaColors.MenuBar1" Color2-eval="vistaColors.MenuBar2"/></Cell>
+          <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-eval="vistaColors.MenuBar3" Color2-eval="vistaColors.MenuBar4"/></Cell>
+        </Table>
+        <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:1"/>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ToolstripTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ControlTemplate ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground ref.Style="generalBackground"/>
+        <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2"/>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripInMenuTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ToolstripInMenuTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ControlTemplate ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground ref.Style="toolstripMenuBackground"/>
+        <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2"/>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripMenuTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ToolstripMenuTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <MenuTemplate ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground Color-eval="vistaColors.MenuInner"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder ref.Style="toolstripMenuBorder"/>
+          <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground ref.Style="toolstripMenuBackground"/></Bounds>
+        </Bounds>
+      </MenuTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripSplitterTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ToolstripSplitterTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ControlTemplate MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground ref.Style="generalBackground"/>
+        <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1">
+          <Gui3DSplitterElement Direction="Vertical" ref.Style="toolstripSplitter"/>
+        </Bounds>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripSplitterInMenuTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ToolstripSplitterInMenuTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ControlTemplate MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground ref.Style="toolstripMenuBackground"/>
+        <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1" PreferredMinSize="x:2 y:0">
+          <Gui3DSplitterElement Direction="Vertical" ref.Style="toolstripSplitter"/>
+        </Bounds>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="MenuSplitterTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::MenuSplitterTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ControlTemplate MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:0 y:6">
+        <SolidBackground ref.Style="toolstripMenuBackground"/>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Absolute absolute:26</CellOption>
+            <CellOption>composeType:Absolute absolute:2</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+          <Cell Site="row:0 column:1"><Gui3DSplitterElement Direction="Vertical" ref.Style="toolstripSplitter"/></Cell>
+          <Cell Site="row:0 column:2"><Gui3DSplitterElement Direction="Horizontal" ref.Style="toolstripSplitter"/></Cell>
+        </Table>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ToolstripButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = vistaColors.ToolstripButtonNormal {}
+        var animation : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(vistaColors.ToolstripButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+      ]]></ref.Members>
+      <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? vistaColors.ToolstripButtonDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? vistaColors.ToolstripButtonPressed : self.Selected ? vistaColors.ToolstripButtonSelected : self.State == ButtonState::Active ? vistaColors.ToolstripButtonActive : vistaColors.ToolstripButtonNormal</att.Colors-bind>
+        <ev.ColorsChanged-eval><![CDATA[{
+          self.KillAnimation(self.lastAnimation);
+          self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
+          self.AddAnimation(self.lastAnimation);
+        }]]></ev.ColorsChanged-eval>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.animation.Current.Background"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <att.Rows><CellOption>composeType:Percentage percentage:0.5</CellOption><CellOption>composeType:Percentage percentage:0.5</CellOption></att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
+          <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
+        </Table>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+
+          <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+            <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
+          </Bounds>
+        </Bounds>
+      </ToolstripButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripDropdownButtonResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ToolstripDropdownButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = vistaColors.ToolstripButtonNormal {}
+        var animation : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(vistaColors.ToolstripButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+      ]]></ref.Members>
+      <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? vistaColors.ToolstripButtonDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? vistaColors.ToolstripButtonPressed : self.Selected ? vistaColors.ToolstripButtonSelected : self.State == ButtonState::Active ? vistaColors.ToolstripButtonActive : vistaColors.ToolstripButtonNormal</att.Colors-bind>
+        <ev.ColorsChanged-eval><![CDATA[{
+          self.KillAnimation(self.lastAnimation);
+          self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
+          self.AddAnimation(self.lastAnimation);
+        }]]></ev.ColorsChanged-eval>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.animation.Current.Background"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <att.Rows><CellOption>composeType:Percentage percentage:0.5</CellOption><CellOption>composeType:Percentage percentage:0.5</CellOption></att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
+          <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
+        </Table>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+
+          <Bounds AlignmentToParent="left:0 top:0 right:10 bottom:0">
+            <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+              <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
+            </Bounds>
+          </Bounds>
+          <Table AlignmentToParent="left:-1 top:0 right:0 bottom:0" PreferredMinSize="x:9 y:0">
+            <att.Rows>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              <CellOption>composeType:Absolute absolute:3</CellOption>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            </att.Rows>
+            <att.Columns>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              <CellOption>composeType:Absolute absolute:5</CellOption>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            </att.Columns>
+
+            <Cell Site="row:1 column:1">
+              <Polygon ref.Style="toolstripArrow" Size="x:5 y:3">
+                <att.Points>
+                  <Point>x:0 y:0</Point>
+                  <Point>x:2 y:2</Point>
+                  <Point>x:4 y:0</Point>
+                </att.Points>
+              </Polygon>
+            </Cell>
+          </Table>
+        </Bounds>
+      </ToolstripButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripArrowButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ToolstripSplitArrowTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:13 y:7">
+        <Bounds AlignmentToParent="left:0 top:3 right:-1 bottom:3" PreferredMinSize="x:2 y:0" Visible-bind="self.VisuallyEnabled and self.State != ButtonState::Normal">
+          <Gui3DSplitterElement Direction="Vertical" ref.Style="toolstripSplitter"/>
+        </Bounds>
+        <Table AlignmentToParent="left:4 top:0 right:4 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:3</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns><CellOption>composeType:Absolute absolute:5</CellOption></att.Columns>
+          <Cell Site="row:1 column:0">
+            <Polygon ref.Style="toolstripSplitArrow" Size="x:5 y:3">
+              <att.Points>
+                <Point>x:0 y:0</Point>
+                <Point>x:2 y:2</Point>
+                <Point>x:4 y:0</Point>
+              </att.Points>
+            </Polygon>
+          </Cell>
+        </Table>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripSplitButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ToolstripSplitButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = vistaColors.ToolstripButtonNormal {}
+        var animation : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(vistaColors.ToolstripButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+      ]]></ref.Members>
+      <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? vistaColors.ToolstripButtonDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? vistaColors.ToolstripButtonPressed : self.Selected ? vistaColors.ToolstripButtonSelected : self.State == ButtonState::Active ? vistaColors.ToolstripButtonActive : vistaColors.ToolstripButtonNormal</att.Colors-bind>
+        <ev.ColorsChanged-eval><![CDATA[{
+          self.KillAnimation(self.lastAnimation);
+          self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
+          self.AddAnimation(self.lastAnimation);
+        }]]></ev.ColorsChanged-eval>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.animation.Current.Background"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <att.Rows><CellOption>composeType:Percentage percentage:0.5</CellOption><CellOption>composeType:Percentage percentage:0.5</CellOption></att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
+          <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
+        </Table>
+        <Bounds AlignmentToParent="left:1 top:1 right:13 bottom:1">
+
+          <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+            <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
+          </Bounds>
+        </Bounds>
+        <Bounds AlignmentToParent="left:-1 top:0 right:0 bottom:0">
+            <CheckBox ref.Name="buttonArrow" AutoFocus="false" AutoSelection="false" ControlTemplate="winvistaskin::ToolstripSplitArrowTemplate" Selected-bind="self.SubMenuOpening">
+            <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          </CheckBox>
+        </Bounds>
+      </ToolstripButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="MenuBarButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::MenuBarButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = vistaColors.MenuBarButtonNormal {}
+      ]]></ref.Members>
+      <ToolstripButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? vistaColors.MenuBarButtonDisabled : self.SubMenuOpening or self.State == ButtonState::Pressed ? vistaColors.MenuBarButtonPressed : self.State == ButtonState::Active ? vistaColors.MenuBarButtonActive : vistaColors.MenuBarButtonNormal</att.Colors-bind>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.Colors.Background"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.Colors.Border"/></Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <att.Rows><CellOption>composeType:Percentage percentage:0.5</CellOption><CellOption>composeType:Percentage percentage:0.5</CellOption></att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/></Cell>
+          <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.Colors.G3" Color2-bind="self.Colors.G4"/></Cell>
+        </Table>
+
+        <Bounds AlignmentToParent="left:10 top:3 right:10 bottom:3">
+          <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Bounds>
+      </ToolstripButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="MenuItemButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::MenuItemButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = vistaColors.MenuItemButtonNormal {}
+      ]]></ref.Members>
+      <ToolstripButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? (self.State == ButtonState::Normal ? vistaColors.MenuItemButtonDisabled : vistaColors.MenuItemButtonDisabledActive) : self.SubMenuOpening ? vistaColors.MenuItemButtonNormalActive : self.Selected ? (self.State == ButtonState::Normal ? vistaColors.MenuItemButtonSelected : vistaColors.MenuItemButtonSelectedActive) : self.State != ButtonState::Normal ? vistaColors.MenuItemButtonNormalActive : vistaColors.MenuItemButtonNormal</att.Colors-bind>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.Colors.Background"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.Colors.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
+        </Bounds>
+
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Absolute absolute:4</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:4</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Absolute absolute:2</CellOption>
+            <CellOption>composeType:Absolute absolute:24</CellOption>
+            <CellOption>composeType:Absolute absolute:8</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Absolute absolute:24</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Absolute absolute:4</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Absolute absolute:8</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:1 column:1 rowSpan:3">
+            <SolidBackground Color-bind="self.Selected ? vistaColors.MenuItemButtonNormalActive.G2 : vistaColors.Transparent"/>
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.Selected and self.Image is null"><Polygon ref.Style="buttonPolygon" Size="x:10 y:10"><att.Points><Point>x:1 y:5</Point><Point>x:4 y:8</Point><Point>x:9 y:1</Point><Point>x:4 y:6</Point></att.Points></Polygon></Bounds>
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/></Bounds>
+          </Cell>
+          <Cell Site="row:0 column:2 rowSpan:5"><Bounds AlignmentToParent="left:0 top:0 right:6 bottom:0"><Gui3DSplitterElement Direction="Vertical" Color1-bind="self.Colors.G3" Color2-bind="self.Colors.G4"/></Bounds></Cell>
+          <Cell Site="row:1 column:3 rowSpan:3">
+            <SharedSizeItem Group="MenuItem-Text" SharedWidth="true" AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </SharedSizeItem>
+          </Cell>
+          <Cell Site="row:1 column:6 rowSpan:3">
+            <SharedSizeItem Group="MenuItem-Shortcut" SharedWidth="true" AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.ShortcutText" Font-bind="self.Font" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            </SharedSizeItem>
+          </Cell>
+          <Cell Site="row:2 column:8" Visible-bind="self.SubMenuExisting">
+            <Polygon BorderColor-bind="self.Colors.Text" BackgroundColor-bind="self.Colors.Text" Size="x:4 y:7">
+              <att.Points>
+                <Point>x:0 y:0</Point>
+                <Point>x:3 y:3</Point>
+                <Point>x:0 y:6</Point>
+              </att.Points>
+            </Polygon>
+          </Cell>
+        </Table>
+      </ToolstripButtonTemplate>
+    </Instance>
+  </Instance>
+</Folder>

@@ -3,6 +3,7 @@
 #include "../../Source/Win7Skin/Win7SkinConfig.h"
 #include "../../Source/Win8Skin/Win8SkinConfig.h"
 #include "../../Source/WinXPSkin/WinXPSkinConfig.h"
+#include "../../Source/WinVistaSkin/WinVistaSkinConfig.h"
 
 using namespace vl;
 
@@ -10,7 +11,7 @@ namespace demo
 {
 	void RegisterFctTheme(Ptr<presentation::theme::ThemeTemplates> selected)
 	{
-		for (auto name : { L"DarkSkin", L"Win7Skin", L"Win8Skin", L"WinXPSkin" })
+		for (auto name : { L"DarkSkin", L"Win7Skin", L"Win8Skin", L"WinXPSkin", L"WinVistaSkin" })
 		{
 			presentation::theme::UnregisterTheme(name);
 		}
@@ -40,6 +41,11 @@ namespace demo
 		{
 			winxpskin::SetColorPackage(winxpskin::CreateDefaultColorPackage());
 			RegisterFctTheme(Ptr(new winxpskin::Theme));
+		}, false);
+		addItem(L"WinVistaSkin", []
+		{
+			winvistaskin::SetColorPackage(winvistaskin::CreateDefaultColorPackage());
+			RegisterFctTheme(Ptr(new winvistaskin::Theme));
 		}, false);
 	}
 }

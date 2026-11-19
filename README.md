@@ -1,14 +1,16 @@
 # GacUI Extra Skins
 
 This repository hosts additional GacUI skins and the `FullControlTest` showcase.
-There are no additional skins yet; the showcase currently lists only the built-in
-`DarkSkin` with its default color theme.
+FullControlTest starts with the built-in `DarkSkin`. Select another appearance
+under **Window Manager → Color Theme**. The [skin index](spec/README.md)
+lists the available designs and palettes.
 
-See [building and running FullControlTest](doc/FullControlTest.md) to get started.
+## Using skins in your projects
 
-## Using Skins in your Projects
-
-<!-- to be edited -->
+Compile a skin’s configuration and generated sources alongside GacUI. Select its
+color package and register its theme before creating controls. See the
+[Vista integration example](doc/WinVistaSkin.md) and
+[FullControlTest build instructions](doc/FullControlTest.md).
 
 ## Screenshots
 

@@ -1,0 +1,171 @@
+<Styles>
+  <Style ref.Path="(//Bounds + //Table + //RepeatStack + //RepeatFlow)" MinSizeLimitation="LimitToElementAndChildren"/>
+  <Style ref.Path="//*.generalBackground" Color-eval="winvistaskin::vistaColors.GeneralBackground"/>
+  <Style ref.Path="//*.windowBorder">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color let margin = self.CustomFramePadding in (
+          (not self.Border) or (margin.left + margin.top + margin.right + margin.bottom == 0) ? winvistaskin::vistaColors.Transparent :
+          self.VisuallyEnabled and self.Activated ? winvistaskin::vistaColors.WindowBorderActive :
+          winvistaskin::vistaColors.GeneralBorder
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.windowTitle">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color (
+          self.VisuallyEnabled and self.Activated ? winvistaskin::vistaColors.TextNormal :
+          winvistaskin::vistaColors.TextDisabled
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.tooltipBorder" Color-eval="winvistaskin::vistaColors.TooltipBorder"/>
+  <Style ref.Path="//*.labelDefaultText" DefaultTextColor-eval="winvistaskin::vistaColors.TextNormal"/>
+  <Style ref.Path="//*.labelText">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color (
+          not self.VisuallyEnabled ? winvistaskin::vistaColors.TextDisabled :
+          self.TextColor
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.datePickerColors">
+    <att.BackgroundColor-eval>winvistaskin::vistaColors.GeneralBackground</att.BackgroundColor-eval>
+    <att.PrimaryTextColor-eval>winvistaskin::vistaColors.TextBright</att.PrimaryTextColor-eval>
+    <att.SecondaryTextColor-eval>winvistaskin::vistaColors.TextSecondary</att.SecondaryTextColor-eval>
+  </Style>
+  <Style ref.Path="//*.buttonPolygon">
+    <att.BorderColor-bind>
+      <![CDATA[
+        cast Color (
+          not self.VisuallyEnabled ? winvistaskin::vistaColors.TextDisabled :
+          winvistaskin::vistaColors.TextNormal
+        )
+      ]]>
+    </att.BorderColor-bind>
+    <att.BackgroundColor-bind>
+      <![CDATA[
+        cast Color (
+          not self.VisuallyEnabled ? winvistaskin::vistaColors.TextDisabled :
+          winvistaskin::vistaColors.TextNormal
+        )
+      ]]>
+    </att.BackgroundColor-bind>
+  </Style>
+  <Style ref.Path="//*.listBorder">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color (
+          not self.VisuallyEnabled ? winvistaskin::vistaColors.GeneralBorder :
+          self.Focused ? winvistaskin::vistaColors.ControlAccentHovered :
+          winvistaskin::vistaColors.ButtonBackgroundHovered
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.textListBackgroundAndColor">
+    <att.TextColor-eval>winvistaskin::vistaColors.TextNormal</att.TextColor-eval>
+    <SolidBackground Color-eval="winvistaskin::vistaColors.ContentBackground"/>
+  </Style>
+  <Style ref.Path="//*.listViewBackgroundAndColor">
+    <att.PrimaryTextColor-eval>winvistaskin::vistaColors.TextNormal</att.PrimaryTextColor-eval>
+    <att.SecondaryTextColor-eval>winvistaskin::vistaColors.TextDisabled</att.SecondaryTextColor-eval>
+    <att.ItemSeparatorColor-eval>winvistaskin::vistaColors.ListItemSeparator</att.ItemSeparatorColor-eval>
+    <SolidBackground Color-eval="winvistaskin::vistaColors.ContentBackground"/>
+  </Style>
+  <Style ref.Path="//*.treeViewBackgroundAndColor">
+    <att.TextColor-eval>winvistaskin::vistaColors.TextNormal</att.TextColor-eval>
+    <SolidBackground Color-eval="winvistaskin::vistaColors.ContentBackground"/>
+  </Style>
+  <Style ref.Path="//*.controlText">
+    <att.Color-bind>
+      <![CDATA[
+        cast Color (
+          not self.VisuallyEnabled ? winvistaskin::vistaColors.TextDisabled :
+          winvistaskin::vistaColors.TextNormal
+        )
+      ]]>
+    </att.Color-bind>
+  </Style>
+  <Style ref.Path="//*.toolstripMenuBackground" Color-eval="winvistaskin::vistaColors.MenuBackground"/>
+  <Style ref.Path="//*.toolstripMenuBorder" Color-eval="winvistaskin::vistaColors.MenuBorder"/>
+  <Style ref.Path="//*.toolstripSplitter" Color1-eval="winvistaskin::vistaColors.SplitterDark" Color2-eval="winvistaskin::vistaColors.SplitterLight"/>
+  <Style ref.Path="//*.toolstripArrow">
+    <att.BorderColor-bind>
+      <![CDATA[
+        cast Color let state = self.State in (
+          not self.VisuallyEnabled ? winvistaskin::vistaColors.ArrowDisabled :
+          state == ButtonState::Pressed or self.SubMenuOpening ? winvistaskin::vistaColors.TextBright :
+          state == ButtonState::Active ? winvistaskin::vistaColors.ArrowAccentHovered :
+          winvistaskin::vistaColors.TextSecondary
+        )
+      ]]>
+    </att.BorderColor-bind>
+    <att.BackgroundColor-bind>
+      <![CDATA[
+        cast Color let state = self.State in (
+          not self.VisuallyEnabled ? winvistaskin::vistaColors.ArrowDisabled :
+          state == ButtonState::Pressed or self.SubMenuOpening ? winvistaskin::vistaColors.TextBright :
+          state == ButtonState::Active ? winvistaskin::vistaColors.ArrowAccentHovered :
+          winvistaskin::vistaColors.TextSecondary
+        )
+      ]]>
+    </att.BackgroundColor-bind>
+  </Style>
+  <Style ref.Path="//*.toolstripSplitArrow">
+    <att.BorderColor-bind>
+      <![CDATA[
+        cast Color let state = self.State in (
+          not self.VisuallyEnabled ? winvistaskin::vistaColors.ArrowDisabled :
+          state == ButtonState::Pressed or self.Selected ? winvistaskin::vistaColors.TextBright :
+          state == ButtonState::Active ? winvistaskin::vistaColors.ArrowAccentHovered :
+          winvistaskin::vistaColors.TextSecondary
+        )
+      ]]>
+    </att.BorderColor-bind>
+    <att.BackgroundColor-bind>
+      <![CDATA[
+        cast Color let state = self.State in (
+          not self.VisuallyEnabled ? winvistaskin::vistaColors.ArrowDisabled :
+          state == ButtonState::Pressed or self.Selected ? winvistaskin::vistaColors.TextBright :
+          state == ButtonState::Active ? winvistaskin::vistaColors.ArrowAccentHovered :
+          winvistaskin::vistaColors.TextSecondary
+        )
+      ]]>
+    </att.BackgroundColor-bind>
+  </Style>
+  <Style ref.Path="//*.ribbonGroupBorder" Color-eval="winvistaskin::vistaColors.RibbonBorder"/>
+  <Style ref.Path="//*.ribbonGroupTitle" Color-eval="winvistaskin::vistaColors.RibbonGroupText"/>
+  <Style ref.Path="//*.ribbonMenuBorder" Color-eval="winvistaskin::vistaColors.MenuBorder"/>
+  <Style ref.Path="//*.ribbonExpandableArrow">
+    <att.BorderColor-bind>
+      <![CDATA[
+        cast Color let state = self.State in (
+          not self.VisuallyEnabled ? winvistaskin::vistaColors.RibbonExpandingArrow :
+          state == ButtonState::Pressed ? winvistaskin::vistaColors.RibbonExpandingArrowPressed :
+          state == ButtonState::Active ? winvistaskin::vistaColors.RibbonExpandingArrow :
+          winvistaskin::vistaColors.RibbonExpandingArrow
+        )
+      ]]>
+    </att.BorderColor-bind>
+    <att.BackgroundColor-bind>
+      <![CDATA[
+        cast Color let state = self.State in (
+          not self.VisuallyEnabled ? winvistaskin::vistaColors.Transparent :
+          state == ButtonState::Pressed ? winvistaskin::vistaColors.RibbonExpandingArrowPressed :
+          state == ButtonState::Active ? winvistaskin::vistaColors.RibbonExpandingArrow :
+          winvistaskin::vistaColors.Transparent
+        )
+      ]]>
+    </att.BackgroundColor-bind>
+  </Style>
+  <Style ref.Path="//*.documentBoxBackgroundAndColor" BaselineDocument-eval="winvistaskin::CreateBaselineDocument()">
+    <att.CaretColor-eval>winvistaskin::vistaColors.TextBright</att.CaretColor-eval>
+    <SolidBackground Color-eval="winvistaskin::vistaColors.ContentBackground"/>
+  </Style>
+</Styles>

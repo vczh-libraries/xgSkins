@@ -1,0 +1,779 @@
+<Folder>
+  <Instance name="RibbonSmallButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonSmallButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = vistaColors.RibbonButtonNormal {}
+        var animation : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(vistaColors.RibbonButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+      ]]></ref.Members>
+      <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? vistaColors.RibbonButtonDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? vistaColors.RibbonButtonPressed : self.Selected ? vistaColors.RibbonButtonSelected : self.State == ButtonState::Active ? vistaColors.RibbonButtonActive : vistaColors.RibbonButtonNormal</att.Colors-bind>
+        <ev.ColorsChanged-eval><![CDATA[{
+          self.KillAnimation(self.lastAnimation);
+          self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
+          self.AddAnimation(self.lastAnimation);
+        }]]></ev.ColorsChanged-eval>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.animation.Current.Background"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <att.Rows><CellOption>composeType:Percentage percentage:0.5</CellOption><CellOption>composeType:Percentage percentage:0.5</CellOption></att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
+          <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
+        </Table>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+
+          <Table ref.Name ="container" CellPadding="3" AlignmentToParent="left:0 top:0 right:0 bottom:0">
+            <att.Rows>
+              <CellOption>composeType:MinSize</CellOption>
+            </att.Rows>
+            <att.Columns>
+              <CellOption>composeType:MinSize</CellOption>
+              <CellOption>composeType:MinSize</CellOption>
+            </att.Columns>
+
+            <Cell Site="row:0 column:0">
+              <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
+            </Cell>
+            <Cell Site="row:0 column:1">
+              <SolidLabel ref.Style="controlText" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Cell>
+          </Table>
+        </Bounds>
+      </ToolstripButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonSmallDropdownButtonResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonSmallDropdownButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = vistaColors.RibbonButtonNormal {}
+        var animation : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(vistaColors.RibbonButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+      ]]></ref.Members>
+      <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? vistaColors.RibbonButtonDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? vistaColors.RibbonButtonPressed : self.Selected ? vistaColors.RibbonButtonSelected : self.State == ButtonState::Active ? vistaColors.RibbonButtonActive : vistaColors.RibbonButtonNormal</att.Colors-bind>
+        <ev.ColorsChanged-eval><![CDATA[{
+          self.KillAnimation(self.lastAnimation);
+          self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
+          self.AddAnimation(self.lastAnimation);
+        }]]></ev.ColorsChanged-eval>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.animation.Current.Background"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <att.Rows><CellOption>composeType:Percentage percentage:0.5</CellOption><CellOption>composeType:Percentage percentage:0.5</CellOption></att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
+          <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
+        </Table>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+
+          <Bounds AlignmentToParent="left:0 top:0 right:10 bottom:0">
+            <Table ref.Name ="container" CellPadding="3" AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <att.Rows>
+                <CellOption>composeType:MinSize</CellOption>
+              </att.Rows>
+              <att.Columns>
+                <CellOption>composeType:MinSize</CellOption>
+                <CellOption>composeType:MinSize</CellOption>
+              </att.Columns>
+
+              <Cell Site="row:0 column:0">
+                <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
+              </Cell>
+              <Cell Site="row:0 column:1">
+                <SolidLabel ref.Style="controlText" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              </Cell>
+            </Table>
+          </Bounds>
+          <Table AlignmentToParent="left:-1 top:0 right:0 bottom:0" PreferredMinSize="x:9 y:0">
+            <att.Rows>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              <CellOption>composeType:Absolute absolute:3</CellOption>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            </att.Rows>
+            <att.Columns>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              <CellOption>composeType:Absolute absolute:5</CellOption>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            </att.Columns>
+
+            <Cell Site="row:1 column:1">
+              <Polygon ref.Style="toolstripArrow" Size="x:5 y:3">
+                <att.Points>
+                  <Point>x:0 y:0</Point>
+                  <Point>x:2 y:2</Point>
+                  <Point>x:4 y:0</Point>
+                </att.Points>
+              </Polygon>
+            </Cell>
+          </Table>
+        </Bounds>
+      </ToolstripButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonSmallSplitButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonSmallSplitButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = vistaColors.RibbonButtonNormal {}
+        var animation : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(vistaColors.RibbonButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+      ]]></ref.Members>
+      <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? vistaColors.RibbonButtonDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? vistaColors.RibbonButtonPressed : self.Selected ? vistaColors.RibbonButtonSelected : self.State == ButtonState::Active ? vistaColors.RibbonButtonActive : vistaColors.RibbonButtonNormal</att.Colors-bind>
+        <ev.ColorsChanged-eval><![CDATA[{
+          self.KillAnimation(self.lastAnimation);
+          self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
+          self.AddAnimation(self.lastAnimation);
+        }]]></ev.ColorsChanged-eval>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.animation.Current.Background"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <att.Rows><CellOption>composeType:Percentage percentage:0.5</CellOption><CellOption>composeType:Percentage percentage:0.5</CellOption></att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
+          <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
+        </Table>
+        <Bounds AlignmentToParent="left:1 top:1 right:11 bottom:1">
+
+          <Table ref.Name ="container" CellPadding="3" AlignmentToParent="left:0 top:0 right:0 bottom:0">
+            <att.Rows>
+              <CellOption>composeType:MinSize</CellOption>
+            </att.Rows>
+            <att.Columns>
+              <CellOption>composeType:MinSize</CellOption>
+              <CellOption>composeType:MinSize</CellOption>
+            </att.Columns>
+
+            <Cell Site="row:0 column:0">
+              <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
+            </Cell>
+            <Cell Site="row:0 column:1">
+              <SolidLabel ref.Style="controlText" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Cell>
+          </Table>
+        </Bounds>
+        <Bounds AlignmentToParent="left:-1 top:0 right:0 bottom:0">
+            <CheckBox ref.Name="buttonArrow" AutoFocus="false" AutoSelection="false" ControlTemplate="winvistaskin::RibbonSmallSplitArrowTemplate" Selected-bind="self.SubMenuOpening">
+            <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          </CheckBox>
+        </Bounds>
+      </ToolstripButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonLargeButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonLargeButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = vistaColors.RibbonButtonNormal {}
+        var animation : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(vistaColors.RibbonButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+      ]]></ref.Members>
+      <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? vistaColors.RibbonButtonDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? vistaColors.RibbonButtonPressed : self.Selected ? vistaColors.RibbonButtonSelected : self.State == ButtonState::Active ? vistaColors.RibbonButtonActive : vistaColors.RibbonButtonNormal</att.Colors-bind>
+        <ev.ColorsChanged-eval><![CDATA[{
+          self.KillAnimation(self.lastAnimation);
+          self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
+          self.AddAnimation(self.lastAnimation);
+        }]]></ev.ColorsChanged-eval>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.animation.Current.Background"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <att.Rows><CellOption>composeType:Percentage percentage:0.5</CellOption><CellOption>composeType:Percentage percentage:0.5</CellOption></att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
+          <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
+        </Table>
+        <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
+
+          <att.Rows>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Absolute absolute:1</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:0 column:0">
+            <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+              <ImageFrame Image-bind="self.LargeImage.Image ?? null" FrameIndex-bind="self.LargeImage.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled">
+                <att.HorizontalAlignment>Center</att.HorizontalAlignment>
+              </ImageFrame>
+            </Bounds>
+          </Cell>
+          <Cell Site="row:2 column:0">
+            <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:12">
+              <SolidLabel ref.Style="controlText" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Bounds>
+          </Cell>
+        </Table>
+      </ToolstripButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonLargeDropdownButtonResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonLargeDropdownButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = vistaColors.RibbonButtonNormal {}
+        var animation : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(vistaColors.RibbonButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+      ]]></ref.Members>
+      <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? vistaColors.RibbonButtonDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? vistaColors.RibbonButtonPressed : self.Selected ? vistaColors.RibbonButtonSelected : self.State == ButtonState::Active ? vistaColors.RibbonButtonActive : vistaColors.RibbonButtonNormal</att.Colors-bind>
+        <ev.ColorsChanged-eval><![CDATA[{
+          self.KillAnimation(self.lastAnimation);
+          self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
+          self.AddAnimation(self.lastAnimation);
+        }]]></ev.ColorsChanged-eval>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.animation.Current.Background"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <att.Rows><CellOption>composeType:Percentage percentage:0.5</CellOption><CellOption>composeType:Percentage percentage:0.5</CellOption></att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
+          <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
+        </Table>
+        <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
+
+          <att.Rows>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Absolute absolute:1</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:0 column:0">
+            <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+              <ImageFrame Image-bind="self.LargeImage.Image ?? null" FrameIndex-bind="self.LargeImage.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled">
+                <att.HorizontalAlignment>Center</att.HorizontalAlignment>
+              </ImageFrame>
+            </Bounds>
+          </Cell>
+          <Cell Site="row:2 column:0">
+            <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <att.Rows>
+                <CellOption>composeType:MinSize</CellOption>
+                <CellOption>composeType:MinSize</CellOption>
+                <CellOption>composeType:Percentage percentage:1.0</CellOption>
+              </att.Rows>
+              <att.Columns>
+                <CellOption>composeType:Percentage percentage:1.0</CellOption>
+              </att.Columns>
+
+              <Cell Site="row:0 column:0">
+                <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
+                  <SolidLabel ref.Style="controlText" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Bounds>
+              </Cell>
+              <Cell Site="row:1 column:0" PreferredMinSize="x:11 y:9">
+                <Polygon ref.Style="toolstripArrow" Size="x:5 y:3">
+                  <att.Points>
+                    <Point>x:0 y:0</Point>
+                    <Point>x:2 y:2</Point>
+                    <Point>x:4 y:0</Point>
+                  </att.Points>
+                </Polygon>
+              </Cell>
+            </Table>
+          </Cell>
+        </Table>
+      </ToolstripButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonSmallSplitArrowTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonSmallSplitArrowTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = vistaColors.RibbonButtonNormal {}
+        var animation : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(vistaColors.RibbonButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+      ]]></ref.Members>
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? vistaColors.RibbonButtonDisabled : self.State == ButtonState::Pressed ? vistaColors.RibbonButtonPressed : self.Selected ? vistaColors.RibbonButtonSelected : self.State == ButtonState::Active ? vistaColors.RibbonButtonActive : vistaColors.RibbonButtonNormal</att.Colors-bind>
+        <ev.ColorsChanged-eval><![CDATA[{
+          self.KillAnimation(self.lastAnimation);
+          self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
+          self.AddAnimation(self.lastAnimation);
+        }]]></ev.ColorsChanged-eval>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.animation.Current.Background"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <att.Rows><CellOption>composeType:Percentage percentage:0.5</CellOption><CellOption>composeType:Percentage percentage:0.5</CellOption></att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
+          <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
+        </Table>
+        <Table AlignmentToParent="left:1 top:1 right:1 bottom:1" PreferredMinSize="x:9 y:7">
+
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:3</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:5</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:1 column:1">
+            <Polygon BorderColor-bind="self.animation.Current.Text" BackgroundColor-bind="self.animation.Current.Text" Size="x:5 y:3">
+              <att.Points>
+                <Point>x:0 y:0</Point>
+                <Point>x:2 y:2</Point>
+                <Point>x:4 y:0</Point>
+              </att.Points>
+            </Polygon>
+          </Cell>
+        </Table>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+
+  <Instance name="RibbonArrowButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonSplitArrowTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = vistaColors.RibbonButtonNormal {}
+        var animation : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(vistaColors.RibbonButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+      ]]></ref.Members>
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? vistaColors.RibbonButtonDisabled : self.State == ButtonState::Pressed ? vistaColors.RibbonButtonPressed : self.Selected ? vistaColors.RibbonButtonSelected : self.State == ButtonState::Active ? vistaColors.RibbonButtonActive : vistaColors.RibbonButtonNormal</att.Colors-bind>
+        <ev.ColorsChanged-eval><![CDATA[{
+          self.KillAnimation(self.lastAnimation);
+          self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
+          self.AddAnimation(self.lastAnimation);
+        }]]></ev.ColorsChanged-eval>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.animation.Current.Background"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <att.Rows><CellOption>composeType:Percentage percentage:0.5</CellOption><CellOption>composeType:Percentage percentage:0.5</CellOption></att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
+          <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
+        </Table>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+
+
+
+          <Cell Site="row:0 column:0">
+            <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
+              <SolidLabel Color-bind="self.animation.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Bounds>
+          </Cell>
+          <Cell Site="row:1 column:0" PreferredMinSize="x:11 y:9">
+            <Polygon BorderColor-bind="self.animation.Current.Text" BackgroundColor-bind="self.animation.Current.Text" Size="x:5 y:3">
+              <att.Points>
+                <Point>x:0 y:0</Point>
+                <Point>x:2 y:2</Point>
+                <Point>x:4 y:0</Point>
+              </att.Points>
+            </Polygon>
+          </Cell>
+        </Table>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonLargeSplitButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonLargeSplitButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = vistaColors.RibbonButtonNormal {}
+        var animation : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(vistaColors.RibbonButtonNormal));
+        var lastAnimation : IGuiAnimation^ = null;
+      ]]></ref.Members>
+      <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? vistaColors.RibbonButtonDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? vistaColors.RibbonButtonPressed : self.Selected ? vistaColors.RibbonButtonSelected : self.State == ButtonState::Active ? vistaColors.RibbonButtonActive : vistaColors.RibbonButtonNormal</att.Colors-bind>
+        <ev.ColorsChanged-eval><![CDATA[{
+          self.KillAnimation(self.lastAnimation);
+          self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
+          self.AddAnimation(self.lastAnimation);
+        }]]></ev.ColorsChanged-eval>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.animation.Current.Background"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <att.Rows><CellOption>composeType:Percentage percentage:0.5</CellOption><CellOption>composeType:Percentage percentage:0.5</CellOption></att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
+          <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
+        </Table>
+        <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <att.Rows>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Absolute absolute:1</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:0 column:0">
+
+            <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+              <ImageFrame Image-bind="self.LargeImage.Image ?? null" FrameIndex-bind="self.LargeImage.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled">
+                <att.HorizontalAlignment>Center</att.HorizontalAlignment>
+              </ImageFrame>
+            </Bounds>
+          </Cell>
+          <Cell Site="row:2 column:0">
+                <CheckBox ref.Name="buttonArrow" AutoFocus="false" AutoSelection="false" ControlTemplate="winvistaskin::RibbonSplitArrowTemplate" Selected-bind="self.SubMenuOpening" Text-bind="self.Text">
+              <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+            </CheckBox>
+          </Cell>
+        </Table>
+      </ToolstripButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonSmallIconLabelTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonSmallIconLabelTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <RibbonIconLabelTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <Table AlignmentToParent="left:4 top:1 right:4 bottom:1">
+          <att.Rows>
+            <CellOption>composeType:MinSize</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:0 column:0">
+            <Bounds AlignmentToParent="left:0 top:3 right:3 bottom:3">
+              <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Bounds>
+          </Cell>
+          <Cell Site="row:0 column:1">
+            <SharedSizeItem Group="MenuItem-Text" SharedWidth="true" AlignmentToParent="left:0 top:3 right:3 bottom:3">
+              <SolidLabel ref.Style="controlText" Text-bind="self.Text" Font-bind="self.Font" VerticalAlignment="Center"/>
+            </SharedSizeItem>
+          </Cell>
+          <Cell ref.Name="container" Site="row:0 column:2"/>
+        </Table>
+      </RibbonIconLabelTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonIconLabelTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonIconLabelTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <RibbonIconLabelTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <Table AlignmentToParent="left:4 top:1 right:4 bottom:1">
+          <att.Rows>
+            <CellOption>composeType:MinSize</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:0 column:0">
+            <Bounds AlignmentToParent="left:0 top:3 right:3 bottom:3">
+              <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Bounds>
+          </Cell>
+          <Cell ref.Name="container" Site="row:0 column:1"/>
+        </Table>
+      </RibbonIconLabelTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonGroupTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonGroupTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <RibbonGroupTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.SubMenuTemplate>winvistaskin::RibbonGroupMenuTemplate</att.SubMenuTemplate>
+
+        <ev.CollapsedChanged-eval>
+          <![CDATA[
+            {
+              if (self.Collapsed)
+              {
+                table.SetRowOption(1, {composeType:Absolute absolute:0});
+              }
+              else
+              {
+                table.SetRowOption(1, {composeType:MinSize});
+              }
+            }
+          ]]>
+        </ev.CollapsedChanged-eval>
+        <Table ref.Name="table" AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+
+          <SolidBorder ref.Style="ribbonGroupBorder"/>
+
+          <Cell Site="row:0 column:0">
+            <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1"/>
+          </Cell>
+
+          <Cell Site="row:1 column:0" PreferredMinSize="x:5 y:5">
+            <Bounds AlignmentToParent="left:2 top:1 right:2 bottom:2">
+              <Bounds AlignmentToParent="left:10 top:2 right:10 bottom:2">
+                <SolidLabel Text-bind="self.Text" Font-bind="self.Font" ref.Style="ribbonGroupTitle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              </Bounds>
+
+              <Button AutoFocus="false" Visible-bind="self.Expandable" ControlTemplate="winvistaskin::RibbonGroupExpandButtonTemplate">
+                <att.BoundsComposition-set AlignmentToParent="left:-1 top:-1 right:0 bottom:0"/>
+                <ev.Clicked-eval>
+                  <![CDATA[
+                    {
+                      self.Commands.NotifyExpandButtonClicked();
+                    }
+                  ]]>
+                </ev.Clicked-eval>
+              </Button>
+            </Bounds>
+          </Cell>
+        </Table>
+      </RibbonGroupTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonGroupExpandButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonGroupExpandButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" MinSizeLimitation="LimitToElementAndChildren">
+          <Polygon ref.Style="ribbonExpandableArrow" Size="x:7 y:7">
+            <att.Points>
+              <Point>x:6 y:0</Point>
+              <Point>x:6 y:6</Point>
+              <Point>x:0 y:6</Point>
+            </att.Points>
+          </Polygon>
+        </Bounds>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonGroupMenuTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonGroupMenuTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <RibbonGroupMenuTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <GradientBackground Direction="Vertical" Color1-eval="vistaColors.RibbonBackgroundTop" Color2-eval="vistaColors.RibbonBackgroundBottom"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder ref.Style="ribbonMenuBorder"/>
+          <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" CellPadding="3">
+            <att.Rows>
+              <_>composeType:Percentage percentage:1.0</_>
+              <_>composeType:MinSize</_>
+            </att.Rows>
+            <att.Columns>
+              <_>composeType:Percentage percentage:1.0</_>
+              <_>composeType:MinSize</_>
+            </att.Columns>
+
+            <Cell ref.Name="container" Site="row:0 column:0 columnSpan:2"/>
+            <Cell Site="row:1 column:1">
+              <Button AutoFocus="false" Visible-bind="self.Expandable" ControlTemplate="winvistaskin::RibbonGroupExpandButtonTemplate">
+                <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+                <ev.Clicked-eval>
+                  <![CDATA[
+                    {
+                      self.Commands.NotifyExpandButtonClicked();
+                    }
+                  ]]>
+                </ev.Clicked-eval>
+              </Button>
+            </Cell>
+          </Table>
+        </Bounds>
+      </RibbonGroupMenuTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonButtonsTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonButtonsTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <RibbonButtonsTemplate MinSizeLimitation="LimitToElementAndChildren"/>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonToolstripsTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonToolstripsTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <RibbonToolstripsTemplate MinSizeLimitation="LimitToElementAndChildren"/>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonToolstripHeaderTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonToolstripHeaderTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ControlTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <SolidLabel Text-bind="self.Text" Font-bind="self.Font" ref.Style="ribbonGroupTitle" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </Bounds>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonGalleryTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonGalleryTemplate" xmlns:x="winvistaskin::*" ref.Styles="res://WinVistaSkin/Style">
+      <RibbonGalleryListTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ItemListTemplate>x:RibbonGalleryItemListTemplate</att.ItemListTemplate>
+        <att.MenuTemplate>x:RibbonToolstripMenuTemplate</att.MenuTemplate>
+        <att.HeaderTemplate>x:RibbonToolstripHeaderTemplate</att.HeaderTemplate>
+        <att.BackgroundTemplate>winvistaskin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.GroupContainerTemplate>winvistaskin::ScrollViewTemplate</att.GroupContainerTemplate>
+
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <_>composeType:Percentage percentage:1.0</_>
+            <_>composeType:Percentage percentage:1.0</_>
+            <_>composeType:Percentage percentage:1.0</_>
+          </att.Rows>
+          <att.Columns>
+            <_>composeType:Percentage percentage:1.0</_>
+            <_>composeType:MinSize</_>
+          </att.Columns>
+
+          <Cell Site="row:0 column:0 rowSpan:3">
+            <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+              <SolidBorder ref.Style="listBorder"/>
+              <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              </Bounds>
+            </Bounds>
+          </Cell>
+
+          <Cell Site="row:0 column:1">
+            <Button AutoFocus="false" ControlTemplate="x:TopScrollButtonTemplate" Enabled-bind="self.ScrollUpEnabled" ev.Clicked-eval="self.Commands.NotifyScrollUp();">
+              <att.BoundsComposition-set AlignmentToParent="left:4 top:0 right:4 bottom:0"/>
+            </Button>
+          </Cell>
+
+          <Cell Site="row:1 column:1">
+            <Button AutoFocus="false" ControlTemplate="x:BottomScrollButtonTemplate" Enabled-bind="self.ScrollDownEnabled" ev.Clicked-eval="self.Commands.NotifyScrollDown();">
+              <att.BoundsComposition-set AlignmentToParent="left:4 top:0 right:4 bottom:0"/>
+            </Button>
+          </Cell>
+
+          <Cell Site="row:2 column:1">
+            <Button AutoFocus="false" ControlTemplate="x:RibbonGalleryDropdownButtonTemplate" ev.Clicked-eval="self.Commands.NotifyDropdown();">
+              <att.BoundsComposition-set AlignmentToParent="left:4 top:0 right:4 bottom:0"/>
+            </Button>
+          </Cell>
+        </Table>
+      </RibbonGalleryListTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonGalleryItemListResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonGalleryItemListTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <TextListTemplate ref.Name="self">
+        <att.BackgroundTemplate>winvistaskin::ItemBackgroundTemplate</att.BackgroundTemplate>
+      </TextListTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonToolstripMenuTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonToolstripMenuTemplate" xmlns:x="winvistaskin::*" ref.Styles="res://WinVistaSkin/Style">
+      <RibbonToolstripMenuTemplate ContainerComposition-ref="container" ContentComposition-ref="content" MinSizeLimitation="LimitToElementAndChildren">
+        <att.SizeBoxOption>AlwaysTrue</att.SizeBoxOption>
+
+        <SolidBackground ref.Style="toolstripMenuBackground"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder ref.Style="ribbonMenuBorder"/>
+
+          <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
+            <att.Rows>
+              <_>composeType:Percentage percentage:1.0</_>
+              <_>composeType:Absolute absolute:3</_>
+              <_>composeType:MinSize</_>
+              <_>composeType:Absolute absolute:4</_>
+            </att.Rows>
+            <att.Columns>
+              <_>composeType:Percentage percentage:1.0</_>
+              <_>composeType:Absolute absolute:4</_>
+            </att.Columns>
+
+            <Cell ref.Name="content" Site="row:0 column:0 columnSpan:2"/>
+
+            <Cell Site="row:1 column:0 columnSpan:2">
+              <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1">
+                <SolidBackground ref.Style="ribbonMenuBorder"/>
+              </Bounds>
+            </Cell>
+
+            <Cell Site="row:2 column:0 columnSpan:2">
+              <Bounds ref.Name="container" AlignmentToParent="left:3 top:3 right:3 bottom:3"/>
+            </Cell>
+
+            <Cell Site="row:3 column:0" AssociatedHitTestResult="BorderBottom">
+              <SolidBackground Color-eval="vistaColors.RibbonBorder"/>
+            </Cell>
+            <Cell Site="row:3 column:1" AssociatedHitTestResult="BorderRightBottom">
+              <SolidBackground Color-eval="vistaColors.RibbonBorder"/>
+            </Cell>
+          </Table>
+        </Bounds>
+      </RibbonToolstripMenuTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonGalleryDropdownButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonGalleryDropdownButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : ButtonColors = GetScrollButtonColors(true, ButtonState::Normal, true) {}
+        var animation : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(GetScrollButtonColors(true, ButtonState::Normal, true)));
+        var lastAnimation : IGuiAnimation^ = null;
+      ]]></ref.Members>
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>GetScrollButtonColors(self.VisuallyEnabled, self.State, true)</att.Colors-bind>
+        <ev.ColorsChanged-eval><![CDATA[{
+          self.KillAnimation(self.lastAnimation);
+          self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
+          self.AddAnimation(self.lastAnimation);
+        }]]></ev.ColorsChanged-eval>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.animation.Current.Background"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <att.Rows><CellOption>composeType:Percentage percentage:0.5</CellOption><CellOption>composeType:Percentage percentage:0.5</CellOption></att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
+          <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
+        </Table>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:1</CellOption>
+            <CellOption>composeType:Absolute absolute:2</CellOption>
+            <CellOption>composeType:Absolute absolute:5</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:9</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:1 column:1">
+            <SolidBackground Color-bind="self.animation.Current.Text"/>
+          </Cell>
+
+          <Cell Site="row:3 column:1">
+            <Polygon BorderColor-bind="self.animation.Current.Text" BackgroundColor-bind="self.animation.Current.Text" Size="x:9 y:5">
+              <att.Points>
+                <Point>x:0 y:0</Point>
+                <Point>x:4 y:4</Point>
+                <Point>x:8 y:0</Point>
+              </att.Points>
+            </Polygon>
+          </Cell>
+        </Table>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+</Folder>
