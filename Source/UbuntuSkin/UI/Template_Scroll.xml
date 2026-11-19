@@ -293,7 +293,7 @@
                 </Bounds>
                 <PartialView>
                   <att.WidthPageSize-bind>self.TotalSize == 0 ? 0.0 : (cast double self.Position) / self.TotalSize</att.WidthPageSize-bind>
-                  <SolidBackground Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.VisuallyEnabled ? ubuntuColors.Accent : ubuntuColors.DisabledInk"/>
+                  <SolidBackground Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.VisuallyEnabled ? ubuntuColors.ControlAccent : ubuntuColors.DisabledInk"/>
                 </PartialView>
               </Cell>
             </Table>
@@ -353,7 +353,7 @@
                 </Bounds>
                 <PartialView>
                   <att.HeightPageSize-bind>self.TotalSize == 0 ? 0.0 : (cast double self.Position) / self.TotalSize</att.HeightPageSize-bind>
-                  <SolidBackground Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.VisuallyEnabled ? ubuntuColors.Accent : ubuntuColors.DisabledInk"/>
+                  <SolidBackground Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.VisuallyEnabled ? ubuntuColors.ControlAccent : ubuntuColors.DisabledInk"/>
                 </PartialView>
               </Cell>
             </Table>
@@ -389,7 +389,7 @@
                 self.Position <= 0 ? 0.0 : self.Position >= self.TotalSize - self.PageSize ? 1.0 :
                 (cast double self.Position) / (self.TotalSize - self.PageSize)
               ]]></att.WidthPageSize-bind>
-              <SolidBackground Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-eval="ubuntuColors.Accent"/>
+              <SolidBackground Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-eval="ubuntuColors.ControlAccent"/>
             </PartialView>
           </Cell>
         </Table>

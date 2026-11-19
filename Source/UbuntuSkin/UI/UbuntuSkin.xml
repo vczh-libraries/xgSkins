@@ -10,6 +10,12 @@
         WindowBackground : Color;
         ViewBackground : Color;
         HeaderBackground : Color;
+        InactiveHeaderBackground : Color;
+        HeaderInk : Color;
+        InactiveHeaderInk : Color;
+        PopupBackground : Color;
+        ControlAccent : Color;
+        ControlAccentPressed : Color;
         Border : Color;
         Divider : Color;
         Ink : Color;
@@ -47,6 +53,10 @@
         TabNormal : ButtonColors;
         TabHovered : ButtonColors;
         TabSelected : ButtonColors;
+        HeaderActionNormal : ButtonColors;
+        HeaderActionHovered : ButtonColors;
+        HeaderActionPressed : ButtonColors;
+        HeaderActionDisabled : ButtonColors;
         CommandNormal : ButtonColors;
         CommandHovered : ButtonColors;
         CommandPressed : ButtonColors;
@@ -61,49 +71,55 @@
       func CreateDefaultColorPackage() : ColorPackage
       {
         return {
-          WindowBackground: cast Color "#FAFAFA";
+          WindowBackground: cast Color "#F7F7F7";
           ViewBackground: cast Color "#FFFFFF";
-          HeaderBackground: cast Color "#FFFFFF";
-          Border: cast Color "#C7C7C7";
-          Divider: cast Color "#DEDEDE";
+          HeaderBackground: cast Color "#323030";
+          InactiveHeaderBackground: cast Color "#3F3D3D";
+          HeaderInk: cast Color "#F7F7F7";
+          InactiveHeaderInk: cast Color "#BBBABA";
+          PopupBackground: cast Color "#FAFAFA";
+          ControlAccent: cast Color "#924D8B";
+          ControlAccentPressed: cast Color "#743D6F";
+          Border: cast Color "#C6C6C6";
+          Divider: cast Color "#D8D8D8";
           Ink: cast Color "#3D3D3D";
-          DocumentInk: cast Color "#111111";
+          DocumentInk: cast Color "#181818";
           SecondaryInk: cast Color "#646464";
           DisabledInk: cast Color "#929292";
           Accent: cast Color "#E95420";
-          AccentPressed: cast Color "#C23F12";
-          Focus: cast Color "#ED835E";
+          AccentPressed: cast Color "#BF4214";
+          Focus: cast Color "#EF895F";
           SelectedText: cast Color "#FFFFFF";
           Clear: cast Color "#00000000";
-          HoverSurface: cast Color "#EDEDED";
-          PressedSurface: cast Color "#DCDCDC";
-          SelectedSurface: cast Color "#FBE7DF";
-          CaptionButtonSurface: cast Color "#EAEAEA";
-          Track: cast Color "#DFDFDF";
+          HoverSurface: cast Color "#E8E8E8";
+          PressedSurface: cast Color "#D6D6D6";
+          SelectedSurface: cast Color "#E95420";
+          CaptionButtonSurface: cast Color "#535150";
+          Track: cast Color "#C7C7C7";
           KeytipBackground: cast Color "#353535";
           KeytipText: cast Color "#FFFFFF";
           EditorNormal: { Border: cast Color "#C7C7C7"; Background: cast Color "#FFFFFF"; };
           EditorHovered: { Border: cast Color "#B5B5B5"; Background: cast Color "#FFFFFF"; };
-          EditorFocused: { Border: cast Color "#ED835E"; Background: cast Color "#FFFFFF"; };
+          EditorFocused: { Border: cast Color "#EF895F"; Background: cast Color "#FFFFFF"; };
           EditorDisabled: { Border: cast Color "#DEDEDE"; Background: cast Color "#F7F7F7"; };
           ButtonNormal: {
-            Border: cast Color "#C7C7C7";
+            Border: cast Color "#BCBCBC";
+            G1: cast Color "#FFFFFF";
+            G2: cast Color "#EDEDEC";
+            Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          ButtonHovered: {
+            Border: cast Color "#AAAAAA";
             G1: cast Color "#FFFFFF";
             G2: cast Color "#F7F7F7";
             Text: cast Color "#3D3D3D";
             Bullet: cast Color "#00000000";
           };
-          ButtonHovered: {
-            Border: cast Color "#B8B8B8";
-            G1: cast Color "#FFFFFF";
-            G2: cast Color "#FFFFFF";
-            Text: cast Color "#3D3D3D";
-            Bullet: cast Color "#00000000";
-          };
           ButtonPressed: {
-            Border: cast Color "#B8B8B8";
-            G1: cast Color "#DBDBDB";
-            G2: cast Color "#E4E4E4";
+            Border: cast Color "#A7A7A7";
+            G1: cast Color "#D6D6D5";
+            G2: cast Color "#E0E0DF";
             Text: cast Color "#3D3D3D";
             Bullet: cast Color "#00000000";
           };
@@ -146,21 +162,21 @@
             Border: cast Color "#00000000";
             G1: cast Color "#00000000";
             G2: cast Color "#00000000";
-            Text: cast Color "#3D3D3D";
+            Text: cast Color "#181818";
             Bullet: cast Color "#00000000";
           };
           ItemHovered: {
             Border: cast Color "#00000000";
-            G1: cast Color "#EDEDED";
-            G2: cast Color "#EDEDED";
-            Text: cast Color "#3D3D3D";
+            G1: cast Color "#EFEFEF";
+            G2: cast Color "#EFEFEF";
+            Text: cast Color "#181818";
             Bullet: cast Color "#00000000";
           };
           ItemSelected: {
             Border: cast Color "#00000000";
-            G1: cast Color "#FBE7DF";
-            G2: cast Color "#FBE7DF";
-            Text: cast Color "#3D3D3D";
+            G1: cast Color "#E95420";
+            G2: cast Color "#E95420";
+            Text: cast Color "#181818";
             Bullet: cast Color "#00000000";
           };
           ItemDisabled: {
@@ -171,24 +187,52 @@
             Bullet: cast Color "#00000000";
           };
           TabNormal: {
-            Border: cast Color "#DEDEDE";
-            G1: cast Color "#FAFAFA";
-            G2: cast Color "#FAFAFA";
+            Border: cast Color "#C9C9C9";
+            G1: cast Color "#EFEFEF";
+            G2: cast Color "#EFEFEF";
             Text: cast Color "#3D3D3D";
             Bullet: cast Color "#00000000";
           };
           TabHovered: {
-            Border: cast Color "#DEDEDE";
-            G1: cast Color "#EDEDED";
-            G2: cast Color "#EDEDED";
+            Border: cast Color "#C9C9C9";
+            G1: cast Color "#E4E4E4";
+            G2: cast Color "#E4E4E4";
             Text: cast Color "#3D3D3D";
             Bullet: cast Color "#00000000";
           };
           TabSelected: {
-            Border: cast Color "#DEDEDE";
+            Border: cast Color "#C9C9C9";
             G1: cast Color "#FFFFFF";
             G2: cast Color "#FFFFFF";
             Text: cast Color "#3D3D3D";
+            Bullet: cast Color "#00000000";
+          };
+          HeaderActionNormal: {
+            Border: cast Color "#201F1F";
+            G1: cast Color "#4C4A49";
+            G2: cast Color "#413F3E";
+            Text: cast Color "#F7F7F7";
+            Bullet: cast Color "#00000000";
+          };
+          HeaderActionHovered: {
+            Border: cast Color "#1F1E1E";
+            G1: cast Color "#595755";
+            G2: cast Color "#504D4C";
+            Text: cast Color "#FFFFFF";
+            Bullet: cast Color "#00000000";
+          };
+          HeaderActionPressed: {
+            Border: cast Color "#171616";
+            G1: cast Color "#2B2929";
+            G2: cast Color "#343232";
+            Text: cast Color "#FFFFFF";
+            Bullet: cast Color "#00000000";
+          };
+          HeaderActionDisabled: {
+            Border: cast Color "#2C2A2A";
+            G1: cast Color "#3D3B3B";
+            G2: cast Color "#3A3838";
+            Text: cast Color "#9E9C9C";
             Bullet: cast Color "#00000000";
           };
           CommandNormal: {
@@ -200,24 +244,24 @@
           };
           CommandHovered: {
             Border: cast Color "#00000000";
-            G1: cast Color "#EDEDED";
-            G2: cast Color "#EDEDED";
+            G1: cast Color "#DFDFDF";
+            G2: cast Color "#DFDFDF";
             Text: cast Color "#3D3D3D";
             Bullet: cast Color "#00000000";
           };
           CommandPressed: {
             Border: cast Color "#00000000";
-            G1: cast Color "#DCDCDC";
-            G2: cast Color "#DCDCDC";
+            G1: cast Color "#D3D3D3";
+            G2: cast Color "#D3D3D3";
             Text: cast Color "#3D3D3D";
             Bullet: cast Color "#00000000";
           };
           CommandSelected: {
             Border: cast Color "#00000000";
-            G1: cast Color "#FBE7DF";
-            G2: cast Color "#FBE7DF";
+            G1: cast Color "#DDD8DC";
+            G2: cast Color "#DDD8DC";
             Text: cast Color "#3D3D3D";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#924D8B";
           };
           CommandDisabled: {
             Border: cast Color "#00000000";
@@ -241,9 +285,9 @@
             Bullet: cast Color "#00000000";
           };
           ScrollHandlePressed: {
-            Border: cast Color "#C23F12";
-            G1: cast Color "#C23F12";
-            G2: cast Color "#C23F12";
+            Border: cast Color "#C34112";
+            G1: cast Color "#C34112";
+            G2: cast Color "#C34112";
             Text: cast Color "#3D3D3D";
             Bullet: cast Color "#00000000";
           };

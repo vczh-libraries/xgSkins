@@ -6,8 +6,8 @@
       <![CDATA[
         cast Color let margin = self.CustomFramePadding in (
           (not self.Border) or (margin.left + margin.top + margin.right + margin.bottom == 0) ? ubuntuskin::ubuntuColors.Clear :
-          self.VisuallyEnabled and self.Activated ? ubuntuskin::ubuntuColors.Border :
-          ubuntuskin::ubuntuColors.Divider
+          self.VisuallyEnabled and self.Activated ? ubuntuskin::ubuntuColors.HeaderActionNormal.Border :
+          ubuntuskin::ubuntuColors.InactiveHeaderBackground
         )
       ]]>
     </att.Color-bind>
@@ -16,8 +16,8 @@
     <att.Color-bind>
       <![CDATA[
         cast Color (
-          self.VisuallyEnabled and self.Activated ? ubuntuskin::ubuntuColors.Ink :
-          ubuntuskin::ubuntuColors.DisabledInk
+          self.VisuallyEnabled and self.Activated ? ubuntuskin::ubuntuColors.HeaderInk :
+          ubuntuskin::ubuntuColors.InactiveHeaderInk
         )
       ]]>
     </att.Color-bind>
@@ -51,17 +51,17 @@
     </att.Color-bind>
   </Style>
   <Style ref.Path="//*.textListBackgroundAndColor">
-    <att.TextColor-eval>ubuntuskin::ubuntuColors.Ink</att.TextColor-eval>
+    <att.TextColor-eval>ubuntuskin::ubuntuColors.ItemNormal.Text</att.TextColor-eval>
     <SolidBackground Color-eval="ubuntuskin::ubuntuColors.ViewBackground"/>
   </Style>
   <Style ref.Path="//*.listViewBackgroundAndColor">
-    <att.PrimaryTextColor-eval>ubuntuskin::ubuntuColors.Ink</att.PrimaryTextColor-eval>
-    <att.SecondaryTextColor-eval>ubuntuskin::ubuntuColors.DisabledInk</att.SecondaryTextColor-eval>
+    <att.PrimaryTextColor-eval>ubuntuskin::ubuntuColors.ItemNormal.Text</att.PrimaryTextColor-eval>
+    <att.SecondaryTextColor-eval>ubuntuskin::ubuntuColors.Ink</att.SecondaryTextColor-eval>
     <att.ItemSeparatorColor-eval>ubuntuskin::ubuntuColors.Divider</att.ItemSeparatorColor-eval>
     <SolidBackground Color-eval="ubuntuskin::ubuntuColors.ViewBackground"/>
   </Style>
   <Style ref.Path="//*.treeViewBackgroundAndColor">
-    <att.TextColor-eval>ubuntuskin::ubuntuColors.Ink</att.TextColor-eval>
+    <att.TextColor-eval>ubuntuskin::ubuntuColors.ItemNormal.Text</att.TextColor-eval>
     <SolidBackground Color-eval="ubuntuskin::ubuntuColors.ViewBackground"/>
   </Style>
   <Style ref.Path="//*.controlText">
@@ -74,7 +74,7 @@
       ]]>
     </att.Color-bind>
   </Style>
-  <Style ref.Path="//*.toolstripMenuBackground" Color-eval="ubuntuskin::ubuntuColors.ViewBackground"/>
+  <Style ref.Path="//*.toolstripMenuBackground" Color-eval="ubuntuskin::ubuntuColors.PopupBackground"/>
   <Style ref.Path="//*.toolstripMenuBorder" Color-eval="ubuntuskin::ubuntuColors.Border"/>
   <Style ref.Path="//*.toolstripSplitter" Color-eval="ubuntuskin::ubuntuColors.Divider"/>
   <Style ref.Path="//*.toolstripArrow" BorderColor-bind="self.animation.Current.Text" BackgroundColor-bind="self.animation.Current.Text"/>

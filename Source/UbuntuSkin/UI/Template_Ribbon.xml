@@ -534,7 +534,7 @@
   <Instance name="RibbonGroupMenuTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::RibbonGroupMenuTemplate" ref.Styles="res://UbuntuSkin/Style">
       <RibbonGroupMenuTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <SolidBackground Color-eval="ubuntuColors.HeaderBackground"/>
+        <SolidBackground Color-eval="ubuntuColors.PopupBackground"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder ref.Style="ribbonMenuBorder"/>
           <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" CellPadding="3">

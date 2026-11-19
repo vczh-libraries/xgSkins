@@ -1,40 +1,46 @@
 # UbuntuSkin color package
 
-The default follows Yaru light in Ubuntu 24.04 LTS and 26.04 LTS. Both releases use a near-white window, white content, inkstone text and the Ubuntu orange accent. The upstream widget-factory image shows the geometry of the notebook underline, check marks, scale, and progress bars. The versioned styles define the default accent and the neutral circular header buttons. [24.04 colors](https://github.com/ubuntu/yaru/blob/24.04.3/gtk/src/default/gtk-3.0/_colors.scss) · [26.04 palette](https://github.com/ubuntu/yaru/blob/26.04.5.1ubuntu/gtk/src/default/gtk-3.0/_palette.scss) · [Header buttons and focus outlines](https://github.com/ubuntu/yaru/blob/26.04.5.1ubuntu/gtk/src/default/gtk-3.0/_tweaks.scss) · [Yaru widget-factory screenshot](https://github.com/ubuntu/yaru/blob/26.04.5.1ubuntu/.github/readme_pics/factory-light.png).
+UbuntuSkin follows the default **Yaru Standard** appearance in Ubuntu 20.04 LTS (Focal Fossa). The Files window in the reference pairs a charcoal header and an orange close button with a porcelain sidebar and white file area. The open system menu shows the corresponding light popup, gray hover band and aubergine scale. The desktop wallpaper, panel and dock belong to the shell. [Canonical’s theme announcement](https://ubuntu.com/blog/new-ubuntu-theme-in-development-for-20-04) · [Yaru 20.04.7 base colors](https://github.com/ubuntu/yaru/blob/20.04.7/gtk/src/default/gtk-3.20/_colors.scss) · [Ubuntu palette](https://github.com/ubuntu/yaru/blob/20.04.7/gtk/src/default/gtk-3.20/_ubuntu-colors.scss) · [Mixed header bar](https://github.com/ubuntu/yaru/blob/20.04.7/gtk/src/default/gtk-3.20/_headerbar.scss) · [Window controls](https://github.com/ubuntu/yaru/blob/20.04.7/gtk/src/default/gtk-3.20/_tweaks.scss) · [Upstream widget factory](https://github.com/ubuntu/yaru/blob/20.04.7/docs/widget-factory1.png).
 
 ## Surface and foreground colors
 
 | Field | Default | Where it appears |
 | --- | --- | --- |
-| `WindowBackground` | `#FAFAFA` | Base for windows, groups, notebook headers and inactive title bars. |
-| `ViewBackground` | `#FFFFFF` | Editor, list, document, notebook page and popup content. |
-| `HeaderBackground` | `#FFFFFF` | Active window header bar, ribbon and tool controls. |
-| `Border` | `#C7C7C7` | Borders between surfaces, content frames and entry outlines. |
-| `Divider` | `#DEDEDE` | Subtle dividers between rows, columns and command groups. |
-| `Ink` | `#3D3D3D` | Control text, caption glyphs, sort indicators and ordinary arrows. |
-| `DocumentInk` | `#111111` | Text and caret in unformatted documents and primary calendar numerals. |
+| `WindowBackground` | `#F7F7F7` | Porcelain window, sidebar, ribbon group and standalone toolbar surfaces. |
+| `ViewBackground` | `#FFFFFF` | White editor, list, document, notebook page and tooltip content. |
+| `HeaderBackground` | `#323030` | Active custom window header, menubar and ribbon tab band. |
+| `InactiveHeaderBackground` | `#3F3D3D` | Backdrop window header. |
+| `HeaderInk` | `#F7F7F7` | Window title and active minimize, maximize and restore glyphs. |
+| `InactiveHeaderInk` | `#BBBABA` | Inactive caption and insensitive dark-header text. |
+| `PopupBackground` | `#FAFAFA` | Menu, embedded menu toolbar and expanded ribbon group. |
+| `ControlAccent` | `#924D8B` | Aubergine check/radio fills, menu check marks, filled scales and progress. |
+| `ControlAccentPressed` | `#743D6F` | Pressed selected checkbox or radio. |
+| `Border` | `#C6C6C6` | Borders between surfaces, content frames and popup outlines. |
+| `Divider` | `#D8D8D8` | Dividers between rows, columns and groups of commands. |
+| `Ink` | `#3D3D3D` | Control text, sort indicators, ordinary arrows and secondary list labels. |
+| `DocumentInk` | `#181818` | Unformatted document text, caret and primary calendar numerals. |
 | `SecondaryInk` | `#646464` | Secondary descriptions and adjacent-month dates. |
-| `DisabledInk` | `#929292` | Inactive labels, glyphs and disabled actions. |
-| `Accent` | `#E95420` | Selected notebook underline, checked controls, filled scales and text selection. |
-| `AccentPressed` | `#C23F12` | Pressed accent controls and dragged scrollbar handles. |
-| `Focus` | `#ED835E` | Keyboard focus indicator and focused editor border. |
-| `SelectedText` | `#FFFFFF` | Check marks and selected document text on orange. |
-| `Clear` | `#00000000` | Areas that show the underlying surface. |
-| `HoverSurface` | `#EDEDED` | Hover feedback on flat command and item surfaces. |
-| `PressedSurface` | `#DCDCDC` | Pressed flat commands, open menus and active column headers. |
-| `SelectedSurface` | `#FBE7DF` | Selected GacUI rows and calendar days whose label colors are shared with their neighbors. |
-| `CaptionButtonSurface` | `#EAEAEA` | Resting circular window controls. |
-| `Track` | `#DFDFDF` | Scale troughs and empty progress bars. |
+| `DisabledInk` | `#929292` | Insensitive labels, controls and glyphs on light surfaces. |
+| `Accent` | `#E95420` | Orange close disc, active notebook underline, document selection and selected-date edge. |
+| `AccentPressed` | `#BF4214` | Pressed close disc. |
+| `Focus` | `#EF895F` | Keyboard focus outlines and close-button hover. |
+| `SelectedText` | `#FFFFFF` | Close cross and selected document text. |
+| `Clear` | `#00000000` | Resting caption actions, unpainted surfaces and transparent marks. |
+| `HoverSurface` | `#E8E8E8` | Hovered column headers, column filter and date cells. |
+| `PressedSurface` | `#D6D6D6` | Pressed column headers. |
+| `SelectedSurface` | `#E95420` | Selected date and highlighted page underline. |
+| `CaptionButtonSurface` | `#535150` | Hover circle behind minimize, maximize and restore. |
+| `Track` | `#C7C7C7` | Empty portion of a scale or progress bar. |
 | `KeytipBackground` | `#353535` | Background of keyboard access-key bubbles. |
-| `KeytipText` | `#FFFFFF` | Text inside keyboard access-key bubbles. |
+| `KeytipText` | `#FFFFFF` | Text in keyboard access-key bubbles. |
 
 ## Control states
 
-A `ButtonColors` value carries an outline in `Border`, vertical face colors in `G1` and `G2`, the foreground in `Text` and the check/radio mark or menu-gutter color in `Bullet`. Matching gradient stops give flat fills. A checked indicator takes its fill from `Accent`, `AccentPressed` or `DisabledInk`. The scrollbar thumb uses the first face color.
+A `ButtonColors` value carries an outline in `Border`, vertical face colors in `G1` and `G2`, the foreground in `Text` and the indicator mark in `Bullet`. Matching gradient stops give flat fills. A checked indicator takes its fill from `ControlAccent`, `ControlAccentPressed` or `DisabledInk`. The scrollbar thumb uses the first face color.
 
 | Field | Where it appears |
 | --- | --- |
-| `ButtonNormal` | Resting pushbutton, combo box and scale handle. |
+| `ButtonNormal` | Resting pushbutton, standalone toolbar action, combo box and scale handle. |
 | `ButtonHovered` | Pointer over an action surface. |
 | `ButtonPressed` | Pressed action or open combo box. |
 | `ButtonDisabled` | Insensitive action. |
@@ -44,12 +50,16 @@ A `ButtonColors` value carries an outline in `Border`, vertical face colors in `
 | `CheckedDisabled` | Insensitive check/radio frame, label and glyph. |
 | `ItemNormal` | Resting list, tree and gallery items. |
 | `ItemHovered` | Pointer over a row. |
-| `ItemSelected` | Selected or pressed row. Selected rows have an orange edge. |
+| `ItemSelected` | Full-width solid orange selected or pressed row. |
 | `ItemDisabled` | Disabled row. |
 | `TabNormal` | Resting notebook header. |
 | `TabHovered` | Hovered notebook header. |
 | `TabSelected` | Active notebook header and its page surface. |
-| `CommandNormal` | Resting menu, toolbar, gallery arrow and ribbon commands. |
+| `HeaderActionNormal` | Compact charcoal menubar actions, ribbon tabs, active window border and menubar separator. |
+| `HeaderActionHovered` | Hovered header actions and ribbon tabs. |
+| `HeaderActionPressed` | Open header menu, pressed caption control and selected ribbon tab. |
+| `HeaderActionDisabled` | Inactive header actions and disabled ribbon tabs. |
+| `CommandNormal` | Resting popup menu, gallery arrow and ribbon commands. |
 | `CommandHovered` | Hovered command. |
 | `CommandPressed` | Pressed command and open dropdown. |
 | `CommandSelected` | Latched command. |
@@ -68,4 +78,6 @@ Each `EditorColors` value contains a `Border` and a `Background`. Text entries, 
 | `EditorFocused` | Focused entry or view. |
 | `EditorDisabled` | Insensitive entry or view. |
 
-GacUI's graphical lists share text colors across rows. The selected row therefore uses a warm tint and an orange leading edge. The calendar uses the same tint and an orange outline around the selected day. Popup surfaces support arbitrary application content and retain a light background. Ribbon commands share the Yaru toolbar states. [List foregrounds](../../suggestions/GacUI/SelectedItemForeground.md) · [Calendar foregrounds](../../suggestions/GacUI/SelectedCalendarDayForeground.md).
+Built-in graphical lists and calendars share foregrounds across their items. The skin uses an edge-to-edge orange row with near-black primary labels to preserve contrast in all six list views and the data grid. Editor selection uses white on orange. The calendar keeps each date’s month-dependent ink on a compact orange selected tile. Light menu rows highlight in gray and use an aubergine tick for a checked command. [List foregrounds](../../suggestions/GacUI/SelectedItemForeground.md) · [Calendar foregrounds](../../suggestions/GacUI/SelectedCalendarDayForeground.md).
+
+Yaru’s inverted header bar supplies the menubar and ribbon tab treatment. The standalone toolbar and ribbon command groups use traditional light GTK surfaces so the application’s supplied bitmap icons remain legible. Ribbon header extension areas keep a light backing for application-supplied labels and controls.

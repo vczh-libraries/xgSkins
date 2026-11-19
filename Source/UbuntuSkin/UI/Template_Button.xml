@@ -53,7 +53,7 @@
         var colors = not enabled ? ubuntuColors.CheckedDisabled :
           state == ButtonState::Pressed ? ubuntuColors.CheckedPressed :
           state == ButtonState::Active ? ubuntuColors.CheckedHovered : ubuntuColors.CheckedNormal;
-        var checkedFace = enabled ? (state == ButtonState::Pressed ? ubuntuColors.AccentPressed : ubuntuColors.Accent) : ubuntuColors.DisabledInk;
+        var checkedFace = enabled ? (state == ButtonState::Pressed ? ubuntuColors.ControlAccentPressed : ubuntuColors.ControlAccent) : ubuntuColors.DisabledInk;
         return {
           Border: selected ? checkedFace : colors.Border;
           G1: selected ? checkedFace : colors.G1;
@@ -108,15 +108,15 @@
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBorder Shape="shapeType:RoundRect radiusX:5 radiusY:5" Color-bind="self.animationBuilder.Current.Border"/>
+          <SolidBorder Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-bind="self.animationBuilder.Current.Border"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <GradientBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+          <GradientBackground Shape="shapeType:RoundRect radiusX:3 radiusY:3" Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Focused">
-          <SolidBorder Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-eval="ubuntuskin::ubuntuColors.Focus"/>
+          <SolidBorder Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-eval="ubuntuskin::ubuntuColors.Focus"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:8 top:4 right:8 bottom:4">
+        <Bounds AlignmentToParent="left:7 top:3 right:7 bottom:3">
           <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
           <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
         </Bounds>
@@ -172,7 +172,7 @@
           <Cell Site="row:0 column:1 rowSpan:3 columnSpan:1">
             <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
               <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
-                <SolidBorder Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-eval="ubuntuskin::ubuntuColors.Focus"/>
+                <SolidBorder Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-eval="ubuntuskin::ubuntuColors.Focus"/>
               </Bounds>
               <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
                 <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
@@ -228,7 +228,7 @@
           <Cell Site="row:0 column:1 rowSpan:3 columnSpan:1">
             <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
               <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
-                <SolidBorder Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-eval="ubuntuskin::ubuntuColors.Focus"/>
+                <SolidBorder Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-eval="ubuntuskin::ubuntuColors.Focus"/>
               </Bounds>
               <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
                 <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>

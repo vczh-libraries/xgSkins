@@ -4,14 +4,9 @@
       <ref.Members><![CDATA[prop Colors : ButtonColors = ubuntuColors.ItemNormal {}]]></ref.Members>
       <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.ItemDisabled : self.Selected or self.State == ButtonState::Pressed ? ubuntuColors.ItemSelected : self.State == ButtonState::Active ? ubuntuColors.ItemHovered : ubuntuColors.ItemNormal</att.Colors-bind>
+        <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder Color-bind="self.Colors.Border"/>
-        </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
-        </Bounds>
-        <Bounds AlignmentToParent="left:0 top:0 right:-1 bottom:0" PreferredMinSize="x:3 y:0" Visible-bind="self.VisuallyEnabled and self.Selected">
-          <SolidBackground Color-eval="ubuntuColors.Accent"/>
         </Bounds>
         <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
       </SelectableButtonTemplate>
@@ -137,7 +132,7 @@
               </Bounds>
             </Cell>
           </Table>
-          <Bounds AlignmentToParent="left:8 top:6 right:5 bottom:5">
+          <Bounds AlignmentToParent="left:6 top:4 right:5 bottom:4">
             <SolidLabel Color-bind="self.VisuallyEnabled ? ubuntuColors.Ink : ubuntuColors.DisabledInk" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
           </Bounds>
         </Bounds>
@@ -219,7 +214,7 @@
         <att.BackgroundTemplate>ubuntuskin::ItemBackgroundTemplate</att.BackgroundTemplate>
         <att.ExpandingDecoratorTemplate>ubuntuskin::ExpandingDecoratorTemplate</att.ExpandingDecoratorTemplate>
 
-        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+        <x:EditorBorderTemplate Sidebar="true" AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
           <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
             <att.HScrollTemplate>ubuntuskin::HScrollTemplate</att.HScrollTemplate>
             <att.VScrollTemplate>ubuntuskin::VScrollTemplate</att.VScrollTemplate>

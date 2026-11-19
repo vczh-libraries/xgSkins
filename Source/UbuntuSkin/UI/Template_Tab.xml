@@ -4,23 +4,25 @@
       <ref.Members>
         <![CDATA[
           prop Highlighted: bool = false {}
+          prop RibbonPage: bool = false {}
           prop TabFocused: bool = false {}
           prop Colors : ButtonColors = ubuntuColors.TabNormal {}
         ]]>
       </ref.Members>
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.RibbonPage-bind>((cast (RibbonTabPage*) self.Context) is not null) ?? false</att.RibbonPage-bind>
         <att.Highlighted-bind>(cast (RibbonTabPage*) self.Context).Highlighted ?? false</att.Highlighted-bind>
         <att.TabFocused-bind>(cast (TabPage*) self.Context).OwnerTab.Focused ?? false</att.TabFocused-bind>
-        <att.Colors-bind>self.Selected ? ubuntuColors.TabSelected : self.VisuallyEnabled and self.State != ButtonState::Normal ? ubuntuColors.TabHovered : ubuntuColors.TabNormal</att.Colors-bind>
-        <SolidBackground Color-bind="self.Colors.G1"/>
+        <att.Colors-bind>self.RibbonPage ? (not self.VisuallyEnabled ? ubuntuColors.HeaderActionDisabled : self.Selected ? ubuntuColors.HeaderActionPressed : self.State != ButtonState::Normal ? ubuntuColors.HeaderActionHovered : ubuntuColors.HeaderActionNormal) : self.Selected ? ubuntuColors.TabSelected : self.VisuallyEnabled and self.State != ButtonState::Normal ? ubuntuColors.TabHovered : ubuntuColors.TabNormal</att.Colors-bind>
+        <SolidBackground Color-bind="self.RibbonPage and not self.Selected and self.State == ButtonState::Normal ? ubuntuColors.HeaderBackground : self.Colors.G1"/>
         <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="x:0 y:3" Visible-bind="self.Selected or self.Highlighted">
           <SolidBackground Color-bind="self.Selected ? ubuntuColors.Accent : self.State != ButtonState::Normal ? ubuntuColors.Focus : ubuntuColors.SelectedSurface"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Selected and self.TabFocused">
           <SolidBorder Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-eval="ubuntuskin::ubuntuColors.Focus"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:10 top:5 right:10 bottom:5">
-          <SolidLabel Color-bind="self.VisuallyEnabled ? self.Colors.Text : ubuntuColors.DisabledInk" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Bounds AlignmentToParent="left:10 top:4 right:10 bottom:4">
+          <SolidLabel Color-bind="self.VisuallyEnabled ? self.Colors.Text : self.RibbonPage ? ubuntuColors.InactiveHeaderInk : ubuntuColors.DisabledInk" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Bounds>
       </SelectableButtonTemplate>
     </Instance>
@@ -91,6 +93,7 @@
           </Cell>
 
           <Cell Site="row:0 column:1">
+            <SolidBackground Color-bind="self.IsRibbon ? ubuntuColors.HeaderBackground : ubuntuColors.TabNormal.G1"/>
             <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="x:0 y:1">
               <SolidBackground Color-bind="self.IsRibbon ? ubuntuColors.Divider : ubuntuColors.TabNormal.Border"/>
             </Bounds>
@@ -111,7 +114,7 @@
           <Cell Site="row:2 column:0 columnSpan:3">
             <SolidBorder Color-bind="self.IsRibbon ? ubuntuColors.Divider : ubuntuColors.TabNormal.Border"/>
             <Bounds ref.Name="container" AlignmentToParent="left:1 top:0 right:1 bottom:1">
-              <SolidBackground Color-bind="self.IsRibbon ? ubuntuColors.HeaderBackground : ubuntuColors.TabSelected.G1"/>
+              <SolidBackground Color-bind="self.IsRibbon ? ubuntuColors.WindowBackground : ubuntuColors.TabSelected.G1"/>
             </Bounds>
           </Cell>
         </Table>

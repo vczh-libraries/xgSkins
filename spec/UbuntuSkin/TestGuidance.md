@@ -9,6 +9,7 @@ Start `FullControlTest /D2D /Hosted`, open **Window Manager / Color Theme** and 
 - ubuntuskin::TooltipTemplate: Control / Document Editor (Ribbon).
 - ubuntuskin::SystemFrameWindowTemplate: Window Manager, Misc / Dialogs.
 - ubuntuskin::CustomFrameWindowTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
+- ubuntuskin::CaptionCloseButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - ubuntuskin::CaptionButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - ubuntuskin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager.
 - ubuntuskin::LabelTemplate: List / TextList, Layout / Easy Layout, Window Manager, Misc / Localization.
@@ -83,8 +84,8 @@ Start `FullControlTest /D2D /Hosted`, open **Window Manager / Color Theme** and 
 
 ## Visual and interaction checks
 
-- In Window Manager, inspect the white header, centered title and circular window actions. Check maximize, restore, minimize where available, resize and close.
-- In TextList and TreeView, check the orange marks on selected controls, white glyphs, grayscale disabled indicators and tinted selected rows. Change selection using the keyboard and pointer.
-- In TextBox and the two document editors, inspect focus, selected text, menus, keytips, toolbar toggles and collapsed ribbon groups. In DatePicker, verify a selected day and adjacent-month numerals stay legible.
-- In Layout / Repeat, drag each scale and thumb. Check the orange filled part of the scale and progress bar at both ends and between them. Page the arrowless scrollbars by clicking their troughs.
+- In Window Manager, inspect the charcoal header, light centered title, plain minimize/maximize glyphs and an orange close disc with a small white cross. Check that the side and bottom resize margins blend into the porcelain body and retain a one-pixel outer line. Check maximize, restore, minimize where available, resize and close.
+- In TextList and TreeView, check the aubergine check/radio indicators, white marks, grayscale disabled indicators and full-width orange rows with readable text. Change selection using the keyboard and pointer.
+- In TextBox and the two document editors, inspect orange focus and selected text, gray popup hover rows, keytips, dark header commands, light grouped toolbar actions and collapsed ribbon groups. In DatePicker, verify a selected day and adjacent-month numerals stay legible.
+- In Layout / Repeat, drag each scale and thumb. Check the aubergine filled part of the scale and progress bar at both ends and between them. Page the arrowless scrollbars by clicking their troughs.
 - Visit all pages in the project verification SOP, open their popups, and recheck existing content after switching to another theme and back. Edits, selected rows and the selected calendar date should survive the switch.
