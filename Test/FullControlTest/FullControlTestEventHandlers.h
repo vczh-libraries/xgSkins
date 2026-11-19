@@ -12,9 +12,27 @@ namespace demo
 	template<typename TEditor, typename TSkinItem, typename TWindow>
 	void AttachFctEvents(TWindow* window)
 	{
-		InitializeFctSkinItems([window](const vl::WString& name, const vl::Func<void()>& action, bool selected)
+		auto updateEditorArtwork = [window]()
 		{
-			auto item = vl::Ptr(new TSkinItem(name, action));
+			using namespace vl::presentation;
+			controls::GuiLabel label(theme::ThemeName::Label);
+			label.GetControlTemplateObject();
+			auto ink = label.GetTextColor();
+			bool lightInk = 299 * ink.r + 587 * ink.g + 114 * ink.b >= 128000;
+			for (auto name : { L"editorRibbon", L"editorToolstrip" })
+			{
+				auto editor = dynamic_cast<TEditor*>(window->GetNamedObject(name).GetRawPtr());
+				editor->SetLightIconInk(lightInk);
+			}
+		};
+		updateEditorArtwork();
+		InitializeFctSkinItems([window, updateEditorArtwork](const vl::WString& name, const vl::Func<void()>& action, bool selected)
+		{
+			auto item = vl::Ptr(new TSkinItem(name, [action, updateEditorArtwork]()
+			{
+				action();
+				updateEditorArtwork();
+			}));
 			if (selected) window->SetSelectedSkinItem(item);
 			window->GetSkinItems()->Add(vl::reflection::description::BoxValue(item));
 		});

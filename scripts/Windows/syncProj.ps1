@@ -30,6 +30,13 @@ Get-ChildItem -LiteralPath $source -File | Where-Object {
 # Keep ordinary readouts theme-aware, while preserving explicit custom demo styles.
 # Keep the tracker fixture large enough for the Win7 and XP templates as well.
 $readabilityReplacements = @{
+    'DataGridComponents.xml' = @(
+        @{ Before = '  <Folder name="GenderComponents">'; After = '  <Instance name="WebsiteLinkVisualizerResource" content="File">../WebsiteLinkVisualizer.xml</Instance>
+  <Folder name="GenderComponents">' }
+    )
+    'DataGridTabPage.xml' = @(
+        @{ Before = 'HyperlinkVisualizerTemplate;FocusRectangleVisualizerTemplate;CellBorderVisualizerTemplate'; After = 'demo:WebsiteLinkVisualizer;FocusRectangleVisualizerTemplate;CellBorderVisualizerTemplate' }
+    )
     'DatePickerTabPage.xml' = @(
         @{ Before = '<SolidLabel Font-bind="self.DisplayFont" Color="#FFFFFF" Text-format='; After = '<Label Font-bind="self.DisplayFont" Text-format=' }
     )
@@ -97,6 +104,8 @@ foreach ($fileName in $readabilityReplacements.Keys) {
     }
     [System.IO.File]::WriteAllText($resourceFile, $content, [System.Text.UTF8Encoding]::new($false))
 }
+
+& "$PSScriptRoot/syncEditorArtwork.ps1" -ResourceFolder $resourceDestination
 
 # Keep the upstream UI while placing generated code beside its resource folder.
 $resourcePath = Join-Path $resourceDestination 'Resource.xml'
