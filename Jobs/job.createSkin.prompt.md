@@ -6,6 +6,7 @@ All manual maintained C++ files should be put in `Source/<SKIN-NAME>`.
 The predefined `DarkSkin` is a good example to follow for creating a new skin, follow the pattern of `DarkSkin`, including file organization and naming conventions to complete the requirements below.
 `DarkSkin` source files could be found at `<GacUI-repo>/Source/Skins/DarkSkin`.
 Try your best to use XML instead of workflow script when possible, follow `DarkSkin` for recommended coding pattern.
+Add the skin to the `FullControlTest` skin list so you can switch to the new skin during testing.
 
 ## Resource Files
 
@@ -38,3 +39,11 @@ All types, functions and global variables should be under the "skin-name" namesp
 `Spec/<SKIN-NAME>/ColorPackage.md` to maintain the usage of each `ColorPackage` item.
 
 `Spec/<SKIN-NAME>/Animation.md` to explain how animation is used in each control or item template.
+
+## When Copying from Existing Design
+
+When a new skin is a copy of an existing design,
+you need to do research first and make sure:
+- Read documents if available, e.g., default skin of OS might have guidance in their official documentation.
+- Read screenshots if available.
+- Make sure all controls are covered by the design, otherwise you might need to come out with additional design solutions, by reusing existing design or making a better fit.
