@@ -38,7 +38,7 @@
         <SolidBackground Color-eval="win11Colors.Flyout" Shape="shapeType:RoundRect radiusX:8 radiusY:8"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder ref.Style="toolstripMenuBorder" Shape="shapeType:RoundRect radiusX:8 radiusY:8"/>
-          <Bounds ref.Name="container" AlignmentToParent="left:4 top:4 right:4 bottom:4"/>
+          <Bounds ref.Name="container" AlignmentToParent="left:3 top:3 right:3 bottom:3"/>
         </Bounds>
       </MenuTemplate>
     </Instance>
@@ -96,7 +96,7 @@
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
-          <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+          <Bounds ref.Name ="container" AlignmentToParent="left:2 top:2 right:2 bottom:2">
             <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
           </Bounds>
         </Bounds>
@@ -125,7 +125,7 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
           <Bounds AlignmentToParent="left:0 top:0 right:10 bottom:0">
-            <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+            <Bounds ref.Name ="container" AlignmentToParent="left:2 top:2 right:2 bottom:2">
               <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
             </Bounds>
           </Bounds>
@@ -203,7 +203,7 @@
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:13 bottom:1">
 
-          <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+          <Bounds ref.Name ="container" AlignmentToParent="left:2 top:2 right:2 bottom:2">
             <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
           </Bounds>
         </Bounds>
@@ -228,7 +228,7 @@
           <SolidBackground Color-bind="self.Colors.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
 
-        <Bounds AlignmentToParent="left:10 top:3 right:10 bottom:3">
+        <Bounds AlignmentToParent="left:6 top:2 right:6 bottom:2">
           <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Bounds>
       </ToolstripButtonTemplate>
@@ -240,7 +240,7 @@
       <ref.Members><![CDATA[
         prop Colors : ButtonColors = win11Colors.SubtleNormal {}
       ]]></ref.Members>
-      <ToolstripButtonTemplate ref.Name="self" PreferredMinSize="y:30" MinSizeLimitation="LimitToElementAndChildren">
+      <ToolstripButtonTemplate ref.Name="self" PreferredMinSize="y:22" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.SubtleDisabled : self.SubMenuOpening or self.State != ButtonState::Normal ? win11Colors.SubtleHovered : self.Selected ? win11Colors.SubtleSelected : win11Colors.SubtleNormal</att.Colors-bind>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -249,18 +249,18 @@
 
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <att.Rows>
-            <CellOption>composeType:Absolute absolute:4</CellOption>
+            <CellOption>composeType:Absolute absolute:2</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
             <CellOption>composeType:MinSize</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
-            <CellOption>composeType:Absolute absolute:4</CellOption>
+            <CellOption>composeType:Absolute absolute:2</CellOption>
           </att.Rows>
           <att.Columns>
             <CellOption>composeType:Absolute absolute:2</CellOption>
-            <CellOption>composeType:Absolute absolute:24</CellOption>
+            <CellOption>composeType:Absolute absolute:20</CellOption>
             <CellOption>composeType:Absolute absolute:4</CellOption>
             <CellOption>composeType:MinSize</CellOption>
-            <CellOption>composeType:Absolute absolute:24</CellOption>
+            <CellOption>composeType:Absolute absolute:20</CellOption>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
             <CellOption>composeType:MinSize</CellOption>
             <CellOption>composeType:Absolute absolute:4</CellOption>

@@ -19,13 +19,13 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:-1" PreferredMinSize="x:0 y:2" Visible-bind="self.Highlighted">
           <SolidBackground Color-bind="self.Selected ? win11Colors.Accent : win11Colors.Secondary"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:9 top:-1 right:9 bottom:1" PreferredMinSize="y:2" Visible-bind="self.Selected">
+        <Bounds AlignmentToParent="left:5 top:-1 right:5 bottom:0" PreferredMinSize="y:2" Visible-bind="self.Selected">
           <SolidBackground Color-eval="win11Colors.Accent" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Selected and self.TabFocused">
           <SolidBorder Color-eval="win11Colors.Foreground" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:10 top:6 right:10 bottom:6">
+        <Bounds AlignmentToParent="left:6 top:3 right:6 bottom:3">
           <SolidLabel Color-bind="self.VisuallyEnabled ? self.Colors.Text : win11Colors.Disabled" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Bounds>
       </SelectableButtonTemplate>

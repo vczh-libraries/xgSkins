@@ -78,9 +78,9 @@
 
   <Instance name="DocumentTextBoxTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win11skin::DocumentTextBoxTemplate" ref.Styles="res://Win11Skin/Style" xmlns:x="win11skin::*">
-      <DocumentLabelTemplate ref.Name="self" BaselineDocument-eval="win11skin::CreateBaselineDocument()" CaretColor-eval="win11skin::win11Colors.Foreground" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+      <DocumentLabelTemplate ref.Name="self" BaselineDocument-eval="win11skin::CreateBaselineDocument()" CaretColor-eval="win11skin::win11Colors.Foreground" ContainerComposition-ref="container" PreferredMinSize="y:23" MinSizeLimitation="LimitToElementAndChildren">
         <x:EditorBorderTemplate InputUnderline="true" AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
-          <Bounds ref.Name="container" AlignmentToParent="left:8 top:4 right:8 bottom:4"/>
+          <Bounds ref.Name="container" AlignmentToParent="left:3 top:2 right:3 bottom:2"/>
         </x:EditorBorderTemplate>
       </DocumentLabelTemplate>
     </Instance>

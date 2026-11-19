@@ -19,7 +19,7 @@
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
-          <Table ref.Name ="container" CellPadding="3" AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <Table ref.Name ="container" CellPadding="2" AlignmentToParent="left:0 top:0 right:0 bottom:0">
             <att.Rows>
               <CellOption>composeType:MinSize</CellOption>
             </att.Rows>
@@ -61,7 +61,7 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
           <Bounds AlignmentToParent="left:0 top:0 right:10 bottom:0">
-            <Table ref.Name ="container" CellPadding="3" AlignmentToParent="left:0 top:0 right:0 bottom:0">
+            <Table ref.Name ="container" CellPadding="2" AlignmentToParent="left:0 top:0 right:0 bottom:0">
               <att.Rows>
                 <CellOption>composeType:MinSize</CellOption>
               </att.Rows>
@@ -125,7 +125,7 @@
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:11 bottom:1">
 
-          <Table ref.Name ="container" CellPadding="3" AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <Table ref.Name ="container" CellPadding="2" AlignmentToParent="left:0 top:0 right:0 bottom:0">
             <att.Rows>
               <CellOption>composeType:MinSize</CellOption>
             </att.Rows>
@@ -181,14 +181,14 @@
           </att.Columns>
 
           <Cell Site="row:0 column:0">
-            <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+            <Bounds ref.Name ="container" AlignmentToParent="left:2 top:2 right:2 bottom:2">
               <ImageFrame Image-bind="self.LargeImage.Image ?? null" FrameIndex-bind="self.LargeImage.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled">
                 <att.HorizontalAlignment>Center</att.HorizontalAlignment>
               </ImageFrame>
             </Bounds>
           </Cell>
           <Cell Site="row:2 column:0">
-            <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:12">
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:11">
               <SolidLabel Color-bind="self.animation.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Bounds>
           </Cell>
@@ -227,7 +227,7 @@
           </att.Columns>
 
           <Cell Site="row:0 column:0">
-            <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+            <Bounds ref.Name ="container" AlignmentToParent="left:2 top:2 right:2 bottom:2">
               <ImageFrame Image-bind="self.LargeImage.Image ?? null" FrameIndex-bind="self.LargeImage.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled">
                 <att.HorizontalAlignment>Center</att.HorizontalAlignment>
               </ImageFrame>
@@ -245,7 +245,7 @@
               </att.Columns>
 
               <Cell Site="row:0 column:0">
-                <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
+                <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
                   <SolidLabel Color-bind="self.animation.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Bounds>
               </Cell>
@@ -342,7 +342,7 @@
 
 
           <Cell Site="row:0 column:0">
-            <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
               <SolidLabel Color-bind="self.animation.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Bounds>
           </Cell>
@@ -390,7 +390,7 @@
 
           <Cell Site="row:0 column:0">
 
-            <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+            <Bounds ref.Name ="container" AlignmentToParent="left:2 top:2 right:2 bottom:2">
               <ImageFrame Image-bind="self.LargeImage.Image ?? null" FrameIndex-bind="self.LargeImage.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled">
                 <att.HorizontalAlignment>Center</att.HorizontalAlignment>
               </ImageFrame>
@@ -486,7 +486,9 @@
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Columns>
 
-          <SolidBorder ref.Style="ribbonGroupBorder" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
+          <Bounds AlignmentToParent="left:-1 top:3 right:0 bottom:3" PreferredMinSize="x:1">
+            <SolidBackground ref.Style="ribbonGroupBorder"/>
+          </Bounds>
 
           <Cell Site="row:0 column:0">
             <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1"/>
@@ -494,7 +496,7 @@
 
           <Cell Site="row:1 column:0" PreferredMinSize="x:5 y:5">
             <Bounds AlignmentToParent="left:2 top:1 right:2 bottom:2">
-              <Bounds AlignmentToParent="left:10 top:2 right:10 bottom:2">
+              <Bounds AlignmentToParent="left:9 top:1 right:9 bottom:1">
                 <SolidLabel Text-bind="self.Text" Font-bind="self.Font" ref.Style="ribbonGroupTitle" HorizontalAlignment="Center" VerticalAlignment="Center"/>
               </Bounds>
 
@@ -676,7 +678,7 @@
             </Cell>
 
             <Cell Site="row:2 column:0 columnSpan:2">
-              <Bounds ref.Name="container" AlignmentToParent="left:3 top:3 right:3 bottom:3"/>
+              <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2"/>
             </Cell>
 
             <Cell Site="row:3 column:0" AssociatedHitTestResult="BorderBottom">

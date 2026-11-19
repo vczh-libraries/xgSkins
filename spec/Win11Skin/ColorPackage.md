@@ -2,7 +2,7 @@
 
 `CreateDefaultColorPackage()` supplies the light palette. `CreateDarkColorPackage()` supplies the dark palette. Both use the stock Windows blue accent. The canvas, content layer and transient flyout have distinct surface values. The hosted renderer paints solid equivalents for Mica and acrylic.
 
-The dimensions and artwork follow Microsoft’s [Windows geometry examples](https://learn.microsoft.com/en-us/windows/apps/design/signature-experiences/geometry). The foreground, surface and stroke hierarchy follows the [WinUI theme resources](https://github.com/microsoft/microsoft-ui-xaml/blob/main/controls/dev/CommonStyles/Common_themeresources_any.xaml).
+Desktop control sizes follow the Win32 layout guide. Rounded corners, the accent underline and layered surfaces use Windows 11 geometry and palette resources. [Win32 sizing](https://learn.microsoft.com/en-us/windows/win32/uxguide/vis-layout#recommended-sizing-and-spacing), [Windows 11 geometry](https://learn.microsoft.com/en-us/windows/apps/design/signature-experiences/geometry), [WinUI theme resources](https://github.com/microsoft/microsoft-ui-xaml/blob/main/controls/dev/CommonStyles/Common_themeresources_any.xaml).
 
 ## Shared colors
 
@@ -12,6 +12,7 @@ The dimensions and artwork follow Microsoft’s [Windows geometry examples](http
 | `Layer` | `#FFFFFF` | `#2B2B2B` | Content pane, page or document surface. |
 | `Flyout` | `#F9F9F9` | `#2C2C2C` | Menu, tooltip, keytip and ribbon popup surface. |
 | `Stroke` | `#E1E1E1` | `#454545` | Control outlines, dividers, groups and unobtrusive window outlines. |
+| `ButtonBottomStroke` | `#BEBEBE` | `#262626` | Lower edge of a resting or hovered command button or combo. Pressing the control flattens this edge. |
 | `StrongStroke` | `#8B8B8B` | `#9F9F9F` | Input underline, unchecked option outlines and unfilled slider rail. |
 | `Foreground` | `#1B1B1B` | `#FFFFFF` | Primary text, icons and the caret. |
 | `Secondary` | `#606060` | `#CECECE` | Secondary text, arrows and inactive window captions. |

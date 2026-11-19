@@ -59,7 +59,7 @@
           AddAnimation(lastAnimation);
         }
       ]]></ref.Members>
-      <DateComboBoxTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:32" MinSizeLimitation="LimitToElementAndChildren">
+      <DateComboBoxTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:23" MinSizeLimitation="LimitToElementAndChildren">
         <att.DatePickerTemplate>win11skin::DatePickerTemplate</att.DatePickerTemplate>
         <att.Colors-bind>GetButtonColors(self.VisuallyEnabled, self.SubMenuOpening ? ButtonState::Pressed : self.State)</att.Colors-bind>
         <ev.ColorsChanged-eval>self.UpdateColors();</ev.ColorsChanged-eval>
@@ -69,15 +69,18 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <SolidBackground Color-bind="self.animationBuilder.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:3 top:3 right:16 bottom:3" Visible-bind="self.Focused"><SolidBorder Color-eval="win11Colors.Foreground" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/></Bounds>
+        <Bounds AlignmentToParent="left:4 top:-1 right:4 bottom:0" PreferredMinSize="y:1" Visible-bind="self.VisuallyEnabled and self.State != ButtonState::Pressed and not self.SubMenuOpening">
+          <SolidBackground Color-eval="win11Colors.ButtonBottomStroke"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:2 top:2 right:16 bottom:2" Visible-bind="self.Focused"><SolidBorder Color-eval="win11Colors.Foreground" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/></Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <Bounds ref.Name="container" AlignmentToParent="left:9 top:4 right:26 bottom:4">
+          <Bounds ref.Name="container" AlignmentToParent="left:3 top:1 right:18 bottom:1">
             <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.TextVisible">
               <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             </Bounds>
           </Bounds>
 
-          <Table AlignmentToParent="left:-1 top:1 right:8 bottom:1" PreferredMinSize="x:13 y:0">
+          <Table AlignmentToParent="left:-1 top:1 right:3 bottom:1" PreferredMinSize="x:13 y:0">
             <att.Rows>
               <CellOption>composeType:Percentage percentage:0.5</CellOption>
               <CellOption>composeType:Absolute absolute:6</CellOption>
@@ -111,7 +114,7 @@
     <Instance ref.CodeBehind="false" ref.Class="win11skin::ListViewColumnHeaderTemplate" ref.Styles="res://Win11Skin/Style">
       <ListViewColumnHeaderTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
         <SolidBackground Color-bind="not self.VisuallyEnabled ? win11Colors.Layer : self.State == ButtonState::Pressed ? win11Colors.SubtlePressed.Face : self.State == ButtonState::Active ? win11Colors.SubtleHovered.Face : win11Colors.Layer" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
-        <Bounds AlignmentToParent="left:-1 top:6 right:0 bottom:6" PreferredMinSize="x:1 y:0">
+        <Bounds AlignmentToParent="left:-1 top:3 right:0 bottom:3" PreferredMinSize="x:1 y:0">
           <SolidBackground Color-eval="win11Colors.Stroke"/>
         </Bounds>
         <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:11 bottom:1">
@@ -147,7 +150,7 @@
               </Bounds>
             </Cell>
           </Table>
-          <Bounds AlignmentToParent="left:8 top:6 right:5 bottom:5">
+          <Bounds AlignmentToParent="left:5 top:3 right:3 bottom:2">
             <SolidLabel Color-bind="self.VisuallyEnabled ? win11Colors.Secondary : win11Colors.Disabled" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
           </Bounds>
         </Bounds>

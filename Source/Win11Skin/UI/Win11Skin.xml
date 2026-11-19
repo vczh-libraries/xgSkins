@@ -12,6 +12,7 @@
         Flyout : Color;
         Stroke : Color;
         StrongStroke : Color;
+        ButtonBottomStroke : Color;
         Foreground : Color;
         Secondary : Color;
         Disabled : Color;
@@ -84,6 +85,7 @@
           Flyout: flyout;
           Stroke: stroke;
           StrongStroke: strongStroke;
+          ButtonBottomStroke: dark ? cast Color "#262626" : cast Color "#BEBEBE";
           Foreground: foreground;
           Secondary: secondary;
           Disabled: disabled;

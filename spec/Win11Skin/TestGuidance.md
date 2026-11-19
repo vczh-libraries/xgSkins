@@ -84,6 +84,10 @@ Run the full showcase in Direct2D hosted mode for both `Win11Skin` and `Win11Ski
 - win11skin::RibbonToolstripMenuTemplate: Control / Document Editor (Ribbon).
 - win11skin::RibbonGalleryDropdownButtonTemplate: Control / Document Editor (Ribbon).
 
+## Desktop control measurements
+
+At 96 DPI with the default font, inspect commands and options on List / TextList and Window Manager. Command buttons, single-line editors and closed combos have 23-pixel minimum heights. Checkboxes and radios use 13-pixel artwork in a 17-pixel minimum row. Tabs use three pixels of vertical text padding. Increase the application font and confirm text can expand each control. The 16-pixel toolbar icons and larger ribbon commands retain their separate sizes. [Win32 control sizing](https://learn.microsoft.com/en-us/windows/win32/uxguide/vis-layout#recommended-sizing-and-spacing).
+
 ## Observations in both modes
 
 - In Window Manager, switch from an existing skin to light, to dark, then back to light. Check inactive and active captions, the close button, hover states, glyphs and popup borders. Change an editable value and a selection before switching and verify both survive.
