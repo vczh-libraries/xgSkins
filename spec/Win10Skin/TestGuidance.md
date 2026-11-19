@@ -1,0 +1,95 @@
+# Windows 10 test guidance
+
+In a fresh FullControlTest /D2D /Hosted session open Window Manager and choose Win10Skin for light or Win10Skin/Dark for dark. Run the full showcase in both modes. For individual template edits, the affected pages are listed below. Modal windows and popup controls are reached from their owner page.
+
+## Instance-to-page mapping
+
+- win10skin::Theme: Window Manager, List / TextList, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Layout / Repeat, Misc / DatePicker.
+- win10skin::CustomControlTemplate: Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Layout / Responsive, Misc / TouchingList.
+- win10skin::TooltipTemplate: Control / Document Editor (Ribbon).
+- win10skin::SystemFrameWindowTemplate: Window Manager, Misc / Dialogs.
+- win10skin::CustomFrameWindowTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
+- win10skin::CaptionButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
+- win10skin::CaptionCloseButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
+- win10skin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager.
+- win10skin::LabelTemplate: List / TextList, Layout / Easy Layout, Window Manager, Misc / Localization.
+- win10skin::ShortcutKeyTemplate: Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Window Manager.
+- win10skin::DateButtonTemplate: Misc / DatePicker, List / BindableDataGrid.
+- win10skin::DatePickerTemplate: Misc / DatePicker, List / BindableDataGrid.
+- win10skin::ButtonTemplate: List / TextList, Layout / Easy Layout, Control / TextBox, Misc / Dialogs.
+- win10skin::CheckBoxTemplate: List / TextList, Layout / Easy Layout, Control / TextBox, Misc / TouchingList.
+- win10skin::RadioButtonTemplate: List / TextList, Window Manager.
+- win10skin::DocumentLabelTemplate: Control / TextBox / Document, Control / Embedded Controls.
+- win10skin::DocumentTextBoxTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Layout / Easy Layout.
+- win10skin::DocumentViewerTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Control / Embedded Controls.
+- win10skin::EditorBorderTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Layout / Easy Layout, List / TextList, List / ListView, List / TreeView.
+- win10skin::TabHeaderButtonTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- win10skin::TabHeaderTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- win10skin::TabTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- win10skin::RibbonTabTemplate: Control / Document Editor (Ribbon).
+- win10skin::ItemBackgroundTemplate: List / TextList, List / ListView, List / TreeView, List / BindableDataGrid, Control / Document Editor (Ribbon).
+- win10skin::TextListTemplate: List / TextList, Refresh List / TextList, Refresh List / BindableTextList, Layout / Easy Layout.
+- win10skin::ComboBoxTemplate: List / ListView, List / BindableDataGrid, Layout / Easy Layout, Misc / DatePicker, Misc / Localization.
+- win10skin::ListViewColumnHeaderTemplate: List / ListView, List / BindableDataGrid, Refresh List / ListView, Refresh List / BindableDataGrid.
+- win10skin::ListViewColumnDropDownTemplate: List / BindableDataGrid, Refresh List / BindableDataGrid.
+- win10skin::ListViewTemplate: List / ListView, List / BindableDataGrid, Refresh List / ListView, Refresh List / BindableListView, Refresh List / BindableDataGrid.
+- win10skin::ExpandingDecoratorTemplate: List / TreeView, Refresh List / TreeView, Refresh List / BindableTreeView, List / BindableDataGrid.
+- win10skin::TreeViewTemplate: List / TreeView, Refresh List / TreeView, Refresh List / BindableTreeView, List / BindableDataGrid.
+- win10skin::LeftScrollButtonTemplate: Layout / Repeat, List / ListView.
+- win10skin::RightScrollButtonTemplate: Layout / Repeat, List / ListView.
+- win10skin::TopScrollButtonTemplate: Layout / Repeat, List / TextList.
+- win10skin::BottomScrollButtonTemplate: Layout / Repeat, List / TextList.
+- win10skin::HScrollHandleTemplate: Layout / Repeat, List / ListView.
+- win10skin::VScrollHandleTemplate: Layout / Repeat, List / TextList.
+- win10skin::HTrackerHandleTemplate: Layout / Repeat.
+- win10skin::VTrackerHandleTemplate: Layout / Repeat.
+- win10skin::HScrollTemplate: Layout / Repeat, List / ListView, Control / TextBox.
+- win10skin::VScrollTemplate: Layout / Repeat, List / TextList, Control / TextBox, Control / Document Editor (Ribbon).
+- win10skin::HTrackerTemplate: Layout / Repeat.
+- win10skin::VTrackerTemplate: Layout / Repeat.
+- win10skin::ProgressBarTemplate: Layout / Repeat.
+- win10skin::ScrollViewTemplate: Layout / Repeat, Layout / Responsive, Control / Embedded Controls, Misc / TouchingList.
+- win10skin::ToolstripTemplate: Control / Document Editor (Toolstrip), Layout / Easy Layout (Responsive).
+- win10skin::MenuBarTemplate: Control / Document Editor (Toolstrip), Layout / Easy Layout (Responsive).
+- win10skin::ToolstripInMenuTemplate: Control / Document Editor (Ribbon).
+- win10skin::ToolstripMenuTemplate: Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), List / BindableDataGrid.
+- win10skin::ToolstripSplitterTemplate: Control / Document Editor (Toolstrip), Control / Document Editor (Ribbon).
+- win10skin::ToolstripSplitterInMenuTemplate: Control / Document Editor (Ribbon).
+- win10skin::MenuSplitterTemplate: Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip).
+- win10skin::ToolstripButtonTemplate: Control / Document Editor (Toolstrip), Control / Document Editor (Ribbon).
+- win10skin::ToolstripDropdownButtonTemplate: Control / Document Editor (Toolstrip), Control / Document Editor (Ribbon).
+- win10skin::ToolstripSplitArrowTemplate: Control / Document Editor (Toolstrip), Control / Document Editor (Ribbon).
+- win10skin::ToolstripSplitButtonTemplate: Control / Document Editor (Toolstrip), Control / Document Editor (Ribbon).
+- win10skin::MenuBarButtonTemplate: Control / Document Editor (Toolstrip), Layout / Easy Layout (Responsive).
+- win10skin::MenuItemButtonTemplate: Control / Document Editor (Toolstrip), Control / Document Editor (Ribbon), List / BindableDataGrid.
+- win10skin::RibbonSmallButtonTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonSmallDropdownButtonTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonSmallSplitButtonTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonSmallSplitArrowTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonLargeButtonTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonLargeDropdownButtonTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonSplitArrowTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonLargeSplitButtonTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonSmallIconLabelTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonIconLabelTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonSplitterTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonGroupTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonGroupExpandButtonTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonGroupMenuTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonButtonsTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonToolstripsTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonToolstripHeaderTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonGalleryTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonGalleryItemListTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonToolstripMenuTemplate: Control / Document Editor (Ribbon).
+- win10skin::RibbonGalleryDropdownButtonTemplate: Control / Document Editor (Ribbon).
+
+## Visual and interaction checks
+
+- Switch from light to dark with an editor, a checked radio button and a selected list row already populated. Confirm the selection, edited text and scroll position survive in both directions. Open a second popup after switching to exercise newly created templates.
+- In Window Manager inspect the left-aligned title, minimize, maximize/restore and close symbols. Hover and press close, then move off it. Its face returns to the page color. Check chrome and inactive text while a modal is active.
+- On the text and data-entry pages, compare neutral, pointer-over, keyboard-focus and disabled controls. Focused editors have a two-pixel accent outline. Checkboxes fill blue when selected. Selected radio buttons retain an open center around the dot.
+- On Layout / Repeat drag each slider and scrollbar to both ends. The slider's blue segment meets the thumb. Progress advances along a thin track and disabled scrollbars hide their thumbs.
+- Check list refresh, header sorting/filter menus and tree expander chevrons. Compare hovered rows with the blue selected row. Check calendar dates, combo lists, keyboard navigation, tooltips and dialog dismissal.
+- Exercise both document editors, including formatting, links, selections, context menus and save/reload. Resize the ribbon until groups collapse and test split buttons, gallery selection, keytips and reopening a popup under each palette.
+- Traverse the remaining layout and miscellaneous pages in the [project verification procedure](../../Project.md). Close the showcase through Exit.

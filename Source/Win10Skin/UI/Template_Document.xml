@@ -1,0 +1,52 @@
+<Folder>
+  <Instance name="EditorBorderTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::EditorBorderTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Members><![CDATA[
+        prop Hovered : bool = false {}
+        prop Colors : StateColors = win10Colors.InputNormal {}
+      ]]></ref.Members>
+      <ControlTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.InputDisabled : self.Focused ? win10Colors.InputFocused : self.Hovered ? win10Colors.InputHovered : win10Colors.InputNormal</att.Colors-bind>
+        <ev.mouseEnter-eval>self.Hovered = true;</ev.mouseEnter-eval>
+        <ev.mouseLeave-eval>self.Hovered = false;</ev.mouseLeave-eval>
+        <SolidBackground Color-bind="self.Colors.Border"/>
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <SolidBackground Color-bind="self.Colors.Fill"/>
+        </Bounds>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="DocumentLabelTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::DocumentLabelTemplate" ref.Styles="res://Win10Skin/Style">
+      <DocumentLabelTemplate ref.Name="self" ref.Style="documentBoxBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren"/>
+    </Instance>
+  </Instance>
+
+  <Instance name="DocumentTextBoxTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::DocumentTextBoxTemplate" ref.Styles="res://Win10Skin/Style" xmlns:x="win10skin::*">
+      <DocumentLabelTemplate ref.Name="self" BaselineDocument-eval="win10skin::CreateBaselineDocument()" CaretColor-eval="win10skin::win10Colors.Text" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <Bounds ref.Name="container" AlignmentToParent="left:6 top:3 right:6 bottom:3"/>
+        </x:EditorBorderTemplate>
+      </DocumentLabelTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="DocumentViewerTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::DocumentViewerTemplate" ref.Styles="res://Win10Skin/Style" xmlns:x="win10skin::*">
+      <DocumentViewerTemplate ref.Name="self" BaselineDocument-eval="win10skin::CreateBaselineDocument()" CaretColor-eval="win10skin::win10Colors.Text" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>win10skin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>win10skin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </DocumentViewerTemplate>
+    </Instance>
+  </Instance>
+</Folder>

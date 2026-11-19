@@ -1,0 +1,191 @@
+<Folder>
+  <Instance name="ItemBackgroundTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ItemBackgroundTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Members><![CDATA[prop Colors : StateColors = win10Colors.ItemNormal {}]]></ref.Members>
+      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.ItemDisabled : self.Selected ? (self.State == ButtonState::Normal ? win10Colors.ItemSelected : win10Colors.ItemSelectedHovered) : self.State == ButtonState::Pressed ? win10Colors.ItemSelectedHovered : self.State == ButtonState::Active ? win10Colors.ItemHovered : win10Colors.ItemNormal</att.Colors-bind>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-bind="self.Colors.Border"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <SolidBackground Color-bind="self.Colors.Fill"/>
+        </Bounds>
+        <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="TextListTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::TextListTemplate" ref.Styles="res://Win10Skin/Style" xmlns:x="win10skin::*">
+      <TextListTemplate ref.Name="self" ref.Style="textListBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <att.BackgroundTemplate>win10skin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.CheckBulletTemplate>win10skin::CheckBoxTemplate</att.CheckBulletTemplate>
+        <att.RadioBulletTemplate>win10skin::RadioButtonTemplate</att.RadioBulletTemplate>
+
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>win10skin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>win10skin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </TextListTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ComboBoxTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ComboBoxTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : StateColors = win10Colors.InputNormal {}
+      ]]></ref.Members>
+      <DateComboBoxTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.DatePickerTemplate>win10skin::DatePickerTemplate</att.DatePickerTemplate>
+        <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.InputDisabled : self.SubMenuOpening or self.Focused ? win10Colors.InputFocused : self.State != ButtonState::Normal ? win10Colors.InputHovered : win10Colors.InputNormal</att.Colors-bind>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBackground Color-bind="self.Colors.Border"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <SolidBackground Color-bind="self.Colors.Fill"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:3 top:3 right:16 bottom:3" Visible-bind="self.Focused"><FocusRectangle/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <Bounds ref.Name="container" AlignmentToParent="left:3 top:3 right:18 bottom:3">
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.TextVisible">
+              <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </Bounds>
+          </Bounds>
+
+          <Bounds AlignmentToParent="left:-1 top:0 right:6 bottom:0" PreferredMinSize="x:12">
+            <SolidLabel Text="" Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:12" Color-bind="self.Colors.Text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          </Bounds>
+        </Bounds>
+      </DateComboBoxTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ListViewColumnHeaderTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ListViewColumnHeaderTemplate" ref.Styles="res://Win10Skin/Style">
+      <ListViewColumnHeaderTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground Color-bind="not self.VisuallyEnabled ? win10Colors.Page : self.State == ButtonState::Pressed ? win10Colors.CommandPressed.Fill : self.State == ButtonState::Active ? win10Colors.ItemHovered.Fill : win10Colors.Page"/>
+        <Bounds AlignmentToParent="left:-1 top:4 right:0 bottom:4" PreferredMinSize="x:1">
+          <SolidBackground Color-eval="win10Colors.Divider"/>
+        </Bounds>
+        <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:11 bottom:1">
+          <Table AlignmentToParent="left:0 top:1 right:0 bottom:-1">
+            <att.Rows>
+              <_>composeType:MinSize</_>
+              <_>composeType:Percentage percentage:1.0</_>
+            </att.Rows>
+            <att.Columns>
+              <_>composeType:Percentage percentage:0.5</_>
+              <_>composeType:MinSize</_>
+              <_>composeType:Percentage percentage:0.5</_>
+            </att.Columns>
+
+            <Cell Site="row:0 column:1">
+              <Bounds Visible-bind="self.SortingState == ColumnSortingState::Ascending">
+                <Polygon BorderColor-eval="win10Colors.SecondaryText" BackgroundColor-eval="win10Colors.SecondaryText" Size="x:7 y:4">
+                  <att.Points>
+                    <Point>x:0 y:3</Point>
+                    <Point>x:3 y:0</Point>
+                    <Point>x:6 y:3</Point>
+                  </att.Points>
+                </Polygon>
+              </Bounds>
+              <Bounds Visible-bind="self.SortingState == ColumnSortingState::Descending">
+                <Polygon BorderColor-eval="win10Colors.SecondaryText" BackgroundColor-eval="win10Colors.SecondaryText" Size="x:7 y:4">
+                  <att.Points>
+                    <Point>x:0 y:0</Point>
+                    <Point>x:3 y:3</Point>
+                    <Point>x:6 y:0</Point>
+                  </att.Points>
+                </Polygon>
+              </Bounds>
+            </Cell>
+          </Table>
+          <Bounds AlignmentToParent="left:8 top:6 right:5 bottom:5">
+            <SolidLabel Color-bind="self.VisuallyEnabled ? win10Colors.SecondaryText : win10Colors.DisabledText" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+          </Bounds>
+        </Bounds>
+        <Bounds AlignmentToParent="left:-1 top:0 right:0 bottom:0">
+          <CheckBox ref.Name="buttonArrow" AutoFocus="false" AutoSelection="false" ControlTemplate="win10skin::ListViewColumnDropDownTemplate" Selected-bind="self.SubMenuOpening" Visible-bind="self.SubMenuExisting and (self.SubMenuOpening or self.State != ButtonState::Normal)">
+            <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          </CheckBox>
+        </Bounds>
+      </ListViewColumnHeaderTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ListViewTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ListViewTemplate" ref.Styles="res://Win10Skin/Style" xmlns:x="win10skin::*">
+      <ListViewTemplate ref.Name="self" ref.Style="listViewBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <att.BackgroundTemplate>win10skin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.ColumnHeaderTemplate>win10skin::ListViewColumnHeaderTemplate</att.ColumnHeaderTemplate>
+
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>win10skin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>win10skin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </ListViewTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ExpandingDecoratorTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ExpandingDecoratorTemplate" ref.Styles="res://Win10Skin/Style">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <Bounds PreferredMinSize="x:14 y:16">
+          <SolidLabel Text-bind="self.Selected ? &quot;&quot; : &quot;&quot;" Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:10" Color-bind="not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.SecondaryText : win10Colors.Text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Bounds>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="TreeViewTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::TreeViewTemplate" ref.Styles="res://Win10Skin/Style" xmlns:x="win10skin::*">
+      <TreeViewTemplate ref.Name="self" ref.Style="treeViewBackgroundAndColor" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+        <att.BackgroundTemplate>win10skin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.ExpandingDecoratorTemplate>win10skin::ExpandingDecoratorTemplate</att.ExpandingDecoratorTemplate>
+
+        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <att.HScrollTemplate>win10skin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>win10skin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </x:EditorBorderTemplate>
+      </TreeViewTemplate>
+    </Instance>
+  </Instance>
+  <Instance name="ListViewColumnDropDownTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ListViewColumnDropDownTemplate" ref.Styles="res://Win10Skin/Style">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:13 y:0">
+        <SolidBackground Color-bind="self.VisuallyEnabled and (self.State != ButtonState::Normal or self.Selected) ? win10Colors.CommandPressed.Fill : win10Colors.Transparent"/>
+        <Table AlignmentToParent="left:3 top:3 right:3 bottom:3">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns><CellOption>composeType:MinSize</CellOption></att.Columns>
+          <Cell Site="row:1 column:0">
+            <Polygon Size="x:7 y:4" BorderColor-eval="win10Colors.SecondaryText" BackgroundColor-eval="win10Colors.SecondaryText">
+              <att.Points><Point>x:0 y:0</Point><Point>x:3 y:3</Point><Point>x:6 y:0</Point></att.Points>
+            </Polygon>
+          </Cell>
+        </Table>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+</Folder>

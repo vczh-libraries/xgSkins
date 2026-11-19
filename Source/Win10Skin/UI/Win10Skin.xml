@@ -1,0 +1,176 @@
+<Folder>
+  <Script name="Palette">
+    <Workflow><![CDATA[
+    module Win10Palette;
+    using presentation::*;
+    namespace win10skin
+    {
+      struct StateColors
+      {
+        Border : Color;
+        Fill : Color;
+        Text : Color;
+      }
+
+      struct ColorPackage
+      {
+        Page : Color;
+        Chrome : Color;
+        Divider : Color;
+        Outline : Color;
+        StrongOutline : Color;
+        Text : Color;
+        SecondaryText : Color;
+        DisabledText : Color;
+        Accent : Color;
+        OnAccent : Color;
+        Link : Color;
+        Transparent : Color;
+        ScrollThumb : Color;
+        ScrollThumbHovered : Color;
+        ScrollThumbPressed : Color;
+        WindowEdge : Color;
+        WindowEdgeInactive : Color;
+        CloseHovered : Color;
+        ClosePressed : Color;
+        ButtonNormal : StateColors;
+        ButtonHovered : StateColors;
+        ButtonPressed : StateColors;
+        ButtonDisabled : StateColors;
+        InputNormal : StateColors;
+        InputHovered : StateColors;
+        InputFocused : StateColors;
+        InputDisabled : StateColors;
+        CommandNormal : StateColors;
+        CommandHovered : StateColors;
+        CommandPressed : StateColors;
+        CommandDisabled : StateColors;
+        ItemNormal : StateColors;
+        ItemHovered : StateColors;
+        ItemSelected : StateColors;
+        ItemSelectedHovered : StateColors;
+        ItemDisabled : StateColors;
+      }
+
+      func CreateColorPackageInternal(dark : bool) : ColorPackage
+      {
+        var page = dark ? cast Color "#000000" : cast Color "#FFFFFF";
+        var chrome = dark ? cast Color "#1F1F1F" : cast Color "#F2F2F2";
+        var divider = dark ? cast Color "#414141" : cast Color "#D6D6D6";
+        var outline = dark ? cast Color "#666666" : cast Color "#999999";
+        var strongOutline = dark ? cast Color "#CCCCCC" : cast Color "#333333";
+        var text = dark ? cast Color "#FFFFFF" : cast Color "#000000";
+        var secondaryText = dark ? cast Color "#C2C2C2" : cast Color "#5C5C5C";
+        var disabledText = dark ? cast Color "#858585" : cast Color "#7A7A7A";
+        var accent = cast Color "#0078D7";
+        var onAccent = cast Color "#FFFFFF";
+        var link = dark ? cast Color "#60CDFF" : cast Color "#0063B1";
+        var transparent = cast Color "#00000000";
+        var scrollThumb = dark ? cast Color "#737373" : cast Color "#A6A6A6";
+        var scrollThumbHovered = dark ? cast Color "#A6A6A6" : cast Color "#767676";
+        var scrollThumbPressed = dark ? cast Color "#C2C2C2" : cast Color "#606060";
+        var windowEdge = cast Color "#707070";
+        var windowEdgeInactive = dark ? cast Color "#3A3A3A" : cast Color "#CCCCCC";
+        var closeHovered = cast Color "#E81123";
+        var closePressed = dark ? cast Color "#A00B18" : cast Color "#C50F1F";
+        var button = dark ? cast Color "#333333" : cast Color "#CCCCCC";
+        var hover = dark ? cast Color "#1A1A1A" : cast Color "#E6E6E6";
+        var pressed = dark ? cast Color "#666666" : cast Color "#999999";
+        var selected = dark ? cast Color "#003052" : cast Color "#CCE4F7";
+        var selectedHover = dark ? cast Color "#004370" : cast Color "#B2D7F4";
+        var disabledFace = dark ? cast Color "#262626" : cast Color "#E6E6E6";
+        var flyoutHover = dark ? cast Color "#373737" : cast Color "#DADADA";
+        var flyoutPress = dark ? cast Color "#545454" : cast Color "#BFBFBF";
+        return {
+          Page: page;
+          Chrome: chrome;
+          Divider: divider;
+          Outline: outline;
+          StrongOutline: strongOutline;
+          Text: text;
+          SecondaryText: secondaryText;
+          DisabledText: disabledText;
+          Accent: accent;
+          OnAccent: onAccent;
+          Link: link;
+          Transparent: transparent;
+          ScrollThumb: scrollThumb;
+          ScrollThumbHovered: scrollThumbHovered;
+          ScrollThumbPressed: scrollThumbPressed;
+          WindowEdge: windowEdge;
+          WindowEdgeInactive: windowEdgeInactive;
+          CloseHovered: closeHovered;
+          ClosePressed: closePressed;
+          ButtonNormal: {Border: button; Fill: button; Text: text;};
+          ButtonHovered: {Border: outline; Fill: button; Text: text;};
+          ButtonPressed: {Border: pressed; Fill: pressed; Text: text;};
+          ButtonDisabled: {Border: disabledFace; Fill: disabledFace; Text: disabledText;};
+          InputNormal: {Border: outline; Fill: page; Text: text;};
+          InputHovered: {Border: strongOutline; Fill: page; Text: text;};
+          InputFocused: {Border: accent; Fill: page; Text: text;};
+          InputDisabled: {Border: disabledFace; Fill: disabledFace; Text: disabledText;};
+          CommandNormal: {Border: transparent; Fill: transparent; Text: text;};
+          CommandHovered: {Border: flyoutHover; Fill: flyoutHover; Text: text;};
+          CommandPressed: {Border: flyoutPress; Fill: flyoutPress; Text: text;};
+          CommandDisabled: {Border: transparent; Fill: transparent; Text: disabledText;};
+          ItemNormal: {Border: transparent; Fill: transparent; Text: text;};
+          ItemHovered: {Border: hover; Fill: hover; Text: text;};
+          ItemSelected: {Border: selected; Fill: selected; Text: text;};
+          ItemSelectedHovered: {Border: selectedHover; Fill: selectedHover; Text: text;};
+          ItemDisabled: {Border: transparent; Fill: transparent; Text: disabledText;};
+        };
+      }
+
+      func CreateDefaultColorPackage() : ColorPackage
+      {
+        return CreateColorPackageInternal(false);
+      }
+
+      func CreateDarkColorPackage() : ColorPackage
+      {
+        return CreateColorPackageInternal(true);
+      }
+
+      var win10Colors : ColorPackage = CreateDefaultColorPackage();
+
+      /*
+      * Calling GuiApplication::GetApplication().RefreshThemes will reload the new baseline document.
+      */
+      func CreateBaselineDocument() : DocumentModel^
+      {
+        var document = new DocumentModel^();
+        var normal = new DocumentStyle^();
+        normal.styles = new DocumentStyleProperties^();
+        normal.styles.color = win10Colors.Text;
+        document.styles["#Default-Override"] = normal;
+        var selection = new DocumentStyle^();
+        selection.styles = new DocumentStyleProperties^();
+        selection.styles.color = win10Colors.OnAccent;
+        selection.styles.backgroundColor = win10Colors.Accent;
+        document.styles["#Selection-Override"] = selection;
+        var link = new DocumentStyle^();
+        link.styles = new DocumentStyleProperties^();
+        link.styles.color = win10Colors.Link;
+        document.styles["#NormalLink-Override"] = link;
+        var activeLink = new DocumentStyle^();
+        activeLink.styles = new DocumentStyleProperties^();
+        activeLink.styles.color = win10Colors.Text;
+        document.styles["#ActiveLink-Override"] = activeLink;
+        return document;
+      }
+    }
+    ]]></Workflow>
+  </Script>
+  <Instance name="Win10SkinThemeResource" content="File">Index.xml</Instance>
+  <InstanceStyle name="Style" content="File">Style.xml</InstanceStyle>
+
+  <Folder name="Window" content="Link">Template_Window.xml</Folder>
+  <Folder name="Tab" content="Link">Template_Tab.xml</Folder>
+  <Folder name="Toolstrip" content="Link">Template_Toolstrip.xml</Folder>
+  <Folder name="Ribbon" content="Link">Template_Ribbon.xml</Folder>
+  <Folder name="Button" content="Link">Template_Button.xml</Folder>
+  <Folder name="Document" content="Link">Template_Document.xml</Folder>
+  <Folder name="Scroll" content="Link">Template_Scroll.xml</Folder>
+  <Folder name="List" content="Link">Template_List.xml</Folder>
+  <Folder name="Misc" content="Link">Template_Misc.xml</Folder>
+</Folder>

@@ -1,0 +1,286 @@
+<Folder>
+  <Instance name="MenuBarTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::MenuBarTemplate" ref.Styles="res://Win10Skin/Style">
+      <ControlTemplate ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground Color-eval="win10Colors.Chrome"/>
+        <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="x:0 y:1">
+          <SolidBackground Color-eval="win10Colors.Divider"/>
+        </Bounds>
+        <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ToolstripTemplate" ref.Styles="res://Win10Skin/Style">
+      <ControlTemplate ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground Color-eval="win10Colors.Chrome"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:-1" PreferredMinSize="x:0 y:1">
+          <SolidBackground Color-eval="win10Colors.Divider"/>
+        </Bounds>
+        <Bounds ref.Name="container" AlignmentToParent="left:0 top:1 right:0 bottom:0"/>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripInMenuTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ToolstripInMenuTemplate" ref.Styles="res://Win10Skin/Style">
+      <ControlTemplate ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground ref.Style="toolstripMenuBackground"/>
+        <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2"/>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripMenuTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ToolstripMenuTemplate" ref.Styles="res://Win10Skin/Style">
+      <MenuTemplate ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground Color-eval="win10Colors.Chrome"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder ref.Style="toolstripMenuBorder"/>
+          <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground ref.Style="toolstripMenuBackground"/></Bounds>
+        </Bounds>
+      </MenuTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripSplitterTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ToolstripSplitterTemplate" ref.Styles="res://Win10Skin/Style">
+      <ControlTemplate MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground Color-eval="win10Colors.Chrome"/>
+        <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3" PreferredMinSize="x:1 y:0">
+          <SolidBackground ref.Style="toolstripSplitter"/>
+        </Bounds>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripSplitterInMenuTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ToolstripSplitterInMenuTemplate" ref.Styles="res://Win10Skin/Style">
+      <ControlTemplate MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground ref.Style="toolstripMenuBackground"/>
+        <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3" PreferredMinSize="x:1 y:0">
+          <SolidBackground ref.Style="toolstripSplitter"/>
+        </Bounds>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="MenuSplitterTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::MenuSplitterTemplate" ref.Styles="res://Win10Skin/Style">
+      <ControlTemplate MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:26 y:5">
+        <SolidBackground ref.Style="toolstripMenuBackground"/>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Absolute absolute:26</CellOption>
+            <CellOption>composeType:Absolute absolute:1</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+          <Cell Site="row:0 column:1"><SolidBackground Color-eval="win10Colors.Divider"/></Cell>
+          <Cell Site="row:0 column:2"><Bounds AlignmentToParent="left:0 top:2 right:0 bottom:2"><SolidBackground Color-eval="win10Colors.Divider"/></Bounds></Cell>
+        </Table>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ToolstripButtonTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : StateColors = win10Colors.CommandNormal {}
+      ]]></ref.Members>
+      <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win10Colors.CommandPressed : self.Selected ? win10Colors.ItemSelected : self.State == ButtonState::Active ? win10Colors.CommandHovered : win10Colors.CommandNormal</att.Colors-bind>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <SolidBackground Color-bind="self.Colors.Fill"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+
+          <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+            <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
+          </Bounds>
+        </Bounds>
+      </ToolstripButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripDropdownButtonResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ToolstripDropdownButtonTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : StateColors = win10Colors.CommandNormal {}
+      ]]></ref.Members>
+      <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win10Colors.CommandPressed : self.Selected ? win10Colors.ItemSelected : self.State == ButtonState::Active ? win10Colors.CommandHovered : win10Colors.CommandNormal</att.Colors-bind>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <SolidBackground Color-bind="self.Colors.Fill"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+
+          <Bounds AlignmentToParent="left:0 top:0 right:10 bottom:0">
+            <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+              <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
+            </Bounds>
+          </Bounds>
+          <Table AlignmentToParent="left:-1 top:0 right:0 bottom:0" PreferredMinSize="x:9 y:0">
+            <att.Rows>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              <CellOption>composeType:Absolute absolute:3</CellOption>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            </att.Rows>
+            <att.Columns>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              <CellOption>composeType:Absolute absolute:5</CellOption>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            </att.Columns>
+
+            <Cell Site="row:1 column:1">
+              <Polygon ref.Style="toolstripArrow" Size="x:5 y:3">
+                <att.Points>
+                  <Point>x:0 y:0</Point>
+                  <Point>x:2 y:2</Point>
+                  <Point>x:4 y:0</Point>
+                </att.Points>
+              </Polygon>
+            </Cell>
+          </Table>
+        </Bounds>
+      </ToolstripButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripArrowButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ToolstripSplitArrowTemplate" ref.Styles="res://Win10Skin/Style">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:13 y:7">
+        <Bounds AlignmentToParent="left:0 top:3 right:-1 bottom:3" PreferredMinSize="x:1 y:0" Visible-bind="self.VisuallyEnabled and self.State != ButtonState::Normal">
+          <SolidBackground ref.Style="toolstripSplitter"/>
+        </Bounds>
+        <Table AlignmentToParent="left:4 top:0 right:4 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:3</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns><CellOption>composeType:Absolute absolute:5</CellOption></att.Columns>
+          <Cell Site="row:1 column:0">
+            <Polygon ref.Style="toolstripSplitArrow" Size="x:5 y:3">
+              <att.Points>
+                <Point>x:0 y:0</Point>
+                <Point>x:2 y:2</Point>
+                <Point>x:4 y:0</Point>
+              </att.Points>
+            </Polygon>
+          </Cell>
+        </Table>
+      </SelectableButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ToolstripSplitButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ToolstripSplitButtonTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : StateColors = win10Colors.CommandNormal {}
+      ]]></ref.Members>
+      <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win10Colors.CommandPressed : self.Selected ? win10Colors.ItemSelected : self.State == ButtonState::Active ? win10Colors.CommandHovered : win10Colors.CommandNormal</att.Colors-bind>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <SolidBackground Color-bind="self.Colors.Fill"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:13 bottom:1">
+
+          <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
+            <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
+          </Bounds>
+        </Bounds>
+        <Bounds AlignmentToParent="left:-1 top:0 right:0 bottom:0">
+            <CheckBox ref.Name="buttonArrow" AutoFocus="false" AutoSelection="false" ControlTemplate="win10skin::ToolstripSplitArrowTemplate" Selected-bind="self.SubMenuOpening">
+            <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          </CheckBox>
+        </Bounds>
+      </ToolstripButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="MenuBarButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::MenuBarButtonTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : StateColors = win10Colors.CommandNormal {}
+      ]]></ref.Members>
+      <ToolstripButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.CommandDisabled : self.SubMenuOpening or self.State == ButtonState::Pressed ? win10Colors.CommandPressed : self.State == ButtonState::Active ? win10Colors.CommandHovered : win10Colors.CommandNormal</att.Colors-bind>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <SolidBackground Color-bind="self.Colors.Fill"/>
+        </Bounds>
+
+        <Bounds AlignmentToParent="left:10 top:3 right:10 bottom:3">
+          <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Bounds>
+      </ToolstripButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="MenuItemButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::MenuItemButtonTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : StateColors = win10Colors.CommandNormal {}
+      ]]></ref.Members>
+      <ToolstripButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>not self.VisuallyEnabled ? (self.State == ButtonState::Normal ? win10Colors.CommandDisabled : win10Colors.CommandDisabled) : self.SubMenuOpening ? win10Colors.CommandHovered : self.Selected ? (self.State == ButtonState::Normal ? win10Colors.ItemSelected : win10Colors.ItemSelectedHovered) : self.State != ButtonState::Normal ? win10Colors.CommandHovered : win10Colors.CommandNormal</att.Colors-bind>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <SolidBackground Color-bind="self.Colors.Fill"/>
+        </Bounds>
+
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Absolute absolute:4</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:4</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Absolute absolute:2</CellOption>
+            <CellOption>composeType:Absolute absolute:24</CellOption>
+            <CellOption>composeType:Absolute absolute:4</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Absolute absolute:24</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Absolute absolute:4</CellOption>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Absolute absolute:8</CellOption>
+          </att.Columns>
+
+          <Cell Site="row:1 column:1 rowSpan:3">
+            <SolidBackground Color-bind="self.Selected ? win10Colors.CommandHovered.Fill : win10Colors.Transparent"/>
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.Selected and self.Image is null"><Polygon BorderColor-bind="self.Colors.Text" BackgroundColor-bind="self.Colors.Text" Size="x:10 y:10"><att.Points><Point>x:1 y:5</Point><Point>x:4 y:8</Point><Point>x:9 y:1</Point><Point>x:4 y:6</Point></att.Points></Polygon></Bounds>
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/></Bounds>
+          </Cell>
+          <Cell Site="row:1 column:3 rowSpan:3">
+            <SharedSizeItem Group="MenuItem-Text" SharedWidth="true" AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </SharedSizeItem>
+          </Cell>
+          <Cell Site="row:1 column:6 rowSpan:3">
+            <SharedSizeItem Group="MenuItem-Shortcut" SharedWidth="true" AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.ShortcutText" Font-bind="self.Font" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            </SharedSizeItem>
+          </Cell>
+          <Cell Site="row:2 column:8" Visible-bind="self.SubMenuExisting">
+            <Polygon BorderColor-bind="self.Colors.Text" BackgroundColor-bind="self.Colors.Text" Size="x:4 y:7">
+              <att.Points>
+                <Point>x:0 y:0</Point>
+                <Point>x:3 y:3</Point>
+                <Point>x:0 y:6</Point>
+              </att.Points>
+            </Polygon>
+          </Cell>
+        </Table>
+      </ToolstripButtonTemplate>
+    </Instance>
+  </Instance>
+</Folder>

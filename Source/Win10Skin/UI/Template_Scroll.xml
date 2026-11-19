@@ -1,0 +1,340 @@
+<Folder>
+  <Instance name="LeftScrollButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::LeftScrollButtonTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : StateColors = win10Colors.CommandNormal {}
+      ]]></ref.Members>
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>GetScrollArrowColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
+        <SolidBackground Color-bind="self.Colors.Fill"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidLabel Text="" Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:8" Color-bind="self.Colors.Text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Bounds>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RightScrollButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::RightScrollButtonTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : StateColors = win10Colors.CommandNormal {}
+      ]]></ref.Members>
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>GetScrollArrowColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
+        <SolidBackground Color-bind="self.Colors.Fill"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidLabel Text="" Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:8" Color-bind="self.Colors.Text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Bounds>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="TopScrollButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::TopScrollButtonTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : StateColors = win10Colors.CommandNormal {}
+      ]]></ref.Members>
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>GetScrollArrowColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
+        <SolidBackground Color-bind="self.Colors.Fill"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidLabel Text="" Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:8" Color-bind="self.Colors.Text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Bounds>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="BottomScrollButtonTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::BottomScrollButtonTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Members><![CDATA[
+        prop Colors : StateColors = win10Colors.CommandNormal {}
+      ]]></ref.Members>
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Colors-bind>GetScrollArrowColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
+        <SolidBackground Color-bind="self.Colors.Fill"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidLabel Text="" Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:8" Color-bind="self.Colors.Text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Bounds>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="HScrollHandleTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::HScrollHandleTemplate" ref.Styles="res://Win10Skin/Style">
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <Bounds AlignmentToParent="left:1 top:4 right:1 bottom:4">
+          <SolidBackground Color-bind="self.State == ButtonState::Pressed ? win10Colors.ScrollThumbPressed : self.State == ButtonState::Active ? win10Colors.ScrollThumbHovered : win10Colors.ScrollThumb"/>
+        </Bounds>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="VScrollHandleTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::VScrollHandleTemplate" ref.Styles="res://Win10Skin/Style">
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <Bounds AlignmentToParent="left:4 top:1 right:4 bottom:1">
+          <SolidBackground Color-bind="self.State == ButtonState::Pressed ? win10Colors.ScrollThumbPressed : self.State == ButtonState::Active ? win10Colors.ScrollThumbHovered : win10Colors.ScrollThumb"/>
+        </Bounds>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="HScrollTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::HScrollTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Ctor>
+        <![CDATA[
+          {
+            behavior.AttachScrollTemplate(self);
+            behavior.AttachDecreaseButton(buttonDecrease);
+            behavior.AttachIncreaseButton(buttonIncrease);
+            behavior.AttachHorizontalScrollHandle(handle);
+          }
+        ]]>
+      </ref.Ctor>
+      <ScrollTemplate ref.Name="self" PreferredMinSize="y:16" MinSizeLimitation="LimitToElementAndChildren">
+        <CommonScrollBehavior ref.Name="behavior"/>
+
+        <SolidBackground Color-eval="win10skin::win10Colors.Chrome"/>
+
+        <SideAligned MaxLength="16" MaxRatio="0.5" Direction="Left">
+          <Button AutoFocus="false" ref.Name="buttonDecrease" ControlTemplate="win10skin::LeftScrollButtonTemplate">
+            <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          </Button>
+        </SideAligned>
+        <SideAligned MaxLength="16" MaxRatio="0.5" Direction="Right">
+          <Button AutoFocus="false" ref.Name="buttonIncrease" ControlTemplate="win10skin::RightScrollButtonTemplate">
+            <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          </Button>
+        </SideAligned>
+        <Bounds ref.Name="handleContainer" AlignmentToParent="left:16 top:0 right:16 bottom:0" MinSizeLimitation="NoLimit">
+          <PartialView ref.Name="handle" PreferredMinSize="x:16" Visible-bind="self.VisuallyEnabled">
+            <att.WidthPageSize-bind>self.TotalSize == 0 ? 1.0 : (cast double self.PageSize) / self.TotalSize</att.WidthPageSize-bind>
+            <att.WidthRatio-bind>self.TotalSize == 0 ? 0.0 : (cast double self.Position) / self.TotalSize</att.WidthRatio-bind>
+            <Button AutoFocus="false" ControlTemplate="win10skin::HScrollHandleTemplate">
+              <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+            </Button>
+          </PartialView>
+        </Bounds>
+      </ScrollTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="VScrollTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::VScrollTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Ctor>
+        <![CDATA[
+          {
+            behavior.AttachScrollTemplate(self);
+            behavior.AttachDecreaseButton(buttonDecrease);
+            behavior.AttachIncreaseButton(buttonIncrease);
+            behavior.AttachVerticalScrollHandle(handle);
+          }
+        ]]>
+      </ref.Ctor>
+      <ScrollTemplate ref.Name="self" PreferredMinSize="x:16" MinSizeLimitation="LimitToElementAndChildren">
+        <CommonScrollBehavior ref.Name="behavior"/>
+
+        <SolidBackground Color-eval="win10skin::win10Colors.Chrome"/>
+
+        <SideAligned MaxLength="16" MaxRatio="0.5" Direction="Top">
+          <Button AutoFocus="false" ref.Name="buttonDecrease" ControlTemplate="win10skin::TopScrollButtonTemplate">
+            <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          </Button>
+        </SideAligned>
+        <SideAligned MaxLength="16" MaxRatio="0.5" Direction="Bottom">
+          <Button AutoFocus="false" ref.Name="buttonIncrease" ControlTemplate="win10skin::BottomScrollButtonTemplate">
+            <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+          </Button>
+        </SideAligned>
+        <Bounds ref.Name="handleContainer" AlignmentToParent="left:0 top:16 right:0 bottom:16" MinSizeLimitation="NoLimit">
+          <PartialView ref.Name="handle" PreferredMinSize="y:16" Visible-bind="self.VisuallyEnabled">
+            <att.HeightPageSize-bind>self.TotalSize == 0 ? 1.0 : (cast double self.PageSize) / self.TotalSize</att.HeightPageSize-bind>
+            <att.HeightRatio-bind>self.TotalSize == 0 ? 0.0 : (cast double self.Position) / self.TotalSize</att.HeightRatio-bind>
+            <Button AutoFocus="false" ControlTemplate="win10skin::VScrollHandleTemplate">
+              <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+            </Button>
+          </PartialView>
+        </Bounds>
+      </ScrollTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="HTrackerHandleTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::HTrackerHandleTemplate" ref.Styles="res://Win10Skin/Style">
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBackground Color-bind="not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Pressed ? win10Colors.Outline : self.State == ButtonState::Active ? win10Colors.Text : win10Colors.Accent"/>
+        </Bounds>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="VTrackerHandleTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::VTrackerHandleTemplate" ref.Styles="res://Win10Skin/Style">
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBackground Color-bind="not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Pressed ? win10Colors.Outline : self.State == ButtonState::Active ? win10Colors.Text : win10Colors.Accent"/>
+        </Bounds>
+      </ButtonTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="HTrackerTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::HTrackerTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Ctor>
+        <![CDATA[
+          {
+            behavior.AttachScrollTemplate(self);
+            behavior.AttachHorizontalTrackerHandle(handle);
+          }
+        ]]>
+      </ref.Ctor>
+      <ScrollTemplate ref.Name="self" PreferredMinSize="y:24" MinSizeLimitation="LimitToElementAndChildren">
+        <CommonScrollBehavior ref.Name="behavior"/>
+        <SolidBackground Color-eval="win10skin::win10Colors.Page"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
+          <FocusRectangle/>
+        </Bounds>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="LimitToElementAndChildren">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:24</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Absolute absolute:6</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            <CellOption>composeType:Absolute absolute:6</CellOption>
+          </att.Columns>
+          <Cell Site="row:1 column:1">
+            <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <att.Rows>
+                <CellOption>composeType:Percentage percentage:0.5</CellOption>
+                <CellOption>composeType:Absolute absolute:2</CellOption>
+                <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              </att.Rows>
+              <att.Columns>
+                <CellOption>composeType:Percentage percentage:1.0</CellOption>
+              </att.Columns>
+              <Cell Site="row:1 column:0">
+                <SolidBackground Color-bind="self.VisuallyEnabled ? win10Colors.Outline : win10Colors.Divider"/>
+                <PartialView>
+                  <att.WidthPageSize-bind>self.TotalSize == 0 ? 0.0 : (cast double self.Position) / self.TotalSize</att.WidthPageSize-bind>
+                  <SolidBackground Color-bind="self.VisuallyEnabled ? win10Colors.Accent : win10Colors.DisabledText"/>
+                </PartialView>
+              </Cell>
+            </Table>
+            <PartialView ref.Name="handle" PreferredMinSize="x:8 y:24" WidthPageSize="0">
+              <att.WidthRatio-bind>self.TotalSize == 0 ? 0.0 : (cast double self.Position) / self.TotalSize</att.WidthRatio-bind>
+              <Button AutoFocus="false" ControlTemplate="win10skin::HTrackerHandleTemplate">
+                <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+              </Button>
+            </PartialView>
+          </Cell>
+        </Table>
+      </ScrollTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="VTrackerTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::VTrackerTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Ctor>
+        <![CDATA[
+          {
+            behavior.AttachScrollTemplate(self);
+            behavior.AttachVerticalTrackerHandle(handle);
+          }
+        ]]>
+      </ref.Ctor>
+      <ScrollTemplate ref.Name="self" PreferredMinSize="x:24" MinSizeLimitation="LimitToElementAndChildren">
+        <CommonScrollBehavior ref.Name="behavior"/>
+        <SolidBackground Color-eval="win10skin::win10Colors.Page"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
+          <FocusRectangle/>
+        </Bounds>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="LimitToElementAndChildren">
+          <att.Rows>
+            <CellOption>composeType:Absolute absolute:6</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            <CellOption>composeType:Absolute absolute:6</CellOption>
+          </att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:24</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Columns>
+          <Cell Site="row:1 column:1">
+            <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <att.Rows>
+                <CellOption>composeType:Percentage percentage:1.0</CellOption>
+              </att.Rows>
+              <att.Columns>
+                <CellOption>composeType:Percentage percentage:0.5</CellOption>
+                <CellOption>composeType:Absolute absolute:2</CellOption>
+                <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              </att.Columns>
+              <Cell Site="row:0 column:1">
+                <SolidBackground Color-bind="self.VisuallyEnabled ? win10Colors.Outline : win10Colors.Divider"/>
+                <PartialView>
+                  <att.HeightPageSize-bind>self.TotalSize == 0 ? 0.0 : (cast double self.Position) / self.TotalSize</att.HeightPageSize-bind>
+                  <SolidBackground Color-bind="self.VisuallyEnabled ? win10Colors.Accent : win10Colors.DisabledText"/>
+                </PartialView>
+              </Cell>
+            </Table>
+            <PartialView ref.Name="handle" PreferredMinSize="x:24 y:8" HeightPageSize="0">
+              <att.HeightRatio-bind>self.TotalSize == 0 ? 0.0 : (cast double self.Position) / self.TotalSize</att.HeightRatio-bind>
+              <Button AutoFocus="false" ControlTemplate="win10skin::VTrackerHandleTemplate">
+                <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+              </Button>
+            </PartialView>
+          </Cell>
+        </Table>
+      </ScrollTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ProgressBarTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ProgressBarTemplate" ref.Styles="res://Win10Skin/Style">
+      <ScrollTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:4" MinSizeLimitation="LimitToElementAndChildren">
+        <Table ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Absolute absolute:4</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Rows>
+          <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+          <Cell Site="row:1 column:0">
+            <SolidBackground Color-eval="win10Colors.Divider"/>
+            <PartialView>
+              <att.WidthPageSize-bind><![CDATA[
+                self.Position <= 0 ? 0.0 : self.Position >= self.TotalSize - self.PageSize ? 1.0 :
+                (cast double self.Position) / (self.TotalSize - self.PageSize)
+              ]]></att.WidthPageSize-bind>
+              <SolidBackground Color-bind="self.VisuallyEnabled ? win10Colors.Accent : win10Colors.DisabledText"/>
+            </PartialView>
+          </Cell>
+        </Table>
+      </ScrollTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="ScrollViewTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::ScrollViewTemplate" ref.Styles="res://Win10Skin/Style">
+      <ScrollViewTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
+        <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
+        <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
+
+        <SolidBackground Color-eval="win10skin::win10Colors.Page"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <SolidBorder Color-eval="win10skin::win10Colors.Divider"/>
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:1 top:1 right:1 bottom:1">
+            <att.HScrollTemplate>win10skin::HScrollTemplate</att.HScrollTemplate>
+            <att.VScrollTemplate>win10skin::VScrollTemplate</att.VScrollTemplate>
+            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+          </CommonScrollViewLook>
+        </Bounds>
+      </ScrollViewTemplate>
+    </Instance>
+  </Instance>
+</Folder>
