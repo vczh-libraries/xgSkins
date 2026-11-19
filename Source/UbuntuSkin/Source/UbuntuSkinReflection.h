@@ -45,6 +45,8 @@ namespace vl
 			DECL_TYPE_INFO(::ubuntuskin::ButtonTemplateConstructor)
 			DECL_TYPE_INFO(::ubuntuskin::CaptionButtonTemplate)
 			DECL_TYPE_INFO(::ubuntuskin::CaptionButtonTemplateConstructor)
+			DECL_TYPE_INFO(::ubuntuskin::CaptionCloseButtonTemplate)
+			DECL_TYPE_INFO(::ubuntuskin::CaptionCloseButtonTemplateConstructor)
 			DECL_TYPE_INFO(::ubuntuskin::CheckBoxTemplate)
 			DECL_TYPE_INFO(::ubuntuskin::CheckBoxTemplateConstructor)
 			DECL_TYPE_INFO(::ubuntuskin::ColorPackage)
