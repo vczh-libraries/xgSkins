@@ -75,7 +75,7 @@
                   </att.SubMenu-set>
                 </ToolstripDropdownButton>
                 <ToolstripDropdownButton ref.Name="buttonAlignment" Alt="P">
-                  <att.Image-bind>self.document.observe as _(self.SelectAlignmentCommand().Image on _.SelectionChanged)</att.Image-bind>
+                  <att.Image-bind>(self.document.observe as _(self.SelectAlignmentCommand() on _.SelectionChanged, _.ModifiedChanged)).Image</att.Image-bind>
                   <att.SubMenu-set>
                     <MenuItemButton Command-eval="self.commandAlignDefault" Alt="D"/>
                     <MenuItemButton Command-eval="self.commandAlignLeft" Alt="L"/>

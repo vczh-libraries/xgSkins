@@ -181,6 +181,8 @@ namespace vl
 			DECL_TYPE_INFO(::demo::TreeViewTabPageConstructor)
 			DECL_TYPE_INFO(::demo::VerticalTabTemplate)
 			DECL_TYPE_INFO(::demo::VerticalTabTemplateConstructor)
+			DECL_TYPE_INFO(::demo::WebsiteLinkVisualizer)
+			DECL_TYPE_INFO(::demo::WebsiteLinkVisualizerConstructor)
 
 #ifdef VCZH_DESCRIPTABLEOBJECT_WITH_METADATA
 

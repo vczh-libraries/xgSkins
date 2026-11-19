@@ -1,4 +1,5 @@
 <Folder>
+  <Instance name="WebsiteLinkVisualizerResource" content="File">../WebsiteLinkVisualizer.xml</Instance>
   <Folder name="GenderComponents">
     <Instance name="GenderDisplayerResource">
       <Instance ref.CodeBehind="false" ref.Class="demo::GenderDisplayer">

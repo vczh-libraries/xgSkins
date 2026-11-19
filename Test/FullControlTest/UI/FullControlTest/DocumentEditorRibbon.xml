@@ -332,17 +332,17 @@
                     <att.Items>
                       <RibbonButtons MaxSize="Small" MinSize="Icon">
                         <att.Buttons>
-                          <RibbonIconLabel Text="Left" Image-uri="res://ToolbarImages/TextAlignLeft">
+                          <RibbonIconLabel Text="Left" Image-bind="self.GetEditorIcon(&quot;TextAlignLeft&quot;, self.LightIconInk)">
                             <SinglelineTextBox Alt="L">
                               <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:36"/>
                             </SinglelineTextBox>
                           </RibbonIconLabel>
-                          <RibbonIconLabel Text="Center" Image-uri="res://ToolbarImages/TextAlignCenter">
+                          <RibbonIconLabel Text="Center" Image-bind="self.GetEditorIcon(&quot;TextAlignCenter&quot;, self.LightIconInk)">
                             <SinglelineTextBox Alt="C">
                               <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:36"/>
                             </SinglelineTextBox>
                           </RibbonIconLabel>
-                          <RibbonIconLabel Text="Right" Image-uri="res://ToolbarImages/TextAlignRight">
+                          <RibbonIconLabel Text="Right" Image-bind="self.GetEditorIcon(&quot;TextAlignRight&quot;, self.LightIconInk)">
                             <SinglelineTextBox Alt="R">
                               <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:36"/>
                             </SinglelineTextBox>
@@ -352,17 +352,17 @@
                       <RibbonSplitter/>
                       <RibbonButtons MaxSize="Small" MinSize="Icon">
                         <att.Buttons>
-                          <RibbonIconLabel Text="Left" Image-uri="res://ToolbarImages/TextAlignLeft">
+                          <RibbonIconLabel Text="Left" Image-bind="self.GetEditorIcon(&quot;TextAlignLeft&quot;, self.LightIconInk)">
                             <SinglelineTextBox Alt="L">
                               <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:36"/>
                             </SinglelineTextBox>
                           </RibbonIconLabel>
-                          <RibbonIconLabel Text="Center" Image-uri="res://ToolbarImages/TextAlignCenter">
+                          <RibbonIconLabel Text="Center" Image-bind="self.GetEditorIcon(&quot;TextAlignCenter&quot;, self.LightIconInk)">
                             <SinglelineTextBox Alt="C">
                               <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:36"/>
                             </SinglelineTextBox>
                           </RibbonIconLabel>
-                          <RibbonIconLabel Text="Right" Image-uri="res://ToolbarImages/TextAlignRight">
+                          <RibbonIconLabel Text="Right" Image-bind="self.GetEditorIcon(&quot;TextAlignRight&quot;, self.LightIconInk)">
                             <SinglelineTextBox Alt="R">
                               <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:36"/>
                             </SinglelineTextBox>
