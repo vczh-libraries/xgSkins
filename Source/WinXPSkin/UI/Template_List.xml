@@ -57,7 +57,7 @@
             <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and self.Focused"><FocusRectangle/></Bounds>
           </Bounds>
         </Bounds>
-        <Bounds AlignmentToParent="left:-1 top:1 right:1 bottom:1" PreferredMinSize="x:9 y:0">
+        <Bounds AlignmentToParent="left:-1 top:1 right:1 bottom:1" PreferredMinSize="x:10 y:0">
           <SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
           <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/>
@@ -68,17 +68,17 @@
           <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
             <att.Rows>
               <CellOption>composeType:Percentage percentage:0.5</CellOption>
-              <CellOption>composeType:Absolute absolute:4</CellOption>
+              <CellOption>composeType:Absolute absolute:3</CellOption>
               <CellOption>composeType:Percentage percentage:0.5</CellOption>
             </att.Rows>
             <att.Columns>
               <CellOption>composeType:Percentage percentage:0.5</CellOption>
-              <CellOption>composeType:Absolute absolute:7</CellOption>
+              <CellOption>composeType:Absolute absolute:5</CellOption>
               <CellOption>composeType:Percentage percentage:0.5</CellOption>
             </att.Columns>
             <Cell Site="row:1 column:1">
-              <Polygon BorderColor-bind="self.Colors.Bullet" BackgroundColor-bind="self.Colors.Bullet" Size="x:7 y:4">
-                <att.Points><Point>x:0 y:0</Point><Point>x:2 y:0</Point><Point>x:3 y:1</Point><Point>x:4 y:0</Point><Point>x:6 y:0</Point><Point>x:3 y:3</Point></att.Points>
+              <Polygon BorderColor-bind="self.Colors.Bullet" BackgroundColor-bind="self.Colors.Bullet" Size="x:5 y:3">
+                <att.Points><Point>x:0 y:0</Point><Point>x:1 y:0</Point><Point>x:2 y:1</Point><Point>x:3 y:0</Point><Point>x:4 y:0</Point><Point>x:2 y:2</Point></att.Points>
               </Polygon>
             </Cell>
           </Table>

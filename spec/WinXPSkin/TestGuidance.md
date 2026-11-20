@@ -129,6 +129,11 @@ changes; creating the skin requires the full showcase verification described in
   expanders, white combo content with a separate blue arrow button, and white
   menu rows with blue/white hot selection. List and calendar selection uses a
   pale blue face and blue outline so framework-owned dark labels remain legible.
+- On the ListView selector, check that the five-pixel chevron sits inside the
+  blue combo button with its bevel visible on both sides. In the ribbon style
+  gallery, check that all three navigation buttons are 13 pixels wide and
+  that the gallery still shows the same number of complete items at a fixed
+  window width.
 - In both document editors, execute the SOP editing, formatting, context-menu,
   dialog, image, hyperlink and save/reload checks. Resize the ribbon until
   groups collapse; check large, small and icon presentations, split-button
