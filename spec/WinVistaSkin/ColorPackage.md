@@ -12,6 +12,29 @@ colors and colors used only by a helper template. The package is declared in
 the purpose of each item; design references and frame details are documented in
 [doc/WinVistaSkin.md](../../doc/WinVistaSkin.md).
 
+## Native references
+
+The Aero property sheet has a white selected tab and page. The selected tab
+rises two pixels above the other headers and interrupts the `#898C95` page
+outline. The inactive header has a silver face with a lighter upper half.
+[Microsoft's property-tab image](https://learn.microsoft.com/en-us/windows/win32/uxguide/images/ctrl-tabs-image1.png).
+
+Vista Explorer's selected thumbnail has a one-pixel cyan outline. On the
+leftmost thumbnail, the top edge at (30, 1) is `#99DEFD`. The interior at
+x = 30 runs from `#F1F8FD` near the top to `#D5EFFC` near the bottom.
+[Microsoft's multiple-selection example](https://learn.microsoft.com/en-us/windows/win32/uxguide/images/ctrl-list-views-image15.png).
+Vista can be identified by the stock Humpback Whale, Oryx Antelope, Toco
+Toucan, Waterfall and Winter Leaves thumbnails and the light-blue details
+pane. Microsoft's 2007 Explorer exhibit shows the same five photographs in
+the same sequence. [Vista Photos Explorer, page 2](https://cases.justia.com/federal/district-courts/washington/wawdce/2%3A2007cv00475/142597/90/8.pdf#page=2).
+
+The ribbon follows the Office 2007 blue scheme. Its inactive tabs show the
+`#C0ECFD` strip through their backgrounds. The selected tab meets the pale-blue
+panel. The highlighted command has a cream upper band, a saturated gold
+`#FDD244` band just below the center and a lighter gold lower edge. These
+colors are samples from the published Word image, which uses an indexed
+palette. [Word 2007 Insert tab, figure 6](https://learn.microsoft.com/en-us/archive/msdn-magazine/2007/february/extend-office-2007-with-your-own-ribbon-tabs-and-controls).
+
 ## State packages
 
 `ButtonColors` contains `Border` for the outline, `Background` for the inset
@@ -153,6 +176,7 @@ item selection colors.
 | `SplitterLight` | Light edge of menu/toolbar separators and group-box bevels. |
 | `TooltipBackground` | Pale-yellow tooltip and keytip background. |
 | `TooltipBorder` | Tooltip and keytip outline. |
+| `RibbonTabStrip` | Ribbon header-row background behind the inactive tab labels. |
 | `RibbonBackgroundTop` | Upper ribbon command-area background. |
 | `RibbonBackgroundBottom` | Lower ribbon command-area background. |
 | `RibbonBorder` | Ribbon outline and group dividers. |

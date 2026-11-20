@@ -131,6 +131,7 @@
         WindowClosePressed : Color;
         WindowCloseBorder : Color;
         WindowCloseText : Color;
+        RibbonTabStrip : Color;
         RibbonBackgroundTop : Color;
         RibbonBackgroundBottom : Color;
         RibbonBorder : Color;
@@ -195,12 +196,12 @@
             Bullet: cast Color "#00000000";
           };
           ItemSelected: {
-            Border: cast Color "#769ECE";
-            Background: cast Color "#EBF4FD";
-            G1: cast Color "#DCEBFC";
-            G2: cast Color "#D0E3FC";
-            G3: cast Color "#D0E3FC";
-            G4: cast Color "#C1DBFC";
+            Border: cast Color "#99DEFD";
+            Background: cast Color "#F0F8FD";
+            G1: cast Color "#F1F8FD";
+            G2: cast Color "#E4F3FD";
+            G3: cast Color "#E4F3FD";
+            G4: cast Color "#D5EFFC";
             Text: cast Color "#000000";
             Bullet: cast Color "#00000000";
           };
@@ -216,11 +217,11 @@
           };
           TabNormal: {
             Border: cast Color "#898C95";
-            Background: cast Color "#F3F3F3";
-            G1: cast Color "#F2F2F2";
-            G2: cast Color "#EBEBEB";
-            G3: cast Color "#DBDBDB";
-            G4: cast Color "#CFCFCF";
+            Background: cast Color "#FEFEFE";
+            G1: cast Color "#EBEBEB";
+            G2: cast Color "#E5E5E5";
+            G3: cast Color "#D6D6D6";
+            G4: cast Color "#CBCBCB";
             Text: cast Color "#000000";
             Bullet: cast Color "#00000000";
           };
@@ -338,22 +339,22 @@
             Bullet: cast Color "#B1B1B1";
           };
           RibbonButtonNormal: {
-            Border: cast Color "#FCC45B00";
-            Background: cast Color "#FFFFF100";
-            G1: cast Color "#FFFBD600";
-            G2: cast Color "#FFFBD600";
-            G3: cast Color "#FFE69F00";
-            G4: cast Color "#FFE69F00";
+            Border: cast Color "#C2A97B00";
+            Background: cast Color "#FCFBF500";
+            G1: cast Color "#FAF8DB00";
+            G2: cast Color "#FDE98D00";
+            G3: cast Color "#FDD24400";
+            G4: cast Color "#FDE98D00";
             Text: cast Color "#000000";
             Bullet: cast Color "#00000000";
           };
           RibbonButtonActive: {
-            Border: cast Color "#FCC45B";
-            Background: cast Color "#FFFFF1";
-            G1: cast Color "#FFFBD6";
-            G2: cast Color "#FFFBD6";
-            G3: cast Color "#FFE69F";
-            G4: cast Color "#FFE69F";
+            Border: cast Color "#C2A97B";
+            Background: cast Color "#FCFBF5";
+            G1: cast Color "#FAF8DB";
+            G2: cast Color "#FDE98D";
+            G3: cast Color "#FDD244";
+            G4: cast Color "#FDE98D";
             Text: cast Color "#000000";
             Bullet: cast Color "#00000000";
           };
@@ -378,12 +379,12 @@
             Bullet: cast Color "#00000000";
           };
           RibbonButtonDisabled: {
-            Border: cast Color "#FCC45B00";
-            Background: cast Color "#FFFFF100";
-            G1: cast Color "#FFFBD600";
-            G2: cast Color "#FFFBD600";
-            G3: cast Color "#FFE69F00";
-            G4: cast Color "#FFE69F00";
+            Border: cast Color "#C2A97B00";
+            Background: cast Color "#FCFBF500";
+            G1: cast Color "#FAF8DB00";
+            G2: cast Color "#FDE98D00";
+            G3: cast Color "#FDD24400";
+            G4: cast Color "#FDE98D00";
             Text: cast Color "#838383";
             Bullet: cast Color "#00000000";
           };
@@ -591,9 +592,10 @@
           WindowClosePressed: cast Color "#A63419";
           WindowCloseBorder: cast Color "#824334";
           WindowCloseText: cast Color "#FFFFFF";
-          RibbonBackgroundTop: cast Color "#E8F0FC";
-          RibbonBackgroundBottom: cast Color "#BFDBFF";
-          RibbonBorder: cast Color "#9EB6CE";
+          RibbonTabStrip: cast Color "#C0ECFD";
+          RibbonBackgroundTop: cast Color "#E4F2F6";
+          RibbonBackgroundBottom: cast Color "#BDEDF6";
+          RibbonBorder: cast Color "#8BCFF6";
           RibbonGroupText: cast Color "#3B5879";
         };
       }
