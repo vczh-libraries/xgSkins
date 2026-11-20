@@ -10,6 +10,8 @@
         Canvas : Color;
         Layer : Color;
         Flyout : Color;
+        TabSurface : Color;
+        TabHover : Color;
         Stroke : Color;
         StrongStroke : Color;
         ButtonBottomStroke : Color;
@@ -73,8 +75,7 @@
         var controlStroke = dark ? cast Color "#474747" : cast Color "#D9D9D9";
         var disabledStroke = dark ? cast Color "#3D3D3D" : cast Color "#E5E5E5";
         var subtleHover = dark ? cast Color "#FFFFFF0F" : cast Color "#00000009";
-        var subtlePressed = dark ? cast Color "#FFFFFF0A" : cast Color "#0000000F";
-        var selection = dark ? cast Color "#FFFFFF12" : cast Color "#0000000D";
+        var subtlePressed = dark ? cast Color "#FFFFFF0A" : cast Color "#00000006";
         var thumb = dark ? cast Color "#A0A0A0" : cast Color "#898989";
         var thumbHover = dark ? cast Color "#CECECE" : cast Color "#606060";
         var thumbPressed = dark ? cast Color "#DADADA" : cast Color "#5A5A5A";
@@ -83,6 +84,8 @@
           Canvas: canvas;
           Layer: layer;
           Flyout: flyout;
+          TabSurface: (dark ? cast Color "#282828" : cast Color "#F9F9F9");
+          TabHover: (dark ? cast Color "#FFFFFF0F" : cast Color "#0000000A");
           Stroke: stroke;
           StrongStroke: strongStroke;
           ButtonBottomStroke: dark ? cast Color "#262626" : cast Color "#BEBEBE";
@@ -110,7 +113,7 @@
           SubtleNormal: {Border:transparent; Face:transparent; Text:foreground; Bullet:transparent;};
           SubtleHovered: {Border:transparent; Face:subtleHover; Text:foreground; Bullet:transparent;};
           SubtlePressed: {Border:transparent; Face:subtlePressed; Text:secondary; Bullet:transparent;};
-          SubtleSelected: {Border:transparent; Face:selection; Text:foreground; Bullet:transparent;};
+          SubtleSelected: {Border:transparent; Face:subtleHover; Text:foreground; Bullet:transparent;};
           SubtleDisabled: {Border:transparent; Face:transparent; Text:disabled; Bullet:transparent;};
           ThumbNormal: {Border:transparent; Face:thumb; Text:secondary; Bullet:transparent;};
           ThumbHovered: {Border:transparent; Face:thumbHover; Text:foreground; Bullet:transparent;};

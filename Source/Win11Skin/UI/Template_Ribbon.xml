@@ -7,7 +7,7 @@
         var lastAnimation : IGuiAnimation^ = null;
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.SubtleDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win11Colors.SubtlePressed : self.Selected ? win11Colors.SubtleSelected : self.State == ButtonState::Active ? win11Colors.SubtleHovered : win11Colors.SubtleNormal</att.Colors-bind>
+        <att.Colors-bind>GetRibbonCommandColors(self.VisuallyEnabled, self.SubMenuOpening ? ButtonState::Pressed : self.State, self.Selected)</att.Colors-bind>
         <ev.ColorsChanged-eval><![CDATA[{
           self.KillAnimation(self.lastAnimation);
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
@@ -48,7 +48,7 @@
         var lastAnimation : IGuiAnimation^ = null;
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.SubtleDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win11Colors.SubtlePressed : self.Selected ? win11Colors.SubtleSelected : self.State == ButtonState::Active ? win11Colors.SubtleHovered : win11Colors.SubtleNormal</att.Colors-bind>
+        <att.Colors-bind>GetRibbonCommandColors(self.VisuallyEnabled, self.SubMenuOpening ? ButtonState::Pressed : self.State, self.Selected)</att.Colors-bind>
         <ev.ColorsChanged-eval><![CDATA[{
           self.KillAnimation(self.lastAnimation);
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
@@ -113,7 +113,7 @@
         var lastAnimation : IGuiAnimation^ = null;
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.SubtleDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win11Colors.SubtlePressed : self.Selected ? win11Colors.SubtleSelected : self.State == ButtonState::Active ? win11Colors.SubtleHovered : win11Colors.SubtleNormal</att.Colors-bind>
+        <att.Colors-bind>GetRibbonCommandColors(self.VisuallyEnabled, self.SubMenuOpening ? ButtonState::Pressed : self.State, self.Selected)</att.Colors-bind>
         <ev.ColorsChanged-eval><![CDATA[{
           self.KillAnimation(self.lastAnimation);
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
@@ -159,7 +159,7 @@
         var lastAnimation : IGuiAnimation^ = null;
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.SubtleDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win11Colors.SubtlePressed : self.Selected ? win11Colors.SubtleSelected : self.State == ButtonState::Active ? win11Colors.SubtleHovered : win11Colors.SubtleNormal</att.Colors-bind>
+        <att.Colors-bind>GetRibbonCommandColors(self.VisuallyEnabled, self.SubMenuOpening ? ButtonState::Pressed : self.State, self.Selected)</att.Colors-bind>
         <ev.ColorsChanged-eval><![CDATA[{
           self.KillAnimation(self.lastAnimation);
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
@@ -205,7 +205,7 @@
         var lastAnimation : IGuiAnimation^ = null;
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.SubtleDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win11Colors.SubtlePressed : self.Selected ? win11Colors.SubtleSelected : self.State == ButtonState::Active ? win11Colors.SubtleHovered : win11Colors.SubtleNormal</att.Colors-bind>
+        <att.Colors-bind>GetRibbonCommandColors(self.VisuallyEnabled, self.SubMenuOpening ? ButtonState::Pressed : self.State, self.Selected)</att.Colors-bind>
         <ev.ColorsChanged-eval><![CDATA[{
           self.KillAnimation(self.lastAnimation);
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
@@ -273,7 +273,7 @@
         var lastAnimation : IGuiAnimation^ = null;
       ]]></ref.Members>
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.SubtleDisabled : self.State == ButtonState::Pressed ? win11Colors.SubtlePressed : self.Selected ? win11Colors.SubtleSelected : self.State == ButtonState::Active ? win11Colors.SubtleHovered : win11Colors.SubtleNormal</att.Colors-bind>
+        <att.Colors-bind>GetRibbonCommandColors(self.VisuallyEnabled, self.State, self.Selected)</att.Colors-bind>
         <ev.ColorsChanged-eval><![CDATA[{
           self.KillAnimation(self.lastAnimation);
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
@@ -319,7 +319,7 @@
         var lastAnimation : IGuiAnimation^ = null;
       ]]></ref.Members>
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.SubtleDisabled : self.State == ButtonState::Pressed ? win11Colors.SubtlePressed : self.Selected ? win11Colors.SubtleSelected : self.State == ButtonState::Active ? win11Colors.SubtleHovered : win11Colors.SubtleNormal</att.Colors-bind>
+        <att.Colors-bind>GetRibbonCommandColors(self.VisuallyEnabled, self.State, self.Selected)</att.Colors-bind>
         <ev.ColorsChanged-eval><![CDATA[{
           self.KillAnimation(self.lastAnimation);
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
@@ -368,7 +368,7 @@
         var lastAnimation : IGuiAnimation^ = null;
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.SubtleDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win11Colors.SubtlePressed : self.Selected ? win11Colors.SubtleSelected : self.State == ButtonState::Active ? win11Colors.SubtleHovered : win11Colors.SubtleNormal</att.Colors-bind>
+        <att.Colors-bind>GetRibbonCommandColors(self.VisuallyEnabled, self.SubMenuOpening ? ButtonState::Pressed : self.State, self.Selected)</att.Colors-bind>
         <ev.ColorsChanged-eval><![CDATA[{
           self.KillAnimation(self.lastAnimation);
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
@@ -607,7 +607,7 @@
           </att.Rows>
           <att.Columns>
             <_>composeType:Percentage percentage:1.0</_>
-            <_>composeType:MinSize</_>
+            <_>composeType:Absolute absolute:17</_>
           </att.Columns>
 
           <Cell Site="row:0 column:0 rowSpan:3">
@@ -620,19 +620,19 @@
 
           <Cell Site="row:0 column:1">
             <Button AutoFocus="false" ControlTemplate="x:TopScrollButtonTemplate" Enabled-bind="self.ScrollUpEnabled" ev.Clicked-eval="self.Commands.NotifyScrollUp();">
-              <att.BoundsComposition-set AlignmentToParent="left:4 top:0 right:4 bottom:0"/>
+              <att.BoundsComposition-set AlignmentToParent="left:2 top:0 right:4 bottom:0"/>
             </Button>
           </Cell>
 
           <Cell Site="row:1 column:1">
             <Button AutoFocus="false" ControlTemplate="x:BottomScrollButtonTemplate" Enabled-bind="self.ScrollDownEnabled" ev.Clicked-eval="self.Commands.NotifyScrollDown();">
-              <att.BoundsComposition-set AlignmentToParent="left:4 top:0 right:4 bottom:0"/>
+              <att.BoundsComposition-set AlignmentToParent="left:2 top:0 right:4 bottom:0"/>
             </Button>
           </Cell>
 
           <Cell Site="row:2 column:1">
             <Button AutoFocus="false" ControlTemplate="x:RibbonGalleryDropdownButtonTemplate" ev.Clicked-eval="self.Commands.NotifyDropdown();">
-              <att.BoundsComposition-set AlignmentToParent="left:4 top:0 right:4 bottom:0"/>
+              <att.BoundsComposition-set AlignmentToParent="left:2 top:0 right:4 bottom:0"/>
             </Button>
           </Cell>
         </Table>

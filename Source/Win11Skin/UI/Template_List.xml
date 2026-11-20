@@ -6,7 +6,9 @@
         prop ShowIndicator : bool = true {}
       ]]></ref.Members>
       <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.SubtleDisabled : self.Selected or self.State == ButtonState::Pressed ? win11Colors.SubtleSelected : self.State == ButtonState::Active ? win11Colors.SubtleHovered : win11Colors.SubtleNormal</att.Colors-bind>
+        <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.SubtleDisabled : self.Selected
+          ? (self.State == ButtonState::Active ? win11Colors.SubtlePressed : win11Colors.SubtleSelected)
+          : self.State == ButtonState::Pressed ? win11Colors.SubtlePressed : self.State == ButtonState::Active ? win11Colors.SubtleHovered : win11Colors.SubtleNormal</att.Colors-bind>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
         </Bounds>
@@ -82,7 +84,7 @@
             </Bounds>
           </Bounds>
 
-          <Table AlignmentToParent="left:-1 top:1 right:1 bottom:1" PreferredMinSize="x:9 y:3" MinSizeLimitation="NoLimit">
+          <Table AlignmentToParent="left:-1 top:1 right:2 bottom:1" PreferredMinSize="x:9 y:3" MinSizeLimitation="NoLimit">
             <att.Rows>
               <CellOption>composeType:Percentage percentage:0.5</CellOption>
               <CellOption>composeType:Absolute absolute:6</CellOption>

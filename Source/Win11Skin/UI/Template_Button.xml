@@ -58,6 +58,18 @@
           state == ButtonState::Active ? win11Colors.MarkHovered : win11Colors.MarkNormal;
       }
 
+      func GetRibbonCommandColors(enabled : bool, state : ButtonState, selected : bool) : ButtonColors
+      {
+        if (selected)
+        {
+          var colors = GetCheckedColors(enabled, state, true);
+          return {Border:colors.Border; Face:colors.Face; Text:colors.Bullet; Bullet:colors.Bullet;};
+        }
+        return not enabled ? win11Colors.SubtleDisabled :
+          state == ButtonState::Pressed ? win11Colors.SubtlePressed :
+          state == ButtonState::Active ? win11Colors.SubtleHovered : win11Colors.SubtleNormal;
+      }
+
       func GetScrollButtonColors(enabled : bool, state : ButtonState, arrow : bool) : ButtonColors
       {
         if (arrow)

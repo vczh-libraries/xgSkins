@@ -4,29 +4,32 @@
       <ref.Members>
         <![CDATA[
           prop Highlighted: bool = false {}
+          prop Surface: Color = win11Colors.TabSurface {}
           prop TabFocused: bool = false {}
           prop Colors : ButtonColors = win11Colors.SubtleNormal {}
         ]]>
       </ref.Members>
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <att.Highlighted-bind>(cast (RibbonTabPage*) self.Context).Highlighted ?? false</att.Highlighted-bind>
+        <att.Surface-bind>(self.Context is RibbonTabPage*) ? win11Colors.Canvas : win11Colors.TabSurface</att.Surface-bind>
         <att.TabFocused-bind>(cast (TabPage*) self.Context).OwnerTab.Focused ?? false</att.TabFocused-bind>
         <att.Colors-bind>self.Selected ? win11Colors.SubtleSelected : self.VisuallyEnabled and self.State != ButtonState::Normal ? win11Colors.SubtleHovered : win11Colors.SubtleNormal</att.Colors-bind>
-        <SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
+        <SolidBorder Color-bind="self.Selected ? win11Colors.Stroke : self.Colors.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:0">
-          <SolidBackground Color-bind="self.Colors.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
+          <SolidBackground Color-bind="self.Selected ? self.Surface : self.VisuallyEnabled and self.State != ButtonState::Normal ? win11Colors.TabHover : self.Colors.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
+        </Bounds>
+        <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="y:4" Visible-bind="self.Selected">
+          <SolidBackground Color-eval="win11Colors.Stroke"/>
+          <Bounds AlignmentToParent="left:1 top:0 right:1 bottom:0"><SolidBackground Color-bind="self.Surface"/></Bounds>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:-1" PreferredMinSize="x:0 y:2" Visible-bind="self.Highlighted">
           <SolidBackground Color-bind="self.Selected ? win11Colors.Accent : win11Colors.Secondary"/>
-        </Bounds>
-        <Bounds AlignmentToParent="left:5 top:-1 right:5 bottom:0" PreferredMinSize="y:2" Visible-bind="self.Selected">
-          <SolidBackground Color-eval="win11Colors.Accent" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Selected and self.TabFocused">
           <SolidBorder Color-eval="win11Colors.Foreground" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Bounds AlignmentToParent="left:6 top:3 right:6 bottom:3">
-          <SolidLabel Color-bind="self.VisuallyEnabled ? self.Colors.Text : win11Colors.Disabled" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <SolidLabel Color-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.Selected ? win11Colors.Foreground : win11Colors.Secondary" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Bounds>
       </SelectableButtonTemplate>
     </Instance>
@@ -100,7 +103,6 @@
           <SolidBackground Color-bind="self.IsRibbon ? win11Colors.Layer : win11Colors.Canvas"/>
           <att.Rows>
             <CellOption>composeType:MinSize</CellOption>
-            <CellOption>composeType:Absolute absolute:2</CellOption>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Rows>
           <att.Columns>
@@ -146,11 +148,12 @@
               </ev.ItemRemoved-eval>
             </RepeatFlow>
           </Cell>
-          <Cell Site="row:2 column:0 columnSpan:3">
+          <Cell Site="row:1 column:0 columnSpan:3">
             <SolidBorder Color-bind="win11Colors.Stroke"/>
-            <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1">
-              <SolidBackground Color-bind="self.IsRibbon ? win11Colors.Canvas : win11Colors.Layer"/>
+            <Bounds AlignmentToParent-bind="{left:1 top:(self.SelectedTabPage is null ? 1 : 0) right:1 bottom:1}">
+              <SolidBackground Color-bind="self.IsRibbon ? win11Colors.Canvas : win11Colors.TabSurface"/>
             </Bounds>
+            <Bounds ref.Name="container" AlignmentToParent="left:1 top:3 right:1 bottom:1"/>
           </Cell>
         </Table>
       </RibbonTabTemplate>

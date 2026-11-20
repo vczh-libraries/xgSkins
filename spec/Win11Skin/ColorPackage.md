@@ -4,12 +4,18 @@
 
 Control sizes and content insets follow DarkSkin. Rounded corners, the accent underline and layered surfaces use Windows 11 geometry and palette resources. [Windows 11 geometry](https://learn.microsoft.com/en-us/windows/apps/design/signature-experiences/geometry), [WinUI theme resources](https://github.com/microsoft/microsoft-ui-xaml/blob/main/controls/dev/CommonStyles/Common_themeresources_any.xaml).
 
+The selected TabView header has rounded upper corners, a solid face and an open lower edge. The page border continues beside the selected header. WinUI assigns the selected face its tertiary solid background and uses secondary text for inactive tabs. The skin applies the same opening to the ribbon’s command surface. [Microsoft TabView examples](https://learn.microsoft.com/en-us/windows/apps/develop/ui/controls/tab-view), [WinUI TabView template](https://github.com/microsoft/microsoft-ui-xaml/blob/main/controls/dev/TabView/TabView.xaml), [WinUI TabView theme resources](https://github.com/microsoft/microsoft-ui-xaml/blob/main/controls/dev/TabView/TabView_themeresources.xaml)
+
+WinUI list selection uses the secondary subtle fill at rest, the tertiary subtle fill on pointer-over and an accent indicator. Ribbon and toolbar buttons use the Windows command bar toggle convention for checked commands, with an accent fill and contrasting text. [WinUI list item theme resources](https://github.com/microsoft/microsoft-ui-xaml/blob/main/controls/dev/CommonStyles/ListViewItem_themeresources.xaml), [WinUI app bar toggle theme resources](https://github.com/microsoft/microsoft-ui-xaml/blob/main/controls/dev/CommonStyles/AppBarToggleButton_themeresources.xaml)
+
 ## Shared colors
 
 | Field | Light | Dark | Use |
 | --- | --- | --- | --- |
 | `Canvas` | `#F3F3F3` | `#202020` | Window, title bar, ribbon and toolbar base. |
 | `Layer` | `#FFFFFF` | `#2B2B2B` | Content pane, page or document surface. |
+| `TabSurface` | `#F9F9F9` | `#282828` | Selected property tab header and pane. |
+| `TabHover` | `#0000000A` | `#FFFFFF0F` | Hovered tab face over the strip. |
 | `Flyout` | `#F9F9F9` | `#2C2C2C` | Menu, tooltip, keytip and ribbon popup surface. |
 | `Stroke` | `#E1E1E1` | `#454545` | Control outlines, dividers, groups and unobtrusive window outlines. |
 | `ButtonBottomStroke` | `#BEBEBE` | `#262626` | Lower edge of a resting or hovered command button or combo. Pressing the control flattens this edge. |
@@ -38,14 +44,14 @@ Each `ButtonColors` value has an outline (`Border`), interior (`Face`), foregrou
 | `MarkHovered` | Hovered unchecked checkbox or radio. |
 | `MarkPressed` | Pressed unchecked checkbox or radio. |
 | `MarkDisabled` | Disabled unchecked checkbox or radio. |
-| `CheckedNormal` | Selected checkbox or radio. |
-| `CheckedHovered` | Hovered selected checkbox or radio. |
-| `CheckedPressed` | Pressed selected checkbox or radio. |
-| `CheckedDisabled` | Disabled selected checkbox or radio. |
+| `CheckedNormal` | Selected checkbox, radio or ribbon toggle. Ribbon toggles use the mark color for their text. |
+| `CheckedHovered` | Hovered selected checkbox, radio or ribbon toggle. |
+| `CheckedPressed` | Pressed selected checkbox, radio or ribbon toggle. |
+| `CheckedDisabled` | Disabled selected checkbox, radio or ribbon toggle. |
 | `SubtleNormal` | Resting menu, toolbar and ribbon commands, item backplates and tab headers. |
-| `SubtleHovered` | Hovered command, menu row, tab, list row and calendar day. |
-| `SubtlePressed` | Pressed command or open menu header. |
-| `SubtleSelected` | Selected list row, menu choice, calendar day or toggled command. |
+| `SubtleHovered` | Hovered command, menu row, list row and calendar day. |
+| `SubtlePressed` | Pressed command or open menu header. Its face also serves the hovered selected list row. |
+| `SubtleSelected` | Selected list row, menu choice or calendar day. |
 | `SubtleDisabled` | Disabled menu, list, calendar and command chrome. |
 | `ThumbNormal` | Resting scrollbar thumb. |
 | `ThumbHovered` | Hovered scrollbar thumb. |
