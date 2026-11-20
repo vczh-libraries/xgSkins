@@ -2826,14 +2826,15 @@ namespace win7skin
 		::vl::presentation::compositions::GuiBoundsComposition* container;
 		::win7skin::ItemBackgroundTemplate* self;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_0;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_1;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_2;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_3;
-		::vl::presentation::compositions::GuiTableComposition* __vwsn_precompile_4;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_5;
-		::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement> __vwsn_precompile_6;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_7;
-		::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement> __vwsn_precompile_8;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_1;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_2;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_3;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_4;
+		::vl::presentation::compositions::GuiTableComposition* __vwsn_precompile_5;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_6;
+		::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement> __vwsn_precompile_7;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_8;
+		::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement> __vwsn_precompile_9;
 		void __vwsn_win7skin_ItemBackgroundTemplate_Initialize(::win7skin::ItemBackgroundTemplate* __vwsn_this_);
 	public:
 		ItemBackgroundTemplateConstructor();
@@ -3464,21 +3465,19 @@ namespace win7skin
 	protected:
 		::vl::presentation::compositions::GuiBoundsComposition* container;
 		::win7skin::ProgressBarTemplate* self;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_0;
-		::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement> __vwsn_precompile_1;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_2;
-		::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement> __vwsn_precompile_3;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_4;
-		::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement> __vwsn_precompile_5;
-		::vl::presentation::compositions::GuiPartialViewComposition* __vwsn_precompile_6;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_7;
+		::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement> __vwsn_precompile_0;
+		::vl::presentation::compositions::GuiSideAlignedComposition* __vwsn_precompile_1;
+		::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement> __vwsn_precompile_2;
+		::vl::presentation::compositions::GuiSideAlignedComposition* __vwsn_precompile_3;
+		::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement> __vwsn_precompile_4;
+		::vl::presentation::compositions::GuiPartialViewComposition* __vwsn_precompile_5;
+		::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement> __vwsn_precompile_6;
+		::vl::presentation::compositions::GuiSideAlignedComposition* __vwsn_precompile_7;
 		::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement> __vwsn_precompile_8;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_9;
+		::vl::presentation::compositions::GuiSideAlignedComposition* __vwsn_precompile_9;
 		::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement> __vwsn_precompile_10;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_11;
-		::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement> __vwsn_precompile_12;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_13;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_14;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_12;
 		void __vwsn_win7skin_ProgressBarTemplate_Initialize(::win7skin::ProgressBarTemplate* __vwsn_this_);
 	public:
 		ProgressBarTemplateConstructor();
@@ -5298,12 +5297,12 @@ namespace win7skin
 		::vl::presentation::compositions::GuiRepeatFlowComposition* header;
 		::vl::presentation::compositions::GuiTableComposition* __vwsn_precompile_0;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_1;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_2;
+		::vl::presentation::compositions::GuiSideAlignedComposition* __vwsn_precompile_2;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_3;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_4;
+		::vl::presentation::compositions::GuiSideAlignedComposition* __vwsn_precompile_4;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_5;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_6;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_7;
+		::vl::presentation::compositions::GuiSideAlignedComposition* __vwsn_precompile_7;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_8;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_9;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_10;
@@ -5769,7 +5768,8 @@ namespace win7skin
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_1;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_2;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_3;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_4;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_4;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_5;
 		void __vwsn_win7skin_ToolstripMenuTemplate_Initialize(::win7skin::ToolstripMenuTemplate* __vwsn_this_);
 	public:
 		ToolstripMenuTemplateConstructor();
