@@ -12,6 +12,26 @@ colors and colors used only by a helper template. The package is declared in
 the purpose of each item; technical provenance and integration are documented in
 [doc/Win7Skin.md](../../doc/Win7Skin.md).
 
+## Native references
+
+The Aero property sheet has a white selected tab and page. In Microsoft's
+396 × 36 example, the selected tab begins at y = 5 and the other tabs at
+y = 7. The `#898C95` page edge at y = 25 stops under the selected tab.
+The inactive face at x = 100 runs from `#EBEBEB` to `#CBCBCB`.
+[Microsoft's property-tab image](https://learn.microsoft.com/en-us/windows/win32/uxguide/images/ctrl-tabs-image1.png).
+
+In the Windows 7 Documents Library, the selected Windows 7 logo thumbnail
+uses a blue gradient. Its upper fill at (350, 352) is
+`#DAEBFD` and its lower fill at (350, 432) is `#CADDFE`. These JPEG samples
+are close to the existing `ItemSelected` fill.
+[Microsoft's Windows 7 Documents Library](https://learn.microsoft.com/en-us/windows/win32/win7devguide/images/windows7-11.jpg).
+
+In Windows 7 Paint, inactive ribbon tabs sit directly on the `#DFE9F5`
+strip. The selected Home tab joins the panel, which runs from `#F5FBFF`
+to `#DCE7F5`. The selected text tool's fill at x = 224 changes from
+`#F8D4A9` at y = 51 to orange at the center and pale yellow near the
+lower edge. [Microsoft's Windows 7 Paint image](https://learn.microsoft.com/en-us/windows/win32/windowsribbon/images/overviews/screenshot-paint-win7transparency-mirror.png).
+
 ## State packages
 
 `ButtonColors` contains `Border` for the outline, `Background` for the inset
@@ -153,6 +173,7 @@ item selection colors.
 | `SplitterLight` | Light edge of menu/toolbar separators and group-box bevels. |
 | `TooltipBackground` | Pale-yellow tooltip and keytip background. |
 | `TooltipBorder` | Tooltip and keytip outline. |
+| `RibbonTabStrip` | Ribbon header-row background behind the inactive tab labels. |
 | `RibbonBackgroundTop` | Upper ribbon command-area background. |
 | `RibbonBackgroundBottom` | Lower ribbon command-area background. |
 | `RibbonBorder` | Ribbon outline and group dividers. |

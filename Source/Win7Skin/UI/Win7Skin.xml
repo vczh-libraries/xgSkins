@@ -122,6 +122,7 @@
         WindowClosePressed : Color;
         WindowCloseBorder : Color;
         WindowCloseText : Color;
+        RibbonTabStrip : Color;
         RibbonBackgroundTop : Color;
         RibbonBackgroundBottom : Color;
         RibbonBorder : Color;
@@ -207,11 +208,11 @@
           };
           TabNormal: {
             Border: cast Color "#898C95";
-            Background: cast Color "#F3F3F3";
-            G1: cast Color "#F2F2F2";
-            G2: cast Color "#EBEBEB";
-            G3: cast Color "#DBDBDB";
-            G4: cast Color "#CFCFCF";
+            Background: cast Color "#FEFEFE";
+            G1: cast Color "#EBEBEB";
+            G2: cast Color "#E5E5E5";
+            G3: cast Color "#D6D6D6";
+            G4: cast Color "#CBCBCB";
             Text: cast Color "#000000";
             Bullet: cast Color "#00000000";
           };
@@ -359,12 +360,12 @@
             Bullet: cast Color "#00000000";
           };
           RibbonButtonSelected: {
-            Border: cast Color "#FCC45B";
-            Background: cast Color "#FFFFE1";
-            G1: cast Color "#FFF9CC";
-            G2: cast Color "#FFF9CC";
-            G3: cast Color "#FFFFBB";
-            G4: cast Color "#FFFFBB";
+            Border: cast Color "#CCA96A";
+            Background: cast Color "#E5C8A3";
+            G1: cast Color "#F8D4AA";
+            G2: cast Color "#FDCE86";
+            G3: cast Color "#FFC45B";
+            G4: cast Color "#FFFFB8";
             Text: cast Color "#000000";
             Bullet: cast Color "#00000000";
           };
@@ -573,7 +574,8 @@
           WindowClosePressed: cast Color "#A42B17";
           WindowCloseBorder: cast Color "#8A4438";
           WindowCloseText: cast Color "#FFFFFF";
-          RibbonBackgroundTop: cast Color "#F5F8FC";
+          RibbonTabStrip: cast Color "#DFE9F5";
+          RibbonBackgroundTop: cast Color "#F5FBFF";
           RibbonBackgroundBottom: cast Color "#DCE7F5";
           RibbonBorder: cast Color "#AEBCCF";
           RibbonGroupText: cast Color "#3B5879";
