@@ -5,6 +5,11 @@ DarkSkin. Select `WinXPSkin` under `Window Manager / Color Theme`; there is one
 WinXPSkin entry and no alternate WinXPSkin color theme. The application state must
 survive switching between the skins.
 
+Switch between DarkSkin and WinXPSkin in Window Manager. Check that the
+frame-option checkboxes and the color-theme radio buttons keep their sizes
+and positions within the window’s client area. Compare the checkbox and
+radio rows and their label alignment on `List / TextList`.
+
 The paths below use visible tab captions. A modal or popup named after a page is
 opened from that page. They identify the minimum affected pages when a template
 changes; creating the skin requires the full showcase verification described in
@@ -114,7 +119,7 @@ changes; creating the skin requires the full showcase verification described in
   Disabled document-based editors retain their configured text colors; check
   the gray-beige fill and blue-gray border without expecting a gray text override.
 - In `Layout / Repeat`, move both trackers and scrollbar thumbs, use all four
-  17-pixel square arrow buttons, and check progress at zero, an intermediate
+  20-pixel square arrow buttons, and check progress at zero, an intermediate
   value and full. Progress chunks are six pixels wide with two-pixel gaps; the
   final partial chunk must stay inside the track. Check the pointed horizontal
   tracker thumb and rectangular vertical thumb, including their disabled state.

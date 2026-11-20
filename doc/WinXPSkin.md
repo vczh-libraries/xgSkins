@@ -136,10 +136,11 @@ this fidelity limitation; explicit document colors remain intact. The source
 findings and proposed transient renderer property are in
 [DisabledDocumentForeground.md](../suggestions/GacUI/DisabledDocumentForeground.md).
 
-Pushbuttons use a 23-pixel minimum height while retaining their content-driven
-width. A blue inner rim and dotted rectangle indicate keyboard focus; hover
-uses the orange rim. Check/radio artwork is 13 pixels inside a 17-pixel cell.
-Scrollbars use 17-pixel arrow buttons and blue thumb faces with light/shadow
+Pushbuttons fit their text or embedded content with four logical pixels of
+padding on each side and two above and below. A blue inner rim and dotted
+rectangle indicate keyboard focus, and hover uses the orange rim. Checkbox
+and radio artwork is 13 pixels inside a 17-pixel cell.
+Scrollbars use 20-pixel arrow buttons and blue thumb faces with light/shadow
 grip stripes. Determinate progress has six-pixel green chunks separated by
 two-pixel gaps, following the block metrics in WPF's shared
 [dotnet/wpf/src/Microsoft.DotNet.Wpf/src/Themes/Shared/Microsoft/Windows/Themes/ProgressBarBrushConverter.cs](https://github.com/dotnet/wpf/blob/main/src/Microsoft.DotNet.Wpf/src/Themes/Shared/Microsoft/Windows/Themes/ProgressBarBrushConverter.cs),

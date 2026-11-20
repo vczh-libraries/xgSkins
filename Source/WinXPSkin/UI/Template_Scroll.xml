@@ -312,23 +312,23 @@
           }
         ]]>
       </ref.Ctor>
-      <ScrollTemplate ref.Name="self" PreferredMinSize="y:17" MinSizeLimitation="LimitToElementAndChildren">
+      <ScrollTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <CommonScrollBehavior ref.Name="behavior"/>
 
         <SolidBackground Color-eval="winxpskin::winxpColors.ScrollBackground"/>
 
-        <SideAligned MaxLength="17" MaxRatio="0.5" Direction="Left">
+        <SideAligned MaxLength="20" MaxRatio="0.5" Direction="Left">
           <Button AutoFocus="false" ref.Name="buttonDecrease" ControlTemplate="winxpskin::LeftScrollButtonTemplate">
             <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           </Button>
         </SideAligned>
-        <SideAligned MaxLength="17" MaxRatio="0.5" Direction="Right">
+        <SideAligned MaxLength="20" MaxRatio="0.5" Direction="Right">
           <Button AutoFocus="false" ref.Name="buttonIncrease" ControlTemplate="winxpskin::RightScrollButtonTemplate">
             <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           </Button>
         </SideAligned>
-        <Bounds ref.Name="handleContainer" AlignmentToParent="left:17 top:0 right:17 bottom:0" MinSizeLimitation="NoLimit">
-          <PartialView ref.Name="handle" PreferredMinSize="x:17" Visible-bind="self.VisuallyEnabled">
+        <Bounds ref.Name="handleContainer" AlignmentToParent="left:20 top:0 right:20 bottom:0" MinSizeLimitation="NoLimit">
+          <PartialView ref.Name="handle" PreferredMinSize="x:10" Visible-bind="self.VisuallyEnabled">
             <att.WidthPageSize-bind>(cast double self.PageSize) / self.TotalSize</att.WidthPageSize-bind>
             <att.WidthRatio-bind>(cast double self.Position) / self.TotalSize</att.WidthRatio-bind>
             <Button AutoFocus="false" ControlTemplate="winxpskin::HScrollHandleTemplate">
@@ -352,23 +352,23 @@
           }
         ]]>
       </ref.Ctor>
-      <ScrollTemplate ref.Name="self" PreferredMinSize="x:17" MinSizeLimitation="LimitToElementAndChildren">
+      <ScrollTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <CommonScrollBehavior ref.Name="behavior"/>
 
         <SolidBackground Color-eval="winxpskin::winxpColors.ScrollBackground"/>
 
-        <SideAligned MaxLength="17" MaxRatio="0.5" Direction="Top">
+        <SideAligned MaxLength="20" MaxRatio="0.5" Direction="Top">
           <Button AutoFocus="false" ref.Name="buttonDecrease" ControlTemplate="winxpskin::TopScrollButtonTemplate">
             <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           </Button>
         </SideAligned>
-        <SideAligned MaxLength="17" MaxRatio="0.5" Direction="Bottom">
+        <SideAligned MaxLength="20" MaxRatio="0.5" Direction="Bottom">
           <Button AutoFocus="false" ref.Name="buttonIncrease" ControlTemplate="winxpskin::BottomScrollButtonTemplate">
             <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           </Button>
         </SideAligned>
-        <Bounds ref.Name="handleContainer" AlignmentToParent="left:0 top:17 right:0 bottom:17" MinSizeLimitation="NoLimit">
-          <PartialView ref.Name="handle" PreferredMinSize="y:17" Visible-bind="self.VisuallyEnabled">
+        <Bounds ref.Name="handleContainer" AlignmentToParent="left:0 top:20 right:0 bottom:20" MinSizeLimitation="NoLimit">
+          <PartialView ref.Name="handle" PreferredMinSize="y:10" Visible-bind="self.VisuallyEnabled">
             <att.HeightPageSize-bind>(cast double self.PageSize) / self.TotalSize</att.HeightPageSize-bind>
             <att.HeightRatio-bind>(cast double self.Position) / self.TotalSize</att.HeightRatio-bind>
             <Button AutoFocus="false" ControlTemplate="winxpskin::VScrollHandleTemplate">
@@ -384,35 +384,27 @@
     <Instance ref.CodeBehind="false" ref.Class="winxpskin::HTrackerHandleTemplate" ref.Styles="res://WinXPSkin/Style">
       <ref.Members><![CDATA[
         prop Colors : ButtonColors = {} {}
+        prop ShowTip : bool = false {}
       ]]></ref.Members>
-      <ButtonTemplate ref.Name="self" PreferredMinSize="x:11 y:21" MinSizeLimitation="LimitToElementAndChildren">
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="NoLimit">
         <att.Colors-bind>not self.VisuallyEnabled ? winxpColors.TrackerDisabled : self.State == ButtonState::Pressed ? winxpColors.TrackerPressed : self.State == ButtonState::Active ? winxpColors.TrackerHovered : winxpColors.TrackerNormal</att.Colors-bind>
-        <Polygon Size="x:11 y:21" BorderColor-bind="self.Colors.Border" BackgroundColor-bind="self.Colors.G2">
-          <att.Points>
-            <Point>x:1 y:0</Point>
-            <Point>x:9 y:0</Point>
-            <Point>x:10 y:1</Point>
-            <Point>x:10 y:15</Point>
-            <Point>x:5 y:20</Point>
-            <Point>x:0 y:15</Point>
-            <Point>x:0 y:1</Point>
-          </att.Points>
-        </Polygon>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:6">
-          <GradientBackground Direction="Horizontal" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
+        <att.ShowTip-bind>self.CachedBounds.y2 - self.CachedBounds.y1 &gt;= 9</att.ShowTip-bind>
+        <Bounds AlignmentToParent-bind="{left:0 top:0 right:0 bottom:(self.ShowTip ? 4 : 0)}">
+          <SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/>
+          <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+            <GradientBackground Direction="Horizontal" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
+            <SideAligned Direction="Top" MaxLength="2" MaxRatio="0.5">
+              <GradientBackground Direction="Vertical" Color1-bind="self.Colors.Inner" Color2-bind="self.Colors.Bullet"/>
+            </SideAligned>
+          </Bounds>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:-1" PreferredMinSize="y:2">
-          <GradientBackground Direction="Vertical" Color1-bind="self.Colors.Inner" Color2-bind="self.Colors.Bullet"/>
-        </Bounds>
-        <Bounds AlignmentToParent="left:1 top:-1 right:1 bottom:1" PreferredMinSize="y:6">
-          <Polygon Size="x:9 y:6" BorderColor-bind="self.Colors.Bullet" BackgroundColor-bind="self.Colors.Bullet">
+        <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="y:5" Visible-bind="self.ShowTip">
+          <Polygon Size="x:10 y:5" BorderColor-bind="self.Colors.Border" BackgroundColor-bind="self.Colors.Bullet">
             <att.Points>
               <Point>x:0 y:0</Point>
+              <Point>x:9 y:0</Point>
+              <Point>x:5 y:4</Point>
               <Point>x:4 y:4</Point>
-              <Point>x:8 y:0</Point>
-              <Point>x:8 y:1</Point>
-              <Point>x:4 y:5</Point>
-              <Point>x:0 y:1</Point>
             </att.Points>
           </Polygon>
         </Bounds>
@@ -424,19 +416,19 @@
       <ref.Members><![CDATA[
         prop Colors : ButtonColors = {} {}
       ]]></ref.Members>
-      <ButtonTemplate ref.Name="self" PreferredMinSize="x:21 y:11" MinSizeLimitation="LimitToElementAndChildren">
+      <ButtonTemplate ref.Name="self" MinSizeLimitation="NoLimit">
         <att.Colors-bind>not self.VisuallyEnabled ? winxpColors.TrackerDisabled : self.State == ButtonState::Pressed ? winxpColors.TrackerPressed : self.State == ButtonState::Active ? winxpColors.TrackerHovered : winxpColors.TrackerNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
-        </Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:-1 bottom:1" PreferredMinSize="x:2">
-          <GradientBackground Direction="Horizontal" Color1-bind="self.Colors.Inner" Color2-bind="self.Colors.Bullet"/>
-        </Bounds>
-        <Bounds AlignmentToParent="left:-1 top:1 right:1 bottom:1" PreferredMinSize="x:2">
-          <GradientBackground Direction="Horizontal" Color1-bind="self.Colors.Inner" Color2-bind="self.Colors.Bullet"/>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+          <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
+          <SideAligned Direction="Left" MaxLength="2" MaxRatio="0.5">
+            <GradientBackground Direction="Horizontal" Color1-bind="self.Colors.Inner" Color2-bind="self.Colors.Bullet"/>
+          </SideAligned>
+          <SideAligned Direction="Right" MaxLength="2" MaxRatio="0.5">
+            <GradientBackground Direction="Horizontal" Color1-bind="self.Colors.Inner" Color2-bind="self.Colors.Bullet"/>
+          </SideAligned>
         </Bounds>
       </ButtonTemplate>
     </Instance>
@@ -451,48 +443,34 @@
           }
         ]]>
       </ref.Ctor>
-      <ScrollTemplate ref.Name="self" PreferredMinSize="y:21" MinSizeLimitation="LimitToElementAndChildren">
+      <ScrollTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <CommonScrollBehavior ref.Name="behavior"/>
         <SolidBackground Color-eval="winxpskin::winxpColors.GeneralBackground"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
           <FocusRectangle/>
         </Bounds>
-        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="LimitToElementAndChildren">
+        <Table AlignmentToParent="left:6 top:0 right:6 bottom:0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
-            <CellOption>composeType:Absolute absolute:21</CellOption>
+            <CellOption>composeType:Absolute absolute:4</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
           </att.Rows>
           <att.Columns>
-            <CellOption>composeType:Absolute absolute:6</CellOption>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
-            <CellOption>composeType:Absolute absolute:6</CellOption>
           </att.Columns>
-          <Cell Site="row:1 column:1">
-            <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
-              <att.Rows>
-                <CellOption>composeType:Percentage percentage:0.5</CellOption>
-                <CellOption>composeType:Absolute absolute:4</CellOption>
-                <CellOption>composeType:Percentage percentage:0.5</CellOption>
-              </att.Rows>
-              <att.Columns>
-                <CellOption>composeType:Percentage percentage:1.0</CellOption>
-              </att.Columns>
-              <Cell Site="row:1 column:0">
-                <SolidBackground Color-eval="winxpskin::winxpColors.TrackerBackground"/>
-                <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-                  <SolidBorder Color-eval="winxpskin::winxpColors.TrackerBorder"/>
-                </Bounds>
-              </Cell>
-            </Table>
-            <PartialView ref.Name="handle" PreferredMinSize="x:11 y:21" WidthPageSize="0">
-              <att.WidthRatio-bind>(cast double self.Position) / self.TotalSize</att.WidthRatio-bind>
-              <Button AutoFocus="false" ControlTemplate="winxpskin::HTrackerHandleTemplate">
-                <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
-              </Button>
-            </PartialView>
+          <Cell Site="row:1 column:0">
+            <SolidBackground Color-eval="winxpskin::winxpColors.TrackerBackground"/>
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <SolidBorder Color-eval="winxpskin::winxpColors.TrackerBorder"/>
+            </Bounds>
           </Cell>
         </Table>
+        <PartialView ref.Name="handle" PreferredMinSize="x:12 y:0" WidthPageSize="0">
+          <att.WidthRatio-bind>(cast double self.Position) / self.TotalSize</att.WidthRatio-bind>
+          <Button AutoFocus="false" ControlTemplate="winxpskin::HTrackerHandleTemplate">
+            <att.BoundsComposition-set AlignmentToParent="left:1 top:1 right:1 bottom:1"/>
+          </Button>
+        </PartialView>
       </ScrollTemplate>
     </Instance>
   </Instance>
@@ -507,48 +485,34 @@
           }
         ]]>
       </ref.Ctor>
-      <ScrollTemplate ref.Name="self" PreferredMinSize="x:21" MinSizeLimitation="LimitToElementAndChildren">
+      <ScrollTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <CommonScrollBehavior ref.Name="behavior"/>
         <SolidBackground Color-eval="winxpskin::winxpColors.GeneralBackground"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
           <FocusRectangle/>
         </Bounds>
-        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="LimitToElementAndChildren">
+        <Table AlignmentToParent="left:0 top:6 right:0 bottom:6">
           <att.Rows>
-            <CellOption>composeType:Absolute absolute:6</CellOption>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
-            <CellOption>composeType:Absolute absolute:6</CellOption>
           </att.Rows>
           <att.Columns>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
-            <CellOption>composeType:Absolute absolute:21</CellOption>
+            <CellOption>composeType:Absolute absolute:4</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
           </att.Columns>
-          <Cell Site="row:1 column:1">
-            <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
-              <att.Rows>
-                <CellOption>composeType:Percentage percentage:1.0</CellOption>
-              </att.Rows>
-              <att.Columns>
-                <CellOption>composeType:Percentage percentage:0.5</CellOption>
-                <CellOption>composeType:Absolute absolute:4</CellOption>
-                <CellOption>composeType:Percentage percentage:0.5</CellOption>
-              </att.Columns>
-              <Cell Site="row:0 column:1">
-                <SolidBackground Color-eval="winxpskin::winxpColors.TrackerBackground"/>
-                <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-                  <SolidBorder Color-eval="winxpskin::winxpColors.TrackerBorder"/>
-                </Bounds>
-              </Cell>
-            </Table>
-            <PartialView ref.Name="handle" PreferredMinSize="x:21 y:11" HeightPageSize="0">
-              <att.HeightRatio-bind>(cast double self.Position) / self.TotalSize</att.HeightRatio-bind>
-              <Button AutoFocus="false" ControlTemplate="winxpskin::VTrackerHandleTemplate">
-                <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
-              </Button>
-            </PartialView>
+          <Cell Site="row:0 column:1">
+            <SolidBackground Color-eval="winxpskin::winxpColors.TrackerBackground"/>
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <SolidBorder Color-eval="winxpskin::winxpColors.TrackerBorder"/>
+            </Bounds>
           </Cell>
         </Table>
+        <PartialView ref.Name="handle" PreferredMinSize="x:0 y:12" HeightPageSize="0">
+          <att.HeightRatio-bind>(cast double self.Position) / self.TotalSize</att.HeightRatio-bind>
+          <Button AutoFocus="false" ControlTemplate="winxpskin::VTrackerHandleTemplate">
+            <att.BoundsComposition-set AlignmentToParent="left:1 top:1 right:1 bottom:1"/>
+          </Button>
+        </PartialView>
       </ScrollTemplate>
     </Instance>
   </Instance>
@@ -600,36 +564,37 @@
         }
       ]]></ref.Members>
       <ref.Dtor><![CDATA[{ chunkUpdateState.Active = false; }]]></ref.Dtor>
-      <ScrollTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:18" MinSizeLimitation="LimitToElementAndChildren">
+      <ScrollTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.RequestedChunkCount-bind><![CDATA[
           (fill.CachedBounds.x2 - fill.CachedBounds.x1 + (self.Position >= self.TotalSize - self.PageSize ? 7 : 1)) / 8
         ]]></att.RequestedChunkCount-bind>
         <ev.RequestedChunkCountChanged-eval>self.QueueChunkCount();</ev.RequestedChunkCountChanged-eval>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" MinSizeLimitation="NoLimit">
           <SolidBackground Color-eval="winxpskin::winxpColors.ProgressBackground"/>
+          <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+            <PartialView ref.Name="fill" MinSizeLimitation="NoLimit">
+              <att.WidthPageSize-bind><![CDATA[
+                self.Position <= 0 ? 0.0 : self.Position >= self.TotalSize - self.PageSize ? 1.0 :
+                (cast double self.Position) / (self.TotalSize - self.PageSize)
+              ]]></att.WidthPageSize-bind>
+              <RepeatStack AlignmentToParent="left:0 top:0 right:0 bottom:0" Direction="Horizontal" Padding="2" MinSizeLimitation="NoLimit">
+                <att.ItemTemplate-eval><![CDATA[
+                  func(value : object) : presentation::templates::GuiTemplate*
+                  {
+                    return new winxpskin::ProgressChunkTemplate*();
+                  }
+                ]]></att.ItemTemplate-eval>
+                <att.ItemSource-bind><![CDATA[
+                  range[0, self.ChunkCount)
+                ]]></att.ItemSource-bind>
+              </RepeatStack>
+            </PartialView>
+          </Bounds>
         </Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder Color-eval="winxpskin::winxpColors.ProgressBorder" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
-        <Bounds ref.Name="container" AlignmentToParent="left:3 top:3 right:3 bottom:3" MinSizeLimitation="NoLimit">
-          <PartialView ref.Name="fill" MinSizeLimitation="NoLimit">
-            <att.WidthPageSize-bind><![CDATA[
-              self.Position <= 0 ? 0.0 : self.Position >= self.TotalSize - self.PageSize ? 1.0 :
-              (cast double self.Position) / (self.TotalSize - self.PageSize)
-            ]]></att.WidthPageSize-bind>
-            <RepeatStack AlignmentToParent="left:0 top:0 right:0 bottom:0" Direction="Horizontal" Padding="2" MinSizeLimitation="NoLimit">
-              <att.ItemTemplate-eval><![CDATA[
-                func(value : object) : presentation::templates::GuiTemplate*
-                {
-                  return new winxpskin::ProgressChunkTemplate*();
-                }
-              ]]></att.ItemTemplate-eval>
-              <att.ItemSource-bind><![CDATA[
-                range[0, self.ChunkCount)
-              ]]></att.ItemSource-bind>
-            </RepeatStack>
-          </PartialView>
-        </Bounds>
+        <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1"/>
       </ScrollTemplate>
     </Instance>
   </Instance>
@@ -647,7 +612,7 @@
           <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <att.HScrollTemplate>winxpskin::HScrollTemplate</att.HScrollTemplate>
             <att.VScrollTemplate>winxpskin::VScrollTemplate</att.VScrollTemplate>
-            <att.DefaultScrollSize>17</att.DefaultScrollSize>
+            <att.DefaultScrollSize>20</att.DefaultScrollSize>
           </CommonScrollViewLook>
         </Bounds>
       </ScrollViewTemplate>

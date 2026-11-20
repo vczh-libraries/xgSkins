@@ -6,7 +6,7 @@
         <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="x:0 y:2">
           <Gui3DSplitterElement Direction="Horizontal" Color1-eval="winxpColors.MenuBarBorderDark" Color2-eval="winxpColors.MenuBarBorderLight"/>
         </Bounds>
-        <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+        <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2"/>
       </ControlTemplate>
     </Instance>
   </Instance>
@@ -18,7 +18,7 @@
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:-1" PreferredMinSize="x:0 y:2">
           <Gui3DSplitterElement Direction="Horizontal" Color1-eval="winxpColors.ToolstripTopDark" Color2-eval="winxpColors.ToolstripTopLight"/>
         </Bounds>
-        <Bounds ref.Name="container" AlignmentToParent="left:0 top:2 right:0 bottom:0"/>
+        <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2"/>
       </ControlTemplate>
     </Instance>
   </Instance>
@@ -38,7 +38,7 @@
         <SolidBackground Color-eval="winxpColors.MenuInner"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder ref.Style="toolstripMenuBorder"/>
-          <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground ref.Style="toolstripMenuBackground"/></Bounds>
+          <Bounds ref.Name="container" AlignmentToParent="left:3 top:3 right:3 bottom:3"><SolidBackground ref.Style="toolstripMenuBackground"/></Bounds>
         </Bounds>
       </MenuTemplate>
     </Instance>
@@ -48,7 +48,7 @@
     <Instance ref.CodeBehind="false" ref.Class="winxpskin::ToolstripSplitterTemplate" ref.Styles="res://WinXPSkin/Style">
       <ControlTemplate MinSizeLimitation="LimitToElementAndChildren">
         <SolidBackground ref.Style="generalBackground"/>
-        <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3" PreferredMinSize="x:2 y:0">
+        <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1">
           <Gui3DSplitterElement Direction="Vertical" Color1-eval="winxpColors.ToolstripSplitBorder" Color2-eval="winxpColors.ToolstripSplitLight"/>
         </Bounds>
       </ControlTemplate>
@@ -59,7 +59,7 @@
     <Instance ref.CodeBehind="false" ref.Class="winxpskin::ToolstripSplitterInMenuTemplate" ref.Styles="res://WinXPSkin/Style">
       <ControlTemplate MinSizeLimitation="LimitToElementAndChildren">
         <SolidBackground ref.Style="toolstripMenuBackground"/>
-        <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3" PreferredMinSize="x:2 y:0">
+        <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1" PreferredMinSize="x:1 y:0">
           <Gui3DSplitterElement Direction="Vertical" Color1-eval="winxpColors.ToolstripSplitBorder" Color2-eval="winxpColors.ToolstripSplitLight"/>
         </Bounds>
       </ControlTemplate>
@@ -68,9 +68,9 @@
 
   <Instance name="MenuSplitterTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="winxpskin::MenuSplitterTemplate" ref.Styles="res://WinXPSkin/Style">
-      <ControlTemplate MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:26 y:5">
+      <ControlTemplate MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="y:3">
         <SolidBackground ref.Style="toolstripMenuBackground"/>
-        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="NoLimit">
           <att.Rows><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Rows>
           <att.Columns>
             <CellOption>composeType:Absolute absolute:26</CellOption>
@@ -78,7 +78,7 @@
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Columns>
           <Cell Site="row:0 column:1"/>
-          <Cell Site="row:0 column:2"><Bounds AlignmentToParent="left:0 top:2 right:0 bottom:2"><SolidBackground Color-eval="winxpColors.MenuSplitter"/></Bounds></Cell>
+          <Cell Site="row:0 column:2"><Bounds AlignmentToParent="left:0 top:1 right:0 bottom:1"><SolidBackground Color-eval="winxpColors.MenuSplitter"/></Bounds></Cell>
         </Table>
       </ControlTemplate>
     </Instance>
@@ -152,11 +152,11 @@
 
   <Instance name="ToolstripArrowButtonTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="winxpskin::ToolstripSplitArrowTemplate" ref.Styles="res://WinXPSkin/Style">
-      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:13 y:7">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:11 y:9">
         <Bounds AlignmentToParent="left:0 top:3 right:-1 bottom:3" PreferredMinSize="x:1 y:0" Visible-bind="self.VisuallyEnabled and self.State != ButtonState::Normal">
           <SolidBackground ref.Style="toolstripSplitter"/>
         </Bounds>
-        <Table AlignmentToParent="left:4 top:0 right:4 bottom:0">
+        <Table AlignmentToParent="left:3 top:1 right:3 bottom:1">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
             <CellOption>composeType:Absolute absolute:3</CellOption>
@@ -188,7 +188,7 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:13 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:11 bottom:1">
 
           <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
             <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
@@ -245,7 +245,7 @@
           <att.Columns>
             <CellOption>composeType:Absolute absolute:2</CellOption>
             <CellOption>composeType:Absolute absolute:24</CellOption>
-            <CellOption>composeType:Absolute absolute:4</CellOption>
+            <CellOption>composeType:Absolute absolute:8</CellOption>
             <CellOption>composeType:MinSize</CellOption>
             <CellOption>composeType:Absolute absolute:24</CellOption>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
@@ -260,7 +260,7 @@
               <SolidBackground Color-bind="self.VisuallyEnabled ? winxpColors.ToolstripButtonSelected.G1 : winxpColors.GeneralBackground"/>
               <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.VisuallyEnabled ? winxpColors.ToolstripButtonSelected.Border : winxpColors.GeneralBorder"/></Bounds>
             </Bounds>
-            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.Selected and self.Image is null"><Polygon BorderColor-bind="self.Colors.Text" BackgroundColor-bind="self.Colors.Text" Size="x:10 y:10"><att.Points><Point>x:1 y:5</Point><Point>x:4 y:8</Point><Point>x:9 y:1</Point><Point>x:4 y:6</Point></att.Points></Polygon></Bounds>
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" MinSizeLimitation="NoLimit" Visible-bind="self.Selected and self.Image is null"><Polygon BorderColor-bind="self.Colors.Text" BackgroundColor-bind="self.Colors.Text" Size="x:10 y:10"><att.Points><Point>x:1 y:5</Point><Point>x:4 y:8</Point><Point>x:9 y:1</Point><Point>x:4 y:6</Point></att.Points></Polygon></Bounds>
             <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/></Bounds>
           </Cell>
           <Cell Site="row:0 column:2 rowSpan:5"/>

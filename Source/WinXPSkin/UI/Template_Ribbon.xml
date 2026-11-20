@@ -689,7 +689,7 @@
   <Instance name="RibbonSplitterTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="winxpskin::RibbonSplitterTemplate" ref.Styles="res://WinXPSkin/Style">
       <ControlTemplate MinSizeLimitation="LimitToElementAndChildren">
-        <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1" PreferredMinSize="x:1 y:0">
+        <Bounds AlignmentToParent="left:2 top:1 right:3 bottom:1" PreferredMinSize="x:1 y:0">
           <SolidBackground Color-eval="winxpColors.RibbonBorder"/>
         </Bounds>
       </ControlTemplate>

@@ -59,7 +59,7 @@
       <ref.Members><![CDATA[
         prop Colors : ButtonColors = {} {}
       ]]></ref.Members>
-      <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:23" MinSizeLimitation="LimitToElementAndChildren">
+      <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>self.VisuallyEnabled and self.State == ButtonState::Normal and self.Focused ? winxpColors.ButtonFocused : GetButtonColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
@@ -70,10 +70,10 @@
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:4 top:4 right:4 bottom:4" Visible-bind="self.Focused">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Focused">
           <FocusRectangle/>
         </Bounds>
-        <Bounds AlignmentToParent="left:6 top:3 right:6 bottom:3">
+        <Bounds AlignmentToParent="left:4 top:2 right:4 bottom:2">
           <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
           <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
         </Bounds>
@@ -90,16 +90,16 @@
         <att.Colors-bind>GetCheckedColors(self.VisuallyEnabled, self.State, self.Selected)</att.Colors-bind>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <att.Rows>
-            <CellOption>composeType:Percentage percentage:0.5</CellOption>
-            <CellOption>composeType:Absolute absolute:13</CellOption>
-            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            <CellOption>composeType:Absolute absolute:17</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Rows>
           <att.Columns>
             <CellOption>composeType:Absolute absolute:17</CellOption>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Columns>
           <Cell Site="row:1 column:0">
-            <Bounds AlignmentToParent="left:2 top:0 right:2 bottom:0">
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
               <SolidBorder Color-bind="self.Colors.Border"/>
               <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
                 <GradientBackground Direction="Slash" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
@@ -108,7 +108,7 @@
                 </Bounds>
               </Bounds>
             </Bounds>
-            <Bounds AlignmentToParent="left:4 top:2 right:4 bottom:2" Visible-bind="self.Selected">
+            <Bounds AlignmentToParent="left:4 top:4 right:4 bottom:4" Visible-bind="self.Selected">
               <Polygon Size="x:9 y:9" BorderColor-bind="self.Colors.Bullet" BackgroundColor-bind="self.Colors.Bullet">
                 <att.Points>
                   <Point>x:0 y:3</Point>
@@ -122,12 +122,14 @@
             </Bounds>
           </Cell>
           <Cell Site="row:0 column:1 rowSpan:3 columnSpan:1">
-            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
-              <FocusRectangle/>
-            </Bounds>
-            <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
-              <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-              <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+            <Bounds AlignmentToParent="left:2 top:0 right:-1 bottom:0">
+              <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
+                <FocusRectangle/>
+              </Bounds>
+              <Bounds AlignmentToParent="left:4 top:2 right:4 bottom:2">
+                <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+              </Bounds>
             </Bounds>
           </Cell>
         </Table>
@@ -144,16 +146,16 @@
         <att.Colors-bind>GetCheckedColors(self.VisuallyEnabled, self.State, self.Selected)</att.Colors-bind>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <att.Rows>
-            <CellOption>composeType:Percentage percentage:0.5</CellOption>
-            <CellOption>composeType:Absolute absolute:13</CellOption>
-            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            <CellOption>composeType:Absolute absolute:17</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Rows>
           <att.Columns>
             <CellOption>composeType:Absolute absolute:17</CellOption>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Columns>
           <Cell Site="row:1 column:0">
-            <Bounds AlignmentToParent="left:2 top:0 right:2 bottom:0">
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
               <SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:Ellipse"/>
               <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
                 <GradientBackground Direction="Slash" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2" Shape="shapeType:Ellipse"/>
@@ -162,17 +164,19 @@
                 </Bounds>
               </Bounds>
             </Bounds>
-            <Bounds AlignmentToParent="left:5 top:3 right:5 bottom:3" Visible-bind="self.Selected">
+            <Bounds AlignmentToParent="left:5 top:5 right:5 bottom:5" Visible-bind="self.Selected">
               <GradientBackground Direction="Vertical" Color1-bind="self.VisuallyEnabled ? winxpColors.RadioBulletLight : self.Colors.Bullet" Color2-bind="self.Colors.Bullet" Shape="shapeType:Ellipse"/>
             </Bounds>
           </Cell>
           <Cell Site="row:0 column:1 rowSpan:3 columnSpan:1">
-            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
-              <FocusRectangle/>
-            </Bounds>
-            <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
-              <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-              <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+            <Bounds AlignmentToParent="left:2 top:0 right:-1 bottom:0">
+              <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
+                <FocusRectangle/>
+              </Bounds>
+              <Bounds AlignmentToParent="left:4 top:2 right:4 bottom:2">
+                <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+              </Bounds>
             </Bounds>
           </Cell>
         </Table>
