@@ -40543,7 +40543,7 @@ Class (::winxpskin::ComboBoxTemplateConstructor)
 		}
 		(this->__vwsn_precompile_9 = new ::vl::presentation::compositions::GuiBoundsComposition());
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_9)->SetPreferredMinSize([&](){ ::vl::presentation::Size __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(9); __vwsn_temp__.y = static_cast<::vl::vint>(0); return __vwsn_temp__; }());
+			::vl::__vwsn::This(this->__vwsn_precompile_9)->SetPreferredMinSize([&](){ ::vl::presentation::Size __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(10); __vwsn_temp__.y = static_cast<::vl::vint>(0); return __vwsn_temp__; }());
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_9)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = (- static_cast<::vl::vint>(1)); __vwsn_temp__.top = static_cast<::vl::vint>(1); __vwsn_temp__.right = static_cast<::vl::vint>(1); __vwsn_temp__.bottom = static_cast<::vl::vint>(1); return __vwsn_temp__; }());
@@ -40602,10 +40602,10 @@ Class (::winxpskin::ComboBoxTemplateConstructor)
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_15)->SetRowsAndColumns(static_cast<::vl::vint>(3), static_cast<::vl::vint>(3));
 			::vl::__vwsn::This(this->__vwsn_precompile_15)->SetRowOption(static_cast<::vl::vint>(0), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::Percentage; __vwsn_temp__.percentage = static_cast<double>(0.5); return __vwsn_temp__; }());
-			::vl::__vwsn::This(this->__vwsn_precompile_15)->SetRowOption(static_cast<::vl::vint>(1), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::Absolute; __vwsn_temp__.absolute = static_cast<::vl::vint>(4); return __vwsn_temp__; }());
+			::vl::__vwsn::This(this->__vwsn_precompile_15)->SetRowOption(static_cast<::vl::vint>(1), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::Absolute; __vwsn_temp__.absolute = static_cast<::vl::vint>(3); return __vwsn_temp__; }());
 			::vl::__vwsn::This(this->__vwsn_precompile_15)->SetRowOption(static_cast<::vl::vint>(2), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::Percentage; __vwsn_temp__.percentage = static_cast<double>(0.5); return __vwsn_temp__; }());
 			::vl::__vwsn::This(this->__vwsn_precompile_15)->SetColumnOption(static_cast<::vl::vint>(0), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::Percentage; __vwsn_temp__.percentage = static_cast<double>(0.5); return __vwsn_temp__; }());
-			::vl::__vwsn::This(this->__vwsn_precompile_15)->SetColumnOption(static_cast<::vl::vint>(1), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::Absolute; __vwsn_temp__.absolute = static_cast<::vl::vint>(7); return __vwsn_temp__; }());
+			::vl::__vwsn::This(this->__vwsn_precompile_15)->SetColumnOption(static_cast<::vl::vint>(1), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::Absolute; __vwsn_temp__.absolute = static_cast<::vl::vint>(5); return __vwsn_temp__; }());
 			::vl::__vwsn::This(this->__vwsn_precompile_15)->SetColumnOption(static_cast<::vl::vint>(2), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::Percentage; __vwsn_temp__.percentage = static_cast<double>(0.5); return __vwsn_temp__; }());
 		}
 		(this->__vwsn_precompile_16 = new ::vl::presentation::compositions::GuiCellComposition());
@@ -40614,10 +40614,10 @@ Class (::winxpskin::ComboBoxTemplateConstructor)
 		}
 		(this->__vwsn_precompile_17 = ::vl::Ptr<::vl::presentation::elements::GuiPolygonElement>(::vl::reflection::description::Element_Constructor<::vl::presentation::elements::GuiPolygonElement>()));
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_17.Obj())->SetPointsArray(::vl::reflection::description::UnboxParameter<::vl::collections::Array<::vl::presentation::Point>>(::vl::__vwsn::Box(::vl::Ptr<::vl::reflection::description::IValueReadonlyList>((::vl::__vwsn::CreateArray().Resize(6).Set(0, [&](){ ::vl::presentation::Point __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(0); __vwsn_temp__.y = static_cast<::vl::vint>(0); return __vwsn_temp__; }()).Set(1, [&](){ ::vl::presentation::Point __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(2); __vwsn_temp__.y = static_cast<::vl::vint>(0); return __vwsn_temp__; }()).Set(2, [&](){ ::vl::presentation::Point __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(3); __vwsn_temp__.y = static_cast<::vl::vint>(1); return __vwsn_temp__; }()).Set(3, [&](){ ::vl::presentation::Point __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(4); __vwsn_temp__.y = static_cast<::vl::vint>(0); return __vwsn_temp__; }()).Set(4, [&](){ ::vl::presentation::Point __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(6); __vwsn_temp__.y = static_cast<::vl::vint>(0); return __vwsn_temp__; }()).Set(5, [&](){ ::vl::presentation::Point __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(3); __vwsn_temp__.y = static_cast<::vl::vint>(3); return __vwsn_temp__; }())).list))).Ref());
+			::vl::__vwsn::This(this->__vwsn_precompile_17.Obj())->SetPointsArray(::vl::reflection::description::UnboxParameter<::vl::collections::Array<::vl::presentation::Point>>(::vl::__vwsn::Box(::vl::Ptr<::vl::reflection::description::IValueReadonlyList>((::vl::__vwsn::CreateArray().Resize(6).Set(0, [&](){ ::vl::presentation::Point __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(0); __vwsn_temp__.y = static_cast<::vl::vint>(0); return __vwsn_temp__; }()).Set(1, [&](){ ::vl::presentation::Point __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(1); __vwsn_temp__.y = static_cast<::vl::vint>(0); return __vwsn_temp__; }()).Set(2, [&](){ ::vl::presentation::Point __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(2); __vwsn_temp__.y = static_cast<::vl::vint>(1); return __vwsn_temp__; }()).Set(3, [&](){ ::vl::presentation::Point __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(3); __vwsn_temp__.y = static_cast<::vl::vint>(0); return __vwsn_temp__; }()).Set(4, [&](){ ::vl::presentation::Point __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(4); __vwsn_temp__.y = static_cast<::vl::vint>(0); return __vwsn_temp__; }()).Set(5, [&](){ ::vl::presentation::Point __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(2); __vwsn_temp__.y = static_cast<::vl::vint>(2); return __vwsn_temp__; }())).list))).Ref());
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_17.Obj())->SetSize([&](){ ::vl::presentation::Size __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(7); __vwsn_temp__.y = static_cast<::vl::vint>(4); return __vwsn_temp__; }());
+			::vl::__vwsn::This(this->__vwsn_precompile_17.Obj())->SetSize([&](){ ::vl::presentation::Size __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(5); __vwsn_temp__.y = static_cast<::vl::vint>(3); return __vwsn_temp__; }());
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_16)->SetOwnedElement(::vl::Ptr<::vl::presentation::elements::IGuiGraphicsElement>(this->__vwsn_precompile_17));
@@ -46042,7 +46042,7 @@ Class (::winxpskin::RibbonGalleryTemplateConstructor)
 			::vl::__vwsn::This(this->__vwsn_precompile_0)->SetRowOption(static_cast<::vl::vint>(1), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::Percentage; __vwsn_temp__.percentage = static_cast<double>(1.0); return __vwsn_temp__; }());
 			::vl::__vwsn::This(this->__vwsn_precompile_0)->SetRowOption(static_cast<::vl::vint>(2), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::Percentage; __vwsn_temp__.percentage = static_cast<double>(1.0); return __vwsn_temp__; }());
 			::vl::__vwsn::This(this->__vwsn_precompile_0)->SetColumnOption(static_cast<::vl::vint>(0), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::Percentage; __vwsn_temp__.percentage = static_cast<double>(1.0); return __vwsn_temp__; }());
-			::vl::__vwsn::This(this->__vwsn_precompile_0)->SetColumnOption(static_cast<::vl::vint>(1), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::MinSize; return __vwsn_temp__; }());
+			::vl::__vwsn::This(this->__vwsn_precompile_0)->SetColumnOption(static_cast<::vl::vint>(1), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::Absolute; __vwsn_temp__.absolute = static_cast<::vl::vint>(17); return __vwsn_temp__; }());
 		}
 		(this->__vwsn_precompile_1 = new ::vl::presentation::compositions::GuiCellComposition());
 		{
@@ -46085,7 +46085,7 @@ Class (::winxpskin::RibbonGalleryTemplateConstructor)
 		}
 		(this->__vwsn_precompile_6 = ::vl::__vwsn::This(this->__vwsn_precompile_5)->GetBoundsComposition());
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_6)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(4); __vwsn_temp__.top = static_cast<::vl::vint>(0); __vwsn_temp__.right = static_cast<::vl::vint>(4); __vwsn_temp__.bottom = static_cast<::vl::vint>(0); return __vwsn_temp__; }());
+			::vl::__vwsn::This(this->__vwsn_precompile_6)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(0); __vwsn_temp__.top = static_cast<::vl::vint>(0); __vwsn_temp__.right = static_cast<::vl::vint>(4); __vwsn_temp__.bottom = static_cast<::vl::vint>(0); return __vwsn_temp__; }());
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_5)->SetAutoFocus(false);
@@ -46108,7 +46108,7 @@ Class (::winxpskin::RibbonGalleryTemplateConstructor)
 		}
 		(this->__vwsn_precompile_9 = ::vl::__vwsn::This(this->__vwsn_precompile_8)->GetBoundsComposition());
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_9)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(4); __vwsn_temp__.top = static_cast<::vl::vint>(0); __vwsn_temp__.right = static_cast<::vl::vint>(4); __vwsn_temp__.bottom = static_cast<::vl::vint>(0); return __vwsn_temp__; }());
+			::vl::__vwsn::This(this->__vwsn_precompile_9)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(0); __vwsn_temp__.top = static_cast<::vl::vint>(0); __vwsn_temp__.right = static_cast<::vl::vint>(4); __vwsn_temp__.bottom = static_cast<::vl::vint>(0); return __vwsn_temp__; }());
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_8)->SetAutoFocus(false);
@@ -46131,7 +46131,7 @@ Class (::winxpskin::RibbonGalleryTemplateConstructor)
 		}
 		(this->__vwsn_precompile_12 = ::vl::__vwsn::This(this->__vwsn_precompile_11)->GetBoundsComposition());
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_12)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(4); __vwsn_temp__.top = static_cast<::vl::vint>(0); __vwsn_temp__.right = static_cast<::vl::vint>(4); __vwsn_temp__.bottom = static_cast<::vl::vint>(0); return __vwsn_temp__; }());
+			::vl::__vwsn::This(this->__vwsn_precompile_12)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(0); __vwsn_temp__.top = static_cast<::vl::vint>(0); __vwsn_temp__.right = static_cast<::vl::vint>(4); __vwsn_temp__.bottom = static_cast<::vl::vint>(0); return __vwsn_temp__; }());
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_11)->SetAutoFocus(false);
