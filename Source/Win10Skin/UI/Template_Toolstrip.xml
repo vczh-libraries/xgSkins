@@ -90,7 +90,7 @@
         prop Colors : StateColors = win10Colors.CommandNormal {}
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win10Colors.CommandPressed : self.Selected ? win10Colors.ItemSelected : self.State == ButtonState::Active ? win10Colors.CommandHovered : win10Colors.CommandNormal</att.Colors-bind>
+        <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win10Colors.RibbonPressed : self.Selected ? win10Colors.RibbonSelected : self.State == ButtonState::Active ? win10Colors.RibbonHovered : win10Colors.CommandNormal</att.Colors-bind>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <SolidBackground Color-bind="self.Colors.Fill"/>
@@ -111,7 +111,7 @@
         prop Colors : StateColors = win10Colors.CommandNormal {}
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win10Colors.CommandPressed : self.Selected ? win10Colors.ItemSelected : self.State == ButtonState::Active ? win10Colors.CommandHovered : win10Colors.CommandNormal</att.Colors-bind>
+        <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win10Colors.RibbonPressed : self.Selected ? win10Colors.RibbonSelected : self.State == ButtonState::Active ? win10Colors.RibbonHovered : win10Colors.CommandNormal</att.Colors-bind>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <SolidBackground Color-bind="self.Colors.Fill"/>
@@ -183,7 +183,7 @@
         prop Colors : StateColors = win10Colors.CommandNormal {}
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win10Colors.CommandPressed : self.Selected ? win10Colors.ItemSelected : self.State == ButtonState::Active ? win10Colors.CommandHovered : win10Colors.CommandNormal</att.Colors-bind>
+        <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win10Colors.RibbonPressed : self.Selected ? win10Colors.RibbonSelected : self.State == ButtonState::Active ? win10Colors.RibbonHovered : win10Colors.CommandNormal</att.Colors-bind>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <SolidBackground Color-bind="self.Colors.Fill"/>

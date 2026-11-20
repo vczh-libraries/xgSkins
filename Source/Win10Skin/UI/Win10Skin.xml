@@ -52,6 +52,11 @@
         ItemDisabled : StateColors;
         WindowSurface : Color;
         MenuHighlight : Color;
+        RibbonSurface : Color;
+        RibbonBorder : Color;
+        RibbonHovered : StateColors;
+        RibbonSelected : StateColors;
+        RibbonPressed : StateColors;
         TabNormal : StateColors;
         TabHovered : StateColors;
       }
@@ -87,8 +92,8 @@
         var commandHot = dark ? cast Color "#383838" : cast Color "#E5F3FF";
         var commandDown = dark ? cast Color "#494949" : cast Color "#CCE8FF";
         var menuHighlight = dark ? cast Color "#414141" : cast Color "#99D1FF";
-        var selected = dark ? cast Color "#003052" : cast Color "#CCE8FF";
-        var selectedHover = dark ? cast Color "#004370" : cast Color "#B2DBFF";
+        var selected = dark ? cast Color "#767676" : cast Color "#CCE8FF";
+        var selectedHover = dark ? cast Color "#767676" : cast Color "#B2DBFF";
         return {
           Page: page;
           Chrome: chrome;
@@ -122,12 +127,17 @@
           CommandPressed: {Border: menuHighlight; Fill: commandDown; Text: text;};
           CommandDisabled: {Border: transparent; Fill: transparent; Text: disabledText;};
           ItemNormal: {Border: transparent; Fill: transparent; Text: text;};
-          ItemHovered: {Border: commandHot; Fill: commandHot; Text: text;};
-          ItemSelected: {Border: selected; Fill: selected; Text: text;};
-          ItemSelectedHovered: {Border: selectedHover; Fill: selectedHover; Text: text;};
+          ItemHovered: {Border: (dark ? cast Color "#4C4C4C" : commandHot); Fill: (dark ? cast Color "#4C4C4C" : commandHot); Text: text;};
+          ItemSelected: {Border: (dark ? cast Color "#333333" : cast Color "#99D1FF"); Fill: selected; Text: text;};
+          ItemSelectedHovered: {Border: (dark ? cast Color "#333333" : cast Color "#80C3FF"); Fill: selectedHover; Text: text;};
           ItemDisabled: {Border: transparent; Fill: transparent; Text: disabledText;};
           WindowSurface: windowSurface;
           MenuHighlight: menuHighlight;
+          RibbonSurface: (dark ? cast Color "#212121" : cast Color "#F5F6F7");
+          RibbonBorder: (dark ? cast Color "#404040" : cast Color "#DADBDC");
+          RibbonHovered: {Border: (dark ? cast Color "#646464" : cast Color "#7AB0E7"); Fill: (dark ? cast Color "#464646" : cast Color "#D5E6F7"); Text: text;};
+          RibbonSelected: {Border: (dark ? cast Color "#6F6F6F" : cast Color "#62A2E4"); Fill: (dark ? cast Color "#575757" : cast Color "#C9E0F7"); Text: text;};
+          RibbonPressed: {Border: (dark ? cast Color "#707070" : cast Color "#62A2E4"); Fill: (dark ? cast Color "#6B6B6B" : cast Color "#C9E0F7"); Text: text;};
           TabNormal: {Border: divider; Fill: windowSurface; Text: text;};
           TabHovered: {Border: divider; Fill: (dark ? commandHot : cast Color "#D8EAF9"); Text: text;};
         };

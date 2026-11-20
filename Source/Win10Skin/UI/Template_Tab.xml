@@ -4,18 +4,20 @@
       <ref.Members>
         <![CDATA[
           prop Highlighted: bool = false {}
+          prop RibbonHeader: bool = false {}
           prop TabFocused: bool = false {}
           prop Colors : StateColors = win10Colors.CommandNormal {}
         ]]>
       </ref.Members>
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <att.Highlighted-bind>(cast (RibbonTabPage*) self.Context).Highlighted ?? false</att.Highlighted-bind>
+        <att.RibbonHeader-bind>self.Context is RibbonTabPage*</att.RibbonHeader-bind>
         <att.TabFocused-bind>(cast (TabPage*) self.Context).OwnerTab.Focused ?? false</att.TabFocused-bind>
-        <att.Colors-bind>self.VisuallyEnabled and self.State != ButtonState::Normal ? win10Colors.TabHovered : win10Colors.TabNormal</att.Colors-bind>
+        <att.Colors-bind>self.VisuallyEnabled and self.State != ButtonState::Normal ? win10Colors.TabHovered : self.RibbonHeader and not self.Selected ? win10Colors.CommandNormal : win10Colors.TabNormal</att.Colors-bind>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBackground Color-bind="self.Colors.Border"/>
+          <SolidBackground Color-bind="self.RibbonHeader and self.Selected ? win10Colors.RibbonBorder : self.Colors.Border"/>
           <Bounds AlignmentToParent-bind="self.Selected ? {left:1 top:1 right:1 bottom:0} : {left:1 top:1 right:1 bottom:1}">
-            <SolidBackground Color-bind="self.Selected ? win10Colors.Page : self.Colors.Fill"/>
+            <SolidBackground Color-bind="self.Selected ? (self.RibbonHeader ? win10Colors.RibbonSurface : win10Colors.Page) : self.Colors.Fill"/>
           </Bounds>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:-1" PreferredMinSize="x:0 y:2" Visible-bind="self.Highlighted">
@@ -97,10 +99,9 @@
         <att.Highlighted-bind>(cast (RibbonTabPage*) self.SelectedTabPage).Highlighted ?? false</att.Highlighted-bind>
 
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBackground Color-bind="win10Colors.WindowSurface"/>
+          <SolidBackground Color-bind="self.IsRibbon ? win10Colors.Page : win10Colors.WindowSurface"/>
           <att.Rows>
             <CellOption>composeType:MinSize</CellOption>
-            <CellOption>composeType:Absolute absolute:2</CellOption>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Rows>
           <att.Columns>
@@ -111,18 +112,18 @@
 
           <Cell ref.Name="beforeHeadersContainer" Site="row:0 column:0">
             <SideAligned Direction="Bottom" MaxLength="1" MaxRatio="1.0">
-              <SolidBackground Color-bind="win10Colors.Divider"/>
+              <SolidBackground Color-bind="self.IsRibbon ? win10Colors.RibbonBorder : win10Colors.Divider"/>
             </SideAligned>
           </Cell>
           <Cell ref.Name="afterHeadersContainer" Site="row:0 column:2">
             <SideAligned Direction="Bottom" MaxLength="1" MaxRatio="1.0">
-              <SolidBackground Color-bind="win10Colors.Divider"/>
+              <SolidBackground Color-bind="self.IsRibbon ? win10Colors.RibbonBorder : win10Colors.Divider"/>
             </SideAligned>
           </Cell>
 
           <Cell Site="row:0 column:1">
             <SideAligned Direction="Bottom" MaxLength="1" MaxRatio="1.0">
-              <SolidBackground Color-bind="win10Colors.Divider"/>
+              <SolidBackground Color-bind="self.IsRibbon ? win10Colors.RibbonBorder : win10Colors.Divider"/>
             </SideAligned>
             <RepeatFlow ref.Name="header" AlignmentToParent="left:0 top:-1 right:0 bottom:0" ExtraMargin="left:2 top:2 right:2 bottom:0">
               <att.ItemTemplate>win10skin::TabHeaderTemplate</att.ItemTemplate>
@@ -146,11 +147,12 @@
               </ev.ItemRemoved-eval>
             </RepeatFlow>
           </Cell>
-          <Cell Site="row:2 column:0 columnSpan:3">
-            <SolidBorder Color-bind="win10Colors.Divider"/>
-            <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1">
-              <SolidBackground Color-bind="self.IsRibbon ? win10Colors.Chrome : win10Colors.Page"/>
+          <Cell Site="row:1 column:0 columnSpan:3">
+            <SolidBorder Color-bind="self.IsRibbon ? win10Colors.RibbonBorder : win10Colors.Divider"/>
+            <Bounds AlignmentToParent-bind="{left:1 top:(self.SelectedTabPage is null ? 1 : 0) right:1 bottom:1}">
+              <SolidBackground Color-bind="self.IsRibbon ? win10Colors.RibbonSurface : win10Colors.Page"/>
             </Bounds>
+            <Bounds ref.Name="container" AlignmentToParent="left:1 top:3 right:1 bottom:1"/>
           </Cell>
         </Table>
       </RibbonTabTemplate>

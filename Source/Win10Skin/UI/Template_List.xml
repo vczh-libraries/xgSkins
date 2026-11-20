@@ -60,7 +60,8 @@
             </Bounds>
           </Bounds>
 
-          <Bounds AlignmentToParent="left:-1 top:1 right:1 bottom:1" PreferredMinSize="x:9 y:3" MinSizeLimitation="NoLimit">
+          <!-- The MDL2 glyph overhangs its box by one ClearType pixel. -->
+          <Bounds AlignmentToParent="left:-1 top:1 right:3 bottom:1" PreferredMinSize="x:9 y:3" MinSizeLimitation="NoLimit">
             <SolidLabel Text="" Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:9" Color-bind="self.Colors.Text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
           </Bounds>
         </Bounds>
