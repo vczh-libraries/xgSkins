@@ -3,15 +3,6 @@
     <Instance ref.Class="demo::DocumentEditorBase">
       <ref.Members>
         <![CDATA[
-          prop LightIconInk : bool = false {}
-
-          @cpp:Protected
-          func GetEditorIcon(name : string, lightInk : bool) : GuiImageData^
-          {
-            var path = "ToolbarImages/" & (lightInk ? "LightInk" : "") & name;
-            return cast (GuiImageData^) ResolveResource("res", path, true);
-          }
-
           @cpp:Protected
           prop EditModeCommand : ToolstripCommand* = null {const}
     
@@ -300,7 +291,7 @@
           </ev.Executed-eval>
         </ToolstripCommand>
 
-        <ToolstripCommand ref.Name="commandDelete" Text="Delete" Image-bind="self.GetEditorIcon(&quot;Delete&quot;, self.LightIconInk)" LargeImage-bind="self.GetEditorIcon(&quot;RemoveLinkLarge&quot;, self.LightIconInk)">
+        <ToolstripCommand ref.Name="commandDelete" Text="Delete" Image-uri="res://ToolbarImages/Delete" LargeImage-uri="res://ToolbarImages/RemoveLinkLarge">
           <att.Enabled-bind>self.HasEditableSelection</att.Enabled-bind>
           <ev.Executed-eval>
             <![CDATA[document.SetSelectionText("");]]>
@@ -354,7 +345,7 @@
           </ev.Executed-eval>
         </ToolstripCommand>
 
-        <ToolstripCommand ref.Name="commandRemoveHyperlink" Text="Remove Hyperlink" Image-uri="res://ToolbarImages/RemoveLink" LargeImage-bind="self.GetEditorIcon(&quot;RemoveLinkLarge&quot;, self.LightIconInk)">
+        <ToolstripCommand ref.Name="commandRemoveHyperlink" Text="Remove Hyperlink" Image-uri="res://ToolbarImages/RemoveLink" LargeImage-uri="res://ToolbarImages/RemoveLinkLarge">
           <att.Enabled-bind>document.observe as _(self.HasEditableHyperlink(false) on _.SelectionChanged)</att.Enabled-bind>
           <ev.Executed-eval>
             <![CDATA[
@@ -368,7 +359,7 @@
           </ev.Executed-eval>
         </ToolstripCommand>
 
-        <ToolstripCommand ref.Name="commandBold" Text="Bold" Image-bind="self.GetEditorIcon(&quot;Bold&quot;, self.LightIconInk)">
+        <ToolstripCommand ref.Name="commandBold" Text="Bold" Image-uri="res://ToolbarImages/Bold">
           <att.Enabled-bind>self.HasEditableSelection</att.Enabled-bind>
           <att.Selected-bind>document.observe as _(_.SummarizeStyle(_.CaretBegin, _.CaretEnd).bold == true on _.SelectionChanged, _.ModifiedChanged)</att.Selected-bind>
           <ev.Executed-eval>
@@ -382,7 +373,7 @@
           </ev.Executed-eval>
         </ToolstripCommand>
 
-        <ToolstripCommand ref.Name="commandItalic" Text="Italic" Image-bind="self.GetEditorIcon(&quot;Italic&quot;, self.LightIconInk)">
+        <ToolstripCommand ref.Name="commandItalic" Text="Italic" Image-uri="res://ToolbarImages/Italic">
           <att.Enabled-bind>self.HasEditableSelection</att.Enabled-bind>
           <att.Selected-bind>document.observe as _(_.SummarizeStyle(_.CaretBegin, _.CaretEnd).italic == true on _.SelectionChanged, _.ModifiedChanged)</att.Selected-bind>
           <ev.Executed-eval>
@@ -396,7 +387,7 @@
           </ev.Executed-eval>
         </ToolstripCommand>
 
-        <ToolstripCommand ref.Name="commandUnderline" Text="Underline" Image-bind="self.GetEditorIcon(&quot;Underline&quot;, self.LightIconInk)">
+        <ToolstripCommand ref.Name="commandUnderline" Text="Underline" Image-uri="res://ToolbarImages/Underline">
           <att.Enabled-bind>self.HasEditableSelection</att.Enabled-bind>
           <att.Selected-bind>document.observe as _(_.SummarizeStyle(_.CaretBegin, _.CaretEnd).underline == true on _.SelectionChanged, _.ModifiedChanged)</att.Selected-bind>
           <ev.Executed-eval>
@@ -410,7 +401,7 @@
           </ev.Executed-eval>
         </ToolstripCommand>
 
-        <ToolstripCommand ref.Name="commandStrike" Text="Strike" Image-bind="self.GetEditorIcon(&quot;Strike&quot;, self.LightIconInk)">
+        <ToolstripCommand ref.Name="commandStrike" Text="Strike" Image-uri="res://ToolbarImages/Strike">
           <att.Enabled-bind>self.HasEditableSelection</att.Enabled-bind>
           <att.Selected-bind>document.observe as _(_.SummarizeStyle(_.CaretBegin, _.CaretEnd).strikeline == true on _.SelectionChanged, _.ModifiedChanged)</att.Selected-bind>
           <ev.Executed-eval>
@@ -529,14 +520,14 @@
           </ev.Executed-eval>
         </ToolstripCommand>
 
-        <ToolstripCommand ref.Name="commandAlignDefault" Text="Set Alignment to Default (Left)" Image-bind="self.GetEditorIcon(&quot;TextAlign&quot;, self.LightIconInk)">
+        <ToolstripCommand ref.Name="commandAlignDefault" Text="Set Alignment to Default (Left)" Image-uri="res://ToolbarImages/TextAlign">
           <att.Enabled-bind>self.HasEditableCursor()</att.Enabled-bind>
           <ev.Executed-eval>
             <![CDATA[self.SetAlignment(null);]]>
           </ev.Executed-eval>
         </ToolstripCommand>
 
-        <ToolstripCommand ref.Name="commandAlignLeft" Text="Left" Image-bind="self.GetEditorIcon(&quot;TextAlignLeft&quot;, self.LightIconInk)" LargeImage-bind="self.GetEditorIcon(&quot;TextAlignLeftLarge&quot;, self.LightIconInk)">
+        <ToolstripCommand ref.Name="commandAlignLeft" Text="Left" Image-uri="res://ToolbarImages/TextAlignLeft" LargeImage-uri="res://ToolbarImages/TextAlignLeftLarge">
           <att.Enabled-bind>self.HasEditableCursor()</att.Enabled-bind>
           <att.Selected-bind>document.observe as _(self.SelectAlignmentCommand() == commandAlignLeft on _.SelectionChanged)</att.Selected-bind>
           <ev.Executed-eval>
@@ -544,7 +535,7 @@
           </ev.Executed-eval>
         </ToolstripCommand>
 
-        <ToolstripCommand ref.Name="commandAlignCenter" Text="Center" Image-bind="self.GetEditorIcon(&quot;TextAlignCenter&quot;, self.LightIconInk)" LargeImage-bind="self.GetEditorIcon(&quot;TextAlignCenterLarge&quot;, self.LightIconInk)">
+        <ToolstripCommand ref.Name="commandAlignCenter" Text="Center" Image-uri="res://ToolbarImages/TextAlignCenter" LargeImage-uri="res://ToolbarImages/TextAlignCenterLarge">
           <att.Enabled-bind>self.HasEditableCursor()</att.Enabled-bind>
           <att.Selected-bind>document.observe as _(self.SelectAlignmentCommand() == commandAlignCenter on _.SelectionChanged)</att.Selected-bind>
           <ev.Executed-eval>
@@ -552,7 +543,7 @@
           </ev.Executed-eval>
         </ToolstripCommand>
 
-        <ToolstripCommand ref.Name="commandAlignRight" Text="Right" Image-bind="self.GetEditorIcon(&quot;TextAlignRight&quot;, self.LightIconInk)" LargeImage-bind="self.GetEditorIcon(&quot;TextAlignRightLarge&quot;, self.LightIconInk)">
+        <ToolstripCommand ref.Name="commandAlignRight" Text="Right" Image-uri="res://ToolbarImages/TextAlignRight" LargeImage-uri="res://ToolbarImages/TextAlignRightLarge">
           <att.Enabled-bind>self.HasEditableCursor()</att.Enabled-bind>
           <att.Selected-bind>document.observe as _(self.SelectAlignmentCommand() == commandAlignRight on _.SelectionChanged)</att.Selected-bind>
           <ev.Executed-eval>

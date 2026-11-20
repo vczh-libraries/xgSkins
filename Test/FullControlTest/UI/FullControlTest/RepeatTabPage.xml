@@ -4,13 +4,13 @@
       <att.Rows>
         <_>composeType:Percentage percentage:1.0</_>
         <_>composeType:Absolute absolute:20</_>
-        <_>composeType:Absolute absolute:21</_>
+        <_>composeType:Absolute absolute:20</_>
         <_>composeType:Absolute absolute:20</_>
       </att.Rows>
       <att.Columns>
         <_>composeType:Percentage percentage:1.0</_>
         <_>composeType:Absolute absolute:20</_>
-        <_>composeType:Absolute absolute:21</_>
+        <_>composeType:Absolute absolute:20</_>
       </att.Columns>
 
       <Cell Site="row:0 column:0">

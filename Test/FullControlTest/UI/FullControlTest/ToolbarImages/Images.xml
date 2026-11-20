@@ -52,18 +52,4 @@
   <Image name="TextAlignLeftLarge" content="File">aL_TextAlignLeft.png</Image>
   <Image name="TextAlignCenterLarge" content="File">aL_TextAlignCenter.png</Image>
   <Image name="TextAlignRightLarge" content="File">aL_TextAlignRight.png</Image>
-  <Image name="LightInkTextAlign" content="File">LightInk_a_Align.png</Image>
-  <Image name="LightInkTextAlignLeft" content="File">LightInk_a_TextAlignLeft.png</Image>
-  <Image name="LightInkTextAlignCenter" content="File">LightInk_a_TextAlignCenter.png</Image>
-  <Image name="LightInkTextAlignRight" content="File">LightInk_a_TextAlignRight.png</Image>
-  <Image name="LightInkTextAlignLeftLarge" content="File">LightInk_aL_TextAlignLeft.png</Image>
-  <Image name="LightInkTextAlignCenterLarge" content="File">LightInk_aL_TextAlignCenter.png</Image>
-  <Image name="LightInkTextAlignRightLarge" content="File">LightInk_aL_TextAlignRight.png</Image>
-  <Image name="LightInkBold" content="File">LightInk_s_Bold.png</Image>
-  <Image name="LightInkItalic" content="File">LightInk_s_Italic.png</Image>
-  <Image name="LightInkUnderline" content="File">LightInk_s_Underline.png</Image>
-  <Image name="LightInkStrike" content="File">LightInk_s_Strike.png</Image>
-  <Image name="LightInkDelete" content="File">LightInk__Delete.png</Image>
-  <Image name="LightInkDeleteLarge" content="File">LightInk_eL_RemoveLink.png</Image>
-  <Image name="LightInkRemoveLinkLarge" content="File">LightInk_eL_RemoveLink.png</Image>
 </Folder>

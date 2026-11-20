@@ -71,7 +71,7 @@
           </att.Columns>
 
           <Cell Site="row:0 column:0">
-            <Label Font-bind="self.DisplayFont" Text="Locale only works in FakeDialogService (default in Hosted Mode)"/>
+            <SolidLabel Font-bind="self.DisplayFont" Color="#FFFFFF" Text="Locale only works in FakeDialogService (default in Hosted Mode)" VerticalAlignment="Center"/>
           </Cell>
 
           <Cell Site="row:0 column:1">
@@ -314,7 +314,7 @@
           </att.Columns>
 
           <Cell Site="row:0 column:0">
-            <Label ref.Name="label" Font-eval="self.DisplayFont" Text="Sample Text"/>
+            <SolidLabel ref.Name="label" Font-eval="self.DisplayFont" Color="#FFFFFF" Text="Sample Text"/>
           </Cell>
 
           <Cell Site="row:1 column:0">
@@ -326,12 +326,12 @@
               <ev.Clicked-eval><![CDATA[
                 {
                   dialog.ShowEffect = checkEffect.Selected;
-                  dialog.SelectedFont = label.DisplayFont;
-                  dialog.SelectedColor = label.TextColor;
+                  dialog.SelectedFont = label.Font;
+                  dialog.SelectedColor = label.Color;
                   if (dialog.ShowDialog())
                   {
                     label.Font = dialog.SelectedFont;
-                    label.TextColor = dialog.SelectedColor;
+                    label.Color = dialog.SelectedColor;
                   }
                 }
               ]]></ev.Clicked-eval>

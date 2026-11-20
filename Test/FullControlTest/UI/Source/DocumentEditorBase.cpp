@@ -35,25 +35,6 @@ Class (::demo::DocumentEditorBase)
 
 namespace demo
 {
-	bool DocumentEditorBase::GetLightIconInk()
-	{
-		return this->__vwsn_prop_LightIconInk;
-	}
-	void DocumentEditorBase::SetLightIconInk(bool __vwsn_value_)
-	{
-		if ((this->__vwsn_prop_LightIconInk != __vwsn_value_))
-		{
-			(this->__vwsn_prop_LightIconInk = __vwsn_value_);
-			::vl::__vwsn::EventInvoke(this->LightIconInkChanged)();
-		}
-	}
-
-	::vl::Ptr<::vl::presentation::GuiImageData> DocumentEditorBase::GetEditorIcon(const ::vl::WString& name, bool lightInk)
-	{
-		auto path = ((::vl::WString::Unmanaged(L"ToolbarImages/") + (lightInk ? ::vl::WString::Unmanaged(L"LightInk") : ::vl::WString::Unmanaged(L""))) + name);
-		return ::vl::__vwsn::Ensure(::vl::__vwsn::SharedPtrCast<::vl::presentation::GuiImageData>(this->ResolveResource(::vl::WString::Unmanaged(L"res"), path, true).Obj()));
-	}
-
 	::vl::presentation::controls::GuiToolstripCommand* DocumentEditorBase::GetEditModeCommand()
 	{
 		return this->__vwsn_prop_EditModeCommand;
@@ -197,7 +178,6 @@ namespace demo
 
 	DocumentEditorBase::DocumentEditorBase()
 		: ::vl::presentation::controls::GuiCustomControl(::vl::presentation::theme::ThemeName::CustomControl)
-		, __vwsn_prop_LightIconInk(false)
 		, __vwsn_prop_EditModeCommand(static_cast<::vl::presentation::controls::GuiToolstripCommand*>(nullptr))
 		, __vwsn_prop_HasEditableSelection(false)
 		, __vwsn_prop_HasEditableSelectionInSingleParagraph(false)
