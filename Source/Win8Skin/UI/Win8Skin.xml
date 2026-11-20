@@ -289,8 +289,8 @@
           };
           RibbonButtonSelected: {
             Border: cast Color "#60A1E2";
-            G1: cast Color "#E9F1FA";
-            G2: cast Color "#E9F1FA";
+            G1: cast Color "#C9E0F7";
+            G2: cast Color "#C9E0F7";
             Text: cast Color "#000000";
             Bullet: cast Color "#000000";
           };

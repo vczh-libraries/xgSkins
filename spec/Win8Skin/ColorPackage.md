@@ -24,6 +24,10 @@ packages, separate from pushbuttons and tracker thumbs.
 `EditorColors` has `Border` and `Background`, shared by editable text/document
 controls and list/tree outer borders. It does not change item selection colors.
 
+In the Windows 8 property sheet, the selected header shares its white face with the page. Its side edges continue to the pane and its bottom is open. In Explorer, the inactive ribbon headers sit on white and the active Home header shares the light gray ribbon face. [Microsoft Press, Introducing Windows 8, figure 3-3](https://download.microsoft.com/download/b/1/e/b1e7f4c9-304d-456c-bd96-a2287fa7871d/microsoft_press_ebook_introducing_windows_8_pdf.pdf#page=39), [Microsoft Windows 8 brochure, page 18](https://download.microsoft.com/download/6/F/5/6F512314-780B-42D7-9D56-BA501352B78A/W8_brochure_download.pdf#page=18)
+
+The Windows 8 Explorer capture shows a selected file with a `#D1E8FF` interior and a thin, stronger blue edge. It corroborates the skin’s legacy selection palette. The Details pane toggle in the ribbon has a `#C9E0F7` face, with some neighboring pixels sampled at `#C8DFF6` in the rescaled illustration. [Selected file in Windows 8](https://1214119.sites.myregisteredsite.com/Lessons/win/filesandfolders/screentip-file-properties-penguins-win8.png), [selected Details pane command](https://1214119.sites.myregisteredsite.com/Lessons/win/filesandfolders/ribbon-fileexplorer-view-detailspane-win8.png)
+
 ## State packages
 | ColorPackage item | Required use |
 | --- | --- |
@@ -68,7 +72,7 @@ controls and list/tree outer borders. It does not change item selection colors.
 | `RibbonButtonNormal` | Transparent normal ribbon command chrome over the flat ribbon surface. |
 | `RibbonButtonActive` | Blue hovered ribbon command chrome. |
 | `RibbonButtonPressed` | Blue pressed ribbon command or open dropdown chrome. |
-| `RibbonButtonSelected` | Blue selected ribbon command chrome. |
+| `RibbonButtonSelected` | Selected ribbon command with a `#C9E0F7` face and a `#60A1E2` edge. |
 | `RibbonButtonDisabled` | Transparent disabled ribbon command chrome with disabled foreground. |
 
 ## Editor packages
