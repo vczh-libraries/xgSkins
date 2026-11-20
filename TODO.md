@@ -1,11 +1,5 @@
 # TODO
 
-In `Control/DocumentEditor (Ribbon)` you can see gallary icon text colors are hardcoded white if color is not assigned.
-I think this is incorrect, you can use `<Label/>` to replace it, so that when color is not assigned, it has the default color.
-Fix `FullControlTest` in GacUI and import to this repo. Verify if that works.
-Delete suggestions that resolved by this task.
-commit and push once finishing.
-
 - `UbuntuStyle`
   - Ubuntu ribbon/menu has color mistakes. Need research.
   - Is ribbon header black?

@@ -25,4 +25,3 @@ The skin configures that document baseline.
 
 Read the active editor baseline for ordinary text and retain exact checks for explicit
 styles. Run the assertions under DarkSkin and a light skin, including a theme change.
-[Related showcase text colors](ShowcaseSkinColors.md).
