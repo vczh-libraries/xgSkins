@@ -1,25 +1,28 @@
-# The Repeat page clips 21-pixel tracker thumbs in 20-pixel cells
+# The Repeat page clipped the original 21-pixel tracker thumbs
 
-The showcase’s fixed tracker cells cut off the last pixel of the XP grip in each
-orientation. Win7Skin also requests a 21-pixel cross-axis size.
+The showcase’s fixed 20-pixel tracker cells cut off the last pixel of the original
+XP grip in each orientation. The original Win7Skin also requested 21 pixels
+across the track. The current XP and Win7 templates fit the 20-pixel cells.
 
 ## Repro
 
-Use the original FullControlTest Repeat page, before the local synchronization
-adjustment. In `FullControlTest /D2D /Hosted`, select WinXPSkin and open
-**Layout / Repeat**. Inspect each tracker’s grip and ancestor clip in the `Controls`
-tree. XP requests an 11-by-21 horizontal grip and a 21-by-11 vertical grip. The
-original row and column each offered only 20 pixels across the track.
+To reproduce the historical clipping, use the original WinXPSkin tracker
+template with the upstream Repeat page. In `FullControlTest /D2D /Hosted`,
+select WinXPSkin and open **Layout / Repeat**. Compare each tracker’s grip with
+its ancestor clip in the `Controls` tree. The original template requested an
+11-by-21 horizontal grip and a 21-by-11 vertical grip.
+[Original XP tracker template](https://github.com/vczh-libraries/xgSkins/blob/f196dd20c68121951b5a9e231f7c00eafa3e99a9/Source/WinXPSkin/UI/Template_Scroll.xml).
 
 ## Workaround
 
-The local synchronization script changes table row index 2 and column index 2 from 20
-to 21 pixels. It matches both full declarations before editing. A plain `MinSize` cell
-could instead shrink the DarkSkin tracker, whose template supplies no equivalent
-cross-axis minimum. [syncProj.ps1](../../scripts/Windows/syncProj.ps1).
+WinXPSkin and Win7Skin now size their grips to the available thickness and use
+the same tracker minimum as DarkSkin. The Repeat page uses the upstream 20-pixel
+row and column. [XP tracker templates](../../Source/WinXPSkin/UI/Template_Scroll.xml) ·
+[Win7 tracker templates](../../Source/Win7Skin/UI/Template_Scroll.xml).
 
-Each upstream declaration matched once. The x32/x64 generator and merger propagated
-only those two dimensions to the copied XML and generated C++. The Debug x64 build
+For the original verification, the sync script enlarged row 2 and column 2
+from 20 to 21 pixels. The x32/x64 generator and merger propagated only those
+two dimensions to the copied XML and generated C++. The Debug x64 build
 reported zero warnings and errors. Across three runs, saved composition bounds placed
 both grips inside their ancestor clips in all four skins. Both drags, retained ranges,
 progress synchronization and XP’s queued partial/full six-pixel chunks with two-pixel

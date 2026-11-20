@@ -38,11 +38,10 @@ user. Start `FullControlTest` normally, then select `Win7Skin` in
 `Window Manager / Color Theme`. Startup remains DarkSkin. See
 [FullControlTest.md](FullControlTest.md) for building, launch modes and automation.
 
-The showcase also contains application-owned templates and raw drawings. Its
-custom dark navigation rail and swipe-to-delete presentation keep their own
-design; changing the standard skin does not replace those templates. Minimal
-readability adaptations to copied sample labels are maintained separately from
-the skin, so example artwork and document colors retain their intended values.
+The showcase supplies its own vertical tabs, swipe-to-delete rows and raw
+text elements. Some of these use fixed DarkSkin colors even when Win7Skin is
+selected. For example, the date readouts keep the white foreground specified
+by the showcase. [Showcase text colors](../suggestions/FullControlTest/ShowcaseSkinColors.md).
 
 ## Resource organization
 

@@ -176,10 +176,10 @@ passing horizontal and vertical tracker continuation in
 `%TEMP%/xgskins-winxp-tracker-continuation.log`. These are combined recorded
 invocations, not one uninterrupted interaction-suite pass.
 
-The observed tracker clipping led to a guarded showcase synchronization change:
-only the horizontal tracker's row and the vertical tracker's column grow from
-20 to 21 pixels. The scrollbar and progress dimensions remain unchanged.
-The source transformation and upstream proposal are recorded in
+For this verification, the sync script enlarged the horizontal tracker's row
+and the vertical tracker's column from 20 to 21 pixels. The current showcase
+uses the upstream 20-pixel cells. The historical workaround and upstream
+proposal are in
 [TrackerFixtureSize.md](../suggestions/FullControlTest/TrackerFixtureSize.md).
 That correction passed synchronization, both generation architectures, the
 generated-code merge and the rebuilt application as recorded above. Runtime
