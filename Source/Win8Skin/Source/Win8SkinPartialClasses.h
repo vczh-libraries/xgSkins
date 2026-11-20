@@ -2460,13 +2460,11 @@ namespace win8skin
 		::vl::Ptr<::vl::presentation::elements::GuiFocusRectangleElement> __vwsn_precompile_2;
 		::vl::presentation::compositions::GuiTableComposition* __vwsn_precompile_3;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_4;
-		::vl::presentation::compositions::GuiTableComposition* __vwsn_precompile_5;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_6;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_7;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_8;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_9;
-		::vl::presentation::controls::GuiButton* __vwsn_precompile_10;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_11;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_5;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_6;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_7;
+		::vl::presentation::controls::GuiButton* __vwsn_precompile_8;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_9;
 		void __vwsn_win8skin_HTrackerTemplate_Initialize(::win8skin::HTrackerTemplate* __vwsn_this_);
 	public:
 		HTrackerTemplateConstructor();
@@ -2506,9 +2504,10 @@ namespace win8skin
 		::vl::presentation::compositions::GuiBoundsComposition* container;
 		::win8skin::ItemBackgroundTemplate* self;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_0;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_1;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_2;
-		::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement> __vwsn_precompile_3;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_1;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_2;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_3;
+		::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement> __vwsn_precompile_4;
 		void __vwsn_win8skin_ItemBackgroundTemplate_Initialize(::win8skin::ItemBackgroundTemplate* __vwsn_this_);
 	public:
 		ItemBackgroundTemplateConstructor();
@@ -4737,12 +4736,12 @@ namespace win8skin
 		::vl::presentation::compositions::GuiRepeatFlowComposition* header;
 		::vl::presentation::compositions::GuiTableComposition* __vwsn_precompile_0;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_1;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_2;
+		::vl::presentation::compositions::GuiSideAlignedComposition* __vwsn_precompile_2;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_3;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_4;
+		::vl::presentation::compositions::GuiSideAlignedComposition* __vwsn_precompile_4;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_5;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_6;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_7;
+		::vl::presentation::compositions::GuiSideAlignedComposition* __vwsn_precompile_7;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_8;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_9;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_10;
@@ -5174,7 +5173,8 @@ namespace win8skin
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_1;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_2;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_3;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_4;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_4;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_5;
 		void __vwsn_win8skin_ToolstripMenuTemplate_Initialize(::win8skin::ToolstripMenuTemplate* __vwsn_this_);
 	public:
 		ToolstripMenuTemplateConstructor();
@@ -5681,13 +5681,11 @@ namespace win8skin
 		::vl::Ptr<::vl::presentation::elements::GuiFocusRectangleElement> __vwsn_precompile_2;
 		::vl::presentation::compositions::GuiTableComposition* __vwsn_precompile_3;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_4;
-		::vl::presentation::compositions::GuiTableComposition* __vwsn_precompile_5;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_6;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_7;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_8;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_9;
-		::vl::presentation::controls::GuiButton* __vwsn_precompile_10;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_11;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_5;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_6;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_7;
+		::vl::presentation::controls::GuiButton* __vwsn_precompile_8;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_9;
 		void __vwsn_win8skin_VTrackerTemplate_Initialize(::win8skin::VTrackerTemplate* __vwsn_this_);
 	public:
 		VTrackerTemplateConstructor();
