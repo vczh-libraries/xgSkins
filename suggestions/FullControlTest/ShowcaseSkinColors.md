@@ -5,8 +5,7 @@ Several showcase pages combine fixed DarkSkin foregrounds or backgrounds with co
 ## Repro
 
 Run `FullControlTest /D2D /Hosted` and switch from DarkSkin to a light skin in
-**Window Manager**. Inspect the date readouts in **Misc / DatePicker**,
-the localization instructions and font-dialog sample, the
+**Window Manager**. Inspect the date readouts in **Misc / DatePicker**, the
 ribbon style gallery and Search prompt, the Layout page beside the vertical tab
 headers, and the custom swipe rows on **Misc / TouchingList**.
 
@@ -28,13 +27,13 @@ usable theme color to the gallery.
 
 ## Proposal
 
-Use themed `Label` controls for the date readouts, localized instructions, ribbon
+Use themed `Label` controls for the date readouts, ribbon
 captions and Search prompt. Use the active label foreground for ordinary gallery
-samples, while preserving explicit document-style colors and the font-dialog
-selection. Limit the dark vertical-tab background to the header column and let
+samples, while preserving explicit document-style colors.
+Limit the dark vertical-tab background to the header column and let
 the content inherit the window surface. Draw the swipe row's text and background
 from the same palette.
 
-Check the date readouts, localization instructions, gallery, font-dialog sample,
+Check the date readouts, gallery, Search prompt,
 vertical-tab content and swipe rows after switching between DarkSkin and a light skin.
 [Document-style test expectations](DocumentStyleBaseline.md).
