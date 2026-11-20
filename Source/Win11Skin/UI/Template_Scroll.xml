@@ -1,4 +1,33 @@
 <Folder>
+  <Script name="TrackerGeometry">
+    <Workflow><![CDATA[
+    module Win11TrackerGeometry;
+    using presentation::*;
+    using presentation::controls::*;
+    namespace win11skin
+    {
+      func GetTrackerThumbSize(bounds : Rect, horizontal : bool) : Size
+      {
+        var width = bounds.x2 - bounds.x1;
+        var height = bounds.y2 - bounds.y1;
+        var length = horizontal ? width : height;
+        var diameter = horizontal ? height : width;
+        if (diameter > 16) { diameter = 16; }
+        if (diameter > length / 2) { diameter = length / 2; }
+        return {x:diameter; y:diameter;};
+      }
+
+      func GetTrackerBulletMargin(bounds : Rect, state : ButtonState) : Margin
+      {
+        var diameter = bounds.x2 - bounds.x1;
+        var inset = state == ButtonState::Pressed ? 5 : state == ButtonState::Active ? 3 : 4;
+        var padding = diameter * inset / 16;
+        return {left:padding; top:padding; right:padding; bottom:padding;};
+      }
+    }
+    ]]></Workflow>
+  </Script>
+
   <Instance name="LeftScrollButtonTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win11skin::LeftScrollButtonTemplate" ref.Styles="res://Win11Skin/Style">
       <ref.Members><![CDATA[
@@ -249,23 +278,23 @@
           }
         ]]>
       </ref.Ctor>
-      <ScrollTemplate ref.Name="self" PreferredMinSize="y:16" MinSizeLimitation="LimitToElementAndChildren">
+      <ScrollTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <CommonScrollBehavior ref.Name="behavior"/>
 
         <SolidBackground Color-eval="win11skin::win11Colors.Canvas"/>
 
-        <SideAligned MaxLength="16" MaxRatio="0.5" Direction="Left">
+        <SideAligned MaxLength="20" MaxRatio="0.5" Direction="Left">
           <Button AutoFocus="false" ref.Name="buttonDecrease" ControlTemplate="win11skin::LeftScrollButtonTemplate">
             <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           </Button>
         </SideAligned>
-        <SideAligned MaxLength="16" MaxRatio="0.5" Direction="Right">
+        <SideAligned MaxLength="20" MaxRatio="0.5" Direction="Right">
           <Button AutoFocus="false" ref.Name="buttonIncrease" ControlTemplate="win11skin::RightScrollButtonTemplate">
             <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           </Button>
         </SideAligned>
-        <Bounds ref.Name="handleContainer" AlignmentToParent="left:16 top:0 right:16 bottom:0" MinSizeLimitation="NoLimit">
-          <PartialView ref.Name="handle" PreferredMinSize="x:16" Visible-bind="self.VisuallyEnabled">
+        <Bounds ref.Name="handleContainer" AlignmentToParent="left:20 top:0 right:20 bottom:0" MinSizeLimitation="NoLimit">
+          <PartialView ref.Name="handle" PreferredMinSize="x:10" Visible-bind="self.VisuallyEnabled">
             <att.WidthPageSize-bind>(cast double self.PageSize) / self.TotalSize</att.WidthPageSize-bind>
             <att.WidthRatio-bind>(cast double self.Position) / self.TotalSize</att.WidthRatio-bind>
             <Button AutoFocus="false" ControlTemplate="win11skin::HScrollHandleTemplate">
@@ -289,23 +318,23 @@
           }
         ]]>
       </ref.Ctor>
-      <ScrollTemplate ref.Name="self" PreferredMinSize="x:16" MinSizeLimitation="LimitToElementAndChildren">
+      <ScrollTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <CommonScrollBehavior ref.Name="behavior"/>
 
         <SolidBackground Color-eval="win11skin::win11Colors.Canvas"/>
 
-        <SideAligned MaxLength="16" MaxRatio="0.5" Direction="Top">
+        <SideAligned MaxLength="20" MaxRatio="0.5" Direction="Top">
           <Button AutoFocus="false" ref.Name="buttonDecrease" ControlTemplate="win11skin::TopScrollButtonTemplate">
             <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           </Button>
         </SideAligned>
-        <SideAligned MaxLength="16" MaxRatio="0.5" Direction="Bottom">
+        <SideAligned MaxLength="20" MaxRatio="0.5" Direction="Bottom">
           <Button AutoFocus="false" ref.Name="buttonIncrease" ControlTemplate="win11skin::BottomScrollButtonTemplate">
             <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           </Button>
         </SideAligned>
-        <Bounds ref.Name="handleContainer" AlignmentToParent="left:0 top:16 right:0 bottom:16" MinSizeLimitation="NoLimit">
-          <PartialView ref.Name="handle" PreferredMinSize="y:16" Visible-bind="self.VisuallyEnabled">
+        <Bounds ref.Name="handleContainer" AlignmentToParent="left:0 top:20 right:0 bottom:20" MinSizeLimitation="NoLimit">
+          <PartialView ref.Name="handle" PreferredMinSize="y:10" Visible-bind="self.VisuallyEnabled">
             <att.HeightPageSize-bind>(cast double self.PageSize) / self.TotalSize</att.HeightPageSize-bind>
             <att.HeightRatio-bind>(cast double self.Position) / self.TotalSize</att.HeightRatio-bind>
             <Button AutoFocus="false" ControlTemplate="win11skin::VScrollHandleTemplate">
@@ -337,7 +366,7 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <SolidBackground Color-bind="self.animationBuilder.Current.Face" Shape="shapeType:Ellipse"/>
         </Bounds>
-        <Bounds AlignmentToParent-bind="self.State == ButtonState::Pressed ? {left:5 top:5 right:5 bottom:5} : self.State == ButtonState::Active ? {left:3 top:3 right:3 bottom:3} : {left:4 top:4 right:4 bottom:4}">
+        <Bounds AlignmentToParent-bind="GetTrackerBulletMargin(self.CachedBounds, self.State)">
           <SolidBackground Color-bind="self.VisuallyEnabled ? win11Colors.Accent : win11Colors.Disabled" Shape="shapeType:Ellipse"/>
         </Bounds>
       </ButtonTemplate>
@@ -364,7 +393,7 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <SolidBackground Color-bind="self.animationBuilder.Current.Face" Shape="shapeType:Ellipse"/>
         </Bounds>
-        <Bounds AlignmentToParent-bind="self.State == ButtonState::Pressed ? {left:5 top:5 right:5 bottom:5} : self.State == ButtonState::Active ? {left:3 top:3 right:3 bottom:3} : {left:4 top:4 right:4 bottom:4}">
+        <Bounds AlignmentToParent-bind="GetTrackerBulletMargin(self.CachedBounds, self.State)">
           <SolidBackground Color-bind="self.VisuallyEnabled ? win11Colors.Accent : win11Colors.Disabled" Shape="shapeType:Ellipse"/>
         </Bounds>
       </ButtonTemplate>
@@ -373,6 +402,7 @@
 
   <Instance name="HTrackerTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win11skin::HTrackerTemplate" ref.Styles="res://Win11Skin/Style">
+      <ref.Members><![CDATA[prop HandleSize : Size = {} {}]]></ref.Members>
       <ref.Ctor>
         <![CDATA[
           {
@@ -381,55 +411,47 @@
           }
         ]]>
       </ref.Ctor>
-      <ScrollTemplate ref.Name="self" PreferredMinSize="y:16" MinSizeLimitation="LimitToElementAndChildren">
+      <ScrollTemplate ref.Name="self" PreferredMinSize="x:12 y:4" MinSizeLimitation="LimitToElementAndChildren">
+        <att.HandleSize-bind>GetTrackerThumbSize(self.CachedBounds, true)</att.HandleSize-bind>
         <CommonScrollBehavior ref.Name="behavior"/>
         <SolidBackground Color-eval="win11skin::win11Colors.Canvas"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
           <SolidBorder Color-eval="win11Colors.Foreground" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
-        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="LimitToElementAndChildren">
-          <att.Rows>
-            <CellOption>composeType:Percentage percentage:0.5</CellOption>
-            <CellOption>composeType:Absolute absolute:16</CellOption>
-            <CellOption>composeType:Percentage percentage:0.5</CellOption>
-          </att.Rows>
-          <att.Columns>
-            <CellOption>composeType:Absolute absolute:6</CellOption>
-            <CellOption>composeType:Percentage percentage:1.0</CellOption>
-            <CellOption>composeType:Absolute absolute:6</CellOption>
-          </att.Columns>
-          <Cell Site="row:1 column:1">
-            <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
-              <att.Rows>
-                <CellOption>composeType:Percentage percentage:0.5</CellOption>
-                <CellOption>composeType:Absolute absolute:4</CellOption>
-                <CellOption>composeType:Percentage percentage:0.5</CellOption>
-              </att.Rows>
-              <att.Columns>
-                <CellOption>composeType:Percentage percentage:1.0</CellOption>
-              </att.Columns>
-              <Cell Site="row:1 column:0">
-                <SolidBackground Color-eval="win11Colors.StrongStroke" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
-                <PartialView>
-                  <att.WidthPageSize-bind>(cast double self.Position) / self.TotalSize</att.WidthPageSize-bind>
-                  <SolidBackground Color-bind="self.VisuallyEnabled ? win11Colors.Accent : win11Colors.Disabled" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
-                </PartialView>
-              </Cell>
-            </Table>
-            <PartialView ref.Name="handle" PreferredMinSize="x:16 y:16" WidthPageSize="0">
-              <att.WidthRatio-bind>(cast double self.Position) / self.TotalSize</att.WidthRatio-bind>
-              <Button AutoFocus="false" ControlTemplate="win11skin::HTrackerHandleTemplate">
-                <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
-              </Button>
-            </PartialView>
-          </Cell>
-        </Table>
+        <PartialView>
+          <Table AlignmentToParent-bind="{left:(self.HandleSize.x / 2) top:0 right:(self.HandleSize.x - self.HandleSize.x / 2) bottom:0}">
+            <att.Rows>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              <CellOption>composeType:Absolute absolute:4</CellOption>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            </att.Rows>
+            <att.Columns>
+              <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            </att.Columns>
+            <Cell Site="row:1 column:0">
+              <SolidBackground Color-eval="win11Colors.StrongStroke" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
+              <PartialView>
+                <att.WidthPageSize-bind>(cast double self.Position) / self.TotalSize</att.WidthPageSize-bind>
+                <SolidBackground Color-bind="self.VisuallyEnabled ? win11Colors.Accent : win11Colors.Disabled" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
+              </PartialView>
+            </Cell>
+          </Table>
+        </PartialView>
+        <PartialView ref.Name="handle" PreferredMinSize-bind="self.HandleSize" WidthPageSize="0">
+          <att.WidthRatio-bind>(cast double self.Position) / self.TotalSize</att.WidthRatio-bind>
+          <PartialView WidthRatio="0.5" WidthPageSize="0" HeightRatio="0.5" HeightPageSize="0" PreferredMinSize-bind="self.HandleSize">
+            <Button AutoFocus="false" ControlTemplate="win11skin::HTrackerHandleTemplate">
+              <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+            </Button>
+          </PartialView>
+        </PartialView>
       </ScrollTemplate>
     </Instance>
   </Instance>
 
   <Instance name="VTrackerTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win11skin::VTrackerTemplate" ref.Styles="res://Win11Skin/Style">
+      <ref.Members><![CDATA[prop HandleSize : Size = {} {}]]></ref.Members>
       <ref.Ctor>
         <![CDATA[
           {
@@ -438,57 +460,48 @@
           }
         ]]>
       </ref.Ctor>
-      <ScrollTemplate ref.Name="self" PreferredMinSize="x:16" MinSizeLimitation="LimitToElementAndChildren">
+      <ScrollTemplate ref.Name="self" PreferredMinSize="x:4 y:12" MinSizeLimitation="LimitToElementAndChildren">
+        <att.HandleSize-bind>GetTrackerThumbSize(self.CachedBounds, false)</att.HandleSize-bind>
         <CommonScrollBehavior ref.Name="behavior"/>
         <SolidBackground Color-eval="win11skin::win11Colors.Canvas"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
           <SolidBorder Color-eval="win11Colors.Foreground" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
-        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="LimitToElementAndChildren">
-          <att.Rows>
-            <CellOption>composeType:Absolute absolute:6</CellOption>
-            <CellOption>composeType:Percentage percentage:1.0</CellOption>
-            <CellOption>composeType:Absolute absolute:6</CellOption>
-          </att.Rows>
-          <att.Columns>
-            <CellOption>composeType:Percentage percentage:0.5</CellOption>
-            <CellOption>composeType:Absolute absolute:16</CellOption>
-            <CellOption>composeType:Percentage percentage:0.5</CellOption>
-          </att.Columns>
-          <Cell Site="row:1 column:1">
-            <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
-              <att.Rows>
-                <CellOption>composeType:Percentage percentage:1.0</CellOption>
-              </att.Rows>
-              <att.Columns>
-                <CellOption>composeType:Percentage percentage:0.5</CellOption>
-                <CellOption>composeType:Absolute absolute:4</CellOption>
-                <CellOption>composeType:Percentage percentage:0.5</CellOption>
-              </att.Columns>
-              <Cell Site="row:0 column:1">
-                <SolidBackground Color-eval="win11Colors.StrongStroke" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
-                <PartialView>
-                  <att.HeightPageSize-bind>(cast double self.Position) / self.TotalSize</att.HeightPageSize-bind>
-                  <SolidBackground Color-bind="self.VisuallyEnabled ? win11Colors.Accent : win11Colors.Disabled" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
-                </PartialView>
-              </Cell>
-            </Table>
-            <PartialView ref.Name="handle" PreferredMinSize="x:16 y:16" HeightPageSize="0">
-              <att.HeightRatio-bind>(cast double self.Position) / self.TotalSize</att.HeightRatio-bind>
-              <Button AutoFocus="false" ControlTemplate="win11skin::VTrackerHandleTemplate">
-                <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
-              </Button>
-            </PartialView>
-          </Cell>
-        </Table>
+        <PartialView>
+          <Table AlignmentToParent-bind="{left:0 top:(self.HandleSize.y / 2) right:0 bottom:(self.HandleSize.y - self.HandleSize.y / 2)}">
+            <att.Rows>
+              <CellOption>composeType:Percentage percentage:1.0</CellOption>
+            </att.Rows>
+            <att.Columns>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+              <CellOption>composeType:Absolute absolute:4</CellOption>
+              <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            </att.Columns>
+            <Cell Site="row:0 column:1">
+              <SolidBackground Color-eval="win11Colors.StrongStroke" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
+              <PartialView>
+                <att.HeightPageSize-bind>(cast double self.Position) / self.TotalSize</att.HeightPageSize-bind>
+                <SolidBackground Color-bind="self.VisuallyEnabled ? win11Colors.Accent : win11Colors.Disabled" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
+              </PartialView>
+            </Cell>
+          </Table>
+        </PartialView>
+        <PartialView ref.Name="handle" PreferredMinSize-bind="self.HandleSize" HeightPageSize="0">
+          <att.HeightRatio-bind>(cast double self.Position) / self.TotalSize</att.HeightRatio-bind>
+          <PartialView WidthRatio="0.5" WidthPageSize="0" HeightRatio="0.5" HeightPageSize="0" PreferredMinSize-bind="self.HandleSize">
+            <Button AutoFocus="false" ControlTemplate="win11skin::VTrackerHandleTemplate">
+              <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+            </Button>
+          </PartialView>
+        </PartialView>
       </ScrollTemplate>
     </Instance>
   </Instance>
 
   <Instance name="ProgressBarTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win11skin::ProgressBarTemplate" ref.Styles="res://Win11Skin/Style">
-      <ScrollTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:14" MinSizeLimitation="LimitToElementAndChildren">
-        <Table ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0">
+      <ScrollTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <Table MinSizeLimitation="NoLimit" AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <att.Rows>
             <_>composeType:Percentage percentage:1.0</_>
             <_>composeType:Absolute absolute:3</_>
@@ -506,6 +519,7 @@
             </PartialView>
           </Cell>
         </Table>
+        <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1"/>
       </ScrollTemplate>
     </Instance>
   </Instance>
@@ -523,7 +537,7 @@
           <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <att.HScrollTemplate>win11skin::HScrollTemplate</att.HScrollTemplate>
             <att.VScrollTemplate>win11skin::VScrollTemplate</att.VScrollTemplate>
-            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+            <att.DefaultScrollSize>20</att.DefaultScrollSize>
           </CommonScrollViewLook>
         </Bounds>
       </ScrollViewTemplate>

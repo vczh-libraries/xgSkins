@@ -2,7 +2,7 @@
 
 `CreateDefaultColorPackage()` supplies the light palette. `CreateDarkColorPackage()` supplies the dark palette. Both use the stock Windows blue accent. The canvas, content layer and transient flyout have distinct surface values. The hosted renderer paints solid equivalents for Mica and acrylic.
 
-Desktop control sizes follow the Win32 layout guide. Rounded corners, the accent underline and layered surfaces use Windows 11 geometry and palette resources. [Win32 sizing](https://learn.microsoft.com/en-us/windows/win32/uxguide/vis-layout#recommended-sizing-and-spacing), [Windows 11 geometry](https://learn.microsoft.com/en-us/windows/apps/design/signature-experiences/geometry), [WinUI theme resources](https://github.com/microsoft/microsoft-ui-xaml/blob/main/controls/dev/CommonStyles/Common_themeresources_any.xaml).
+Control sizes and content insets follow DarkSkin. Rounded corners, the accent underline and layered surfaces use Windows 11 geometry and palette resources. [Windows 11 geometry](https://learn.microsoft.com/en-us/windows/apps/design/signature-experiences/geometry), [WinUI theme resources](https://github.com/microsoft/microsoft-ui-xaml/blob/main/controls/dev/CommonStyles/Common_themeresources_any.xaml).
 
 ## Shared colors
 

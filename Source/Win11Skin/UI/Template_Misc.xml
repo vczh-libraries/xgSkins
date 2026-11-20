@@ -74,10 +74,10 @@
   <Instance name="DateButtonTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win11skin::DateButtonTemplate" xmlns:x="win11skin::*">
       <x:ItemBackgroundTemplate ref.Name="self" ShowIndicator="false">
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Selected and self.VisuallyEnabled">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Selected and self.VisuallyEnabled">
           <SolidBorder Color-eval="win11Colors.Accent" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Focused">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
           <SolidBorder Color-eval="win11Colors.Foreground" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
       </x:ItemBackgroundTemplate>

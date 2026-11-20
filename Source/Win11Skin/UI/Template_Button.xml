@@ -98,7 +98,7 @@
           AddAnimation(lastAnimation);
         }
       ]]></ref.Members>
-      <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:23" MinSizeLimitation="LimitToElementAndChildren">
+      <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -113,7 +113,7 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Focused">
           <SolidBorder Color-eval="win11Colors.Foreground" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:6 top:2 right:6 bottom:2">
+        <Bounds AlignmentToParent="left:4 top:2 right:4 bottom:2">
           <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
           <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
         </Bounds>
@@ -134,14 +134,14 @@
           AddAnimation(lastAnimation);
         }
       ]]></ref.Members>
-      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:17" MinSizeLimitation="LimitToElementAndChildren">
+      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
         <ev.SelectedChanged-eval>self.UpdateColors();</ev.SelectedChanged-eval>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
-            <CellOption>composeType:Absolute absolute:13</CellOption>
+            <CellOption>composeType:Absolute absolute:17</CellOption>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Rows>
           <att.Columns>
@@ -150,7 +150,7 @@
           </att.Columns>
 
           <Cell Site="row:1 column:0">
-            <Bounds AlignmentToParent="left:2 top:0 right:2 bottom:0">
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
               <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
               <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
                 <SolidBackground Color-bind="self.animationBuilder.Current.Face" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/>
@@ -162,11 +162,11 @@
           </Cell>
 
           <Cell Site="row:0 column:1 rowSpan:3 columnSpan:1">
-            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+            <Bounds AlignmentToParent="left:2 top:0 right:-1 bottom:0">
               <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
                 <SolidBorder Color-eval="win11Colors.Foreground" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
               </Bounds>
-              <Bounds AlignmentToParent="left:2 top:0 right:2 bottom:0">
+              <Bounds AlignmentToParent="left:4 top:2 right:4 bottom:2">
                 <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
               </Bounds>
@@ -190,14 +190,14 @@
           AddAnimation(lastAnimation);
         }
       ]]></ref.Members>
-      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:17" MinSizeLimitation="LimitToElementAndChildren">
+      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
         <ev.SelectedChanged-eval>self.UpdateColors();</ev.SelectedChanged-eval>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
-            <CellOption>composeType:Absolute absolute:13</CellOption>
+            <CellOption>composeType:Absolute absolute:17</CellOption>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Rows>
           <att.Columns>
@@ -206,23 +206,23 @@
           </att.Columns>
 
           <Cell Site="row:1 column:0">
-            <Bounds AlignmentToParent="left:2 top:0 right:2 bottom:0">
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
               <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:Ellipse"/>
               <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
                 <SolidBackground Color-bind="self.animationBuilder.Current.Face" Shape="shapeType:Ellipse"/>
               </Bounds>
             </Bounds>
-            <Bounds AlignmentToParent="left:6 top:4 right:6 bottom:4">
+            <Bounds AlignmentToParent="left:6 top:6 right:6 bottom:6">
               <SolidBackground Color-bind="self.animationBuilder.Current.Bullet" Shape="shapeType:Ellipse"/>
             </Bounds>
           </Cell>
 
           <Cell Site="row:0 column:1 rowSpan:3 columnSpan:1">
-            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+            <Bounds AlignmentToParent="left:2 top:0 right:-1 bottom:0">
               <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
                 <SolidBorder Color-eval="win11Colors.Foreground" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
               </Bounds>
-              <Bounds AlignmentToParent="left:2 top:0 right:2 bottom:0">
+              <Bounds AlignmentToParent="left:4 top:2 right:4 bottom:2">
                 <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
               </Bounds>

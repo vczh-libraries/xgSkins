@@ -11,7 +11,7 @@
         <SolidBackground Color-eval="win11Colors.Flyout" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder ref.Style="tooltipBorder" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
-          <Bounds ref.Name="container" AlignmentToParent="left:6 top:4 right:6 bottom:4"/>
+          <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1"/>
         </Bounds>
       </WindowTemplate>
     </Instance>

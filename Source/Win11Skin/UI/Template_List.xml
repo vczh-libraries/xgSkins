@@ -10,8 +10,10 @@
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <SolidBackground Color-bind="self.Colors.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="NoLimit">
+          <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+            <SolidBackground Color-bind="self.Colors.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
+          </Bounds>
         </Bounds>
         <SideAligned Direction="Left" MaxLength="3" Visible-bind="self.ShowIndicator and self.VisuallyEnabled and self.Selected">
           <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -36,10 +38,10 @@
         <att.RadioBulletTemplate>win11skin::RadioButtonTemplate</att.RadioBulletTemplate>
 
         <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
-          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <att.HScrollTemplate>win11skin::HScrollTemplate</att.HScrollTemplate>
             <att.VScrollTemplate>win11skin::VScrollTemplate</att.VScrollTemplate>
-            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+            <att.DefaultScrollSize>20</att.DefaultScrollSize>
           </CommonScrollViewLook>
         </x:EditorBorderTemplate>
       </TextListTemplate>
@@ -59,7 +61,7 @@
           AddAnimation(lastAnimation);
         }
       ]]></ref.Members>
-      <DateComboBoxTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:23" MinSizeLimitation="LimitToElementAndChildren">
+      <DateComboBoxTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.DatePickerTemplate>win11skin::DatePickerTemplate</att.DatePickerTemplate>
         <att.Colors-bind>GetButtonColors(self.VisuallyEnabled, self.SubMenuOpening ? ButtonState::Pressed : self.State)</att.Colors-bind>
         <ev.ColorsChanged-eval>self.UpdateColors();</ev.ColorsChanged-eval>
@@ -72,15 +74,15 @@
         <Bounds AlignmentToParent="left:4 top:-1 right:4 bottom:0" PreferredMinSize="y:1" Visible-bind="self.VisuallyEnabled and self.State != ButtonState::Pressed and not self.SubMenuOpening">
           <SolidBackground Color-eval="win11Colors.ButtonBottomStroke"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:2 top:2 right:16 bottom:2" Visible-bind="self.Focused"><SolidBorder Color-eval="win11Colors.Foreground" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/></Bounds>
+        <Bounds AlignmentToParent="left:2 top:2 right:11 bottom:2" Visible-bind="self.Focused"><SolidBorder Color-eval="win11Colors.Foreground" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/></Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <Bounds ref.Name="container" AlignmentToParent="left:3 top:1 right:18 bottom:1">
+          <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:11 bottom:1">
             <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.TextVisible">
               <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             </Bounds>
           </Bounds>
 
-          <Table AlignmentToParent="left:-1 top:1 right:3 bottom:1" PreferredMinSize="x:13 y:0">
+          <Table AlignmentToParent="left:-1 top:1 right:1 bottom:1" PreferredMinSize="x:9 y:3" MinSizeLimitation="NoLimit">
             <att.Rows>
               <CellOption>composeType:Percentage percentage:0.5</CellOption>
               <CellOption>composeType:Absolute absolute:6</CellOption>
@@ -150,7 +152,7 @@
               </Bounds>
             </Cell>
           </Table>
-          <Bounds AlignmentToParent="left:5 top:3 right:3 bottom:2">
+          <Bounds AlignmentToParent="left:8 top:6 right:5 bottom:5">
             <SolidLabel Color-bind="self.VisuallyEnabled ? win11Colors.Secondary : win11Colors.Disabled" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
           </Bounds>
         </Bounds>
@@ -173,10 +175,10 @@
         <att.ColumnHeaderTemplate>win11skin::ListViewColumnHeaderTemplate</att.ColumnHeaderTemplate>
 
         <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
-          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <att.HScrollTemplate>win11skin::HScrollTemplate</att.HScrollTemplate>
             <att.VScrollTemplate>win11skin::VScrollTemplate</att.VScrollTemplate>
-            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+            <att.DefaultScrollSize>20</att.DefaultScrollSize>
           </CommonScrollViewLook>
         </x:EditorBorderTemplate>
       </ListViewTemplate>
@@ -185,7 +187,7 @@
 
   <Instance name="ExpandingDecoratorTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win11skin::ExpandingDecoratorTemplate" ref.Styles="res://Win11Skin/Style">
-      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+      <SelectableButtonTemplate ref.Name="self" PreferredMinSize="x:7 y:9" MinSizeLimitation="NoLimit">
         <SolidLabel Text-bind='self.Selected ? "" : ""' Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:9"
           Color-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground" HorizontalAlignment="Center" VerticalAlignment="Center"/>
       </SelectableButtonTemplate>
@@ -202,10 +204,10 @@
         <att.ExpandingDecoratorTemplate>win11skin::ExpandingDecoratorTemplate</att.ExpandingDecoratorTemplate>
 
         <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
-          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <att.HScrollTemplate>win11skin::HScrollTemplate</att.HScrollTemplate>
             <att.VScrollTemplate>win11skin::VScrollTemplate</att.VScrollTemplate>
-            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+            <att.DefaultScrollSize>20</att.DefaultScrollSize>
           </CommonScrollViewLook>
         </x:EditorBorderTemplate>
       </TreeViewTemplate>
@@ -213,9 +215,9 @@
   </Instance>
   <Instance name="ListViewColumnDropDownTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win11skin::ListViewColumnDropDownTemplate" ref.Styles="res://Win11Skin/Style">
-      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:13 y:0">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:11 y:9">
         <SolidBackground Color-bind="self.VisuallyEnabled and (self.Selected or self.State != ButtonState::Normal) ? win11Colors.SubtleHovered.Face : win11Colors.Transparent" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
-        <Table AlignmentToParent="left:3 top:3 right:3 bottom:3">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
             <CellOption>composeType:MinSize</CellOption>

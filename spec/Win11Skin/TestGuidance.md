@@ -86,7 +86,7 @@ Run the full showcase in Direct2D hosted mode for both `Win11Skin` and `Win11Ski
 
 ## Desktop control measurements
 
-At 96 DPI with the default font, inspect commands and options on List / TextList and Window Manager. Command buttons, single-line editors and closed combos have 23-pixel minimum heights. Checkboxes and radios use 13-pixel artwork in a 17-pixel minimum row. Tabs use three pixels of vertical text padding. Increase the application font and confirm text can expand each control. The 16-pixel toolbar icons and larger ribbon commands retain their separate sizes. [Win32 control sizing](https://learn.microsoft.com/en-us/windows/win32/uxguide/vis-layout#recommended-sizing-and-spacing).
+At the same window size and font, switch between DarkSkin and both Windows 11 palettes. Compare the first and last checkbox in Window Manager and the buttons, combo boxes and editors on List / TextList and Control / TextBox. Their bounds and label positions relative to the window client area should match. Repeat with a larger application font to check that text and application content still determine control size.
 
 ## Observations in both modes
 
