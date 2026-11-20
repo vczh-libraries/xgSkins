@@ -95,6 +95,12 @@ changes; creating the skin requires the full showcase verification described in
 
 ## Required observations
 
+- On `Window Manager`, record the bounds of the seven window-option checkboxes
+  and of the color-theme radio buttons with `DarkSkin` active. Switch to
+  `Win8Skin` at the same client size and font. Each control should keep its
+  width, height and position relative to the window client area, including
+  the last row of each group.
+
 - Switch from DarkSkin with the showcase already populated. Open the view selector
   in `List / ListView`, then `File / Save as` in the toolstrip editor. Check the
   thin popup frame, the resting row background, and the hover or selected row.
@@ -109,7 +115,8 @@ changes; creating the skin requires the full showcase verification described in
   blue interaction states, gray scrollbars and solid green progress. Check keyboard focus and selected states as well
   as hover. Inspect the visible result, not only successful event dispatch.
 - In `Layout / Repeat`, move both trackers and scrollbar thumbs, use all four
-  16-pixel square arrow buttons, and check progress at zero, an intermediate value and full.
+  arrow buttons, and check progress at zero, an intermediate value and full.
+  Compare the scrollbar gutter and thumb travel at both endpoints with DarkSkin.
 - In both document editors, execute the SOP editing, formatting, context-menu,
   dialog, image, hyperlink and save/reload checks. Resize the ribbon until
   groups collapse; check large, small and icon presentations, split-button

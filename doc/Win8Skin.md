@@ -70,17 +70,17 @@ workaround are explained in
 
 ## Exact legacy data
 
-Existing controls derive their colors and geometry from
+The colors and artwork for existing controls come from
 [GacUI/Deprecated/Controls/Styles/Win8Styles](https://github.com/vczh-libraries/GacUI/tree/master/Deprecated/Controls/Styles/Win8Styles).
-Those files supply data; the old style-controller interfaces are not compiled
-into the new skin.
+Control bounds, text padding and scroll-view gutters follow DarkSkin so that
+applications can switch themes without moving controls within the window client area.
 
-| Source | Details retained |
+| Source | Design reference |
 | --- | --- |
 | [GacUI/Deprecated/Controls/Styles/Win8Styles/GuiWin8StylesCommon.cpp](https://github.com/vczh-libraries/GacUI/blob/master/Deprecated/Controls/Styles/Win8Styles/GuiWin8StylesCommon.cpp) | The 38 five-field button state packages, editor colors, text/selection colors, single button gradients, 13-pixel check/radio frames and solid radio mark. |
 | [GacUI/Deprecated/Controls/Styles/Win8Styles/GuiWin8ScrollableStyles.cpp](https://github.com/vczh-libraries/GacUI/blob/master/Deprecated/Controls/Styles/Win8Styles/GuiWin8ScrollableStyles.cpp) | Flat gray scrollbars, rectangular tracker channel, solid green progress, editor borders and gray general scroll-view surfaces. |
-| [GacUI/Deprecated/Controls/Styles/Win8Styles/GuiWin8ScrollableStyles.h](https://github.com/vczh-libraries/GacUI/blob/master/Deprecated/Controls/Styles/Win8Styles/GuiWin8ScrollableStyles.h) | Scrollbar thickness 16; tracker channel thickness 4, padding 6 and grip dimensions 16 by 10. |
-| [GacUI/Source/Controls/Styles/GuiCommonStyles.cpp](https://github.com/vczh-libraries/GacUI/blob/04743022c4e7e3e441cb67ac9177891c8f7cdf9f/Source/Controls/Styles/GuiCommonStyles.cpp) at `04743022` | The old `BuildStyle` uses `defaultSize` for arrow-button length, minimum thumb and end insets. Its `arrowSize` argument is unused, so Win8 arrow buttons are nominally 16 pixels square despite the separate `ArrowSize = 8` declaration. |
+| [GacUI/Deprecated/Controls/Styles/Win8Styles/GuiWin8ScrollableStyles.h](https://github.com/vczh-libraries/GacUI/blob/master/Deprecated/Controls/Styles/Win8Styles/GuiWin8ScrollableStyles.h) | The four-pixel tracker channel and its six-pixel end insets. |
+| [GacUI/Source/Controls/Styles/GuiCommonStyles.cpp](https://github.com/vczh-libraries/GacUI/blob/04743022c4e7e3e441cb67ac9177891c8f7cdf9f/Source/Controls/Styles/GuiCommonStyles.cpp) at `04743022` | The legacy `BuildStyle` assigned one size to the scrollbar arrows, end insets and minimum thumb. The current template uses DarkSkin’s 20-pixel scroll-view gutter and arrow length, with a 10-pixel minimum thumb. |
 | [GacUI/Deprecated/Controls/Styles/Win8Styles/GuiWin8ControlStyles.cpp](https://github.com/vczh-libraries/GacUI/blob/master/Deprecated/Controls/Styles/Win8Styles/GuiWin8ControlStyles.cpp) | Single group-box border, pale-yellow tooltip/keytip surfaces, group-caption transitions and immediate calendar-date item states. |
 | [GacUI/Deprecated/Controls/Styles/Win8Styles/GuiWin8MenuStyles.cpp](https://github.com/vczh-libraries/GacUI/blob/master/Deprecated/Controls/Styles/Win8Styles/GuiWin8MenuStyles.cpp) and [GacUI/Deprecated/Controls/Styles/Win8Styles/GuiWin8ToolstripStyles.cpp](https://github.com/vczh-libraries/GacUI/blob/master/Deprecated/Controls/Styles/Win8Styles/GuiWin8ToolstripStyles.cpp) | Flat menus, one-pixel gutter/toolbar separators, menu-bar edge colors, immediate menu states and animated toolbar faces. |
 | [GacUI/Deprecated/Controls/Styles/Win8Styles/GuiWin8ListStyles.cpp](https://github.com/vczh-libraries/GacUI/blob/master/Deprecated/Controls/Styles/Win8Styles/GuiWin8ListStyles.cpp) and [GacUI/Deprecated/Controls/Styles/Win8Styles/GuiWin8TabStyles.cpp](https://github.com/vczh-libraries/GacUI/blob/master/Deprecated/Controls/Styles/Win8Styles/GuiWin8TabStyles.cpp) | Immediate list/tab feedback and the distinct tab-hover gradient, which differs slightly from pushbutton hover. |
@@ -89,8 +89,8 @@ into the new skin.
 Two apparently older details are intentional. `Win8ListViewProvider` explicitly
 constructs the Win7 column-header style, including its dropdown, and
 [GacUI/Deprecated/Controls/Styles/GuiWin8Styles.cpp](https://github.com/vczh-libraries/GacUI/blob/master/Deprecated/Controls/Styles/GuiWin8Styles.cpp)
-uses the Win7 tree expander. Those measured header/tree colors and geometry are
-preserved. The old Win8 tooltip remains pale yellow. Pushbuttons and tabs also
+uses the Win7 tree expander. Win8Skin keeps their header, dropdown and expander colors.
+The old Win8 tooltip remains pale yellow. Pushbuttons and tabs also
 retain their measured subtle vertical gradients even though many other Win8
 surfaces are flat.
 

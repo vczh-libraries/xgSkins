@@ -4,11 +4,13 @@
       <ref.Members><![CDATA[prop Colors : ButtonColors = win8Colors.ItemNormal {}]]></ref.Members>
       <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? win8Colors.ItemDisabled : self.Selected or self.State == ButtonState::Pressed ? win8Colors.ItemSelected : self.State == ButtonState::Active ? win8Colors.ItemHovered : win8Colors.ItemNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBorder Color-bind="self.Colors.Border"/>
-        </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="NoLimit">
+          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+            <SolidBorder Color-bind="self.Colors.Border"/>
+          </Bounds>
+          <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+            <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
+          </Bounds>
         </Bounds>
         <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
       </SelectableButtonTemplate>
@@ -26,10 +28,10 @@
         <att.RadioBulletTemplate>win8skin::RadioButtonTemplate</att.RadioBulletTemplate>
 
         <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
-          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <att.HScrollTemplate>win8skin::HScrollTemplate</att.HScrollTemplate>
             <att.VScrollTemplate>win8skin::VScrollTemplate</att.VScrollTemplate>
-            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+            <att.DefaultScrollSize>20</att.DefaultScrollSize>
           </CommonScrollViewLook>
         </x:EditorBorderTemplate>
       </TextListTemplate>
@@ -59,15 +61,15 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:3 top:3 right:16 bottom:3" Visible-bind="self.Focused"><FocusRectangle/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:11 bottom:1" Visible-bind="self.Focused"><FocusRectangle/></Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <Bounds ref.Name="container" AlignmentToParent="left:3 top:3 right:18 bottom:3">
+          <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:11 bottom:1">
             <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.TextVisible">
               <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             </Bounds>
           </Bounds>
 
-          <Table AlignmentToParent="left:-1 top:1 right:3 bottom:1" PreferredMinSize="x:13 y:0">
+          <Table AlignmentToParent="left:-1 top:1 right:1 bottom:1" PreferredMinSize="x:9 y:0">
             <att.Rows>
               <CellOption>composeType:Percentage percentage:0.5</CellOption>
               <CellOption>composeType:Absolute absolute:3</CellOption>
@@ -163,10 +165,10 @@
         <att.ColumnHeaderTemplate>win8skin::ListViewColumnHeaderTemplate</att.ColumnHeaderTemplate>
 
         <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
-          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <att.HScrollTemplate>win8skin::HScrollTemplate</att.HScrollTemplate>
             <att.VScrollTemplate>win8skin::VScrollTemplate</att.VScrollTemplate>
-            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+            <att.DefaultScrollSize>20</att.DefaultScrollSize>
           </CommonScrollViewLook>
         </x:EditorBorderTemplate>
       </ListViewTemplate>
@@ -179,27 +181,27 @@
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
-            <CellOption>composeType:Absolute absolute:11</CellOption>
+            <CellOption>composeType:Absolute absolute:9</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
           </att.Rows>
           <att.Columns>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
-            <CellOption>composeType:Absolute absolute:6</CellOption>
+            <CellOption>composeType:Absolute absolute:7</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
           </att.Columns>
 
           <Cell Site="row:1 column:1">
             <Bounds Visible-bind="not self.Selected">
-              <Polygon Size="x:6 y:11" BorderColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? win8Colors.TreeArrowBorderHovered : self.Selected ? win8Colors.TreeArrowBorderExpanded : win8Colors.TreeArrowBorder" BackgroundColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? win8Colors.TreeArrowBackgroundHovered : self.Selected ? win8Colors.TreeArrowBackgroundExpanded : win8Colors.TreeArrowBackground">
+              <Polygon Size="x:7 y:9" BorderColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? win8Colors.TreeArrowBorderHovered : self.Selected ? win8Colors.TreeArrowBorderExpanded : win8Colors.TreeArrowBorder" BackgroundColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? win8Colors.TreeArrowBackgroundHovered : self.Selected ? win8Colors.TreeArrowBackgroundExpanded : win8Colors.TreeArrowBackground">
                 <att.Points>
-                  <Point>x:0 y:1</Point>
-                  <Point>x:4 y:5</Point>
-                  <Point>x:0 y:9</Point>
+                  <Point>x:1 y:0</Point>
+                  <Point>x:5 y:4</Point>
+                  <Point>x:1 y:8</Point>
                 </att.Points>
               </Polygon>
             </Bounds>
             <Bounds Visible-bind="self.Selected">
-              <Polygon Size="x:6 y:11" BorderColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? win8Colors.TreeArrowBorderHovered : self.Selected ? win8Colors.TreeArrowBorderExpanded : win8Colors.TreeArrowBorder" BackgroundColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? win8Colors.TreeArrowBackgroundHovered : self.Selected ? win8Colors.TreeArrowBackgroundExpanded : win8Colors.TreeArrowBackground">
+              <Polygon Size="x:7 y:9" BorderColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? win8Colors.TreeArrowBorderHovered : self.Selected ? win8Colors.TreeArrowBorderExpanded : win8Colors.TreeArrowBorder" BackgroundColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? win8Colors.TreeArrowBackgroundHovered : self.Selected ? win8Colors.TreeArrowBackgroundExpanded : win8Colors.TreeArrowBackground">
                 <att.Points>
                   <Point>x:5 y:2</Point>
                   <Point>x:5 y:7</Point>
@@ -223,10 +225,10 @@
         <att.ExpandingDecoratorTemplate>win8skin::ExpandingDecoratorTemplate</att.ExpandingDecoratorTemplate>
 
         <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
-          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <att.HScrollTemplate>win8skin::HScrollTemplate</att.HScrollTemplate>
             <att.VScrollTemplate>win8skin::VScrollTemplate</att.VScrollTemplate>
-            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+            <att.DefaultScrollSize>20</att.DefaultScrollSize>
           </CommonScrollViewLook>
         </x:EditorBorderTemplate>
       </TreeViewTemplate>
@@ -234,7 +236,7 @@
   </Instance>
   <Instance name="ListViewColumnDropDownTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win8skin::ListViewColumnDropDownTemplate" ref.Styles="res://Win8Skin/Style">
-      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:13 y:0">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:11 y:9">
         <Bounds AlignmentToParent="left:0 top:1 right:-1 bottom:1" PreferredMinSize="x:1 y:0" Visible-bind="not self.VisuallyEnabled or (self.State == ButtonState::Normal and not self.Selected)">
           <GradientBackground Direction="Vertical" Color1-eval="win8Colors.HeaderSeparatorTop" Color2-eval="win8Colors.HeaderBackground"/>
         </Bounds>
@@ -244,7 +246,7 @@
             <GradientBackground Direction="Vertical" Color1-eval="win8Colors.HeaderDropDownTop" Color2-eval="win8Colors.HeaderDropDownBottom"/>
           </Bounds>
         </Bounds>
-        <Table AlignmentToParent="left:3 top:3 right:3 bottom:3">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
             <CellOption>composeType:MinSize</CellOption>
