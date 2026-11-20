@@ -83,3 +83,9 @@ For a startup smoke check, inspect the initial `List` / `TextList` page, click
 `Add 10 items`, and verify that both lists contain ten items. `Clear` should empty
 both lists. On `Window Manager`, the `Color Theme` group should contain exactly
 one selected option, `DarkSkin`, when first opened. Return to `List` to leave the initial page open.
+
+To check control sizes, open `Window Manager` with all theme choices visible and run
+[`scripts/Windows/verifyControlSizes.ps1`](../scripts/Windows/verifyControlSizes.ps1).
+It compares the control and label bounds of the seven checkboxes, the button below
+them, and the theme choices with `DarkSkin` after each switch. It measures from
+the main tab so each skin can keep its window frame.
