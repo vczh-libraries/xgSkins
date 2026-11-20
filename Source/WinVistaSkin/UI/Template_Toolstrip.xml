@@ -9,7 +9,7 @@
           <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-eval="vistaColors.MenuBar1" Color2-eval="vistaColors.MenuBar2"/></Cell>
           <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-eval="vistaColors.MenuBar3" Color2-eval="vistaColors.MenuBar4"/></Cell>
         </Table>
-        <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:1"/>
+        <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2"/>
       </ControlTemplate>
     </Instance>
   </Instance>
@@ -38,7 +38,7 @@
         <SolidBackground Color-eval="vistaColors.MenuInner"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder ref.Style="toolstripMenuBorder"/>
-          <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground ref.Style="toolstripMenuBackground"/></Bounds>
+          <Bounds ref.Name="container" AlignmentToParent="left:3 top:3 right:3 bottom:3"><SolidBackground ref.Style="toolstripMenuBackground"/></Bounds>
         </Bounds>
       </MenuTemplate>
     </Instance>
@@ -59,7 +59,7 @@
     <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ToolstripSplitterInMenuTemplate" ref.Styles="res://WinVistaSkin/Style">
       <ControlTemplate MinSizeLimitation="LimitToElementAndChildren">
         <SolidBackground ref.Style="toolstripMenuBackground"/>
-        <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1" PreferredMinSize="x:2 y:0">
+        <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1" PreferredMinSize="x:1 y:0">
           <Gui3DSplitterElement Direction="Vertical" ref.Style="toolstripSplitter"/>
         </Bounds>
       </ControlTemplate>
@@ -68,9 +68,9 @@
 
   <Instance name="MenuSplitterTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="winvistaskin::MenuSplitterTemplate" ref.Styles="res://WinVistaSkin/Style">
-      <ControlTemplate MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:0 y:6">
+      <ControlTemplate MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="y:3">
         <SolidBackground ref.Style="toolstripMenuBackground"/>
-        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="NoLimit">
           <att.Rows><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Rows>
           <att.Columns>
             <CellOption>composeType:Absolute absolute:26</CellOption>
@@ -174,11 +174,11 @@
 
   <Instance name="ToolstripArrowButtonTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ToolstripSplitArrowTemplate" ref.Styles="res://WinVistaSkin/Style">
-      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:13 y:7">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:11 y:9">
         <Bounds AlignmentToParent="left:0 top:3 right:-1 bottom:3" PreferredMinSize="x:2 y:0" Visible-bind="self.VisuallyEnabled and self.State != ButtonState::Normal">
           <Gui3DSplitterElement Direction="Vertical" ref.Style="toolstripSplitter"/>
         </Bounds>
-        <Table AlignmentToParent="left:4 top:0 right:4 bottom:0">
+        <Table AlignmentToParent="left:3 top:1 right:3 bottom:1">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
             <CellOption>composeType:Absolute absolute:3</CellOption>
@@ -221,7 +221,7 @@
           <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/></Cell>
           <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G3" Color2-bind="self.animation.Current.G4"/></Cell>
         </Table>
-        <Bounds AlignmentToParent="left:1 top:1 right:13 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:11 bottom:1">
 
           <Bounds ref.Name ="container" AlignmentToParent="left:3 top:3 right:3 bottom:3">
             <ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/>
@@ -295,7 +295,7 @@
 
           <Cell Site="row:1 column:1 rowSpan:3">
             <SolidBackground Color-bind="self.Selected ? vistaColors.MenuItemButtonNormalActive.G2 : vistaColors.Transparent"/>
-            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.Selected and self.Image is null"><Polygon ref.Style="buttonPolygon" Size="x:10 y:10"><att.Points><Point>x:1 y:5</Point><Point>x:4 y:8</Point><Point>x:9 y:1</Point><Point>x:4 y:6</Point></att.Points></Polygon></Bounds>
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" MinSizeLimitation="NoLimit" Visible-bind="self.Selected and self.Image is null"><Polygon ref.Style="buttonPolygon" Size="x:10 y:10"><att.Points><Point>x:1 y:5</Point><Point>x:4 y:8</Point><Point>x:9 y:1</Point><Point>x:4 y:6</Point></att.Points></Polygon></Bounds>
             <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/></Bounds>
           </Cell>
           <Cell Site="row:0 column:2 rowSpan:5"><Bounds AlignmentToParent="left:0 top:0 right:6 bottom:0"><Gui3DSplitterElement Direction="Vertical" Color1-bind="self.Colors.G3" Color2-bind="self.Colors.G4"/></Bounds></Cell>

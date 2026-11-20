@@ -5,11 +5,12 @@ DarkSkin. Select `WinVistaSkin` under `Window Manager / Color Theme`; there is o
 WinVistaSkin entry and no alternate WinVistaSkin color theme. The application state must
 survive switching between the skins.
 
-At 96 DPI with the showcase font, check for a 23-pixel command button and
-closed combo box. The checkbox and radio marks are 13 pixels square in a
-17-pixel row. Check the marked and unmarked examples side by side on
-`List / TextList`. Larger fonts and embedded button content can expand the
-controls. [Microsoft desktop layout guidance](https://learn.microsoft.com/en-us/windows/win32/uxguide/vis-layout)
+Switch between DarkSkin and WinVistaSkin in Window Manager. Check that the
+frame-option checkboxes and the color-theme radio buttons keep their sizes
+and positions within the window’s client area. Compare the checkbox and
+radio rows and their label alignment on `List / TextList`. The marks are 13
+pixels square at 96 DPI. Command buttons and closed combo boxes should match
+DarkSkin when given the same font, text or embedded content.
 
 The paths below use visible tab captions. A modal or popup named after a page is
 opened from that page. They identify the minimum affected pages when a template

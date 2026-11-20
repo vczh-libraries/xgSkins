@@ -71,9 +71,9 @@
 
   <Instance name="DocumentTextBoxTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="winvistaskin::DocumentTextBoxTemplate" ref.Styles="res://WinVistaSkin/Style" xmlns:x="winvistaskin::*">
-      <DocumentLabelTemplate ref.Name="self" PreferredMinSize="y:23" BaselineDocument-eval="winvistaskin::CreateBaselineDocument()" CaretColor-eval="winvistaskin::vistaColors.TextNormal" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+      <DocumentLabelTemplate ref.Name="self" BaselineDocument-eval="winvistaskin::CreateBaselineDocument()" CaretColor-eval="winvistaskin::vistaColors.TextNormal" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
-          <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2"/>
+          <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1"/>
         </x:EditorBorderTemplate>
       </DocumentLabelTemplate>
     </Instance>
@@ -86,10 +86,10 @@
         <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
         <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
         <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
-          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <att.HScrollTemplate>winvistaskin::HScrollTemplate</att.HScrollTemplate>
             <att.VScrollTemplate>winvistaskin::VScrollTemplate</att.VScrollTemplate>
-            <att.DefaultScrollSize>17</att.DefaultScrollSize>
+            <att.DefaultScrollSize>20</att.DefaultScrollSize>
           </CommonScrollViewLook>
         </x:EditorBorderTemplate>
       </DocumentViewerTemplate>
