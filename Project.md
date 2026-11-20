@@ -55,6 +55,7 @@ Run `scripts/Windows/import.ps1`, which does:
 Run `scripts/Windows/syncProj.ps1`, which does:
 - Copy specified files to `Test` folder.
   - Perform any necessary minimal fixing on copied files.
+  - Limit these fixing on build breaks only, do not introduce feature changes or upgrades.
 - Run `<Release-repo>/Tools/GacBuild.ps1` on `Test/GacUI.xml`.
   - If it reports missing any executable, build `<Release-repo>/Tools/Executables/Executables.sln` in `Release\x64` followed by running `<Release-repo>/Tools/CopyExecutables.ps1`.
 
