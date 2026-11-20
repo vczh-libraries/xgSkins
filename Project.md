@@ -24,6 +24,7 @@ When working on this repo:
       - `## Root Cause`: the root cause of the upstream issue.
       - `## Proposal`: the proposal fix to upstream repos.
     - When it is more helpful you can add screenshots to a suggestion file, using the following naming convention: `<SUGGESTION-FILE>_<INDEX>.png`.
+- If any request happened to resolve or invalid suggestion files, even when it is not explicitly pointed out, you still need to remove or update affected suggestion files, to keep them fresh.
 
 When you are explicitly asked to fix upstream repos, follow the instruction:
 - Fix the repo and verify by running unit test.
