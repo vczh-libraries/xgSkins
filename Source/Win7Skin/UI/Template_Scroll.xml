@@ -345,7 +345,7 @@
           }
         ]]>
       </ref.Ctor>
-      <ScrollTemplate ref.Name="self" PreferredMinSize="y:18" MinSizeLimitation="LimitToElementAndChildren">
+      <ScrollTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <CommonScrollBehavior ref.Name="behavior"/>
 
         <SolidBackground Color-eval="win7skin::win7Colors.GeneralBackground"/>
@@ -359,18 +359,18 @@
           <SolidBorder Color-eval="win7skin::win7Colors.ScrollSink"/>
         </Bounds>
 
-        <SideAligned MaxLength="18" MaxRatio="0.5" Direction="Left">
+        <SideAligned MaxLength="20" MaxRatio="0.5" Direction="Left">
           <Button AutoFocus="false" ref.Name="buttonDecrease" ControlTemplate="win7skin::LeftScrollButtonTemplate">
             <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           </Button>
         </SideAligned>
-        <SideAligned MaxLength="18" MaxRatio="0.5" Direction="Right">
+        <SideAligned MaxLength="20" MaxRatio="0.5" Direction="Right">
           <Button AutoFocus="false" ref.Name="buttonIncrease" ControlTemplate="win7skin::RightScrollButtonTemplate">
             <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           </Button>
         </SideAligned>
-        <Bounds ref.Name="handleContainer" AlignmentToParent="left:18 top:0 right:18 bottom:0" MinSizeLimitation="NoLimit">
-          <PartialView ref.Name="handle" PreferredMinSize="x:18" Visible-bind="self.VisuallyEnabled">
+        <Bounds ref.Name="handleContainer" AlignmentToParent="left:20 top:0 right:20 bottom:0" MinSizeLimitation="NoLimit">
+          <PartialView ref.Name="handle" PreferredMinSize="x:10" Visible-bind="self.VisuallyEnabled">
             <att.WidthPageSize-bind>(cast double self.PageSize) / self.TotalSize</att.WidthPageSize-bind>
             <att.WidthRatio-bind>(cast double self.Position) / self.TotalSize</att.WidthRatio-bind>
             <Button AutoFocus="false" ControlTemplate="win7skin::HScrollHandleTemplate">
@@ -394,7 +394,7 @@
           }
         ]]>
       </ref.Ctor>
-      <ScrollTemplate ref.Name="self" PreferredMinSize="x:18" MinSizeLimitation="LimitToElementAndChildren">
+      <ScrollTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <CommonScrollBehavior ref.Name="behavior"/>
 
         <SolidBackground Color-eval="win7skin::win7Colors.GeneralBackground"/>
@@ -408,18 +408,18 @@
           <SolidBorder Color-eval="win7skin::win7Colors.ScrollSink"/>
         </Bounds>
 
-        <SideAligned MaxLength="18" MaxRatio="0.5" Direction="Top">
+        <SideAligned MaxLength="20" MaxRatio="0.5" Direction="Top">
           <Button AutoFocus="false" ref.Name="buttonDecrease" ControlTemplate="win7skin::TopScrollButtonTemplate">
             <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           </Button>
         </SideAligned>
-        <SideAligned MaxLength="18" MaxRatio="0.5" Direction="Bottom">
+        <SideAligned MaxLength="20" MaxRatio="0.5" Direction="Bottom">
           <Button AutoFocus="false" ref.Name="buttonIncrease" ControlTemplate="win7skin::BottomScrollButtonTemplate">
             <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           </Button>
         </SideAligned>
-        <Bounds ref.Name="handleContainer" AlignmentToParent="left:0 top:18 right:0 bottom:18" MinSizeLimitation="NoLimit">
-          <PartialView ref.Name="handle" PreferredMinSize="y:18" Visible-bind="self.VisuallyEnabled">
+        <Bounds ref.Name="handleContainer" AlignmentToParent="left:0 top:20 right:0 bottom:20" MinSizeLimitation="NoLimit">
+          <PartialView ref.Name="handle" PreferredMinSize="y:10" Visible-bind="self.VisuallyEnabled">
             <att.HeightPageSize-bind>(cast double self.PageSize) / self.TotalSize</att.HeightPageSize-bind>
             <att.HeightRatio-bind>(cast double self.Position) / self.TotalSize</att.HeightRatio-bind>
             <Button AutoFocus="false" ControlTemplate="win7skin::VScrollHandleTemplate">
@@ -523,7 +523,7 @@
           }
         ]]>
       </ref.Ctor>
-      <ScrollTemplate ref.Name="self" PreferredMinSize="y:21" MinSizeLimitation="LimitToElementAndChildren">
+      <ScrollTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <CommonScrollBehavior ref.Name="behavior"/>
 
         <SolidBackground Color-eval="win7skin::win7Colors.GeneralBackground"/>
@@ -532,7 +532,7 @@
             <FocusRectangle/>
           </Bounds>
 
-          <Table AlignmentToParent="left:8 top:0 right:8 bottom:0">
+          <Table AlignmentToParent="left:6 top:0 right:6 bottom:0">
             <att.Rows>
               <CellOption>composeType:Percentage percentage:0.5</CellOption>
               <CellOption>composeType:Absolute absolute:4</CellOption>
@@ -547,10 +547,10 @@
             </Cell>
           </Table>
 
-          <PartialView ref.Name="handle" PreferredMinSize="x:10 y:21" WidthPageSize="0">
+          <PartialView ref.Name="handle" PreferredMinSize="x:12 y:0" WidthPageSize="0">
             <att.WidthRatio-bind>(cast double self.Position) / self.TotalSize</att.WidthRatio-bind>
             <Button AutoFocus="false" ControlTemplate="win7skin::HTrackerHandleTemplate">
-              <att.BoundsComposition-set  AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+              <att.BoundsComposition-set  AlignmentToParent="left:1 top:1 right:1 bottom:1"/>
             </Button>
           </PartialView>
         </Bounds>
@@ -568,7 +568,7 @@
           }
         ]]>
       </ref.Ctor>
-      <ScrollTemplate ref.Name="self" PreferredMinSize="x:21" MinSizeLimitation="LimitToElementAndChildren">
+      <ScrollTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <CommonScrollBehavior ref.Name="behavior"/>
 
         <SolidBackground Color-eval="win7skin::win7Colors.GeneralBackground"/>
@@ -577,7 +577,7 @@
             <FocusRectangle/>
           </Bounds>
 
-          <Table AlignmentToParent="left:0 top:8 right:0 bottom:8">
+          <Table AlignmentToParent="left:0 top:6 right:0 bottom:6">
             <att.Rows>
               <CellOption>composeType:Percentage percentage:1.0</CellOption>
             </att.Rows>
@@ -592,10 +592,10 @@
             </Cell>
           </Table>
 
-          <PartialView ref.Name="handle" PreferredMinSize="x:21 y:10" HeightPageSize="0">
+          <PartialView ref.Name="handle" PreferredMinSize="x:0 y:12" HeightPageSize="0">
             <att.HeightRatio-bind>(cast double self.Position) / self.TotalSize</att.HeightRatio-bind>
             <Button AutoFocus="false" ControlTemplate="win7skin::VTrackerHandleTemplate">
-              <att.BoundsComposition-set  AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+              <att.BoundsComposition-set  AlignmentToParent="left:1 top:1 right:1 bottom:1"/>
             </Button>
           </PartialView>
         </Bounds>
@@ -605,31 +605,27 @@
 
   <Instance name="ProgressBarTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win7skin::ProgressBarTemplate" ref.Styles="res://Win7Skin/Style">
-      <ScrollTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:14" MinSizeLimitation="LimitToElementAndChildren">
+      <ScrollTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:-1" PreferredMinSize="y:6">
+          <GradientBackground Direction="Vertical" Color1-eval="win7skin::win7Colors.ProgressTrack3" Color2-eval="win7skin::win7Colors.ProgressTrack4"/>
+          <SideAligned Direction="Top" MaxLength="6" MaxRatio="0.5">
             <GradientBackground Direction="Vertical" Color1-eval="win7skin::win7Colors.ProgressTrack1" Color2-eval="win7skin::win7Colors.ProgressTrack2"/>
-          </Bounds>
-          <Bounds AlignmentToParent="left:0 top:6 right:0 bottom:6">
-            <GradientBackground Direction="Vertical" Color1-eval="win7skin::win7Colors.ProgressTrack3" Color2-eval="win7skin::win7Colors.ProgressTrack4"/>
-          </Bounds>
-          <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="y:6">
+          </SideAligned>
+          <SideAligned Direction="Bottom" MaxLength="6" MaxRatio="0.5">
             <GradientBackground Direction="Vertical" Color1-eval="win7skin::win7Colors.ProgressTrack4" Color2-eval="win7skin::win7Colors.ProgressTrack5"/>
-          </Bounds>
+          </SideAligned>
           <PartialView>
             <att.WidthPageSize-bind><![CDATA[
               self.Position >= self.TotalSize - self.PageSize ? 1.0 :
               (cast double self.Position) / (self.TotalSize - self.PageSize)
             ]]></att.WidthPageSize-bind>
-            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:-1" PreferredMinSize="y:6">
+            <GradientBackground Direction="Vertical" Color1-eval="win7skin::win7Colors.ProgressFill3" Color2-eval="win7skin::win7Colors.ProgressFill4"/>
+            <SideAligned Direction="Top" MaxLength="6" MaxRatio="0.5">
               <GradientBackground Direction="Vertical" Color1-eval="win7skin::win7Colors.ProgressFill1" Color2-eval="win7skin::win7Colors.ProgressFill2"/>
-            </Bounds>
-            <Bounds AlignmentToParent="left:0 top:6 right:0 bottom:6">
-              <GradientBackground Direction="Vertical" Color1-eval="win7skin::win7Colors.ProgressFill3" Color2-eval="win7skin::win7Colors.ProgressFill4"/>
-            </Bounds>
-            <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="y:6">
+            </SideAligned>
+            <SideAligned Direction="Bottom" MaxLength="6" MaxRatio="0.5">
               <GradientBackground Direction="Vertical" Color1-eval="win7skin::win7Colors.ProgressFill4" Color2-eval="win7skin::win7Colors.ProgressFill5"/>
-            </Bounds>
+            </SideAligned>
           </PartialView>
         </Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -652,7 +648,7 @@
           <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <att.HScrollTemplate>win7skin::HScrollTemplate</att.HScrollTemplate>
             <att.VScrollTemplate>win7skin::VScrollTemplate</att.VScrollTemplate>
-            <att.DefaultScrollSize>18</att.DefaultScrollSize>
+            <att.DefaultScrollSize>20</att.DefaultScrollSize>
           </CommonScrollViewLook>
         </Bounds>
       </ScrollViewTemplate>

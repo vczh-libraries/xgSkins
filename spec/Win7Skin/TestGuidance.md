@@ -94,6 +94,12 @@ changes; creating the skin requires the full showcase verification described in
 
 ## Required observations
 
+- On `Window Manager`, record the bounds of the seven window-option checkboxes
+  and of the color-theme radio buttons with `DarkSkin` active. Switch to
+  `Win7Skin` at the same client size and font. Each control should keep its
+  width, height and position relative to the window client area, including
+  the last row of each group.
+
 - Switch from DarkSkin with the showcase already populated. Open the view selector
   in `List / ListView`, then `File / Save as` in the toolstrip editor. Check the
   thin popup frame, the resting row background, and the hover or selected row.

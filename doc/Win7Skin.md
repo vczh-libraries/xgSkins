@@ -86,8 +86,9 @@ appearance and verification scope.
 
 The primary reference for existing controls is
 [GacUI/Deprecated/Controls/Styles/Win7Styles](https://github.com/vczh-libraries/GacUI/tree/master/Deprecated/Controls/Styles/Win7Styles).
-Those sources contain measured colors and the original composition geometry;
-they are used as data, not compiled as style-controller implementations.
+Those sources supply the colors and artwork. Control bounds, text padding and
+scroll-view gutters follow DarkSkin so that applications can switch themes
+without moving controls within the window client area.
 
 | Reference | Information carried into the templates |
 | --- | --- |
