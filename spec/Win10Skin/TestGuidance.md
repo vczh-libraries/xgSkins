@@ -86,7 +86,7 @@ In a fresh FullControlTest /D2D /Hosted session open Window Manager and choose W
 
 ## Visual and interaction checks
 
-- At 96 DPI, compare the default font in Window Manager, List / TextList and Control / TextBox. Unconstrained pushbuttons, read-only combos and single-line editors have a 23-unit minimum height. Checkbox and radio symbols are 13 by 13 within 17-unit rows. Larger fonts and application content can grow the controls. [Microsoft desktop control sizing](https://learn.microsoft.com/en-us/windows/win32/uxguide/vis-layout)
+- At the same window size and font, switch between DarkSkin and both Windows 10 palettes. Compare the first and last checkbox in Window Manager and the buttons, combo boxes and editors on List / TextList and Control / TextBox. Their bounds and label positions relative to the window client area should match. Repeat with a larger application font to check that text and application content still determine control size.
 - Compare the property-sheet and ribbon tabs, column headers, toolbars and open menus. A selected tab joins the page. Header labels, shortcut text, menu icons and submenu arrows must remain visible when the window narrows.
 - Switch from light to dark with an editor, a checked radio button and a selected list row already populated. Confirm the selection, edited text and scroll position survive in both directions. Open a second popup after switching to exercise newly created templates.
 - In Window Manager inspect the left-aligned title, minimize, maximize/restore and close symbols. Hover and press close, then move off it. Its face returns to the caption color. Check chrome and inactive text while a modal is active.

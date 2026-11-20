@@ -680,8 +680,8 @@
   <Instance name="RibbonSplitterTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win10skin::RibbonSplitterTemplate" ref.Styles="res://Win10Skin/Style">
       <ControlTemplate MinSizeLimitation="LimitToElementAndChildren">
-        <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1" PreferredMinSize="x:1 y:0">
-          <SolidBackground Color-eval="win10Colors.Divider"/>
+        <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1">
+          <Gui3DSplitterElement Direction="Vertical" Color1-eval="win10Colors.Divider" Color2-eval="win10Colors.Transparent"/>
         </Bounds>
       </ControlTemplate>
     </Instance>

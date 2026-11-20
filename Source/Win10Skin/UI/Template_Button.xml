@@ -36,7 +36,7 @@
       <ref.Members><![CDATA[
         prop Colors : StateColors = win10Colors.ButtonNormal {}
       ]]></ref.Members>
-      <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:23" MinSizeLimitation="LimitToElementAndChildren">
+      <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>GetButtonColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <SolidBackground Color-bind="self.Focused and self.VisuallyEnabled and self.State == ButtonState::Normal ? win10Colors.Accent : self.Colors.Border"/>
@@ -47,7 +47,7 @@
         <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3" Visible-bind="self.Focused">
           <FocusRectangle/>
         </Bounds>
-        <Bounds AlignmentToParent="left:5 top:3 right:5 bottom:3">
+        <Bounds AlignmentToParent="left:4 top:2 right:4 bottom:2">
           <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
           <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
         </Bounds>
@@ -60,12 +60,12 @@
       <ref.Members><![CDATA[
         prop Colors : StateColors = win10Colors.InputNormal {}
       ]]></ref.Members>
-      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:17" MinSizeLimitation="LimitToElementAndChildren">
+      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>GetSelectionColors(self.VisuallyEnabled, self.State, self.Selected, false)</att.Colors-bind>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
-            <CellOption>composeType:Absolute absolute:13</CellOption>
+            <CellOption>composeType:Absolute absolute:17</CellOption>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Rows>
           <att.Columns>
@@ -74,7 +74,7 @@
           </att.Columns>
 
           <Cell Site="row:1 column:0">
-            <Bounds AlignmentToParent="left:2 top:0 right:2 bottom:0">
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
               <SolidBackground Color-bind="self.Colors.Fill"/>
               <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
                 <SolidBorder Color-bind="self.Colors.Border"/>
@@ -86,11 +86,11 @@
           </Cell>
 
           <Cell Site="row:0 column:1 rowSpan:3 columnSpan:1">
-            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+            <Bounds AlignmentToParent="left:2 top:0 right:-1 bottom:0">
               <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
                 <FocusRectangle/>
               </Bounds>
-              <Bounds AlignmentToParent="left:2 top:0 right:2 bottom:0">
+              <Bounds AlignmentToParent="left:4 top:2 right:4 bottom:2">
                 <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
               </Bounds>
@@ -106,12 +106,12 @@
       <ref.Members><![CDATA[
         prop Colors : StateColors = win10Colors.InputNormal {}
       ]]></ref.Members>
-      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:17" MinSizeLimitation="LimitToElementAndChildren">
+      <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>GetSelectionColors(self.VisuallyEnabled, self.State, self.Selected, true)</att.Colors-bind>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
-            <CellOption>composeType:Absolute absolute:13</CellOption>
+            <CellOption>composeType:Absolute absolute:17</CellOption>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Rows>
           <att.Columns>
@@ -120,7 +120,7 @@
           </att.Columns>
 
           <Cell Site="row:1 column:0">
-            <Bounds AlignmentToParent="left:2 top:0 right:2 bottom:0">
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
               <SolidBackground Color-bind="self.Colors.Fill" Shape="shapeType:Ellipse"/>
               <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
                 <SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:Ellipse"/>
@@ -132,11 +132,11 @@
           </Cell>
 
           <Cell Site="row:0 column:1 rowSpan:3 columnSpan:1">
-            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+            <Bounds AlignmentToParent="left:2 top:0 right:-1 bottom:0">
               <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
                 <FocusRectangle/>
               </Bounds>
-              <Bounds AlignmentToParent="left:2 top:0 right:2 bottom:0">
+              <Bounds AlignmentToParent="left:4 top:2 right:4 bottom:2">
                 <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
                 <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
               </Bounds>

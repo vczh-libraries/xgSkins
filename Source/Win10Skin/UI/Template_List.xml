@@ -7,8 +7,10 @@
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder Color-bind="self.Colors.Border"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <SolidBackground Color-bind="self.Colors.Fill"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="NoLimit">
+          <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+            <SolidBackground Color-bind="self.Colors.Fill"/>
+          </Bounds>
         </Bounds>
         <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
       </SelectableButtonTemplate>
@@ -26,10 +28,10 @@
         <att.RadioBulletTemplate>win10skin::RadioButtonTemplate</att.RadioBulletTemplate>
 
         <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
-          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <att.HScrollTemplate>win10skin::HScrollTemplate</att.HScrollTemplate>
             <att.VScrollTemplate>win10skin::VScrollTemplate</att.VScrollTemplate>
-            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+            <att.DefaultScrollSize>20</att.DefaultScrollSize>
           </CommonScrollViewLook>
         </x:EditorBorderTemplate>
       </TextListTemplate>
@@ -41,7 +43,7 @@
       <ref.Members><![CDATA[
         prop Colors : StateColors = win10Colors.InputNormal {}
       ]]></ref.Members>
-      <DateComboBoxTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="y:23" MinSizeLimitation="LimitToElementAndChildren">
+      <DateComboBoxTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.DatePickerTemplate>win10skin::DatePickerTemplate</att.DatePickerTemplate>
         <att.Colors-bind>self.SubMenuOpening and self.VisuallyEnabled ? win10Colors.ButtonPressed : GetButtonColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -50,16 +52,16 @@
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <SolidBackground Color-bind="self.Colors.Fill"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:3 top:3 right:16 bottom:3" Visible-bind="self.Focused"><FocusRectangle/></Bounds>
+        <Bounds AlignmentToParent="left:3 top:3 right:11 bottom:3" Visible-bind="self.Focused"><FocusRectangle/></Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <Bounds ref.Name="container" AlignmentToParent="left:3 top:2 right:17 bottom:2">
-            <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.TextVisible">
+          <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:11 bottom:1">
+            <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.TextVisible">
               <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             </Bounds>
           </Bounds>
 
-          <Bounds AlignmentToParent="left:-1 top:0 right:4 bottom:0" PreferredMinSize="x:10">
-            <SolidLabel Text="" Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:10" Color-bind="self.Colors.Text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <Bounds AlignmentToParent="left:-1 top:1 right:1 bottom:1" PreferredMinSize="x:9 y:3" MinSizeLimitation="NoLimit">
+            <SolidLabel Text="" Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:9" Color-bind="self.Colors.Text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
           </Bounds>
         </Bounds>
       </DateComboBoxTemplate>
@@ -106,7 +108,7 @@
               </Bounds>
             </Cell>
           </Table>
-          <Bounds AlignmentToParent="left:5 top:4 right:4 bottom:2">
+          <Bounds AlignmentToParent="left:8 top:6 right:5 bottom:5">
             <SolidLabel Color-bind="self.VisuallyEnabled ? win10Colors.SecondaryText : win10Colors.DisabledText" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
           </Bounds>
         </Bounds>
@@ -129,10 +131,10 @@
         <att.ColumnHeaderTemplate>win10skin::ListViewColumnHeaderTemplate</att.ColumnHeaderTemplate>
 
         <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
-          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <att.HScrollTemplate>win10skin::HScrollTemplate</att.HScrollTemplate>
             <att.VScrollTemplate>win10skin::VScrollTemplate</att.VScrollTemplate>
-            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+            <att.DefaultScrollSize>20</att.DefaultScrollSize>
           </CommonScrollViewLook>
         </x:EditorBorderTemplate>
       </ListViewTemplate>
@@ -142,8 +144,8 @@
   <Instance name="ExpandingDecoratorTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win10skin::ExpandingDecoratorTemplate" ref.Styles="res://Win10Skin/Style">
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
-        <Bounds PreferredMinSize="x:14 y:16">
-          <SolidLabel Text-bind="self.Selected ? &quot;&quot; : &quot;&quot;" Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:10" Color-bind="not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.SecondaryText : win10Colors.Text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:7 y:9" MinSizeLimitation="NoLimit">
+          <SolidLabel Text-bind="self.Selected ? &quot;&quot; : &quot;&quot;" Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:9" Color-bind="not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.SecondaryText : win10Colors.Text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </Bounds>
       </SelectableButtonTemplate>
     </Instance>
@@ -159,10 +161,10 @@
         <att.ExpandingDecoratorTemplate>win10skin::ExpandingDecoratorTemplate</att.ExpandingDecoratorTemplate>
 
         <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
-          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <att.HScrollTemplate>win10skin::HScrollTemplate</att.HScrollTemplate>
             <att.VScrollTemplate>win10skin::VScrollTemplate</att.VScrollTemplate>
-            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+            <att.DefaultScrollSize>20</att.DefaultScrollSize>
           </CommonScrollViewLook>
         </x:EditorBorderTemplate>
       </TreeViewTemplate>
@@ -170,9 +172,9 @@
   </Instance>
   <Instance name="ListViewColumnDropDownTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win10skin::ListViewColumnDropDownTemplate" ref.Styles="res://Win10Skin/Style">
-      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:13 y:0">
+      <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:11 y:9">
         <SolidBackground Color-bind="self.VisuallyEnabled and (self.State != ButtonState::Normal or self.Selected) ? win10Colors.CommandPressed.Fill : win10Colors.Transparent"/>
-        <Table AlignmentToParent="left:3 top:3 right:3 bottom:3">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
             <CellOption>composeType:MinSize</CellOption>

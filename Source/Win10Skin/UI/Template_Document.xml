@@ -25,9 +25,9 @@
 
   <Instance name="DocumentTextBoxTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win10skin::DocumentTextBoxTemplate" ref.Styles="res://Win10Skin/Style" xmlns:x="win10skin::*">
-      <DocumentLabelTemplate ref.Name="self" BaselineDocument-eval="win10skin::CreateBaselineDocument()" CaretColor-eval="win10skin::win10Colors.Text" ContainerComposition-ref="container" PreferredMinSize="y:23" MinSizeLimitation="LimitToElementAndChildren">
+      <DocumentLabelTemplate ref.Name="self" BaselineDocument-eval="win10skin::CreateBaselineDocument()" CaretColor-eval="win10skin::win10Colors.Text" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
-          <Bounds ref.Name="container" AlignmentToParent="left:3 top:2 right:3 bottom:2"/>
+          <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1"/>
         </x:EditorBorderTemplate>
       </DocumentLabelTemplate>
     </Instance>
@@ -40,10 +40,10 @@
         <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
         <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
         <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
-          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <att.HScrollTemplate>win10skin::HScrollTemplate</att.HScrollTemplate>
             <att.VScrollTemplate>win10skin::VScrollTemplate</att.VScrollTemplate>
-            <att.DefaultScrollSize>16</att.DefaultScrollSize>
+            <att.DefaultScrollSize>20</att.DefaultScrollSize>
           </CommonScrollViewLook>
         </x:EditorBorderTemplate>
       </DocumentViewerTemplate>
