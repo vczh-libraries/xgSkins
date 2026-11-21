@@ -11,12 +11,12 @@ timeout with a 15-second client deadline on the historical Debug build. In the
 original run the client timed out and the debugger recovered
 `HttpSendHttpResponse failed for responding UTF-8 body.` The exception identified the
 operation but omitted the Windows result.
-[GacUI response failure and debugger artifacts](../GacUI/AutomationResponseFailure.md).
+[Original exception and debugger artifacts](../../doc/WinXPSkinVerification.md#raw-clock-automation-response-failure).
 
 On November 21 the same XP-to-Dark test passed with patched GacUI and the
 original 15-second deadline. The VlppOS UTF-8 send wrapper used in that test
 still reports a fixed message when a send fails.
-[Patched-build verification](../GacUI/AutomationResponseFailure.md#patched-build-verification)
+[15-second replay and patched-build verification](../../doc/WinXPSkinVerification.md#raw-clock-skin-switch-replays)
 
 ## Workaround
 
@@ -30,7 +30,7 @@ every nonzero result to `CHECK_ERROR` with a fixed message. In three timed repla
 the client expired while the tree request was queued behind GacUI's theme
 refresh. The subsequent native send took less than a millisecond and returned
 64 (`ERROR_NETNAME_DELETED`) with zero bytes sent. The UI-thread measurements
-and the original incident's evidence limits are in the linked GacUI report.
+and the original incident's evidence limits are in the XP verification record.
 The original exception did not preserve its native result. The affected
 imported wrapper is at lines 5987–5990.
 [<VlppOS-repo>/Source/InterProcess/Windows/HttpServerApi.Windows.cpp](https://github.com/vczh-libraries/VlppOS/blob/master/Source/InterProcess/Windows/HttpServerApi.Windows.cpp)

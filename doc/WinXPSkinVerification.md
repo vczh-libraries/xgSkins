@@ -681,12 +681,10 @@ This proves the `SendResponseUtf8` failure reached the catch that deliberately
 terminates. No second-chance exception was reported before that native abort
 dialog; the handled exception and explicit termination account for this path.
 
-PID 27980's capture did not retain the native Windows error or sample the UI
-thread during the 15-second wait. On November 20 the historical build reproduced
-the timeout with UI Automation listeners active. The tree callback waited behind
-the theme refresh, and Windows returned error 64 when the service subsequently
-tried to send the reply. The per-stage timings and UI-thread stack samples are
-in the [GacUI response failure report](../suggestions/GacUI/AutomationResponseFailure.md#root-cause).
+The capture of PID 27980 began after the abort dialog opened. It preserved a
+149,324-character response and the send exception. The original UI-thread stack
+during the delay, the active UI Automation listeners and the native Windows error
+are unknown. Later replays measured all three. [Skin-switch replays](#raw-clock-skin-switch-replays)
 
 After capturing and revalidating the exact Abort button, one bounded posted
 `BM_CLICK` activated it. The dialog disappeared within 0.6 seconds. CDB's
@@ -705,10 +703,8 @@ The recovered exception and stack remain in
 `%TEMP%/xgskins-winxp-progress-debugger.log`. The fresh application run uses
 bounded 60-second client requests for the remaining checks; that verification
 adjustment is not a fix for the response-send termination behavior.
-The source path, diagnostic gaps and proposed upstream failure policy are
-documented in
-[the GacUI response-send failure](../suggestions/GacUI/AutomationResponseFailure.md) and
-[the missing VlppOS error code](../suggestions/VlppOS/HttpResponseErrorCode.md).
+VlppOS still omits the native Windows result when the response send fails.
+[VlppOS diagnostic issue](../suggestions/VlppOS/HttpResponseErrorCode.md)
 
 Fresh process 25932 subsequently passed 160 Raw Clock assertions with zero
 unavailable dialog completions: navigation/data/timer/bounds, raw-element
@@ -720,6 +716,55 @@ is `%TEMP%/xgskins-winxp-final-RawClock.log`, with artifacts in
 `RawClock-20261118-192620-440`. This separate successful run does not establish
 the original send failure's cause, prove the client adjustment fixes it, or
 erase the failed process and exit code 3.
+
+### Raw Clock skin-switch replays
+
+On November 20, three Debug x64 replays of xgSkins `5c8a5e4` exceeded the
+15-second deadline while Windows UI Automation subtree listeners were active.
+The HTTP worker accepted the `Controls` GET, then queued the tree dump on the
+UI thread behind the XP-to-Dark theme refresh. As the old templates were removed,
+`WindowsUIAutomationContext::RetireSubtree` repeatedly scanned the bounds hooks
+and automation nodes. In the 37.32-second refresh, 83 of 97 UI-thread samples
+were in that function. Across the three replays, the request spent 20.809–37.341
+seconds in the UI queue and 8.45–39.55 milliseconds generating the tree. After
+the client timed out, each native send returned error 64 (`ERROR_NETNAME_DELETED`)
+in less than a millisecond with zero bytes sent. On the same process, five
+switches without the passive listener queued for 2.18–2.83 seconds.
+[Historical retirement code](https://github.com/vczh-libraries/GacUI/blob/1b5ef89f6/Source/PlatformProviders/Windows/UIAutomation/WindowsUIAutomationState.Windows.cpp)
+· [Archived request timings, stacks and artifacts](https://github.com/vczh-libraries/xgSkins/blob/87ef11f1c3a8fbe65aab422228059c8535a75525/suggestions/GacUI/AutomationResponseFailure.md#root-cause)
+
+On November 21, we rebuilt the same showcase with GacUI `2db1e77f9`. The fix
+suspends UI Automation observation during a window's template rebuild and
+reports bounds changes through the graphics host. Both builds ran at 1250 × 900
+with the same document loaded in both editors and three modeless windows
+opened and closed. A separate passive listener subscribed to structure,
+property, text and text-selection changes. Each deadline covered the complete
+HTTP response.
+[UI Automation during theme rebuilds](https://github.com/vczh-libraries/GacUI/commit/f7a05f6ecb5903d21af29894e6bb85aceae915d0)
+· [Graphics-host bounds notification](https://github.com/vczh-libraries/GacUI/commit/2db1e77f933194a685f7491da3f70f94f5693972)
+
+| Build and listener | Completed switches | Completed `Controls` GETs | Longest request |
+| --- | ---: | ---: | ---: |
+| Original, passive listener | 0 of 1 | 22 of 23 | Timed out at 15 s |
+| Patched, no passive listener | 6 of 6 | 165 of 165 | 1.176 s |
+| Patched, passive listener | 10 of 10 | 752 of 752 | 1.506 s |
+
+On all ten subscribed switches, the first GET returned the previous palette.
+On the five XP-to-Dark switches, the next GET returned the 149,324-byte
+rebuilt tree in 1.302–1.416 seconds. Raw Clock reopened and ticked, the
+listener received 568 structure and 32 property events, and the process
+exited with code 0. The complete comparison and client logs are indexed in the
+[archived patched-build verification](https://github.com/vczh-libraries/xgSkins/blob/87ef11f1c3a8fbe65aab422228059c8535a75525/suggestions/GacUI/AutomationResponseFailure.md#patched-build-verification).
+
+We repeated the test on the current xgSkins showcase after importing the
+published GacUI package. With the four UI Automation handlers active, all
+438 `Controls` GETs completed within 15 seconds across three XP → Dark → XP
+round trips. The slowest complete response took 1.591 seconds. The client
+verified each selected skin and a fresh Raw Clock tick after each switch.
+The listener recorded 400 structure events and 26 property events, and the
+showcase exited normally with code 0.
+[Release package](https://github.com/vczh-libraries/Release/commit/3d518383762cec74bba3dac19f8335c9598d38cf)
+· [xgSkins import](https://github.com/vczh-libraries/xgSkins/commit/c2a1b406ac479c8e4719344344d2aba52867aca8)
 
 ## Synthetic touch continuation
 
