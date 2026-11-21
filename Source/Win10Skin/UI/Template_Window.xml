@@ -107,7 +107,14 @@
                 <att.Visible-bind>self.MinimizedBox or self.MaximizedBox</att.Visible-bind>
                 <att.ContainerComposition-set>
                   <BoundsComposition AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:46 y:32" MinSizeLimitation="LimitToElement">
-                    <SolidLabel Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:10" Text="" Color-bind="self.VisuallyEnabled and self.Activated and self.MinimizedBox ? win10Colors.Text : win10Colors.DisabledText" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Polygon Size="x:10 y:10" BorderColor-bind="GetGlyphOutline(self.VisuallyEnabled and self.Activated and self.MinimizedBox ? win10Colors.Text : win10Colors.DisabledText)" BackgroundColor-bind="self.VisuallyEnabled and self.Activated and self.MinimizedBox ? win10Colors.Text : win10Colors.DisabledText">
+                      <att.Points>
+                        <Point>x:0 y:4</Point>
+                        <Point>x:10 y:4</Point>
+                        <Point>x:10 y:5</Point>
+                        <Point>x:0 y:5</Point>
+                      </att.Points>
+                    </Polygon>
                   </BoundsComposition>
                 </att.ContainerComposition-set>
               </Button>
@@ -120,10 +127,30 @@
                 <att.Visible-bind>self.MinimizedBox or self.MaximizedBox</att.Visible-bind>
                 <att.ContainerComposition-set>
                   <BoundsComposition Visible-bind="not self.Maximized" AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:46 y:32" MinSizeLimitation="LimitToElement">
-                    <SolidLabel Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:10" Text="" Color-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? win10Colors.Text : win10Colors.DisabledText" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Polygon Size="x:10 y:10" BorderColor-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? win10Colors.Text : win10Colors.DisabledText" BackgroundColor-eval="win10Colors.Transparent">
+                      <att.Points>
+                        <Point>x:0 y:0</Point>
+                        <Point>x:9 y:0</Point>
+                        <Point>x:9 y:9</Point>
+                        <Point>x:0 y:9</Point>
+                      </att.Points>
+                    </Polygon>
                   </BoundsComposition>
                   <BoundsComposition Visible-bind="self.Maximized" AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:46 y:32" MinSizeLimitation="LimitToElement">
-                    <SolidLabel Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:10" Text="" Color-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? win10Colors.Text : win10Colors.DisabledText" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Polygon Size="x:10 y:10" BorderColor-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? win10Colors.Text : win10Colors.DisabledText" BackgroundColor-eval="win10Colors.Transparent">
+                      <att.Points>
+                        <Point>x:7 y:2</Point>
+                        <Point>x:2 y:2</Point>
+                        <Point>x:2 y:0</Point>
+                        <Point>x:9 y:0</Point>
+                        <Point>x:9 y:7</Point>
+                        <Point>x:7 y:7</Point>
+                        <Point>x:7 y:2</Point>
+                        <Point>x:0 y:2</Point>
+                        <Point>x:0 y:9</Point>
+                        <Point>x:7 y:9</Point>
+                      </att.Points>
+                    </Polygon>
                   </BoundsComposition>
                 </att.ContainerComposition-set>
               </Button>
@@ -176,7 +203,22 @@
       <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="x:46 y:32" MinSizeLimitation="LimitToElementAndChildren">
         <SolidBackground Color-bind="not self.VisuallyEnabled ? win10Colors.Transparent : self.State == ButtonState::Pressed ? win10Colors.ClosePressed : self.State == ButtonState::Active ? win10Colors.CloseHovered : win10Colors.Transparent"/>
         <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidLabel Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:10" Text="" Color-bind="not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.Text : win10Colors.OnAccent" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <Polygon Size="x:10 y:10" BorderColor-bind="GetGlyphOutline(not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.Text : win10Colors.OnAccent)" BackgroundColor-bind="not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.Text : win10Colors.OnAccent">
+            <att.Points>
+              <Point>x:6 y:5</Point>
+              <Point>x:10 y:9</Point>
+              <Point>x:9 y:10</Point>
+              <Point>x:5 y:6</Point>
+              <Point>x:1 y:10</Point>
+              <Point>x:0 y:9</Point>
+              <Point>x:4 y:5</Point>
+              <Point>x:0 y:1</Point>
+              <Point>x:1 y:0</Point>
+              <Point>x:5 y:4</Point>
+              <Point>x:9 y:0</Point>
+              <Point>x:10 y:1</Point>
+            </att.Points>
+          </Polygon>
         </Bounds>
       </ButtonTemplate>
     </Instance>

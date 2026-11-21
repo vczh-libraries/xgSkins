@@ -61,6 +61,12 @@
         TabHovered : StateColors;
       }
 
+      /* GDI paints polygon pens using RGB even when the stroke is transparent. */
+      func GetGlyphOutline(fill : Color) : Color
+      {
+        return {r:fill.r; g:fill.g; b:fill.b; a:win10Colors.Transparent.a;};
+      }
+
       func CreateColorPackageInternal(dark : bool) : ColorPackage
       {
         var page = dark ? cast Color "#202020" : cast Color "#FFFFFF";

@@ -1,4 +1,4 @@
-﻿<Folder>
+<Folder>
   <Instance name="ItemBackgroundTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win11skin::ItemBackgroundTemplate" ref.Styles="res://Win11Skin/Style">
       <ref.Members><![CDATA[
@@ -190,8 +190,30 @@
   <Instance name="ExpandingDecoratorTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win11skin::ExpandingDecoratorTemplate" ref.Styles="res://Win11Skin/Style">
       <SelectableButtonTemplate ref.Name="self" PreferredMinSize="x:7 y:9" MinSizeLimitation="NoLimit">
-        <SolidLabel Text-bind='self.Selected ? "" : ""' Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:9"
-          Color-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Selected">
+          <Polygon Size="x:6 y:9" BorderColor-bind="GetGlyphOutline(not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground)" BackgroundColor-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground">
+            <att.Points>
+              <Point>x:0 y:0</Point>
+              <Point>x:1 y:0</Point>
+              <Point>x:5 y:4</Point>
+              <Point>x:1 y:8</Point>
+              <Point>x:0 y:8</Point>
+              <Point>x:4 y:4</Point>
+            </att.Points>
+          </Polygon>
+        </Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Selected">
+          <Polygon Size="x:7 y:5" BorderColor-bind="GetGlyphOutline(not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground)" BackgroundColor-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground">
+            <att.Points>
+              <Point>x:0 y:0</Point>
+              <Point>x:3 y:3</Point>
+              <Point>x:6 y:0</Point>
+              <Point>x:6 y:1</Point>
+              <Point>x:3 y:4</Point>
+              <Point>x:0 y:1</Point>
+            </att.Points>
+          </Polygon>
+        </Bounds>
       </SelectableButtonTemplate>
     </Instance>
   </Instance>

@@ -38,7 +38,16 @@
         <att.Colors-bind>GetScrollArrowColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
         <SolidBackground Color-bind="self.Colors.Fill"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidLabel Text="" Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:8" Color-bind="self.Colors.Text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <Polygon Size="x:6 y:9" BorderColor-bind="GetGlyphOutline(self.Colors.Text)" BackgroundColor-bind="self.Colors.Text">
+            <att.Points>
+              <Point>x:4 y:0</Point>
+              <Point>x:5 y:0</Point>
+              <Point>x:1 y:4</Point>
+              <Point>x:5 y:8</Point>
+              <Point>x:4 y:8</Point>
+              <Point>x:0 y:4</Point>
+            </att.Points>
+          </Polygon>
         </Bounds>
       </ButtonTemplate>
     </Instance>
@@ -53,7 +62,16 @@
         <att.Colors-bind>GetScrollArrowColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
         <SolidBackground Color-bind="self.Colors.Fill"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidLabel Text="" Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:8" Color-bind="self.Colors.Text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <Polygon Size="x:6 y:9" BorderColor-bind="GetGlyphOutline(self.Colors.Text)" BackgroundColor-bind="self.Colors.Text">
+            <att.Points>
+              <Point>x:0 y:0</Point>
+              <Point>x:1 y:0</Point>
+              <Point>x:5 y:4</Point>
+              <Point>x:1 y:8</Point>
+              <Point>x:0 y:8</Point>
+              <Point>x:4 y:4</Point>
+            </att.Points>
+          </Polygon>
         </Bounds>
       </ButtonTemplate>
     </Instance>
@@ -68,7 +86,16 @@
         <att.Colors-bind>GetScrollArrowColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
         <SolidBackground Color-bind="self.Colors.Fill"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidLabel Text="" Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:8" Color-bind="self.Colors.Text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <Polygon Size="x:9 y:6" BorderColor-bind="GetGlyphOutline(self.Colors.Text)" BackgroundColor-bind="self.Colors.Text">
+            <att.Points>
+              <Point>x:0 y:4</Point>
+              <Point>x:4 y:0</Point>
+              <Point>x:8 y:4</Point>
+              <Point>x:8 y:5</Point>
+              <Point>x:4 y:1</Point>
+              <Point>x:0 y:5</Point>
+            </att.Points>
+          </Polygon>
         </Bounds>
       </ButtonTemplate>
     </Instance>
@@ -83,7 +110,16 @@
         <att.Colors-bind>GetScrollArrowColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
         <SolidBackground Color-bind="self.Colors.Fill"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidLabel Text="" Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:8" Color-bind="self.Colors.Text" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <Polygon Size="x:9 y:6" BorderColor-bind="GetGlyphOutline(self.Colors.Text)" BackgroundColor-bind="self.Colors.Text">
+            <att.Points>
+              <Point>x:0 y:0</Point>
+              <Point>x:4 y:4</Point>
+              <Point>x:8 y:0</Point>
+              <Point>x:8 y:1</Point>
+              <Point>x:4 y:5</Point>
+              <Point>x:0 y:1</Point>
+            </att.Points>
+          </Polygon>
         </Bounds>
       </ButtonTemplate>
     </Instance>

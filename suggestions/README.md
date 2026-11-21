@@ -27,6 +27,7 @@
 
 ## GacUI
 
+- [A transparent polygon border can paint a black outline over a light glyph in GDI.](GacUI/TransparentPolygonPen.md)
 - [A hosted File menu can open at zero size or one pixel square, clipping rows that already have measured bounds.](GacUI/HostedPopupMeasurement.md)
 - [After a theme change, a hosted window can report its full size while its caption and tabs have zero-size bounds.](GacUI/ThemeRefreshLayoutReadiness.md)
 - [Restoring focus to a destroyed hosted window can crash FullControlTest.](GacUI/HostedWindowLastFocusedWindow.md)
@@ -50,4 +51,4 @@
 
 ## VlppParser2
 
-- [18 labels across Win8Skin, Win10Skin and Win11Skin depend on icon fonts for drawing. The inventory identifies each polygon replacement and records the XML numeric-reference limitation.](VlppParser2/NumericCharacterReferences.md)
+- [XML numeric character references reach generated text literally. Win8Skin, Win10Skin and Win11Skin now draw the affected icons with polygons.](VlppParser2/NumericCharacterReferences.md)

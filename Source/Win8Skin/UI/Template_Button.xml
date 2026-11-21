@@ -159,7 +159,12 @@
               </Bounds>
             </Bounds>
             <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="NoLimit">
-              <SolidLabel Text="a" Font="fontFamily:&quot;Webdings&quot; size:16 bold:true" Color-bind="self.animationBuilder.Current.Bullet" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              <Polygon Size="x:11 y:11" BorderColor-bind="self.animationBuilder.Current.Bullet" BackgroundColor-bind="self.animationBuilder.Current.Bullet">
+                <att.Points>
+                  <Point>x:0 y:5</Point><Point>x:2 y:4</Point><Point>x:4 y:7</Point>
+                  <Point>x:9 y:0</Point><Point>x:10 y:1</Point><Point>x:4 y:10</Point>
+                </att.Points>
+              </Polygon>
             </Bounds>
           </Cell>
 

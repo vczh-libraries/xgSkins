@@ -169,7 +169,12 @@
               </Bounds>
             </Bounds>
             <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-              <SolidLabel Text="" Font="fontFamily:&quot;Segoe MDL2 Assets&quot; size:10" Color-bind="self.animationBuilder.Current.Bullet" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+              <Polygon Size="x:9 y:7" BorderColor-bind="self.animationBuilder.Current.Bullet" BackgroundColor-bind="self.animationBuilder.Current.Bullet">
+                <att.Points>
+                  <Point>x:0 y:3</Point><Point>x:1 y:2</Point><Point>x:3 y:4</Point>
+                  <Point>x:7 y:0</Point><Point>x:8 y:1</Point><Point>x:3 y:6</Point>
+                </att.Points>
+              </Polygon>
             </Bounds>
           </Cell>
 
