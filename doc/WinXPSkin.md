@@ -149,13 +149,11 @@ coverage a partial final chunk may be clipped to the track.
 These are logical-pixel reconstruction metrics, not a claim that every native
 XP DPI asset used the same dimensions.
 
-The progress repeater uses a small Workflow factory that constructs a
-parameterless chunk template and ignores the ordinal argument. Its geometry,
-colors and layout remain declarative XML. This avoids the upstream integer
-range and generated-code limitations described in
-[Workflow cast merging](../suggestions/Workflow/GeneratedIntegerCastMerge.md),
-[the Vlpp range enumerator](../suggestions/Vlpp/RangeEnumeratorIndex.md) and
-[GacUI boxed item-template parameters](../suggestions/GacUI/BoxedItemTemplateParameter.md).
+The progress repeater uses `range[0, self.ChunkCount)` to create one identical
+chunk per item. Its Workflow factory ignores the ordinal and constructs a
+parameterless chunk template. Geometry, colors and layout are defined in XML.
+Earlier variants are documented in [the Vlpp range enumerator](../suggestions/Vlpp/RangeEnumeratorIndex.md)
+and [GacUI boxed item-template parameters](../suggestions/GacUI/BoxedItemTemplateParameter.md).
 
 The requested chunk count is also calculated by an XML binding. A small
 `QueueChunkCount` helper coalesces requests and publishes the latest count

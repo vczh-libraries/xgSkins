@@ -36,12 +36,11 @@ merge, but the application build exposed a second upstream issue:
 `vint`. A fixed-width `Int32` range therefore failed to compile on x64. The
 failed build is retained in `%TEMP%/xgskins-winxp-range-build-failure.log`.
 
-The integer-range workaround uses a native-integer range and a small
-`ItemTemplate-eval` factory that ignores its ordinal argument and constructs a
-parameterless `ProgressChunkTemplate`. The chunk count, spacing, gradients and composition
-layout remain in XML. The upstream limitations, including the boxed object
-constructor-parameter shorthand, and proposed fixes are documented in
-[Workflow cast merging](../suggestions/Workflow/GeneratedIntegerCastMerge.md),
+The original chunk template declared an `Index` parameter of type
+`system::Int32` but never read it. Each chunk has the same appearance, so the
+skin uses a native-integer range and constructs a parameterless
+`ProgressChunkTemplate`. The fixed-width casts were specific to the discarded
+parameter. The other generation and build findings are recorded in
 [the Vlpp range enumerator](../suggestions/Vlpp/RangeEnumeratorIndex.md) and
 [GacUI boxed item-template parameters](../suggestions/GacUI/BoxedItemTemplateParameter.md).
 No upstream or generated C++ source was manually changed for this workaround.

@@ -51,7 +51,3 @@
 ## VlppParser2
 
 - [18 labels across Win8Skin, Win10Skin and Win11Skin depend on icon fonts for drawing. The inventory identifies each polygon replacement and records the XML numeric-reference limitation.](VlppParser2/NumericCharacterReferences.md)
-
-## Workflow
-
-- [The C++ merger rejects the generated XP progress template when only the x64 output contains an explicit `Int32` cast.](Workflow/GeneratedIntegerCastMerge.md)
