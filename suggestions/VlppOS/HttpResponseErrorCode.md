@@ -13,6 +13,11 @@ original run the client timed out and the debugger recovered
 operation but omitted the Windows result.
 [GacUI response failure and debugger artifacts](../GacUI/AutomationResponseFailure.md).
 
+On November 21 the same XP-to-Dark test passed with patched GacUI and the
+original 15-second deadline. The VlppOS UTF-8 send wrapper used in that test
+still reports a fixed message when a send fails.
+[Patched-build verification](../GacUI/AutomationResponseFailure.md#patched-build-verification)
+
 ## Workaround
 
 On a build with symbols, inspect the local `result` immediately after

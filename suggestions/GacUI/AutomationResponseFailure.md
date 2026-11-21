@@ -3,6 +3,11 @@
 A failed HTTP response from the Windows automation service terminated FullControlTest
 during the Raw Clock scenario.
 
+The original skin-switch timeout reproduced on the pre-patch build and passed
+with GacUI `2db1e77f9`. With a passive UI Automation listener attached, the
+patched showcase completed 752 control-tree requests across ten switches. Its
+slowest response took 1.506 seconds. [Patched-build verification](#patched-build-verification)
+
 ## Repro
 
 In `FullControlTest /D2D /Hosted`, run **Misc / Raw Clock** with WinXPSkin, check its
@@ -100,11 +105,55 @@ post-refresh DarkSkin tree of that length. The original artifacts do not record
 the UI stack during the deadline, the active subscriptions or the native send
 result. The Raw Clock client itself registered no subtree handlers during this step.
 
+## Patched-build verification
+
+On November 21, 2026, we compared the original xgSkins `5c8a5e4` Debug x64
+showcase with a build of the same checkout using GacUI `2db1e77f9`. The
+published Release import and xgSkins `bdd9973` still predated the fix. For this
+test we packed GacUI from source in a temporary directory and substituted its
+four core and Windows amalgamation files in the test build. We kept the
+published file order for the core translation unit and verified that all 166
+source blocks were byte-identical to the fresh pack. Both builds used the
+original xgSkins skin resources and the Windows HTTP endpoint.
+[GacUI window-scoped UIA suspension](https://github.com/vczh-libraries/GacUI/commit/f7a05f6ecb5903d21af29894e6bb85aceae915d0)
+· [Graphics-host bounds notification](https://github.com/vczh-libraries/GacUI/commit/2db1e77f933194a685f7491da3f70f94f5693972)
+
+For each build we ran `/D2D /Hosted` at 1250 × 900, loaded the same 117,713-byte
+fixture in both editors, and opened and closed three modeless windows. We used
+HTTP IO to switch from WinXPSkin to DarkSkin and issued a `Controls` GET
+immediately after the click. Each GET had a 15-second deadline through the last
+byte. The subscribed runs kept the four historical subtree handlers active in
+a separate process. The timing client checked the selected radio in the
+rendered tree and reopened Raw Clock to verify its bounds and a fresh tick.
+
+| Build and listener | Switches | Complete `Controls` GETs | Slowest GET or failure |
+| --- | ---: | ---: | --- |
+| Original, passive listener | First XP → Dark failed | 22 of 23 | First GET after the click returned the old tree. The next GET timed out at 15 s. The showcase displayed its abort dialog and exited with code 3 after dismissal. |
+| Patched, no passive listener | 6 of 6 | 165 of 165 | 1.176 s |
+| Patched, passive listener | 10 of 10 | 752 of 752 | 1.506 s |
+
+On all ten subscribed switches the immediate GET still showed the previous
+palette. The next GET on each of the five XP → Dark switches returned the
+149,324-byte rebuilt tree in 1.302–1.416 seconds. The listener received 568
+structure and 32 property events. The showcase returned to XP and exited
+normally with code 0. A separate run of GacUI's hosted `RawClockPassive` scenario
+passed 473 of 473 GETs across five Default/Aurora switches, with a maximum of
+2.537 seconds. All timings here measure complete client requests.
+
+The xgSkins request logs are `baseline.log`, `observed.log` and
+`old-observed.log` in `%TEMP%/xgskins-uia-check-20261121-002133/`, alongside the
+fixture, observer and shutdown logs. A setup run used the client's default
+`charset=utf-8` on an IO POST and triggered the service's content-type check
+before the measured sequence. The comparison above used the service's exact
+`application/json; charset=utf8` on both builds. The upstream run is recorded
+in `%TEMP%/xgskins-gacui-patched-2db1e77f9-hosted-passive-8891.log`.
+
 ## Proposal
 
-Index bounds hooks by composition and automation nodes by associated control so
-retiring a subtree visits the affected entries directly. Verify the XP-to-Dark
-switch with active UI Automation clients and a 15-second HTTP deadline.
+GacUI now suspends per-composition UIA observation during window theme rebuilds
+and observes bounds changes at the graphics host. The replay above verifies
+the 15-second skin-switch case. The separate HTTP response-send failure policy
+remains open.
 
 Distinguish time queued for the UI thread, tree generation and the native send.
 Record the request ID, kind, response size and native result. Define how the service handles
