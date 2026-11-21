@@ -681,10 +681,12 @@ This proves the `SendResponseUtf8` failure reached the catch that deliberately
 terminates. No second-chance exception was reported before that native abort
 dialog; the handled exception and explicit termination account for this path.
 
-The exact Windows HTTP status was not retained, and a causal relationship
-between the 15-second client request timeout and the send failure has not been
-established. The evidence does not attribute this termination to the XP skin
-or progress layout.
+PID 27980's capture did not retain the native Windows error or sample the UI
+thread during the 15-second wait. On November 20 the historical build reproduced
+the timeout with UI Automation listeners active. The tree callback waited behind
+the theme refresh, and Windows returned error 64 when the service subsequently
+tried to send the reply. The per-stage timings and UI-thread stack samples are
+in the [GacUI response failure report](../suggestions/GacUI/AutomationResponseFailure.md#root-cause).
 
 After capturing and revalidating the exact Abort button, one bounded posted
 `BM_CLICK` activated it. The dialog disappeared within 0.6 seconds. CDB's

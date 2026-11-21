@@ -31,7 +31,7 @@
 - [After a theme change, a hosted window can report its full size while its caption and tabs have zero-size bounds.](GacUI/ThemeRefreshLayoutReadiness.md)
 - [Restoring focus to a destroyed hosted window can crash FullControlTest.](GacUI/HostedWindowLastFocusedWindow.md)
 - [The live ribbon gallery and editor document can both report keyboard focus in the same window.](GacUI/RetainedLogicalFocus.md)
-- [A failed HTTP response to an automation control-tree request can terminate FullControlTest.](GacUI/AutomationResponseFailure.md)
+- [A theme refresh with UI Automation listeners can delay a control-tree request past 15 seconds and terminate FullControlTest on the late send.](GacUI/AutomationResponseFailure.md)
 - [Movie rows keep their expanded height after the responsive layout returns to compact mode.](GacUI/ResponsiveListRowHeight.md)
 - [A disabled document editor can keep its enabled text color even as its background changes.](GacUI/DisabledDocumentForeground.md)
 - [Selecting a list or tree row changes its background while its label keeps the normal text color.](GacUI/SelectedItemForeground.md)
