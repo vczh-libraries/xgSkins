@@ -703,7 +703,6 @@ The recovered exception and stack remain in
 bounded 60-second client requests for the remaining checks; that verification
 adjustment is not a fix for the response-send termination behavior.
 VlppOS still omits the native Windows result when the response send fails.
-[VlppOS diagnostic issue](../suggestions/VlppOS/HttpResponseErrorCode.md)
 
 Fresh process 25932 subsequently passed 160 Raw Clock assertions with zero
 unavailable dialog completions: navigation/data/timer/bounds, raw-element

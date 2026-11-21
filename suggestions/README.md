@@ -44,7 +44,3 @@
 ## Vlpp
 
 - [Enumerating a 32-bit integer range on x64 fails to compile because `RangeEnumerator` returns an incompatible index type.](Vlpp/RangeEnumeratorIndex.md)
-
-## VlppOS
-
-- [When sending a UTF-8 HTTP response fails, the exception omits the Windows error code.](VlppOS/HttpResponseErrorCode.md)
