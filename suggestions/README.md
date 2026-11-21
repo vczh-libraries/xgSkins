@@ -50,7 +50,7 @@
 
 ## VlppParser2
 
-- [Numeric XML character references reach the generated text literally, so a caption icon can appear as missing-glyph boxes.](VlppParser2/NumericCharacterReferences.md)
+- [18 labels across Win8Skin, Win10Skin and Win11Skin depend on icon fonts for drawing. The inventory identifies each polygon replacement and records the XML numeric-reference limitation.](VlppParser2/NumericCharacterReferences.md)
 
 ## Workflow
 
