@@ -3,52 +3,22 @@
 <!-- SECTION-START: FROZEN -->
 <!-- Content in this section is now allowed to change unless explicit requested, unless you found any unreasonable design -->
 
-You are strongly recommended to follow `<Release-repo>/.github/copilot-instructions.md` for:
-- Coding convention.
-- Building and debugging instructions.
-- Document for upstream libraries.
-
-When working on this repo:
-- You are not allowed to change upstream repos.
-- If upstream repos contain any bug prevent you from finishing the task:
-  - If you find any useful workaround, you can use it, but you should list all workarounds, all upstream bugs and proposals to fix upstream repos in a suggestion file.
-  - If you cannot find any useful workaround, you should list all upstream bugs and proposals to fix upstream repos in a suggestion file. In this case, you could ignore these bugs and continue to finish the other part.
-  - The suggestion file should be put in the `suggestions` folder and commit.
-    - Use `suggestions/<REPO-NAME>` for any issue in the library release from `vczh-libraries/<REPO-NAME>`.
-    - Use `suggestions/FullControlTest` for any issue in the `FullControlTest` test app.
-    - Use `suggestions` for any uncategorized issue, which I would expect to be rare.
-    - The organization of a suggestion file should be:
-      - `# Issue Name`: description of the issue.
-      - `## Repro`: how to repro it using `FullControlTest`.
-      - `## Workaround`: the workaround to fix the issue, if no workaround is available, write "N/A".
-      - `## Root Cause`: the root cause of the upstream issue.
-      - `## Proposal`: the proposal fix to upstream repos.
-    - When it is more helpful you can add screenshots to a suggestion file, using the following naming convention: `<SUGGESTION-FILE>_<INDEX>.png`.
-- If any request happened to resolve or invalid suggestion files, even when it is not explicitly pointed out, you still need to remove or update affected suggestion files, to keep them fresh.
-- Maintain a `suggestions/README.md` to index all suggestion files, with a simple symptom description for each.
-- To identify the root cause, debugger is ready for you when needed, check out `<Release-repo>/.github/Guidelines/Debugging.md`.
-
-When you are explicitly asked to fix upstream repos, follow the instruction:
-- Fix the repo and verify by running unit test.
-- If the repo is not `GacUI`, release to `GacUI` and run unit test.
-- Release the repo to `Release`.
-- Follow `## Updating from Upstream Repos` to import the work to this repo.
+## Policy for Development Activities
 
 When committing any files, you should put generated files in a separated commit, its title would be the origin commit title followed by `[generated]`.
 - Changes caused by `import.ps1` should be committed with title `[import]`.
 - Changes caused by `syncProj.ps1` should be committed with title `[syncProj]`.
 - `syncProj.ps1` may update generated files, no need to make a separated `[syncProj] [generate]`.
 
-## Dependencies
+### Dependencies
 
 The follow dependencies are required in development activities, but they are not necessary just for building and running the project.
-
 These repos under the same organization must be cloned as sibling folders:
 - [Tools](https://github.com/vczh-libraries/Tools)
 - [GacUI](https://github.com/vczh-libraries/GacUI)
 - [Release](https://github.com/vczh-libraries/Release)
 
-## Updating from Upstream Repos
+### Updating from Upstream Repos
 
 Instruction here must be followed before doing any actual coding task.
 
