@@ -34,14 +34,15 @@ Converting the range endpoints through `double` allowed the generated files to
 merge, but the application build exposed a second upstream issue:
 `RangeEnumerator<T>::Index()` returns `T`, while its interface requires native
 `vint`. A fixed-width `Int32` range therefore failed to compile on x64. The
-failed build is retained in `%TEMP%/xgskins-winxp-range-build-failure.log`.
+compiler reported MSVC C2555 when it instantiated the enumerator. The build
+log is `%TEMP%/xgskins-winxp-range-build-failure.log`.
 
 The original chunk template declared an `Index` parameter of type
 `system::Int32` but never read it. Each chunk has the same appearance, so the
 skin uses a native-integer range and constructs a parameterless
 `ProgressChunkTemplate`. The fixed-width casts were specific to the discarded
-parameter. The other generation and build findings are recorded in
-[the Vlpp range enumerator](../suggestions/Vlpp/RangeEnumeratorIndex.md) and
+parameter. With the native range, both `Index()` declarations return `vint`.
+The boxed constructor variant is documented in
 [GacUI boxed item-template parameters](../suggestions/GacUI/BoxedItemTemplateParameter.md).
 No upstream or generated C++ source was manually changed for this workaround.
 

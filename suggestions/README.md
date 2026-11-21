@@ -40,7 +40,3 @@
 - [A finite color animation can stop at an intermediate color after its duration has elapsed.](GacUI/FiniteAnimationEndpoint.md)
 - [Adding XP progress chunks during layout can halt the running Debug showcase before the first chunk appears.](GacUI/ProgressChunkLayoutMutation.md)
 - [Declaring a boxed item value with the XML parameter shorthand can prevent the item template from compiling.](GacUI/BoxedItemTemplateParameter.md)
-
-## Vlpp
-
-- [Enumerating a 32-bit integer range on x64 fails to compile because `RangeEnumerator` returns an incompatible index type.](Vlpp/RangeEnumeratorIndex.md)

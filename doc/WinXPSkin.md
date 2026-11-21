@@ -152,8 +152,8 @@ XP DPI asset used the same dimensions.
 The progress repeater uses `range[0, self.ChunkCount)` to create one identical
 chunk per item. Its Workflow factory ignores the ordinal and constructs a
 parameterless chunk template. Geometry, colors and layout are defined in XML.
-Earlier variants are documented in [the Vlpp range enumerator](../suggestions/Vlpp/RangeEnumeratorIndex.md)
-and [GacUI boxed item-template parameters](../suggestions/GacUI/BoxedItemTemplateParameter.md).
+An earlier variant tried to declare the boxed ordinal as a
+[constructor parameter](../suggestions/GacUI/BoxedItemTemplateParameter.md).
 
 The requested chunk count is also calculated by an XML binding. A small
 `QueueChunkCount` helper coalesces requests and publishes the latest count
