@@ -48,7 +48,3 @@
 ## VlppOS
 
 - [When sending a UTF-8 HTTP response fails, the exception omits the Windows error code.](VlppOS/HttpResponseErrorCode.md)
-
-## VlppParser2
-
-- [XML numeric character references reach generated text literally. Win8Skin, Win10Skin and Win11Skin now draw the affected icons with polygons.](VlppParser2/NumericCharacterReferences.md)
