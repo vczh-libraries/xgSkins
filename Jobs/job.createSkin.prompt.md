@@ -47,3 +47,8 @@ you need to do research first and make sure:
 - Read documents if available, e.g., default skin of OS might have guidance in their official documentation.
 - Read screenshots if available.
 - Make sure all controls are covered by the design, otherwise you might need to come out with additional design solutions, by reusing existing design or making a better fit.
+
+## Special Glyphs
+
+Although this repo is running on Windows, but generated C++ code files could be used in any platform.
+It means you are not allowed to use any special font to achieve drawing, you need to rely on the standard `<Polygon/>` element.
