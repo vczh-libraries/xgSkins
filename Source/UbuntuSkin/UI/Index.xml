@@ -20,7 +20,7 @@
     <att.GroupBox>x:GroupBoxTemplate</att.GroupBox>
     <att.Tab>x:TabTemplate</att.Tab>
     <att.ComboBox>x:ComboBoxTemplate</att.ComboBox>
-    <att.MultilineTextBox>x:DocumentViewerTemplate</att.MultilineTextBox>
+    <att.MultilineTextBox>x:MultilineTextBoxTemplate</att.MultilineTextBox>
     <att.SinglelineTextBox>x:DocumentTextBoxTemplate</att.SinglelineTextBox>
     <att.DocumentViewer>x:DocumentViewerTemplate</att.DocumentViewer>
     <att.DocumentLabel>x:DocumentLabelTemplate</att.DocumentLabel>

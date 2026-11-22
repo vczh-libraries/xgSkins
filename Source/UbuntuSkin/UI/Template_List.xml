@@ -1,9 +1,15 @@
 <Folder>
   <Instance name="ItemBackgroundTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::ItemBackgroundTemplate" ref.Styles="res://UbuntuSkin/Style">
-      <ref.Members><![CDATA[prop Colors : ButtonColors = ubuntuColors.ItemNormal {}]]></ref.Members>
+      <ref.Members><![CDATA[
+        prop PointerPressed : bool = false {}
+        prop Colors : ButtonColors = ubuntuColors.ItemNormal {}
+      ]]></ref.Members>
       <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.ItemDisabled : self.Selected or self.State == ButtonState::Pressed ? ubuntuColors.ItemSelected : self.State == ButtonState::Active ? ubuntuColors.ItemHovered : ubuntuColors.ItemNormal</att.Colors-bind>
+        <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.ItemDisabled : self.PointerPressed or self.State == ButtonState::Pressed ? ubuntuColors.ItemPressed : self.Selected ? ubuntuColors.ItemSelected : self.State == ButtonState::Active ? ubuntuColors.ItemHovered : ubuntuColors.ItemNormal</att.Colors-bind>
+        <ev.mouseDown-eval>if (arguments.button == NativeMouseButton::Left) { self.PointerPressed = true; }</ev.mouseDown-eval>
+        <ev.mouseUp-eval>if (arguments.button == NativeMouseButton::Left) { self.PointerPressed = false; }</ev.mouseUp-eval>
+        <ev.mouseLeave-eval>self.PointerPressed = false;</ev.mouseLeave-eval>
         <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder Color-bind="self.Colors.Border"/>
@@ -37,8 +43,8 @@
   <Instance name="ComboBoxTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::ComboBoxTemplate" ref.Styles="res://UbuntuSkin/Style">
       <ref.Members><![CDATA[
-        prop Colors : ButtonColors = ubuntuColors.ButtonNormal {}
-        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(ubuntuColors.ButtonNormal));
+        prop Colors : ButtonColors = ubuntuColors.ComboNormal {}
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(ubuntuColors.ComboNormal));
         var lastAnimation : IGuiAnimation^ = null;
         func UpdateColors() : void
         {
@@ -49,15 +55,15 @@
       ]]></ref.Members>
       <DateComboBoxTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.DatePickerTemplate>ubuntuskin::DatePickerTemplate</att.DatePickerTemplate>
-        <att.Colors-bind>GetButtonColors(self.VisuallyEnabled, self.SubMenuOpening ? ButtonState::Pressed : self.State)</att.Colors-bind>
+        <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.ButtonDisabled : self.SubMenuOpening ? ubuntuColors.CommandOpen : self.State == ButtonState::Pressed ? ubuntuColors.CommandPressed : self.State == ButtonState::Active ? ubuntuColors.CommandHovered : ubuntuColors.ComboNormal</att.Colors-bind>
         <ev.ColorsChanged-eval>self.UpdateColors();</ev.ColorsChanged-eval>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBorder Shape="shapeType:RoundRect radiusX:5 radiusY:5" Color-bind="self.animationBuilder.Current.Border"/>
+          <SolidBorder Color-bind="self.animationBuilder.Current.Border"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <GradientBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+          <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:3 top:3 right:16 bottom:3" Visible-bind="self.Focused"><SolidBorder Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-eval="ubuntuskin::ubuntuColors.Focus"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.VisuallyEnabled and self.Focused"><SolidBorder Color-eval="ubuntuskin::ubuntuColors.Focus"/></Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <Bounds ref.Name="container" AlignmentToParent="left:3 top:3 right:18 bottom:3">
             <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.TextVisible">
@@ -95,45 +101,23 @@
   <Instance name="ListViewColumnHeaderTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::ListViewColumnHeaderTemplate" ref.Styles="res://UbuntuSkin/Style">
       <ListViewColumnHeaderTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
-        <SolidBackground Color-bind="self.State == ButtonState::Pressed ? ubuntuColors.PressedSurface : self.State == ButtonState::Active ? ubuntuColors.HoverSurface : ubuntuColors.WindowBackground"/>
-        <Bounds AlignmentToParent="left:-1 top:3 right:0 bottom:3" PreferredMinSize="x:1 y:0">
+        <SolidBackground Color-bind="not self.VisuallyEnabled ? ubuntuColors.ViewBackground : self.SubMenuOpening or self.State == ButtonState::Pressed ? ubuntuColors.PressedSurface : self.State == ButtonState::Active ? ubuntuColors.HoverSurface : ubuntuColors.ViewBackground"/>
+        <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="x:0 y:1">
           <SolidBackground Color-eval="ubuntuColors.Divider"/>
         </Bounds>
         <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:11 bottom:1">
-          <Table AlignmentToParent="left:0 top:1 right:0 bottom:-1">
-            <att.Rows>
-              <_>composeType:MinSize</_>
-              <_>composeType:Percentage percentage:1.0</_>
-            </att.Rows>
-            <att.Columns>
-              <_>composeType:Percentage percentage:0.5</_>
-              <_>composeType:MinSize</_>
-              <_>composeType:Percentage percentage:0.5</_>
-            </att.Columns>
-
-            <Cell Site="row:0 column:1">
-              <Bounds Visible-bind="self.SortingState == ColumnSortingState::Ascending">
-                <Polygon BorderColor-eval="ubuntuColors.Ink" BackgroundColor-eval="ubuntuColors.Ink" Size="x:7 y:4">
-                  <att.Points>
-                    <Point>x:0 y:3</Point>
-                    <Point>x:3 y:0</Point>
-                    <Point>x:6 y:3</Point>
-                  </att.Points>
-                </Polygon>
-              </Bounds>
-              <Bounds Visible-bind="self.SortingState == ColumnSortingState::Descending">
-                <Polygon BorderColor-eval="ubuntuColors.Ink" BackgroundColor-eval="ubuntuColors.Ink" Size="x:7 y:4">
-                  <att.Points>
-                    <Point>x:0 y:0</Point>
-                    <Point>x:3 y:3</Point>
-                    <Point>x:6 y:0</Point>
-                  </att.Points>
-                </Polygon>
-              </Bounds>
-            </Cell>
-          </Table>
-          <Bounds AlignmentToParent="left:6 top:4 right:5 bottom:4">
-            <SolidLabel Color-bind="self.VisuallyEnabled ? ubuntuColors.Ink : ubuntuColors.DisabledInk" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+          <Bounds AlignmentToParent-bind="{left:6 top:4 right:(self.SortingState == ColumnSortingState::NotSorted ? 5 : 13) bottom:4}">
+            <SolidLabel Color-bind="not self.VisuallyEnabled ? ubuntuColors.DisabledInk : self.State == ButtonState::Pressed ? ubuntuColors.Ink : ubuntuColors.SecondaryInk" Text-bind="self.Text" Font-bind="self.Font" Ellipse="true" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+          </Bounds>
+          <Bounds AlignmentToParent="left:-1 top:0 right:1 bottom:0" Visible-bind="self.SortingState == ColumnSortingState::Ascending">
+            <Polygon Size="x:9 y:5" BorderColor-eval="ubuntuColors.SecondaryInk" BackgroundColor-eval="ubuntuColors.SecondaryInk">
+              <att.Points><Point>x:0 y:4</Point><Point>x:4 y:0</Point><Point>x:8 y:4</Point><Point>x:4 y:1</Point></att.Points>
+            </Polygon>
+          </Bounds>
+          <Bounds AlignmentToParent="left:-1 top:0 right:1 bottom:0" Visible-bind="self.SortingState == ColumnSortingState::Descending">
+            <Polygon Size="x:9 y:5" BorderColor-eval="ubuntuColors.SecondaryInk" BackgroundColor-eval="ubuntuColors.SecondaryInk">
+              <att.Points><Point>x:0 y:0</Point><Point>x:4 y:4</Point><Point>x:8 y:0</Point><Point>x:4 y:3</Point></att.Points>
+            </Polygon>
           </Bounds>
         </Bounds>
         <Bounds AlignmentToParent="left:-1 top:0 right:0 bottom:0">
@@ -182,7 +166,7 @@
 
           <Cell Site="row:1 column:1">
             <Bounds Visible-bind="not self.Selected">
-              <Polygon Size="x:6 y:11" BorderColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? ubuntuColors.Ink : self.Selected ? ubuntuColors.SecondaryInk : ubuntuColors.SecondaryInk" BackgroundColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? ubuntuColors.Ink : self.Selected ? ubuntuColors.SecondaryInk : ubuntuColors.SecondaryInk">
+              <Polygon Size="x:6 y:11" BorderColor-bind="not self.VisuallyEnabled ? ubuntuColors.DisabledInk : self.State == ButtonState::Normal ? ubuntuColors.SecondaryInk : ubuntuColors.Ink" BackgroundColor-bind="not self.VisuallyEnabled ? ubuntuColors.DisabledInk : self.State == ButtonState::Normal ? ubuntuColors.SecondaryInk : ubuntuColors.Ink">
                 <att.Points>
                   <Point>x:0 y:1</Point>
                   <Point>x:4 y:5</Point>
@@ -191,7 +175,7 @@
               </Polygon>
             </Bounds>
             <Bounds Visible-bind="self.Selected">
-              <Polygon Size="x:6 y:11" BorderColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? ubuntuColors.Ink : self.Selected ? ubuntuColors.SecondaryInk : ubuntuColors.SecondaryInk" BackgroundColor-bind="self.VisuallyEnabled and self.State != ButtonState::Normal ? ubuntuColors.Ink : self.Selected ? ubuntuColors.SecondaryInk : ubuntuColors.SecondaryInk">
+              <Polygon Size="x:6 y:11" BorderColor-bind="not self.VisuallyEnabled ? ubuntuColors.DisabledInk : self.State == ButtonState::Normal ? ubuntuColors.SecondaryInk : ubuntuColors.Ink" BackgroundColor-bind="not self.VisuallyEnabled ? ubuntuColors.DisabledInk : self.State == ButtonState::Normal ? ubuntuColors.SecondaryInk : ubuntuColors.Ink">
                 <att.Points>
                   <Point>x:5 y:2</Point>
                   <Point>x:5 y:7</Point>
@@ -228,12 +212,12 @@
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::ListViewColumnDropDownTemplate" ref.Styles="res://UbuntuSkin/Style">
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:13 y:0">
         <Bounds AlignmentToParent="left:0 top:1 right:-1 bottom:1" PreferredMinSize="x:1 y:0" Visible-bind="not self.VisuallyEnabled or (self.State == ButtonState::Normal and not self.Selected)">
-          <GradientBackground Direction="Vertical" Color1-eval="ubuntuColors.Divider" Color2-eval="ubuntuColors.WindowBackground"/>
+          <SolidBackground Color-eval="ubuntuColors.Divider"/>
         </Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and (self.State != ButtonState::Normal or self.Selected)">
           <SolidBorder Color-eval="ubuntuColors.Border"/>
           <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
-            <GradientBackground Direction="Vertical" Color1-eval="ubuntuColors.HoverSurface" Color2-eval="ubuntuColors.HoverSurface"/>
+            <SolidBackground Color-bind="self.Selected or self.State == ButtonState::Pressed ? ubuntuColors.PressedSurface : ubuntuColors.HoverSurface"/>
           </Bounds>
         </Bounds>
         <Table AlignmentToParent="left:3 top:3 right:3 bottom:3">

@@ -1,83 +1,54 @@
 # UbuntuSkin color package
 
-UbuntuSkin follows the default **Yaru Standard** appearance in Ubuntu 20.04 LTS (Focal Fossa). The Files window in the reference pairs a charcoal header and an orange close button with a porcelain sidebar and white file area. The open system menu shows the corresponding light popup, gray hover band and aubergine scale. The desktop wallpaper, panel and dock belong to the shell. [Canonical’s theme announcement](https://ubuntu.com/blog/new-ubuntu-theme-in-development-for-20-04) · [Yaru 20.04.7 base colors](https://github.com/ubuntu/yaru/blob/20.04.7/gtk/src/default/gtk-3.20/_colors.scss) · [Ubuntu palette](https://github.com/ubuntu/yaru/blob/20.04.7/gtk/src/default/gtk-3.20/_ubuntu-colors.scss) · [Mixed header bar](https://github.com/ubuntu/yaru/blob/20.04.7/gtk/src/default/gtk-3.20/_headerbar.scss) · [Window controls](https://github.com/ubuntu/yaru/blob/20.04.7/gtk/src/default/gtk-3.20/_tweaks.scss) · [Upstream widget factory](https://github.com/ubuntu/yaru/blob/20.04.7/docs/widget-factory1.png).
+UbuntuSkin follows the light appearance in the supplied Ubuntu 26.04 LTS screenshots. Files and Settings supply the control states. LibreOffice Writer supplies the separate title bar, menubar, toolbar and tab accents. GacUI supplies the fonts and control metrics. The skin uses rectangular faces and popups, a compact combo arrow and horizontal tab headers. Caption discs, radio indicators and scale handles retain their circular silhouettes. The skin draws its glyphs with `<Polygon/>`. [Reference notes](../../screenshots/README.md), [Ubuntu 26.04 LTS release notes](https://documentation.ubuntu.com/release-notes/26.04/summary-for-lts-users/).
 
-## Surface and foreground colors
+## Surfaces and foregrounds
 
-| Field | Default | Where it appears |
+| Field | Default | Use |
 | --- | --- | --- |
-| `WindowBackground` | `#F7F7F7` | Porcelain window, sidebar, ribbon group and standalone toolbar surfaces. |
-| `ViewBackground` | `#FFFFFF` | White editor, list, document, notebook page and tooltip content. |
-| `HeaderBackground` | `#323030` | Active custom window header, menubar and ribbon tab band. |
-| `InactiveHeaderBackground` | `#3F3D3D` | Backdrop window header. |
-| `HeaderInk` | `#F7F7F7` | Window title and active minimize, maximize and restore glyphs. |
-| `InactiveHeaderInk` | `#BBBABA` | Inactive caption and insensitive dark-header text. |
-| `PopupBackground` | `#FAFAFA` | Menu, embedded menu toolbar and expanded ribbon group. |
-| `ControlAccent` | `#924D8B` | Aubergine check/radio fills, menu check marks, filled scales and progress. |
-| `ControlAccentPressed` | `#743D6F` | Pressed selected checkbox or radio. |
-| `Border` | `#C6C6C6` | Borders between surfaces, content frames and popup outlines. |
-| `Divider` | `#D8D8D8` | Dividers between rows, columns and groups of commands. |
-| `Ink` | `#3D3D3D` | Control text, sort indicators, ordinary arrows and secondary list labels. |
-| `DocumentInk` | `#181818` | Unformatted document text, caret and primary calendar numerals. |
-| `SecondaryInk` | `#646464` | Secondary descriptions and adjacent-month dates. |
-| `DisabledInk` | `#929292` | Insensitive labels, controls and glyphs on light surfaces. |
-| `Accent` | `#E95420` | Orange close disc, active notebook underline, document selection and selected-date edge. |
-| `AccentPressed` | `#BF4214` | Pressed close disc. |
-| `Focus` | `#EF895F` | Keyboard focus outlines and close-button hover. |
-| `SelectedText` | `#FFFFFF` | Close cross and selected document text. |
-| `Clear` | `#00000000` | Resting caption actions, unpainted surfaces and transparent marks. |
-| `HoverSurface` | `#E8E8E8` | Hovered column headers, column filter and date cells. |
-| `PressedSurface` | `#D6D6D6` | Pressed column headers. |
-| `SelectedSurface` | `#E95420` | Selected date and highlighted page underline. |
-| `CaptionButtonSurface` | `#535150` | Hover circle behind minimize, maximize and restore. |
-| `Track` | `#C7C7C7` | Empty portion of a scale or progress bar. |
-| `KeytipBackground` | `#353535` | Background of keyboard access-key bubbles. |
-| `KeytipText` | `#FFFFFF` | Text in keyboard access-key bubbles. |
+| `WindowBackground` | `#FAFAFA` | Window body, group boxes, toolbars, ribbon groups and scroll troughs. |
+| `SidebarBackground` | `#EBEBEB` | Tree navigation pane. |
+| `ViewBackground` | `#FFFFFF` | Lists, rich documents, notebook pages, resting column headers and scale handles. |
+| `HeaderBackground` | `#EBEBEB` | Active title bar. |
+| `InactiveHeaderBackground` | `#F0F0F0` | Inactive title bar. |
+| `FrameBorder` | `#BDBDBD` | Active window perimeter and the hairline below the title. |
+| `HeaderInk` | `#3D3D3D` | Active title and caption glyphs. |
+| `InactiveHeaderInk` | `#959595` | Inactive title and unavailable caption glyphs. |
+| `CaptionButtonSurface`, `CaptionButtonHovered`, `CaptionButtonPressed` | `#DADADA`, `#CECECE`, `#C1C1C1` | Resting, hovered and pressed caption discs for all three window actions. |
+| `InactiveCaptionButtonSurface` | `#E7E7E7` | Caption discs in a backdrop window or behind an unavailable action. |
+| `PopupBackground` | `#FAFAFA` | Popup menus, their embedded toolbars and expanded ribbon groups. |
+| `Border`, `Divider` | `#C7C7C7`, `#E1E1E1` | View frames and popup borders, then hairlines between commands, columns and pages. |
+| `Ink`, `DocumentInk` | `#3D3D3D`, `#3D3D3D` | Control labels and arrows, then unformatted document text and primary calendar numerals. |
+| `SecondaryInk` | `#6F6F6F` | Secondary list descriptions, sorting chevrons, shortcuts, group captions and adjacent-month numerals. |
+| `DisabledInk` | `#9B9B9B` | Disabled text, glyphs and indicator fills. |
+| `ControlAccent`, `ControlAccentPressed` | `#D34615`, `#AD3911` | Checked indicators, scale and progress fills, and the rim of an active or pressed scale handle. |
+| `Accent`, `AccentPressed` | `#E95420`, `#BF4214` | Selected calendar edge and pressed tab underline. The default selected tab and open menubar item also use the LibreOffice orange. |
+| `Focus` | `#DB977F` | Keyboard focus outlines and the rim of a resting scale handle. |
+| `SelectionBackground`, `SelectedText` | `#E4BAAB`, `#6B4132` | Peach document selection with dark lettering. |
+| `HoverSurface`, `PressedSurface` | `#E2E2E2`, `#C5C5C5` | Hovered and pressed column headers, filter buttons and calendar cells. |
+| `SelectedSurface` | `#E4E4E4` | Selected calendar day behind the current- or adjacent-month text. |
+| `Track` | `#E2E2E2` | Unfilled scale and progress track. |
+| `KeytipBackground`, `KeytipText` | `#323232`, `#FFFFFF` | Tooltips and keyboard access keys. A default label inside a tooltip uses the light foreground. |
+| `Clear` | Transparent | Unpainted surfaces and marks. |
+
+The window title and its three right-hand actions sit above a separate command area. All three actions have a gray disc and dark glyph in an active window. [Writer frame and menu](../../screenshots/LibreOfficeReference/MenuBarAndDropdownMenu.png).
 
 ## Control states
 
-A `ButtonColors` value carries an outline in `Border`, vertical face colors in `G1` and `G2`, the foreground in `Text` and the indicator mark in `Bullet`. Matching gradient stops give flat fills. A checked indicator takes its fill from `ControlAccent`, `ControlAccentPressed` or `DisabledInk`. The scrollbar thumb uses the first face color.
+`ButtonColors` contains the border, the two face colors `G1` and `G2`, the text and the indicator color `Bullet`. Both face colors match in the default package. An `EditorColors` value contains a border and a background.
 
-| Field | Where it appears |
+| Fields | Use |
 | --- | --- |
-| `ButtonNormal` | Resting pushbutton, standalone toolbar action, combo box and scale handle. |
-| `ButtonHovered` | Pointer over an action surface. |
-| `ButtonPressed` | Pressed action or open combo box. |
-| `ButtonDisabled` | Insensitive action. |
-| `CheckedNormal` | Normal unchecked check/radio and selected glyph. |
-| `CheckedHovered` | Hovered check/radio frame and glyph. |
-| `CheckedPressed` | Pressed check/radio frame and glyph. |
-| `CheckedDisabled` | Insensitive check/radio frame, label and glyph. |
-| `ItemNormal` | Resting list, tree and gallery items. |
-| `ItemHovered` | Pointer over a row. |
-| `ItemSelected` | Full-width solid orange selected or pressed row. |
-| `ItemDisabled` | Disabled row. |
-| `TabNormal` | Resting notebook header. |
-| `TabHovered` | Hovered notebook header. |
-| `TabSelected` | Active notebook header and its page surface. |
-| `HeaderActionNormal` | Compact charcoal menubar actions, ribbon tabs, active window border and menubar separator. |
-| `HeaderActionHovered` | Hovered header actions and ribbon tabs. |
-| `HeaderActionPressed` | Open header menu, pressed caption control and selected ribbon tab. |
-| `HeaderActionDisabled` | Inactive header actions and disabled ribbon tabs. |
-| `CommandNormal` | Resting popup menu, gallery arrow and ribbon commands. |
-| `CommandHovered` | Hovered command. |
-| `CommandPressed` | Pressed command and open dropdown. |
-| `CommandSelected` | Latched command. |
-| `CommandDisabled` | Disabled command. |
-| `ScrollHandleNormal` | Resting scrollbar thumb. |
-| `ScrollHandleActive` | Hovered scrollbar thumb. |
-| `ScrollHandlePressed` | Dragged scrollbar thumb. |
-| `ScrollHandleDisabled` | Inactive scrollbar thumb. |
+| `ButtonNormal`, `ButtonHovered`, `ButtonPressed`, `ButtonDisabled` | Pushbutton faces progress through `#E7E7E7`, `#DEDEDE` and `#C1C1C1`. Disabled buttons use `#F5F5F5`. |
+| `ComboNormal` | White combo face and gray outline. Hover, press and open use the corresponding command colors. The arrow stays in its compact reserved space. |
+| `CheckedNormal`, `CheckedHovered`, `CheckedPressed`, `CheckedDisabled` | Check and radio frames, labels and marks. Selection fills the indicator with the control accent and reveals its white tick or dot. |
+| `ItemNormal`, `ItemHovered`, `ItemPressed`, `ItemSelected`, `ItemDisabled` | List, tree and gallery rows. Hover uses `#F7F7F7`. A pressed row has a `#F0F0F0` face and `#AAAAAA` edge. A selected row has a `#E4E4E4` face and `#A4A4A4` edge. |
+| `TabNormal`, `TabHovered`, `TabSelected` | Notebook and ribbon tab headers. Hover draws a gray bottom rule. Selection draws the orange `TabSelected.Bullet` rule. Keyboard focus adds the peach `TabSelected.Border` outline. |
+| `HeaderActionNormal`, `HeaderActionHovered`, `HeaderActionPressed`, `HeaderActionDisabled` | Menubar actions. An open menu has a gray face and orange bottom edge. Popup rows use the same gray hover face. |
+| `CommandNormal`, `CommandHovered`, `CommandPressed`, `CommandOpen`, `CommandSelected`, `CommandDisabled` | Toolbar and ribbon buttons and gallery arrows. Resting actions blend into the bar. Hover adds a fine border and `#F5F5F5` face. Pressed or latched actions use `#D6D6D6`. Open dropdowns have a light face and distinct border. A checked menu command shows the selected indicator color or a backing behind its image. |
+| `ScrollHandleNormal`, `ScrollHandleActive`, `ScrollHandlePressed`, `ScrollHandleDisabled` | Arrowless scrollbar thumbs darken from `#898989` to `#727272` on hover and `#595959` during a drag. |
+| `EditorNormal`, `EditorHovered`, `EditorFocused`, `EditorBackdrop`, `EditorDisabled` | Single- and multiline text fields have a gray face and a peach focus outline. An inactive window fades the field to `#F5F5F5`. Lists and rich-document views keep their own light content surfaces while using the editor hover and focus edges. |
 
-Each `EditorColors` value contains a `Border` and a `Background`. Text entries, document editors, lists and trees share these states.
+The row, text-selection and button colors come from separate interactions in Files. The square checkbox uses the Settings radio colors. The white scale handle, orange fill and light remaining track follow the volume control. [List selection](../../screenshots/UbuntuReference/TrashBin_FirstItemHighlighted_SecondItemSelected.png), [Row press](../../screenshots/UbuntuReference/TrashBin_FirstItemPressed_SecondItemSelected.png), [Text selection](../../screenshots/UbuntuReference/TrashBin_TextBox_FocusedAndPartialSelected.png), [Radio buttons](../../screenshots/UbuntuReference/RadioButton_SecondPressed.png), [Volume scale](../../screenshots/UbuntuReference/LabelAndProgressBar.png).
 
-| Field | Where it appears |
-| --- | --- |
-| `EditorNormal` | Resting entry or view. |
-| `EditorHovered` | Hovered entry or view. |
-| `EditorFocused` | Focused entry or view. |
-| `EditorDisabled` | Insensitive entry or view. |
-
-Built-in graphical lists and calendars share foregrounds across their items. The skin uses an edge-to-edge orange row with near-black primary labels to preserve contrast in all six list views and the data grid. Editor selection uses white on orange. The calendar keeps each date’s month-dependent ink on a compact orange selected tile. Light menu rows highlight in gray and use an aubergine tick for a checked command. [List foregrounds](../../suggestions/GacUI/SelectedItemForeground.md) · [Calendar foregrounds](../../suggestions/GacUI/SelectedCalendarDayForeground.md).
-
-Yaru’s inverted header bar supplies the menubar and ribbon tab treatment. The standalone toolbar and ribbon command groups use traditional light GTK surfaces so the application’s supplied bitmap icons remain legible. Ribbon header extension areas keep a light backing for application-supplied labels and controls.
+Ribbon commands use the Writer toolbar states at both button sizes. The side strip on Writer's selected vertical tab becomes the bottom rule of a horizontal GacUI tab. [Toolbar hover and tooltip](../../screenshots/LibreOfficeReference/ToolBarHighlighted_Tooltip.png), [Pressed toolbar button](../../screenshots/LibreOfficeReference/ToolBarPressed.png), [Open split button](../../screenshots/LibreOfficeReference/ToolBar_Split_Selected.png), [Tab reference](../../screenshots/LibreOfficeReference/VerticalTag_SecondSelected_ThirdHighlighted.png).

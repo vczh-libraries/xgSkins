@@ -6,8 +6,8 @@
       <![CDATA[
         cast Color let margin = self.CustomFramePadding in (
           (not self.Border) or (margin.left + margin.top + margin.right + margin.bottom == 0) ? ubuntuskin::ubuntuColors.Clear :
-          self.VisuallyEnabled and self.Activated ? ubuntuskin::ubuntuColors.HeaderActionNormal.Border :
-          ubuntuskin::ubuntuColors.InactiveHeaderBackground
+          self.VisuallyEnabled and self.Activated ? ubuntuskin::ubuntuColors.FrameBorder :
+          ubuntuskin::ubuntuColors.Divider
         )
       ]]>
     </att.Color-bind>
@@ -22,13 +22,13 @@
       ]]>
     </att.Color-bind>
   </Style>
-  <Style ref.Path="//*.tooltipBorder" Color-eval="ubuntuskin::ubuntuColors.Border"/>
   <Style ref.Path="//*.labelDefaultText" DefaultTextColor-eval="ubuntuskin::ubuntuColors.Ink"/>
   <Style ref.Path="//*.labelText">
     <att.Color-bind>
       <![CDATA[
         cast Color (
           not self.VisuallyEnabled ? ubuntuskin::ubuntuColors.DisabledInk :
+          self.InTooltip and self.TextColor == self.DefaultTextColor ? ubuntuskin::ubuntuColors.KeytipText :
           self.TextColor
         )
       ]]>
@@ -56,7 +56,7 @@
   </Style>
   <Style ref.Path="//*.listViewBackgroundAndColor">
     <att.PrimaryTextColor-eval>ubuntuskin::ubuntuColors.ItemNormal.Text</att.PrimaryTextColor-eval>
-    <att.SecondaryTextColor-eval>ubuntuskin::ubuntuColors.Ink</att.SecondaryTextColor-eval>
+    <att.SecondaryTextColor-eval>ubuntuskin::ubuntuColors.SecondaryInk</att.SecondaryTextColor-eval>
     <att.ItemSeparatorColor-eval>ubuntuskin::ubuntuColors.Divider</att.ItemSeparatorColor-eval>
     <SolidBackground Color-eval="ubuntuskin::ubuntuColors.ViewBackground"/>
   </Style>

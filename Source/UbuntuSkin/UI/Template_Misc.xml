@@ -36,7 +36,7 @@
         }]]></ev.CaptionColorChanged-eval>
         <SolidBackground ref.Style="generalBackground"/>
         <Bounds AlignmentToParent-bind="{left:0 top:(titleBounds.CachedBounds.y2/2) right:0 bottom:0}">
-          <SolidBorder Shape="shapeType:RoundRect radiusX:6 radiusY:6" Color-eval="ubuntuColors.Divider"/>
+          <SolidBorder Color-eval="ubuntuColors.Divider"/>
           <Bounds ref.Name="container" AlignmentToParent-bind="{left:1 top:(1+titleBounds.CachedBounds.y2/2) right:1 bottom:1}"/>
         </Bounds>
         <Bounds ref.Name="titleBounds" AlignmentToParent="left:5 top:0 right:-1 bottom:-1">
@@ -51,7 +51,9 @@
 
   <Instance name="LabelTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::LabelTemplate" ref.Styles="res://UbuntuSkin/Style">
+      <ref.Members><![CDATA[prop InTooltip : bool = false {}]]></ref.Members>
       <LabelTemplate ref.Name="self" ref.Style="labelDefaultText" MinSizeLimitation="LimitToElementAndChildren">
+        <ev.renderTargetChanged-eval>self.InTooltip = FindWindowTemplate(self) is (ubuntuskin::TooltipTemplate*);</ev.renderTargetChanged-eval>
         <SolidLabel Text-bind="self.Text" Font-bind="self.Font" ref.Style="labelText"/>
       </LabelTemplate>
     </Instance>
@@ -60,7 +62,7 @@
   <Instance name="ShortcutKeyTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::ShortcutKeyTemplate" ref.Styles="res://UbuntuSkin/Style">
       <LabelTemplate ref.Name="self" ref.Style="labelDefaultText" MinSizeLimitation="LimitToElementAndChildren">
-        <SolidBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-eval="ubuntuColors.KeytipBackground"/>
+        <SolidBackground Color-eval="ubuntuColors.KeytipBackground"/>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
           <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1">
@@ -75,10 +77,10 @@
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::DateButtonTemplate" ref.Styles="res://UbuntuSkin/Style">
       <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <SolidBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-bind="self.Selected ? ubuntuColors.SelectedSurface : self.State != ButtonState::Normal ? ubuntuColors.HoverSurface : ubuntuColors.Clear"/>
+          <SolidBackground Color-bind="self.Selected ? ubuntuColors.SelectedSurface : self.State == ButtonState::Pressed ? ubuntuColors.PressedSurface : self.State == ButtonState::Active ? ubuntuColors.HoverSurface : ubuntuColors.Clear"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Focused or self.Selected">
-          <SolidBorder Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-bind="self.Focused ? ubuntuColors.Focus : ubuntuColors.Accent"/>
+          <SolidBorder Color-bind="self.Focused ? ubuntuColors.Focus : ubuntuColors.Accent"/>
         </Bounds>
         <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
       </SelectableButtonTemplate>

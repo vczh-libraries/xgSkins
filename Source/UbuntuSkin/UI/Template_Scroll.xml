@@ -112,7 +112,7 @@
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
         <Bounds AlignmentToParent="left:1 top:3 right:1 bottom:3">
-          <SolidBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-bind="self.animationBuilder.Current.G1"/>
+          <SolidBackground Color-bind="self.animationBuilder.Current.G1"/>
         </Bounds>
       </ButtonTemplate>
     </Instance>
@@ -135,7 +135,7 @@
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
         <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1">
-          <SolidBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-bind="self.animationBuilder.Current.G1"/>
+          <SolidBackground Color-bind="self.animationBuilder.Current.G1"/>
         </Bounds>
       </ButtonTemplate>
     </Instance>
@@ -200,13 +200,13 @@
   <Instance name="HTrackerHandleTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::HTrackerHandleTemplate" ref.Styles="res://UbuntuSkin/Style">
       <ref.Members><![CDATA[
-        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(ubuntuColors.ButtonNormal));
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(GetTrackerHandleColors(true, ButtonState::Normal)));
         var lastAnimation : IGuiAnimation^ = null;
 
         func UpdateColors() : void
         {
           KillAnimation(lastAnimation);
-          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetButtonColors(self.VisuallyEnabled, self.State)), cast UInt64 150), func():void { animationBuilder.Interpolate(1.0); });
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetTrackerHandleColors(self.VisuallyEnabled, self.State)), cast UInt64 150), func():void { animationBuilder.Interpolate(1.0); });
           AddAnimation(lastAnimation);
         }
       ]]></ref.Members>
@@ -214,9 +214,9 @@
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBorder Shape="shapeType:Ellipse" Color-bind="self.animationBuilder.Current.Border"/>
+          <SolidBackground Shape="shapeType:Ellipse" Color-bind="self.animationBuilder.Current.Border"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
           <GradientBackground Shape="shapeType:Ellipse" Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
         </Bounds>
       </ButtonTemplate>
@@ -226,13 +226,13 @@
   <Instance name="VTrackerHandleTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::VTrackerHandleTemplate" ref.Styles="res://UbuntuSkin/Style">
       <ref.Members><![CDATA[
-        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(ubuntuColors.ButtonNormal));
+        var animationBuilder : ButtonColorAnimation^ = new ButtonColorAnimation^(new ButtonColorState^(GetTrackerHandleColors(true, ButtonState::Normal)));
         var lastAnimation : IGuiAnimation^ = null;
 
         func UpdateColors() : void
         {
           KillAnimation(lastAnimation);
-          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetButtonColors(self.VisuallyEnabled, self.State)), cast UInt64 150), func():void { animationBuilder.Interpolate(1.0); });
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new ButtonColorState^(GetTrackerHandleColors(self.VisuallyEnabled, self.State)), cast UInt64 150), func():void { animationBuilder.Interpolate(1.0); });
           AddAnimation(lastAnimation);
         }
       ]]></ref.Members>
@@ -240,9 +240,9 @@
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBorder Shape="shapeType:Ellipse" Color-bind="self.animationBuilder.Current.Border"/>
+          <SolidBackground Shape="shapeType:Ellipse" Color-bind="self.animationBuilder.Current.Border"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
           <GradientBackground Shape="shapeType:Ellipse" Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
         </Bounds>
       </ButtonTemplate>
@@ -263,7 +263,7 @@
         <CommonScrollBehavior ref.Name="behavior"/>
         <SolidBackground Color-eval="ubuntuskin::ubuntuColors.WindowBackground"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
-          <SolidBorder Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-eval="ubuntuskin::ubuntuColors.Focus"/>
+          <SolidBorder Color-eval="ubuntuskin::ubuntuColors.Focus"/>
         </Bounds>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="LimitToElementAndChildren">
           <att.Rows>
@@ -287,13 +287,10 @@
                 <CellOption>composeType:Percentage percentage:1.0</CellOption>
               </att.Columns>
               <Cell Site="row:1 column:0">
-                <SolidBackground Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-eval="ubuntuColors.Track"/>
-                <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-                  <SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-eval="ubuntuColors.Border"/>
-                </Bounds>
+                <SolidBackground Color-eval="ubuntuColors.Track"/>
                 <PartialView>
                   <att.WidthPageSize-bind>self.TotalSize == 0 ? 0.0 : (cast double self.Position) / self.TotalSize</att.WidthPageSize-bind>
-                  <SolidBackground Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.VisuallyEnabled ? ubuntuColors.ControlAccent : ubuntuColors.DisabledInk"/>
+                  <SolidBackground Color-bind="self.VisuallyEnabled ? ubuntuColors.ControlAccent : ubuntuColors.DisabledInk"/>
                 </PartialView>
               </Cell>
             </Table>
@@ -323,7 +320,7 @@
         <CommonScrollBehavior ref.Name="behavior"/>
         <SolidBackground Color-eval="ubuntuskin::ubuntuColors.WindowBackground"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
-          <SolidBorder Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-eval="ubuntuskin::ubuntuColors.Focus"/>
+          <SolidBorder Color-eval="ubuntuskin::ubuntuColors.Focus"/>
         </Bounds>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="LimitToElementAndChildren">
           <att.Rows>
@@ -347,13 +344,10 @@
                 <CellOption>composeType:Percentage percentage:0.5</CellOption>
               </att.Columns>
               <Cell Site="row:0 column:1">
-                <SolidBackground Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-eval="ubuntuColors.Track"/>
-                <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-                  <SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-eval="ubuntuColors.Border"/>
-                </Bounds>
+                <SolidBackground Color-eval="ubuntuColors.Track"/>
                 <PartialView>
                   <att.HeightPageSize-bind>self.TotalSize == 0 ? 0.0 : (cast double self.Position) / self.TotalSize</att.HeightPageSize-bind>
-                  <SolidBackground Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.VisuallyEnabled ? ubuntuColors.ControlAccent : ubuntuColors.DisabledInk"/>
+                  <SolidBackground Color-bind="self.VisuallyEnabled ? ubuntuColors.ControlAccent : ubuntuColors.DisabledInk"/>
                 </PartialView>
               </Cell>
             </Table>
@@ -380,16 +374,13 @@
           </att.Rows>
           <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
           <Cell Site="row:1 column:0">
-            <SolidBackground Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-eval="ubuntuColors.Track"/>
-            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-              <SolidBorder Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-eval="ubuntuColors.Border"/>
-            </Bounds>
+            <SolidBackground Color-eval="ubuntuColors.Track"/>
             <PartialView>
               <att.WidthPageSize-bind><![CDATA[
                 self.Position <= 0 ? 0.0 : self.Position >= self.TotalSize - self.PageSize ? 1.0 :
                 (cast double self.Position) / (self.TotalSize - self.PageSize)
               ]]></att.WidthPageSize-bind>
-              <SolidBackground Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-eval="ubuntuColors.ControlAccent"/>
+              <SolidBackground Color-bind="self.VisuallyEnabled ? ubuntuColors.ControlAccent : ubuntuColors.DisabledInk"/>
             </PartialView>
           </Cell>
         </Table>

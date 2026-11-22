@@ -63,6 +63,27 @@
         };
       }
 
+      func GetCommandColors(enabled : bool, state : ButtonState, selected : bool, opening : bool) : ButtonColors
+      {
+        return not enabled ? ubuntuColors.CommandDisabled :
+          opening ? ubuntuColors.CommandOpen :
+          state == ButtonState::Pressed ? ubuntuColors.CommandPressed :
+          selected ? ubuntuColors.CommandSelected :
+          state == ButtonState::Active ? ubuntuColors.CommandHovered : ubuntuColors.CommandNormal;
+      }
+
+      func GetTrackerHandleColors(enabled : bool, state : ButtonState) : ButtonColors
+      {
+        if (not enabled)
+        {
+          return ubuntuColors.ButtonDisabled;
+        }
+        var border = state == ButtonState::Pressed ? ubuntuColors.ControlAccentPressed :
+          state == ButtonState::Active ? ubuntuColors.ControlAccent : ubuntuColors.Focus;
+        var face = state == ButtonState::Pressed ? ubuntuColors.ButtonHovered.G1 : ubuntuColors.ViewBackground;
+        return FlatButtonColors(border, face, ubuntuColors.Ink, ubuntuColors.Clear);
+      }
+
       func GetScrollButtonColors(enabled : bool, state : ButtonState, arrow : bool) : ButtonColors
       {
         if (arrow)
@@ -108,13 +129,13 @@
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBorder Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-bind="self.animationBuilder.Current.Border"/>
+          <SolidBorder Color-bind="self.VisuallyEnabled and self.Focused ? ubuntuColors.Focus : self.animationBuilder.Current.Border"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <GradientBackground Shape="shapeType:RoundRect radiusX:3 radiusY:3" Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+          <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Focused">
-          <SolidBorder Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-eval="ubuntuskin::ubuntuColors.Focus"/>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.VisuallyEnabled and self.Focused">
+          <SolidBorder Color-eval="ubuntuskin::ubuntuColors.Focus"/>
         </Bounds>
         <Bounds AlignmentToParent="left:7 top:3 right:7 bottom:3">
           <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -141,6 +162,9 @@
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
         <ev.SelectedChanged-eval>self.UpdateColors();</ev.SelectedChanged-eval>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and self.Focused">
+          <SolidBorder Color-eval="ubuntuskin::ubuntuColors.Focus"/>
+        </Bounds>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
@@ -154,9 +178,9 @@
 
           <Cell Site="row:1 column:0">
             <Bounds AlignmentToParent="left:3 top:0 right:3 bottom:0">
-              <SolidBorder Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-bind="self.animationBuilder.Current.Border"/>
-              <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-                <GradientBackground Shape="shapeType:RoundRect radiusX:2 radiusY:2" Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
+              <SolidBackground Color-bind="self.animationBuilder.Current.Border"/>
+              <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+                <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
               </Bounds>
             </Bounds>
             <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -170,14 +194,9 @@
           </Cell>
 
           <Cell Site="row:0 column:1 rowSpan:3 columnSpan:1">
-            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-              <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
-                <SolidBorder Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-eval="ubuntuskin::ubuntuColors.Focus"/>
-              </Bounds>
-              <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
-                <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
-              </Bounds>
+            <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
+              <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+              <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
             </Bounds>
           </Cell>
         </Table>
@@ -202,6 +221,9 @@
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
         <ev.SelectedChanged-eval>self.UpdateColors();</ev.SelectedChanged-eval>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and self.Focused">
+          <SolidBorder Color-eval="ubuntuskin::ubuntuColors.Focus"/>
+        </Bounds>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
@@ -215,25 +237,25 @@
 
           <Cell Site="row:1 column:0">
             <Bounds AlignmentToParent="left:3 top:0 right:3 bottom:0">
-              <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:Ellipse"/>
-              <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+              <SolidBackground Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:Ellipse"/>
+              <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
                 <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2" Shape="shapeType:Ellipse"/>
               </Bounds>
             </Bounds>
             <Bounds AlignmentToParent="left:8 top:5 right:8 bottom:5">
-              <SolidBackground Color-bind="self.animationBuilder.Current.Bullet" Shape="shapeType:Ellipse"/>
+              <Polygon Size="x:6 y:6" BorderColor-bind="self.animationBuilder.Current.Bullet" BackgroundColor-bind="self.animationBuilder.Current.Bullet">
+                <att.Points>
+                  <Point>x:2 y:0</Point><Point>x:3 y:0</Point><Point>x:5 y:2</Point><Point>x:5 y:3</Point>
+                  <Point>x:3 y:5</Point><Point>x:2 y:5</Point><Point>x:0 y:3</Point><Point>x:0 y:2</Point>
+                </att.Points>
+              </Polygon>
             </Bounds>
           </Cell>
 
           <Cell Site="row:0 column:1 rowSpan:3 columnSpan:1">
-            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-              <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Focused">
-                <SolidBorder Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-eval="ubuntuskin::ubuntuColors.Focus"/>
-              </Bounds>
-              <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
-                <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
-              </Bounds>
+            <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
+              <SolidLabel Color-bind="self.animationBuilder.Current.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+              <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
             </Bounds>
           </Cell>
         </Table>

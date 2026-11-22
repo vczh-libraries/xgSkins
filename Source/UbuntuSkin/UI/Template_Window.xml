@@ -8,11 +8,8 @@
   <Instance name="TooltipTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::TooltipTemplate" ref.Styles="res://UbuntuSkin/Style">
       <WindowTemplate ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <SolidBackground Color-eval="ubuntuColors.ViewBackground"/>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBorder ref.Style="tooltipBorder"/>
-          <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1"/>
-        </Bounds>
+        <SolidBackground Color-eval="ubuntuColors.KeytipBackground"/>
+        <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1"/>
       </WindowTemplate>
     </Instance>
   </Instance>
@@ -59,9 +56,12 @@
           ]]>
         </ev.CustomFramePaddingChanged-eval>
 
-        <SolidBackground Color-bind="self.Activated ? ubuntuColors.HeaderBackground : ubuntuColors.InactiveHeaderBackground"/>
+        <SolidBackground Color-bind="self.VisuallyEnabled and self.Activated ? ubuntuColors.HeaderBackground : ubuntuColors.InactiveHeaderBackground"/>
         <Bounds AlignmentToParent-bind="{left:1 top:(self.CustomFramePadding.top + clientCell.CachedBounds.y1) right:1 bottom:1}">
           <SolidBackground ref.Style="generalBackground"/>
+        </Bounds>
+        <Bounds AlignmentToParent-bind="{left:1 top:(self.CustomFramePadding.top + clientCell.CachedBounds.y1 - 1) right:1 bottom:-1}" PreferredMinSize="y:1" Visible-bind="self.TitleBar">
+          <SolidBackground Color-eval="ubuntuColors.FrameBorder"/>
         </Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder ref.Style="windowBorder"/>
@@ -104,7 +104,7 @@
 
             <Cell Site="row:0 column:2">
               <att.AssociatedHitTestResult-bind>self.MinimizedBox ? ButtonMinimum : NoDecision</att.AssociatedHitTestResult-bind>
-              <Button AutoFocus="false" ControlTemplate="ubuntuskin::CaptionButtonTemplate">
+              <Button AutoFocus="false" Context-bind="self.Activated" ControlTemplate="ubuntuskin::CaptionButtonTemplate">
                 <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
                 <att.Enabled-bind>self.MinimizedBox</att.Enabled-bind>
                 <att.Visible-bind>self.MinimizedBox or self.MaximizedBox</att.Visible-bind>
@@ -112,10 +112,8 @@
                   <BoundsComposition AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:24 y:24" MinSizeLimitation="LimitToElement">
                     <Polygon BorderColor-bind="self.VisuallyEnabled and self.Activated and self.MinimizedBox ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk" BackgroundColor-bind="self.VisuallyEnabled and self.Activated and self.MinimizedBox ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk" Size="x:24 y:16">
                       <att.Points>
-                        <Point>x:8 y:12</Point>
-                        <Point>x:15 y:12</Point>
-                        <Point>x:15 y:13</Point>
-                        <Point>x:8 y:13</Point>
+                        <Point>x:8 y:10</Point><Point>x:15 y:10</Point>
+                        <Point>x:15 y:11</Point><Point>x:8 y:11</Point>
                       </att.Points>
                     </Polygon>
                   </BoundsComposition>
@@ -124,54 +122,25 @@
             </Cell>
             <Cell Site="row:0 column:3">
               <att.AssociatedHitTestResult-bind>self.MaximizedBox ? ButtonMaximum : NoDecision</att.AssociatedHitTestResult-bind>
-              <Button AutoFocus="false" ControlTemplate="ubuntuskin::CaptionButtonTemplate">
+              <Button AutoFocus="false" Context-bind="self.Activated" ControlTemplate="ubuntuskin::CaptionButtonTemplate">
                 <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
                 <att.Enabled-bind>self.MaximizedBox</att.Enabled-bind>
                 <att.Visible-bind>self.MinimizedBox or self.MaximizedBox</att.Visible-bind>
                 <att.ContainerComposition-set>
                   <BoundsComposition Visible-bind="not self.Maximized" AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:24 y:24" MinSizeLimitation="LimitToElement">
-                    <Polygon BorderColor-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk" BackgroundColor-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk" Size="x:24 y:16">
+                    <Polygon BorderColor-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk" BackgroundColor-eval="ubuntuColors.Clear" Size="x:8 y:8">
                       <att.Points>
-                        <Point>x:6 y:2</Point>
-                        <Point>x:17 y:2</Point>
-                        <Point>x:17 y:13</Point>
-                        <Point>x:6 y:13</Point>
-                        <Point>x:6 y:2</Point>
-
-                        <Point>x:6 y:2</Point>
-                        <Point>x:6 y:13</Point>
-                        <Point>x:17 y:13</Point>
-                        <Point>x:17 y:4</Point>
-                        <Point>x:6 y:4</Point>
+                        <Point>x:0 y:0</Point><Point>x:7 y:0</Point><Point>x:7 y:7</Point><Point>x:0 y:7</Point>
                       </att.Points>
                     </Polygon>
                   </BoundsComposition>
                   <BoundsComposition Visible-bind="self.Maximized" AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:24 y:24" MinSizeLimitation="LimitToElement">
-                    <Polygon BorderColor-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk" BackgroundColor-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk" Size="x:24 y:16">
+                    <Polygon BorderColor-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk" BackgroundColor-eval="ubuntuColors.Clear" Size="x:10 y:10">
                       <att.Points>
-                        <Point>x:9 y:6</Point>
-                        <Point>x:14 y:6</Point>
-                        <Point>x:14 y:13</Point>
-                        <Point>x:6 y:13</Point>
-                        <Point>x:6 y:6</Point>
-                        <Point>x:9 y:6</Point>
-
-                        <Point>x:9 y:7</Point>
-                        <Point>x:6 y:7</Point>
-                        <Point>x:6 y:13</Point>
-                        <Point>x:14 y:13</Point>
-                        <Point>x:14 y:7</Point>
-                        <Point>x:9 y:7</Point>
-
-                        <Point>x:9 y:2</Point>
-                        <Point>x:17 y:2</Point>
-                        <Point>x:17 y:9</Point>
-                        <Point>x:14 y:9</Point>
-
-                        <Point>x:14 y:9</Point>
-                        <Point>x:17 y:9</Point>
-                        <Point>x:17 y:3</Point>
-                        <Point>x:9 y:3</Point>
+                        <Point>x:0 y:3</Point><Point>x:6 y:3</Point><Point>x:6 y:9</Point><Point>x:0 y:9</Point>
+                        <Point>x:0 y:3</Point><Point>x:3 y:3</Point><Point>x:3 y:0</Point><Point>x:9 y:0</Point>
+                        <Point>x:9 y:6</Point><Point>x:6 y:6</Point><Point>x:9 y:6</Point><Point>x:9 y:0</Point>
+                        <Point>x:3 y:0</Point><Point>x:3 y:3</Point>
                       </att.Points>
                     </Polygon>
                   </BoundsComposition>
@@ -179,22 +148,8 @@
               </Button>
             </Cell>
             <Cell Site="row:0 column:4" AssociatedHitTestResult="ButtonClose">
-              <Button AutoFocus="false" ControlTemplate="ubuntuskin::CaptionCloseButtonTemplate">
+              <Button AutoFocus="false" Context-bind="self.Activated" ControlTemplate="ubuntuskin::CaptionCloseButtonTemplate">
                 <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
-                <att.ContainerComposition-set>
-                  <BoundsComposition AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:24 y:24" MinSizeLimitation="LimitToElement">
-                    <Polygon BorderColor-bind="self.VisuallyEnabled ? ubuntuColors.SelectedText : ubuntuColors.InactiveHeaderInk" BackgroundColor-bind="self.VisuallyEnabled ? ubuntuColors.SelectedText : ubuntuColors.InactiveHeaderInk" Size="x:24 y:16">
-                      <att.Points>
-                        <Point>x:8 y:4</Point><Point>x:9 y:4</Point>
-                        <Point>x:12 y:7</Point><Point>x:15 y:4</Point>
-                        <Point>x:16 y:5</Point><Point>x:13 y:8</Point>
-                        <Point>x:16 y:11</Point><Point>x:15 y:12</Point>
-                        <Point>x:12 y:9</Point><Point>x:9 y:12</Point>
-                        <Point>x:8 y:11</Point><Point>x:11 y:8</Point>
-                      </att.Points>
-                    </Polygon>
-                  </BoundsComposition>
-                </att.ContainerComposition-set>
               </Button>
             </Cell>
 
@@ -214,8 +169,15 @@
                 </Cell>
               </Table>
             </Cell>
-            <Cell Site="row:0 column:1" AssociatedHitTestResult="Title">
-              <Bounds AlignmentToParent="left:8 top:7 right:8 bottom:7">
+            <Cell ref.Name="titleCell" Site="row:0 column:1" AssociatedHitTestResult="Title">
+              <Bounds>
+                <!-- Mirror the caption controls when space permits. Keep the title readable in narrow dialogs. -->
+                <att.AlignmentToParent-bind><![CDATA[
+                  let offset = clientCell.CachedBounds.x2 - titleCell.CachedBounds.x2 - titleCell.CachedBounds.x1,
+                      available = (titleCell.CachedBounds.x2 - titleCell.CachedBounds.x1) / 4 in (
+                    {left:8 + (offset < 0 ? 0 : offset < available ? offset : available); top:7; right:8; bottom:7;} of Margin
+                  )
+                ]]></att.AlignmentToParent-bind>
                 <SolidLabel ref.Style="windowTitle" Text-bind="self.Text" Ellipse="true" Font-bind="{fontFamily:self.Font.fontFamily size:self.Font.size bold:true antialias:self.Font.antialias}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
               </Bounds>
             </Cell>
@@ -229,18 +191,33 @@
   </Instance>
   <Instance name="CaptionButtonTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::CaptionButtonTemplate" ref.Styles="res://UbuntuSkin/Style">
-      <ref.Members><![CDATA[prop CloseAction : bool = false {}]]></ref.Members>
+      <ref.Members><![CDATA[
+        prop CloseAction : bool = false {}
+        prop WindowActive : bool = true {}
+      ]]></ref.Members>
       <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.WindowActive-bind>(cast bool self.Context) ?? true</att.WindowActive-bind>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
             <att.Rows><CellOption>composeType:Percentage percentage:1.0</CellOption><CellOption>composeType:Absolute absolute:20</CellOption><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Rows>
             <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption><CellOption>composeType:Absolute absolute:20</CellOption><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
             <Cell Site="row:1 column:1">
-              <SolidBackground Shape="shapeType:Ellipse" Color-bind="self.CloseAction ? (self.State == ButtonState::Pressed ? ubuntuColors.AccentPressed : self.State == ButtonState::Active ? ubuntuColors.Focus : ubuntuColors.Accent) : not self.VisuallyEnabled ? ubuntuColors.Clear : self.State == ButtonState::Pressed ? ubuntuColors.HeaderActionPressed.G1 : self.State == ButtonState::Active ? ubuntuColors.CaptionButtonSurface : ubuntuColors.Clear"/>
+              <SolidBackground Shape="shapeType:Ellipse" Color-bind="not self.VisuallyEnabled or not self.WindowActive ? ubuntuColors.InactiveCaptionButtonSurface : self.State == ButtonState::Pressed ? ubuntuColors.CaptionButtonPressed : self.State == ButtonState::Active ? ubuntuColors.CaptionButtonHovered : ubuntuColors.CaptionButtonSurface"/>
             </Cell>
           </Table>
         </Bounds>
-        <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2"/>
+        <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2">
+          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:24 y:24" Visible-bind="self.CloseAction">
+            <Polygon Size="x:8 y:8" BorderColor-bind="self.VisuallyEnabled and self.WindowActive ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk" BackgroundColor-bind="self.VisuallyEnabled and self.WindowActive ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk">
+              <att.Points>
+                <Point>x:0 y:1</Point><Point>x:1 y:0</Point><Point>x:3 y:2</Point><Point>x:4 y:2</Point>
+                <Point>x:6 y:0</Point><Point>x:7 y:1</Point><Point>x:5 y:3</Point><Point>x:5 y:4</Point>
+                <Point>x:7 y:6</Point><Point>x:6 y:7</Point><Point>x:4 y:5</Point><Point>x:3 y:5</Point>
+                <Point>x:1 y:7</Point><Point>x:0 y:6</Point><Point>x:2 y:4</Point><Point>x:2 y:3</Point>
+              </att.Points>
+            </Polygon>
+          </Bounds>
+        </Bounds>
       </ButtonTemplate>
     </Instance>
   </Instance>

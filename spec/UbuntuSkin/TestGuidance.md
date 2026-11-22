@@ -21,6 +21,7 @@ Start `FullControlTest /D2D /Hosted`, open **Window Manager / Color Theme** and 
 - ubuntuskin::RadioButtonTemplate: List / TextList, Window Manager.
 - ubuntuskin::DocumentLabelTemplate: Control / TextBox / Document, Control / Embedded Controls.
 - ubuntuskin::DocumentTextBoxTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Layout / Easy Layout.
+- ubuntuskin::MultilineTextBoxTemplate: Control / TextBox / TextBox, Control / Embedded Controls.
 - ubuntuskin::DocumentViewerTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Control / Embedded Controls.
 - ubuntuskin::EditorBorderTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Layout / Easy Layout, List / TextList, List / ListView, List / TreeView.
 - ubuntuskin::TabHeaderButtonTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
@@ -35,8 +36,8 @@ Start `FullControlTest /D2D /Hosted`, open **Window Manager / Color Theme** and 
 - ubuntuskin::ListViewTemplate: List / ListView, List / BindableDataGrid, Refresh List / ListView, Refresh List / BindableListView, Refresh List / BindableDataGrid.
 - ubuntuskin::ExpandingDecoratorTemplate: List / TreeView, Refresh List / TreeView, Refresh List / BindableTreeView, List / BindableDataGrid.
 - ubuntuskin::TreeViewTemplate: List / TreeView, Refresh List / TreeView, Refresh List / BindableTreeView, List / BindableDataGrid.
-- ubuntuskin::TopScrollButtonTemplate: Layout / Repeat, List / TextList.
-- ubuntuskin::BottomScrollButtonTemplate: Layout / Repeat, List / TextList.
+- ubuntuskin::TopScrollButtonTemplate: Control / Document Editor (Ribbon).
+- ubuntuskin::BottomScrollButtonTemplate: Control / Document Editor (Ribbon).
 - ubuntuskin::HScrollHandleTemplate: Layout / Repeat, List / ListView.
 - ubuntuskin::VScrollHandleTemplate: Layout / Repeat, List / TextList.
 - ubuntuskin::HTrackerHandleTemplate: Layout / Repeat.
@@ -84,8 +85,9 @@ Start `FullControlTest /D2D /Hosted`, open **Window Manager / Color Theme** and 
 
 ## Visual and interaction checks
 
-- In Window Manager, inspect the charcoal header, light centered title, plain minimize/maximize glyphs and an orange close disc with a small white cross. Check that the side and bottom resize margins blend into the porcelain body and retain a one-pixel outer line. Check maximize, restore, minimize where available, resize and close.
-- In TextList and TreeView, check the aubergine check/radio indicators, white marks, grayscale disabled indicators and full-width orange rows with readable text. Change selection using the keyboard and pointer.
-- In TextBox and the two document editors, inspect orange focus and selected text, gray popup hover rows, keytips, dark header commands, light grouped toolbar actions and collapsed ribbon groups. In DatePicker, verify a selected day and adjacent-month numerals stay legible.
-- In Layout / Repeat, drag each scale and thumb. Check the aubergine filled part of the scale and progress bar at both ends and between them. Page the arrowless scrollbars by clicking their troughs.
-- Visit all pages in the project verification SOP, open their popups, and recheck existing content after switching to another theme and back. Edits, selected rows and the selected calendar date should survive the switch.
+- In Window Manager, compare the light title bar, centered dark title, three gray discs and thin lower edge with the Writer frame. Open a second window, switch activation, disable a caption action and check the backdrop colors. Resize, maximize, restore, minimize where available and close. [Window reference](../../screenshots/LibreOfficeReference/MenuBarAndDropdownMenu.png).
+- Open TextList and check its white surface and gray edge before moving the pointer into the list. In TextList, ListView and TreeView, hover one row while another is selected, hold a press and release, then change selection with the keyboard. Check the distinct hover, press and selection grays. Verify a white polygon tick in a square checkbox and a white dot in an orange radio. Sort a column in both directions and open a grid column filter. [Files row states](../../screenshots/UbuntuReference/TrashBin_FirstItemPressed_SecondItemSelected.png).
+- In TextBox, focus a gray field and select part of a word. Check the peach outline and dark letters on the peach selection. In both document editors, check the white document surface, rectangular popup, gray menu hover, muted shortcut text and submenu arrow. Hover a style gallery item to see a dark tooltip with light text. [Entry reference](../../screenshots/UbuntuReference/TrashBin_TextBox_FocusedAndPartialSelected.png), [Tooltip reference](../../screenshots/LibreOfficeReference/ToolBarHighlighted_Tooltip.png).
+- In the toolstrip editor, hover, press and latch a command, then open a dropdown and the arrow half of a split button. Confirm the split button's primary action remains reachable. Exercise small, large and collapsed ribbon groups. Compare plain, hovered, selected and keyboard-focused horizontal tabs. [Split button reference](../../screenshots/LibreOfficeReference/ToolBar_Split_Highlighted.png), [Tab reference](../../screenshots/LibreOfficeReference/VerticalTag_SecondSelected_ThirdHighlighted.png).
+- In Layout / Repeat, drag both scale handles and page the scrollbars. Inspect the orange fill and gray remaining track at zero, halfway and maximum. In DatePicker, open both compact combos and select a day from the current and adjacent months.
+- Check default button, indicator, tab and combo dimensions against the previous UbuntuSkin at the same window size and display scale. Switch to another skin and back, then recheck the edits, selected rows and calendar date.

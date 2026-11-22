@@ -1,14 +1,14 @@
 # UbuntuSkin animation
 
-The following state changes interpolate colors for 150 ms. Changing direction during a fade starts a transition from the current paint. When a transition completes it paints its target exactly. [Yaru widget styling](https://github.com/ubuntu/yaru/blob/20.04.7/gtk/src/default/gtk-3.20/_common.scss) · [GacUI animation endpoint](../../suggestions/GacUI/FiniteAnimationEndpoint.md).
+The skin interpolates the following colors over 150 ms. A new transition starts at the current paint value. The final frame applies the target color exactly. [GacUI animation endpoint](../../suggestions/GacUI/FiniteAnimationEndpoint.md).
 
 | Templates | Animated properties |
 | --- | --- |
-| Pushbuttons and combo boxes | Outline, face, text and arrow colors on hover, press, opening and enablement. |
-| Check boxes and radio buttons | Indicator fill, outline, mark and label on selection, hover, press and enablement. |
-| Editor borders shared by text fields, documents, lists and trees | Border and background on focus, hover and enablement. |
-| Horizontal and vertical scale handles and scrollbar thumbs | State colors during hover, drag and release. The thumb follows the pointer immediately. |
-| Toolbar and ribbon command buttons, ribbon split arrows and gallery arrows | State colors on hover, press, selection and enablement. The toolbar split-arrow divider appears as soon as its region becomes active. |
-| Group captions | Text color when enablement changes. |
+| Pushbuttons and combo boxes | Border, face, label and arrow on hover, press, opening and enablement. |
+| Checkboxes and radio buttons | Indicator border, fill, mark and label on selection, hover, press and enablement. |
+| Text fields, rich-document views, lists and trees | Frame and field colors on hover, focus and re-enabling. Disabling a control applies its palette immediately. Text fields also apply their backdrop colors as soon as their window becomes inactive and animate back on activation. |
+| Horizontal and vertical scale handles and scrollbar thumbs | Rim and face on hover, drag and release. Position follows the pointer directly. |
+| Toolbar and ribbon command buttons, ribbon split arrows and gallery arrows | Frame, face, label and arrow on hover, press, selection, opening and enablement. |
+| Group captions | Text on enablement changes. |
 
-Notebook selection moves its underline directly to the active page. Solid orange row selection, calendar selection, column sorting, tree expansion, menu highlights, the orange close disc and the other caption actions, focus outlines and keytips update immediately. Scale fill and progress follow their numeric values. Window frames, labels, popups, dividers, ribbon group headers and gallery containers have static surfaces. Showing a popup, switching pages, switching skins and executing a command keep the application's own timing.
+Window activation, caption discs and glyphs, tab rules, menu highlights, toolbar split dividers, list rows, column sorting, tree expansion, calendar cells, keyboard focus outlines and access keys respond immediately. Progress and scale fills track their current values. GacUI controls popup, tooltip and page timing.

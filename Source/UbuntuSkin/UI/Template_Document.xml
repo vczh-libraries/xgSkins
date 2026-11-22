@@ -36,8 +36,17 @@
 
   <Instance name="EditorBorderTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::EditorBorderTemplate" ref.Styles="res://UbuntuSkin/Style">
+      <ref.Ctor><![CDATA[
+        {
+          animationBuilder.End = new EditorColorState^(self.Colors);
+          animationBuilder.Interpolate(1.0);
+        }
+      ]]></ref.Ctor>
       <ref.Members><![CDATA[
         prop Hovered : bool = false {}
+        prop Entry : bool = false {}
+        prop EntryWindow : GuiWindowTemplate* = null {}
+        prop Backdrop : bool = false {}
         prop Sidebar : bool = false {}
         prop Colors : EditorColors = ubuntuColors.EditorNormal {}
         var animationBuilder : EditorColorAnimation^ = new EditorColorAnimation^(new EditorColorState^(ubuntuColors.EditorNormal));
@@ -45,20 +54,38 @@
         func UpdateColors() : void
         {
           KillAnimation(lastAnimation);
-          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(new EditorColorState^(self.Colors), cast UInt64 150), func():void { animationBuilder.Interpolate(1.0); });
+          var target = new EditorColorState^(self.Colors);
+          if (self.Backdrop or not self.VisuallyEnabled)
+          {
+            lastAnimation = null;
+            animationBuilder.End = target;
+            animationBuilder.Interpolate(1.0);
+            return;
+          }
+          lastAnimation = CompleteColorAnimation(animationBuilder.CreateAnimation(target, cast UInt64 150), func():void { animationBuilder.Interpolate(1.0); });
           AddAnimation(lastAnimation);
         }
       ]]></ref.Members>
       <ControlTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.EditorDisabled : self.Focused ? ubuntuColors.EditorFocused : self.Hovered ? ubuntuColors.EditorHovered : ubuntuColors.EditorNormal</att.Colors-bind>
+        <ev.renderTargetChanged-eval>self.EntryWindow = self.Entry ? FindWindowTemplate(self) : null;</ev.renderTargetChanged-eval>
+        <att.Backdrop-bind>not ((self.EntryWindow.Activated and self.EntryWindow.VisuallyEnabled) ?? true)</att.Backdrop-bind>
+        <att.Colors-bind><![CDATA[
+          let state = (not self.VisuallyEnabled ? ubuntuColors.EditorDisabled : self.Backdrop ? ubuntuColors.EditorBackdrop : self.Focused ? ubuntuColors.EditorFocused : self.Hovered ? ubuntuColors.EditorHovered : ubuntuColors.EditorNormal) in ({
+            Border: self.VisuallyEnabled and not self.Entry and not self.Focused and not self.Hovered ? ubuntuColors.Border : state.Border;
+            Background: not self.VisuallyEnabled or self.Entry ? state.Background : self.Sidebar ? ubuntuColors.SidebarBackground : ubuntuColors.ViewBackground;
+          } of EditorColors)
+        ]]></att.Colors-bind>
         <ev.ColorsChanged-eval>self.UpdateColors();</ev.ColorsChanged-eval>
         <ev.mouseEnter-eval>self.Hovered = true;</ev.mouseEnter-eval>
         <ev.mouseLeave-eval>self.Hovered = false;</ev.mouseLeave-eval>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <SolidBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Color-bind="self.Sidebar and self.VisuallyEnabled ? ubuntuColors.WindowBackground : self.animationBuilder.Current.Background"/>
+          <SolidBackground Color-bind="self.animationBuilder.Current.Background"/>
+          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and self.Focused and not self.Backdrop">
+            <SolidBorder Color-bind="self.animationBuilder.Current.Border"/>
+          </Bounds>
         </Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBorder Shape="shapeType:RoundRect radiusX:5 radiusY:5" Color-bind="self.animationBuilder.Current.Border"/>
+          <SolidBorder Color-bind="self.animationBuilder.Current.Border"/>
         </Bounds>
       </ControlTemplate>
     </Instance>
@@ -73,7 +100,7 @@
   <Instance name="DocumentTextBoxTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::DocumentTextBoxTemplate" ref.Styles="res://UbuntuSkin/Style" xmlns:x="ubuntuskin::*">
       <DocumentLabelTemplate ref.Name="self" BaselineDocument-eval="ubuntuskin::CreateBaselineDocument()" CaretColor-eval="ubuntuskin::ubuntuColors.Ink" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+        <x:EditorBorderTemplate Entry="true" AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
           <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2"/>
         </x:EditorBorderTemplate>
       </DocumentLabelTemplate>
@@ -82,11 +109,12 @@
 
   <Instance name="DocumentViewerTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::DocumentViewerTemplate" ref.Styles="res://UbuntuSkin/Style" xmlns:x="ubuntuskin::*">
+      <ref.Members><![CDATA[prop Entry : bool = false {}]]></ref.Members>
       <DocumentViewerTemplate ref.Name="self" BaselineDocument-eval="ubuntuskin::CreateBaselineDocument()" CaretColor-eval="ubuntuskin::ubuntuColors.Ink" MinSizeLimitation="LimitToElementAndChildren">
         <att.ContainerComposition-eval>look.ContainerComposition</att.ContainerComposition-eval>
         <att.HorizontalScroll-eval>look.HScroll</att.HorizontalScroll-eval>
         <att.VerticalScroll-eval>look.VScroll</att.VerticalScroll-eval>
-        <x:EditorBorderTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
+        <x:EditorBorderTemplate Entry-bind="self.Entry" AlignmentToParent="left:0 top:0 right:0 bottom:0" Focused-bind="self.Focused" VisuallyEnabled-bind="self.VisuallyEnabled">
           <CommonScrollViewLook ref.Name="look" AlignmentToParent="left:2 top:2 right:2 bottom:2">
             <att.HScrollTemplate>ubuntuskin::HScrollTemplate</att.HScrollTemplate>
             <att.VScrollTemplate>ubuntuskin::VScrollTemplate</att.VScrollTemplate>
@@ -94,6 +122,11 @@
           </CommonScrollViewLook>
         </x:EditorBorderTemplate>
       </DocumentViewerTemplate>
+    </Instance>
+  </Instance>
+  <Instance name="MultilineTextBoxTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::MultilineTextBoxTemplate" xmlns:x="ubuntuskin::*">
+      <x:DocumentViewerTemplate Entry="true"/>
     </Instance>
   </Instance>
 </Folder>

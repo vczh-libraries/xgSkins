@@ -7,15 +7,15 @@
         var lastAnimation : IGuiAnimation^ = null;
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? ubuntuColors.CommandPressed : self.Selected ? ubuntuColors.CommandSelected : self.State == ButtonState::Active ? ubuntuColors.CommandHovered : ubuntuColors.CommandNormal</att.Colors-bind>
+        <att.Colors-bind>GetCommandColors(self.VisuallyEnabled, self.State, self.Selected, self.SubMenuOpening)</att.Colors-bind>
         <ev.ColorsChanged-eval><![CDATA[{
           self.KillAnimation(self.lastAnimation);
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 150), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:5 radiusY:5" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <GradientBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
+          <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
@@ -48,15 +48,15 @@
         var lastAnimation : IGuiAnimation^ = null;
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? ubuntuColors.CommandPressed : self.Selected ? ubuntuColors.CommandSelected : self.State == ButtonState::Active ? ubuntuColors.CommandHovered : ubuntuColors.CommandNormal</att.Colors-bind>
+        <att.Colors-bind>GetCommandColors(self.VisuallyEnabled, self.State, self.Selected, self.SubMenuOpening)</att.Colors-bind>
         <ev.ColorsChanged-eval><![CDATA[{
           self.KillAnimation(self.lastAnimation);
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 150), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:5 radiusY:5" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <GradientBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
+          <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
@@ -113,15 +113,15 @@
         var lastAnimation : IGuiAnimation^ = null;
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? ubuntuColors.CommandPressed : self.Selected ? ubuntuColors.CommandSelected : self.State == ButtonState::Active ? ubuntuColors.CommandHovered : ubuntuColors.CommandNormal</att.Colors-bind>
+        <att.Colors-bind>GetCommandColors(self.VisuallyEnabled, self.State, self.Selected, self.SubMenuOpening)</att.Colors-bind>
         <ev.ColorsChanged-eval><![CDATA[{
           self.KillAnimation(self.lastAnimation);
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 150), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:5 radiusY:5" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <GradientBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
+          <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:11 bottom:1">
 
@@ -159,15 +159,15 @@
         var lastAnimation : IGuiAnimation^ = null;
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? ubuntuColors.CommandPressed : self.Selected ? ubuntuColors.CommandSelected : self.State == ButtonState::Active ? ubuntuColors.CommandHovered : ubuntuColors.CommandNormal</att.Colors-bind>
+        <att.Colors-bind>GetCommandColors(self.VisuallyEnabled, self.State, self.Selected, self.SubMenuOpening)</att.Colors-bind>
         <ev.ColorsChanged-eval><![CDATA[{
           self.KillAnimation(self.lastAnimation);
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 150), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:5 radiusY:5" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <GradientBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
+          <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
@@ -205,15 +205,15 @@
         var lastAnimation : IGuiAnimation^ = null;
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? ubuntuColors.CommandPressed : self.Selected ? ubuntuColors.CommandSelected : self.State == ButtonState::Active ? ubuntuColors.CommandHovered : ubuntuColors.CommandNormal</att.Colors-bind>
+        <att.Colors-bind>GetCommandColors(self.VisuallyEnabled, self.State, self.Selected, self.SubMenuOpening)</att.Colors-bind>
         <ev.ColorsChanged-eval><![CDATA[{
           self.KillAnimation(self.lastAnimation);
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 150), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:5 radiusY:5" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <GradientBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
+          <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
 
@@ -273,15 +273,15 @@
         var lastAnimation : IGuiAnimation^ = null;
       ]]></ref.Members>
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.CommandDisabled : self.State == ButtonState::Pressed ? ubuntuColors.CommandPressed : self.Selected ? ubuntuColors.CommandSelected : self.State == ButtonState::Active ? ubuntuColors.CommandHovered : ubuntuColors.CommandNormal</att.Colors-bind>
+        <att.Colors-bind>GetCommandColors(self.VisuallyEnabled, self.State, false, self.Selected)</att.Colors-bind>
         <ev.ColorsChanged-eval><![CDATA[{
           self.KillAnimation(self.lastAnimation);
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 150), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:5 radiusY:5" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <GradientBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
+          <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1" PreferredMinSize="x:9 y:7">
 
@@ -319,15 +319,15 @@
         var lastAnimation : IGuiAnimation^ = null;
       ]]></ref.Members>
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.CommandDisabled : self.State == ButtonState::Pressed ? ubuntuColors.CommandPressed : self.Selected ? ubuntuColors.CommandSelected : self.State == ButtonState::Active ? ubuntuColors.CommandHovered : ubuntuColors.CommandNormal</att.Colors-bind>
+        <att.Colors-bind>GetCommandColors(self.VisuallyEnabled, self.State, false, self.Selected)</att.Colors-bind>
         <ev.ColorsChanged-eval><![CDATA[{
           self.KillAnimation(self.lastAnimation);
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 150), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:5 radiusY:5" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <GradientBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
+          <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <att.Rows>
@@ -368,15 +368,15 @@
         var lastAnimation : IGuiAnimation^ = null;
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? ubuntuColors.CommandPressed : self.Selected ? ubuntuColors.CommandSelected : self.State == ButtonState::Active ? ubuntuColors.CommandHovered : ubuntuColors.CommandNormal</att.Colors-bind>
+        <att.Colors-bind>GetCommandColors(self.VisuallyEnabled, self.State, self.Selected, self.SubMenuOpening)</att.Colors-bind>
         <ev.ColorsChanged-eval><![CDATA[{
           self.KillAnimation(self.lastAnimation);
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 150), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:5 radiusY:5" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <GradientBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
+          <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <att.Rows>
@@ -705,9 +705,9 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 150), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:5 radiusY:5" Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <GradientBackground Shape="shapeType:RoundRect radiusX:4 radiusY:4" Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
+          <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <att.Rows>
@@ -724,7 +724,9 @@
           </att.Columns>
 
           <Cell Site="row:1 column:1">
-            <SolidBackground Color-bind="self.animation.Current.Text"/>
+            <Polygon Size="x:9 y:1" BorderColor-bind="self.animation.Current.Text" BackgroundColor-bind="self.animation.Current.Text">
+              <att.Points><Point>x:0 y:0</Point><Point>x:8 y:0</Point><Point>x:8 y:1</Point><Point>x:0 y:1</Point></att.Points>
+            </Polygon>
           </Cell>
 
           <Cell Site="row:3 column:1">
