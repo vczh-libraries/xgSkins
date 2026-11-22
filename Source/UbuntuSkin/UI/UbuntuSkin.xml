@@ -85,6 +85,11 @@
         return { Border: border; G1: face; G2: face; Text: text; Bullet: bullet; };
       }
 
+      func Transparent(color : Color) : Color
+      {
+        return {r:color.r; g:color.g; b:color.b; a:0;};
+      }
+
       func CreateDefaultColorPackage() : ColorPackage
       {
         var clear = cast Color "#00000000";
@@ -106,7 +111,7 @@
 
         return {
           WindowBackground: window;
-          SidebarBackground: entry;
+          SidebarBackground: view;
           ViewBackground: view;
           HeaderBackground: entry;
           InactiveHeaderBackground: cast Color "#F0F0F0";
@@ -159,7 +164,7 @@
           ItemNormal: FlatButtonColors(clear, clear, ink, clear);
           ItemHovered: FlatButtonColors(clear, cast Color "#F7F7F7", ink, clear);
           ItemPressed: FlatButtonColors(cast Color "#AAAAAA", cast Color "#F0F0F0", ink, clear);
-          ItemSelected: FlatButtonColors(cast Color "#A4A4A4", selected, ink, clear);
+          ItemSelected: FlatButtonColors(clear, selected, ink, clear);
           ItemDisabled: FlatButtonColors(clear, clear, disabledInk, clear);
 
           TabNormal: FlatButtonColors(border, window, ink, clear);
@@ -171,12 +176,12 @@
           HeaderActionPressed: FlatButtonColors(accent, hover, ink, clear);
           HeaderActionDisabled: FlatButtonColors(clear, window, disabledInk, clear);
 
-          CommandNormal: FlatButtonColors(clear, clear, ink, clear);
+          CommandNormal: FlatButtonColors(Transparent(border), Transparent(disabledFace), ink, clear);
           CommandHovered: FlatButtonColors(border, disabledFace, ink, clear);
           CommandPressed: FlatButtonColors(border, commandPressed, ink, clear);
           CommandOpen: FlatButtonColors(cast Color "#BABABA", window, ink, clear);
           CommandSelected: FlatButtonColors(border, commandPressed, ink, controlAccent);
-          CommandDisabled: FlatButtonColors(clear, clear, disabledInk, clear);
+          CommandDisabled: FlatButtonColors(Transparent(border), Transparent(disabledFace), disabledInk, clear);
 
           ScrollHandleNormal: FlatButtonColors(clear, cast Color "#898989", ink, clear);
           ScrollHandleActive: FlatButtonColors(clear, cast Color "#727272", ink, clear);

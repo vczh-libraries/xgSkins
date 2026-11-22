@@ -594,7 +594,7 @@
         <att.ItemListTemplate>x:RibbonGalleryItemListTemplate</att.ItemListTemplate>
         <att.MenuTemplate>x:RibbonToolstripMenuTemplate</att.MenuTemplate>
         <att.HeaderTemplate>x:RibbonToolstripHeaderTemplate</att.HeaderTemplate>
-        <att.BackgroundTemplate>ubuntuskin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.BackgroundTemplate>ubuntuskin::RibbonGalleryItemBackgroundTemplate</att.BackgroundTemplate>
         <att.GroupContainerTemplate>ubuntuskin::ScrollViewTemplate</att.GroupContainerTemplate>
 
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -641,8 +641,14 @@
   <Instance name="RibbonGalleryItemListResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::RibbonGalleryItemListTemplate" ref.Styles="res://UbuntuSkin/Style">
       <TextListTemplate ref.Name="self">
-        <att.BackgroundTemplate>ubuntuskin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.BackgroundTemplate>ubuntuskin::RibbonGalleryItemBackgroundTemplate</att.BackgroundTemplate>
       </TextListTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonGalleryItemBackgroundTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::RibbonGalleryItemBackgroundTemplate" xmlns:x="ubuntuskin::*">
+      <x:ItemBackgroundTemplate HoverColors-eval="FlatButtonColors(ubuntuColors.Clear, ubuntuColors.HoverSurface, ubuntuColors.Ink, ubuntuColors.Clear)"/>
     </Instance>
   </Instance>
 

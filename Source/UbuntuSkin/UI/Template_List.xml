@@ -3,10 +3,11 @@
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::ItemBackgroundTemplate" ref.Styles="res://UbuntuSkin/Style">
       <ref.Members><![CDATA[
         prop PointerPressed : bool = false {}
+        prop HoverColors : ButtonColors = ubuntuColors.ItemHovered {}
         prop Colors : ButtonColors = ubuntuColors.ItemNormal {}
       ]]></ref.Members>
       <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.ItemDisabled : self.PointerPressed or self.State == ButtonState::Pressed ? ubuntuColors.ItemPressed : self.Selected ? ubuntuColors.ItemSelected : self.State == ButtonState::Active ? ubuntuColors.ItemHovered : ubuntuColors.ItemNormal</att.Colors-bind>
+        <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.ItemDisabled : self.PointerPressed or self.State == ButtonState::Pressed ? ubuntuColors.ItemPressed : self.Selected ? ubuntuColors.ItemSelected : self.State == ButtonState::Active ? self.HoverColors : ubuntuColors.ItemNormal</att.Colors-bind>
         <ev.mouseDown-eval>if (arguments.button == NativeMouseButton::Left) { self.PointerPressed = true; }</ev.mouseDown-eval>
         <ev.mouseUp-eval>if (arguments.button == NativeMouseButton::Left) { self.PointerPressed = false; }</ev.mouseUp-eval>
         <ev.mouseLeave-eval>self.PointerPressed = false;</ev.mouseLeave-eval>
@@ -40,6 +41,12 @@
     </Instance>
   </Instance>
 
+  <Instance name="ComboBoxMenuTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::ComboBoxMenuTemplate" xmlns:x="ubuntuskin::*">
+      <x:ToolstripMenuTemplate ContentInset="left:1 top:1 right:1 bottom:1"/>
+    </Instance>
+  </Instance>
+
   <Instance name="ComboBoxTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::ComboBoxTemplate" ref.Styles="res://UbuntuSkin/Style">
       <ref.Members><![CDATA[
@@ -54,6 +61,7 @@
         }
       ]]></ref.Members>
       <DateComboBoxTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.SubMenuTemplate>ubuntuskin::ComboBoxMenuTemplate</att.SubMenuTemplate>
         <att.DatePickerTemplate>ubuntuskin::DatePickerTemplate</att.DatePickerTemplate>
         <att.Colors-bind>not self.VisuallyEnabled ? ubuntuColors.ButtonDisabled : self.SubMenuOpening ? ubuntuColors.CommandOpen : self.State == ButtonState::Pressed ? ubuntuColors.CommandPressed : self.State == ButtonState::Active ? ubuntuColors.CommandHovered : ubuntuColors.ComboNormal</att.Colors-bind>
         <ev.ColorsChanged-eval>self.UpdateColors();</ev.ColorsChanged-eval>

@@ -7,8 +7,8 @@ UbuntuSkin follows the light appearance in the supplied Ubuntu 26.04 LTS screens
 | Field | Default | Use |
 | --- | --- | --- |
 | `WindowBackground` | `#FAFAFA` | Window body, group boxes, toolbars, ribbon groups and scroll troughs. |
-| `SidebarBackground` | `#EBEBEB` | Tree navigation pane. |
-| `ViewBackground` | `#FFFFFF` | Lists, rich documents, notebook pages, resting column headers and scale handles. |
+| `SidebarBackground` | `#FFFFFF` | Tree view, matching the default list surface. |
+| `ViewBackground` | `#FFFFFF` | Lists, multiline text boxes, rich documents, notebook pages, resting column headers and scale handles. |
 | `HeaderBackground` | `#EBEBEB` | Active title bar. |
 | `InactiveHeaderBackground` | `#F0F0F0` | Inactive title bar. |
 | `FrameBorder` | `#BDBDBD` | Active window perimeter and the hairline below the title. |
@@ -25,7 +25,7 @@ UbuntuSkin follows the light appearance in the supplied Ubuntu 26.04 LTS screens
 | `Accent`, `AccentPressed` | `#E95420`, `#BF4214` | Selected calendar edge and pressed tab underline. The default selected tab and open menubar item also use the LibreOffice orange. |
 | `Focus` | `#DB977F` | Keyboard focus outlines and the rim of a resting scale handle. |
 | `SelectionBackground`, `SelectedText` | `#E4BAAB`, `#6B4132` | Peach document selection with dark lettering. |
-| `HoverSurface`, `PressedSurface` | `#E2E2E2`, `#C5C5C5` | Hovered and pressed column headers, filter buttons and calendar cells. |
+| `HoverSurface`, `PressedSurface` | `#E2E2E2`, `#C5C5C5` | Hovered and pressed column headers, filter buttons and calendar cells. Inline and expanded ribbon galleries also use `HoverSurface` for item hover. |
 | `SelectedSurface` | `#E4E4E4` | Selected calendar day behind the current- or adjacent-month text. |
 | `Track` | `#E2E2E2` | Unfilled scale and progress track. |
 | `KeytipBackground`, `KeytipText` | `#323232`, `#FFFFFF` | Tooltips and keyboard access keys. A default label inside a tooltip uses the light foreground. |
@@ -40,14 +40,14 @@ The window title and its three right-hand actions sit above a separate command a
 | Fields | Use |
 | --- | --- |
 | `ButtonNormal`, `ButtonHovered`, `ButtonPressed`, `ButtonDisabled` | Pushbutton faces progress through `#E7E7E7`, `#DEDEDE` and `#C1C1C1`. Disabled buttons use `#F5F5F5`. |
-| `ComboNormal` | White combo face and gray outline. Hover, press and open use the corresponding command colors. The arrow stays in its compact reserved space. |
+| `ComboNormal` | White combo face and gray outline. Hover, press and open use the corresponding command colors. The dropdown list meets the one-pixel popup frame on all four sides. |
 | `CheckedNormal`, `CheckedHovered`, `CheckedPressed`, `CheckedDisabled` | Check and radio frames, labels and marks. Selection fills the indicator with the control accent and reveals its white tick or dot. |
-| `ItemNormal`, `ItemHovered`, `ItemPressed`, `ItemSelected`, `ItemDisabled` | List, tree and gallery rows. Hover uses `#F7F7F7`. A pressed row has a `#F0F0F0` face and `#AAAAAA` edge. A selected row has a `#E4E4E4` face and `#A4A4A4` edge. |
-| `TabNormal`, `TabHovered`, `TabSelected` | Notebook and ribbon tab headers. Hover draws a gray bottom rule. Selection draws the orange `TabSelected.Bullet` rule. Keyboard focus adds the peach `TabSelected.Border` outline. |
+| `ItemNormal`, `ItemHovered`, `ItemPressed`, `ItemSelected`, `ItemDisabled` | Hovered and selected rows use borderless fills. List and tree hover uses `#F7F7F7`, gallery hover uses `HoverSurface`, and selection uses `#E4E4E4`. A held press has a `#F0F0F0` face and `#AAAAAA` edge. |
+| `TabNormal`, `TabHovered`, `TabSelected` | Notebook and ribbon tab headers have a one-pixel gray bottom rule at rest. Hover thickens it to three pixels. Selection draws the three-pixel orange `TabSelected.Bullet` rule. Keyboard focus adds the peach `TabSelected.Border` outline. |
 | `HeaderActionNormal`, `HeaderActionHovered`, `HeaderActionPressed`, `HeaderActionDisabled` | Menubar actions. An open menu has a gray face and orange bottom edge. Popup rows use the same gray hover face. |
 | `CommandNormal`, `CommandHovered`, `CommandPressed`, `CommandOpen`, `CommandSelected`, `CommandDisabled` | Toolbar and ribbon buttons and gallery arrows. Resting actions blend into the bar. Hover adds a fine border and `#F5F5F5` face. Pressed or latched actions use `#D6D6D6`. Open dropdowns have a light face and distinct border. A checked menu command shows the selected indicator color or a backing behind its image. |
 | `ScrollHandleNormal`, `ScrollHandleActive`, `ScrollHandlePressed`, `ScrollHandleDisabled` | Arrowless scrollbar thumbs darken from `#898989` to `#727272` on hover and `#595959` during a drag. |
-| `EditorNormal`, `EditorHovered`, `EditorFocused`, `EditorBackdrop`, `EditorDisabled` | Single- and multiline text fields have a gray face and a peach focus outline. An inactive window fades the field to `#F5F5F5`. Lists and rich-document views keep their own light content surfaces while using the editor hover and focus edges. |
+| `EditorNormal`, `EditorHovered`, `EditorFocused`, `EditorBackdrop`, `EditorDisabled` | Single-line fields have a gray face and a peach focus outline. An inactive window fades the single-line field to `#F5F5F5`. Multiline boxes, rich documents and lists share white content surfaces and the editor hover and focus edges. |
 
 The row, text-selection and button colors come from separate interactions in Files. The square checkbox uses the Settings radio colors. The white scale handle, orange fill and light remaining track follow the volume control. [List selection](../../screenshots/UbuntuReference/TrashBin_FirstItemHighlighted_SecondItemSelected.png), [Row press](../../screenshots/UbuntuReference/TrashBin_FirstItemPressed_SecondItemSelected.png), [Text selection](../../screenshots/UbuntuReference/TrashBin_TextBox_FocusedAndPartialSelected.png), [Radio buttons](../../screenshots/UbuntuReference/RadioButton_SecondPressed.png), [Volume scale](../../screenshots/UbuntuReference/LabelAndProgressBar.png).
 

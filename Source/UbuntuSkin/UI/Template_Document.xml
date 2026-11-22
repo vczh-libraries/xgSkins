@@ -126,7 +126,7 @@
   </Instance>
   <Instance name="MultilineTextBoxTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::MultilineTextBoxTemplate" xmlns:x="ubuntuskin::*">
-      <x:DocumentViewerTemplate Entry="true"/>
+      <x:DocumentViewerTemplate/>
     </Instance>
   </Instance>
 </Folder>

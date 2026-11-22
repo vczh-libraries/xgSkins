@@ -34,11 +34,12 @@
 
   <Instance name="ToolstripMenuTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::ToolstripMenuTemplate" ref.Styles="res://UbuntuSkin/Style">
-      <MenuTemplate ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+      <ref.Members><![CDATA[prop ContentInset : Margin = {left:1 top:4 right:1 bottom:4} {}]]></ref.Members>
+      <MenuTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <SolidBackground ref.Style="toolstripMenuBackground"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder ref.Style="toolstripMenuBorder"/>
-          <Bounds ref.Name="container" AlignmentToParent="left:1 top:4 right:1 bottom:4"/>
+          <Bounds ref.Name="container" AlignmentToParent-bind="self.ContentInset"/>
         </Bounds>
       </MenuTemplate>
     </Instance>

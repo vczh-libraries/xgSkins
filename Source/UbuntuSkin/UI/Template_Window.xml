@@ -137,12 +137,17 @@
                   <BoundsComposition Visible-bind="self.Maximized" AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:24 y:24" MinSizeLimitation="LimitToElement">
                     <Polygon BorderColor-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk" BackgroundColor-eval="ubuntuColors.Clear" Size="x:10 y:10">
                       <att.Points>
-                        <Point>x:0 y:3</Point><Point>x:6 y:3</Point><Point>x:6 y:9</Point><Point>x:0 y:9</Point>
-                        <Point>x:0 y:3</Point><Point>x:3 y:3</Point><Point>x:3 y:0</Point><Point>x:9 y:0</Point>
-                        <Point>x:9 y:6</Point><Point>x:6 y:6</Point><Point>x:9 y:6</Point><Point>x:9 y:0</Point>
-                        <Point>x:3 y:0</Point><Point>x:3 y:3</Point>
+                        <Point>x:3 y:0</Point><Point>x:9 y:0</Point><Point>x:9 y:6</Point>
+                        <Point>x:6 y:6</Point><Point>x:6 y:3</Point><Point>x:3 y:3</Point>
                       </att.Points>
                     </Polygon>
+                    <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+                      <Polygon BorderColor-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk" BackgroundColor-eval="ubuntuColors.Clear" Size="x:10 y:10">
+                        <att.Points>
+                          <Point>x:0 y:3</Point><Point>x:6 y:3</Point><Point>x:6 y:9</Point><Point>x:0 y:9</Point>
+                        </att.Points>
+                      </Polygon>
+                    </Bounds>
                   </BoundsComposition>
                 </att.ContainerComposition-set>
               </Button>

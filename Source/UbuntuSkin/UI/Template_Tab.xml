@@ -13,7 +13,7 @@
         <att.TabFocused-bind>(cast (TabPage*) self.Context).OwnerTab.Focused ?? false</att.TabFocused-bind>
         <att.Colors-bind>self.Selected ? ubuntuColors.TabSelected : self.VisuallyEnabled and self.State != ButtonState::Normal ? ubuntuColors.TabHovered : ubuntuColors.TabNormal</att.Colors-bind>
         <SolidBackground Color-bind="self.Colors.G1"/>
-        <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="x:0 y:3" Visible-bind="self.Selected or self.Highlighted or (self.VisuallyEnabled and self.State != ButtonState::Normal)">
+        <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize-bind="{x:0 y:(self.Selected or self.Highlighted or (self.VisuallyEnabled and self.State != ButtonState::Normal) ? 3 : 1)}">
           <SolidBackground Color-bind="not self.VisuallyEnabled ? ubuntuColors.DisabledInk : self.State == ButtonState::Pressed ? ubuntuColors.AccentPressed : self.Selected ? self.Colors.Bullet : self.Highlighted ? ubuntuColors.Focus : self.Colors.Border"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Selected and self.TabFocused">
