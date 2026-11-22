@@ -1,9 +1,5 @@
 # Suggestions
 
-## Workflow
-
-- [Chaining two explicit observations can stop skin generation while compiling a text field's backdrop state.](Workflow/ChainedObserve.md)
-
 ## FullControlTest
 
 ### Showcase controls

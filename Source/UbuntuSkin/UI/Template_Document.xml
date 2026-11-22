@@ -45,7 +45,6 @@
       <ref.Members><![CDATA[
         prop Hovered : bool = false {}
         prop Entry : bool = false {}
-        prop EntryWindow : GuiWindowTemplate* = null {}
         prop Backdrop : bool = false {}
         prop Sidebar : bool = false {}
         prop Colors : EditorColors = ubuntuColors.EditorNormal {}
@@ -67,8 +66,10 @@
         }
       ]]></ref.Members>
       <ControlTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
-        <ev.renderTargetChanged-eval>self.EntryWindow = self.Entry ? FindWindowTemplate(self) : null;</ev.renderTargetChanged-eval>
-        <att.Backdrop-bind>not ((self.EntryWindow.Activated and self.EntryWindow.VisuallyEnabled) ?? true)</att.Backdrop-bind>
+        <att.Backdrop-bind><![CDATA[
+          self.observe as frame(frame.Entry ? FindWindowTemplate(frame) : null on frame.renderTargetChanged, frame.EntryChanged)
+              .observe as window(window is not null and not (window.Activated and window.VisuallyEnabled) on window.ActivatedChanged, window.VisuallyEnabledChanged)
+        ]]></att.Backdrop-bind>
         <att.Colors-bind><![CDATA[
           let state = (not self.VisuallyEnabled ? ubuntuColors.EditorDisabled : self.Backdrop ? ubuntuColors.EditorBackdrop : self.Focused ? ubuntuColors.EditorFocused : self.Hovered ? ubuntuColors.EditorHovered : ubuntuColors.EditorNormal) in ({
             Border: self.VisuallyEnabled and not self.Entry and not self.Focused and not self.Hovered ? ubuntuColors.Border : state.Border;

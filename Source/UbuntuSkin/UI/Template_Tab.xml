@@ -16,8 +16,16 @@
         <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize-bind="{x:0 y:(self.Selected or self.Highlighted or (self.VisuallyEnabled and self.State != ButtonState::Normal) ? 3 : 1)}">
           <SolidBackground Color-bind="not self.VisuallyEnabled ? ubuntuColors.DisabledInk : self.State == ButtonState::Pressed ? ubuntuColors.AccentPressed : self.Selected ? self.Colors.Bullet : self.Highlighted ? ubuntuColors.Focus : self.Colors.Border"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Selected and self.TabFocused">
-          <SolidBorder Color-bind="self.Colors.Border"/>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:3" Visible-bind="self.Selected and self.TabFocused">
+          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:-1" PreferredMinSize="y:1">
+            <SolidBackground Color-bind="self.Colors.Border"/>
+          </Bounds>
+          <Bounds AlignmentToParent="left:0 top:0 right:-1 bottom:0" PreferredMinSize="x:1">
+            <SolidBackground Color-bind="self.Colors.Border"/>
+          </Bounds>
+          <Bounds AlignmentToParent="left:-1 top:0 right:0 bottom:0" PreferredMinSize="x:1">
+            <SolidBackground Color-bind="self.Colors.Border"/>
+          </Bounds>
         </Bounds>
         <Bounds AlignmentToParent="left:10 top:4 right:10 bottom:4">
           <SolidLabel Color-bind="self.VisuallyEnabled ? self.Colors.Text : ubuntuColors.DisabledInk" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>

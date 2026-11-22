@@ -163,7 +163,7 @@
 
           ItemNormal: FlatButtonColors(clear, clear, ink, clear);
           ItemHovered: FlatButtonColors(clear, cast Color "#F7F7F7", ink, clear);
-          ItemPressed: FlatButtonColors(cast Color "#AAAAAA", cast Color "#F0F0F0", ink, clear);
+          ItemPressed: FlatButtonColors(clear, cast Color "#F0F0F0", ink, clear);
           ItemSelected: FlatButtonColors(clear, selected, ink, clear);
           ItemDisabled: FlatButtonColors(clear, clear, disabledInk, clear);
 
