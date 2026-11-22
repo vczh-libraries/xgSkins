@@ -1,9 +1,5 @@
 # TODO
 
-- `UbuntuStyle`
-  - Ubuntu ribbon/menu has color mistakes. Need research.
-  - Is ribbon header black?
-  - Menu is black but menu item is white?
 - Figure out how to make the vertical tab page align with skins:
   - `Layout` test page vertical tab page.
   - `Misc/RawClock` and `Misc/Touching` background.
