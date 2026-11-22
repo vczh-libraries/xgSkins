@@ -103,6 +103,8 @@ namespace vl
 			DECL_TYPE_INFO(::ubuntuskin::MenuItemButtonTemplateConstructor)
 			DECL_TYPE_INFO(::ubuntuskin::MenuSplitterTemplate)
 			DECL_TYPE_INFO(::ubuntuskin::MenuSplitterTemplateConstructor)
+			DECL_TYPE_INFO(::ubuntuskin::MultilineTextBoxTemplate)
+			DECL_TYPE_INFO(::ubuntuskin::MultilineTextBoxTemplateConstructor)
 			DECL_TYPE_INFO(::ubuntuskin::ProgressBarTemplate)
 			DECL_TYPE_INFO(::ubuntuskin::ProgressBarTemplateConstructor)
 			DECL_TYPE_INFO(::ubuntuskin::RadioButtonTemplate)
