@@ -191,7 +191,7 @@
     <Instance ref.CodeBehind="false" ref.Class="win11skin::ExpandingDecoratorTemplate" ref.Styles="res://Win11Skin/Style">
       <SelectableButtonTemplate ref.Name="self" PreferredMinSize="x:7 y:9" MinSizeLimitation="NoLimit">
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Selected">
-          <Polygon Size="x:6 y:9" BorderColor-bind="GetGlyphOutline(not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground)" BackgroundColor-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground">
+          <Polygon Size="x:6 y:9" BorderColor-eval="win11Colors.Transparent" BackgroundColor-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground">
             <att.Points>
               <Point>x:0 y:0</Point>
               <Point>x:1 y:0</Point>
@@ -203,7 +203,7 @@
           </Polygon>
         </Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Selected">
-          <Polygon Size="x:7 y:5" BorderColor-bind="GetGlyphOutline(not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground)" BackgroundColor-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground">
+          <Polygon Size="x:7 y:5" BorderColor-eval="win11Colors.Transparent" BackgroundColor-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground">
             <att.Points>
               <Point>x:0 y:0</Point>
               <Point>x:3 y:3</Point>

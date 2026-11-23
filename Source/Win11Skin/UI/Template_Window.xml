@@ -107,7 +107,7 @@
                 <att.Visible-bind>self.MinimizedBox or self.MaximizedBox</att.Visible-bind>
                 <att.ContainerComposition-set>
                   <BoundsComposition AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:46 y:32" MinSizeLimitation="LimitToElement">
-                    <Polygon Size="x:10 y:10" BorderColor-bind="GetGlyphOutline(self.VisuallyEnabled and self.Activated and self.MinimizedBox ? win11Colors.Foreground : win11Colors.Disabled)" BackgroundColor-bind="self.VisuallyEnabled and self.Activated and self.MinimizedBox ? win11Colors.Foreground : win11Colors.Disabled">
+                    <Polygon Size="x:10 y:10" BorderColor-eval="win11Colors.Transparent" BackgroundColor-bind="self.VisuallyEnabled and self.Activated and self.MinimizedBox ? win11Colors.Foreground : win11Colors.Disabled">
                       <att.Points>
                         <Point>x:0 y:4</Point>
                         <Point>x:10 y:4</Point>
@@ -203,7 +203,7 @@
       <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="x:46 y:32" MinSizeLimitation="LimitToElementAndChildren">
         <SolidBackground Color-bind="not self.VisuallyEnabled ? win11Colors.Transparent : self.State == ButtonState::Pressed ? win11Colors.ClosePressed : self.State == ButtonState::Active ? win11Colors.CloseHover : win11Colors.Transparent"/>
         <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <Polygon Size="x:10 y:10" BorderColor-bind="GetGlyphOutline(not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Foreground : win11Colors.CloseGlyph)" BackgroundColor-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Foreground : win11Colors.CloseGlyph">
+          <Polygon Size="x:10 y:10" BorderColor-eval="win11Colors.Transparent" BackgroundColor-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Foreground : win11Colors.CloseGlyph">
             <att.Points>
               <Point>x:6 y:5</Point>
               <Point>x:10 y:9</Point>

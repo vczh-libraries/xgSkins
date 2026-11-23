@@ -4,12 +4,10 @@
 
 ## GacUI
 
-- **P0**
-  - [A transparent polygon border can paint a black outline over a light glyph in GDI.](GacUI/TransparentPolygonPen.md)
 - **P1**
   - [After a theme change, a hosted window can report its full size while its caption and tabs have zero-size bounds.](GacUI/ThemeRefreshLayoutReadiness.md): Need to review the workaround
   - [The live ribbon gallery and editor document can both report keyboard focus in the same window.](GacUI/RetainedLogicalFocus.md): Need a proper repro
-  - [Movie rows keep their expanded height after the responsive layout returns to compact mode.](GacUI/ResponsiveListRowHeight.md)
+  - [Reloading visible styles retains the expanded movie-row height. FullControlTest now replaces the arranger on a level change.](GacUI/ResponsiveListRowHeight.md)
   - [A disabled document editor can keep its enabled text color even as its background changes.](GacUI/DisabledDocumentForeground.md)[After an edit, skin change and undo, a private document save can lose the final paragraph’s explicit font face and its bold-off and italic-off settings.](GacUI/DocumentUndoSerialization.md)
 - **NEED CLARIFICATION**
   - [A hosted File menu can open at zero size or one pixel square, clipping rows that already have measured bounds.](GacUI/HostedPopupMeasurement.md)

@@ -38,7 +38,7 @@
         <att.Colors-bind>GetScrollArrowColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
         <SolidBackground Color-bind="self.Colors.Fill"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <Polygon Size="x:6 y:9" BorderColor-bind="GetGlyphOutline(self.Colors.Text)" BackgroundColor-bind="self.Colors.Text">
+          <Polygon Size="x:6 y:9" BorderColor-eval="win10Colors.Transparent" BackgroundColor-bind="self.Colors.Text">
             <att.Points>
               <Point>x:4 y:0</Point>
               <Point>x:5 y:0</Point>
@@ -62,7 +62,7 @@
         <att.Colors-bind>GetScrollArrowColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
         <SolidBackground Color-bind="self.Colors.Fill"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <Polygon Size="x:6 y:9" BorderColor-bind="GetGlyphOutline(self.Colors.Text)" BackgroundColor-bind="self.Colors.Text">
+          <Polygon Size="x:6 y:9" BorderColor-eval="win10Colors.Transparent" BackgroundColor-bind="self.Colors.Text">
             <att.Points>
               <Point>x:0 y:0</Point>
               <Point>x:1 y:0</Point>
@@ -86,7 +86,7 @@
         <att.Colors-bind>GetScrollArrowColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
         <SolidBackground Color-bind="self.Colors.Fill"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <Polygon Size="x:9 y:6" BorderColor-bind="GetGlyphOutline(self.Colors.Text)" BackgroundColor-bind="self.Colors.Text">
+          <Polygon Size="x:9 y:6" BorderColor-eval="win10Colors.Transparent" BackgroundColor-bind="self.Colors.Text">
             <att.Points>
               <Point>x:0 y:4</Point>
               <Point>x:4 y:0</Point>
@@ -110,7 +110,7 @@
         <att.Colors-bind>GetScrollArrowColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
         <SolidBackground Color-bind="self.Colors.Fill"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <Polygon Size="x:9 y:6" BorderColor-bind="GetGlyphOutline(self.Colors.Text)" BackgroundColor-bind="self.Colors.Text">
+          <Polygon Size="x:9 y:6" BorderColor-eval="win10Colors.Transparent" BackgroundColor-bind="self.Colors.Text">
             <att.Points>
               <Point>x:0 y:0</Point>
               <Point>x:4 y:4</Point>

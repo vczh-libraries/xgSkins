@@ -61,7 +61,7 @@
           </Bounds>
 
           <Bounds AlignmentToParent="left:-1 top:1 right:2 bottom:1" PreferredMinSize="x:9 y:3" MinSizeLimitation="NoLimit">
-            <Polygon Size="x:9 y:6" BorderColor-bind="GetGlyphOutline(self.Colors.Text)" BackgroundColor-bind="self.Colors.Text">
+            <Polygon Size="x:9 y:6" BorderColor-eval="win10Colors.Transparent" BackgroundColor-bind="self.Colors.Text">
               <att.Points>
                 <Point>x:0 y:0</Point>
                 <Point>x:4 y:4</Point>
@@ -155,7 +155,7 @@
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:7 y:9" MinSizeLimitation="NoLimit">
           <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Selected">
-            <Polygon Size="x:6 y:9" BorderColor-bind="GetGlyphOutline(not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.SecondaryText : win10Colors.Text)" BackgroundColor-bind="not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.SecondaryText : win10Colors.Text">
+            <Polygon Size="x:6 y:9" BorderColor-eval="win10Colors.Transparent" BackgroundColor-bind="not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.SecondaryText : win10Colors.Text">
               <att.Points>
                 <Point>x:0 y:0</Point>
                 <Point>x:1 y:0</Point>
@@ -167,7 +167,7 @@
             </Polygon>
           </Bounds>
           <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Selected">
-            <Polygon Size="x:7 y:5" BorderColor-bind="GetGlyphOutline(not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.SecondaryText : win10Colors.Text)" BackgroundColor-bind="not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.SecondaryText : win10Colors.Text">
+            <Polygon Size="x:7 y:5" BorderColor-eval="win10Colors.Transparent" BackgroundColor-bind="not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.SecondaryText : win10Colors.Text">
               <att.Points>
                 <Point>x:0 y:0</Point>
                 <Point>x:3 y:3</Point>

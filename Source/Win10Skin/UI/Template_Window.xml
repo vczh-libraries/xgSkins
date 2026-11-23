@@ -107,7 +107,7 @@
                 <att.Visible-bind>self.MinimizedBox or self.MaximizedBox</att.Visible-bind>
                 <att.ContainerComposition-set>
                   <BoundsComposition AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:46 y:32" MinSizeLimitation="LimitToElement">
-                    <Polygon Size="x:10 y:10" BorderColor-bind="GetGlyphOutline(self.VisuallyEnabled and self.Activated and self.MinimizedBox ? win10Colors.Text : win10Colors.DisabledText)" BackgroundColor-bind="self.VisuallyEnabled and self.Activated and self.MinimizedBox ? win10Colors.Text : win10Colors.DisabledText">
+                    <Polygon Size="x:10 y:10" BorderColor-eval="win10Colors.Transparent" BackgroundColor-bind="self.VisuallyEnabled and self.Activated and self.MinimizedBox ? win10Colors.Text : win10Colors.DisabledText">
                       <att.Points>
                         <Point>x:0 y:4</Point>
                         <Point>x:10 y:4</Point>
@@ -203,7 +203,7 @@
       <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="x:46 y:32" MinSizeLimitation="LimitToElementAndChildren">
         <SolidBackground Color-bind="not self.VisuallyEnabled ? win10Colors.Transparent : self.State == ButtonState::Pressed ? win10Colors.ClosePressed : self.State == ButtonState::Active ? win10Colors.CloseHovered : win10Colors.Transparent"/>
         <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <Polygon Size="x:10 y:10" BorderColor-bind="GetGlyphOutline(not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.Text : win10Colors.OnAccent)" BackgroundColor-bind="not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.Text : win10Colors.OnAccent">
+          <Polygon Size="x:10 y:10" BorderColor-eval="win10Colors.Transparent" BackgroundColor-bind="not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.Text : win10Colors.OnAccent">
             <att.Points>
               <Point>x:6 y:5</Point>
               <Point>x:10 y:9</Point>

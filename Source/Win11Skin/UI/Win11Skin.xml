@@ -50,12 +50,6 @@
         EditorDisabled : EditorColors;
       }
 
-      /* GDI paints polygon pens using RGB even when the stroke is transparent. */
-      func GetGlyphOutline(fill : Color) : Color
-      {
-        return {r:fill.r; g:fill.g; b:fill.b; a:win11Colors.Transparent.a;};
-      }
-
       func CreateColorPackageInternal(dark : bool) : ColorPackage
       {
         var canvas = dark ? cast Color "#202020" : cast Color "#F3F3F3";

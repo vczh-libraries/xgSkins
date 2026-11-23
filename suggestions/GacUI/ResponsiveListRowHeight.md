@@ -1,11 +1,13 @@
 # Responsive movie rows keep their expanded height after shrinking
 
-The FullControlTest movie list retains its detailed row height when returned to the
-compact layout. DarkSkin, Win7Skin, Win8Skin and WinXPSkin all showed the behavior.
+The FullControlTest movie list retained its detailed row height when it reloaded
+visible styles on return to the compact layout. DarkSkin, Win7Skin, Win8Skin and
+WinXPSkin all showed the behavior.
 
 ## Repro
 
-Start `FullControlTest /D2D /Hosted` and open **Layout / Easy Layout (Responsive)**.
+In a build that calls `ReloadVisibleStyles()` on a level change, start
+`FullControlTest /D2D /Hosted` and open **Layout / Easy Layout (Responsive)**.
 The `ResponsiveWindow` scenario performs the same sequence.
 [<GacUI-repo>/Test/UIA_CppTest_Shared.cs](https://github.com/vczh-libraries/GacUI/blob/master/Test/UIA_CppTest_Shared.cs).
 
@@ -32,19 +34,20 @@ after shrinking. See `%TEMP%/xgskins-verification/Win8Skin/ResponsiveWindow.log`
 separate `ResponsiveRemaining` continuation passed 877 assertions for other
 appearances, accounts, the footer, selection and modal closure. Its log is
 `%TEMP%/xgskins-winxp-ResponsiveRemaining.log`. The compact-row check still fails in
-the current hosted XP build.
+the recorded hosted XP build.
 [XP verification](../../doc/WinXPSkinVerification.md#easy-layout-and-responsive-continuations).
 
 ## Workaround
 
-N/A
+The released showcase installs a new `FixedHeightItemArranger` when the responsive
+level changes so that the list measures the new row templates.
 
 ## Root Cause
 
 Source inspection points to the fixed-height row cache. The recorded runs did not
 trace the execution path in a debugger.
 
-- The showcase's `movieGroup.CurrentLevelChanged` handler calls
+- The previous `movieGroup.CurrentLevelChanged` handler called
   `movieList.Arranger.ReloadVisibleStyles()` after changing the responsive level.
 - In
   [<GacUI-repo>/Source/GraphicsComposition/GuiGraphicsRepeatComposition_Virtual.cpp](https://github.com/vczh-libraries/GacUI/blob/master/Source/GraphicsComposition/GuiGraphicsRepeatComposition_Virtual.cpp),
