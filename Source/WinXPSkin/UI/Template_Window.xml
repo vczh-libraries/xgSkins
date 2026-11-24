@@ -50,7 +50,10 @@
         <ev.CustomFramePaddingChanged-eval>
           <![CDATA[
             {
-              var margin = self.CustomFramePadding;
+              var padding = self.CustomFramePadding;
+              var margin = {left:(padding.left > 0 ? 9 : 0); top:padding.top;
+                            right:(padding.right > 0 ? 9 : 0); bottom:(padding.bottom > 0 ? 9 : 0);} of Margin;
+              contentTable.AlignmentToParent = margin;
               frameTable.SetRowOption(0, {composeType:Absolute absolute:margin.top});
               frameTable.SetRowOption(2, {composeType:Absolute absolute:margin.bottom});
               frameTable.SetColumnOption(0, {composeType:Absolute absolute:margin.left});
@@ -61,8 +64,44 @@
 
         <SolidBackground Color-bind="self.Activated ? winxpColors.WindowFrameActive : winxpColors.WindowFrameInactive" Shape="shapeType:RoundRect radiusX:5 radiusY:5"/>
         <Bounds AlignmentToParent="left:0 top:5 right:0 bottom:0"><SolidBackground Color-bind="self.Activated ? winxpColors.WindowFrameActive : winxpColors.WindowFrameInactive"/></Bounds>
+        <!-- The bevel spans the top resize band and the caption, up to the client edge. -->
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:-1" PreferredMinSize-bind="{x:0 y:(self.CustomFramePadding.top + clientCell.CachedBounds.y1)}" MinSizeLimitation="NoLimit" Visible-bind="self.TitleBar">
+          <Table AlignmentToParent="left:1 top:1 right:1 bottom:0">
+            <att.Rows>
+              <CellOption>composeType:Absolute absolute:6</CellOption>
+              <CellOption>composeType:Percentage percentage:0.55</CellOption>
+              <CellOption>composeType:Percentage percentage:0.45</CellOption>
+              <CellOption>composeType:Absolute absolute:3</CellOption>
+              <CellOption>composeType:Absolute absolute:3</CellOption>
+            </att.Rows>
+            <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+            <Cell Site="row:0 column:0">
+              <GradientBackground Direction="Vertical" Color1-bind="self.Activated ? winxpColors.WindowCaptionTop : winxpColors.WindowInactiveTop" Color2-bind="self.Activated ? winxpColors.WindowCaptionBodyTop : winxpColors.WindowInactiveBodyTop" Shape="shapeType:RoundRect radiusX:4 radiusY:3"/>
+              <Bounds AlignmentToParent="left:4 top:0 right:4 bottom:-1" PreferredMinSize="y:1">
+                <SolidBackground Color-bind="self.Activated ? winxpColors.WindowCaptionTop : winxpColors.WindowInactiveTop"/>
+              </Bounds>
+            </Cell>
+            <Cell Site="row:1 column:0">
+              <SolidBackground Color-bind="self.Activated ? winxpColors.WindowCaptionBodyTop : winxpColors.WindowInactiveBodyTop"/>
+            </Cell>
+            <Cell Site="row:2 column:0">
+              <GradientBackground Direction="Vertical" Color1-bind="self.Activated ? winxpColors.WindowCaptionBodyTop : winxpColors.WindowInactiveBodyTop" Color2-bind="self.Activated ? winxpColors.WindowCaptionBodyBottom : winxpColors.WindowInactiveBodyBottom"/>
+            </Cell>
+            <Cell Site="row:3 column:0">
+              <SolidBackground Color-bind="self.Activated ? winxpColors.WindowCaptionBodyBottom : winxpColors.WindowInactiveBodyBottom"/>
+            </Cell>
+            <Cell Site="row:4 column:0">
+              <GradientBackground Direction="Vertical" Color1-bind="self.Activated ? winxpColors.WindowCaptionBodyBottom : winxpColors.WindowInactiveBodyBottom" Color2-bind="self.Activated ? winxpColors.WindowBorderActive : winxpColors.WindowBorderInactive"/>
+            </Cell>
+          </Table>
+        </Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder ref.Style="windowBorder" Shape="shapeType:RoundRect radiusX:5 radiusY:5"/>
+
+          <Bounds AlignmentToParent-bind="{left:(self.CustomFramePadding.left &gt; 0 ? 4 : 0) top:(self.CustomFramePadding.top + clientCell.CachedBounds.y1)
+                                          right:(self.CustomFramePadding.right &gt; 0 ? 4 : 0) bottom:(self.CustomFramePadding.bottom &gt; 0 ? 4 : 0)}">
+            <SolidBackground ref.Style="generalBackground"/>
+          </Bounds>
 
           <Table ref.Name="frameTable" AlignmentToParent="left:0 top:0 right:0 bottom:0">
             <att.Rows>
@@ -87,7 +126,7 @@
             <Cell Site="row:2 column:1" AssociatedHitTestResult="BorderBottom"/>
           </Table>
 
-          <Table ref.Name="contentTable" AlignmentToParent-bind="self.CustomFramePadding">
+          <Table ref.Name="contentTable" AlignmentToParent="left:0 top:0 right:0 bottom:0">
             <att.Rows>
               <CellOption>composeType:MinSize</CellOption>
               <CellOption>composeType:Percentage percentage:1.0</CellOption>
@@ -95,10 +134,6 @@
             <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
 
             <Cell Site="row:0 column:0">
-              <GradientBackground Direction="Vertical" Color1-bind="self.Activated ? winxpColors.WindowCaptionBodyTop : winxpColors.WindowInactiveBodyTop" Color2-bind="self.Activated ? winxpColors.WindowCaptionBodyBottom : winxpColors.WindowInactiveBodyBottom" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
-              <Bounds AlignmentToParent="left:0 top:5 right:0 bottom:0"><GradientBackground Direction="Vertical" Color1-bind="self.Activated ? winxpColors.WindowCaptionBodyTop : winxpColors.WindowInactiveBodyTop" Color2-bind="self.Activated ? winxpColors.WindowCaptionBodyBottom : winxpColors.WindowInactiveBodyBottom"/></Bounds>
-              <Bounds AlignmentToParent="left:2 top:0 right:2 bottom:-1" PreferredMinSize="x:0 y:3"><GradientBackground Direction="Vertical" Color1-bind="self.Activated ? winxpColors.WindowCaptionTop : winxpColors.WindowInactiveTop" Color2-bind="self.Activated ? winxpColors.WindowCaptionBodyTop : winxpColors.WindowInactiveBodyTop"/></Bounds>
-
               <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
                 <att.Rows><CellOption>composeType:MinSize</CellOption></att.Rows>
                 <att.Columns>
@@ -173,8 +208,8 @@
                 </Cell>
               </Table>
             </Cell>
-            <Cell Site="row:1 column:0" AssociatedHitTestResult="Client">
-              <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBackground ref.Style="generalBackground"/></Bounds>
+            <Cell ref.Name="clientCell" Site="row:1 column:0" AssociatedHitTestResult="Client">
+              <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
             </Cell>
           </Table>
         </Bounds>

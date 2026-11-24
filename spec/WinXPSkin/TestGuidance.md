@@ -25,7 +25,7 @@ changes; creating the skin requires the full showcase verification described in
 - winxpskin::CustomFrameWindowTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - winxpskin::CaptionButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - winxpskin::CaptionCloseButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
-- winxpskin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager.
+- winxpskin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager, Misc / Dialogs / FontDialog.
 - winxpskin::LabelTemplate: List / TextList, Layout / Easy Layout, Window Manager, Misc / Localization.
 - winxpskin::ShortcutKeyTemplate: Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Window Manager.
 - winxpskin::DateButtonTemplate: Misc / DatePicker, List / BindableDataGrid.
@@ -141,6 +141,13 @@ changes; creating the skin requires the full showcase verification described in
 - Traverse every `Refresh List` page and verify that refreshed or newly
   realized items use the active skin. Verify checkbox/radio list styles and
   column-header sort/filter states independently.
+- Compare the Color Theme group on Window Manager with the groups in the font
+  dialog. The tab surface and the beige dialog surface should each show through
+  both the group body and the gap around its caption.
+- Inspect the custom caption from the top resize edge to the client. Its upper
+  highlight, recessed center and lower bevel should span the window in both
+  active and inactive colors. Drag inside the five client-colored pixels on
+  each side and along the bottom to check resizing.
 - Open date, combo, menu, tooltip and modal popups. Check placement, clipping,
   dismissal and restored owner input. Check close, minimize, maximize and
   resize behavior wherever the window permits it. System-frame artwork is

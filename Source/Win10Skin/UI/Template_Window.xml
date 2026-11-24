@@ -50,7 +50,10 @@
         <ev.CustomFramePaddingChanged-eval>
           <![CDATA[
             {
-              var margin = self.CustomFramePadding;
+              var padding = self.CustomFramePadding;
+              var margin = {left:(padding.left > 0 ? 9 : 0); top:padding.top;
+                            right:(padding.right > 0 ? 9 : 0); bottom:(padding.bottom > 0 ? 9 : 0);} of Margin;
+              contentTable.AlignmentToParent = margin;
               frameTable.SetRowOption(0, {composeType:Absolute absolute:margin.top});
               frameTable.SetRowOption(2, {composeType:Absolute absolute:margin.bottom});
               frameTable.SetColumnOption(0, {composeType:Absolute absolute:margin.left});
@@ -62,6 +65,14 @@
         <SolidBackground Color-eval="win10Colors.Page"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder ref.Style="windowBorder"/>
+
+          <Bounds AlignmentToParent-bind="{left:0 top:(self.CustomFramePadding.top + clientCell.CachedBounds.y1) right:0 bottom:0}">
+            <SolidBackground ref.Style="windowBorder"/>
+            <Bounds AlignmentToParent-bind="{left:(self.CustomFramePadding.left &gt; 0 ? 4 : 0) top:0
+                                            right:(self.CustomFramePadding.right &gt; 0 ? 4 : 0) bottom:(self.CustomFramePadding.bottom &gt; 0 ? 4 : 0)}">
+              <SolidBackground Color-eval="win10Colors.WindowSurface"/>
+            </Bounds>
+          </Bounds>
 
           <Table ref.Name="frameTable" AlignmentToParent="left:0 top:0 right:0 bottom:0">
             <att.Rows>
@@ -86,7 +97,7 @@
             <Cell Site="row:2 column:1" AssociatedHitTestResult="BorderBottom"/>
           </Table>
 
-          <Table ref.Name="contentTable" AlignmentToParent-bind="self.CustomFramePadding">
+          <Table ref.Name="contentTable" AlignmentToParent="left:0 top:0 right:0 bottom:0">
             <att.Rows>
               <CellOption>composeType:MinSize</CellOption>
               <CellOption>composeType:Percentage percentage:1.0</CellOption>
@@ -182,8 +193,8 @@
                 <SolidLabel ref.Style="windowTitle" Text-bind="self.Text" Ellipse="true" Font-bind="self.Font" HorizontalAlignment="Left"/>
               </Bounds>
             </Cell>
-            <Cell Site="row:1 column:0 columnSpan:5" AssociatedHitTestResult="Client">
-              <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBackground Color-eval="win10Colors.WindowSurface"/></Bounds>
+            <Cell ref.Name="clientCell" Site="row:1 column:0 columnSpan:5" AssociatedHitTestResult="Client">
+              <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
             </Cell>
           </Table>
         </Bounds>

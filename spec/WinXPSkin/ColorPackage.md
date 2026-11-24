@@ -88,7 +88,7 @@ outer borders of list/tree controls. It does not define item selection.
 
 | ColorPackage item | Required use |
 | --- | --- |
-| `GeneralBackground` | Beige window client areas, generic scroll views, tracker surrounds, group boxes and calendar background. |
+| `GeneralBackground` | Beige window client areas, generic scroll views, tracker surrounds and calendar background. |
 | `GeneralBorder` | General control outlines and generic scroll-view borders. |
 | `GeneralAccent` | Document selection background and focused combo-box text background. |
 | `ContentBackground` | White document, list and tree content surfaces. |
@@ -98,7 +98,7 @@ outer borders of list/tree controls. It does not define item selection.
 | `TextSecondary` | Secondary calendar text for adjacent-month dates. |
 | `TextDisabled` | Disabled labels, controls and glyphs. |
 | `GroupText` | Enabled group-box caption. |
-| `GroupBorder` | Subtle group-box border. |
+| `GroupBorder` | Rounded outline with a gap for the caption. The parent surface shows through the group and its caption. |
 | `SelectionText` | Document selection and focused combo-box text foreground, paired with `GeneralAccent`. |
 | `ButtonBackgroundHovered` | Unfocused ribbon-gallery outline. |
 | `ControlAccentHovered` | Focused ribbon-gallery outline. |
@@ -179,14 +179,14 @@ outer borders of list/tree controls. It does not define item selection.
 | --- | --- |
 | `WindowFrameActive` | Active blue custom-frame sides and lower edge. |
 | `WindowFrameInactive` | Muted blue inactive custom-frame sides and lower edge. |
-| `WindowBorderActive` | Active custom-frame outline. |
-| `WindowBorderInactive` | Inactive custom-frame outline. |
+| `WindowBorderActive` | Active custom-frame outline and lower caption shadow. |
+| `WindowBorderInactive` | Inactive custom-frame outline and lower caption shadow. |
 | `WindowCaptionTop` | Light upper edge of the active blue caption. |
-| `WindowCaptionBodyTop` | Upper endpoint of the main active-caption gradient. |
-| `WindowCaptionBodyBottom` | Lower endpoint of the main active-caption gradient. |
+| `WindowCaptionBodyTop` | Recessed blue center of the active caption. |
+| `WindowCaptionBodyBottom` | Raised highlight above the lower edge of the active caption. |
 | `WindowInactiveTop` | Light upper edge of the inactive caption. |
-| `WindowInactiveBodyTop` | Upper endpoint of the main inactive-caption gradient. |
-| `WindowInactiveBodyBottom` | Lower endpoint of the main inactive-caption gradient. |
+| `WindowInactiveBodyTop` | Recessed center of the inactive caption. |
+| `WindowInactiveBodyBottom` | Raised highlight above the lower edge of the inactive caption. |
 | `WindowCaptionText` | Active enabled caption text and caption-button glyphs. |
 | `WindowCaptionTextInactive` | Inactive or disabled caption text and caption-button glyphs. |
 | `WindowCaptionShadow` | One-pixel shadow beneath active caption text. |

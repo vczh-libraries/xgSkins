@@ -22,7 +22,8 @@ function Read-WindowManager {
     if ($state.WindowManagement -ne 'Hosted' -or $state.MainWindow.title -ne 'Complete Control Showcase') {
         throw 'Expected a hosted FullControlTest window.'
     }
-    $page = @{ Tab = $null; Bounds = [ordered]@{}; Targets = @{} }
+    $windowBounds = Get-Rectangle $state.MainWindow.bounds
+    $page = @{ WindowWidth = $windowBounds.Width; Tab = $null; Bounds = [ordered]@{}; Targets = @{} }
     function Visit-Composition($node, $clip, $owner) {
         $bounds = Get-Rectangle $node.bounds
         $visible = [Drawing.Rectangle]::Intersect($clip, $bounds)
@@ -38,12 +39,19 @@ function Read-WindowManager {
             $page.Targets[$name] = $visible
             foreach ($part in 'control', 'label') {
                 $r = if ($part -eq 'control') { Get-Rectangle $owner.bounds } else { $bounds }
-                $page.Bounds["$name $part"] = '{0},{1} {2}x{3}' -f ($r.X - $page.Tab.X), ($r.Y - $page.Tab.Y), $r.Width, $r.Height
+                $x = $r.X - $page.Tab.X
+                $span = "width=$($r.Width)"
+                if ($owner.control -eq 'RadioButton') {
+                    # The radios fill the right half of the page. Compare both anchors as the client width changes.
+                    $x -= [Math]::Floor($page.Tab.Width / 2)
+                    if ($part -eq 'control') { $span = "rightInset=$($page.Tab.Right - $r.Right)" }
+                }
+                $page.Bounds["$name $part"] = "x=$x y=$($r.Y - $page.Tab.Y) $span height=$($r.Height)"
             }
         }
         foreach ($child in $node.children) { Visit-Composition $child $visible $owner }
     }
-    Visit-Composition $state.MainWindow.composition (Get-Rectangle $state.MainWindow.bounds) $null
+    Visit-Composition $state.MainWindow.composition $windowBounds $null
     return $page
 }
 
@@ -103,12 +111,12 @@ $baseline = Measure-Palette 'DarkSkin' ($fixedNames + 'DarkSkin' + $Skin)
 $radioNames = @($baseline.Targets.Keys | Where-Object { $_ -notin $fixedNames })
 foreach ($name in $Skin) {
     $sample = Measure-Palette $name ($fixedNames + $radioNames)
-    if ($sample.Tab.Width -ne $baseline.Tab.Width) {
-        throw "$name client tab width $($sample.Tab.Width) differs from DarkSkin width $($baseline.Tab.Width)."
+    if ($sample.WindowWidth -ne $baseline.WindowWidth) {
+        throw "$name window width $($sample.WindowWidth) differs from DarkSkin window width $($baseline.WindowWidth)."
     }
     foreach ($key in $baseline.Bounds.Keys) {
         if ($sample.Bounds[$key] -ne $baseline.Bounds[$key]) {
-            throw "$name '$key' measured $($sample.Bounds[$key]), expected $($baseline.Bounds[$key]) relative to the main tab."
+            throw "$name '$key' measured $($sample.Bounds[$key]), expected $($baseline.Bounds[$key]) in its Window Manager column."
         }
     }
     Write-Output "$name matched all $($baseline.Bounds.Count) Window Manager control and label rectangles."

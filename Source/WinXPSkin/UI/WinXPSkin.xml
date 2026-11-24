@@ -616,12 +616,12 @@
           WindowFrameInactive: cast Color "#7A96DF";
           WindowBorderActive: cast Color "#003C9C";
           WindowBorderInactive: cast Color "#5A79B2";
-          WindowCaptionTop: cast Color "#0372FF";
-          WindowCaptionBodyTop: cast Color "#0154E2";
-          WindowCaptionBodyBottom: cast Color "#0061FA";
-          WindowInactiveTop: cast Color "#89ABE8";
-          WindowInactiveBodyTop: cast Color "#7A96DF";
-          WindowInactiveBodyBottom: cast Color "#7FA0E7";
+          WindowCaptionTop: cast Color "#429DFF";
+          WindowCaptionBodyTop: cast Color "#0054E6";
+          WindowCaptionBodyBottom: cast Color "#086AFF";
+          WindowInactiveTop: cast Color "#ADC7F2";
+          WindowInactiveBodyTop: cast Color "#7995DA";
+          WindowInactiveBodyBottom: cast Color "#91ADEB";
           WindowCaptionText: cast Color "#FFFFFF";
           WindowCaptionTextInactive: cast Color "#D8E4F8";
           WindowCaptionShadow: cast Color "#003399";
