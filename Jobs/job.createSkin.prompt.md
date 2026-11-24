@@ -52,3 +52,11 @@ you need to do research first and make sure:
 
 Although this repo is running on Windows, but generated C++ code files could be used in any platform.
 It means you are not allowed to use any special font to achieve drawing, you need to rely on the standard `<Polygon/>` element.
+
+## Window Borders
+
+Just like `DarkSkin`, the border of the window frame has a visually gap between the window content and the frame itself.
+The top gap is 0, left/right/bottom gap is 5.
+When you make a window frame you should follow this rule,
+so that a `<ez:Layout AlignmentToParent="left:5 top:0 right:0 bottom:0"/>` will visually rendered as having a 5 pixel gap to all sides.
+But even when the inner 5 pixel of left/right/bottom looks like content area, they should still have border hittest when required by the window template.
