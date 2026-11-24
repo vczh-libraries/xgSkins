@@ -75,7 +75,6 @@
         <att.Highlighted-bind>(cast (RibbonTabPage*) self.SelectedTabPage).Highlighted ?? false</att.Highlighted-bind>
 
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBackground Color-bind="self.IsRibbon ? ubuntuColors.TabSelected.G1 : ubuntuColors.WindowBackground"/>
           <att.Rows>
             <CellOption>composeType:MinSize</CellOption>
             <CellOption>composeType:Absolute absolute:0</CellOption>
@@ -88,18 +87,19 @@
           </att.Columns>
 
           <Cell ref.Name="beforeHeadersContainer" Site="row:0 column:0">
+            <SolidBackground Color-bind="self.IsRibbon ? ubuntuColors.TabSelected.G1 : ubuntuColors.WindowBackground"/>
             <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="x:0 y:1">
               <SolidBackground Color-bind="self.IsRibbon ? ubuntuColors.Divider : ubuntuColors.TabNormal.Border"/>
             </Bounds>
           </Cell>
           <Cell ref.Name="afterHeadersContainer" Site="row:0 column:2">
+            <SolidBackground Color-bind="self.IsRibbon ? ubuntuColors.TabSelected.G1 : ubuntuColors.WindowBackground"/>
             <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="x:0 y:1">
               <SolidBackground Color-bind="self.IsRibbon ? ubuntuColors.Divider : ubuntuColors.TabNormal.Border"/>
             </Bounds>
           </Cell>
 
           <Cell Site="row:0 column:1">
-            <SolidBackground Color-eval="ubuntuColors.TabNormal.G1"/>
             <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize="x:0 y:1">
               <SolidBackground Color-bind="self.IsRibbon ? ubuntuColors.Divider : ubuntuColors.TabNormal.Border"/>
             </Bounds>

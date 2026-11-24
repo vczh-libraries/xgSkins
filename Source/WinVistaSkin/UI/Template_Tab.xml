@@ -53,6 +53,7 @@
         ]]>
       </ref.Members>
       <ControlTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <SolidBackground Color-eval="(CurrentTabPage is RibbonTabPage*) ? vistaColors.RibbonTabStrip : vistaColors.GeneralBackground"/>
         <CheckBox ControlTemplate="winvistaskin::TabHeaderButtonTemplate" AutoFocus="false" AutoSelection="false">
           <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           <att.Context-ref>CurrentTabPage</att.Context-ref>
@@ -109,7 +110,6 @@
         <att.Highlighted-bind>(cast (RibbonTabPage*) self.SelectedTabPage).Highlighted ?? false</att.Highlighted-bind>
 
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBackground Color-bind="self.IsRibbon ? vistaColors.RibbonTabStrip : vistaColors.GeneralBackground"/>
           <att.Rows>
             <CellOption>composeType:MinSize</CellOption>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
@@ -121,11 +121,13 @@
           </att.Columns>
 
           <Cell ref.Name="beforeHeadersContainer" Site="row:0 column:0">
+            <SolidBackground Color-bind="self.IsRibbon ? vistaColors.RibbonTabStrip : vistaColors.GeneralBackground"/>
             <SideAligned Direction="Bottom" MaxLength="1" MaxRatio="1.0">
               <SolidBackground Color-bind="self.IsRibbon ? vistaColors.RibbonBorder : vistaColors.TabNormal.Border"/>
             </SideAligned>
           </Cell>
           <Cell ref.Name="afterHeadersContainer" Site="row:0 column:2">
+            <SolidBackground Color-bind="self.IsRibbon ? vistaColors.RibbonTabStrip : vistaColors.GeneralBackground"/>
             <SideAligned Direction="Bottom" MaxLength="1" MaxRatio="1.0">
               <SolidBackground Color-bind="self.IsRibbon ? vistaColors.RibbonBorder : vistaColors.TabNormal.Border"/>
             </SideAligned>

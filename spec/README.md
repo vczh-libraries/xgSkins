@@ -9,7 +9,8 @@ resizable window. The close button ends at the inside edge of this frame. Beside
 and below the client, five more pixels of client background also accept resizing.
 
 Group boxes show their parent surface through the body and the gap in the
-outline around the caption.
+outline around the caption. The empty space after the last tab button on each
+header row also shows the parent surface. Each tab page supplies its own background.
 
 - Win7Skin: [colors](Win7Skin/ColorPackage.md), [animation](Win7Skin/Animation.md),
   [test guidance](Win7Skin/TestGuidance.md).

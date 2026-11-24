@@ -27,7 +27,7 @@ The Text command under the pointer in the Windows 10 Paint ribbon has a `#D5E6F7
 | `WindowEdgeInactive` | `#CCCCCC` | `#3A3A3A` | Inactive custom frame outline. |
 | `CloseHovered` | `#E81123` | `#E81123` | Close caption button while hovered. |
 | `ClosePressed` | `#C50F1F` | `#A00B18` | Close caption button while pressed. |
-| `WindowSurface` | `#F0F0F0` | `#191919` | Window client background and band behind tab headers. |
+| `WindowSurface` | `#F0F0F0` | `#191919` | Window client background and backing beneath individual property-sheet tab headers. |
 | `RibbonSurface` | `#F5F6F7` | `#212121` | Ribbon band, selected header and gallery flyout. |
 | `RibbonBorder` | `#DADBDC` | `#404040` | Ribbon band outline and selected header edge. |
 | `MenuHighlight` | `#99D1FF` | `#414141` | Hovered popup-menu item or open submenu. |

@@ -37,9 +37,22 @@
       <ref.Members>
         <![CDATA[
           prop Commands : ITabCommandExecutor* = null {}
+          prop FlowItem : GuiFlowItemComposition* = null {}
         ]]>
       </ref.Members>
       <ControlTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <!-- The page divider runs behind the bottom row of translucent headers. -->
+        <Bounds>
+          <att.AlignmentToParent-bind><![CDATA[
+            let item = self.FlowItem in (
+              {left:0; top:0; right:0; bottom:(
+                item is not null and item.Parent is not null and
+                item.CachedBounds.y2 == item.Parent.CachedBounds.y2 - item.Parent.CachedBounds.y1 ? 1 : 0
+              );} of Margin
+            )
+          ]]></att.AlignmentToParent-bind>
+          <SolidBackground Color-eval="(CurrentTabPage is RibbonTabPage*) ? win8Colors.TabSelected.G1 : win8Colors.GeneralBackground"/>
+        </Bounds>
         <CheckBox ControlTemplate="win8skin::TabHeaderButtonTemplate" AutoFocus="false" AutoSelection="false">
           <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           <att.Context-ref>CurrentTabPage</att.Context-ref>
@@ -96,7 +109,6 @@
         <att.Highlighted-bind>(cast (RibbonTabPage*) self.SelectedTabPage).Highlighted ?? false</att.Highlighted-bind>
 
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBackground Color-bind="self.IsRibbon ? win8Colors.TabSelected.G1 : win8Colors.GeneralBackground"/>
           <att.Rows>
             <CellOption>composeType:MinSize</CellOption>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
@@ -108,11 +120,13 @@
           </att.Columns>
 
           <Cell ref.Name="beforeHeadersContainer" Site="row:0 column:0">
+            <SolidBackground Color-bind="self.IsRibbon ? win8Colors.TabSelected.G1 : win8Colors.GeneralBackground"/>
             <SideAligned Direction="Bottom" MaxLength="1">
               <SolidBackground Color-bind="self.IsRibbon ? win8Colors.RibbonBorder : win8Colors.TabNormal.Border"/>
             </SideAligned>
           </Cell>
           <Cell ref.Name="afterHeadersContainer" Site="row:0 column:2">
+            <SolidBackground Color-bind="self.IsRibbon ? win8Colors.TabSelected.G1 : win8Colors.GeneralBackground"/>
             <SideAligned Direction="Bottom" MaxLength="1">
               <SolidBackground Color-bind="self.IsRibbon ? win8Colors.RibbonBorder : win8Colors.TabNormal.Border"/>
             </SideAligned>
@@ -131,6 +145,7 @@
                     var flowItem = header.FlowItems[arguments.itemIndex];
                     var item = cast (TabHeaderTemplate*) flowItem.Children[0];
                     item.Commands = self.Commands;
+                    item.FlowItem = flowItem;
                     self.UpdateTabHeader();
                   }
                 ]]>

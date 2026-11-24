@@ -12,6 +12,9 @@
         <att.Highlighted-bind>(cast (RibbonTabPage*) self.Context).Highlighted ?? false</att.Highlighted-bind>
         <att.TabFocused-bind>(cast (TabPage*) self.Context).OwnerTab.Focused ?? false</att.TabFocused-bind>
         <att.Colors-bind>not self.VisuallyEnabled ? winxpColors.TabDisabled : self.Selected ? winxpColors.TabSelected : self.State != ButtonState::Normal ? winxpColors.TabHovered : winxpColors.TabNormal</att.Colors-bind>
+        <Bounds AlignmentToParent="left:2 top:1 right:2 bottom:-1" PreferredMinSize="y:1">
+          <SolidBackground Color-bind="self.Context is RibbonTabPage* ? winxpColors.TabSelected.G1 : winxpColors.GeneralBackground"/>
+        </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:0">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
@@ -105,7 +108,6 @@
         <att.Highlighted-bind>(cast (RibbonTabPage*) self.SelectedTabPage).Highlighted ?? false</att.Highlighted-bind>
 
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBackground Color-bind="self.IsRibbon ? winxpColors.TabSelected.G1 : winxpColors.GeneralBackground"/>
           <att.Rows>
             <CellOption>composeType:MinSize</CellOption>
             <CellOption>composeType:Absolute absolute:2</CellOption>
@@ -118,11 +120,13 @@
           </att.Columns>
 
           <Cell ref.Name="beforeHeadersContainer" Site="row:0 column:0">
+            <SolidBackground Color-bind="self.IsRibbon ? winxpColors.TabSelected.G1 : winxpColors.GeneralBackground"/>
             <SideAligned Direction="Bottom" MaxLength="1" MaxRatio="1.0">
               <SolidBackground Color-bind="self.IsRibbon ? winxpColors.RibbonBorder : winxpColors.TabNormal.Border"/>
             </SideAligned>
           </Cell>
           <Cell ref.Name="afterHeadersContainer" Site="row:0 column:2">
+            <SolidBackground Color-bind="self.IsRibbon ? winxpColors.TabSelected.G1 : winxpColors.GeneralBackground"/>
             <SideAligned Direction="Bottom" MaxLength="1" MaxRatio="1.0">
               <SolidBackground Color-bind="self.IsRibbon ? winxpColors.RibbonBorder : winxpColors.TabNormal.Border"/>
             </SideAligned>
@@ -153,6 +157,9 @@
                 ]]>
               </ev.ItemRemoved-eval>
             </RepeatFlow>
+          </Cell>
+          <Cell Site="row:1 column:0 columnSpan:3">
+            <SolidBackground Color-bind="self.IsRibbon ? winxpColors.TabSelected.G1 : winxpColors.GeneralBackground"/>
           </Cell>
           <Cell Site="row:2 column:0 columnSpan:3">
             <SolidBorder Color-bind="self.IsRibbon ? winxpColors.RibbonBorder : winxpColors.TabNormal.Border"/>

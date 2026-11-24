@@ -173,7 +173,7 @@ item selection colors.
 | `SplitterLight` | Light edge of menu/toolbar separators and group-box bevels. |
 | `TooltipBackground` | Pale-yellow tooltip and keytip background. |
 | `TooltipBorder` | Tooltip and keytip outline. |
-| `RibbonTabStrip` | Ribbon header-row background behind the inactive tab labels. |
+| `RibbonTabStrip` | Backing for ribbon tab buttons and controls alongside them. |
 | `RibbonBackgroundTop` | Upper ribbon command-area background. |
 | `RibbonBackgroundBottom` | Lower ribbon command-area background. |
 | `RibbonBorder` | Ribbon outline and group dividers. |
