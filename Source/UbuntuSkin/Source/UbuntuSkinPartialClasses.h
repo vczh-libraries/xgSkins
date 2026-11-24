@@ -506,7 +506,8 @@ namespace vl_workflow_global
 	struct __vwsnf534_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
 	struct __vwsnf535_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
 	struct __vwsnf536_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
-	struct __vwsnf537_UbuntuSkin_ubuntuskin_CompleteColorAnimation_;
+	struct __vwsnf537_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
+	struct __vwsnf538_UbuntuSkin_ubuntuskin_CompleteColorAnimation_;
 	struct __vwsnf53_UbuntuSkin_ubuntuskin_ThemeConstructor___vwsn_ubuntuskin_Theme_Initialize_;
 	struct __vwsnf54_UbuntuSkin_ubuntuskin_ThemeConstructor___vwsn_ubuntuskin_Theme_Initialize_;
 	struct __vwsnf55_UbuntuSkin_ubuntuskin_ThemeConstructor___vwsn_ubuntuskin_Theme_Initialize_;
@@ -836,8 +837,9 @@ namespace vl_workflow_global
 	class __vwsnc346_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 	class __vwsnc347_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 	class __vwsnc348_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
-	class __vwsnc349_UbuntuSkin_ubuntuskin_CompleteColorAnimation___vl_reflection_description_ICoroutine;
+	class __vwsnc349_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 	class __vwsnc34_UbuntuSkin_ubuntuskin_EditorBorderTemplateConstructor___vwsn_ubuntuskin_EditorBorderTemplate_Initialize__vl_reflection_description_IValueSubscription;
+	class __vwsnc350_UbuntuSkin_ubuntuskin_CompleteColorAnimation___vl_reflection_description_ICoroutine;
 	class __vwsnc35_UbuntuSkin_ubuntuskin_EditorBorderTemplateConstructor___vwsn_ubuntuskin_EditorBorderTemplate_Initialize__vl_reflection_description_IValueSubscription;
 	class __vwsnc36_UbuntuSkin_ubuntuskin_EditorBorderTemplateConstructor___vwsn_ubuntuskin_EditorBorderTemplate_Initialize__vl_reflection_description_IValueSubscription;
 	class __vwsnc37_UbuntuSkin_ubuntuskin_ComboBoxTemplateConstructor___vwsn_ubuntuskin_ComboBoxTemplate_Initialize__vl_reflection_description_IValueSubscription;
@@ -1701,6 +1703,7 @@ namespace ubuntuskin
 		friend class ::vl_workflow_global::__vwsnc346_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 		friend class ::vl_workflow_global::__vwsnc347_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 		friend class ::vl_workflow_global::__vwsnc348_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
+		friend class ::vl_workflow_global::__vwsnc349_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 		friend struct ::vl_workflow_global::__vwsnf502_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
 		friend struct ::vl_workflow_global::__vwsnf503_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
 		friend struct ::vl_workflow_global::__vwsnf504_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
@@ -1736,6 +1739,7 @@ namespace ubuntuskin
 		friend struct ::vl_workflow_global::__vwsnf534_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
 		friend struct ::vl_workflow_global::__vwsnf535_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
 		friend struct ::vl_workflow_global::__vwsnf536_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
+		friend struct ::vl_workflow_global::__vwsnf537_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
 #ifdef VCZH_DESCRIPTABLEOBJECT_WITH_METADATA
 		friend struct ::vl::reflection::description::CustomTypeDescriptorSelector<CustomFrameWindowTemplateConstructor>;
 #endif
@@ -1750,11 +1754,11 @@ namespace ubuntuskin
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_1;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_2;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_3;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_4;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_4;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_5;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_6;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_7;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_8;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_6;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_7;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_8;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_9;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_10;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_11;
@@ -1762,31 +1766,32 @@ namespace ubuntuskin
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_13;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_14;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_15;
-		::vl::presentation::controls::GuiButton* __vwsn_precompile_16;
-		::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_precompile_17;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_18;
-		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_19;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_16;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_17;
+		::vl::presentation::controls::GuiButton* __vwsn_precompile_18;
+		::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_precompile_19;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_20;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_21;
-		::vl::presentation::controls::GuiButton* __vwsn_precompile_22;
-		::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_precompile_23;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_24;
-		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_25;
+		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_21;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_22;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_23;
+		::vl::presentation::controls::GuiButton* __vwsn_precompile_24;
+		::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_precompile_25;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_26;
 		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_27;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_28;
 		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_29;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_30;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_31;
-		::vl::presentation::controls::GuiButton* __vwsn_precompile_32;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_33;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_34;
-		::vl::presentation::compositions::GuiTableComposition* __vwsn_precompile_35;
+		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_31;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_32;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_33;
+		::vl::presentation::controls::GuiButton* __vwsn_precompile_34;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_35;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_36;
-		::vl::Ptr<::vl::presentation::elements::GuiImageFrameElement> __vwsn_precompile_37;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_38;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidLabelElement> __vwsn_precompile_39;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_40;
+		::vl::presentation::compositions::GuiTableComposition* __vwsn_precompile_37;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_38;
+		::vl::Ptr<::vl::presentation::elements::GuiImageFrameElement> __vwsn_precompile_39;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_40;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidLabelElement> __vwsn_precompile_41;
 		void __vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize(::ubuntuskin::CustomFrameWindowTemplate* __vwsn_this_);
 	public:
 		CustomFrameWindowTemplateConstructor();
@@ -1824,6 +1829,7 @@ namespace ubuntuskin
 		friend class ::vl_workflow_global::__vwsnc346_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 		friend class ::vl_workflow_global::__vwsnc347_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 		friend class ::vl_workflow_global::__vwsnc348_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
+		friend class ::vl_workflow_global::__vwsnc349_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 		friend struct ::vl_workflow_global::__vwsnf502_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
 		friend struct ::vl_workflow_global::__vwsnf503_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
 		friend struct ::vl_workflow_global::__vwsnf504_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
@@ -1859,6 +1865,7 @@ namespace ubuntuskin
 		friend struct ::vl_workflow_global::__vwsnf534_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
 		friend struct ::vl_workflow_global::__vwsnf535_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
 		friend struct ::vl_workflow_global::__vwsnf536_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
+		friend struct ::vl_workflow_global::__vwsnf537_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_;
 #ifdef VCZH_DESCRIPTABLEOBJECT_WITH_METADATA
 		friend struct ::vl::reflection::description::CustomTypeDescriptorSelector<CustomFrameWindowTemplate>;
 #endif
@@ -10035,7 +10042,7 @@ Closures
 
 		__vwsnf535_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
-		void operator()(::vl::presentation::compositions::GuiGraphicsComposition* sender, ::vl::presentation::compositions::GuiEventArgs* arguments) const;
+		void operator()(const ::vl::reflection::description::Value& __vwsn_value_) const;
 	};
 
 	struct __vwsnf536_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_
@@ -10047,12 +10054,21 @@ Closures
 		void operator()(::vl::presentation::compositions::GuiGraphicsComposition* sender, ::vl::presentation::compositions::GuiEventArgs* arguments) const;
 	};
 
-	struct __vwsnf537_UbuntuSkin_ubuntuskin_CompleteColorAnimation_
+	struct __vwsnf537_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_
+	{
+		::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnthis_0;
+
+		__vwsnf537_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize_(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
+
+		void operator()(::vl::presentation::compositions::GuiGraphicsComposition* sender, ::vl::presentation::compositions::GuiEventArgs* arguments) const;
+	};
+
+	struct __vwsnf538_UbuntuSkin_ubuntuskin_CompleteColorAnimation_
 	{
 		::vl::Ptr<::vl::presentation::controls::IGuiAnimation> animation;
 		::vl::Func<void()> completed;
 
-		__vwsnf537_UbuntuSkin_ubuntuskin_CompleteColorAnimation_(::vl::Ptr<::vl::presentation::controls::IGuiAnimation> __vwsnctor_animation, ::vl::Func<void()> __vwsnctor_completed);
+		__vwsnf538_UbuntuSkin_ubuntuskin_CompleteColorAnimation_(::vl::Ptr<::vl::presentation::controls::IGuiAnimation> __vwsnctor_animation, ::vl::Func<void()> __vwsnctor_completed);
 
 		::vl::Ptr<::vl::reflection::description::ICoroutine> operator()(::vl::presentation::controls::IGuiAnimationCoroutine::IImpl* __vwsn_co_impl_) const;
 	};
@@ -15484,14 +15500,11 @@ Closures
 		__vwsnc322_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -15505,11 +15518,20 @@ Closures
 		__vwsnc323_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
+		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
+		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_3 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_3_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -15574,6 +15596,27 @@ Closures
 		__vwsnc326_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_bind_cache_1 = nullptr;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
+		bool __vwsn_bind_opened_ = false;
+		bool __vwsn_bind_closed_ = false;
+		void __vwsn_bind_activator_();
+		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		bool Open() override;
+		bool Update() override;
+		bool Close() override;
+	};
+
+	class __vwsnc327_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription : public ::vl::Object, public virtual ::vl::reflection::description::IValueSubscription
+	{
+	public:
+		::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnthis_0;
+
+		__vwsnc327_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
+
+		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
@@ -15590,27 +15633,6 @@ Closures
 		bool Close() override;
 	};
 
-	class __vwsnc327_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription : public ::vl::Object, public virtual ::vl::reflection::description::IValueSubscription
-	{
-	public:
-		::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnthis_0;
-
-		__vwsnc327_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
-
-		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
-		bool __vwsn_bind_opened_ = false;
-		bool __vwsn_bind_closed_ = false;
-		void __vwsn_bind_activator_();
-		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		bool Open() override;
-		bool Update() override;
-		bool Close() override;
-	};
-
 	class __vwsnc328_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription : public ::vl::Object, public virtual ::vl::reflection::description::IValueSubscription
 	{
 	public:
@@ -15619,11 +15641,17 @@ Closures
 		__vwsnc328_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
+		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -15637,11 +15665,14 @@ Closures
 		__vwsnc329_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -15694,17 +15725,11 @@ Closures
 		__vwsnc331_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
-		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -15760,6 +15785,24 @@ Closures
 		__vwsnc334_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		bool __vwsn_bind_opened_ = false;
+		bool __vwsn_bind_closed_ = false;
+		void __vwsn_bind_activator_();
+		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		bool Open() override;
+		bool Update() override;
+		bool Close() override;
+	};
+
+	class __vwsnc335_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription : public ::vl::Object, public virtual ::vl::reflection::description::IValueSubscription
+	{
+	public:
+		::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnthis_0;
+
+		__vwsnc335_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
+
+		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
@@ -15776,24 +15819,6 @@ Closures
 		bool Close() override;
 	};
 
-	class __vwsnc335_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription : public ::vl::Object, public virtual ::vl::reflection::description::IValueSubscription
-	{
-	public:
-		::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnthis_0;
-
-		__vwsnc335_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
-
-		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		bool __vwsn_bind_opened_ = false;
-		bool __vwsn_bind_closed_ = false;
-		void __vwsn_bind_activator_();
-		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		bool Open() override;
-		bool Update() override;
-		bool Close() override;
-	};
-
 	class __vwsnc336_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription : public ::vl::Object, public virtual ::vl::reflection::description::IValueSubscription
 	{
 	public:
@@ -15803,13 +15828,16 @@ Closures
 
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
+		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -15841,11 +15869,14 @@ Closures
 		__vwsnc338_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -15919,14 +15950,11 @@ Closures
 		__vwsnc341_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -15940,14 +15968,11 @@ Closures
 		__vwsnc342_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -15982,11 +16007,14 @@ Closures
 		__vwsnc344_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -16021,6 +16049,45 @@ Closures
 		__vwsnc346_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		bool __vwsn_bind_opened_ = false;
+		bool __vwsn_bind_closed_ = false;
+		void __vwsn_bind_activator_();
+		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		bool Open() override;
+		bool Update() override;
+		bool Close() override;
+	};
+
+	class __vwsnc347_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription : public ::vl::Object, public virtual ::vl::reflection::description::IValueSubscription
+	{
+	public:
+		::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnthis_0;
+
+		__vwsnc347_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
+
+		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
+		bool __vwsn_bind_opened_ = false;
+		bool __vwsn_bind_closed_ = false;
+		void __vwsn_bind_activator_();
+		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		bool Open() override;
+		bool Update() override;
+		bool Close() override;
+	};
+
+	class __vwsnc348_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription : public ::vl::Object, public virtual ::vl::reflection::description::IValueSubscription
+	{
+	public:
+		::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnthis_0;
+
+		__vwsnc348_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
+
+		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
@@ -16037,12 +16104,12 @@ Closures
 		bool Close() override;
 	};
 
-	class __vwsnc347_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription : public ::vl::Object, public virtual ::vl::reflection::description::IValueSubscription
+	class __vwsnc349_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription : public ::vl::Object, public virtual ::vl::reflection::description::IValueSubscription
 	{
 	public:
 		::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnthis_0;
 
-		__vwsnc347_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
+		__vwsnc349_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_bind_cache_0 = nullptr;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_bind_cache_1 = nullptr;
@@ -16067,44 +16134,6 @@ Closures
 		bool Close() override;
 	};
 
-	class __vwsnc348_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription : public ::vl::Object, public virtual ::vl::reflection::description::IValueSubscription
-	{
-	public:
-		::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnthis_0;
-
-		__vwsnc348_UbuntuSkin_ubuntuskin_CustomFrameWindowTemplateConstructor___vwsn_ubuntuskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::ubuntuskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
-
-		::ubuntuskin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		bool __vwsn_bind_opened_ = false;
-		bool __vwsn_bind_closed_ = false;
-		void __vwsn_bind_activator_();
-		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		bool Open() override;
-		bool Update() override;
-		bool Close() override;
-	};
-
-	class __vwsnc349_UbuntuSkin_ubuntuskin_CompleteColorAnimation___vl_reflection_description_ICoroutine : public ::vl::Object, public virtual ::vl::reflection::description::ICoroutine
-	{
-	public:
-		::vl::presentation::controls::IGuiAnimationCoroutine::IImpl* __vwsn_co_impl_;
-		::vl::Ptr<::vl::presentation::controls::IGuiAnimation> animation;
-		::vl::Func<void()> completed;
-
-		__vwsnc349_UbuntuSkin_ubuntuskin_CompleteColorAnimation___vl_reflection_description_ICoroutine(::vl::presentation::controls::IGuiAnimationCoroutine::IImpl* __vwsnctor___vwsn_co_impl_, ::vl::Ptr<::vl::presentation::controls::IGuiAnimation> __vwsnctor_animation, ::vl::Func<void()> __vwsnctor_completed);
-
-		::vl::vint __vwsn_co_state_ = 0;
-		::vl::vint __vwsn_co_state_before_pause_ = 0;
-		::vl::Ptr<::vl::reflection::description::IValueException> __vwsn_prop_Failure;
-		::vl::Ptr<::vl::reflection::description::IValueException> GetFailure() override;
-		void SetFailure(::vl::Ptr<::vl::reflection::description::IValueException> __vwsn_value_);
-		::vl::reflection::description::CoroutineStatus __vwsn_prop_Status = static_cast<::vl::reflection::description::CoroutineStatus>(0);
-		::vl::reflection::description::CoroutineStatus GetStatus() override;
-		void SetStatus(::vl::reflection::description::CoroutineStatus __vwsn_value_);
-		void Resume(bool __vwsn_raise_exception_, ::vl::Ptr<::vl::reflection::description::CoroutineResult> __vwsn_co_result_) override;
-	};
-
 	class __vwsnc34_UbuntuSkin_ubuntuskin_EditorBorderTemplateConstructor___vwsn_ubuntuskin_EditorBorderTemplate_Initialize__vl_reflection_description_IValueSubscription : public ::vl::Object, public virtual ::vl::reflection::description::IValueSubscription
 	{
 	public:
@@ -16124,6 +16153,26 @@ Closures
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
+	};
+
+	class __vwsnc350_UbuntuSkin_ubuntuskin_CompleteColorAnimation___vl_reflection_description_ICoroutine : public ::vl::Object, public virtual ::vl::reflection::description::ICoroutine
+	{
+	public:
+		::vl::presentation::controls::IGuiAnimationCoroutine::IImpl* __vwsn_co_impl_;
+		::vl::Ptr<::vl::presentation::controls::IGuiAnimation> animation;
+		::vl::Func<void()> completed;
+
+		__vwsnc350_UbuntuSkin_ubuntuskin_CompleteColorAnimation___vl_reflection_description_ICoroutine(::vl::presentation::controls::IGuiAnimationCoroutine::IImpl* __vwsnctor___vwsn_co_impl_, ::vl::Ptr<::vl::presentation::controls::IGuiAnimation> __vwsnctor_animation, ::vl::Func<void()> __vwsnctor_completed);
+
+		::vl::vint __vwsn_co_state_ = 0;
+		::vl::vint __vwsn_co_state_before_pause_ = 0;
+		::vl::Ptr<::vl::reflection::description::IValueException> __vwsn_prop_Failure;
+		::vl::Ptr<::vl::reflection::description::IValueException> GetFailure() override;
+		void SetFailure(::vl::Ptr<::vl::reflection::description::IValueException> __vwsn_value_);
+		::vl::reflection::description::CoroutineStatus __vwsn_prop_Status = static_cast<::vl::reflection::description::CoroutineStatus>(0);
+		::vl::reflection::description::CoroutineStatus GetStatus() override;
+		void SetStatus(::vl::reflection::description::CoroutineStatus __vwsn_value_);
+		void Resume(bool __vwsn_raise_exception_, ::vl::Ptr<::vl::reflection::description::CoroutineResult> __vwsn_co_result_) override;
 	};
 
 	class __vwsnc35_UbuntuSkin_ubuntuskin_EditorBorderTemplateConstructor___vwsn_ubuntuskin_EditorBorderTemplate_Initialize__vl_reflection_description_IValueSubscription : public ::vl::Object, public virtual ::vl::reflection::description::IValueSubscription

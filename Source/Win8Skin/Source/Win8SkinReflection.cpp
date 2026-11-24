@@ -711,6 +711,8 @@ namespace vl
 				ATTRIBUTE_MEMBER(::vl::__vwsn::att_cpp_Protected)
 				CLASS_MEMBER_FIELD(__vwsn_precompile_9)
 				ATTRIBUTE_MEMBER(::vl::__vwsn::att_cpp_Protected)
+				CLASS_MEMBER_FIELD(clientCell)
+				ATTRIBUTE_MEMBER(::vl::__vwsn::att_cpp_Protected)
 				CLASS_MEMBER_FIELD(container)
 				ATTRIBUTE_MEMBER(::vl::__vwsn::att_cpp_Protected)
 				CLASS_MEMBER_FIELD(contentTable)

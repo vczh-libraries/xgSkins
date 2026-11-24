@@ -1759,11 +1759,12 @@ namespace win8skin
 		::win8skin::CustomFrameWindowTemplate* self;
 		::vl::presentation::compositions::GuiTableComposition* frameTable;
 		::vl::presentation::compositions::GuiTableComposition* contentTable;
+		::vl::presentation::compositions::GuiCellComposition* clientCell;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_0;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_1;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_2;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_3;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_4;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_3;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_4;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_5;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_6;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_7;
@@ -1771,35 +1772,35 @@ namespace win8skin
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_9;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_10;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_11;
-		::vl::presentation::controls::GuiButton* __vwsn_precompile_12;
-		::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_precompile_13;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_14;
-		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_15;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_12;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_13;
+		::vl::presentation::controls::GuiButton* __vwsn_precompile_14;
+		::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_precompile_15;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_16;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_17;
-		::vl::presentation::controls::GuiButton* __vwsn_precompile_18;
-		::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_precompile_19;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_20;
-		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_21;
+		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_17;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_18;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_19;
+		::vl::presentation::controls::GuiButton* __vwsn_precompile_20;
+		::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_precompile_21;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_22;
 		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_23;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_24;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_25;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_26;
-		::vl::presentation::controls::GuiButton* __vwsn_precompile_27;
-		::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_precompile_28;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_29;
-		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_30;
+		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_25;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_26;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_27;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_28;
+		::vl::presentation::controls::GuiButton* __vwsn_precompile_29;
+		::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_precompile_30;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_31;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_32;
-		::vl::presentation::compositions::GuiTableComposition* __vwsn_precompile_33;
+		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_32;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_33;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_34;
-		::vl::Ptr<::vl::presentation::elements::GuiImageFrameElement> __vwsn_precompile_35;
+		::vl::presentation::compositions::GuiTableComposition* __vwsn_precompile_35;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_36;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_37;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidLabelElement> __vwsn_precompile_38;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_39;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_40;
+		::vl::Ptr<::vl::presentation::elements::GuiImageFrameElement> __vwsn_precompile_37;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_38;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_39;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidLabelElement> __vwsn_precompile_40;
 		void __vwsn_win8skin_CustomFrameWindowTemplate_Initialize(::win8skin::CustomFrameWindowTemplate* __vwsn_this_);
 	public:
 		CustomFrameWindowTemplateConstructor();
@@ -15797,16 +15798,22 @@ Closures
 
 		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
 		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
-		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_bind_cache_2 = nullptr;
+		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_3 = nullptr;
+		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_4 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_3_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_4_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_4_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -15865,11 +15872,17 @@ Closures
 		__vwsnc330_Win8Skin_win8skin_CustomFrameWindowTemplateConstructor___vwsn_win8skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win8skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
+		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -15883,14 +15896,11 @@ Closures
 		__vwsnc331_Win8Skin_win8skin_CustomFrameWindowTemplateConstructor___vwsn_win8skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win8skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -15904,11 +15914,14 @@ Closures
 		__vwsnc332_Win8Skin_win8skin_CustomFrameWindowTemplateConstructor___vwsn_win8skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win8skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -15922,17 +15935,11 @@ Closures
 		__vwsnc333_Win8Skin_win8skin_CustomFrameWindowTemplateConstructor___vwsn_win8skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win8skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
-		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -15970,11 +15977,17 @@ Closures
 		__vwsnc335_Win8Skin_win8skin_CustomFrameWindowTemplateConstructor___vwsn_win8skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win8skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
+		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -15988,17 +16001,11 @@ Closures
 		__vwsnc336_Win8Skin_win8skin_CustomFrameWindowTemplateConstructor___vwsn_win8skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win8skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
-		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -16036,11 +16043,17 @@ Closures
 		__vwsnc338_Win8Skin_win8skin_CustomFrameWindowTemplateConstructor___vwsn_win8skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win8skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
+		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -16093,14 +16106,11 @@ Closures
 		__vwsnc340_Win8Skin_win8skin_CustomFrameWindowTemplateConstructor___vwsn_win8skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win8skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -16114,11 +16124,14 @@ Closures
 		__vwsnc341_Win8Skin_win8skin_CustomFrameWindowTemplateConstructor___vwsn_win8skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win8skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -16132,14 +16145,11 @@ Closures
 		__vwsnc342_Win8Skin_win8skin_CustomFrameWindowTemplateConstructor___vwsn_win8skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win8skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -16258,11 +16268,14 @@ Closures
 		__vwsnc348_Win8Skin_win8skin_CustomFrameWindowTemplateConstructor___vwsn_win8skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win8skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -16276,14 +16289,11 @@ Closures
 		__vwsnc349_Win8Skin_win8skin_CustomFrameWindowTemplateConstructor___vwsn_win8skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win8skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -16318,11 +16328,14 @@ Closures
 		__vwsnc350_Win8Skin_win8skin_CustomFrameWindowTemplateConstructor___vwsn_win8skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win8skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::win8skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;

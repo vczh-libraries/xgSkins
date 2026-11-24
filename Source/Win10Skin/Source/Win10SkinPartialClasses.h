@@ -402,6 +402,8 @@ namespace vl_workflow_global
 	struct __vwsnf439_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
 	struct __vwsnf43_Win10Skin_win10skin_ThemeConstructor___vwsn_win10skin_Theme_Initialize_;
 	struct __vwsnf440_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
+	struct __vwsnf441_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
+	struct __vwsnf442_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
 	struct __vwsnf44_Win10Skin_win10skin_ThemeConstructor___vwsn_win10skin_Theme_Initialize_;
 	struct __vwsnf45_Win10Skin_win10skin_ThemeConstructor___vwsn_win10skin_Theme_Initialize_;
 	struct __vwsnf46_Win10Skin_win10skin_ThemeConstructor___vwsn_win10skin_Theme_Initialize_;
@@ -704,6 +706,8 @@ namespace vl_workflow_global
 	class __vwsnc314_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 	class __vwsnc315_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 	class __vwsnc316_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
+	class __vwsnc317_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
+	class __vwsnc318_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 	class __vwsnc31_Win10Skin_win10skin_EditorBorderTemplateConstructor___vwsn_win10skin_EditorBorderTemplate_Initialize__vl_reflection_description_IValueSubscription;
 	class __vwsnc32_Win10Skin_win10skin_EditorBorderTemplateConstructor___vwsn_win10skin_EditorBorderTemplate_Initialize__vl_reflection_description_IValueSubscription;
 	class __vwsnc33_Win10Skin_win10skin_EditorBorderTemplateConstructor___vwsn_win10skin_EditorBorderTemplate_Initialize__vl_reflection_description_IValueSubscription;
@@ -1381,6 +1385,8 @@ namespace win10skin
 		friend class ::vl_workflow_global::__vwsnc314_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 		friend class ::vl_workflow_global::__vwsnc315_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 		friend class ::vl_workflow_global::__vwsnc316_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
+		friend class ::vl_workflow_global::__vwsnc317_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
+		friend class ::vl_workflow_global::__vwsnc318_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 		friend struct ::vl_workflow_global::__vwsnf416_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
 		friend struct ::vl_workflow_global::__vwsnf417_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
 		friend struct ::vl_workflow_global::__vwsnf418_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
@@ -1406,6 +1412,8 @@ namespace win10skin
 		friend struct ::vl_workflow_global::__vwsnf438_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
 		friend struct ::vl_workflow_global::__vwsnf439_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
 		friend struct ::vl_workflow_global::__vwsnf440_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
+		friend struct ::vl_workflow_global::__vwsnf441_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
+		friend struct ::vl_workflow_global::__vwsnf442_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
 #ifdef VCZH_DESCRIPTABLEOBJECT_WITH_METADATA
 		friend struct ::vl::reflection::description::CustomTypeDescriptorSelector<CustomFrameWindowTemplateConstructor>;
 #endif
@@ -1414,43 +1422,46 @@ namespace win10skin
 		::win10skin::CustomFrameWindowTemplate* self;
 		::vl::presentation::compositions::GuiTableComposition* frameTable;
 		::vl::presentation::compositions::GuiTableComposition* contentTable;
+		::vl::presentation::compositions::GuiCellComposition* clientCell;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_0;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_1;
 		::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement> __vwsn_precompile_2;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_3;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_4;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_5;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_6;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_3;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_4;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_5;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_6;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_7;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_8;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_9;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_10;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_11;
-		::vl::presentation::controls::GuiButton* __vwsn_precompile_12;
-		::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_precompile_13;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_14;
-		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_15;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_16;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_17;
-		::vl::presentation::controls::GuiButton* __vwsn_precompile_18;
-		::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_precompile_19;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_12;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_13;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_14;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_15;
+		::vl::presentation::controls::GuiButton* __vwsn_precompile_16;
+		::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_precompile_17;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_18;
+		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_19;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_20;
-		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_21;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_22;
-		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_23;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_21;
+		::vl::presentation::controls::GuiButton* __vwsn_precompile_22;
+		::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_precompile_23;
 		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_24;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_25;
-		::vl::presentation::controls::GuiButton* __vwsn_precompile_26;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_27;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_28;
-		::vl::presentation::compositions::GuiTableComposition* __vwsn_precompile_29;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_30;
-		::vl::Ptr<::vl::presentation::elements::GuiImageFrameElement> __vwsn_precompile_31;
+		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_25;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_26;
+		::vl::Ptr<::vl::presentation::elements::GuiPolygonElement> __vwsn_precompile_27;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_28;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_29;
+		::vl::presentation::controls::GuiButton* __vwsn_precompile_30;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_31;
 		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_32;
-		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_33;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidLabelElement> __vwsn_precompile_34;
-		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_35;
-		::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement> __vwsn_precompile_36;
+		::vl::presentation::compositions::GuiTableComposition* __vwsn_precompile_33;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_34;
+		::vl::Ptr<::vl::presentation::elements::GuiImageFrameElement> __vwsn_precompile_35;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_precompile_36;
+		::vl::presentation::compositions::GuiBoundsComposition* __vwsn_precompile_37;
+		::vl::Ptr<::vl::presentation::elements::GuiSolidLabelElement> __vwsn_precompile_38;
 		void __vwsn_win10skin_CustomFrameWindowTemplate_Initialize(::win10skin::CustomFrameWindowTemplate* __vwsn_this_);
 	public:
 		CustomFrameWindowTemplateConstructor();
@@ -1478,6 +1489,8 @@ namespace win10skin
 		friend class ::vl_workflow_global::__vwsnc314_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 		friend class ::vl_workflow_global::__vwsnc315_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 		friend class ::vl_workflow_global::__vwsnc316_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
+		friend class ::vl_workflow_global::__vwsnc317_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
+		friend class ::vl_workflow_global::__vwsnc318_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription;
 		friend struct ::vl_workflow_global::__vwsnf416_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
 		friend struct ::vl_workflow_global::__vwsnf417_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
 		friend struct ::vl_workflow_global::__vwsnf418_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
@@ -1503,6 +1516,8 @@ namespace win10skin
 		friend struct ::vl_workflow_global::__vwsnf438_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
 		friend struct ::vl_workflow_global::__vwsnf439_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
 		friend struct ::vl_workflow_global::__vwsnf440_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
+		friend struct ::vl_workflow_global::__vwsnf441_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
+		friend struct ::vl_workflow_global::__vwsnf442_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_;
 #ifdef VCZH_DESCRIPTABLEOBJECT_WITH_METADATA
 		friend struct ::vl::reflection::description::CustomTypeDescriptorSelector<CustomFrameWindowTemplate>;
 #endif
@@ -8427,7 +8442,7 @@ Closures
 
 		__vwsnf439_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
-		void operator()(::vl::presentation::compositions::GuiGraphicsComposition* sender, ::vl::presentation::compositions::GuiEventArgs* arguments) const;
+		void operator()(const ::vl::reflection::description::Value& __vwsn_value_) const;
 	};
 
 	struct __vwsnf43_Win10Skin_win10skin_ThemeConstructor___vwsn_win10skin_Theme_Initialize_
@@ -8444,6 +8459,24 @@ Closures
 		::win10skin::CustomFrameWindowTemplateConstructor* __vwsnthis_0;
 
 		__vwsnf440_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
+
+		void operator()(const ::vl::reflection::description::Value& __vwsn_value_) const;
+	};
+
+	struct __vwsnf441_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_
+	{
+		::win10skin::CustomFrameWindowTemplateConstructor* __vwsnthis_0;
+
+		__vwsnf441_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
+
+		void operator()(::vl::presentation::compositions::GuiGraphicsComposition* sender, ::vl::presentation::compositions::GuiEventArgs* arguments) const;
+	};
+
+	struct __vwsnf442_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_
+	{
+		::win10skin::CustomFrameWindowTemplateConstructor* __vwsnthis_0;
+
+		__vwsnf442_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize_(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		void operator()(::vl::presentation::compositions::GuiGraphicsComposition* sender, ::vl::presentation::compositions::GuiEventArgs* arguments) const;
 	};
@@ -13291,15 +13324,18 @@ Closures
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
+		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_3 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_3_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -13349,11 +13385,17 @@ Closures
 		__vwsnc300_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
+		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -13367,7 +13409,7 @@ Closures
 		__vwsnc301_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
+		::vl::presentation::compositions::GuiCellComposition* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
@@ -13388,11 +13430,17 @@ Closures
 		__vwsnc302_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
+		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -13406,17 +13454,11 @@ Closures
 		__vwsnc303_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
-		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -13430,11 +13472,14 @@ Closures
 		__vwsnc304_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -13448,17 +13493,11 @@ Closures
 		__vwsnc305_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
-		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -13472,11 +13511,17 @@ Closures
 		__vwsnc306_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
+		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -13509,13 +13554,16 @@ Closures
 
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
+		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_2 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_2_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -13565,14 +13613,11 @@ Closures
 		__vwsnc310_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -13607,14 +13652,11 @@ Closures
 		__vwsnc312_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
-		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
-		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
-		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -13628,11 +13670,14 @@ Closures
 		__vwsnc313_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -13667,11 +13712,14 @@ Closures
 		__vwsnc315_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
 		bool __vwsn_bind_opened_ = false;
 		bool __vwsn_bind_closed_ = false;
 		void __vwsn_bind_activator_();
 		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
 		bool Open() override;
 		bool Update() override;
 		bool Close() override;
@@ -13683,6 +13731,45 @@ Closures
 		::win10skin::CustomFrameWindowTemplateConstructor* __vwsnthis_0;
 
 		__vwsnc316_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
+
+		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		bool __vwsn_bind_opened_ = false;
+		bool __vwsn_bind_closed_ = false;
+		void __vwsn_bind_activator_();
+		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		bool Open() override;
+		bool Update() override;
+		bool Close() override;
+	};
+
+	class __vwsnc317_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription : public ::vl::Object, public virtual ::vl::reflection::description::IValueSubscription
+	{
+	public:
+		::win10skin::CustomFrameWindowTemplateConstructor* __vwsnthis_0;
+
+		__vwsnc317_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
+
+		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
+		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_1 = nullptr;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
+		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_1_0;
+		bool __vwsn_bind_opened_ = false;
+		bool __vwsn_bind_closed_ = false;
+		void __vwsn_bind_activator_();
+		void __vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		void __vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1);
+		bool Open() override;
+		bool Update() override;
+		bool Close() override;
+	};
+
+	class __vwsnc318_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription : public ::vl::Object, public virtual ::vl::reflection::description::IValueSubscription
+	{
+	public:
+		::win10skin::CustomFrameWindowTemplateConstructor* __vwsnthis_0;
+
+		__vwsnc318_Win10Skin_win10skin_CustomFrameWindowTemplateConstructor___vwsn_win10skin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::win10skin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0);
 
 		::win10skin::CustomFrameWindowTemplate* __vwsn_bind_cache_0 = nullptr;
 		::vl::Ptr<::vl::reflection::description::IEventHandler> __vwsn_bind_handler_0_0;
