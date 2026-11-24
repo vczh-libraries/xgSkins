@@ -70,7 +70,7 @@ Global Functions
 
 	::vl::Ptr<::vl::presentation::controls::IGuiAnimation> WinVistaSkin::CompleteColorAnimation(::vl::Ptr<::vl::presentation::controls::IGuiAnimation> animation, const ::vl::Func<void()>& completed)
 	{
-		return ::vl::presentation::controls::IGuiAnimationCoroutine::Create(vl::Func(::vl_workflow_global::__vwsnf636_WinVistaSkin_winvistaskin_CompleteColorAnimation_(animation, completed)));
+		return ::vl::presentation::controls::IGuiAnimationCoroutine::Create(vl::Func(::vl_workflow_global::__vwsnf637_WinVistaSkin_winvistaskin_CompleteColorAnimation_(animation, completed)));
 	}
 
 	::winvistaskin::ButtonColors WinVistaSkin::GetButtonColors(bool enabled, ::vl::presentation::controls::ButtonState state)
@@ -7405,13 +7405,13 @@ Closures
 
 	void __vwsnf502_WinVistaSkin_winvistaskin_TabHeaderTemplateConstructor___vwsn_winvistaskin_TabHeaderTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_0)->GetText();
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_1)->GetText();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::WString>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
 		{
 			return;
 		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_0)->SetText(__vwsn_new_);
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_1)->SetText(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -7423,13 +7423,13 @@ Closures
 
 	void __vwsnf503_WinVistaSkin_winvistaskin_TabHeaderTemplateConstructor___vwsn_winvistaskin_TabHeaderTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_0)->GetAlt();
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_1)->GetAlt();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::WString>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
 		{
 			return;
 		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_0)->SetAlt(__vwsn_new_);
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_1)->SetAlt(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -7441,13 +7441,13 @@ Closures
 
 	void __vwsnf504_WinVistaSkin_winvistaskin_TabHeaderTemplateConstructor___vwsn_winvistaskin_TabHeaderTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_0)->GetSelected();
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_1)->GetSelected();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
 		{
 			return;
 		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_0)->SetSelected(__vwsn_new_);
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_1)->SetSelected(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -7525,13 +7525,13 @@ Closures
 
 	void __vwsnf509_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_5.Obj())->GetColor();
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_4.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
 		{
 			return;
 		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_5.Obj())->SetColor(__vwsn_new_);
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_4.Obj())->SetColor(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -7557,13 +7557,13 @@ Closures
 
 	void __vwsnf510_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_8.Obj())->GetColor();
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_6.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
 		{
 			return;
 		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_8.Obj())->SetColor(__vwsn_new_);
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_6.Obj())->SetColor(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -7574,6 +7574,24 @@ Closures
 	}
 
 	void __vwsnf511_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	{
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_9.Obj())->GetColor();
+		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
+		if ((__vwsn_old_ == __vwsn_new_))
+		{
+			return;
+		}
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_9.Obj())->SetColor(__vwsn_new_);
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnf512_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::__vwsnf512_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_(::winvistaskin::TabTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+	}
+
+	void __vwsnf512_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->header)->GetItemSource();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::Ptr<::vl::reflection::description::IValueEnumerable>>(__vwsn_value_);
@@ -7586,21 +7604,6 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf512_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::__vwsnf512_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_(::winvistaskin::TabTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-	}
-
-	void __vwsnf512_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::operator()(::vl::presentation::compositions::GuiGraphicsComposition* sender, ::vl::presentation::compositions::GuiItemEventArgs* arguments) const
-	{
-		auto flowItem = ::vl::__vwsn::This(__vwsnthis_0->header)->GetFlowItems()[::vl::__vwsn::This(arguments)->itemIndex];
-		auto item = ::vl::__vwsn::Ensure(::vl::__vwsn::RawPtrCast<::winvistaskin::TabHeaderTemplate>(::vl::__vwsn::This(flowItem)->Children()[static_cast<::vl::vint>(0)]));
-		::vl::__vwsn::This(item)->SetCommands(::vl::__vwsn::This(__vwsnthis_0->self)->GetCommands());
-		::vl::__vwsn::This(__vwsnthis_0->self)->UpdateTabHeader();
-	}
-
-	//-------------------------------------------------------------------
-
 	__vwsnf513_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::__vwsnf513_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_(::winvistaskin::TabTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
@@ -7608,6 +7611,9 @@ Closures
 
 	void __vwsnf513_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::operator()(::vl::presentation::compositions::GuiGraphicsComposition* sender, ::vl::presentation::compositions::GuiItemEventArgs* arguments) const
 	{
+		auto flowItem = ::vl::__vwsn::This(__vwsnthis_0->header)->GetFlowItems()[::vl::__vwsn::This(arguments)->itemIndex];
+		auto item = ::vl::__vwsn::Ensure(::vl::__vwsn::RawPtrCast<::winvistaskin::TabHeaderTemplate>(::vl::__vwsn::This(flowItem)->Children()[static_cast<::vl::vint>(0)]));
+		::vl::__vwsn::This(item)->SetCommands(::vl::__vwsn::This(__vwsnthis_0->self)->GetCommands());
 		::vl::__vwsn::This(__vwsnthis_0->self)->UpdateTabHeader();
 	}
 
@@ -7618,15 +7624,9 @@ Closures
 	{
 	}
 
-	void __vwsnf514_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf514_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::operator()(::vl::presentation::compositions::GuiGraphicsComposition* sender, ::vl::presentation::compositions::GuiItemEventArgs* arguments) const
 	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->GetColor();
-		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
-		if ((__vwsn_old_ == __vwsn_new_))
-		{
-			return;
-		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->SetColor(__vwsn_new_);
+		::vl::__vwsn::This(__vwsnthis_0->self)->UpdateTabHeader();
 	}
 
 	//-------------------------------------------------------------------
@@ -7638,13 +7638,13 @@ Closures
 
 	void __vwsnf515_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_12.Obj())->GetColor1();
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_11.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
 		{
 			return;
 		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_12.Obj())->SetColor1(__vwsn_new_);
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_11.Obj())->SetColor(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -7656,13 +7656,13 @@ Closures
 
 	void __vwsnf516_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_12.Obj())->GetColor2();
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_13.Obj())->GetColor1();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
 		{
 			return;
 		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_12.Obj())->SetColor2(__vwsn_new_);
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_13.Obj())->SetColor1(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -7674,13 +7674,13 @@ Closures
 
 	void __vwsnf517_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_11)->GetAlignmentToParent();
-		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Margin>(__vwsn_value_);
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_13.Obj())->GetColor2();
+		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
 		{
 			return;
 		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_11)->SetAlignmentToParent(__vwsn_new_);
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_13.Obj())->SetColor2(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -7692,13 +7692,13 @@ Closures
 
 	void __vwsnf518_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->self)->GetHighlighted();
-		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_12)->GetAlignmentToParent();
+		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Margin>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
 		{
 			return;
 		}
-		::vl::__vwsn::This(__vwsnthis_0->self)->SetHighlighted(__vwsn_new_);
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_12)->SetAlignmentToParent(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -7708,9 +7708,15 @@ Closures
 	{
 	}
 
-	void __vwsnf519_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::operator()(::vl::presentation::compositions::GuiGraphicsComposition* sender, ::vl::presentation::compositions::GuiEventArgs* arguments) const
+	void __vwsnf519_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
-		::vl::__vwsn::This(__vwsnthis_0->self)->UpdateTabHeader();
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->self)->GetHighlighted();
+		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
+		if ((__vwsn_old_ == __vwsn_new_))
+		{
+			return;
+		}
+		::vl::__vwsn::This(__vwsnthis_0->self)->SetHighlighted(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -7729,12 +7735,24 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf520_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf520_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf520_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::__vwsnf520_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_(::winvistaskin::TabTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf520_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf520_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_::operator()(::vl::presentation::compositions::GuiGraphicsComposition* sender, ::vl::presentation::compositions::GuiEventArgs* arguments) const
+	{
+		::vl::__vwsn::This(__vwsnthis_0->self)->UpdateTabHeader();
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnf521_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf521_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+	}
+
+	void __vwsnf521_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_1.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -7747,12 +7765,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf521_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf521_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf522_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf522_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf521_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf522_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_3.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -7765,12 +7783,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf522_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf522_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf523_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf523_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf522_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf523_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_6.Obj())->GetColor1();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -7783,12 +7801,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf523_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf523_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf524_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf524_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf523_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf524_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_6.Obj())->GetColor2();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -7801,12 +7819,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf524_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf524_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf525_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf525_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf524_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf525_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_8.Obj())->GetColor1();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -7819,12 +7837,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf525_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf525_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf526_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf526_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf525_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf526_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_8.Obj())->GetColor2();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -7837,12 +7855,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf526_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf526_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf527_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf527_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf526_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf527_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->GetText();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::WString>(__vwsn_value_);
@@ -7855,12 +7873,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf527_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf527_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf528_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf528_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf527_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf528_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -7873,12 +7891,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf528_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf528_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf529_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf529_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf528_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf529_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->GetFont();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::FontProperties>(__vwsn_value_);
@@ -7887,24 +7905,6 @@ Closures
 			return;
 		}
 		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->SetFont(__vwsn_new_);
-	}
-
-	//-------------------------------------------------------------------
-
-	__vwsnf529_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf529_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-	}
-
-	void __vwsnf529_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
-	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->self)->GetColors();
-		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::winvistaskin::ButtonColors>(__vwsn_value_);
-		if ((__vwsn_old_ == __vwsn_new_))
-		{
-			return;
-		}
-		::vl::__vwsn::This(__vwsnthis_0->self)->SetColors(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -7923,12 +7923,30 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf530_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf530_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf530_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::__vwsnf530_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf530_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf530_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	{
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->self)->GetColors();
+		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::winvistaskin::ButtonColors>(__vwsn_value_);
+		if ((__vwsn_old_ == __vwsn_new_))
+		{
+			return;
+		}
+		::vl::__vwsn::This(__vwsnthis_0->self)->SetColors(__vwsn_new_);
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnf531_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf531_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+	}
+
+	void __vwsnf531_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_1.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -7941,12 +7959,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf531_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf531_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf532_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf532_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf531_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf532_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_3.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -7959,12 +7977,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf532_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf532_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf533_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf533_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf532_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf533_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_5.Obj())->GetColor1();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -7977,12 +7995,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf533_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf533_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf534_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf534_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf533_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf534_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_5.Obj())->GetColor2();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -7995,12 +8013,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf534_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf534_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf535_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf535_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf534_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf535_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_8.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8013,12 +8031,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf535_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf535_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf536_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf536_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf535_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf536_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->GetBackgroundColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8031,12 +8049,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf536_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf536_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf537_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf537_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf536_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf537_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->GetBorderColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8049,12 +8067,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf537_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf537_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf538_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf538_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf537_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf538_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_9)->GetVisible();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
@@ -8067,12 +8085,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf538_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf538_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf539_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf539_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf538_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf539_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_12.Obj())->GetImage();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::Ptr<::vl::presentation::INativeImage>>(__vwsn_value_);
@@ -8081,24 +8099,6 @@ Closures
 			return;
 		}
 		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_12.Obj())->SetImage(__vwsn_new_);
-	}
-
-	//-------------------------------------------------------------------
-
-	__vwsnf539_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf539_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-	}
-
-	void __vwsnf539_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
-	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_12.Obj())->GetEnabled();
-		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
-		if ((__vwsn_old_ == __vwsn_new_))
-		{
-			return;
-		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_12.Obj())->SetEnabled(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -8124,6 +8124,24 @@ Closures
 
 	void __vwsnf540_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_12.Obj())->GetEnabled();
+		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
+		if ((__vwsn_old_ == __vwsn_new_))
+		{
+			return;
+		}
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_12.Obj())->SetEnabled(__vwsn_new_);
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnf541_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf541_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+	}
+
+	void __vwsnf541_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_12.Obj())->GetFrameIndex();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::vint>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
@@ -8135,12 +8153,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf541_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf541_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf542_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf542_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf541_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf542_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_15.Obj())->GetColor1();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8153,12 +8171,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf542_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf542_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf543_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf543_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf542_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf543_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_15.Obj())->GetColor2();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8171,12 +8189,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf543_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf543_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf544_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf544_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf543_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf544_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_18.Obj())->GetText();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::WString>(__vwsn_value_);
@@ -8189,12 +8207,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf544_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf544_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf545_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf545_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf544_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf545_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_18.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8207,12 +8225,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf545_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf545_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf546_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf546_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf545_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf546_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_18.Obj())->GetFont();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::FontProperties>(__vwsn_value_);
@@ -8225,12 +8243,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf546_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf546_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf547_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf547_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf546_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf547_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_21.Obj())->GetText();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::WString>(__vwsn_value_);
@@ -8243,12 +8261,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf547_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf547_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf548_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf548_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf547_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf548_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_21.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8261,12 +8279,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf548_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf548_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf549_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf549_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf548_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf549_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_21.Obj())->GetFont();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::FontProperties>(__vwsn_value_);
@@ -8275,24 +8293,6 @@ Closures
 			return;
 		}
 		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_21.Obj())->SetFont(__vwsn_new_);
-	}
-
-	//-------------------------------------------------------------------
-
-	__vwsnf549_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf549_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-	}
-
-	void __vwsnf549_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
-	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_23.Obj())->GetBackgroundColor();
-		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
-		if ((__vwsn_old_ == __vwsn_new_))
-		{
-			return;
-		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_23.Obj())->SetBackgroundColor(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -8318,6 +8318,24 @@ Closures
 
 	void __vwsnf550_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_23.Obj())->GetBackgroundColor();
+		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
+		if ((__vwsn_old_ == __vwsn_new_))
+		{
+			return;
+		}
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_23.Obj())->SetBackgroundColor(__vwsn_new_);
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnf551_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf551_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+	}
+
+	void __vwsnf551_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_23.Obj())->GetBorderColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
@@ -8329,12 +8347,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf551_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf551_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf552_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf552_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf551_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf552_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_22)->GetVisible();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
@@ -8347,12 +8365,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf552_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf552_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf553_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::__vwsnf553_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf552_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf553_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->self)->GetColors();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::winvistaskin::ButtonColors>(__vwsn_value_);
@@ -8365,12 +8383,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf553_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_::__vwsnf553_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_(::winvistaskin::ToolstripSplitArrowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf554_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_::__vwsnf554_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_(::winvistaskin::ToolstripSplitArrowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf553_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf554_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_0)->GetVisible();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
@@ -8383,12 +8401,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf554_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_::__vwsnf554_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_(::winvistaskin::ToolstripSplitArrowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf555_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_::__vwsnf555_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_(::winvistaskin::ToolstripSplitArrowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf554_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf555_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_4.Obj())->GetBackgroundColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8401,12 +8419,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf555_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_::__vwsnf555_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_(::winvistaskin::ToolstripSplitArrowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf556_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_::__vwsnf556_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_(::winvistaskin::ToolstripSplitArrowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf555_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf556_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_4.Obj())->GetBorderColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8419,12 +8437,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf556_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf556_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf557_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf557_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf556_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf557_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_1.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8437,12 +8455,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf557_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf557_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf558_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf558_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf557_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf558_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_3.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8455,12 +8473,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf558_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf558_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf559_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf559_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf558_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf559_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_6.Obj())->GetColor1();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8469,24 +8487,6 @@ Closures
 			return;
 		}
 		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_6.Obj())->SetColor1(__vwsn_new_);
-	}
-
-	//-------------------------------------------------------------------
-
-	__vwsnf559_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf559_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-	}
-
-	void __vwsnf559_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
-	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_6.Obj())->GetColor2();
-		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
-		if ((__vwsn_old_ == __vwsn_new_))
-		{
-			return;
-		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_6.Obj())->SetColor2(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -8512,6 +8512,24 @@ Closures
 
 	void __vwsnf560_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_6.Obj())->GetColor2();
+		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
+		if ((__vwsn_old_ == __vwsn_new_))
+		{
+			return;
+		}
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_6.Obj())->SetColor2(__vwsn_new_);
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnf561_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf561_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+	}
+
+	void __vwsnf561_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_8.Obj())->GetColor1();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
@@ -8523,12 +8541,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf561_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf561_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf562_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf562_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf561_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf562_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_8.Obj())->GetColor2();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8541,12 +8559,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf562_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf562_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf563_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf563_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf562_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf563_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->GetImage();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::Ptr<::vl::presentation::INativeImage>>(__vwsn_value_);
@@ -8559,12 +8577,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf563_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf563_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf564_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf564_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf563_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf564_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->GetEnabled();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
@@ -8577,12 +8595,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf564_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf564_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf565_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf565_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf564_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf565_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->GetFrameIndex();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::vint>(__vwsn_value_);
@@ -8595,12 +8613,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf565_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf565_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf566_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf566_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf565_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf566_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->self)->GetColors();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::winvistaskin::ButtonColors>(__vwsn_value_);
@@ -8613,46 +8631,28 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf566_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf566_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf567_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::__vwsnf567_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf566_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()() const
+	void __vwsnf567_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_::operator()() const
 	{
 		::vl::__vwsn::This(__vwsnthis_0->self)->KillAnimation(::vl::__vwsn::This(__vwsnthis_0->self)->lastAnimation);
-		(::vl::__vwsn::This(__vwsnthis_0->self)->lastAnimation = GLOBAL_NAME CompleteColorAnimation(::vl::__vwsn::This(::vl::__vwsn::This(__vwsnthis_0->self)->animation.Obj())->CreateAnimation(::vl::Ptr<::winvistaskin::ButtonColorState>(new ::winvistaskin::ButtonColorState(::vl::__vwsn::This(__vwsnthis_0->self)->GetColors())), static_cast<::vl::vuint64_t>(static_cast<::vl::vint>(120))), vl::Func(::vl_workflow_global::__vwsnf567_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__(__vwsnthis_0))));
+		(::vl::__vwsn::This(__vwsnthis_0->self)->lastAnimation = GLOBAL_NAME CompleteColorAnimation(::vl::__vwsn::This(::vl::__vwsn::This(__vwsnthis_0->self)->animation.Obj())->CreateAnimation(::vl::Ptr<::winvistaskin::ButtonColorState>(new ::winvistaskin::ButtonColorState(::vl::__vwsn::This(__vwsnthis_0->self)->GetColors())), static_cast<::vl::vuint64_t>(static_cast<::vl::vint>(120))), vl::Func(::vl_workflow_global::__vwsnf568_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__(__vwsnthis_0))));
 		::vl::__vwsn::This(__vwsnthis_0->self)->AddAnimation(::vl::__vwsn::This(__vwsnthis_0->self)->lastAnimation);
 	}
 
 	//-------------------------------------------------------------------
 
-	__vwsnf567_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__::__vwsnf567_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf568_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__::__vwsnf568_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf567_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__::operator()() const
+	void __vwsnf568_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__::operator()() const
 	{
 		::vl::__vwsn::This(::vl::__vwsn::This(__vwsnthis_0->self)->animation.Obj())->Interpolate(static_cast<double>(1.0));
-	}
-
-	//-------------------------------------------------------------------
-
-	__vwsnf568_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf568_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-	}
-
-	void __vwsnf568_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
-	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_1.Obj())->GetColor();
-		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
-		if ((__vwsn_old_ == __vwsn_new_))
-		{
-			return;
-		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_1.Obj())->SetColor(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -8664,13 +8664,13 @@ Closures
 
 	void __vwsnf569_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_3.Obj())->GetColor();
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_1.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
 		{
 			return;
 		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_3.Obj())->SetColor(__vwsn_new_);
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_1.Obj())->SetColor(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -8696,6 +8696,24 @@ Closures
 
 	void __vwsnf570_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_3.Obj())->GetColor();
+		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
+		if ((__vwsn_old_ == __vwsn_new_))
+		{
+			return;
+		}
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_3.Obj())->SetColor(__vwsn_new_);
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnf571_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf571_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+	}
+
+	void __vwsnf571_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_6.Obj())->GetColor1();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
@@ -8707,12 +8725,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf571_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf571_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf572_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf572_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf571_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf572_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_6.Obj())->GetColor2();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8725,12 +8743,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf572_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf572_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf573_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf573_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf572_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf573_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_8.Obj())->GetColor1();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8743,12 +8761,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf573_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf573_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf574_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf574_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf573_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf574_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_8.Obj())->GetColor2();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8761,12 +8779,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf574_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf574_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf575_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf575_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf574_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf575_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_11.Obj())->GetImage();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::Ptr<::vl::presentation::INativeImage>>(__vwsn_value_);
@@ -8779,12 +8797,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf575_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf575_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf576_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf576_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf575_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf576_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_11.Obj())->GetEnabled();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
@@ -8797,12 +8815,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf576_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf576_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf577_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf577_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf576_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf577_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_11.Obj())->GetFrameIndex();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::vint>(__vwsn_value_);
@@ -8815,12 +8833,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf577_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf577_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf578_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf578_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf577_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf578_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_14.Obj())->GetBackgroundColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8833,12 +8851,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf578_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf578_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf579_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf579_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf578_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf579_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_14.Obj())->GetBorderColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8847,24 +8865,6 @@ Closures
 			return;
 		}
 		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_14.Obj())->SetBorderColor(__vwsn_new_);
-	}
-
-	//-------------------------------------------------------------------
-
-	__vwsnf579_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf579_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-	}
-
-	void __vwsnf579_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
-	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->self)->GetColors();
-		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::winvistaskin::ButtonColors>(__vwsn_value_);
-		if ((__vwsn_old_ == __vwsn_new_))
-		{
-			return;
-		}
-		::vl::__vwsn::This(__vwsnthis_0->self)->SetColors(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -8888,37 +8888,41 @@ Closures
 	{
 	}
 
-	void __vwsnf580_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()() const
+	void __vwsnf580_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	{
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->self)->GetColors();
+		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::winvistaskin::ButtonColors>(__vwsn_value_);
+		if ((__vwsn_old_ == __vwsn_new_))
+		{
+			return;
+		}
+		::vl::__vwsn::This(__vwsnthis_0->self)->SetColors(__vwsn_new_);
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnf581_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::__vwsnf581_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+	}
+
+	void __vwsnf581_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_::operator()() const
 	{
 		::vl::__vwsn::This(__vwsnthis_0->self)->KillAnimation(::vl::__vwsn::This(__vwsnthis_0->self)->lastAnimation);
-		(::vl::__vwsn::This(__vwsnthis_0->self)->lastAnimation = GLOBAL_NAME CompleteColorAnimation(::vl::__vwsn::This(::vl::__vwsn::This(__vwsnthis_0->self)->animation.Obj())->CreateAnimation(::vl::Ptr<::winvistaskin::ButtonColorState>(new ::winvistaskin::ButtonColorState(::vl::__vwsn::This(__vwsnthis_0->self)->GetColors())), static_cast<::vl::vuint64_t>(static_cast<::vl::vint>(120))), vl::Func(::vl_workflow_global::__vwsnf581_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__(__vwsnthis_0))));
+		(::vl::__vwsn::This(__vwsnthis_0->self)->lastAnimation = GLOBAL_NAME CompleteColorAnimation(::vl::__vwsn::This(::vl::__vwsn::This(__vwsnthis_0->self)->animation.Obj())->CreateAnimation(::vl::Ptr<::winvistaskin::ButtonColorState>(new ::winvistaskin::ButtonColorState(::vl::__vwsn::This(__vwsnthis_0->self)->GetColors())), static_cast<::vl::vuint64_t>(static_cast<::vl::vint>(120))), vl::Func(::vl_workflow_global::__vwsnf582_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__(__vwsnthis_0))));
 		::vl::__vwsn::This(__vwsnthis_0->self)->AddAnimation(::vl::__vwsn::This(__vwsnthis_0->self)->lastAnimation);
 	}
 
 	//-------------------------------------------------------------------
 
-	__vwsnf581_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__::__vwsnf581_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf582_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__::__vwsnf582_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf581_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__::operator()() const
+	void __vwsnf582_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__::operator()() const
 	{
 		::vl::__vwsn::This(::vl::__vwsn::This(__vwsnthis_0->self)->animation.Obj())->Interpolate(static_cast<double>(1.0));
-	}
-
-	//-------------------------------------------------------------------
-
-	__vwsnf582_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf582_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-	}
-
-	::vl::presentation::templates::GuiControlTemplate* __vwsnf582_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_viewModel_) const
-	{
-		{
-			return static_cast<::vl::presentation::templates::GuiControlTemplate*>(new ::winvistaskin::ToolstripSplitArrowTemplate());
-		}
 	}
 
 	//-------------------------------------------------------------------
@@ -8928,7 +8932,21 @@ Closures
 	{
 	}
 
-	void __vwsnf583_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	::vl::presentation::templates::GuiControlTemplate* __vwsnf583_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_viewModel_) const
+	{
+		{
+			return static_cast<::vl::presentation::templates::GuiControlTemplate*>(new ::winvistaskin::ToolstripSplitArrowTemplate());
+		}
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnf584_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf584_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+	}
+
+	void __vwsnf584_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_1.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8941,12 +8959,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf584_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf584_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf585_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf585_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf584_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf585_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_3.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8959,12 +8977,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf585_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf585_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf586_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf586_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf585_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf586_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_6.Obj())->GetColor1();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8977,12 +8995,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf586_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf586_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf587_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf587_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf586_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf587_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_6.Obj())->GetColor2();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -8995,12 +9013,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf587_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf587_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf588_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf588_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf587_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf588_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_8.Obj())->GetColor1();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -9013,12 +9031,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf588_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf588_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf589_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf589_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf588_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf589_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_8.Obj())->GetColor2();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -9027,24 +9045,6 @@ Closures
 			return;
 		}
 		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_8.Obj())->SetColor2(__vwsn_new_);
-	}
-
-	//-------------------------------------------------------------------
-
-	__vwsnf589_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf589_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-	}
-
-	void __vwsnf589_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
-	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->GetImage();
-		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::Ptr<::vl::presentation::INativeImage>>(__vwsn_value_);
-		if ((__vwsn_old_.Obj() == __vwsn_new_.Obj()))
-		{
-			return;
-		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->SetImage(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -9070,6 +9070,24 @@ Closures
 
 	void __vwsnf590_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->GetImage();
+		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::Ptr<::vl::presentation::INativeImage>>(__vwsn_value_);
+		if ((__vwsn_old_.Obj() == __vwsn_new_.Obj()))
+		{
+			return;
+		}
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->SetImage(__vwsn_new_);
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnf591_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf591_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+	}
+
+	void __vwsnf591_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->GetEnabled();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
@@ -9081,12 +9099,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf591_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf591_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf592_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf592_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf591_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf592_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10.Obj())->GetFrameIndex();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::vint>(__vwsn_value_);
@@ -9099,12 +9117,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf592_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf592_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf593_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf593_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf592_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf593_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->buttonArrow)->GetSelected();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
@@ -9117,12 +9135,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf593_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf593_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf594_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf594_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf593_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf594_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->self)->GetColors();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::winvistaskin::ButtonColors>(__vwsn_value_);
@@ -9135,38 +9153,38 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf594_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf594_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf595_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::__vwsnf595_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf594_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()() const
+	void __vwsnf595_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_::operator()() const
 	{
 		::vl::__vwsn::This(__vwsnthis_0->self)->KillAnimation(::vl::__vwsn::This(__vwsnthis_0->self)->lastAnimation);
-		(::vl::__vwsn::This(__vwsnthis_0->self)->lastAnimation = GLOBAL_NAME CompleteColorAnimation(::vl::__vwsn::This(::vl::__vwsn::This(__vwsnthis_0->self)->animation.Obj())->CreateAnimation(::vl::Ptr<::winvistaskin::ButtonColorState>(new ::winvistaskin::ButtonColorState(::vl::__vwsn::This(__vwsnthis_0->self)->GetColors())), static_cast<::vl::vuint64_t>(static_cast<::vl::vint>(120))), vl::Func(::vl_workflow_global::__vwsnf595_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__(__vwsnthis_0))));
+		(::vl::__vwsn::This(__vwsnthis_0->self)->lastAnimation = GLOBAL_NAME CompleteColorAnimation(::vl::__vwsn::This(::vl::__vwsn::This(__vwsnthis_0->self)->animation.Obj())->CreateAnimation(::vl::Ptr<::winvistaskin::ButtonColorState>(new ::winvistaskin::ButtonColorState(::vl::__vwsn::This(__vwsnthis_0->self)->GetColors())), static_cast<::vl::vuint64_t>(static_cast<::vl::vint>(120))), vl::Func(::vl_workflow_global::__vwsnf596_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__(__vwsnthis_0))));
 		::vl::__vwsn::This(__vwsnthis_0->self)->AddAnimation(::vl::__vwsn::This(__vwsnthis_0->self)->lastAnimation);
 	}
 
 	//-------------------------------------------------------------------
 
-	__vwsnf595_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__::__vwsnf595_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf596_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__::__vwsnf596_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf595_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__::operator()() const
+	void __vwsnf596_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__::operator()() const
 	{
 		::vl::__vwsn::This(::vl::__vwsn::This(__vwsnthis_0->self)->animation.Obj())->Interpolate(static_cast<double>(1.0));
 	}
 
 	//-------------------------------------------------------------------
 
-	__vwsnf596_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_::__vwsnf596_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_(::winvistaskin::CaptionButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf597_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_::__vwsnf597_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_(::winvistaskin::CaptionButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf596_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf597_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_0.Obj())->GetColor1();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -9179,12 +9197,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf597_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_::__vwsnf597_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_(::winvistaskin::CaptionButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf598_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_::__vwsnf598_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_(::winvistaskin::CaptionButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf597_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf598_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_0.Obj())->GetColor2();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -9197,12 +9215,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf598_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_::__vwsnf598_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_(::winvistaskin::CaptionButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf599_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_::__vwsnf599_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_(::winvistaskin::CaptionButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf598_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf599_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_4.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -9211,24 +9229,6 @@ Closures
 			return;
 		}
 		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_4.Obj())->SetColor(__vwsn_new_);
-	}
-
-	//-------------------------------------------------------------------
-
-	__vwsnf599_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_::__vwsnf599_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_(::winvistaskin::CaptionCloseButtonTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-	}
-
-	void __vwsnf599_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
-	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_0.Obj())->GetColor1();
-		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
-		if ((__vwsn_old_ == __vwsn_new_))
-		{
-			return;
-		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_0.Obj())->SetColor1(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -9268,6 +9268,24 @@ Closures
 
 	void __vwsnf600_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_0.Obj())->GetColor1();
+		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
+		if ((__vwsn_old_ == __vwsn_new_))
+		{
+			return;
+		}
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_0.Obj())->SetColor1(__vwsn_new_);
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnf601_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_::__vwsnf601_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_(::winvistaskin::CaptionCloseButtonTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+	}
+
+	void __vwsnf601_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_0.Obj())->GetColor2();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
@@ -9279,12 +9297,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf601_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_::__vwsnf601_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_(::winvistaskin::CaptionCloseButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf602_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_::__vwsnf602_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_(::winvistaskin::CaptionCloseButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf601_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf602_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_4.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -9297,29 +9315,15 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf602_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf602_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-	}
-
-	::vl::presentation::templates::GuiWindowTemplate* __vwsnf602_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_viewModel_) const
-	{
-		{
-			return static_cast<::vl::presentation::templates::GuiWindowTemplate*>(new ::winvistaskin::TooltipTemplate());
-		}
-	}
-
-	//-------------------------------------------------------------------
-
 	__vwsnf603_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf603_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	::vl::presentation::templates::GuiControlTemplate* __vwsnf603_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_viewModel_) const
+	::vl::presentation::templates::GuiWindowTemplate* __vwsnf603_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_viewModel_) const
 	{
 		{
-			return static_cast<::vl::presentation::templates::GuiControlTemplate*>(new ::winvistaskin::CaptionButtonTemplate());
+			return static_cast<::vl::presentation::templates::GuiWindowTemplate*>(new ::winvistaskin::TooltipTemplate());
 		}
 	}
 
@@ -9347,7 +9351,7 @@ Closures
 	::vl::presentation::templates::GuiControlTemplate* __vwsnf605_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_viewModel_) const
 	{
 		{
-			return static_cast<::vl::presentation::templates::GuiControlTemplate*>(new ::winvistaskin::CaptionCloseButtonTemplate());
+			return static_cast<::vl::presentation::templates::GuiControlTemplate*>(new ::winvistaskin::CaptionButtonTemplate());
 		}
 	}
 
@@ -9358,7 +9362,21 @@ Closures
 	{
 	}
 
-	void __vwsnf606_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	::vl::presentation::templates::GuiControlTemplate* __vwsnf606_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_viewModel_) const
+	{
+		{
+			return static_cast<::vl::presentation::templates::GuiControlTemplate*>(new ::winvistaskin::CaptionCloseButtonTemplate());
+		}
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnf607_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf607_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+	}
+
+	void __vwsnf607_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_0.Obj())->GetColor1();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -9371,12 +9389,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf607_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf607_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf608_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf608_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf607_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf608_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_0.Obj())->GetColor2();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -9389,12 +9407,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf608_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf608_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf609_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf609_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf608_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf609_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_2.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -9407,12 +9425,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf609_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf609_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf610_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf610_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf609_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf610_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_3)->GetVisible();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
@@ -9425,12 +9443,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf610_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf610_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf611_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf611_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf610_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf611_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_8)->GetVisible();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
@@ -9443,12 +9461,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf611_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf611_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf612_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf612_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf611_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf612_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_10)->GetAlignmentToParent();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Margin>(__vwsn_value_);
@@ -9461,12 +9479,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf612_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf612_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf613_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf613_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf612_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf613_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_24.Obj())->GetBackgroundColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -9479,12 +9497,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf613_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf613_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf614_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf614_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf613_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf614_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_24.Obj())->GetBorderColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -9497,12 +9515,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf614_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf614_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf615_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf615_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf614_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf615_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_21)->GetVisible();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
@@ -9515,12 +9533,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf615_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf615_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf616_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf616_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf615_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf616_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_21)->GetEnabled();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
@@ -9533,12 +9551,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf616_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf616_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf617_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf617_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf616_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf617_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_20)->GetAssociatedHitTestResult();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::INativeWindowListener::HitTestResult>(__vwsn_value_);
@@ -9551,12 +9569,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf617_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf617_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf618_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf618_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf617_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf618_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_30.Obj())->GetBackgroundColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -9569,12 +9587,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf618_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf618_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf619_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf619_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf618_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf619_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_30.Obj())->GetBorderColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -9583,24 +9601,6 @@ Closures
 			return;
 		}
 		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_30.Obj())->SetBorderColor(__vwsn_new_);
-	}
-
-	//-------------------------------------------------------------------
-
-	__vwsnf619_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf619_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-	}
-
-	void __vwsnf619_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
-	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_29)->GetVisible();
-		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
-		if ((__vwsn_old_ == __vwsn_new_))
-		{
-			return;
-		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_29)->SetVisible(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -9625,6 +9625,24 @@ Closures
 
 	void __vwsnf620_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_29)->GetVisible();
+		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
+		if ((__vwsn_old_ == __vwsn_new_))
+		{
+			return;
+		}
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_29)->SetVisible(__vwsn_new_);
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnf621_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf621_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+	}
+
+	void __vwsnf621_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_32.Obj())->GetBackgroundColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
@@ -9636,12 +9654,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf621_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf621_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf622_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf622_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf621_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf622_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_32.Obj())->GetBorderColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -9654,12 +9672,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf622_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf622_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf623_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf623_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf622_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf623_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_31)->GetVisible();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
@@ -9672,12 +9690,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf623_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf623_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf624_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf624_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf623_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf624_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_27)->GetVisible();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
@@ -9690,12 +9708,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf624_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf624_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf625_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf625_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf624_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf625_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_27)->GetEnabled();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<bool>(__vwsn_value_);
@@ -9708,12 +9726,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf625_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf625_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf626_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf626_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf625_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf626_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_26)->GetAssociatedHitTestResult();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::INativeWindowListener::HitTestResult>(__vwsn_value_);
@@ -9726,12 +9744,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf626_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf626_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf627_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf627_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf626_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf627_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_43.Obj())->GetImage();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::Ptr<::vl::presentation::INativeImage>>(__vwsn_value_);
@@ -9744,12 +9762,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf627_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf627_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf628_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf628_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf627_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf628_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_43.Obj())->GetFrameIndex();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::vint>(__vwsn_value_);
@@ -9762,12 +9780,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf628_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf628_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf629_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf629_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf628_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf629_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_40)->GetMinSizeLimitation();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::compositions::GuiGraphicsComposition::MinSizeLimitation>(__vwsn_value_);
@@ -9776,24 +9794,6 @@ Closures
 			return;
 		}
 		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_40)->SetMinSizeLimitation(__vwsn_new_);
-	}
-
-	//-------------------------------------------------------------------
-
-	__vwsnf629_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf629_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-	}
-
-	void __vwsnf629_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
-	{
-		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_46.Obj())->GetText();
-		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::WString>(__vwsn_value_);
-		if ((__vwsn_old_ == __vwsn_new_))
-		{
-			return;
-		}
-		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_46.Obj())->SetText(__vwsn_new_);
 	}
 
 	//-------------------------------------------------------------------
@@ -9823,6 +9823,24 @@ Closures
 
 	void __vwsnf630_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
+		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_46.Obj())->GetText();
+		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::WString>(__vwsn_value_);
+		if ((__vwsn_old_ == __vwsn_new_))
+		{
+			return;
+		}
+		::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_46.Obj())->SetText(__vwsn_new_);
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnf631_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf631_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+	}
+
+	void __vwsnf631_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_46.Obj())->GetFont();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::FontProperties>(__vwsn_value_);
 		if ((__vwsn_old_ == __vwsn_new_))
@@ -9834,12 +9852,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf631_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf631_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf632_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf632_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf631_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf632_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_48.Obj())->GetText();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::WString>(__vwsn_value_);
@@ -9852,12 +9870,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf632_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf632_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf633_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf633_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf632_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf633_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_48.Obj())->GetColor();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::Color>(__vwsn_value_);
@@ -9870,12 +9888,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf633_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf633_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf634_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf634_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf633_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
+	void __vwsnf634_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(const ::vl::reflection::description::Value& __vwsn_value_) const
 	{
 		auto __vwsn_old_ = ::vl::__vwsn::This(__vwsnthis_0->__vwsn_precompile_48.Obj())->GetFont();
 		auto __vwsn_new_ = ::vl::__vwsn::Unbox<::vl::presentation::FontProperties>(__vwsn_value_);
@@ -9888,12 +9906,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf634_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf634_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf635_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf635_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf634_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(::vl::presentation::compositions::GuiGraphicsComposition* sender, ::vl::presentation::compositions::GuiEventArgs* arguments) const
+	void __vwsnf635_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(::vl::presentation::compositions::GuiGraphicsComposition* sender, ::vl::presentation::compositions::GuiEventArgs* arguments) const
 	{
 		if (::vl::__vwsn::This(__vwsnthis_0->self)->GetTitleBar())
 		{
@@ -9907,12 +9925,12 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf635_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf635_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnf636_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::__vwsnf636_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 	}
 
-	void __vwsnf635_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(::vl::presentation::compositions::GuiGraphicsComposition* sender, ::vl::presentation::compositions::GuiEventArgs* arguments) const
+	void __vwsnf636_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_::operator()(::vl::presentation::compositions::GuiGraphicsComposition* sender, ::vl::presentation::compositions::GuiEventArgs* arguments) const
 	{
 		auto padding = ::vl::__vwsn::This(__vwsnthis_0->self)->GetCustomFramePadding();
 		auto margin = [&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = ((padding.left > static_cast<::vl::vint>(0)) ? static_cast<::vl::vint>(9) : static_cast<::vl::vint>(0)); __vwsn_temp__.top = padding.top; __vwsn_temp__.right = ((padding.right > static_cast<::vl::vint>(0)) ? static_cast<::vl::vint>(9) : static_cast<::vl::vint>(0)); __vwsn_temp__.bottom = ((padding.bottom > static_cast<::vl::vint>(0)) ? static_cast<::vl::vint>(9) : static_cast<::vl::vint>(0)); return __vwsn_temp__; }();
@@ -9927,15 +9945,15 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnf636_WinVistaSkin_winvistaskin_CompleteColorAnimation_::__vwsnf636_WinVistaSkin_winvistaskin_CompleteColorAnimation_(::vl::Ptr<::vl::presentation::controls::IGuiAnimation> __vwsnctor_animation, ::vl::Func<void()> __vwsnctor_completed)
+	__vwsnf637_WinVistaSkin_winvistaskin_CompleteColorAnimation_::__vwsnf637_WinVistaSkin_winvistaskin_CompleteColorAnimation_(::vl::Ptr<::vl::presentation::controls::IGuiAnimation> __vwsnctor_animation, ::vl::Func<void()> __vwsnctor_completed)
 		:animation(__vwsnctor_animation)
 		, completed(__vwsnctor_completed)
 	{
 	}
 
-	::vl::Ptr<::vl::reflection::description::ICoroutine> __vwsnf636_WinVistaSkin_winvistaskin_CompleteColorAnimation_::operator()(::vl::presentation::controls::IGuiAnimationCoroutine::IImpl* __vwsn_co_impl_) const
+	::vl::Ptr<::vl::reflection::description::ICoroutine> __vwsnf637_WinVistaSkin_winvistaskin_CompleteColorAnimation_::operator()(::vl::presentation::controls::IGuiAnimationCoroutine::IImpl* __vwsn_co_impl_) const
 	{
-		return ::vl::Ptr<::vl::reflection::description::ICoroutine>(new ::vl_workflow_global::__vwsnc441_WinVistaSkin_winvistaskin_CompleteColorAnimation___vl_reflection_description_ICoroutine(__vwsn_co_impl_, animation, completed));
+		return ::vl::Ptr<::vl::reflection::description::ICoroutine>(new ::vl_workflow_global::__vwsnc442_WinVistaSkin_winvistaskin_CompleteColorAnimation___vl_reflection_description_ICoroutine(__vwsn_co_impl_, animation, completed));
 	}
 
 	//-------------------------------------------------------------------
@@ -30463,7 +30481,7 @@ Closures
 
 	void __vwsnc330_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetIsRibbon() ? GLOBAL_NAME vistaColors.RibbonBorder : GLOBAL_NAME vistaColors.TabNormal.Border);
+		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetIsRibbon() ? GLOBAL_NAME vistaColors.RibbonTabStrip : GLOBAL_NAME vistaColors.GeneralBackground);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -30585,11 +30603,11 @@ Closures
 
 	void __vwsnc332_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::Ptr<::vl::reflection::description::IValueEnumerable>(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetTabPages());
+		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetIsRibbon() ? GLOBAL_NAME vistaColors.RibbonBorder : GLOBAL_NAME vistaColors.TabNormal.Border);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc332_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	void __vwsnc332_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -30600,7 +30618,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::TabTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TabPagesChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc332_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->IsRibbonChanged, ::vl::Func<void()>(this, &__vwsnc332_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -30623,7 +30641,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TabPagesChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->IsRibbonChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::TabTemplate*>(nullptr));
@@ -30646,11 +30664,11 @@ Closures
 
 	void __vwsnc333_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetIsRibbon() ? GLOBAL_NAME vistaColors.RibbonBorder : GLOBAL_NAME vistaColors.TabNormal.Border);
+		auto __vwsn_bind_activator_result_ = ::vl::Ptr<::vl::reflection::description::IValueEnumerable>(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetTabPages());
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc333_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
+	void __vwsnc333_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -30661,7 +30679,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::TabTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->IsRibbonChanged, ::vl::Func<void()>(this, &__vwsnc333_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TabPagesChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc333_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -30684,7 +30702,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->IsRibbonChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TabPagesChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::TabTemplate*>(nullptr));
@@ -30707,7 +30725,7 @@ Closures
 
 	void __vwsnc334_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetIsRibbon() ? GLOBAL_NAME vistaColors.RibbonBackgroundTop : GLOBAL_NAME vistaColors.TabSelected.Background);
+		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetIsRibbon() ? GLOBAL_NAME vistaColors.RibbonBorder : GLOBAL_NAME vistaColors.TabNormal.Border);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -30768,7 +30786,7 @@ Closures
 
 	void __vwsnc335_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetIsRibbon() ? GLOBAL_NAME vistaColors.RibbonBackgroundBottom : GLOBAL_NAME vistaColors.TabSelected.Background);
+		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetIsRibbon() ? GLOBAL_NAME vistaColors.RibbonBackgroundTop : GLOBAL_NAME vistaColors.TabSelected.Background);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -30829,11 +30847,11 @@ Closures
 
 	void __vwsnc336_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = [&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(1); __vwsn_temp__.top = ((::vl::__vwsn::This(__vwsn_bind_cache_0)->GetSelectedTabPage() == nullptr) ? static_cast<::vl::vint>(1) : static_cast<::vl::vint>(0)); __vwsn_temp__.right = static_cast<::vl::vint>(1); __vwsn_temp__.bottom = static_cast<::vl::vint>(1); return __vwsn_temp__; }();
+		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetIsRibbon() ? GLOBAL_NAME vistaColors.RibbonBackgroundBottom : GLOBAL_NAME vistaColors.TabSelected.Background);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc336_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	void __vwsnc336_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -30844,7 +30862,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::TabTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SelectedTabPageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc336_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->IsRibbonChanged, ::vl::Func<void()>(this, &__vwsnc336_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -30867,7 +30885,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SelectedTabPageChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->IsRibbonChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::TabTemplate*>(nullptr));
@@ -30883,32 +30901,18 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::TabTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::vl::presentation::controls::GuiRibbonTabPage*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc337_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetHighlighted(); } catch(...){ return false; } }();
+		auto __vwsn_bind_activator_result_ = [&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(1); __vwsn_temp__.top = ((::vl::__vwsn::This(__vwsn_bind_cache_0)->GetSelectedTabPage() == nullptr) ? static_cast<::vl::vint>(1) : static_cast<::vl::vint>(0)); __vwsn_temp__.right = static_cast<::vl::vint>(1); __vwsn_temp__.bottom = static_cast<::vl::vint>(1); return __vwsn_temp__; }();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc337_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		if (static_cast<bool>(__vwsn_bind_handler_1_0))
-		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->HighlightedChanged, __vwsn_bind_handler_1_0);
-			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-		}
-		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::Ensure(::vl::__vwsn::RawPtrCast<::vl::presentation::controls::GuiRibbonTabPage>(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetSelectedTabPage())); } catch(...){ return static_cast<::vl::presentation::controls::GuiRibbonTabPage*>(nullptr); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->HighlightedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc337_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc337_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -30919,9 +30923,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::TabTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::Ensure(::vl::__vwsn::RawPtrCast<::vl::presentation::controls::GuiRibbonTabPage>(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetSelectedTabPage())); } catch(...){ return static_cast<::vl::presentation::controls::GuiRibbonTabPage*>(nullptr); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SelectedTabPageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc337_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->HighlightedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc337_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -30947,15 +30949,8 @@ Closures
 				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SelectedTabPageChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
-			if (static_cast<bool>(__vwsn_bind_handler_1_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->HighlightedChanged, __vwsn_bind_handler_1_0);
-				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::TabTemplate*>(nullptr));
-			(__vwsn_bind_cache_1 = static_cast<::vl::presentation::controls::GuiRibbonTabPage*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -30963,39 +30958,55 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnc338_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc338_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnc338_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc338_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::TabTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
-		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::TabTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::vl::presentation::controls::GuiRibbonTabPage*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
-	void __vwsnc338_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
+	void __vwsnc338_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().Background;
+		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetHighlighted(); } catch(...){ return false; } }();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc338_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
+	void __vwsnc338_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		if (static_cast<bool>(__vwsn_bind_handler_1_0))
+		{
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->HighlightedChanged, __vwsn_bind_handler_1_0);
+			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+		}
+		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::Ensure(::vl::__vwsn::RawPtrCast<::vl::presentation::controls::GuiRibbonTabPage>(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetSelectedTabPage())); } catch(...){ return static_cast<::vl::presentation::controls::GuiRibbonTabPage*>(nullptr); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->HighlightedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc338_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc338_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
 
-	bool __vwsnc338_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
+	bool __vwsnc338_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
 	{
 		if ((! __vwsn_bind_opened_))
 		{
 			(__vwsn_bind_opened_ = true);
-			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, ::vl::Func<void()>(this, &__vwsnc338_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::TabTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::Ensure(::vl::__vwsn::RawPtrCast<::vl::presentation::controls::GuiRibbonTabPage>(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetSelectedTabPage())); } catch(...){ return static_cast<::vl::presentation::controls::GuiRibbonTabPage*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SelectedTabPageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc338_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->HighlightedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc338_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
 	}
 
-	bool __vwsnc338_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
+	bool __vwsnc338_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
 	{
 		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
 		{
@@ -31005,18 +31016,25 @@ Closures
 		return false;
 	}
 
-	bool __vwsnc338_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
+	bool __vwsnc338_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
 	{
 		if ((! __vwsn_bind_closed_))
 		{
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SelectedTabPageChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
-			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr));
+			if (static_cast<bool>(__vwsn_bind_handler_1_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->HighlightedChanged, __vwsn_bind_handler_1_0);
+				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::TabTemplate*>(nullptr));
+			(__vwsn_bind_cache_1 = static_cast<::vl::presentation::controls::GuiRibbonTabPage*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -31035,7 +31053,7 @@ Closures
 
 	void __vwsnc339_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().Border;
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().Background;
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -31157,7 +31175,7 @@ Closures
 
 	void __vwsnc340_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().G1;
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().Border;
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -31218,7 +31236,7 @@ Closures
 
 	void __vwsnc341_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().G2;
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().G1;
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -31279,7 +31297,7 @@ Closures
 
 	void __vwsnc342_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().G3;
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().G2;
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -31340,7 +31358,7 @@ Closures
 
 	void __vwsnc343_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().G4;
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().G3;
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -31401,11 +31419,11 @@ Closures
 
 	void __vwsnc344_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetText();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().G4;
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc344_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	void __vwsnc344_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -31416,7 +31434,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TextChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc344_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, ::vl::Func<void()>(this, &__vwsnc344_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -31439,7 +31457,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TextChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr));
@@ -31462,11 +31480,11 @@ Closures
 
 	void __vwsnc345_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().Text;
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetText();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc345_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
+	void __vwsnc345_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -31477,7 +31495,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, ::vl::Func<void()>(this, &__vwsnc345_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TextChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc345_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -31500,7 +31518,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TextChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr));
@@ -31523,11 +31541,11 @@ Closures
 
 	void __vwsnc346_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetFont();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().Text;
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc346_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	void __vwsnc346_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -31538,7 +31556,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc346_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, ::vl::Func<void()>(this, &__vwsnc346_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -31561,7 +31579,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr));
@@ -31577,39 +31595,18 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_3 = static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_3_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc347_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.MenuBarButtonDisabled : ((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetSubMenuOpening() || (::vl::__vwsn::This(__vwsn_bind_cache_2)->GetState() == ::vl::presentation::controls::ButtonState::Pressed)) ? GLOBAL_NAME vistaColors.MenuBarButtonPressed : ((::vl::__vwsn::This(__vwsn_bind_cache_3)->GetState() == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.MenuBarButtonActive : GLOBAL_NAME vistaColors.MenuBarButtonNormal)));
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetFont();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc347_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc347_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc347_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc347_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -31620,13 +31617,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_3 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc347_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->SubMenuOpeningChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc347_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc347_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_3_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_3)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc347_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc347_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -31643,6 +31634,94 @@ Closures
 	}
 
 	bool __vwsnc347_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
+	{
+		if ((! __vwsn_bind_closed_))
+		{
+			(__vwsn_bind_closed_ = true);
+			if (static_cast<bool>(__vwsn_bind_handler_0_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, __vwsn_bind_handler_0_0);
+				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr));
+			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			return true;
+		}
+		return false;
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnc348_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc348_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::MenuBarButtonTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_3 = static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr);
+		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_3_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_opened_ = false;
+		this->__vwsn_bind_closed_ = false;
+	}
+
+	void __vwsnc348_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
+	{
+		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.MenuBarButtonDisabled : ((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetSubMenuOpening() || (::vl::__vwsn::This(__vwsn_bind_cache_2)->GetState() == ::vl::presentation::controls::ButtonState::Pressed)) ? GLOBAL_NAME vistaColors.MenuBarButtonPressed : ((::vl::__vwsn::This(__vwsn_bind_cache_3)->GetState() == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.MenuBarButtonActive : GLOBAL_NAME vistaColors.MenuBarButtonNormal)));
+		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
+	}
+
+	void __vwsnc348_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc348_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc348_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc348_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	bool __vwsnc348_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
+	{
+		if ((! __vwsn_bind_opened_))
+		{
+			(__vwsn_bind_opened_ = true);
+			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_3 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuBarButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc348_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->SubMenuOpeningChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc348_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc348_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_3_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_3)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc348_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc348_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
+	{
+		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
+		{
+			this->__vwsn_bind_activator_();
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc348_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
 	{
 		if ((! __vwsn_bind_closed_))
 		{
@@ -31682,67 +31761,6 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnc348_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc348_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
-		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_opened_ = false;
-		this->__vwsn_bind_closed_ = false;
-	}
-
-	void __vwsnc348_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
-	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().Background;
-		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
-	}
-
-	void __vwsnc348_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	bool __vwsnc348_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
-	{
-		if ((! __vwsn_bind_opened_))
-		{
-			(__vwsn_bind_opened_ = true);
-			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, ::vl::Func<void()>(this, &__vwsnc348_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc348_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
-	{
-		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
-		{
-			this->__vwsn_bind_activator_();
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc348_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
-	{
-		if ((! __vwsn_bind_closed_))
-		{
-			(__vwsn_bind_closed_ = true);
-			if (static_cast<bool>(__vwsn_bind_handler_0_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, __vwsn_bind_handler_0_0);
-				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
-			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			return true;
-		}
-		return false;
-	}
-
-	//-------------------------------------------------------------------
-
 	__vwsnc349_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc349_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
@@ -31754,7 +31772,7 @@ Closures
 
 	void __vwsnc349_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().Border;
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().Background;
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -31876,7 +31894,7 @@ Closures
 
 	void __vwsnc350_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().G1;
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().Border;
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -31937,7 +31955,7 @@ Closures
 
 	void __vwsnc351_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().G2;
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().G1;
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -31998,11 +32016,11 @@ Closures
 
 	void __vwsnc352_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetSelected() ? GLOBAL_NAME vistaColors.MenuItemButtonNormalActive.G2 : GLOBAL_NAME vistaColors.Transparent);
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().G2;
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc352_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	void __vwsnc352_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -32013,7 +32031,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SelectedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc352_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, ::vl::Func<void()>(this, &__vwsnc352_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -32036,7 +32054,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SelectedChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
@@ -32059,7 +32077,7 @@ Closures
 
 	void __vwsnc353_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.TextDisabled : GLOBAL_NAME vistaColors.TextNormal);
+		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetSelected() ? GLOBAL_NAME vistaColors.MenuItemButtonNormalActive.G2 : GLOBAL_NAME vistaColors.Transparent);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -32074,7 +32092,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc353_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SelectedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc353_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -32097,7 +32115,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SelectedChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
@@ -32174,25 +32192,18 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc355_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetSelected() && (! static_cast<bool>(::vl::__vwsn::This(__vwsn_bind_cache_1)->GetImage())));
+		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.TextDisabled : GLOBAL_NAME vistaColors.TextNormal);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc355_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc355_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -32203,9 +32214,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SelectedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc355_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc355_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc355_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -32222,6 +32231,76 @@ Closures
 	}
 
 	bool __vwsnc355_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
+	{
+		if ((! __vwsn_bind_closed_))
+		{
+			(__vwsn_bind_closed_ = true);
+			if (static_cast<bool>(__vwsn_bind_handler_0_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
+				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
+			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			return true;
+		}
+		return false;
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
+		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_opened_ = false;
+		this->__vwsn_bind_closed_ = false;
+	}
+
+	void __vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
+	{
+		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetSelected() && (! static_cast<bool>(::vl::__vwsn::This(__vwsn_bind_cache_1)->GetImage())));
+		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
+	}
+
+	void __vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	bool __vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
+	{
+		if ((! __vwsn_bind_opened_))
+		{
+			(__vwsn_bind_opened_ = true);
+			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SelectedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
+	{
+		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
+		{
+			this->__vwsn_bind_activator_();
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
 	{
 		if ((! __vwsn_bind_closed_))
 		{
@@ -32247,67 +32326,6 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
-		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_opened_ = false;
-		this->__vwsn_bind_closed_ = false;
-	}
-
-	void __vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
-	{
-		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetImage().Obj())->GetImage(); } catch(...){ return ::vl::Ptr<::vl::presentation::INativeImage>(); } }();
-		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
-	}
-
-	void __vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	bool __vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
-	{
-		if ((! __vwsn_bind_opened_))
-		{
-			(__vwsn_bind_opened_ = true);
-			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
-	{
-		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
-		{
-			this->__vwsn_bind_activator_();
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc356_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
-	{
-		if ((! __vwsn_bind_closed_))
-		{
-			(__vwsn_bind_closed_ = true);
-			if (static_cast<bool>(__vwsn_bind_handler_0_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, __vwsn_bind_handler_0_0);
-				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
-			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			return true;
-		}
-		return false;
-	}
-
-	//-------------------------------------------------------------------
-
 	__vwsnc357_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc357_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
@@ -32319,7 +32337,7 @@ Closures
 
 	void __vwsnc357_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled();
+		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetImage().Obj())->GetImage(); } catch(...){ return ::vl::Ptr<::vl::presentation::INativeImage>(); } }();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -32334,7 +32352,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc357_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc357_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -32357,7 +32375,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
@@ -32380,7 +32398,7 @@ Closures
 
 	void __vwsnc358_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetImage().Obj())->GetFrameIndex(); } catch(...){ return static_cast<::vl::vint>(0); } }();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -32395,7 +32413,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc358_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc358_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -32418,7 +32436,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
@@ -32441,11 +32459,11 @@ Closures
 
 	void __vwsnc359_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().G3;
+		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetImage().Obj())->GetFrameIndex(); } catch(...){ return static_cast<::vl::vint>(0); } }();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc359_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
+	void __vwsnc359_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -32456,7 +32474,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, ::vl::Func<void()>(this, &__vwsnc359_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc359_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -32479,7 +32497,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
@@ -32563,7 +32581,7 @@ Closures
 
 	void __vwsnc360_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().G4;
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().G3;
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -32624,11 +32642,11 @@ Closures
 
 	void __vwsnc361_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetText();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().G4;
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc361_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	void __vwsnc361_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -32639,7 +32657,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TextChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc361_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, ::vl::Func<void()>(this, &__vwsnc361_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -32662,7 +32680,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TextChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
@@ -32685,11 +32703,11 @@ Closures
 
 	void __vwsnc362_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().Text;
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetText();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc362_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
+	void __vwsnc362_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -32700,7 +32718,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, ::vl::Func<void()>(this, &__vwsnc362_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TextChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc362_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -32723,7 +32741,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TextChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
@@ -32746,11 +32764,11 @@ Closures
 
 	void __vwsnc363_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetFont();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().Text;
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc363_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	void __vwsnc363_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -32761,7 +32779,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc363_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, ::vl::Func<void()>(this, &__vwsnc363_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -32784,7 +32802,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
@@ -32807,7 +32825,7 @@ Closures
 
 	void __vwsnc364_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetShortcutText();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetFont();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -32822,7 +32840,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ShortcutTextChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc364_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc364_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -32845,7 +32863,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ShortcutTextChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
@@ -32868,11 +32886,11 @@ Closures
 
 	void __vwsnc365_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().Text;
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetShortcutText();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc365_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
+	void __vwsnc365_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -32883,7 +32901,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, ::vl::Func<void()>(this, &__vwsnc365_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ShortcutTextChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc365_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -32906,7 +32924,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ShortcutTextChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
@@ -32929,11 +32947,11 @@ Closures
 
 	void __vwsnc366_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetFont();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().Text;
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc366_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	void __vwsnc366_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -32944,7 +32962,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc366_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, ::vl::Func<void()>(this, &__vwsnc366_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -32967,7 +32985,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
@@ -32990,11 +33008,11 @@ Closures
 
 	void __vwsnc367_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().Text;
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetFont();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc367_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
+	void __vwsnc367_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -33005,7 +33023,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, ::vl::Func<void()>(this, &__vwsnc367_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc367_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -33028,7 +33046,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
@@ -33112,11 +33130,11 @@ Closures
 
 	void __vwsnc369_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetSubMenuExisting();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetColors().Text;
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc369_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	void __vwsnc369_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -33127,7 +33145,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SubMenuExistingChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc369_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, ::vl::Func<void()>(this, &__vwsnc369_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -33150,7 +33168,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SubMenuExistingChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ColorsChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
@@ -33227,53 +33245,18 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_3 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_4 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_5 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_3_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_4_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_5_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc370_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? ((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() == ::vl::presentation::controls::ButtonState::Normal) ? GLOBAL_NAME vistaColors.MenuItemButtonDisabled : GLOBAL_NAME vistaColors.MenuItemButtonDisabledActive) : (::vl::__vwsn::This(__vwsn_bind_cache_2)->GetSubMenuOpening() ? GLOBAL_NAME vistaColors.MenuItemButtonNormalActive : (::vl::__vwsn::This(__vwsn_bind_cache_3)->GetSelected() ? ((::vl::__vwsn::This(__vwsn_bind_cache_4)->GetState() == ::vl::presentation::controls::ButtonState::Normal) ? GLOBAL_NAME vistaColors.MenuItemButtonSelected : GLOBAL_NAME vistaColors.MenuItemButtonSelectedActive) : ((::vl::__vwsn::This(__vwsn_bind_cache_5)->GetState() != ::vl::presentation::controls::ButtonState::Normal) ? GLOBAL_NAME vistaColors.MenuItemButtonNormalActive : GLOBAL_NAME vistaColors.MenuItemButtonNormal))));
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetSubMenuExisting();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc370_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc370_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc370_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc370_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc370_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc370_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_5_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -33284,17 +33267,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_3 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_4 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_5 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc370_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc370_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->SubMenuOpeningChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc370_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_3_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_3)->SelectedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc370_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_4_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_4)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc370_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_5_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_5)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc370_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_5_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SubMenuExistingChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc370_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -33311,6 +33284,112 @@ Closures
 	}
 
 	bool __vwsnc370_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
+	{
+		if ((! __vwsn_bind_closed_))
+		{
+			(__vwsn_bind_closed_ = true);
+			if (static_cast<bool>(__vwsn_bind_handler_0_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SubMenuExistingChanged, __vwsn_bind_handler_0_0);
+				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr));
+			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			return true;
+		}
+		return false;
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::MenuItemButtonTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_3 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_4 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_5 = static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr);
+		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_3_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_4_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_5_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_opened_ = false;
+		this->__vwsn_bind_closed_ = false;
+	}
+
+	void __vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
+	{
+		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? ((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() == ::vl::presentation::controls::ButtonState::Normal) ? GLOBAL_NAME vistaColors.MenuItemButtonDisabled : GLOBAL_NAME vistaColors.MenuItemButtonDisabledActive) : (::vl::__vwsn::This(__vwsn_bind_cache_2)->GetSubMenuOpening() ? GLOBAL_NAME vistaColors.MenuItemButtonNormalActive : (::vl::__vwsn::This(__vwsn_bind_cache_3)->GetSelected() ? ((::vl::__vwsn::This(__vwsn_bind_cache_4)->GetState() == ::vl::presentation::controls::ButtonState::Normal) ? GLOBAL_NAME vistaColors.MenuItemButtonSelected : GLOBAL_NAME vistaColors.MenuItemButtonSelectedActive) : ((::vl::__vwsn::This(__vwsn_bind_cache_5)->GetState() != ::vl::presentation::controls::ButtonState::Normal) ? GLOBAL_NAME vistaColors.MenuItemButtonNormalActive : GLOBAL_NAME vistaColors.MenuItemButtonNormal))));
+		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
+	}
+
+	void __vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_5_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	bool __vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
+	{
+		if ((! __vwsn_bind_opened_))
+		{
+			(__vwsn_bind_opened_ = true);
+			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_3 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_4 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_5 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::MenuItemButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->SubMenuOpeningChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_3_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_3)->SelectedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_4_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_4)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_5_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_5)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_5_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
+	{
+		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
+		{
+			this->__vwsn_bind_activator_();
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
 	{
 		if ((! __vwsn_bind_closed_))
 		{
@@ -33364,99 +33443,20 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnc371_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc371_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::ToolstripSplitArrowTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr);
-		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_opened_ = false;
-		this->__vwsn_bind_closed_ = false;
-	}
-
-	void __vwsnc371_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
-	{
-		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled() && (::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() != ::vl::presentation::controls::ButtonState::Normal));
-		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
-	}
-
-	void __vwsnc371_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc371_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	bool __vwsnc371_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
-	{
-		if ((! __vwsn_bind_opened_))
-		{
-			(__vwsn_bind_opened_ = true);
-			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc371_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc371_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc371_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
-	{
-		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
-		{
-			this->__vwsn_bind_activator_();
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc371_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
-	{
-		if ((! __vwsn_bind_closed_))
-		{
-			(__vwsn_bind_closed_ = true);
-			if (static_cast<bool>(__vwsn_bind_handler_0_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
-				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			if (static_cast<bool>(__vwsn_bind_handler_1_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, __vwsn_bind_handler_1_0);
-				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr));
-			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr));
-			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			return true;
-		}
-		return false;
-	}
-
-	//-------------------------------------------------------------------
-
 	__vwsnc372_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc372_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::ToolstripSplitArrowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr);
 		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr);
-		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc372_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = [&](auto state){ return ((! ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.ArrowDisabled : (((state == ::vl::presentation::controls::ButtonState::Pressed) || ::vl::__vwsn::This(__vwsn_bind_cache_2)->GetSelected()) ? GLOBAL_NAME vistaColors.TextBright : ((state == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.ArrowAccentHovered : GLOBAL_NAME vistaColors.TextSecondary))); }(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetState());
+		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled() && (::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() != ::vl::presentation::controls::ButtonState::Normal));
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -33470,11 +33470,6 @@ Closures
 		this->__vwsn_bind_activator_();
 	}
 
-	void __vwsnc372_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
 	bool __vwsnc372_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
 	{
 		if ((! __vwsn_bind_opened_))
@@ -33482,10 +33477,8 @@ Closures
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc372_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc372_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->SelectedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc372_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc372_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc372_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -33508,25 +33501,18 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->StateChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->VisuallyEnabledChanged, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			if (static_cast<bool>(__vwsn_bind_handler_2_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_2)->SelectedChanged, __vwsn_bind_handler_2_0);
-				(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr));
 			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr));
-			(__vwsn_bind_cache_2 = static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -33627,55 +33613,57 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnc374_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc374_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnc374_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc374_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::ToolstripSplitArrowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
-		this->__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>();
-		this->__vwsn_bind_cache_1 = ::vl::Ptr<::winvistaskin::ButtonColorState>();
+		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr);
+		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
-	void __vwsnc374_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
+	void __vwsnc374_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetBackground();
+		auto __vwsn_bind_activator_result_ = [&](auto state){ return ((! ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.ArrowDisabled : (((state == ::vl::presentation::controls::ButtonState::Pressed) || ::vl::__vwsn::This(__vwsn_bind_cache_2)->GetSelected()) ? GLOBAL_NAME vistaColors.TextBright : ((state == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.ArrowAccentHovered : GLOBAL_NAME vistaColors.TextSecondary))); }(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetState());
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc374_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
-	{
-		if (static_cast<bool>(__vwsn_bind_handler_1_0))
-		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, __vwsn_bind_handler_1_0);
-			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-		}
-		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, ::vl::Func<void()>(this, &__vwsnc374_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc374_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0()
+	void __vwsnc374_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
 
-	bool __vwsnc374_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
+	void __vwsnc374_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc374_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	bool __vwsnc374_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
 	{
 		if ((! __vwsn_bind_opened_))
 		{
 			(__vwsn_bind_opened_ = true);
-			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc374_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, ::vl::Func<void()>(this, &__vwsnc374_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc374_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc374_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->SelectedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc374_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
 	}
 
-	bool __vwsnc374_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
+	bool __vwsnc374_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
 	{
 		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
 		{
@@ -33685,25 +33673,32 @@ Closures
 		return false;
 	}
 
-	bool __vwsnc374_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
+	bool __vwsnc374_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
 	{
 		if ((! __vwsn_bind_closed_))
 		{
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->StateChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->VisuallyEnabledChanged, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
-			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
-			(__vwsn_bind_cache_1 = ::vl::Ptr<::winvistaskin::ButtonColorState>());
+			if (static_cast<bool>(__vwsn_bind_handler_2_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_2)->SelectedChanged, __vwsn_bind_handler_2_0);
+				(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr));
+			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr));
+			(__vwsn_bind_cache_2 = static_cast<::winvistaskin::ToolstripSplitArrowTemplate*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -33724,7 +33719,7 @@ Closures
 
 	void __vwsnc375_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetBorder();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetBackground();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -33732,11 +33727,11 @@ Closures
 	{
 		if (static_cast<bool>(__vwsn_bind_handler_1_0))
 		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, __vwsn_bind_handler_1_0);
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, __vwsn_bind_handler_1_0);
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 		}
 		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, ::vl::Func<void()>(this, &__vwsnc375_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, ::vl::Func<void()>(this, &__vwsnc375_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 		this->__vwsn_bind_activator_();
 	}
 
@@ -33753,7 +33748,7 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc375_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, ::vl::Func<void()>(this, &__vwsnc375_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, ::vl::Func<void()>(this, &__vwsnc375_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -33781,7 +33776,7 @@ Closures
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
@@ -33808,7 +33803,7 @@ Closures
 
 	void __vwsnc376_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG1();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetBorder();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -33816,11 +33811,11 @@ Closures
 	{
 		if (static_cast<bool>(__vwsn_bind_handler_1_0))
 		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, __vwsn_bind_handler_1_0);
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, __vwsn_bind_handler_1_0);
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 		}
 		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, ::vl::Func<void()>(this, &__vwsnc376_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, ::vl::Func<void()>(this, &__vwsnc376_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 		this->__vwsn_bind_activator_();
 	}
 
@@ -33837,7 +33832,7 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc376_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, ::vl::Func<void()>(this, &__vwsnc376_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, ::vl::Func<void()>(this, &__vwsnc376_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -33865,7 +33860,7 @@ Closures
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
@@ -33892,7 +33887,7 @@ Closures
 
 	void __vwsnc377_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG2();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG1();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -33900,11 +33895,11 @@ Closures
 	{
 		if (static_cast<bool>(__vwsn_bind_handler_1_0))
 		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, __vwsn_bind_handler_1_0);
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, __vwsn_bind_handler_1_0);
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 		}
 		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, ::vl::Func<void()>(this, &__vwsnc377_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, ::vl::Func<void()>(this, &__vwsnc377_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 		this->__vwsn_bind_activator_();
 	}
 
@@ -33921,7 +33916,7 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc377_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, ::vl::Func<void()>(this, &__vwsnc377_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, ::vl::Func<void()>(this, &__vwsnc377_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -33949,7 +33944,7 @@ Closures
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
@@ -33976,7 +33971,7 @@ Closures
 
 	void __vwsnc378_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG3();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG2();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -33984,11 +33979,11 @@ Closures
 	{
 		if (static_cast<bool>(__vwsn_bind_handler_1_0))
 		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, __vwsn_bind_handler_1_0);
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, __vwsn_bind_handler_1_0);
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 		}
 		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, ::vl::Func<void()>(this, &__vwsnc378_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, ::vl::Func<void()>(this, &__vwsnc378_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 		this->__vwsn_bind_activator_();
 	}
 
@@ -34005,7 +34000,7 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc378_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, ::vl::Func<void()>(this, &__vwsnc378_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, ::vl::Func<void()>(this, &__vwsnc378_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -34033,7 +34028,7 @@ Closures
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
@@ -34060,7 +34055,7 @@ Closures
 
 	void __vwsnc379_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG4();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG3();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -34068,11 +34063,11 @@ Closures
 	{
 		if (static_cast<bool>(__vwsn_bind_handler_1_0))
 		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, __vwsn_bind_handler_1_0);
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, __vwsn_bind_handler_1_0);
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 		}
 		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, ::vl::Func<void()>(this, &__vwsnc379_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, ::vl::Func<void()>(this, &__vwsnc379_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 		this->__vwsn_bind_activator_();
 	}
 
@@ -34089,7 +34084,7 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc379_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, ::vl::Func<void()>(this, &__vwsnc379_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, ::vl::Func<void()>(this, &__vwsnc379_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -34117,7 +34112,7 @@ Closures
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
@@ -34195,19 +34190,33 @@ Closures
 	__vwsnc380_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc380_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
-		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>();
+		this->__vwsn_bind_cache_1 = ::vl::Ptr<::winvistaskin::ButtonColorState>();
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc380_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetImage().Obj())->GetImage(); } catch(...){ return ::vl::Ptr<::vl::presentation::INativeImage>(); } }();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG4();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc380_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	void __vwsnc380_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
+	{
+		if (static_cast<bool>(__vwsn_bind_handler_1_0))
+		{
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, __vwsn_bind_handler_1_0);
+			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+		}
+		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, ::vl::Func<void()>(this, &__vwsnc380_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc380_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0()
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -34217,8 +34226,10 @@ Closures
 		if ((! __vwsn_bind_opened_))
 		{
 			(__vwsn_bind_opened_ = true);
-			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc380_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc380_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, ::vl::Func<void()>(this, &__vwsnc380_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -34241,11 +34252,18 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
-			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr));
+			if (static_cast<bool>(__vwsn_bind_handler_1_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, __vwsn_bind_handler_1_0);
+				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
+			(__vwsn_bind_cache_1 = ::vl::Ptr<::winvistaskin::ButtonColorState>());
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -34264,7 +34282,7 @@ Closures
 
 	void __vwsnc381_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled();
+		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetImage().Obj())->GetImage(); } catch(...){ return ::vl::Ptr<::vl::presentation::INativeImage>(); } }();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -34279,7 +34297,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc381_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc381_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -34302,7 +34320,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr));
@@ -34325,7 +34343,7 @@ Closures
 
 	void __vwsnc382_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetImage().Obj())->GetFrameIndex(); } catch(...){ return static_cast<::vl::vint>(0); } }();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -34340,7 +34358,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc382_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc382_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -34363,7 +34381,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr));
@@ -34379,46 +34397,18 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_3 = static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_4 = static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_3_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_4_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc383_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.ToolstripButtonDisabled : (((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() == ::vl::presentation::controls::ButtonState::Pressed) || ::vl::__vwsn::This(__vwsn_bind_cache_2)->GetSubMenuOpening()) ? GLOBAL_NAME vistaColors.ToolstripButtonPressed : (::vl::__vwsn::This(__vwsn_bind_cache_3)->GetSelected() ? GLOBAL_NAME vistaColors.ToolstripButtonSelected : ((::vl::__vwsn::This(__vwsn_bind_cache_4)->GetState() == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.ToolstripButtonActive : GLOBAL_NAME vistaColors.ToolstripButtonNormal))));
+		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetImage().Obj())->GetFrameIndex(); } catch(...){ return static_cast<::vl::vint>(0); } }();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc383_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc383_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc383_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc383_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc383_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -34429,15 +34419,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_3 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_4 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc383_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc383_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->SubMenuOpeningChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc383_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_3_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_3)->SelectedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc383_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_4_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_4)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc383_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc383_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -34454,6 +34436,103 @@ Closures
 	}
 
 	bool __vwsnc383_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
+	{
+		if ((! __vwsn_bind_closed_))
+		{
+			(__vwsn_bind_closed_ = true);
+			if (static_cast<bool>(__vwsn_bind_handler_0_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, __vwsn_bind_handler_0_0);
+				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr));
+			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			return true;
+		}
+		return false;
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::ToolstripButtonTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_3 = static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_4 = static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr);
+		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_3_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_4_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_opened_ = false;
+		this->__vwsn_bind_closed_ = false;
+	}
+
+	void __vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
+	{
+		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.ToolstripButtonDisabled : (((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() == ::vl::presentation::controls::ButtonState::Pressed) || ::vl::__vwsn::This(__vwsn_bind_cache_2)->GetSubMenuOpening()) ? GLOBAL_NAME vistaColors.ToolstripButtonPressed : (::vl::__vwsn::This(__vwsn_bind_cache_3)->GetSelected() ? GLOBAL_NAME vistaColors.ToolstripButtonSelected : ((::vl::__vwsn::This(__vwsn_bind_cache_4)->GetState() == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.ToolstripButtonActive : GLOBAL_NAME vistaColors.ToolstripButtonNormal))));
+		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
+	}
+
+	void __vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	bool __vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
+	{
+		if ((! __vwsn_bind_opened_))
+		{
+			(__vwsn_bind_opened_ = true);
+			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_3 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_4 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->SubMenuOpeningChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_3_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_3)->SelectedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_4_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_4)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
+	{
+		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
+		{
+			this->__vwsn_bind_activator_();
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
 	{
 		if ((! __vwsn_bind_closed_))
 		{
@@ -34500,90 +34579,6 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnc384_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc384_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-		this->__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>();
-		this->__vwsn_bind_cache_1 = ::vl::Ptr<::winvistaskin::ButtonColorState>();
-		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_opened_ = false;
-		this->__vwsn_bind_closed_ = false;
-	}
-
-	void __vwsnc384_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
-	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetBackground();
-		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
-	}
-
-	void __vwsnc384_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
-	{
-		if (static_cast<bool>(__vwsn_bind_handler_1_0))
-		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, __vwsn_bind_handler_1_0);
-			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-		}
-		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, ::vl::Func<void()>(this, &__vwsnc384_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc384_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0()
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	bool __vwsnc384_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
-	{
-		if ((! __vwsn_bind_opened_))
-		{
-			(__vwsn_bind_opened_ = true);
-			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc384_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, ::vl::Func<void()>(this, &__vwsnc384_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc384_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
-	{
-		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
-		{
-			this->__vwsn_bind_activator_();
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc384_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
-	{
-		if ((! __vwsn_bind_closed_))
-		{
-			(__vwsn_bind_closed_ = true);
-			if (static_cast<bool>(__vwsn_bind_handler_0_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, __vwsn_bind_handler_0_0);
-				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			if (static_cast<bool>(__vwsn_bind_handler_1_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, __vwsn_bind_handler_1_0);
-				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
-			(__vwsn_bind_cache_1 = ::vl::Ptr<::winvistaskin::ButtonColorState>());
-			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			return true;
-		}
-		return false;
-	}
-
-	//-------------------------------------------------------------------
-
 	__vwsnc385_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc385_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
@@ -34597,7 +34592,7 @@ Closures
 
 	void __vwsnc385_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetBorder();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetBackground();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -34605,11 +34600,11 @@ Closures
 	{
 		if (static_cast<bool>(__vwsn_bind_handler_1_0))
 		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, __vwsn_bind_handler_1_0);
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, __vwsn_bind_handler_1_0);
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 		}
 		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, ::vl::Func<void()>(this, &__vwsnc385_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, ::vl::Func<void()>(this, &__vwsnc385_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 		this->__vwsn_bind_activator_();
 	}
 
@@ -34626,7 +34621,7 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc385_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, ::vl::Func<void()>(this, &__vwsnc385_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, ::vl::Func<void()>(this, &__vwsnc385_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -34654,7 +34649,7 @@ Closures
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
@@ -34681,7 +34676,7 @@ Closures
 
 	void __vwsnc386_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG1();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetBorder();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -34689,11 +34684,11 @@ Closures
 	{
 		if (static_cast<bool>(__vwsn_bind_handler_1_0))
 		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, __vwsn_bind_handler_1_0);
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, __vwsn_bind_handler_1_0);
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 		}
 		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, ::vl::Func<void()>(this, &__vwsnc386_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, ::vl::Func<void()>(this, &__vwsnc386_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 		this->__vwsn_bind_activator_();
 	}
 
@@ -34710,7 +34705,7 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc386_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, ::vl::Func<void()>(this, &__vwsnc386_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, ::vl::Func<void()>(this, &__vwsnc386_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -34738,7 +34733,7 @@ Closures
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
@@ -34765,7 +34760,7 @@ Closures
 
 	void __vwsnc387_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG2();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG1();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -34773,11 +34768,11 @@ Closures
 	{
 		if (static_cast<bool>(__vwsn_bind_handler_1_0))
 		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, __vwsn_bind_handler_1_0);
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, __vwsn_bind_handler_1_0);
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 		}
 		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, ::vl::Func<void()>(this, &__vwsnc387_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, ::vl::Func<void()>(this, &__vwsnc387_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 		this->__vwsn_bind_activator_();
 	}
 
@@ -34794,7 +34789,7 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc387_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, ::vl::Func<void()>(this, &__vwsnc387_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, ::vl::Func<void()>(this, &__vwsnc387_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -34822,7 +34817,7 @@ Closures
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
@@ -34849,7 +34844,7 @@ Closures
 
 	void __vwsnc388_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG3();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG2();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -34857,11 +34852,11 @@ Closures
 	{
 		if (static_cast<bool>(__vwsn_bind_handler_1_0))
 		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, __vwsn_bind_handler_1_0);
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, __vwsn_bind_handler_1_0);
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 		}
 		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, ::vl::Func<void()>(this, &__vwsnc388_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, ::vl::Func<void()>(this, &__vwsnc388_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 		this->__vwsn_bind_activator_();
 	}
 
@@ -34878,7 +34873,7 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc388_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, ::vl::Func<void()>(this, &__vwsnc388_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, ::vl::Func<void()>(this, &__vwsnc388_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -34906,7 +34901,7 @@ Closures
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
@@ -34933,7 +34928,7 @@ Closures
 
 	void __vwsnc389_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG4();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG3();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -34941,11 +34936,11 @@ Closures
 	{
 		if (static_cast<bool>(__vwsn_bind_handler_1_0))
 		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, __vwsn_bind_handler_1_0);
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, __vwsn_bind_handler_1_0);
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 		}
 		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, ::vl::Func<void()>(this, &__vwsnc389_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, ::vl::Func<void()>(this, &__vwsnc389_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 		this->__vwsn_bind_activator_();
 	}
 
@@ -34962,7 +34957,7 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc389_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, ::vl::Func<void()>(this, &__vwsnc389_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, ::vl::Func<void()>(this, &__vwsnc389_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -34990,7 +34985,7 @@ Closures
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
@@ -35091,19 +35086,33 @@ Closures
 	__vwsnc390_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc390_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
-		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>();
+		this->__vwsn_bind_cache_1 = ::vl::Ptr<::winvistaskin::ButtonColorState>();
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc390_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetImage().Obj())->GetImage(); } catch(...){ return ::vl::Ptr<::vl::presentation::INativeImage>(); } }();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG4();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc390_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	void __vwsnc390_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
+	{
+		if (static_cast<bool>(__vwsn_bind_handler_1_0))
+		{
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, __vwsn_bind_handler_1_0);
+			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+		}
+		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, ::vl::Func<void()>(this, &__vwsnc390_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc390_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0()
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -35113,8 +35122,10 @@ Closures
 		if ((! __vwsn_bind_opened_))
 		{
 			(__vwsn_bind_opened_ = true);
-			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc390_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc390_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, ::vl::Func<void()>(this, &__vwsnc390_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -35137,11 +35148,18 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
-			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr));
+			if (static_cast<bool>(__vwsn_bind_handler_1_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, __vwsn_bind_handler_1_0);
+				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
+			(__vwsn_bind_cache_1 = ::vl::Ptr<::winvistaskin::ButtonColorState>());
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -35160,7 +35178,7 @@ Closures
 
 	void __vwsnc391_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled();
+		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetImage().Obj())->GetImage(); } catch(...){ return ::vl::Ptr<::vl::presentation::INativeImage>(); } }();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -35175,7 +35193,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc391_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc391_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -35198,7 +35216,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr));
@@ -35221,7 +35239,7 @@ Closures
 
 	void __vwsnc392_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetImage().Obj())->GetFrameIndex(); } catch(...){ return static_cast<::vl::vint>(0); } }();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -35236,7 +35254,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc392_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc392_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -35259,7 +35277,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr));
@@ -35275,32 +35293,18 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc393_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = [&](auto state){ return ((! ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.ArrowDisabled : (((state == ::vl::presentation::controls::ButtonState::Pressed) || ::vl::__vwsn::This(__vwsn_bind_cache_2)->GetSubMenuOpening()) ? GLOBAL_NAME vistaColors.TextBright : ((state == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.ArrowAccentHovered : GLOBAL_NAME vistaColors.TextSecondary))); }(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetState());
+		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetImage().Obj())->GetFrameIndex(); } catch(...){ return static_cast<::vl::vint>(0); } }();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc393_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc393_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc393_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -35311,11 +35315,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc393_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc393_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->SubMenuOpeningChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc393_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc393_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -35338,25 +35338,11 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->StateChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
-			if (static_cast<bool>(__vwsn_bind_handler_1_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->VisuallyEnabledChanged, __vwsn_bind_handler_1_0);
-				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			if (static_cast<bool>(__vwsn_bind_handler_2_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_2)->SubMenuOpeningChanged, __vwsn_bind_handler_2_0);
-				(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr));
-			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr));
-			(__vwsn_bind_cache_2 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -35463,20 +35449,16 @@ Closures
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr);
 		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr);
 		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_3 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_4 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_3_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_4_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc395_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.ToolstripButtonDisabled : (((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() == ::vl::presentation::controls::ButtonState::Pressed) || ::vl::__vwsn::This(__vwsn_bind_cache_2)->GetSubMenuOpening()) ? GLOBAL_NAME vistaColors.ToolstripButtonPressed : (::vl::__vwsn::This(__vwsn_bind_cache_3)->GetSelected() ? GLOBAL_NAME vistaColors.ToolstripButtonSelected : ((::vl::__vwsn::This(__vwsn_bind_cache_4)->GetState() == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.ToolstripButtonActive : GLOBAL_NAME vistaColors.ToolstripButtonNormal))));
+		auto __vwsn_bind_activator_result_ = [&](auto state){ return ((! ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.ArrowDisabled : (((state == ::vl::presentation::controls::ButtonState::Pressed) || ::vl::__vwsn::This(__vwsn_bind_cache_2)->GetSubMenuOpening()) ? GLOBAL_NAME vistaColors.TextBright : ((state == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.ArrowAccentHovered : GLOBAL_NAME vistaColors.TextSecondary))); }(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetState());
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -35495,16 +35477,6 @@ Closures
 		this->__vwsn_bind_activator_();
 	}
 
-	void __vwsnc395_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc395_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
 	bool __vwsnc395_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
 	{
 		if ((! __vwsn_bind_opened_))
@@ -35513,13 +35485,9 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr); } }());
 			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_3 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_4 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc395_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc395_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc395_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc395_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->SubMenuOpeningChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc395_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_3_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_3)->SelectedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc395_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_4_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_4)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc395_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -35536,6 +35504,117 @@ Closures
 	}
 
 	bool __vwsnc395_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
+	{
+		if ((! __vwsn_bind_closed_))
+		{
+			(__vwsn_bind_closed_ = true);
+			if (static_cast<bool>(__vwsn_bind_handler_0_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->StateChanged, __vwsn_bind_handler_0_0);
+				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			if (static_cast<bool>(__vwsn_bind_handler_1_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->VisuallyEnabledChanged, __vwsn_bind_handler_1_0);
+				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			if (static_cast<bool>(__vwsn_bind_handler_2_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_2)->SubMenuOpeningChanged, __vwsn_bind_handler_2_0);
+				(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr));
+			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr));
+			(__vwsn_bind_cache_2 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr));
+			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			return true;
+		}
+		return false;
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::ToolstripDropdownButtonTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_3 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_4 = static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr);
+		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_3_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_4_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_opened_ = false;
+		this->__vwsn_bind_closed_ = false;
+	}
+
+	void __vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
+	{
+		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.ToolstripButtonDisabled : (((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() == ::vl::presentation::controls::ButtonState::Pressed) || ::vl::__vwsn::This(__vwsn_bind_cache_2)->GetSubMenuOpening()) ? GLOBAL_NAME vistaColors.ToolstripButtonPressed : (::vl::__vwsn::This(__vwsn_bind_cache_3)->GetSelected() ? GLOBAL_NAME vistaColors.ToolstripButtonSelected : ((::vl::__vwsn::This(__vwsn_bind_cache_4)->GetState() == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.ToolstripButtonActive : GLOBAL_NAME vistaColors.ToolstripButtonNormal))));
+		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
+	}
+
+	void __vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	bool __vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
+	{
+		if ((! __vwsn_bind_opened_))
+		{
+			(__vwsn_bind_opened_ = true);
+			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_3 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_4 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripDropdownButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->SubMenuOpeningChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_3_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_3)->SelectedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_4_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_4)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
+	{
+		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
+		{
+			this->__vwsn_bind_activator_();
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
 	{
 		if ((! __vwsn_bind_closed_))
 		{
@@ -35582,90 +35661,6 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnc396_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc396_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-		this->__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>();
-		this->__vwsn_bind_cache_1 = ::vl::Ptr<::winvistaskin::ButtonColorState>();
-		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_opened_ = false;
-		this->__vwsn_bind_closed_ = false;
-	}
-
-	void __vwsnc396_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
-	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetBackground();
-		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
-	}
-
-	void __vwsnc396_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
-	{
-		if (static_cast<bool>(__vwsn_bind_handler_1_0))
-		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, __vwsn_bind_handler_1_0);
-			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-		}
-		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, ::vl::Func<void()>(this, &__vwsnc396_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc396_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0()
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	bool __vwsnc396_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
-	{
-		if ((! __vwsn_bind_opened_))
-		{
-			(__vwsn_bind_opened_ = true);
-			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc396_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, ::vl::Func<void()>(this, &__vwsnc396_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc396_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
-	{
-		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
-		{
-			this->__vwsn_bind_activator_();
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc396_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
-	{
-		if ((! __vwsn_bind_closed_))
-		{
-			(__vwsn_bind_closed_ = true);
-			if (static_cast<bool>(__vwsn_bind_handler_0_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, __vwsn_bind_handler_0_0);
-				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			if (static_cast<bool>(__vwsn_bind_handler_1_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, __vwsn_bind_handler_1_0);
-				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
-			(__vwsn_bind_cache_1 = ::vl::Ptr<::winvistaskin::ButtonColorState>());
-			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			return true;
-		}
-		return false;
-	}
-
-	//-------------------------------------------------------------------
-
 	__vwsnc397_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc397_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
@@ -35679,7 +35674,7 @@ Closures
 
 	void __vwsnc397_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetBorder();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetBackground();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -35687,11 +35682,11 @@ Closures
 	{
 		if (static_cast<bool>(__vwsn_bind_handler_1_0))
 		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, __vwsn_bind_handler_1_0);
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, __vwsn_bind_handler_1_0);
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 		}
 		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, ::vl::Func<void()>(this, &__vwsnc397_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, ::vl::Func<void()>(this, &__vwsnc397_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 		this->__vwsn_bind_activator_();
 	}
 
@@ -35708,7 +35703,7 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc397_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, ::vl::Func<void()>(this, &__vwsnc397_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, ::vl::Func<void()>(this, &__vwsnc397_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -35736,7 +35731,7 @@ Closures
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BackgroundChanged, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
@@ -35763,7 +35758,7 @@ Closures
 
 	void __vwsnc398_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG1();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetBorder();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -35771,11 +35766,11 @@ Closures
 	{
 		if (static_cast<bool>(__vwsn_bind_handler_1_0))
 		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, __vwsn_bind_handler_1_0);
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, __vwsn_bind_handler_1_0);
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 		}
 		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, ::vl::Func<void()>(this, &__vwsnc398_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, ::vl::Func<void()>(this, &__vwsnc398_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 		this->__vwsn_bind_activator_();
 	}
 
@@ -35792,7 +35787,7 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc398_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, ::vl::Func<void()>(this, &__vwsnc398_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, ::vl::Func<void()>(this, &__vwsnc398_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -35820,7 +35815,7 @@ Closures
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->BorderChanged, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
@@ -35847,7 +35842,7 @@ Closures
 
 	void __vwsnc399_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG2();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG1();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -35855,11 +35850,11 @@ Closures
 	{
 		if (static_cast<bool>(__vwsn_bind_handler_1_0))
 		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, __vwsn_bind_handler_1_0);
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, __vwsn_bind_handler_1_0);
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 		}
 		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, ::vl::Func<void()>(this, &__vwsnc399_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, ::vl::Func<void()>(this, &__vwsnc399_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 		this->__vwsn_bind_activator_();
 	}
 
@@ -35876,7 +35871,7 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc399_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, ::vl::Func<void()>(this, &__vwsnc399_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, ::vl::Func<void()>(this, &__vwsnc399_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -35904,7 +35899,7 @@ Closures
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G1Changed, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
@@ -36099,7 +36094,7 @@ Closures
 
 	void __vwsnc400_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG3();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG2();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -36107,11 +36102,11 @@ Closures
 	{
 		if (static_cast<bool>(__vwsn_bind_handler_1_0))
 		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, __vwsn_bind_handler_1_0);
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, __vwsn_bind_handler_1_0);
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 		}
 		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, ::vl::Func<void()>(this, &__vwsnc400_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, ::vl::Func<void()>(this, &__vwsnc400_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 		this->__vwsn_bind_activator_();
 	}
 
@@ -36128,7 +36123,7 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc400_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, ::vl::Func<void()>(this, &__vwsnc400_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, ::vl::Func<void()>(this, &__vwsnc400_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -36156,7 +36151,7 @@ Closures
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G2Changed, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
@@ -36183,7 +36178,7 @@ Closures
 
 	void __vwsnc401_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG4();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG3();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -36191,11 +36186,11 @@ Closures
 	{
 		if (static_cast<bool>(__vwsn_bind_handler_1_0))
 		{
-			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, __vwsn_bind_handler_1_0);
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, __vwsn_bind_handler_1_0);
 			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 		}
 		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
-		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, ::vl::Func<void()>(this, &__vwsnc401_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, ::vl::Func<void()>(this, &__vwsnc401_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 		this->__vwsn_bind_activator_();
 	}
 
@@ -36212,7 +36207,7 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc401_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, ::vl::Func<void()>(this, &__vwsnc401_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, ::vl::Func<void()>(this, &__vwsnc401_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -36240,7 +36235,7 @@ Closures
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G3Changed, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
@@ -36257,19 +36252,33 @@ Closures
 	__vwsnc402_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc402_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
-		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>();
+		this->__vwsn_bind_cache_1 = ::vl::Ptr<::winvistaskin::ButtonColorState>();
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc402_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetImage().Obj())->GetImage(); } catch(...){ return ::vl::Ptr<::vl::presentation::INativeImage>(); } }();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->GetG4();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc402_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	void __vwsnc402_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0()
+	{
+		if (static_cast<bool>(__vwsn_bind_handler_1_0))
+		{
+			::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, __vwsn_bind_handler_1_0);
+			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+		}
+		(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
+		(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, ::vl::Func<void()>(this, &__vwsnc402_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc402_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0()
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -36279,8 +36288,10 @@ Closures
 		if ((! __vwsn_bind_opened_))
 		{
 			(__vwsn_bind_opened_ = true);
-			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc402_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_cache_0 = [&](){ try{ return ::vl::__vwsn::This(__vwsnthis_0->self)->animation; } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorAnimation>(); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return ::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->GetCurrent(); } catch(...){ return ::vl::Ptr<::winvistaskin::ButtonColorState>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, ::vl::Func<void()>(this, &__vwsnc402_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, ::vl::Func<void()>(this, &__vwsnc402_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -36303,11 +36314,18 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0.Obj())->CurrentChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
-			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr));
+			if (static_cast<bool>(__vwsn_bind_handler_1_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1.Obj())->G4Changed, __vwsn_bind_handler_1_0);
+				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			(__vwsn_bind_cache_0 = ::vl::Ptr<::winvistaskin::ButtonColorAnimation>());
+			(__vwsn_bind_cache_1 = ::vl::Ptr<::winvistaskin::ButtonColorState>());
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -36326,7 +36344,7 @@ Closures
 
 	void __vwsnc403_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled();
+		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetImage().Obj())->GetImage(); } catch(...){ return ::vl::Ptr<::vl::presentation::INativeImage>(); } }();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -36341,7 +36359,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc403_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc403_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -36364,7 +36382,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr));
@@ -36387,7 +36405,7 @@ Closures
 
 	void __vwsnc404_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetImage().Obj())->GetFrameIndex(); } catch(...){ return static_cast<::vl::vint>(0); } }();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -36402,7 +36420,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc404_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc404_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -36425,7 +36443,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr));
@@ -36448,7 +36466,7 @@ Closures
 
 	void __vwsnc405_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetSubMenuOpening();
+		auto __vwsn_bind_activator_result_ = [&](){ try{ return ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetImage().Obj())->GetFrameIndex(); } catch(...){ return static_cast<::vl::vint>(0); } }();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -36463,7 +36481,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SubMenuOpeningChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc405_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc405_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -36486,7 +36504,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SubMenuOpeningChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ImageChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr));
@@ -36502,46 +36520,18 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_3 = static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_4 = static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_3_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_4_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc406_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.ToolstripButtonDisabled : (((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() == ::vl::presentation::controls::ButtonState::Pressed) || ::vl::__vwsn::This(__vwsn_bind_cache_2)->GetSubMenuOpening()) ? GLOBAL_NAME vistaColors.ToolstripButtonPressed : (::vl::__vwsn::This(__vwsn_bind_cache_3)->GetSelected() ? GLOBAL_NAME vistaColors.ToolstripButtonSelected : ((::vl::__vwsn::This(__vwsn_bind_cache_4)->GetState() == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.ToolstripButtonActive : GLOBAL_NAME vistaColors.ToolstripButtonNormal))));
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetSubMenuOpening();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc406_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc406_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc406_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc406_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc406_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -36552,15 +36542,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_3 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_4 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc406_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc406_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->SubMenuOpeningChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc406_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_3_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_3)->SelectedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc406_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_4_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_4)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc406_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SubMenuOpeningChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc406_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -36577,6 +36559,103 @@ Closures
 	}
 
 	bool __vwsnc406_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
+	{
+		if ((! __vwsn_bind_closed_))
+		{
+			(__vwsn_bind_closed_ = true);
+			if (static_cast<bool>(__vwsn_bind_handler_0_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->SubMenuOpeningChanged, __vwsn_bind_handler_0_0);
+				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr));
+			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			return true;
+		}
+		return false;
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::ToolstripSplitButtonTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_3 = static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_4 = static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr);
+		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_3_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_4_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_opened_ = false;
+		this->__vwsn_bind_closed_ = false;
+	}
+
+	void __vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
+	{
+		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.ToolstripButtonDisabled : (((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() == ::vl::presentation::controls::ButtonState::Pressed) || ::vl::__vwsn::This(__vwsn_bind_cache_2)->GetSubMenuOpening()) ? GLOBAL_NAME vistaColors.ToolstripButtonPressed : (::vl::__vwsn::This(__vwsn_bind_cache_3)->GetSelected() ? GLOBAL_NAME vistaColors.ToolstripButtonSelected : ((::vl::__vwsn::This(__vwsn_bind_cache_4)->GetState() == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.ToolstripButtonActive : GLOBAL_NAME vistaColors.ToolstripButtonNormal))));
+		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
+	}
+
+	void __vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	bool __vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
+	{
+		if ((! __vwsn_bind_opened_))
+		{
+			(__vwsn_bind_opened_ = true);
+			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_3 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_4 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::ToolstripSplitButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->SubMenuOpeningChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_3_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_3)->SelectedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_4_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_4)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
+	{
+		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
+		{
+			this->__vwsn_bind_activator_();
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
 	{
 		if ((! __vwsn_bind_closed_))
 		{
@@ -36623,99 +36702,6 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnc407_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc407_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::CaptionButtonTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr);
-		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_opened_ = false;
-		this->__vwsn_bind_closed_ = false;
-	}
-
-	void __vwsnc407_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
-	{
-		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.WindowCaptionInactive : ((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() == ::vl::presentation::controls::ButtonState::Pressed) ? GLOBAL_NAME vistaColors.ScrollHandlePressed : ((::vl::__vwsn::This(__vwsn_bind_cache_2)->GetState() == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.CaptionButtonHotTop : GLOBAL_NAME vistaColors.CaptionButtonTop)));
-		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
-	}
-
-	void __vwsnc407_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc407_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc407_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	bool __vwsnc407_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
-	{
-		if ((! __vwsn_bind_opened_))
-		{
-			(__vwsn_bind_opened_ = true);
-			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc407_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc407_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc407_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc407_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
-	{
-		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
-		{
-			this->__vwsn_bind_activator_();
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc407_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
-	{
-		if ((! __vwsn_bind_closed_))
-		{
-			(__vwsn_bind_closed_ = true);
-			if (static_cast<bool>(__vwsn_bind_handler_0_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
-				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			if (static_cast<bool>(__vwsn_bind_handler_1_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, __vwsn_bind_handler_1_0);
-				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			if (static_cast<bool>(__vwsn_bind_handler_2_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_2)->StateChanged, __vwsn_bind_handler_2_0);
-				(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr));
-			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr));
-			(__vwsn_bind_cache_2 = static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr));
-			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			return true;
-		}
-		return false;
-	}
-
-	//-------------------------------------------------------------------
-
 	__vwsnc408_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc408_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::CaptionButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
@@ -36731,7 +36717,7 @@ Closures
 
 	void __vwsnc408_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.WindowCaptionInactive : ((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() == ::vl::presentation::controls::ButtonState::Pressed) ? GLOBAL_NAME vistaColors.ScrollHandlePressed : ((::vl::__vwsn::This(__vwsn_bind_cache_2)->GetState() == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.CaptionButtonHotBottom : GLOBAL_NAME vistaColors.CaptionButtonBottom)));
+		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.WindowCaptionInactive : ((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() == ::vl::presentation::controls::ButtonState::Pressed) ? GLOBAL_NAME vistaColors.ScrollHandlePressed : ((::vl::__vwsn::This(__vwsn_bind_cache_2)->GetState() == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.CaptionButtonHotTop : GLOBAL_NAME vistaColors.CaptionButtonTop)));
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -36813,18 +36799,32 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc409_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled() ? GLOBAL_NAME vistaColors.WindowBorderActive : GLOBAL_NAME vistaColors.GeneralBorder);
+		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.WindowCaptionInactive : ((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() == ::vl::presentation::controls::ButtonState::Pressed) ? GLOBAL_NAME vistaColors.ScrollHandlePressed : ((::vl::__vwsn::This(__vwsn_bind_cache_2)->GetState() == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.CaptionButtonHotBottom : GLOBAL_NAME vistaColors.CaptionButtonBottom)));
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc409_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc409_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc409_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -36835,7 +36835,11 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc409_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc409_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc409_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -36861,8 +36865,22 @@ Closures
 				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
+			if (static_cast<bool>(__vwsn_bind_handler_1_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, __vwsn_bind_handler_1_0);
+				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			if (static_cast<bool>(__vwsn_bind_handler_2_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_2)->StateChanged, __vwsn_bind_handler_2_0);
+				(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr));
+			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr));
+			(__vwsn_bind_cache_2 = static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -36963,57 +36981,39 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnc410_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc410_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::CaptionCloseButtonTemplateConstructor* __vwsnctorthis_0)
+	__vwsnc410_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc410_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::CaptionButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
-		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr);
-		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
-	void __vwsnc410_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
+	void __vwsnc410_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.WindowCaptionInactive : ((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() == ::vl::presentation::controls::ButtonState::Pressed) ? GLOBAL_NAME vistaColors.WindowClosePressed : ((::vl::__vwsn::This(__vwsn_bind_cache_2)->GetState() == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.WindowCloseHovered : GLOBAL_NAME vistaColors.WindowCloseTop)));
+		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled() ? GLOBAL_NAME vistaColors.WindowBorderActive : GLOBAL_NAME vistaColors.GeneralBorder);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc410_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	void __vwsnc410_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
 
-	void __vwsnc410_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc410_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	bool __vwsnc410_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
+	bool __vwsnc410_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
 	{
 		if ((! __vwsn_bind_opened_))
 		{
 			(__vwsn_bind_opened_ = true);
-			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc410_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc410_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc410_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc410_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
 	}
 
-	bool __vwsnc410_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
+	bool __vwsnc410_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
 	{
 		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
 		{
@@ -37023,7 +37023,7 @@ Closures
 		return false;
 	}
 
-	bool __vwsnc410_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
+	bool __vwsnc410_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
 	{
 		if ((! __vwsn_bind_closed_))
 		{
@@ -37033,22 +37033,8 @@ Closures
 				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
-			if (static_cast<bool>(__vwsn_bind_handler_1_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, __vwsn_bind_handler_1_0);
-				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			if (static_cast<bool>(__vwsn_bind_handler_2_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_2)->StateChanged, __vwsn_bind_handler_2_0);
-				(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr));
-			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr));
-			(__vwsn_bind_cache_2 = static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr));
+			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CaptionButtonTemplate*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -37071,7 +37057,7 @@ Closures
 
 	void __vwsnc411_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.WindowCaptionInactive : ((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() == ::vl::presentation::controls::ButtonState::Pressed) ? GLOBAL_NAME vistaColors.WindowClosePressed : ((::vl::__vwsn::This(__vwsn_bind_cache_2)->GetState() == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.WindowCloseHovered : GLOBAL_NAME vistaColors.WindowCloseBottom)));
+		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.WindowCaptionInactive : ((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() == ::vl::presentation::controls::ButtonState::Pressed) ? GLOBAL_NAME vistaColors.WindowClosePressed : ((::vl::__vwsn::This(__vwsn_bind_cache_2)->GetState() == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.WindowCloseHovered : GLOBAL_NAME vistaColors.WindowCloseTop)));
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -37153,18 +37139,32 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr);
+		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc412_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled() ? GLOBAL_NAME vistaColors.WindowCloseBorder : GLOBAL_NAME vistaColors.GeneralBorder);
+		auto __vwsn_bind_activator_result_ = ((! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled()) ? GLOBAL_NAME vistaColors.WindowCaptionInactive : ((::vl::__vwsn::This(__vwsn_bind_cache_1)->GetState() == ::vl::presentation::controls::ButtonState::Pressed) ? GLOBAL_NAME vistaColors.WindowClosePressed : ((::vl::__vwsn::This(__vwsn_bind_cache_2)->GetState() == ::vl::presentation::controls::ButtonState::Active) ? GLOBAL_NAME vistaColors.WindowCloseHovered : GLOBAL_NAME vistaColors.WindowCloseBottom)));
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc412_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc412_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc412_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -37175,7 +37175,11 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc412_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc412_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->StateChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc412_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -37201,8 +37205,22 @@ Closures
 				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
+			if (static_cast<bool>(__vwsn_bind_handler_1_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->StateChanged, __vwsn_bind_handler_1_0);
+				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			if (static_cast<bool>(__vwsn_bind_handler_2_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_2)->StateChanged, __vwsn_bind_handler_2_0);
+				(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr));
+			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr));
+			(__vwsn_bind_cache_2 = static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -37210,39 +37228,39 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnc413_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc413_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+	__vwsnc413_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc413_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::CaptionCloseButtonTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
-		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
-	void __vwsnc413_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
+	void __vwsnc413_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetActivated() ? GLOBAL_NAME vistaColors.WindowCaptionTop : GLOBAL_NAME vistaColors.WindowCaptionInactive);
+		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled() ? GLOBAL_NAME vistaColors.WindowCloseBorder : GLOBAL_NAME vistaColors.GeneralBorder);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
-	void __vwsnc413_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	void __vwsnc413_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
 
-	bool __vwsnc413_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
+	bool __vwsnc413_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
 	{
 		if ((! __vwsn_bind_opened_))
 		{
 			(__vwsn_bind_opened_ = true);
-			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ActivatedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc413_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc413_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
 	}
 
-	bool __vwsnc413_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
+	bool __vwsnc413_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
 	{
 		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
 		{
@@ -37252,17 +37270,17 @@ Closures
 		return false;
 	}
 
-	bool __vwsnc413_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
+	bool __vwsnc413_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
 	{
 		if ((! __vwsn_bind_closed_))
 		{
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ActivatedChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
-			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
+			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CaptionCloseButtonTemplate*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
@@ -37282,7 +37300,7 @@ Closures
 
 	void __vwsnc414_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetActivated() ? GLOBAL_NAME vistaColors.WindowCaptionBottom : GLOBAL_NAME vistaColors.WindowCaptionInactive);
+		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetActivated() ? GLOBAL_NAME vistaColors.WindowCaptionTop : GLOBAL_NAME vistaColors.WindowCaptionInactive);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -37336,39 +37354,18 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
-		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
-		this->__vwsn_bind_cache_3 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_3_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc415_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = [&](auto margin){ return (((! ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetBorder()) || ((((margin.left + margin.top) + margin.right) + margin.bottom) == static_cast<::vl::vint>(0))) ? GLOBAL_NAME vistaColors.Transparent : ((::vl::__vwsn::This(__vwsn_bind_cache_2)->GetVisuallyEnabled() && ::vl::__vwsn::This(__vwsn_bind_cache_3)->GetActivated()) ? GLOBAL_NAME vistaColors.WindowBorderActive : GLOBAL_NAME vistaColors.GeneralBorder)); }(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetCustomFramePadding());
+		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetActivated() ? GLOBAL_NAME vistaColors.WindowCaptionBottom : GLOBAL_NAME vistaColors.WindowCaptionInactive);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc415_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc415_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc415_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc415_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -37379,13 +37376,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_3 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->CustomFramePaddingChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc415_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->BorderChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc415_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc415_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_3_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_3)->ActivatedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc415_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ActivatedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc415_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -37402,6 +37393,94 @@ Closures
 	}
 
 	bool __vwsnc415_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
+	{
+		if ((! __vwsn_bind_closed_))
+		{
+			(__vwsn_bind_closed_ = true);
+			if (static_cast<bool>(__vwsn_bind_handler_0_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ActivatedChanged, __vwsn_bind_handler_0_0);
+				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
+			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			return true;
+		}
+		return false;
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_cache_2 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_cache_3 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_3_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_opened_ = false;
+		this->__vwsn_bind_closed_ = false;
+	}
+
+	void __vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
+	{
+		auto __vwsn_bind_activator_result_ = [&](auto margin){ return (((! ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetBorder()) || ((((margin.left + margin.top) + margin.right) + margin.bottom) == static_cast<::vl::vint>(0))) ? GLOBAL_NAME vistaColors.Transparent : ((::vl::__vwsn::This(__vwsn_bind_cache_2)->GetVisuallyEnabled() && ::vl::__vwsn::This(__vwsn_bind_cache_3)->GetActivated()) ? GLOBAL_NAME vistaColors.WindowBorderActive : GLOBAL_NAME vistaColors.GeneralBorder)); }(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetCustomFramePadding());
+		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
+	}
+
+	void __vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	bool __vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
+	{
+		if ((! __vwsn_bind_opened_))
+		{
+			(__vwsn_bind_opened_ = true);
+			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_3 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->CustomFramePaddingChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->BorderChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_3_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_3)->ActivatedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
+	{
+		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
+		{
+			this->__vwsn_bind_activator_();
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
 	{
 		if ((! __vwsn_bind_closed_))
 		{
@@ -37441,67 +37520,6 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
-		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_opened_ = false;
-		this->__vwsn_bind_closed_ = false;
-	}
-
-	void __vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
-	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetActivated();
-		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
-	}
-
-	void __vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	bool __vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
-	{
-		if ((! __vwsn_bind_opened_))
-		{
-			(__vwsn_bind_opened_ = true);
-			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ActivatedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
-	{
-		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
-		{
-			this->__vwsn_bind_activator_();
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
-	{
-		if ((! __vwsn_bind_closed_))
-		{
-			(__vwsn_bind_closed_ = true);
-			if (static_cast<bool>(__vwsn_bind_handler_0_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ActivatedChanged, __vwsn_bind_handler_0_0);
-				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
-			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			return true;
-		}
-		return false;
-	}
-
-	//-------------------------------------------------------------------
-
 	__vwsnc417_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc417_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
@@ -37513,7 +37531,7 @@ Closures
 
 	void __vwsnc417_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetTitleBar();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetActivated();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -37528,7 +37546,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TitleBarChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc417_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ActivatedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc417_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -37551,7 +37569,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TitleBarChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->ActivatedChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
@@ -37567,46 +37585,18 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
-		this->__vwsn_bind_cache_2 = static_cast<::vl::presentation::compositions::GuiCellComposition*>(nullptr);
-		this->__vwsn_bind_cache_3 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
-		this->__vwsn_bind_cache_4 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_3_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_4_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc418_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = [&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = ((::vl::__vwsn::This(__vwsn_bind_cache_0)->GetCustomFramePadding().left > static_cast<::vl::vint>(0)) ? static_cast<::vl::vint>(4) : static_cast<::vl::vint>(0)); __vwsn_temp__.top = (::vl::__vwsn::This(__vwsn_bind_cache_1)->GetCustomFramePadding().top + ::vl::__vwsn::This(__vwsn_bind_cache_2)->GetCachedBounds().y1); __vwsn_temp__.right = ((::vl::__vwsn::This(__vwsn_bind_cache_3)->GetCustomFramePadding().right > static_cast<::vl::vint>(0)) ? static_cast<::vl::vint>(4) : static_cast<::vl::vint>(0)); __vwsn_temp__.bottom = ((::vl::__vwsn::This(__vwsn_bind_cache_4)->GetCustomFramePadding().bottom > static_cast<::vl::vint>(0)) ? static_cast<::vl::vint>(4) : static_cast<::vl::vint>(0)); return __vwsn_temp__; }();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetTitleBar();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc418_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc418_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc418_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc418_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc418_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -37617,15 +37607,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->clientCell; } catch(...){ return static_cast<::vl::presentation::compositions::GuiCellComposition*>(nullptr); } }());
-			(__vwsn_bind_cache_3 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_4 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->CustomFramePaddingChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc418_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->CustomFramePaddingChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc418_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->CachedBoundsChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc418_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_3_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_3)->CustomFramePaddingChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc418_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_4_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_4)->CustomFramePaddingChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc418_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TitleBarChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc418_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -37642,6 +37624,103 @@ Closures
 	}
 
 	bool __vwsnc418_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
+	{
+		if ((! __vwsn_bind_closed_))
+		{
+			(__vwsn_bind_closed_ = true);
+			if (static_cast<bool>(__vwsn_bind_handler_0_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TitleBarChanged, __vwsn_bind_handler_0_0);
+				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
+			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			return true;
+		}
+		return false;
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_cache_2 = static_cast<::vl::presentation::compositions::GuiCellComposition*>(nullptr);
+		this->__vwsn_bind_cache_3 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_cache_4 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_3_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_4_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_opened_ = false;
+		this->__vwsn_bind_closed_ = false;
+	}
+
+	void __vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
+	{
+		auto __vwsn_bind_activator_result_ = [&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = ((::vl::__vwsn::This(__vwsn_bind_cache_0)->GetCustomFramePadding().left > static_cast<::vl::vint>(0)) ? static_cast<::vl::vint>(4) : static_cast<::vl::vint>(0)); __vwsn_temp__.top = (::vl::__vwsn::This(__vwsn_bind_cache_1)->GetCustomFramePadding().top + ::vl::__vwsn::This(__vwsn_bind_cache_2)->GetCachedBounds().y1); __vwsn_temp__.right = ((::vl::__vwsn::This(__vwsn_bind_cache_3)->GetCustomFramePadding().right > static_cast<::vl::vint>(0)) ? static_cast<::vl::vint>(4) : static_cast<::vl::vint>(0)); __vwsn_temp__.bottom = ((::vl::__vwsn::This(__vwsn_bind_cache_4)->GetCustomFramePadding().bottom > static_cast<::vl::vint>(0)) ? static_cast<::vl::vint>(4) : static_cast<::vl::vint>(0)); return __vwsn_temp__; }();
+		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
+	}
+
+	void __vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	bool __vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
+	{
+		if ((! __vwsn_bind_opened_))
+		{
+			(__vwsn_bind_opened_ = true);
+			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_2 = [&](){ try{ return __vwsnthis_0->clientCell; } catch(...){ return static_cast<::vl::presentation::compositions::GuiCellComposition*>(nullptr); } }());
+			(__vwsn_bind_cache_3 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_4 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->CustomFramePaddingChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->CustomFramePaddingChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_2_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_2)->CachedBoundsChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_2_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_3_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_3)->CustomFramePaddingChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_3_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_4_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_4)->CustomFramePaddingChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_4_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
+	{
+		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
+		{
+			this->__vwsn_bind_activator_();
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
 	{
 		if ((! __vwsn_bind_closed_))
 		{
@@ -37681,83 +37760,6 @@ Closures
 			(__vwsn_bind_handler_2_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			(__vwsn_bind_handler_3_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			(__vwsn_bind_handler_4_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			return true;
-		}
-		return false;
-	}
-
-	//-------------------------------------------------------------------
-
-	__vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
-		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_opened_ = false;
-		this->__vwsn_bind_closed_ = false;
-	}
-
-	void __vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
-	{
-		auto __vwsn_bind_activator_result_ = ((::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled() && ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetMinimizedBox()) ? GLOBAL_NAME vistaColors.CaptionButtonGlyph : GLOBAL_NAME vistaColors.TextDisabled);
-		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
-	}
-
-	void __vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	bool __vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
-	{
-		if ((! __vwsn_bind_opened_))
-		{
-			(__vwsn_bind_opened_ = true);
-			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MinimizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
-	{
-		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
-		{
-			this->__vwsn_bind_activator_();
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
-	{
-		if ((! __vwsn_bind_closed_))
-		{
-			(__vwsn_bind_closed_ = true);
-			if (static_cast<bool>(__vwsn_bind_handler_0_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
-				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			if (static_cast<bool>(__vwsn_bind_handler_1_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MinimizedBoxChanged, __vwsn_bind_handler_1_0);
-				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
-			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
-			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -37939,7 +37941,7 @@ Closures
 
 	void __vwsnc421_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetMinimizedBox() || ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetMaximizedBox());
+		auto __vwsn_bind_activator_result_ = ((::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled() && ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetMinimizedBox()) ? GLOBAL_NAME vistaColors.CaptionButtonGlyph : GLOBAL_NAME vistaColors.TextDisabled);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -37960,8 +37962,8 @@ Closures
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MinimizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc421_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MaximizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc421_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc421_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MinimizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc421_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -37984,12 +37986,12 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MinimizedBoxChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MaximizedBoxChanged, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MinimizedBoxChanged, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
@@ -38007,18 +38009,25 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc422_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetMinimizedBox();
+		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetMinimizedBox() || ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetMaximizedBox());
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc422_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc422_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -38029,7 +38038,9 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MinimizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc422_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MaximizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc422_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -38055,8 +38066,15 @@ Closures
 				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MinimizedBoxChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
+			if (static_cast<bool>(__vwsn_bind_handler_1_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MaximizedBoxChanged, __vwsn_bind_handler_1_0);
+				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
+			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -38075,7 +38093,7 @@ Closures
 
 	void __vwsnc423_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetMinimizedBox() ? ::vl::presentation::INativeWindowListener::HitTestResult::ButtonMinimum : ::vl::presentation::INativeWindowListener::HitTestResult::NoDecision);
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetMinimizedBox();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -38129,25 +38147,18 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc424_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ((::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled() && ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetMaximizedBox()) ? GLOBAL_NAME vistaColors.CaptionButtonGlyph : GLOBAL_NAME vistaColors.TextDisabled);
+		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetMinimizedBox() ? ::vl::presentation::INativeWindowListener::HitTestResult::ButtonMinimum : ::vl::presentation::INativeWindowListener::HitTestResult::NoDecision);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc424_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc424_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -38158,9 +38169,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc424_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MaximizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc424_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MinimizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc424_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -38183,18 +38192,11 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MinimizedBoxChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
-			if (static_cast<bool>(__vwsn_bind_handler_1_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MaximizedBoxChanged, __vwsn_bind_handler_1_0);
-				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
-			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -38283,18 +38285,25 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc426_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetMaximized());
+		auto __vwsn_bind_activator_result_ = ((::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled() && ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetMaximizedBox()) ? GLOBAL_NAME vistaColors.CaptionButtonGlyph : GLOBAL_NAME vistaColors.TextDisabled);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc426_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc426_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -38305,7 +38314,9 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MaximizedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc426_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc426_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MaximizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc426_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -38328,11 +38339,18 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MaximizedChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
+			if (static_cast<bool>(__vwsn_bind_handler_1_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MaximizedBoxChanged, __vwsn_bind_handler_1_0);
+				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
+			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -38344,25 +38362,18 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc427_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ((::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled() && ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetMaximizedBox()) ? GLOBAL_NAME vistaColors.CaptionButtonGlyph : GLOBAL_NAME vistaColors.TextDisabled);
+		auto __vwsn_bind_activator_result_ = (! ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetMaximized());
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc427_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc427_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -38373,9 +38384,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc427_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MaximizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc427_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MaximizedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc427_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -38398,18 +38407,11 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MaximizedChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
-			if (static_cast<bool>(__vwsn_bind_handler_1_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MaximizedBoxChanged, __vwsn_bind_handler_1_0);
-				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
-			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -38498,18 +38500,25 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc429_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetMaximized();
+		auto __vwsn_bind_activator_result_ = ((::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled() && ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetMaximizedBox()) ? GLOBAL_NAME vistaColors.CaptionButtonGlyph : GLOBAL_NAME vistaColors.TextDisabled);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc429_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc429_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -38520,7 +38529,9 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MaximizedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc429_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc429_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MaximizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc429_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -38543,11 +38554,18 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MaximizedChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
+			if (static_cast<bool>(__vwsn_bind_handler_1_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MaximizedBoxChanged, __vwsn_bind_handler_1_0);
+				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
+			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -38643,25 +38661,18 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc430_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetMinimizedBox() || ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetMaximizedBox());
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetMaximized();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc430_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc430_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -38672,9 +38683,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MinimizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc430_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MaximizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc430_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MaximizedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc430_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -38691,6 +38700,76 @@ Closures
 	}
 
 	bool __vwsnc430_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
+	{
+		if ((! __vwsn_bind_closed_))
+		{
+			(__vwsn_bind_closed_ = true);
+			if (static_cast<bool>(__vwsn_bind_handler_0_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MaximizedChanged, __vwsn_bind_handler_0_0);
+				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
+			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			return true;
+		}
+		return false;
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_opened_ = false;
+		this->__vwsn_bind_closed_ = false;
+	}
+
+	void __vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
+	{
+		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetMinimizedBox() || ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetMaximizedBox());
+		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
+	}
+
+	void __vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	bool __vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
+	{
+		if ((! __vwsn_bind_opened_))
+		{
+			(__vwsn_bind_opened_ = true);
+			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MinimizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->MaximizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
+	{
+		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
+		{
+			this->__vwsn_bind_activator_();
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
 	{
 		if ((! __vwsn_bind_closed_))
 		{
@@ -38716,67 +38795,6 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
-		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
-	{
-		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
-		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_opened_ = false;
-		this->__vwsn_bind_closed_ = false;
-	}
-
-	void __vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
-	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetMaximizedBox();
-		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
-	}
-
-	void __vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	bool __vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
-	{
-		if ((! __vwsn_bind_opened_))
-		{
-			(__vwsn_bind_opened_ = true);
-			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MaximizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
-	{
-		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
-		{
-			this->__vwsn_bind_activator_();
-			return true;
-		}
-		return false;
-	}
-
-	bool __vwsnc431_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
-	{
-		if ((! __vwsn_bind_closed_))
-		{
-			(__vwsn_bind_closed_ = true);
-			if (static_cast<bool>(__vwsn_bind_handler_0_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MaximizedBoxChanged, __vwsn_bind_handler_0_0);
-				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
-			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
-			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			return true;
-		}
-		return false;
-	}
-
-	//-------------------------------------------------------------------
-
 	__vwsnc432_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc432_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
@@ -38788,7 +38806,7 @@ Closures
 
 	void __vwsnc432_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetMaximizedBox() ? ::vl::presentation::INativeWindowListener::HitTestResult::ButtonMaximum : ::vl::presentation::INativeWindowListener::HitTestResult::NoDecision);
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetMaximizedBox();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -38842,25 +38860,18 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc433_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (static_cast<bool>(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetIcon()) ? ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_1)->GetIcon().Obj())->GetImage() : ::vl::Ptr<::vl::presentation::INativeImage>());
+		auto __vwsn_bind_activator_result_ = (::vl::__vwsn::This(__vwsn_bind_cache_0)->GetMaximizedBox() ? ::vl::presentation::INativeWindowListener::HitTestResult::ButtonMaximum : ::vl::presentation::INativeWindowListener::HitTestResult::NoDecision);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc433_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc433_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -38871,9 +38882,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->IconChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc433_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->IconChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc433_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MaximizedBoxChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc433_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -38896,18 +38905,11 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->IconChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->MaximizedBoxChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
-			if (static_cast<bool>(__vwsn_bind_handler_1_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->IconChanged, __vwsn_bind_handler_1_0);
-				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
-			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -38928,7 +38930,7 @@ Closures
 
 	void __vwsnc434_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = (static_cast<bool>(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetIcon()) ? ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_1)->GetIcon().Obj())->GetFrameIndex() : (- static_cast<::vl::vint>(1)));
+		auto __vwsn_bind_activator_result_ = (static_cast<bool>(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetIcon()) ? ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_1)->GetIcon().Obj())->GetImage() : ::vl::Ptr<::vl::presentation::INativeImage>());
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -39005,7 +39007,7 @@ Closures
 
 	void __vwsnc435_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ((static_cast<bool>(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetIcon()) && ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetIconVisible()) ? ::vl::presentation::compositions::GuiGraphicsComposition::MinSizeLimitation::LimitToElementAndChildren : ::vl::presentation::compositions::GuiGraphicsComposition::MinSizeLimitation::NoLimit);
+		auto __vwsn_bind_activator_result_ = (static_cast<bool>(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetIcon()) ? ::vl::__vwsn::This(::vl::__vwsn::This(__vwsn_bind_cache_1)->GetIcon().Obj())->GetFrameIndex() : (- static_cast<::vl::vint>(1)));
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -39027,7 +39029,7 @@ Closures
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
 			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
 			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->IconChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc435_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->IconVisibleChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc435_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->IconChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc435_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -39055,7 +39057,7 @@ Closures
 			}
 			if (static_cast<bool>(__vwsn_bind_handler_1_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->IconVisibleChanged, __vwsn_bind_handler_1_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->IconChanged, __vwsn_bind_handler_1_0);
 				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
@@ -39073,18 +39075,25 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc436_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetText();
+		auto __vwsn_bind_activator_result_ = ((static_cast<bool>(::vl::__vwsn::This(__vwsn_bind_cache_0)->GetIcon()) && ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetIconVisible()) ? ::vl::presentation::compositions::GuiGraphicsComposition::MinSizeLimitation::LimitToElementAndChildren : ::vl::presentation::compositions::GuiGraphicsComposition::MinSizeLimitation::NoLimit);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc436_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc436_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -39095,7 +39104,9 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TextChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc436_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->IconChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc436_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->IconVisibleChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc436_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -39118,11 +39129,18 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TextChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->IconChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
+			if (static_cast<bool>(__vwsn_bind_handler_1_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->IconVisibleChanged, __vwsn_bind_handler_1_0);
+				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
+			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -39141,7 +39159,7 @@ Closures
 
 	void __vwsnc437_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetFont();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetText();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -39156,7 +39174,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc437_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TextChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc437_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -39179,7 +39197,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TextChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
@@ -39202,7 +39220,7 @@ Closures
 
 	void __vwsnc438_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetText();
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetFont();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
@@ -39217,7 +39235,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TextChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc438_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc438_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -39240,7 +39258,7 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TextChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
@@ -39256,25 +39274,18 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
-		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
-		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc439_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ((::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled() && ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetActivated()) ? GLOBAL_NAME vistaColors.TextNormal : GLOBAL_NAME vistaColors.TextDisabled);
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetText();
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc439_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
-	{
-		this->__vwsn_bind_activator_();
-	}
-
-	void __vwsnc439_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -39285,9 +39296,7 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc439_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
-			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->ActivatedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc439_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TextChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc439_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -39310,18 +39319,11 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->TextChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
-			if (static_cast<bool>(__vwsn_bind_handler_1_0))
-			{
-				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->ActivatedChanged, __vwsn_bind_handler_1_0);
-				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			}
 			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
-			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
 			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
-			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			return true;
 		}
 		return false;
@@ -39417,18 +39419,25 @@ Closures
 		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
 	{
 		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
 		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
 		this->__vwsn_bind_opened_ = false;
 		this->__vwsn_bind_closed_ = false;
 	}
 
 	void __vwsnc440_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
 	{
-		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetFont();
+		auto __vwsn_bind_activator_result_ = ((::vl::__vwsn::This(__vwsn_bind_cache_0)->GetVisuallyEnabled() && ::vl::__vwsn::This(__vwsn_bind_cache_1)->GetActivated()) ? GLOBAL_NAME vistaColors.TextNormal : GLOBAL_NAME vistaColors.TextDisabled);
 		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
 	}
 
 	void __vwsnc440_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	void __vwsnc440_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
 	{
 		this->__vwsn_bind_activator_();
 	}
@@ -39439,7 +39448,9 @@ Closures
 		{
 			(__vwsn_bind_opened_ = true);
 			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
-			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc440_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_cache_1 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc440_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			(__vwsn_bind_handler_1_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_1)->ActivatedChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc440_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_1_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
 			return true;
 		}
 		return false;
@@ -39462,6 +39473,74 @@ Closures
 			(__vwsn_bind_closed_ = true);
 			if (static_cast<bool>(__vwsn_bind_handler_0_0))
 			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->VisuallyEnabledChanged, __vwsn_bind_handler_0_0);
+				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			if (static_cast<bool>(__vwsn_bind_handler_1_0))
+			{
+				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_1)->ActivatedChanged, __vwsn_bind_handler_1_0);
+				(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			}
+			(__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
+			(__vwsn_bind_cache_1 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr));
+			(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			(__vwsn_bind_handler_1_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
+			return true;
+		}
+		return false;
+	}
+
+	//-------------------------------------------------------------------
+
+	__vwsnc441_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsnc441_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(::winvistaskin::CustomFrameWindowTemplateConstructor* __vwsnctorthis_0)
+		:__vwsnthis_0(::vl::__vwsn::This(__vwsnctorthis_0))
+	{
+		this->__vwsn_bind_cache_0 = static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr);
+		this->__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>();
+		this->__vwsn_bind_opened_ = false;
+		this->__vwsn_bind_closed_ = false;
+	}
+
+	void __vwsnc441_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_activator_()
+	{
+		auto __vwsn_bind_activator_result_ = ::vl::__vwsn::This(__vwsn_bind_cache_0)->GetFont();
+		::vl::__vwsn::EventInvoke(this->ValueChanged)(::vl::__vwsn::Box(__vwsn_bind_activator_result_));
+	}
+
+	void __vwsnc441_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0(::vl::presentation::compositions::GuiGraphicsComposition* __vwsn_bind_callback_argument_0, ::vl::presentation::compositions::GuiEventArgs* __vwsn_bind_callback_argument_1)
+	{
+		this->__vwsn_bind_activator_();
+	}
+
+	bool __vwsnc441_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Open()
+	{
+		if ((! __vwsn_bind_opened_))
+		{
+			(__vwsn_bind_opened_ = true);
+			(__vwsn_bind_cache_0 = [&](){ try{ return __vwsnthis_0->self; } catch(...){ return static_cast<::winvistaskin::CustomFrameWindowTemplate*>(nullptr); } }());
+			(__vwsn_bind_handler_0_0 = [&](){ try{ return ::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, ::vl::Func<void(::vl::presentation::compositions::GuiGraphicsComposition*, ::vl::presentation::compositions::GuiEventArgs*)>(this, &__vwsnc441_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::__vwsn_bind_callback_0_0)); } catch(...){ return ::vl::Ptr<::vl::reflection::description::IEventHandler>(); } }());
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc441_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Update()
+	{
+		if ((__vwsn_bind_opened_ && (! __vwsn_bind_closed_)))
+		{
+			this->__vwsn_bind_activator_();
+			return true;
+		}
+		return false;
+	}
+
+	bool __vwsnc441_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription::Close()
+	{
+		if ((! __vwsn_bind_closed_))
+		{
+			(__vwsn_bind_closed_ = true);
+			if (static_cast<bool>(__vwsn_bind_handler_0_0))
+			{
 				::vl::__vwsn::EventDetach(::vl::__vwsn::This(__vwsn_bind_cache_0)->FontChanged, __vwsn_bind_handler_0_0);
 				(__vwsn_bind_handler_0_0 = ::vl::Ptr<::vl::reflection::description::IEventHandler>());
 			}
@@ -39474,7 +39553,7 @@ Closures
 
 	//-------------------------------------------------------------------
 
-	__vwsnc441_WinVistaSkin_winvistaskin_CompleteColorAnimation___vl_reflection_description_ICoroutine::__vwsnc441_WinVistaSkin_winvistaskin_CompleteColorAnimation___vl_reflection_description_ICoroutine(::vl::presentation::controls::IGuiAnimationCoroutine::IImpl* __vwsnctor___vwsn_co_impl_, ::vl::Ptr<::vl::presentation::controls::IGuiAnimation> __vwsnctor_animation, ::vl::Func<void()> __vwsnctor_completed)
+	__vwsnc442_WinVistaSkin_winvistaskin_CompleteColorAnimation___vl_reflection_description_ICoroutine::__vwsnc442_WinVistaSkin_winvistaskin_CompleteColorAnimation___vl_reflection_description_ICoroutine(::vl::presentation::controls::IGuiAnimationCoroutine::IImpl* __vwsnctor___vwsn_co_impl_, ::vl::Ptr<::vl::presentation::controls::IGuiAnimation> __vwsnctor_animation, ::vl::Func<void()> __vwsnctor_completed)
 		:__vwsn_co_impl_(__vwsnctor___vwsn_co_impl_)
 		, animation(__vwsnctor_animation)
 		, completed(__vwsnctor_completed)
@@ -39485,27 +39564,27 @@ Closures
 		this->__vwsn_prop_Status = ::vl::reflection::description::CoroutineStatus::Waiting;
 	}
 
-	::vl::Ptr<::vl::reflection::description::IValueException> __vwsnc441_WinVistaSkin_winvistaskin_CompleteColorAnimation___vl_reflection_description_ICoroutine::GetFailure()
+	::vl::Ptr<::vl::reflection::description::IValueException> __vwsnc442_WinVistaSkin_winvistaskin_CompleteColorAnimation___vl_reflection_description_ICoroutine::GetFailure()
 	{
 		return __vwsn_prop_Failure;
 	}
 
-	void __vwsnc441_WinVistaSkin_winvistaskin_CompleteColorAnimation___vl_reflection_description_ICoroutine::SetFailure(::vl::Ptr<::vl::reflection::description::IValueException> __vwsn_value_)
+	void __vwsnc442_WinVistaSkin_winvistaskin_CompleteColorAnimation___vl_reflection_description_ICoroutine::SetFailure(::vl::Ptr<::vl::reflection::description::IValueException> __vwsn_value_)
 	{
 		(__vwsn_prop_Failure = __vwsn_value_);
 	}
 
-	::vl::reflection::description::CoroutineStatus __vwsnc441_WinVistaSkin_winvistaskin_CompleteColorAnimation___vl_reflection_description_ICoroutine::GetStatus()
+	::vl::reflection::description::CoroutineStatus __vwsnc442_WinVistaSkin_winvistaskin_CompleteColorAnimation___vl_reflection_description_ICoroutine::GetStatus()
 	{
 		return __vwsn_prop_Status;
 	}
 
-	void __vwsnc441_WinVistaSkin_winvistaskin_CompleteColorAnimation___vl_reflection_description_ICoroutine::SetStatus(::vl::reflection::description::CoroutineStatus __vwsn_value_)
+	void __vwsnc442_WinVistaSkin_winvistaskin_CompleteColorAnimation___vl_reflection_description_ICoroutine::SetStatus(::vl::reflection::description::CoroutineStatus __vwsn_value_)
 	{
 		(__vwsn_prop_Status = __vwsn_value_);
 	}
 
-	void __vwsnc441_WinVistaSkin_winvistaskin_CompleteColorAnimation___vl_reflection_description_ICoroutine::Resume(bool __vwsn_raise_exception_, ::vl::Ptr<::vl::reflection::description::CoroutineResult> __vwsn_co_result_)
+	void __vwsnc442_WinVistaSkin_winvistaskin_CompleteColorAnimation___vl_reflection_description_ICoroutine::Resume(bool __vwsn_raise_exception_, ::vl::Ptr<::vl::reflection::description::CoroutineResult> __vwsn_co_result_)
 	{
 		if ((this->GetStatus() != ::vl::reflection::description::CoroutineStatus::Waiting))
 		{
@@ -44917,13 +44996,13 @@ Class (::winvistaskin::CaptionButtonTemplateConstructor)
 			::vl::__vwsn::This(this->self)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->container));
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc407_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf596_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_(this)));
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc408_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf597_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc408_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf597_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_(this)));
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc409_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf598_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
@@ -44933,8 +45012,8 @@ Class (::winvistaskin::CaptionButtonTemplateConstructor)
 			::vl::__vwsn::This(this->__vwsn_precompile_2.Obj())->SetColor2(GLOBAL_NAME vistaColors.CaptionReflectionEdge);
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc409_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf598_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_(this)));
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc410_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf599_WinVistaSkin_winvistaskin_CaptionButtonTemplateConstructor___vwsn_winvistaskin_CaptionButtonTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
@@ -45036,13 +45115,13 @@ Class (::winvistaskin::CaptionCloseButtonTemplateConstructor)
 			::vl::__vwsn::This(this->self)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->container));
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc410_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf599_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_(this)));
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc411_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf600_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc411_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf600_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_(this)));
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc412_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf601_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
@@ -45052,8 +45131,8 @@ Class (::winvistaskin::CaptionCloseButtonTemplateConstructor)
 			::vl::__vwsn::This(this->__vwsn_precompile_2.Obj())->SetColor2(GLOBAL_NAME vistaColors.CaptionReflectionEdge);
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc412_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf601_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_(this)));
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc413_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf602_WinVistaSkin_winvistaskin_CaptionCloseButtonTemplateConstructor___vwsn_winvistaskin_CaptionCloseButtonTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
@@ -45764,7 +45843,7 @@ Class (::winvistaskin::CustomFrameWindowTemplateConstructor)
 	{
 		(this->self = __vwsn_this_);
 		{
-			::vl::__vwsn::This(this->self)->SetTooltipTemplate(vl::Func(::vl_workflow_global::__vwsnf602_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
+			::vl::__vwsn::This(this->self)->SetTooltipTemplate(vl::Func(::vl_workflow_global::__vwsnf603_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
 		}
 		{
 			::vl::__vwsn::This(this->self)->SetCustomFrameEnabled(true);
@@ -46022,7 +46101,7 @@ Class (::winvistaskin::CustomFrameWindowTemplateConstructor)
 			::vl::__vwsn::This(this->__vwsn_precompile_22)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_23));
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_21)->SetControlTemplate(vl::Func(::vl_workflow_global::__vwsnf603_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
+			::vl::__vwsn::This(this->__vwsn_precompile_21)->SetControlTemplate(vl::Func(::vl_workflow_global::__vwsnf604_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_20)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(::vl::__vwsn::This(this->__vwsn_precompile_21)->GetBoundsComposition()));
@@ -46092,7 +46171,7 @@ Class (::winvistaskin::CustomFrameWindowTemplateConstructor)
 			::vl::__vwsn::This(this->__vwsn_precompile_28)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_31));
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_27)->SetControlTemplate(vl::Func(::vl_workflow_global::__vwsnf604_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
+			::vl::__vwsn::This(this->__vwsn_precompile_27)->SetControlTemplate(vl::Func(::vl_workflow_global::__vwsnf605_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_26)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(::vl::__vwsn::This(this->__vwsn_precompile_27)->GetBoundsComposition()));
@@ -46142,7 +46221,7 @@ Class (::winvistaskin::CustomFrameWindowTemplateConstructor)
 			::vl::__vwsn::This(this->__vwsn_precompile_36)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_37));
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_35)->SetControlTemplate(vl::Func(::vl_workflow_global::__vwsnf605_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
+			::vl::__vwsn::This(this->__vwsn_precompile_35)->SetControlTemplate(vl::Func(::vl_workflow_global::__vwsnf606_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_34)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(::vl::__vwsn::This(this->__vwsn_precompile_35)->GetBoundsComposition()));
@@ -46270,11 +46349,6 @@ Class (::winvistaskin::CustomFrameWindowTemplateConstructor)
 			::vl::__vwsn::This(this->self)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_1));
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc413_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf606_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
-			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
-		}
-		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc414_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf607_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
@@ -46282,6 +46356,11 @@ Class (::winvistaskin::CustomFrameWindowTemplateConstructor)
 		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc415_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf608_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
+			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
+		}
+		{
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf609_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
@@ -46297,8 +46376,8 @@ Class (::winvistaskin::CustomFrameWindowTemplateConstructor)
 			::vl::__vwsn::This(this->__vwsn_precompile_7.Obj())->SetColor2(GLOBAL_NAME vistaColors.WindowCaptionTop);
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc416_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf609_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc417_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf610_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
@@ -46308,17 +46387,12 @@ Class (::winvistaskin::CustomFrameWindowTemplateConstructor)
 			::vl::__vwsn::This(this->__vwsn_precompile_9.Obj())->SetColor2(GLOBAL_NAME vistaColors.CaptionReflectionEdge);
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc417_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf610_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc418_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf611_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_11.Obj())->SetColor(GLOBAL_NAME vistaColors.GeneralBackground);
-		}
-		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc418_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf611_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
-			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc419_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
@@ -46391,15 +46465,15 @@ Class (::winvistaskin::CustomFrameWindowTemplateConstructor)
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc433_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf626_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
+			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
+		}
+		{
 			::vl::__vwsn::This(this->__vwsn_precompile_38.Obj())->SetBackgroundColor(GLOBAL_NAME vistaColors.WindowCloseText);
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_38.Obj())->SetBorderColor(GLOBAL_NAME vistaColors.WindowCloseText);
-		}
-		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc433_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf626_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
-			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc434_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
@@ -46417,12 +46491,12 @@ Class (::winvistaskin::CustomFrameWindowTemplateConstructor)
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_46.Obj())->SetColor(GLOBAL_NAME vistaColors.CaptionHalo);
-		}
-		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc437_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf630_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
+		}
+		{
+			::vl::__vwsn::This(this->__vwsn_precompile_46.Obj())->SetColor(GLOBAL_NAME vistaColors.CaptionHalo);
 		}
 		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc438_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
@@ -46440,14 +46514,19 @@ Class (::winvistaskin::CustomFrameWindowTemplateConstructor)
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc441_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf634_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this)));
+			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
+		}
+		{
 			::vl::__vwsn::This(this->self)->SetContainerComposition(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->container));
 		}
 		{
-			auto __vwsn_event_handler_ = vl::Func(::vl_workflow_global::__vwsnf634_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this));
+			auto __vwsn_event_handler_ = vl::Func(::vl_workflow_global::__vwsnf635_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(this->self)->TitleBarChanged, __vwsn_event_handler_);
 		}
 		{
-			auto __vwsn_event_handler_ = vl::Func(::vl_workflow_global::__vwsnf635_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this));
+			auto __vwsn_event_handler_ = vl::Func(::vl_workflow_global::__vwsnf636_WinVistaSkin_winvistaskin_CustomFrameWindowTemplateConstructor___vwsn_winvistaskin_CustomFrameWindowTemplate_Initialize_(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(this->self)->CustomFramePaddingChanged, __vwsn_event_handler_);
 		}
 	}
@@ -49578,11 +49657,6 @@ Class (::winvistaskin::MenuBarButtonTemplateConstructor)
 			::vl::__vwsn::This(this->self)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_9));
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc338_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf520_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(this)));
-			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
-		}
-		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc339_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf521_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
@@ -49625,6 +49699,11 @@ Class (::winvistaskin::MenuBarButtonTemplateConstructor)
 		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc347_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf529_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(this)));
+			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
+		}
+		{
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc348_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf530_WinVistaSkin_winvistaskin_MenuBarButtonTemplateConstructor___vwsn_winvistaskin_MenuBarButtonTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 	}
@@ -50027,11 +50106,6 @@ Class (::winvistaskin::MenuItemButtonTemplateConstructor)
 			::vl::__vwsn::This(this->self)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_6));
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc348_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf530_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(this)));
-			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
-		}
-		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc349_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf531_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
@@ -50139,6 +50213,11 @@ Class (::winvistaskin::MenuItemButtonTemplateConstructor)
 		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc370_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf552_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(this)));
+			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
+		}
+		{
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc371_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf553_WinVistaSkin_winvistaskin_MenuItemButtonTemplateConstructor___vwsn_winvistaskin_MenuItemButtonTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 	}
@@ -55403,24 +55482,31 @@ Class (::winvistaskin::TabHeaderTemplateConstructor)
 		{
 			::vl::__vwsn::This(this->self)->SetMinSizeLimitation(::vl::presentation::compositions::GuiGraphicsComposition::MinSizeLimitation::LimitToElementAndChildren);
 		}
+		(this->__vwsn_precompile_0 = ::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement>(::vl::reflection::description::Element_Constructor<::vl::presentation::elements::GuiSolidBackgroundElement>()));
 		{
-			(this->__vwsn_precompile_0 = new ::vl::presentation::controls::GuiSelectableButton(::vl::presentation::theme::ThemeName::CheckBox));
+			::vl::__vwsn::This(this->self)->SetOwnedElement(::vl::Ptr<::vl::presentation::elements::IGuiGraphicsElement>(this->__vwsn_precompile_0));
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_0)->SetAutoSelection(false);
-		}
-		(this->__vwsn_precompile_1 = ::vl::__vwsn::This(this->__vwsn_precompile_0)->GetBoundsComposition());
-		{
-			::vl::__vwsn::This(this->__vwsn_precompile_1)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(0); __vwsn_temp__.top = static_cast<::vl::vint>(0); __vwsn_temp__.right = static_cast<::vl::vint>(0); __vwsn_temp__.bottom = static_cast<::vl::vint>(0); return __vwsn_temp__; }());
+			(this->__vwsn_precompile_1 = new ::vl::presentation::controls::GuiSelectableButton(::vl::presentation::theme::ThemeName::CheckBox));
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_0)->SetAutoFocus(false);
+			::vl::__vwsn::This(this->__vwsn_precompile_1)->SetAutoSelection(false);
+		}
+		(this->__vwsn_precompile_2 = ::vl::__vwsn::This(this->__vwsn_precompile_1)->GetBoundsComposition());
+		{
+			::vl::__vwsn::This(this->__vwsn_precompile_2)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(0); __vwsn_temp__.top = static_cast<::vl::vint>(0); __vwsn_temp__.right = static_cast<::vl::vint>(0); __vwsn_temp__.bottom = static_cast<::vl::vint>(0); return __vwsn_temp__; }());
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_0)->SetControlTemplate(vl::Func(::vl_workflow_global::__vwsnf501_WinVistaSkin_winvistaskin_TabHeaderTemplateConstructor___vwsn_winvistaskin_TabHeaderTemplate_Initialize_(this)));
+			::vl::__vwsn::This(this->__vwsn_precompile_1)->SetAutoFocus(false);
 		}
 		{
-			::vl::__vwsn::This(this->self)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(::vl::__vwsn::This(this->__vwsn_precompile_0)->GetBoundsComposition()));
+			::vl::__vwsn::This(this->__vwsn_precompile_1)->SetControlTemplate(vl::Func(::vl_workflow_global::__vwsnf501_WinVistaSkin_winvistaskin_TabHeaderTemplateConstructor___vwsn_winvistaskin_TabHeaderTemplate_Initialize_(this)));
+		}
+		{
+			::vl::__vwsn::This(this->self)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(::vl::__vwsn::This(this->__vwsn_precompile_1)->GetBoundsComposition()));
+		}
+		{
+			::vl::__vwsn::This(this->__vwsn_precompile_0.Obj())->SetColor(((::vl::__vwsn::RawPtrCast<::vl::presentation::controls::GuiRibbonTabPage>(this->CurrentTabPage) != nullptr) ? GLOBAL_NAME vistaColors.RibbonTabStrip : GLOBAL_NAME vistaColors.GeneralBackground));
 		}
 		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc325_WinVistaSkin_winvistaskin_TabHeaderTemplateConstructor___vwsn_winvistaskin_TabHeaderTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
@@ -55428,7 +55514,7 @@ Class (::winvistaskin::TabHeaderTemplateConstructor)
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_0)->SetContext(::vl::__vwsn::Box(this->CurrentTabPage));
+			::vl::__vwsn::This(this->__vwsn_precompile_1)->SetContext(::vl::__vwsn::Box(this->CurrentTabPage));
 		}
 		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc326_WinVistaSkin_winvistaskin_TabHeaderTemplateConstructor___vwsn_winvistaskin_TabHeaderTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
@@ -55442,15 +55528,16 @@ Class (::winvistaskin::TabHeaderTemplateConstructor)
 		}
 		{
 			auto __vwsn_event_handler_ = vl::Func(::vl_workflow_global::__vwsnf505_WinVistaSkin_winvistaskin_TabHeaderTemplateConstructor___vwsn_winvistaskin_TabHeaderTemplate_Initialize_(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(this->__vwsn_precompile_0)->Clicked, __vwsn_event_handler_);
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(this->__vwsn_precompile_1)->Clicked, __vwsn_event_handler_);
 		}
 	}
 
 	TabHeaderTemplateConstructor::TabHeaderTemplateConstructor()
 		: self(static_cast<::winvistaskin::TabHeaderTemplate*>(nullptr))
 		, CurrentTabPage(static_cast<::vl::presentation::controls::GuiTabPage*>(nullptr))
-		, __vwsn_precompile_0(static_cast<::vl::presentation::controls::GuiSelectableButton*>(nullptr))
-		, __vwsn_precompile_1(static_cast<::vl::presentation::compositions::GuiBoundsComposition*>(nullptr))
+		, __vwsn_precompile_0(::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement>())
+		, __vwsn_precompile_1(static_cast<::vl::presentation::controls::GuiSelectableButton*>(nullptr))
+		, __vwsn_precompile_2(static_cast<::vl::presentation::compositions::GuiBoundsComposition*>(nullptr))
 	{
 	}
 
@@ -55520,14 +55607,14 @@ Class (::winvistaskin::TabTemplateConstructor)
 			::vl::__vwsn::This(this->__vwsn_precompile_0)->SetColumnOption(static_cast<::vl::vint>(1), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::Percentage; __vwsn_temp__.percentage = static_cast<double>(1.0); return __vwsn_temp__; }());
 			::vl::__vwsn::This(this->__vwsn_precompile_0)->SetColumnOption(static_cast<::vl::vint>(2), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::MinSize; return __vwsn_temp__; }());
 		}
-		(this->__vwsn_precompile_1 = ::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement>(::vl::reflection::description::Element_Constructor<::vl::presentation::elements::GuiSolidBackgroundElement>()));
-		{
-			::vl::__vwsn::This(this->__vwsn_precompile_0)->SetOwnedElement(::vl::Ptr<::vl::presentation::elements::IGuiGraphicsElement>(this->__vwsn_precompile_1));
-		}
 		(this->beforeHeadersContainer = new ::vl::presentation::compositions::GuiCellComposition());
 		::vl::__vwsn::This(__vwsn_this_)->SetNamedObject(::vl::WString::Unmanaged(L"beforeHeadersContainer"), ::vl::__vwsn::Box(this->beforeHeadersContainer));
 		{
 			::vl::__vwsn::This(this->beforeHeadersContainer)->SetSite(static_cast<::vl::vint>(0), static_cast<::vl::vint>(0), static_cast<::vl::vint>(1), static_cast<::vl::vint>(1));
+		}
+		(this->__vwsn_precompile_1 = ::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement>(::vl::reflection::description::Element_Constructor<::vl::presentation::elements::GuiSolidBackgroundElement>()));
+		{
+			::vl::__vwsn::This(this->beforeHeadersContainer)->SetOwnedElement(::vl::Ptr<::vl::presentation::elements::IGuiGraphicsElement>(this->__vwsn_precompile_1));
 		}
 		(this->__vwsn_precompile_2 = new ::vl::presentation::compositions::GuiSideAlignedComposition());
 		{
@@ -55554,46 +55641,50 @@ Class (::winvistaskin::TabTemplateConstructor)
 		{
 			::vl::__vwsn::This(this->afterHeadersContainer)->SetSite(static_cast<::vl::vint>(0), static_cast<::vl::vint>(2), static_cast<::vl::vint>(1), static_cast<::vl::vint>(1));
 		}
-		(this->__vwsn_precompile_4 = new ::vl::presentation::compositions::GuiSideAlignedComposition());
+		(this->__vwsn_precompile_4 = ::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement>(::vl::reflection::description::Element_Constructor<::vl::presentation::elements::GuiSolidBackgroundElement>()));
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_4)->SetMaxRatio(static_cast<double>(1.0));
+			::vl::__vwsn::This(this->afterHeadersContainer)->SetOwnedElement(::vl::Ptr<::vl::presentation::elements::IGuiGraphicsElement>(this->__vwsn_precompile_4));
+		}
+		(this->__vwsn_precompile_5 = new ::vl::presentation::compositions::GuiSideAlignedComposition());
+		{
+			::vl::__vwsn::This(this->__vwsn_precompile_5)->SetMaxRatio(static_cast<double>(1.0));
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_4)->SetMaxLength(static_cast<::vl::vint>(1));
+			::vl::__vwsn::This(this->__vwsn_precompile_5)->SetMaxLength(static_cast<::vl::vint>(1));
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_4)->SetDirection(::vl::presentation::compositions::GuiSideAlignedComposition::Direction::Bottom);
+			::vl::__vwsn::This(this->__vwsn_precompile_5)->SetDirection(::vl::presentation::compositions::GuiSideAlignedComposition::Direction::Bottom);
 		}
-		(this->__vwsn_precompile_5 = ::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement>(::vl::reflection::description::Element_Constructor<::vl::presentation::elements::GuiSolidBackgroundElement>()));
+		(this->__vwsn_precompile_6 = ::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement>(::vl::reflection::description::Element_Constructor<::vl::presentation::elements::GuiSolidBackgroundElement>()));
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_4)->SetOwnedElement(::vl::Ptr<::vl::presentation::elements::IGuiGraphicsElement>(this->__vwsn_precompile_5));
+			::vl::__vwsn::This(this->__vwsn_precompile_5)->SetOwnedElement(::vl::Ptr<::vl::presentation::elements::IGuiGraphicsElement>(this->__vwsn_precompile_6));
 		}
 		{
-			::vl::__vwsn::This(this->afterHeadersContainer)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_4));
+			::vl::__vwsn::This(this->afterHeadersContainer)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_5));
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_0)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->afterHeadersContainer));
 		}
-		(this->__vwsn_precompile_6 = new ::vl::presentation::compositions::GuiCellComposition());
+		(this->__vwsn_precompile_7 = new ::vl::presentation::compositions::GuiCellComposition());
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_6)->SetSite(static_cast<::vl::vint>(0), static_cast<::vl::vint>(1), static_cast<::vl::vint>(1), static_cast<::vl::vint>(1));
+			::vl::__vwsn::This(this->__vwsn_precompile_7)->SetSite(static_cast<::vl::vint>(0), static_cast<::vl::vint>(1), static_cast<::vl::vint>(1), static_cast<::vl::vint>(1));
 		}
-		(this->__vwsn_precompile_7 = new ::vl::presentation::compositions::GuiSideAlignedComposition());
+		(this->__vwsn_precompile_8 = new ::vl::presentation::compositions::GuiSideAlignedComposition());
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_7)->SetMaxRatio(static_cast<double>(1.0));
-		}
-		{
-			::vl::__vwsn::This(this->__vwsn_precompile_7)->SetMaxLength(static_cast<::vl::vint>(1));
+			::vl::__vwsn::This(this->__vwsn_precompile_8)->SetMaxRatio(static_cast<double>(1.0));
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_7)->SetDirection(::vl::presentation::compositions::GuiSideAlignedComposition::Direction::Bottom);
-		}
-		(this->__vwsn_precompile_8 = ::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement>(::vl::reflection::description::Element_Constructor<::vl::presentation::elements::GuiSolidBackgroundElement>()));
-		{
-			::vl::__vwsn::This(this->__vwsn_precompile_7)->SetOwnedElement(::vl::Ptr<::vl::presentation::elements::IGuiGraphicsElement>(this->__vwsn_precompile_8));
+			::vl::__vwsn::This(this->__vwsn_precompile_8)->SetMaxLength(static_cast<::vl::vint>(1));
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_6)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_7));
+			::vl::__vwsn::This(this->__vwsn_precompile_8)->SetDirection(::vl::presentation::compositions::GuiSideAlignedComposition::Direction::Bottom);
+		}
+		(this->__vwsn_precompile_9 = ::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement>(::vl::reflection::description::Element_Constructor<::vl::presentation::elements::GuiSolidBackgroundElement>()));
+		{
+			::vl::__vwsn::This(this->__vwsn_precompile_8)->SetOwnedElement(::vl::Ptr<::vl::presentation::elements::IGuiGraphicsElement>(this->__vwsn_precompile_9));
+		}
+		{
+			::vl::__vwsn::This(this->__vwsn_precompile_7)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_8));
 		}
 		(this->header = new ::vl::presentation::compositions::GuiRepeatFlowComposition());
 		::vl::__vwsn::This(__vwsn_this_)->SetNamedObject(::vl::WString::Unmanaged(L"header"), ::vl::__vwsn::Box(this->header));
@@ -55610,32 +55701,32 @@ Class (::winvistaskin::TabTemplateConstructor)
 			::vl::__vwsn::This(this->header)->SetMinSizeLimitation(::vl::presentation::compositions::GuiGraphicsComposition::MinSizeLimitation::LimitToElementAndChildren);
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_6)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->header));
+			::vl::__vwsn::This(this->__vwsn_precompile_7)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->header));
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_0)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_6));
+			::vl::__vwsn::This(this->__vwsn_precompile_0)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_7));
 		}
-		(this->__vwsn_precompile_9 = new ::vl::presentation::compositions::GuiCellComposition());
+		(this->__vwsn_precompile_10 = new ::vl::presentation::compositions::GuiCellComposition());
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_9)->SetSite(static_cast<::vl::vint>(1), static_cast<::vl::vint>(0), static_cast<::vl::vint>(1), static_cast<::vl::vint>(3));
+			::vl::__vwsn::This(this->__vwsn_precompile_10)->SetSite(static_cast<::vl::vint>(1), static_cast<::vl::vint>(0), static_cast<::vl::vint>(1), static_cast<::vl::vint>(3));
 		}
-		(this->__vwsn_precompile_10 = ::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement>(::vl::reflection::description::Element_Constructor<::vl::presentation::elements::GuiSolidBorderElement>()));
+		(this->__vwsn_precompile_11 = ::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement>(::vl::reflection::description::Element_Constructor<::vl::presentation::elements::GuiSolidBorderElement>()));
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_9)->SetOwnedElement(::vl::Ptr<::vl::presentation::elements::IGuiGraphicsElement>(this->__vwsn_precompile_10));
+			::vl::__vwsn::This(this->__vwsn_precompile_10)->SetOwnedElement(::vl::Ptr<::vl::presentation::elements::IGuiGraphicsElement>(this->__vwsn_precompile_11));
 		}
-		(this->__vwsn_precompile_11 = new ::vl::presentation::compositions::GuiBoundsComposition());
+		(this->__vwsn_precompile_12 = new ::vl::presentation::compositions::GuiBoundsComposition());
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_11)->SetMinSizeLimitation(::vl::presentation::compositions::GuiGraphicsComposition::MinSizeLimitation::LimitToElementAndChildren);
+			::vl::__vwsn::This(this->__vwsn_precompile_12)->SetMinSizeLimitation(::vl::presentation::compositions::GuiGraphicsComposition::MinSizeLimitation::LimitToElementAndChildren);
 		}
-		(this->__vwsn_precompile_12 = ::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement>(::vl::reflection::description::Element_Constructor<::vl::presentation::elements::GuiGradientBackgroundElement>()));
+		(this->__vwsn_precompile_13 = ::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement>(::vl::reflection::description::Element_Constructor<::vl::presentation::elements::GuiGradientBackgroundElement>()));
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_12.Obj())->SetDirection(::vl::presentation::elements::GuiGradientBackgroundElement::Direction::Vertical);
-		}
-		{
-			::vl::__vwsn::This(this->__vwsn_precompile_11)->SetOwnedElement(::vl::Ptr<::vl::presentation::elements::IGuiGraphicsElement>(this->__vwsn_precompile_12));
+			::vl::__vwsn::This(this->__vwsn_precompile_13.Obj())->SetDirection(::vl::presentation::elements::GuiGradientBackgroundElement::Direction::Vertical);
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_9)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_11));
+			::vl::__vwsn::This(this->__vwsn_precompile_12)->SetOwnedElement(::vl::Ptr<::vl::presentation::elements::IGuiGraphicsElement>(this->__vwsn_precompile_13));
+		}
+		{
+			::vl::__vwsn::This(this->__vwsn_precompile_10)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_12));
 		}
 		(this->container = new ::vl::presentation::compositions::GuiBoundsComposition());
 		::vl::__vwsn::This(__vwsn_this_)->SetNamedObject(::vl::WString::Unmanaged(L"container"), ::vl::__vwsn::Box(this->container));
@@ -55646,10 +55737,10 @@ Class (::winvistaskin::TabTemplateConstructor)
 			::vl::__vwsn::This(this->container)->SetMinSizeLimitation(::vl::presentation::compositions::GuiGraphicsComposition::MinSizeLimitation::LimitToElementAndChildren);
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_9)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->container));
+			::vl::__vwsn::This(this->__vwsn_precompile_10)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->container));
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_0)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_9));
+			::vl::__vwsn::This(this->__vwsn_precompile_0)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_10));
 		}
 		{
 			::vl::__vwsn::This(this->self)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_0));
@@ -55680,17 +55771,17 @@ Class (::winvistaskin::TabTemplateConstructor)
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
-			auto __vwsn_event_handler_ = vl::Func(::vl_workflow_global::__vwsnf512_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(this->header)->ItemInserted, __vwsn_event_handler_);
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc333_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf512_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_(this)));
+			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
 			auto __vwsn_event_handler_ = vl::Func(::vl_workflow_global::__vwsnf513_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(this->header)->ItemRemoved, __vwsn_event_handler_);
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(this->header)->ItemInserted, __vwsn_event_handler_);
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc333_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf514_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_(this)));
-			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
+			auto __vwsn_event_handler_ = vl::Func(::vl_workflow_global::__vwsnf514_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(this->header)->ItemRemoved, __vwsn_event_handler_);
 		}
 		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc334_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
@@ -55708,11 +55799,16 @@ Class (::winvistaskin::TabTemplateConstructor)
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc337_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf518_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_(this)));
+			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
+		}
+		{
 			::vl::__vwsn::This(this->self)->SetContainerComposition(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->container));
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc337_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf518_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_(this)));
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc338_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf519_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
@@ -55722,7 +55818,7 @@ Class (::winvistaskin::TabTemplateConstructor)
 			::vl::__vwsn::This(this->self)->SetAfterHeadersContainer(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->afterHeadersContainer));
 		}
 		{
-			auto __vwsn_event_handler_ = vl::Func(::vl_workflow_global::__vwsnf519_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_(this));
+			auto __vwsn_event_handler_ = vl::Func(::vl_workflow_global::__vwsnf520_WinVistaSkin_winvistaskin_TabTemplateConstructor___vwsn_winvistaskin_TabTemplate_Initialize_(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(this->self)->SelectedTabPageChanged, __vwsn_event_handler_);
 		}
 	}
@@ -55737,15 +55833,16 @@ Class (::winvistaskin::TabTemplateConstructor)
 		, __vwsn_precompile_1(::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement>())
 		, __vwsn_precompile_2(static_cast<::vl::presentation::compositions::GuiSideAlignedComposition*>(nullptr))
 		, __vwsn_precompile_3(::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement>())
-		, __vwsn_precompile_4(static_cast<::vl::presentation::compositions::GuiSideAlignedComposition*>(nullptr))
-		, __vwsn_precompile_5(::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement>())
-		, __vwsn_precompile_6(static_cast<::vl::presentation::compositions::GuiCellComposition*>(nullptr))
-		, __vwsn_precompile_7(static_cast<::vl::presentation::compositions::GuiSideAlignedComposition*>(nullptr))
-		, __vwsn_precompile_8(::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement>())
-		, __vwsn_precompile_9(static_cast<::vl::presentation::compositions::GuiCellComposition*>(nullptr))
-		, __vwsn_precompile_10(::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement>())
-		, __vwsn_precompile_11(static_cast<::vl::presentation::compositions::GuiBoundsComposition*>(nullptr))
-		, __vwsn_precompile_12(::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement>())
+		, __vwsn_precompile_4(::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement>())
+		, __vwsn_precompile_5(static_cast<::vl::presentation::compositions::GuiSideAlignedComposition*>(nullptr))
+		, __vwsn_precompile_6(::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement>())
+		, __vwsn_precompile_7(static_cast<::vl::presentation::compositions::GuiCellComposition*>(nullptr))
+		, __vwsn_precompile_8(static_cast<::vl::presentation::compositions::GuiSideAlignedComposition*>(nullptr))
+		, __vwsn_precompile_9(::vl::Ptr<::vl::presentation::elements::GuiSolidBackgroundElement>())
+		, __vwsn_precompile_10(static_cast<::vl::presentation::compositions::GuiCellComposition*>(nullptr))
+		, __vwsn_precompile_11(::vl::Ptr<::vl::presentation::elements::GuiSolidBorderElement>())
+		, __vwsn_precompile_12(static_cast<::vl::presentation::compositions::GuiBoundsComposition*>(nullptr))
+		, __vwsn_precompile_13(::vl::Ptr<::vl::presentation::elements::GuiGradientBackgroundElement>())
 	{
 	}
 
@@ -56266,11 +56363,6 @@ Class (::winvistaskin::ToolstripButtonTemplateConstructor)
 			::vl::__vwsn::This(this->self)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_9));
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc374_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf556_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(this)));
-			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
-		}
-		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc375_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf557_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
@@ -56311,15 +56403,20 @@ Class (::winvistaskin::ToolstripButtonTemplateConstructor)
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
-			::vl::__vwsn::This(this->self)->SetContainerComposition(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->container));
-		}
-		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc383_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf565_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
-			auto __vwsn_event_handler_ = vl::Func(::vl_workflow_global::__vwsnf566_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(this));
+			::vl::__vwsn::This(this->self)->SetContainerComposition(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->container));
+		}
+		{
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc384_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf566_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(this)));
+			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
+		}
+		{
+			auto __vwsn_event_handler_ = vl::Func(::vl_workflow_global::__vwsnf567_WinVistaSkin_winvistaskin_ToolstripButtonTemplateConstructor___vwsn_winvistaskin_ToolstripButtonTemplate_Initialize_(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(this->self)->ColorsChanged, __vwsn_event_handler_);
 		}
 	}
@@ -56534,11 +56631,6 @@ Class (::winvistaskin::ToolstripDropdownButtonTemplateConstructor)
 			::vl::__vwsn::This(this->self)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_9));
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc384_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf568_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(this)));
-			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
-		}
-		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc385_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf569_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
@@ -56589,15 +56681,20 @@ Class (::winvistaskin::ToolstripDropdownButtonTemplateConstructor)
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
-			::vl::__vwsn::This(this->self)->SetContainerComposition(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->container));
-		}
-		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc395_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf579_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
-			auto __vwsn_event_handler_ = vl::Func(::vl_workflow_global::__vwsnf580_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(this));
+			::vl::__vwsn::This(this->self)->SetContainerComposition(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->container));
+		}
+		{
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc396_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf580_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(this)));
+			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
+		}
+		{
+			auto __vwsn_event_handler_ = vl::Func(::vl_workflow_global::__vwsnf581_WinVistaSkin_winvistaskin_ToolstripDropdownButtonTemplateConstructor___vwsn_winvistaskin_ToolstripDropdownButtonTemplate_Initialize_(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(this->self)->ColorsChanged, __vwsn_event_handler_);
 		}
 	}
@@ -56871,11 +56968,6 @@ Class (::winvistaskin::ToolstripSplitArrowTemplateConstructor)
 			::vl::__vwsn::This(this->__vwsn_precompile_1.Obj())->SetColor2(GLOBAL_NAME vistaColors.SplitterLight);
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc371_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf553_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_(this)));
-			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
-		}
-		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc372_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf554_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
@@ -56883,6 +56975,11 @@ Class (::winvistaskin::ToolstripSplitArrowTemplateConstructor)
 		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc373_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf555_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_(this)));
+			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
+		}
+		{
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc374_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf556_WinVistaSkin_winvistaskin_ToolstripSplitArrowTemplateConstructor___vwsn_winvistaskin_ToolstripSplitArrowTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 	}
@@ -57046,18 +57143,13 @@ Class (::winvistaskin::ToolstripSplitButtonTemplateConstructor)
 			::vl::__vwsn::This(this->buttonArrow)->SetAutoFocus(false);
 		}
 		{
-			::vl::__vwsn::This(this->buttonArrow)->SetControlTemplate(vl::Func(::vl_workflow_global::__vwsnf582_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(this)));
+			::vl::__vwsn::This(this->buttonArrow)->SetControlTemplate(vl::Func(::vl_workflow_global::__vwsnf583_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(this)));
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_11)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(::vl::__vwsn::This(this->buttonArrow)->GetBoundsComposition()));
 		}
 		{
 			::vl::__vwsn::This(this->self)->AddChild(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->__vwsn_precompile_11));
-		}
-		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc396_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf583_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(this)));
-			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
 			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc397_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
@@ -57105,18 +57197,23 @@ Class (::winvistaskin::ToolstripSplitButtonTemplateConstructor)
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc406_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf593_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(this)));
+			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
+		}
+		{
 			::vl::__vwsn::This(this->self)->SetContainerComposition(static_cast<::vl::presentation::compositions::GuiGraphicsComposition*>(this->container));
 		}
 		{
-			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc406_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
-			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf593_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(this)));
+			auto __vwsn_created_subscription_ = ::vl::Ptr<::vl::reflection::description::IValueSubscription>(new ::vl_workflow_global::__vwsnc407_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize__vl_reflection_description_IValueSubscription(this));
+			::vl::__vwsn::EventAttach(::vl::__vwsn::This(__vwsn_created_subscription_.Obj())->ValueChanged, vl::Func(::vl_workflow_global::__vwsnf594_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(this)));
 			::vl::__vwsn::This(__vwsn_this_)->AddSubscription(__vwsn_created_subscription_);
 		}
 		{
 			::vl::__vwsn::This(this->self)->SetSubMenuHost(static_cast<::vl::presentation::controls::GuiButton*>(this->buttonArrow));
 		}
 		{
-			auto __vwsn_event_handler_ = vl::Func(::vl_workflow_global::__vwsnf594_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(this));
+			auto __vwsn_event_handler_ = vl::Func(::vl_workflow_global::__vwsnf595_WinVistaSkin_winvistaskin_ToolstripSplitButtonTemplateConstructor___vwsn_winvistaskin_ToolstripSplitButtonTemplate_Initialize_(this));
 			::vl::__vwsn::EventAttach(::vl::__vwsn::This(this->self)->ColorsChanged, __vwsn_event_handler_);
 		}
 	}
