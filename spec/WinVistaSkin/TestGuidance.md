@@ -27,7 +27,7 @@ changes; creating the skin requires the full showcase verification described in
 - winvistaskin::CustomFrameWindowTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - winvistaskin::CaptionButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - winvistaskin::CaptionCloseButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
-- winvistaskin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager.
+- winvistaskin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager, Misc / Dialogs / FontDialog.
 - winvistaskin::LabelTemplate: List / TextList, Layout / Easy Layout, Window Manager, Misc / Localization.
 - winvistaskin::ShortcutKeyTemplate: Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Window Manager.
 - winvistaskin::DateButtonTemplate: Misc / DatePicker, List / BindableDataGrid.

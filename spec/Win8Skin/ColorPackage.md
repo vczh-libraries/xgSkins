@@ -86,7 +86,7 @@ The Windows 8 Explorer capture shows a selected file with a `#D1E8FF` interior a
 ## Shared surfaces and foregrounds
 | ColorPackage item | Required use |
 | --- | --- |
-| `GeneralBackground` | Gray window client areas, generic scroll views, tracker surrounds, group boxes and calendar background. |
+| `GeneralBackground` | Gray window client areas, generic scroll views, tracker surrounds and calendar background. |
 | `GeneralBorder` | General control outlines and generic scroll-view borders. |
 | `GeneralAccent` | Document selection background. |
 | `ContentBackground` | White content surfaces and selected-page interiors. |

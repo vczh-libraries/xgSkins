@@ -4,6 +4,13 @@ This extension provides additional template-based skins for GacUI applications.
 Each skin supplies a default color theme. FullControlTest starts with DarkSkin;
 use Window Manager to select another skin.
 
+The custom skins use a four-pixel visible frame along the sides and bottom of a
+resizable window. The close button ends at the inside edge of this frame. Beside
+and below the client, five more pixels of client background also accept resizing.
+
+Group boxes show their parent surface through the body and the gap in the
+outline around the caption.
+
 - Win7Skin: [colors](Win7Skin/ColorPackage.md), [animation](Win7Skin/Animation.md),
   [test guidance](Win7Skin/TestGuidance.md).
 - Win8Skin: [colors](Win8Skin/ColorPackage.md), [animation](Win8Skin/Animation.md),

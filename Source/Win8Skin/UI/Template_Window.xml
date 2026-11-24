@@ -53,7 +53,9 @@
               var padding = self.CustomFramePadding;
               var margin = {left:(padding.left > 0 ? 9 : 0); top:padding.top;
                             right:(padding.right > 0 ? 9 : 0); bottom:(padding.bottom > 0 ? 9 : 0);} of Margin;
-              contentTable.AlignmentToParent = margin;
+              var captionRight = padding.right > 0 ? 4 : 0;
+              contentTable.AlignmentToParent = {left:margin.left; top:margin.top; right:captionRight; bottom:margin.bottom;};
+              container.AlignmentToParent = {left:0; top:0; right:margin.right - captionRight; bottom:0;};
               frameTable.SetRowOption(0, {composeType:Absolute absolute:margin.top});
               frameTable.SetRowOption(2, {composeType:Absolute absolute:margin.bottom});
               frameTable.SetColumnOption(0, {composeType:Absolute absolute:margin.left});
@@ -238,8 +240,9 @@
                 <SolidLabel ref.Style="windowTitle" Text-bind="self.Text" Ellipse="true" Font-bind="self.Font" HorizontalAlignment="Center"/>
               </Bounds>
             </Cell>
-            <Cell ref.Name="clientCell" Site="row:1 column:0 columnSpan:5" AssociatedHitTestResult="Client">
-              <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+            <!-- The exposed strip beside the client completes the nine-pixel right resize area. -->
+            <Cell ref.Name="clientCell" Site="row:1 column:0 columnSpan:5" AssociatedHitTestResult="BorderRight">
+              <Bounds ref.Name="container" AssociatedHitTestResult="Client" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
             </Cell>
           </Table>
         </Bounds>

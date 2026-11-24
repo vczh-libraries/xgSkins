@@ -11,7 +11,7 @@ Start `FullControlTest /D2D /Hosted`, open **Window Manager / Color Theme** and 
 - ubuntuskin::CustomFrameWindowTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - ubuntuskin::CaptionCloseButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - ubuntuskin::CaptionButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
-- ubuntuskin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager.
+- ubuntuskin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager, Misc / Dialogs / FontDialog.
 - ubuntuskin::LabelTemplate: List / TextList, Layout / Easy Layout, Window Manager, Misc / Localization.
 - ubuntuskin::ShortcutKeyTemplate: Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Window Manager.
 - ubuntuskin::DateButtonTemplate: Misc / DatePicker, List / BindableDataGrid.

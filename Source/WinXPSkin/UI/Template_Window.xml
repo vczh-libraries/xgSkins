@@ -53,7 +53,9 @@
               var padding = self.CustomFramePadding;
               var margin = {left:(padding.left > 0 ? 9 : 0); top:padding.top;
                             right:(padding.right > 0 ? 9 : 0); bottom:(padding.bottom > 0 ? 9 : 0);} of Margin;
-              contentTable.AlignmentToParent = margin;
+              var captionRight = padding.right > 0 ? 4 : 0;
+              contentTable.AlignmentToParent = {left:margin.left; top:margin.top; right:captionRight; bottom:margin.bottom;};
+              container.AlignmentToParent = {left:0; top:0; right:margin.right - captionRight; bottom:0;};
               frameTable.SetRowOption(0, {composeType:Absolute absolute:margin.top});
               frameTable.SetRowOption(2, {composeType:Absolute absolute:margin.bottom});
               frameTable.SetColumnOption(0, {composeType:Absolute absolute:margin.left});
@@ -172,7 +174,7 @@
                   </Bounds>
                 </Cell>
                 <Cell Site="row:0 column:4" AssociatedHitTestResult="ButtonClose">
-                  <Bounds AlignmentToParent="left:1 top:2 right:2 bottom:2" PreferredMinSize="x:21 y:21">
+                  <Bounds AlignmentToParent="left:1 top:2 right:0 bottom:2" PreferredMinSize="x:21 y:21">
                     <GradientBackground Direction="Vertical" Color1-bind="not self.VisuallyEnabled ? winxpColors.CaptionInactiveTop : self.Activated ? winxpColors.CloseNormalTop : winxpColors.CloseInactiveTop" Color2-bind="not self.VisuallyEnabled ? winxpColors.CaptionInactiveBottom : self.Activated ? winxpColors.CloseNormalBottom : winxpColors.CloseInactiveBottom" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
                     <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Activated ? winxpColors.CaptionRim : winxpColors.CaptionRimInactive" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/></Bounds>
                     <Button AutoFocus="false" ControlTemplate="winxpskin::CaptionCloseButtonTemplate">
@@ -208,8 +210,9 @@
                 </Cell>
               </Table>
             </Cell>
-            <Cell ref.Name="clientCell" Site="row:1 column:0" AssociatedHitTestResult="Client">
-              <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+            <!-- The exposed strip beside the client completes the nine-pixel right resize area. -->
+            <Cell ref.Name="clientCell" Site="row:1 column:0" AssociatedHitTestResult="BorderRight">
+              <Bounds ref.Name="container" AssociatedHitTestResult="Client" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
             </Cell>
           </Table>
         </Bounds>

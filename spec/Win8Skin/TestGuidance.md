@@ -20,7 +20,7 @@ changes; creating the skin requires the full showcase verification described in
 - win8skin::CustomFrameWindowTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - win8skin::CaptionButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - win8skin::CaptionCloseButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
-- win8skin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager.
+- win8skin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager, Misc / Dialogs / FontDialog.
 - win8skin::LabelTemplate: List / TextList, Layout / Easy Layout, Window Manager, Misc / Localization.
 - win8skin::ShortcutKeyTemplate: Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Window Manager.
 - win8skin::DateButtonTemplate: Misc / DatePicker, List / BindableDataGrid.

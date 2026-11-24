@@ -6,11 +6,11 @@ UbuntuSkin follows the light appearance in the supplied Ubuntu 26.04 LTS screens
 
 | Field | Default | Use |
 | --- | --- | --- |
-| `WindowBackground` | `#FAFAFA` | Window body, group boxes, toolbars, ribbon groups and scroll troughs. |
+| `WindowBackground` | `#FAFAFA` | Window body, toolbars, ribbon groups and scroll troughs. |
 | `SidebarBackground` | `#FFFFFF` | Tree view, matching the default list surface. |
 | `ViewBackground` | `#FFFFFF` | Lists, multiline text boxes, rich documents, notebook pages, resting column headers and scale handles. |
-| `HeaderBackground` | `#EBEBEB` | Active title bar. |
-| `InactiveHeaderBackground` | `#F0F0F0` | Inactive title bar. |
+| `HeaderBackground` | `#EBEBEB` | Active title bar and frame. |
+| `InactiveHeaderBackground` | `#F0F0F0` | Inactive title bar and frame. |
 | `FrameBorder` | `#BDBDBD` | Active window perimeter and the hairline below the title. |
 | `HeaderInk` | `#3D3D3D` | Active title and caption glyphs. |
 | `InactiveHeaderInk` | `#959595` | Inactive title and unavailable caption glyphs. |

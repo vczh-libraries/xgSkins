@@ -34,14 +34,23 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new GroupCaptionState^(self.CaptionColor), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.CaptionColorChanged-eval>
-        <SolidBackground ref.Style="generalBackground"/>
         <Bounds AlignmentToParent-bind="{left:0 top:(titleBounds.CachedBounds.y2/2) right:0 bottom:0}">
-          <SolidBorder Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-eval="vistaColors.ContentBorder"/>
-          <Bounds AlignmentToParent="left:1 top:1 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-eval="vistaColors.SplitterLight"/></Bounds>
+          <!-- Leave the caption gap open so the parent surface shows through. -->
+          <Bounds AlignmentToParent="left:0 top:2 right:0 bottom:0">
+            <Bounds AlignmentToParent="left:0 top:-2 right:0 bottom:0">
+              <SolidBorder Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-eval="vistaColors.ContentBorder"/>
+              <Bounds AlignmentToParent="left:1 top:1 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:3 radiusY:3" Color-eval="vistaColors.SplitterLight"/></Bounds>
+            </Bounds>
+          </Bounds>
+          <Bounds AlignmentToParent="left:2 top:0 right:-1 bottom:-1" PreferredMinSize="x:3 y:2">
+            <Gui3DSplitterElement Direction="Horizontal" Color1-eval="vistaColors.ContentBorder" Color2-eval="vistaColors.SplitterLight"/>
+          </Bounds>
+          <Bounds AlignmentToParent-bind="{left:titleBounds.CachedBounds.x2 top:0 right:2 bottom:-1}" PreferredMinSize="y:2">
+            <Gui3DSplitterElement Direction="Horizontal" Color1-eval="vistaColors.ContentBorder" Color2-eval="vistaColors.SplitterLight"/>
+          </Bounds>
           <Bounds ref.Name="container" AlignmentToParent-bind="{left:1 top:(1+titleBounds.CachedBounds.y2/2) right:1 bottom:1}"/>
         </Bounds>
         <Bounds ref.Name="titleBounds" AlignmentToParent="left:5 top:0 right:-1 bottom:-1">
-          <SolidBackground ref.Style="generalBackground"/>
           <Bounds AlignmentToParent="left:2 top:0 right:2 bottom:0">
             <SolidLabel Text-bind="self.Text" Color-bind="self.animation.Current.Text" Font-bind="self.Font" VerticalAlignment="Center"/>
           </Bounds>

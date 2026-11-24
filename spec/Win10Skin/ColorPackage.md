@@ -8,7 +8,7 @@ The Text command under the pointer in the Windows 10 Paint ribbon has a `#D5E6F7
 
 | ColorPackage item | Light | Dark | Used for |
 | --- | --- | --- | --- |
-| `Page` | `#FFFFFF` | `#202020` | Selected tab pages, content, editors and the caption background. |
+| `Page` | `#FFFFFF` | `#202020` | Selected tab pages, content, editors and the background of the caption and frame. |
 | `Chrome` | `#F2F2F2` | `#2B2B2B` | Menu bars, popups, keytips, tooltips and scroll tracks. |
 | `Divider` | `#D9D9D9` | `#484848` | Hairlines between groups, toolbar commands, list headers and menu items. |
 | `Outline` | `#7A7A7A` | `#797979` | Resting input outlines, unfilled slider channel and popup edges. |

@@ -12,8 +12,8 @@ WinUI list selection uses the secondary subtle fill at rest, the tertiary subtle
 
 | Field | Light | Dark | Use |
 | --- | --- | --- | --- |
-| `Canvas` | `#F3F3F3` | `#202020` | Window, title bar, ribbon and toolbar base. |
-| `Layer` | `#FFFFFF` | `#2B2B2B` | Content pane, page or document surface. |
+| `Canvas` | `#F3F3F3` | `#202020` | Title bar, window frame, system-framed window background, ribbon and toolbar base. |
+| `Layer` | `#FFFFFF` | `#2B2B2B` | Custom-frame window client, content pane, page or document surface. |
 | `TabSurface` | `#F9F9F9` | `#282828` | Selected property tab header and pane. |
 | `TabHover` | `#0000000A` | `#FFFFFF0F` | Hovered tab face over the strip. |
 | `Flyout` | `#F9F9F9` | `#2C2C2C` | Menu, tooltip, keytip and ribbon popup surface. |

@@ -20,7 +20,7 @@ changes; creating the skin requires the full showcase verification described in
 - win7skin::CustomFrameWindowTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - win7skin::CaptionButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - win7skin::CaptionCloseButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
-- win7skin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager.
+- win7skin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager, Misc / Dialogs / FontDialog.
 - win7skin::LabelTemplate: List / TextList, Layout / Easy Layout, Window Manager, Misc / Localization.
 - win7skin::ShortcutKeyTemplate: Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Window Manager.
 - win7skin::DateButtonTemplate: Misc / DatePicker, List / BindableDataGrid.

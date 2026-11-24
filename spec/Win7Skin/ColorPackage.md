@@ -95,7 +95,7 @@ item selection colors.
 
 | ColorPackage item | Required use |
 | --- | --- |
-| `GeneralBackground` | Gray window client areas, plain controls, group boxes and calendar background. |
+| `GeneralBackground` | Gray window client areas, plain controls and calendar background. |
 | `GeneralBorder` | General outlines and inactive window border. |
 | `GeneralAccent` | Document selection background. |
 | `ContentBackground` | White content surfaces and selected-page interiors. |

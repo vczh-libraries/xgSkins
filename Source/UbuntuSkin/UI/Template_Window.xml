@@ -50,7 +50,9 @@
               var padding = self.CustomFramePadding;
               var margin = {left:(padding.left > 0 ? 9 : 0); top:padding.top;
                             right:(padding.right > 0 ? 9 : 0); bottom:(padding.bottom > 0 ? 9 : 0);} of Margin;
-              contentTable.AlignmentToParent = margin;
+              var captionRight = padding.right > 0 ? 4 : 0;
+              contentTable.AlignmentToParent = {left:margin.left; top:margin.top; right:captionRight; bottom:margin.bottom;};
+              container.AlignmentToParent = {left:0; top:0; right:margin.right - captionRight; bottom:0;};
               frameTable.SetRowOption(0, {composeType:Absolute absolute:margin.top});
               frameTable.SetRowOption(2, {composeType:Absolute absolute:margin.bottom});
               frameTable.SetColumnOption(0, {composeType:Absolute absolute:margin.left});
@@ -66,12 +68,9 @@
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder ref.Style="windowBorder"/>
 
-          <Bounds AlignmentToParent-bind="{left:0 top:(self.CustomFramePadding.top + clientCell.CachedBounds.y1) right:0 bottom:0}">
-            <SolidBackground ref.Style="windowBorder"/>
-            <Bounds AlignmentToParent-bind="{left:(self.CustomFramePadding.left &gt; 0 ? 4 : 0) top:0
-                                            right:(self.CustomFramePadding.right &gt; 0 ? 4 : 0) bottom:(self.CustomFramePadding.bottom &gt; 0 ? 4 : 0)}">
-              <SolidBackground ref.Style="generalBackground"/>
-            </Bounds>
+          <Bounds AlignmentToParent-bind="{left:(self.CustomFramePadding.left &gt; 0 ? 4 : 0) top:(self.CustomFramePadding.top + clientCell.CachedBounds.y1)
+                                          right:(self.CustomFramePadding.right &gt; 0 ? 4 : 0) bottom:(self.CustomFramePadding.bottom &gt; 0 ? 4 : 0)}">
+            <SolidBackground ref.Style="generalBackground"/>
           </Bounds>
 
           <Table ref.Name="frameTable" AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -162,7 +161,7 @@
             </Cell>
             <Cell Site="row:0 column:4" AssociatedHitTestResult="ButtonClose">
               <Button AutoFocus="false" Context-bind="self.Activated" ControlTemplate="ubuntuskin::CaptionCloseButtonTemplate">
-                <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+                <att.BoundsComposition-set AlignmentToParent="left:4 top:0 right:0 bottom:0"/>
               </Button>
             </Cell>
 
@@ -186,7 +185,7 @@
               <Bounds>
                 <!-- Mirror the caption controls when space permits. Keep the title readable in narrow dialogs. -->
                 <att.AlignmentToParent-bind><![CDATA[
-                  let offset = clientCell.CachedBounds.x2 - titleCell.CachedBounds.x2 - titleCell.CachedBounds.x1,
+                  let offset = container.CachedBounds.x2 - titleCell.CachedBounds.x2 - titleCell.CachedBounds.x1,
                       available = (titleCell.CachedBounds.x2 - titleCell.CachedBounds.x1) / 4 in (
                     {left:8 + (offset < 0 ? 0 : offset < available ? offset : available); top:7; right:8; bottom:7;} of Margin
                   )
@@ -194,8 +193,9 @@
                 <SolidLabel ref.Style="windowTitle" Text-bind="self.Text" Ellipse="true" Font-bind="{fontFamily:self.Font.fontFamily size:self.Font.size bold:true antialias:self.Font.antialias}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
               </Bounds>
             </Cell>
-            <Cell ref.Name="clientCell" Site="row:1 column:0 columnSpan:5" AssociatedHitTestResult="Client">
-              <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
+            <!-- The exposed strip beside the client completes the nine-pixel right resize area. -->
+            <Cell ref.Name="clientCell" Site="row:1 column:0 columnSpan:5" AssociatedHitTestResult="BorderRight">
+              <Bounds ref.Name="container" AssociatedHitTestResult="Client" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
             </Cell>
           </Table>
         </Bounds>
@@ -220,7 +220,7 @@
           </Table>
         </Bounds>
         <Bounds ref.Name="container" AlignmentToParent="left:2 top:2 right:2 bottom:2">
-          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:24 y:24" Visible-bind="self.CloseAction">
+          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:16 y:24" Visible-bind="self.CloseAction">
             <Polygon Size="x:8 y:8" BorderColor-bind="self.VisuallyEnabled and self.WindowActive ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk" BackgroundColor-bind="self.VisuallyEnabled and self.WindowActive ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk">
               <att.Points>
                 <Point>x:0 y:1</Point><Point>x:1 y:0</Point><Point>x:3 y:2</Point><Point>x:4 y:2</Point>

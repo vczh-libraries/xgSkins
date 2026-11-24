@@ -11,7 +11,7 @@ Run the full showcase in Direct2D hosted mode for both `Win11Skin` and `Win11Ski
 - win11skin::CustomFrameWindowTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - win11skin::CaptionButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - win11skin::CaptionCloseButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
-- win11skin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager.
+- win11skin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager, Misc / Dialogs / FontDialog.
 - win11skin::LabelTemplate: List / TextList, Layout / Easy Layout, Window Manager, Misc / Localization.
 - win11skin::ShortcutKeyTemplate: Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Window Manager.
 - win11skin::DateButtonTemplate: Misc / DatePicker, List / BindableDataGrid.

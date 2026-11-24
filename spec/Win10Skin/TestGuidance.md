@@ -11,7 +11,7 @@ In a fresh FullControlTest /D2D /Hosted session open Window Manager and choose W
 - win10skin::CustomFrameWindowTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - win10skin::CaptionButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - win10skin::CaptionCloseButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
-- win10skin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager.
+- win10skin::GroupBoxTemplate: List / TextList, Control / TextBox, Window Manager, Misc / Dialogs / FontDialog.
 - win10skin::LabelTemplate: List / TextList, Layout / Easy Layout, Window Manager, Misc / Localization.
 - win10skin::ShortcutKeyTemplate: Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Window Manager.
 - win10skin::DateButtonTemplate: Misc / DatePicker, List / BindableDataGrid.
