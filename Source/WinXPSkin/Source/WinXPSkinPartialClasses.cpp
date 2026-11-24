@@ -9129,7 +9129,9 @@ Closures
 	{
 		auto padding = ::vl::__vwsn::This(__vwsnthis_0->self)->GetCustomFramePadding();
 		auto margin = [&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = ((padding.left > static_cast<::vl::vint>(0)) ? static_cast<::vl::vint>(9) : static_cast<::vl::vint>(0)); __vwsn_temp__.top = padding.top; __vwsn_temp__.right = ((padding.right > static_cast<::vl::vint>(0)) ? static_cast<::vl::vint>(9) : static_cast<::vl::vint>(0)); __vwsn_temp__.bottom = ((padding.bottom > static_cast<::vl::vint>(0)) ? static_cast<::vl::vint>(9) : static_cast<::vl::vint>(0)); return __vwsn_temp__; }();
-		::vl::__vwsn::This(__vwsnthis_0->contentTable)->SetAlignmentToParent(margin);
+		auto captionRight = ((padding.right > static_cast<::vl::vint>(0)) ? static_cast<::vl::vint>(4) : static_cast<::vl::vint>(0));
+		::vl::__vwsn::This(__vwsnthis_0->contentTable)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = margin.left; __vwsn_temp__.top = margin.top; __vwsn_temp__.right = captionRight; __vwsn_temp__.bottom = margin.bottom; return __vwsn_temp__; }());
+		::vl::__vwsn::This(__vwsnthis_0->container)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(0); __vwsn_temp__.top = static_cast<::vl::vint>(0); __vwsn_temp__.right = (margin.right - captionRight); __vwsn_temp__.bottom = static_cast<::vl::vint>(0); return __vwsn_temp__; }());
 		::vl::__vwsn::This(__vwsnthis_0->frameTable)->SetRowOption(static_cast<::vl::vint>(0), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::Absolute; __vwsn_temp__.absolute = margin.top; return __vwsn_temp__; }());
 		::vl::__vwsn::This(__vwsnthis_0->frameTable)->SetRowOption(static_cast<::vl::vint>(2), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::Absolute; __vwsn_temp__.absolute = margin.bottom; return __vwsn_temp__; }());
 		::vl::__vwsn::This(__vwsnthis_0->frameTable)->SetColumnOption(static_cast<::vl::vint>(0), [&](){ ::vl::presentation::compositions::GuiCellOption __vwsn_temp__; __vwsn_temp__.composeType = ::vl::presentation::compositions::GuiCellOption::ComposeType::Absolute; __vwsn_temp__.absolute = margin.left; return __vwsn_temp__; }());
@@ -41874,7 +41876,7 @@ Class (::winxpskin::CustomFrameWindowTemplateConstructor)
 			::vl::__vwsn::This(this->__vwsn_precompile_54)->SetPreferredMinSize([&](){ ::vl::presentation::Size __vwsn_temp__; __vwsn_temp__.x = static_cast<::vl::vint>(21); __vwsn_temp__.y = static_cast<::vl::vint>(21); return __vwsn_temp__; }());
 		}
 		{
-			::vl::__vwsn::This(this->__vwsn_precompile_54)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(1); __vwsn_temp__.top = static_cast<::vl::vint>(2); __vwsn_temp__.right = static_cast<::vl::vint>(2); __vwsn_temp__.bottom = static_cast<::vl::vint>(2); return __vwsn_temp__; }());
+			::vl::__vwsn::This(this->__vwsn_precompile_54)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(1); __vwsn_temp__.top = static_cast<::vl::vint>(2); __vwsn_temp__.right = static_cast<::vl::vint>(0); __vwsn_temp__.bottom = static_cast<::vl::vint>(2); return __vwsn_temp__; }());
 		}
 		{
 			::vl::__vwsn::This(this->__vwsn_precompile_54)->SetMinSizeLimitation(::vl::presentation::compositions::GuiGraphicsComposition::MinSizeLimitation::LimitToElementAndChildren);
@@ -42068,13 +42070,16 @@ Class (::winxpskin::CustomFrameWindowTemplateConstructor)
 		(this->clientCell = new ::vl::presentation::compositions::GuiCellComposition());
 		::vl::__vwsn::This(__vwsn_this_)->SetNamedObject(::vl::WString::Unmanaged(L"clientCell"), ::vl::__vwsn::Box(this->clientCell));
 		{
-			::vl::__vwsn::This(this->clientCell)->SetAssociatedHitTestResult(::vl::presentation::INativeWindowListener::HitTestResult::Client);
+			::vl::__vwsn::This(this->clientCell)->SetAssociatedHitTestResult(::vl::presentation::INativeWindowListener::HitTestResult::BorderRight);
 		}
 		{
 			::vl::__vwsn::This(this->clientCell)->SetSite(static_cast<::vl::vint>(1), static_cast<::vl::vint>(0), static_cast<::vl::vint>(1), static_cast<::vl::vint>(1));
 		}
 		(this->container = new ::vl::presentation::compositions::GuiBoundsComposition());
 		::vl::__vwsn::This(__vwsn_this_)->SetNamedObject(::vl::WString::Unmanaged(L"container"), ::vl::__vwsn::Box(this->container));
+		{
+			::vl::__vwsn::This(this->container)->SetAssociatedHitTestResult(::vl::presentation::INativeWindowListener::HitTestResult::Client);
+		}
 		{
 			::vl::__vwsn::This(this->container)->SetAlignmentToParent([&](){ ::vl::presentation::Margin __vwsn_temp__; __vwsn_temp__.left = static_cast<::vl::vint>(0); __vwsn_temp__.top = static_cast<::vl::vint>(0); __vwsn_temp__.right = static_cast<::vl::vint>(0); __vwsn_temp__.bottom = static_cast<::vl::vint>(0); return __vwsn_temp__; }());
 		}
