@@ -22,7 +22,6 @@
   - [A selected calendar day keeps its month’s text color when the button changes to its selection color.](GacUI/SelectedCalendarDayForeground.md)
 - **TO BE TRIAGED**
   - [Selecting a list or tree row changes its background while its label keeps the normal text color.](GacUI/SelectedItemForeground.md)
-  - [GDI draws partial-alpha fills as opaque. Win11Skin uses solid hover colors.](GacUI/GdiTabHoverOpacity.md)
 
 ## FullControlTest
 
