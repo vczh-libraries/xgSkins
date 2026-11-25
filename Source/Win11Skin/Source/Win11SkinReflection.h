@@ -113,6 +113,8 @@ namespace vl
 			DECL_TYPE_INFO(::win11skin::RibbonButtonsTemplateConstructor)
 			DECL_TYPE_INFO(::win11skin::RibbonGalleryDropdownButtonTemplate)
 			DECL_TYPE_INFO(::win11skin::RibbonGalleryDropdownButtonTemplateConstructor)
+			DECL_TYPE_INFO(::win11skin::RibbonGalleryItemBackgroundTemplate)
+			DECL_TYPE_INFO(::win11skin::RibbonGalleryItemBackgroundTemplateConstructor)
 			DECL_TYPE_INFO(::win11skin::RibbonGalleryItemListTemplate)
 			DECL_TYPE_INFO(::win11skin::RibbonGalleryItemListTemplateConstructor)
 			DECL_TYPE_INFO(::win11skin::RibbonGalleryTemplate)
