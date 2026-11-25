@@ -199,6 +199,8 @@ namespace vl
 			DECL_TYPE_INFO(::win8skin::VScrollHandleTemplateConstructor)
 			DECL_TYPE_INFO(::win8skin::VScrollTemplate)
 			DECL_TYPE_INFO(::win8skin::VScrollTemplateConstructor)
+			DECL_TYPE_INFO(::win8skin::VTabTemplate)
+			DECL_TYPE_INFO(::win8skin::VTabTemplateConstructor)
 			DECL_TYPE_INFO(::win8skin::VTrackerHandleTemplate)
 			DECL_TYPE_INFO(::win8skin::VTrackerHandleTemplateConstructor)
 			DECL_TYPE_INFO(::win8skin::VTrackerTemplate)

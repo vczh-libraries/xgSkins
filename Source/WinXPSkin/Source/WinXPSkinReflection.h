@@ -196,6 +196,8 @@ namespace vl
 			DECL_TYPE_INFO(::winxpskin::VScrollHandleTemplateConstructor)
 			DECL_TYPE_INFO(::winxpskin::VScrollTemplate)
 			DECL_TYPE_INFO(::winxpskin::VScrollTemplateConstructor)
+			DECL_TYPE_INFO(::winxpskin::VTabTemplate)
+			DECL_TYPE_INFO(::winxpskin::VTabTemplateConstructor)
 			DECL_TYPE_INFO(::winxpskin::VTrackerHandleTemplate)
 			DECL_TYPE_INFO(::winxpskin::VTrackerHandleTemplateConstructor)
 			DECL_TYPE_INFO(::winxpskin::VTrackerTemplate)

@@ -201,6 +201,8 @@ namespace vl
 			DECL_TYPE_INFO(::ubuntuskin::VScrollHandleTemplateConstructor)
 			DECL_TYPE_INFO(::ubuntuskin::VScrollTemplate)
 			DECL_TYPE_INFO(::ubuntuskin::VScrollTemplateConstructor)
+			DECL_TYPE_INFO(::ubuntuskin::VTabTemplate)
+			DECL_TYPE_INFO(::ubuntuskin::VTabTemplateConstructor)
 			DECL_TYPE_INFO(::ubuntuskin::VTrackerHandleTemplate)
 			DECL_TYPE_INFO(::ubuntuskin::VTrackerHandleTemplateConstructor)
 			DECL_TYPE_INFO(::ubuntuskin::VTrackerTemplate)
