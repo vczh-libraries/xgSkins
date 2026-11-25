@@ -32,9 +32,10 @@ changes; creating the skin requires the full showcase verification described in
 - win7skin::DocumentTextBoxTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Layout / Easy Layout.
 - win7skin::DocumentViewerTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Control / Embedded Controls.
 - win7skin::EditorBorderTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Layout / Easy Layout, List / TextList, List / ListView, List / TreeView.
-- win7skin::TabHeaderButtonTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
-- win7skin::TabHeaderTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- win7skin::TabHeaderButtonTemplate: List / TextList, Layout, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- win7skin::TabHeaderTemplate: List / TextList, Layout, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
 - win7skin::TabTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- win7skin::VTabTemplate: Layout / Repeat, Responsive, Easy Layout, Easy Layout (Table).
 - win7skin::RibbonTabTemplate: Control / Document Editor (Ribbon).
 - win7skin::ItemBackgroundTemplate: List / TextList, List / ListView, List / TreeView, List / BindableDataGrid, Control / Document Editor (Ribbon).
 - win7skin::TextListTemplate: List / TextList, Refresh List / TextList, Refresh List / BindableTextList, Layout / Easy Layout.

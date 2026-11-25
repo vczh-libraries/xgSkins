@@ -12,6 +12,11 @@ Group boxes show their parent surface through the body and the gap in the
 outline around the caption. The empty space after the last tab button on each
 header row also shows the parent surface. Each tab page supplies its own background.
 
+`VTab` places the headers in a column to the left of the page. Captions stay
+horizontal and share a right edge. Borders, highlights and selection marks
+along the top and bottom of a Tab header run along the left and right of a
+VTab header. Unused space below the headers shows the parent surface.
+
 - Win7Skin: [colors](Win7Skin/ColorPackage.md), [animation](Win7Skin/Animation.md),
   [test guidance](Win7Skin/TestGuidance.md).
 - Win8Skin: [colors](Win8Skin/ColorPackage.md), [animation](Win8Skin/Animation.md),

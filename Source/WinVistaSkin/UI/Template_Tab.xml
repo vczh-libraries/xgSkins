@@ -3,6 +3,8 @@
     <Instance ref.CodeBehind="false" ref.Class="winvistaskin::TabHeaderButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
       <ref.Members>
         <![CDATA[
+          prop Vertical: bool = false {}
+          prop DecorationAxis: GuiAxis^ = new GuiAxis^(AxisDirection::RightDown) {}
           prop Highlighted: bool = false {}
           prop SelectedRibbonTab: bool = false {}
           prop TabFocused: bool = false {}
@@ -10,19 +12,21 @@
         ]]>
       </ref.Members>
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Vertical-bind>((cast (TabPage*) self.Context).OwnerTab.TypedControlTemplateObject(false).TabOrder ?? TabPageOrder::Unknown) == TabPageOrder::TopToBottom</att.Vertical-bind>
+        <att.DecorationAxis-bind>new GuiAxis^(self.Vertical ? AxisDirection::DownRight : AxisDirection::RightDown)</att.DecorationAxis-bind>
         <att.Highlighted-bind>(cast (RibbonTabPage*) self.Context).Highlighted ?? false</att.Highlighted-bind>
-        <att.SelectedRibbonTab-bind>self.Selected and (self.Context is RibbonTabPage*)</att.SelectedRibbonTab-bind>
+        <att.SelectedRibbonTab-bind>self.Selected and not self.Vertical and (self.Context is RibbonTabPage*)</att.SelectedRibbonTab-bind>
         <att.TabFocused-bind>(cast (TabPage*) self.Context).OwnerTab.Focused ?? false</att.TabFocused-bind>
         <att.Colors-bind>
           self.Selected ? vistaColors.TabSelected :
           self.VisuallyEnabled and self.State != ButtonState::Normal ? vistaColors.TabHovered :
-          (self.Context is RibbonTabPage*) ? vistaColors.RibbonButtonNormal : vistaColors.TabNormal
+          not self.Vertical and (self.Context is RibbonTabPage*) ? vistaColors.RibbonButtonNormal : vistaColors.TabNormal
         </att.Colors-bind>
         <SolidBorder Color-bind="self.SelectedRibbonTab ? vistaColors.RibbonBorder : self.Colors.Border"/>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:0">
+        <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:1 top:1 right:1 bottom:0})">
           <SolidBackground Color-bind="self.SelectedRibbonTab ? vistaColors.RibbonBackgroundTop : self.Colors.Background"/>
         </Bounds>
-        <Table AlignmentToParent="left:2 top:2 right:2 bottom:0">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:0" Visible-bind="not self.Vertical">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
@@ -31,14 +35,26 @@
           <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/></Cell>
           <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.Colors.G3" Color2-bind="self.SelectedRibbonTab ? vistaColors.RibbonBackgroundTop : self.Colors.G4"/></Cell>
         </Table>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:-1" PreferredMinSize="x:0 y:2" Visible-bind="self.Highlighted">
+        <Table AlignmentToParent="left:2 top:2 right:0 bottom:2" Visible-bind="self.Vertical">
+          <att.Rows><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Rows>
+          <att.Columns>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+            <CellOption>composeType:Percentage percentage:0.5</CellOption>
+          </att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Horizontal" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/></Cell>
+          <Cell Site="row:0 column:1"><GradientBackground Direction="Horizontal" Color1-bind="self.Colors.G3" Color2-bind="self.Colors.G4"/></Cell>
+        </Table>
+        <SideAligned Direction="Right" MaxLength="1" Visible-bind="self.Vertical and not self.Selected">
+          <SolidBackground Color-eval="vistaColors.TabNormal.Border"/>
+        </SideAligned>
+        <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:1 top:1 right:1 bottom:-1})" PreferredMinSize-bind="self.DecorationAxis.VirtualSizeToRealSize({x:0 y:2})" Visible-bind="self.Highlighted">
           <SolidBackground Color-bind="self.Selected ? vistaColors.TabHighlightedSelected : self.State != ButtonState::Normal ? vistaColors.TabHighlightedHovered : vistaColors.TabHighlightedBackground"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Selected and self.TabFocused">
           <FocusRectangle/>
         </Bounds>
         <Bounds AlignmentToParent="left:6 top:3 right:6 bottom:3">
-          <SolidLabel Color-bind="self.VisuallyEnabled ? self.Colors.Text : vistaColors.TextDisabled" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <SolidLabel Color-bind="self.VisuallyEnabled ? self.Colors.Text : vistaColors.TextDisabled" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment-bind="self.Vertical ? Alignment::Right : Alignment::Center" VerticalAlignment="Center"/>
         </Bounds>
       </SelectableButtonTemplate>
     </Instance>
@@ -49,11 +65,12 @@
       <ref.Parameter Name="CurrentTabPage" Class="presentation::controls::GuiTabPage"/>
       <ref.Members>
         <![CDATA[
+          prop Vertical: bool = false {}
           prop Commands : ITabCommandExecutor* = null {}
         ]]>
       </ref.Members>
       <ControlTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
-        <SolidBackground Color-eval="(CurrentTabPage is RibbonTabPage*) ? vistaColors.RibbonTabStrip : vistaColors.GeneralBackground"/>
+        <SolidBackground Color-bind="not self.Vertical and (CurrentTabPage is RibbonTabPage*) ? vistaColors.RibbonTabStrip : vistaColors.GeneralBackground"/>
         <CheckBox ControlTemplate="winvistaskin::TabHeaderButtonTemplate" AutoFocus="false" AutoSelection="false">
           <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
           <att.Context-ref>CurrentTabPage</att.Context-ref>
@@ -170,6 +187,73 @@
       </RibbonTabTemplate>
     </Instance>
   </Instance>
+
+  <Instance name="VTabTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::VTabTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        func UpdateHeaderMargin(stackItem : GuiStackItemComposition*) : void
+        {
+          var item = cast (TabHeaderTemplate*) stackItem.Children[0];
+          stackItem.ExtraMargin = item.CurrentTabPage == self.SelectedTabPage
+            ? {left:2 top:0 right:0 bottom:0}
+            : {left:0 top:0 right:0 bottom:0};
+        }
+      ]]></ref.Members>
+      <RibbonTabTemplate ref.Name="self" TabOrder="TopToBottom" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.BeforeHeadersContainer-ref>beforeHeadersContainer</att.BeforeHeadersContainer-ref>
+        <att.AfterHeadersContainer-ref>afterHeadersContainer</att.AfterHeadersContainer-ref>
+        <ev.SelectedTabPageChanged-eval><![CDATA[{
+          for (stackItem in header.StackItems)
+          {
+            self.UpdateHeaderMargin(stackItem);
+          }
+        }]]></ev.SelectedTabPageChanged-eval>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Rows>
+          <att.Columns>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+          <Cell Site="row:0 column:0">
+            <SideAligned Direction="Right" MaxLength="1">
+              <SolidBackground Color-eval="vistaColors.TabNormal.Border"/>
+            </SideAligned>
+            <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <att.Rows>
+                <CellOption>composeType:MinSize</CellOption>
+                <CellOption>composeType:MinSize</CellOption>
+                <CellOption>composeType:Percentage percentage:1.0</CellOption>
+              </att.Rows>
+              <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+              <Cell ref.Name="beforeHeadersContainer" Site="row:0 column:0"/>
+              <Cell Site="row:1 column:0">
+                <RepeatStack ref.Name="header" Direction="Vertical" AlignmentToParent="left:0 top:0 right:0 bottom:0" ExtraMargin="left:2 top:0 right:0 bottom:0">
+                  <att.ItemTemplate>winvistaskin::TabHeaderTemplate</att.ItemTemplate>
+                  <att.ItemSource-bind>self.TabPages</att.ItemSource-bind>
+                  <ev.ItemInserted-eval><![CDATA[{
+                    var stackItem = header.StackItems[arguments.itemIndex];
+                    var item = cast (TabHeaderTemplate*) stackItem.Children[0];
+                    item.Commands = self.Commands;
+                    item.Vertical = true;
+                    self.UpdateHeaderMargin(stackItem);
+                  }]]></ev.ItemInserted-eval>
+                </RepeatStack>
+              </Cell>
+              <Cell ref.Name="afterHeadersContainer" Site="row:2 column:0"/>
+            </Table>
+          </Cell>
+          <Cell Site="row:0 column:1">
+            <SolidBorder Color-eval="vistaColors.TabNormal.Border"/>
+            <Bounds AlignmentToParent-bind="{left:(self.SelectedTabPage is null ? 1 : 0) top:1 right:1 bottom:1}">
+              <SolidBackground Color-eval="vistaColors.TabSelected.Background"/>
+            </Bounds>
+            <Bounds ref.Name="container" AlignmentToParent="left:3 top:1 right:1 bottom:1"/>
+          </Cell>
+        </Table>
+      </RibbonTabTemplate>
+    </Instance>
+  </Instance>
+
   <Instance name="RibbonTabTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="winvistaskin::RibbonTabTemplate" xmlns:x="winvistaskin::*">
       <x:TabTemplate IsRibbon="true"/>

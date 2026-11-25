@@ -23,9 +23,10 @@ Run the full showcase in Direct2D hosted mode for both `Win11Skin` and `Win11Ski
 - win11skin::DocumentTextBoxTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Layout / Easy Layout.
 - win11skin::DocumentViewerTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Control / Embedded Controls.
 - win11skin::EditorBorderTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Layout / Easy Layout, List / TextList, List / ListView, List / TreeView.
-- win11skin::TabHeaderButtonTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
-- win11skin::TabHeaderTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- win11skin::TabHeaderButtonTemplate: List / TextList, Layout, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- win11skin::TabHeaderTemplate: List / TextList, Layout, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
 - win11skin::TabTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- win11skin::VTabTemplate: Layout / Repeat, Responsive, Easy Layout, Easy Layout (Table).
 - win11skin::RibbonTabTemplate: Control / Document Editor (Ribbon).
 - win11skin::ItemBackgroundTemplate: List / TextList, List / ListView, List / TreeView, List / BindableDataGrid, Control / Document Editor (Ribbon).
 - win11skin::TextListTemplate: List / TextList, Refresh List / TextList, Refresh List / BindableTextList, Layout / Easy Layout.

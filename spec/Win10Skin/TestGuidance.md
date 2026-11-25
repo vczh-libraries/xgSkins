@@ -23,9 +23,10 @@ In a fresh FullControlTest /D2D /Hosted session open Window Manager and choose W
 - win10skin::DocumentTextBoxTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Layout / Easy Layout.
 - win10skin::DocumentViewerTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Control / Embedded Controls.
 - win10skin::EditorBorderTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Layout / Easy Layout, List / TextList, List / ListView, List / TreeView.
-- win10skin::TabHeaderButtonTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
-- win10skin::TabHeaderTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- win10skin::TabHeaderButtonTemplate: List / TextList, Layout, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- win10skin::TabHeaderTemplate: List / TextList, Layout, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
 - win10skin::TabTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- win10skin::VTabTemplate: Layout / Repeat, Responsive, Easy Layout, Easy Layout (Table).
 - win10skin::RibbonTabTemplate: Control / Document Editor (Ribbon).
 - win10skin::ItemBackgroundTemplate: List / TextList, List / ListView, List / TreeView, List / BindableDataGrid, Control / Document Editor (Ribbon).
 - win10skin::TextListTemplate: List / TextList, Refresh List / TextList, Refresh List / BindableTextList, Layout / Easy Layout.

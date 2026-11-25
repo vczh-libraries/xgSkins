@@ -3,41 +3,45 @@
     <Instance ref.CodeBehind="false" ref.Class="winxpskin::TabHeaderButtonTemplate" ref.Styles="res://WinXPSkin/Style">
       <ref.Members>
         <![CDATA[
+          prop Vertical: bool = false {}
+          prop DecorationAxis: GuiAxis^ = new GuiAxis^(AxisDirection::RightDown) {}
           prop Highlighted: bool = false {}
           prop TabFocused: bool = false {}
           prop Colors : ButtonColors = winxpColors.TabNormal {}
         ]]>
       </ref.Members>
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Vertical-bind>((cast (TabPage*) self.Context).OwnerTab.TypedControlTemplateObject(false).TabOrder ?? TabPageOrder::Unknown) == TabPageOrder::TopToBottom</att.Vertical-bind>
+        <att.DecorationAxis-bind>new GuiAxis^(self.Vertical ? AxisDirection::DownRight : AxisDirection::RightDown)</att.DecorationAxis-bind>
         <att.Highlighted-bind>(cast (RibbonTabPage*) self.Context).Highlighted ?? false</att.Highlighted-bind>
         <att.TabFocused-bind>(cast (TabPage*) self.Context).OwnerTab.Focused ?? false</att.TabFocused-bind>
         <att.Colors-bind>not self.VisuallyEnabled ? winxpColors.TabDisabled : self.Selected ? winxpColors.TabSelected : self.State != ButtonState::Normal ? winxpColors.TabHovered : winxpColors.TabNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:2 top:1 right:2 bottom:-1" PreferredMinSize="y:1">
-          <SolidBackground Color-bind="self.Context is RibbonTabPage* ? winxpColors.TabSelected.G1 : winxpColors.GeneralBackground"/>
+        <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:2 top:1 right:2 bottom:-1})" PreferredMinSize-bind="self.DecorationAxis.VirtualSizeToRealSize({y:1})">
+          <SolidBackground Color-bind="not self.Vertical and (self.Context is RibbonTabPage*) ? winxpColors.TabSelected.G1 : winxpColors.GeneralBackground"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:0">
-          <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
+        <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:1 top:1 right:1 bottom:0})">
+          <GradientBackground Direction-bind="self.Vertical ? GuiGradientBackgroundElement::Direction::Horizontal : GuiGradientBackgroundElement::Direction::Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:-1 right:1 bottom:0" PreferredMinSize="x:0 y:3">
+        <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:1 top:-1 right:1 bottom:0})" PreferredMinSize-bind="self.DecorationAxis.VirtualSizeToRealSize({x:0 y:3})">
           <SolidBackground Color-bind="self.Colors.G2"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:2 top:0 right:2 bottom:-1" PreferredMinSize="x:0 y:3" Visible-bind="self.VisuallyEnabled and (self.Selected or self.State != ButtonState::Normal)">
+        <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:2 top:0 right:2 bottom:-1})" PreferredMinSize-bind="self.DecorationAxis.VirtualSizeToRealSize({x:0 y:3})" Visible-bind="self.VisuallyEnabled and (self.Selected or self.State != ButtonState::Normal)">
           <SolidBackground Color-eval="winxpColors.TabHotBorder"/>
-          <Bounds AlignmentToParent="left:0 top:1 right:0 bottom:0">
+          <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:0 top:1 right:0 bottom:0})">
             <SolidBackground Color-eval="winxpColors.TabHotAccent"/>
           </Bounds>
         </Bounds>
-        <Bounds AlignmentToParent="left:2 top:3 right:2 bottom:-1" PreferredMinSize="x:0 y:2" Visible-bind="self.Highlighted">
+        <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:2 top:3 right:2 bottom:-1})" PreferredMinSize-bind="self.DecorationAxis.VirtualSizeToRealSize({x:0 y:2})" Visible-bind="self.Highlighted">
           <SolidBackground Color-bind="self.Selected ? winxpColors.TabHighlightedSelected : self.State != ButtonState::Normal ? winxpColors.TabHighlightedHovered : winxpColors.TabHighlightedBackground"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Selected and self.TabFocused">
           <FocusRectangle/>
         </Bounds>
         <Bounds AlignmentToParent="left:6 top:3 right:6 bottom:3">
-          <SolidLabel Color-bind="self.VisuallyEnabled ? self.Colors.Text : winxpColors.TextDisabled" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <SolidLabel Color-bind="self.VisuallyEnabled ? self.Colors.Text : winxpColors.TextDisabled" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment-bind="self.Vertical ? Alignment::Right : Alignment::Center" VerticalAlignment="Center"/>
         </Bounds>
       </SelectableButtonTemplate>
     </Instance>
@@ -171,6 +175,75 @@
       </RibbonTabTemplate>
     </Instance>
   </Instance>
+
+  <Instance name="VTabTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winxpskin::VTabTemplate" ref.Styles="res://WinXPSkin/Style">
+      <ref.Members><![CDATA[
+        func UpdateHeaderMargin(stackItem : GuiStackItemComposition*) : void
+        {
+          var item = cast (TabHeaderTemplate*) stackItem.Children[0];
+          stackItem.ExtraMargin = item.CurrentTabPage == self.SelectedTabPage
+            ? {left:2 top:0 right:0 bottom:0}
+            : {left:0 top:0 right:0 bottom:0};
+        }
+      ]]></ref.Members>
+      <RibbonTabTemplate ref.Name="self" TabOrder="TopToBottom" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.BeforeHeadersContainer-ref>beforeHeadersContainer</att.BeforeHeadersContainer-ref>
+        <att.AfterHeadersContainer-ref>afterHeadersContainer</att.AfterHeadersContainer-ref>
+        <ev.SelectedTabPageChanged-eval><![CDATA[{
+          for (stackItem in header.StackItems)
+          {
+            self.UpdateHeaderMargin(stackItem);
+          }
+        }]]></ev.SelectedTabPageChanged-eval>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Rows>
+          <att.Columns>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Absolute absolute:2</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+          <Cell Site="row:0 column:0">
+            <SideAligned Direction="Right" MaxLength="1">
+              <SolidBackground Color-eval="winxpColors.TabNormal.Border"/>
+            </SideAligned>
+            <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <att.Rows>
+                <CellOption>composeType:MinSize</CellOption>
+                <CellOption>composeType:MinSize</CellOption>
+                <CellOption>composeType:Percentage percentage:1.0</CellOption>
+              </att.Rows>
+              <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+              <Cell ref.Name="beforeHeadersContainer" Site="row:0 column:0"/>
+              <Cell Site="row:1 column:0">
+                <RepeatStack ref.Name="header" Direction="Vertical" AlignmentToParent="left:0 top:0 right:0 bottom:0" ExtraMargin="left:2 top:0 right:0 bottom:0">
+                  <att.ItemTemplate>winxpskin::TabHeaderTemplate</att.ItemTemplate>
+                  <att.ItemSource-bind>self.TabPages</att.ItemSource-bind>
+                  <ev.ItemInserted-eval><![CDATA[{
+                    var stackItem = header.StackItems[arguments.itemIndex];
+                    var item = cast (TabHeaderTemplate*) stackItem.Children[0];
+                    item.Commands = self.Commands;
+                    self.UpdateHeaderMargin(stackItem);
+                  }]]></ev.ItemInserted-eval>
+                </RepeatStack>
+              </Cell>
+              <Cell ref.Name="afterHeadersContainer" Site="row:2 column:0"/>
+            </Table>
+          </Cell>
+          <Cell Site="row:0 column:1">
+            <SolidBackground Color-eval="winxpColors.GeneralBackground"/>
+          </Cell>
+          <Cell Site="row:0 column:2">
+            <SolidBorder Color-eval="winxpColors.TabNormal.Border"/>
+            <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1">
+              <GradientBackground Direction="Horizontal" Color1-eval="winxpColors.TabSelected.G1" Color2-eval="winxpColors.TabContentBottom"/>
+            </Bounds>
+          </Cell>
+        </Table>
+      </RibbonTabTemplate>
+    </Instance>
+  </Instance>
+
   <Instance name="RibbonTabTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="winxpskin::RibbonTabTemplate" xmlns:x="winxpskin::*">
       <x:TabTemplate IsRibbon="true"/>

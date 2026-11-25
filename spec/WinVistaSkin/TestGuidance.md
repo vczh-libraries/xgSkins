@@ -39,9 +39,10 @@ changes; creating the skin requires the full showcase verification described in
 - winvistaskin::DocumentTextBoxTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Layout / Easy Layout.
 - winvistaskin::DocumentViewerTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Control / Embedded Controls.
 - winvistaskin::EditorBorderTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Layout / Easy Layout, List / TextList, List / ListView, List / TreeView.
-- winvistaskin::TabHeaderButtonTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
-- winvistaskin::TabHeaderTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- winvistaskin::TabHeaderButtonTemplate: List / TextList, Layout, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- winvistaskin::TabHeaderTemplate: List / TextList, Layout, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
 - winvistaskin::TabTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- winvistaskin::VTabTemplate: Layout / Repeat, Responsive, Easy Layout, Easy Layout (Table).
 - winvistaskin::RibbonTabTemplate: Control / Document Editor (Ribbon).
 - winvistaskin::ItemBackgroundTemplate: List / TextList, List / ListView, List / TreeView, List / BindableDataGrid, Control / Document Editor (Ribbon).
 - winvistaskin::TextListTemplate: List / TextList, Refresh List / TextList, Refresh List / BindableTextList, Layout / Easy Layout.

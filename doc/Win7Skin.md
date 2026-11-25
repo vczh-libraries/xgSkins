@@ -38,10 +38,10 @@ user. Start `FullControlTest` normally, then select `Win7Skin` in
 `Window Manager / Color Theme`. Startup remains DarkSkin. See
 [FullControlTest.md](FullControlTest.md) for building, launch modes and automation.
 
-The showcase supplies its own vertical tabs, swipe-to-delete rows and raw
-text elements. Some of these use fixed DarkSkin colors even when Win7Skin is
-selected. For example, the date readouts keep the white foreground specified
-by the showcase. [Showcase text colors](../suggestions/FullControlTest/ShowcaseSkinColors.md).
+Use `<VTab/>` for a vertical tab control. The showcase's Layout page uses
+`<RibbonTab ControlThemeName="VTab">` so it can place a button below the headers.
+The showcase supplies its own swipe-to-delete rows and date readouts. Their
+fixed colors can be hard to read under Win7Skin. [Showcase text colors](../suggestions/FullControlTest/ShowcaseSkinColors.md).
 
 ## Resource organization
 

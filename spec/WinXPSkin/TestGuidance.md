@@ -37,9 +37,10 @@ changes; creating the skin requires the full showcase verification described in
 - winxpskin::DocumentTextBoxTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Layout / Easy Layout.
 - winxpskin::DocumentViewerTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Control / Embedded Controls.
 - winxpskin::EditorBorderTemplate: Control / TextBox / TextBox, Control / TextBox / Document, Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Layout / Easy Layout, List / TextList, List / ListView, List / TreeView.
-- winxpskin::TabHeaderButtonTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
-- winxpskin::TabHeaderTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- winxpskin::TabHeaderButtonTemplate: List / TextList, Layout, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- winxpskin::TabHeaderTemplate: List / TextList, Layout, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
 - winxpskin::TabTemplate: List / TextList, Control / TextBox, Control / Document Editor (Ribbon), Misc / Animation.
+- winxpskin::VTabTemplate: Layout / Repeat, Responsive, Easy Layout, Easy Layout (Table).
 - winxpskin::RibbonTabTemplate: Control / Document Editor (Ribbon).
 - winxpskin::ItemBackgroundTemplate: List / TextList, List / ListView, List / TreeView, List / BindableDataGrid, Control / Document Editor (Ribbon).
 - winxpskin::TextListTemplate: List / TextList, Refresh List / TextList, Refresh List / BindableTextList, Layout / Easy Layout.

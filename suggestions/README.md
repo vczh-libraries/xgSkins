@@ -18,13 +18,14 @@
   - [A selected calendar day keeps its month’s text color when the button changes to its selection color.](GacUI/SelectedCalendarDayForeground.md)
 - **TO BE TRIAGED**
   - [Selecting a list or tree row changes its background while its label keeps the normal text color.](GacUI/SelectedItemForeground.md)
+  - [GDI draws the Windows 11 tab hover tint as solid black or white.](GacUI/GdiTabHoverOpacity.md)
 
 ## FullControlTest
 
 ### Showcase controls
 
 - [Black editor command icons and blue Website links are hard to see on dark backgrounds.](FullControlTest/EditorAndGridContrast.md)
-- [On light skins, date readouts, the ribbon Search prompt, vertical-tab content and swipe rows can be hard to read.](FullControlTest/ShowcaseSkinColors.md)
+- [On light skins, date readouts and swipe rows can be hard to read.](FullControlTest/ShowcaseSkinColors.md)
 - [Pressing Ctrl+A in the ribbon Search field selects the central document.](FullControlTest/SingleLineShortcutRouting.md)
 - [The Style gallery popup exposes an unnamed UI Automation toggle with no command to reapply the selected style.](FullControlTest/GalleryItemActivation.md)
 - [The Repeat page’s 20-pixel cells clipped one pixel from the original 21-pixel XP tracker thumbs.](FullControlTest/TrackerFixtureSize.md)

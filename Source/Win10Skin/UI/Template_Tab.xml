@@ -3,6 +3,8 @@
     <Instance ref.CodeBehind="false" ref.Class="win10skin::TabHeaderButtonTemplate" ref.Styles="res://Win10Skin/Style">
       <ref.Members>
         <![CDATA[
+          prop Vertical: bool = false {}
+          prop DecorationAxis: GuiAxis^ = new GuiAxis^(AxisDirection::RightDown) {}
           prop Highlighted: bool = false {}
           prop RibbonHeader: bool = false {}
           prop TabFocused: bool = false {}
@@ -10,24 +12,26 @@
         ]]>
       </ref.Members>
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Vertical-bind>((cast (TabPage*) self.Context).OwnerTab.TypedControlTemplateObject(false).TabOrder ?? TabPageOrder::Unknown) == TabPageOrder::TopToBottom</att.Vertical-bind>
+        <att.DecorationAxis-bind>new GuiAxis^(self.Vertical ? AxisDirection::DownRight : AxisDirection::RightDown)</att.DecorationAxis-bind>
         <att.Highlighted-bind>(cast (RibbonTabPage*) self.Context).Highlighted ?? false</att.Highlighted-bind>
-        <att.RibbonHeader-bind>self.Context is RibbonTabPage*</att.RibbonHeader-bind>
+        <att.RibbonHeader-bind>not self.Vertical and (self.Context is RibbonTabPage*)</att.RibbonHeader-bind>
         <att.TabFocused-bind>(cast (TabPage*) self.Context).OwnerTab.Focused ?? false</att.TabFocused-bind>
         <att.Colors-bind>self.VisuallyEnabled and self.State != ButtonState::Normal ? win10Colors.TabHovered : self.RibbonHeader and not self.Selected ? win10Colors.CommandNormal : win10Colors.TabNormal</att.Colors-bind>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
           <SolidBackground Color-bind="self.RibbonHeader and self.Selected ? win10Colors.RibbonBorder : self.Colors.Border"/>
-          <Bounds AlignmentToParent-bind="self.Selected ? {left:1 top:1 right:1 bottom:0} : {left:1 top:1 right:1 bottom:1}">
+          <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:1 top:1 right:1 bottom:(self.Selected ? 0 : 1)})">
             <SolidBackground Color-bind="self.Selected ? (self.RibbonHeader ? win10Colors.RibbonSurface : win10Colors.Page) : self.Colors.Fill"/>
           </Bounds>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:-1" PreferredMinSize="x:0 y:2" Visible-bind="self.Highlighted">
+        <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:1 top:1 right:1 bottom:-1})" PreferredMinSize-bind="self.DecorationAxis.VirtualSizeToRealSize({x:0 y:2})" Visible-bind="self.Highlighted">
           <SolidBackground Color-bind="self.Selected ? win10Colors.Accent : self.State != ButtonState::Normal ? win10Colors.Accent : win10Colors.ItemSelected.Fill"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Selected and self.TabFocused">
           <FocusRectangle/>
         </Bounds>
         <Bounds AlignmentToParent="left:6 top:3 right:6 bottom:3">
-          <SolidLabel Color-bind="self.VisuallyEnabled ? self.Colors.Text : win10Colors.DisabledText" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <SolidLabel Color-bind="self.VisuallyEnabled ? self.Colors.Text : win10Colors.DisabledText" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment-bind="self.Vertical ? Alignment::Right : Alignment::Center" VerticalAlignment="Center"/>
         </Bounds>
       </SelectableButtonTemplate>
     </Instance>
@@ -38,22 +42,23 @@
       <ref.Parameter Name="CurrentTabPage" Class="presentation::controls::GuiTabPage"/>
       <ref.Members>
         <![CDATA[
+          prop Vertical: bool = false {}
           prop Commands : ITabCommandExecutor* = null {}
           prop FlowItem : GuiFlowItemComposition* = null {}
         ]]>
       </ref.Members>
       <ControlTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
-        <!-- The page divider runs behind the bottom row of translucent headers. -->
+        <!-- Leave the page divider visible behind translucent headers at the page edge. -->
         <Bounds>
           <att.AlignmentToParent-bind><![CDATA[
             let item = self.FlowItem in (
-              {left:0; top:0; right:0; bottom:(
+              {left:0; top:0; right:(self.Vertical ? 1 : 0); bottom:(
                 item is not null and item.Parent is not null and
                 item.CachedBounds.y2 == item.Parent.CachedBounds.y2 - item.Parent.CachedBounds.y1 ? 1 : 0
               );} of Margin
             )
           ]]></att.AlignmentToParent-bind>
-          <SolidBackground Color-eval="(CurrentTabPage is RibbonTabPage*) ? win10Colors.Page : win10Colors.WindowSurface"/>
+          <SolidBackground Color-bind="not self.Vertical and (CurrentTabPage is RibbonTabPage*) ? win10Colors.Page : win10Colors.WindowSurface"/>
         </Bounds>
         <CheckBox ControlTemplate="win10skin::TabHeaderButtonTemplate" AutoFocus="false" AutoSelection="false">
           <att.BoundsComposition-set AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
@@ -173,6 +178,73 @@
       </RibbonTabTemplate>
     </Instance>
   </Instance>
+
+  <Instance name="VTabTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win10skin::VTabTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Members><![CDATA[
+        func UpdateHeaderMargin(stackItem : GuiStackItemComposition*) : void
+        {
+          var item = cast (TabHeaderTemplate*) stackItem.Children[0];
+          stackItem.ExtraMargin = item.CurrentTabPage == self.SelectedTabPage
+            ? {left:2 top:0 right:0 bottom:0}
+            : {left:0 top:0 right:0 bottom:0};
+        }
+      ]]></ref.Members>
+      <RibbonTabTemplate ref.Name="self" TabOrder="TopToBottom" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.BeforeHeadersContainer-ref>beforeHeadersContainer</att.BeforeHeadersContainer-ref>
+        <att.AfterHeadersContainer-ref>afterHeadersContainer</att.AfterHeadersContainer-ref>
+        <ev.SelectedTabPageChanged-eval><![CDATA[{
+          for (stackItem in header.StackItems)
+          {
+            self.UpdateHeaderMargin(stackItem);
+          }
+        }]]></ev.SelectedTabPageChanged-eval>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Rows>
+          <att.Columns>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+          <Cell Site="row:0 column:0">
+            <SideAligned Direction="Right" MaxLength="1">
+              <SolidBackground Color-eval="win10Colors.Divider"/>
+            </SideAligned>
+            <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <att.Rows>
+                <CellOption>composeType:MinSize</CellOption>
+                <CellOption>composeType:MinSize</CellOption>
+                <CellOption>composeType:Percentage percentage:1.0</CellOption>
+              </att.Rows>
+              <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+              <Cell ref.Name="beforeHeadersContainer" Site="row:0 column:0"/>
+              <Cell Site="row:1 column:0">
+                <RepeatStack ref.Name="header" Direction="Vertical" AlignmentToParent="left:0 top:0 right:0 bottom:0" ExtraMargin="left:2 top:0 right:0 bottom:0">
+                  <att.ItemTemplate>win10skin::TabHeaderTemplate</att.ItemTemplate>
+                  <att.ItemSource-bind>self.TabPages</att.ItemSource-bind>
+                  <ev.ItemInserted-eval><![CDATA[{
+                    var stackItem = header.StackItems[arguments.itemIndex];
+                    var item = cast (TabHeaderTemplate*) stackItem.Children[0];
+                    item.Commands = self.Commands;
+                    item.Vertical = true;
+                    self.UpdateHeaderMargin(stackItem);
+                  }]]></ev.ItemInserted-eval>
+                </RepeatStack>
+              </Cell>
+              <Cell ref.Name="afterHeadersContainer" Site="row:2 column:0"/>
+            </Table>
+          </Cell>
+          <Cell Site="row:0 column:1">
+            <SolidBorder Color-eval="win10Colors.Divider"/>
+            <Bounds AlignmentToParent-bind="{left:(self.SelectedTabPage is null ? 1 : 0) top:1 right:1 bottom:1}">
+              <SolidBackground Color-eval="win10Colors.Page"/>
+            </Bounds>
+            <Bounds ref.Name="container" AlignmentToParent="left:3 top:1 right:1 bottom:1"/>
+          </Cell>
+        </Table>
+      </RibbonTabTemplate>
+    </Instance>
+  </Instance>
+
   <Instance name="RibbonTabTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win10skin::RibbonTabTemplate" xmlns:x="win10skin::*">
       <x:TabTemplate IsRibbon="true"/>

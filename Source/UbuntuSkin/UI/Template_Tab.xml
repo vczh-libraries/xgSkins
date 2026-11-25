@@ -3,32 +3,36 @@
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::TabHeaderButtonTemplate" ref.Styles="res://UbuntuSkin/Style">
       <ref.Members>
         <![CDATA[
+          prop Vertical: bool = false {}
+          prop DecorationAxis: GuiAxis^ = new GuiAxis^(AxisDirection::RightDown) {}
           prop Highlighted: bool = false {}
           prop TabFocused: bool = false {}
           prop Colors : ButtonColors = ubuntuColors.TabNormal {}
         ]]>
       </ref.Members>
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
+        <att.Vertical-bind>((cast (TabPage*) self.Context).OwnerTab.TypedControlTemplateObject(false).TabOrder ?? TabPageOrder::Unknown) == TabPageOrder::TopToBottom</att.Vertical-bind>
+        <att.DecorationAxis-bind>new GuiAxis^(self.Vertical ? AxisDirection::DownRight : AxisDirection::RightDown)</att.DecorationAxis-bind>
         <att.Highlighted-bind>(cast (RibbonTabPage*) self.Context).Highlighted ?? false</att.Highlighted-bind>
         <att.TabFocused-bind>(cast (TabPage*) self.Context).OwnerTab.Focused ?? false</att.TabFocused-bind>
         <att.Colors-bind>self.Selected ? ubuntuColors.TabSelected : self.VisuallyEnabled and self.State != ButtonState::Normal ? ubuntuColors.TabHovered : ubuntuColors.TabNormal</att.Colors-bind>
         <SolidBackground Color-bind="self.Colors.G1"/>
-        <Bounds AlignmentToParent="left:0 top:-1 right:0 bottom:0" PreferredMinSize-bind="{x:0 y:(self.Selected or self.Highlighted or (self.VisuallyEnabled and self.State != ButtonState::Normal) ? 3 : 1)}">
+        <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:0 top:-1 right:0 bottom:0})" PreferredMinSize-bind="self.DecorationAxis.VirtualSizeToRealSize({x:0 y:(self.Selected or self.Highlighted or (self.VisuallyEnabled and self.State != ButtonState::Normal) ? 3 : 1)})">
           <SolidBackground Color-bind="not self.VisuallyEnabled ? ubuntuColors.DisabledInk : self.State == ButtonState::Pressed ? ubuntuColors.AccentPressed : self.Selected ? self.Colors.Bullet : self.Highlighted ? ubuntuColors.Focus : self.Colors.Border"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:3" Visible-bind="self.Selected and self.TabFocused">
-          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:-1" PreferredMinSize="y:1">
+        <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:1 top:1 right:1 bottom:3})" Visible-bind="self.Selected and self.TabFocused">
+          <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:0 top:0 right:0 bottom:-1})" PreferredMinSize-bind="self.DecorationAxis.VirtualSizeToRealSize({y:1})">
             <SolidBackground Color-bind="self.Colors.Border"/>
           </Bounds>
-          <Bounds AlignmentToParent="left:0 top:0 right:-1 bottom:0" PreferredMinSize="x:1">
+          <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:0 top:0 right:-1 bottom:0})" PreferredMinSize-bind="self.DecorationAxis.VirtualSizeToRealSize({x:1})">
             <SolidBackground Color-bind="self.Colors.Border"/>
           </Bounds>
-          <Bounds AlignmentToParent="left:-1 top:0 right:0 bottom:0" PreferredMinSize="x:1">
+          <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:-1 top:0 right:0 bottom:0})" PreferredMinSize-bind="self.DecorationAxis.VirtualSizeToRealSize({x:1})">
             <SolidBackground Color-bind="self.Colors.Border"/>
           </Bounds>
         </Bounds>
         <Bounds AlignmentToParent="left:10 top:4 right:10 bottom:4">
-          <SolidLabel Color-bind="self.VisuallyEnabled ? self.Colors.Text : ubuntuColors.DisabledInk" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+          <SolidLabel Color-bind="self.VisuallyEnabled ? self.Colors.Text : ubuntuColors.DisabledInk" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment-bind="self.Vertical ? Alignment::Right : Alignment::Center" VerticalAlignment="Center"/>
         </Bounds>
       </SelectableButtonTemplate>
     </Instance>
@@ -127,6 +131,55 @@
       </RibbonTabTemplate>
     </Instance>
   </Instance>
+
+  <Instance name="VTabTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::VTabTemplate" ref.Styles="res://UbuntuSkin/Style">
+      <RibbonTabTemplate ref.Name="self" TabOrder="TopToBottom" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.BeforeHeadersContainer-ref>beforeHeadersContainer</att.BeforeHeadersContainer-ref>
+        <att.AfterHeadersContainer-ref>afterHeadersContainer</att.AfterHeadersContainer-ref>
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Rows>
+          <att.Columns>
+            <CellOption>composeType:MinSize</CellOption>
+            <CellOption>composeType:Percentage percentage:1.0</CellOption>
+          </att.Columns>
+          <Cell Site="row:0 column:0">
+            <SideAligned Direction="Right" MaxLength="1">
+              <SolidBackground Color-eval="ubuntuColors.TabNormal.Border"/>
+            </SideAligned>
+            <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <att.Rows>
+                <CellOption>composeType:MinSize</CellOption>
+                <CellOption>composeType:MinSize</CellOption>
+                <CellOption>composeType:Percentage percentage:1.0</CellOption>
+              </att.Rows>
+              <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
+              <Cell ref.Name="beforeHeadersContainer" Site="row:0 column:0"/>
+              <Cell Site="row:1 column:0">
+                <RepeatStack ref.Name="header" Direction="Vertical" AlignmentToParent="left:0 top:0 right:0 bottom:0">
+                  <att.ItemTemplate>ubuntuskin::TabHeaderTemplate</att.ItemTemplate>
+                  <att.ItemSource-bind>self.TabPages</att.ItemSource-bind>
+                  <ev.ItemInserted-eval><![CDATA[{
+                    var stackItem = header.StackItems[arguments.itemIndex];
+                    var item = cast (TabHeaderTemplate*) stackItem.Children[0];
+                    item.Commands = self.Commands;
+                  }]]></ev.ItemInserted-eval>
+                </RepeatStack>
+              </Cell>
+              <Cell ref.Name="afterHeadersContainer" Site="row:2 column:0"/>
+            </Table>
+          </Cell>
+          <Cell Site="row:0 column:1">
+            <SolidBorder Color-eval="ubuntuColors.TabNormal.Border"/>
+            <Bounds ref.Name="container" AlignmentToParent="left:0 top:1 right:1 bottom:1">
+              <SolidBackground Color-eval="ubuntuColors.ViewBackground"/>
+            </Bounds>
+          </Cell>
+        </Table>
+      </RibbonTabTemplate>
+    </Instance>
+  </Instance>
+
   <Instance name="RibbonTabTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::RibbonTabTemplate" xmlns:x="ubuntuskin::*">
       <x:TabTemplate IsRibbon="true"/>
