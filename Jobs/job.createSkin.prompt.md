@@ -60,3 +60,8 @@ The top gap is 0, left/right/bottom gap is 5.
 When you make a window frame you should follow this rule,
 so that a `<ez:Layout AlignmentToParent="left:5 top:0 right:0 bottom:0"/>` will visually rendered as having a 5 pixel gap to all sides.
 But even when the inner 5 pixel of left/right/bottom looks like content area, they should still have border hittest when required by the window template.
+
+## Alpha Channel
+
+Since GDI does not support alpha channel at all (only threat 0 as skipping rendering and all other values like 255),
+so you should avoid using alpha channel on any color in the skin.
