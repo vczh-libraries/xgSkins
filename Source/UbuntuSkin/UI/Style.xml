@@ -1,17 +1,7 @@
 <Styles>
   <Style ref.Path="(//Bounds + //Table + //RepeatStack + //RepeatFlow)" MinSizeLimitation="LimitToElementAndChildren"/>
   <Style ref.Path="//*.generalBackground" Color-eval="ubuntuskin::ubuntuColors.WindowBackground"/>
-  <Style ref.Path="//*.windowBorder">
-    <att.Color-bind>
-      <![CDATA[
-        cast Color let margin = self.CustomFramePadding in (
-          (not self.Border) or (margin.left + margin.top + margin.right + margin.bottom == 0) ? ubuntuskin::ubuntuColors.Clear :
-          self.VisuallyEnabled and self.Activated ? ubuntuskin::ubuntuColors.FrameBorder :
-          ubuntuskin::ubuntuColors.Divider
-        )
-      ]]>
-    </att.Color-bind>
-  </Style>
+  <Style ref.Path="//*.windowBorder" Color-bind="self.VisuallyEnabled and self.Activated ? ubuntuskin::ubuntuColors.FrameBorder : ubuntuskin::ubuntuColors.Divider"/>
   <Style ref.Path="//*.windowTitle">
     <att.Color-bind>
       <![CDATA[
@@ -82,28 +72,7 @@
   <Style ref.Path="//*.ribbonGroupBorder" Color-eval="ubuntuskin::ubuntuColors.Divider"/>
   <Style ref.Path="//*.ribbonGroupTitle" Color-eval="ubuntuskin::ubuntuColors.SecondaryInk"/>
   <Style ref.Path="//*.ribbonMenuBorder" Color-eval="ubuntuskin::ubuntuColors.Border"/>
-  <Style ref.Path="//*.ribbonExpandableArrow">
-    <att.BorderColor-bind>
-      <![CDATA[
-        cast Color let state = self.State in (
-          not self.VisuallyEnabled ? ubuntuskin::ubuntuColors.SecondaryInk :
-          state == ButtonState::Pressed ? ubuntuskin::ubuntuColors.Ink :
-          state == ButtonState::Active ? ubuntuskin::ubuntuColors.SecondaryInk :
-          ubuntuskin::ubuntuColors.SecondaryInk
-        )
-      ]]>
-    </att.BorderColor-bind>
-    <att.BackgroundColor-bind>
-      <![CDATA[
-        cast Color let state = self.State in (
-          not self.VisuallyEnabled ? ubuntuskin::ubuntuColors.Clear :
-          state == ButtonState::Pressed ? ubuntuskin::ubuntuColors.Ink :
-          state == ButtonState::Active ? ubuntuskin::ubuntuColors.SecondaryInk :
-          ubuntuskin::ubuntuColors.Clear
-        )
-      ]]>
-    </att.BackgroundColor-bind>
-  </Style>
+  <Style ref.Path="//*.ribbonExpandableArrow" BorderColor-bind="self.VisuallyEnabled and self.State == ButtonState::Pressed ? ubuntuskin::ubuntuColors.Ink : ubuntuskin::ubuntuColors.SecondaryInk" BackgroundColor-bind="self.VisuallyEnabled and self.State == ButtonState::Pressed ? ubuntuskin::ubuntuColors.Ink : ubuntuskin::ubuntuColors.SecondaryInk"/>
   <Style ref.Path="//*.documentBoxBackgroundAndColor" BaselineDocument-eval="ubuntuskin::CreateBaselineDocument()">
     <att.CaretColor-eval>ubuntuskin::ubuntuColors.DocumentInk</att.CaretColor-eval>
     <SolidBackground Color-eval="ubuntuskin::ubuntuColors.ViewBackground"/>

@@ -81,6 +81,7 @@ Run the full showcase in Direct2D hosted mode for both `Win11Skin` and `Win11Ski
 - win11skin::RibbonToolstripsTemplate: Control / Document Editor (Ribbon).
 - win11skin::RibbonToolstripHeaderTemplate: Control / Document Editor (Ribbon).
 - win11skin::RibbonGalleryTemplate: Control / Document Editor (Ribbon).
+- win11skin::RibbonGalleryItemBackgroundTemplate: Control / Document Editor (Ribbon).
 - win11skin::RibbonGalleryItemListTemplate: Control / Document Editor (Ribbon).
 - win11skin::RibbonToolstripMenuTemplate: Control / Document Editor (Ribbon).
 - win11skin::RibbonGalleryDropdownButtonTemplate: Control / Document Editor (Ribbon).
@@ -98,3 +99,5 @@ At the same window size and font, switch between DarkSkin and both Windows 11 pa
 - In Layout / Repeat, move both trackers and scrollbars, hover and drag each thumb, and inspect the progress bar at zero, partway and full. Thumb movement and the accent track must agree. Disabled scrollbars hide their thumbs.
 - Resize both editors and inspect collapsed groups, independent split arrows, gallery paging, selected tabs and keytips. Open and dismiss menus, submenus, tooltips, combo and calendar popups and modal windows. Check input restoration.
 - Visit the remaining Layout, Control and Misc pages, including localization and the raw graphics samples. Follow the showcase procedure through Exit.
+
+Compare the settled tab hover in both hosted renderers. On Layout, select Responsive and hover Easy Layout. On Misc / Animation, select Gradient Animation and hover Complex Animation. Check the face against the light and dark `TabHover` values and move off the header to restore the strip.

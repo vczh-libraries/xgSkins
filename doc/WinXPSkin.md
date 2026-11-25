@@ -51,7 +51,7 @@ types and helpers use the `winxpskin` namespace. `ButtonColors` contains
 The organization follows
 [GacUI/Source/Skins/DarkSkin](https://github.com/vczh-libraries/GacUI/tree/master/Source/Skins/DarkSkin).
 Edit the XML and regenerate through `Source/GacUI.xml`. All paint colors,
-including transparency and decorative glyphs, belong in the color package.
+including decorative glyphs, belong in the color package.
 Preserve container, focus, scroll, menu-host and responsive ribbon contracts.
 The [color specification](../spec/WinXPSkin/ColorPackage.md),
 [animation specification](../spec/WinXPSkin/Animation.md) and

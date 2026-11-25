@@ -18,7 +18,7 @@
         <att.RibbonHeader-bind>not self.Vertical and (self.Context is RibbonTabPage*)</att.RibbonHeader-bind>
         <att.TabFocused-bind>(cast (TabPage*) self.Context).OwnerTab.Focused ?? false</att.TabFocused-bind>
         <att.Colors-bind>self.VisuallyEnabled and self.State != ButtonState::Normal ? win10Colors.TabHovered : self.RibbonHeader and not self.Selected ? win10Colors.CommandNormal : win10Colors.TabNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground">
           <SolidBackground Color-bind="self.RibbonHeader and self.Selected ? win10Colors.RibbonBorder : self.Colors.Border"/>
           <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:1 top:1 right:1 bottom:(self.Selected ? 0 : 1)})">
             <SolidBackground Color-bind="self.Selected ? (self.RibbonHeader ? win10Colors.RibbonSurface : win10Colors.Page) : self.Colors.Fill"/>

@@ -15,13 +15,13 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Background"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
-        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
@@ -78,13 +78,13 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Background"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
-        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
@@ -141,13 +141,13 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Background"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
-        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Rows>
@@ -204,13 +204,13 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Background"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
-        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Rows>
@@ -267,13 +267,13 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Background"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
-        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
@@ -308,13 +308,13 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Background"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
-        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Rows>

@@ -6,9 +6,9 @@
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? winxpColors.RibbonButtonDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? winxpColors.RibbonButtonPressed : self.Selected ? winxpColors.RibbonButtonSelected : self.State == ButtonState::Active ? winxpColors.RibbonButtonActive : winxpColors.RibbonButtonNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/></Bounds>
-        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground"><SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/></Bounds>
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="not self.Colors.HideBackground">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -41,9 +41,9 @@
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? winxpColors.RibbonButtonDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? winxpColors.RibbonButtonPressed : self.Selected ? winxpColors.RibbonButtonSelected : self.State == ButtonState::Active ? winxpColors.RibbonButtonActive : winxpColors.RibbonButtonNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/></Bounds>
-        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground"><SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/></Bounds>
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="not self.Colors.HideBackground">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -100,9 +100,9 @@
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? winxpColors.RibbonButtonDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? winxpColors.RibbonButtonPressed : self.Selected ? winxpColors.RibbonButtonSelected : self.State == ButtonState::Active ? winxpColors.RibbonButtonActive : winxpColors.RibbonButtonNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/></Bounds>
-        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground"><SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/></Bounds>
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="not self.Colors.HideBackground">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:11 bottom:1">
@@ -140,9 +140,9 @@
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? winxpColors.RibbonButtonDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? winxpColors.RibbonButtonPressed : self.Selected ? winxpColors.RibbonButtonSelected : self.State == ButtonState::Active ? winxpColors.RibbonButtonActive : winxpColors.RibbonButtonNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/></Bounds>
-        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground"><SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/></Bounds>
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="not self.Colors.HideBackground">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -180,9 +180,9 @@
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? winxpColors.RibbonButtonDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? winxpColors.RibbonButtonPressed : self.Selected ? winxpColors.RibbonButtonSelected : self.State == ButtonState::Active ? winxpColors.RibbonButtonActive : winxpColors.RibbonButtonNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/></Bounds>
-        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground"><SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/></Bounds>
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="not self.Colors.HideBackground">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -242,9 +242,9 @@
       ]]></ref.Members>
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? winxpColors.RibbonButtonDisabled : self.State == ButtonState::Pressed ? winxpColors.RibbonButtonPressed : self.Selected ? winxpColors.RibbonButtonSelected : self.State == ButtonState::Active ? winxpColors.RibbonButtonActive : winxpColors.RibbonButtonNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/></Bounds>
-        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground"><SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/></Bounds>
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="not self.Colors.HideBackground">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1" PreferredMinSize="x:9 y:7">
@@ -282,9 +282,9 @@
       ]]></ref.Members>
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? winxpColors.RibbonButtonDisabled : self.State == ButtonState::Pressed ? winxpColors.RibbonButtonPressed : self.Selected ? winxpColors.RibbonButtonSelected : self.State == ButtonState::Active ? winxpColors.RibbonButtonActive : winxpColors.RibbonButtonNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/></Bounds>
-        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground"><SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/></Bounds>
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="not self.Colors.HideBackground">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -325,9 +325,9 @@
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? winxpColors.RibbonButtonDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? winxpColors.RibbonButtonPressed : self.Selected ? winxpColors.RibbonButtonSelected : self.State == ButtonState::Active ? winxpColors.RibbonButtonActive : winxpColors.RibbonButtonNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/></Bounds>
-        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground"><SolidBackground Color-bind="self.Colors.Inner" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/></Bounds>
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="not self.Colors.HideBackground">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -470,12 +470,19 @@
   <Instance name="RibbonGroupExpandButtonTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="winxpskin::RibbonGroupExpandButtonTemplate" ref.Styles="res://WinXPSkin/Style">
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
-        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" MinSizeLimitation="LimitToElementAndChildren">
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" MinSizeLimitation="LimitToElementAndChildren" Visible-bind="not self.VisuallyEnabled or self.State == ButtonState::Normal">
+          <!-- Retrace the outline to leave the center open at rest. -->
           <Polygon ref.Style="ribbonExpandableArrow" Size="x:7 y:7">
             <att.Points>
-              <Point>x:6 y:0</Point>
-              <Point>x:6 y:6</Point>
-              <Point>x:0 y:6</Point>
+              <Point>x:6 y:0</Point><Point>x:6 y:6</Point><Point>x:0 y:6</Point>
+              <Point>x:6 y:0</Point><Point>x:0 y:6</Point><Point>x:6 y:6</Point>
+            </att.Points>
+          </Polygon>
+        </Bounds>
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" MinSizeLimitation="LimitToElementAndChildren" Visible-bind="self.VisuallyEnabled and self.State != ButtonState::Normal">
+          <Polygon ref.Style="ribbonExpandableArrow" Size="x:7 y:7">
+            <att.Points>
+              <Point>x:6 y:0</Point><Point>x:6 y:6</Point><Point>x:0 y:6</Point>
             </att.Points>
           </Polygon>
         </Bounds>

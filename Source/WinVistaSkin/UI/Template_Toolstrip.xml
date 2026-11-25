@@ -243,9 +243,9 @@
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? vistaColors.MenuBarButtonDisabled : self.SubMenuOpening or self.State == ButtonState::Pressed ? vistaColors.MenuBarButtonPressed : self.State == ButtonState::Active ? vistaColors.MenuBarButtonActive : vistaColors.MenuBarButtonNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.Colors.Background"/></Bounds>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.Colors.Border"/></Bounds>
-        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground"><SolidBackground Color-bind="self.Colors.Background"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.Colors.Border"/></Bounds>
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="not self.Colors.HideBackground">
           <att.Rows><CellOption>composeType:Percentage percentage:0.5</CellOption><CellOption>composeType:Percentage percentage:0.5</CellOption></att.Rows>
           <att.Columns><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Columns>
           <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/></Cell>
@@ -266,9 +266,9 @@
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? (self.State == ButtonState::Normal ? vistaColors.MenuItemButtonDisabled : vistaColors.MenuItemButtonDisabledActive) : self.SubMenuOpening ? vistaColors.MenuItemButtonNormalActive : self.Selected ? (self.State == ButtonState::Normal ? vistaColors.MenuItemButtonSelected : vistaColors.MenuItemButtonSelectedActive) : self.State != ButtonState::Normal ? vistaColors.MenuItemButtonNormalActive : vistaColors.MenuItemButtonNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1"><SolidBackground Color-bind="self.Colors.Background"/></Bounds>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.Colors.Border"/></Bounds>
-        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground"><SolidBackground Color-bind="self.Colors.Background"/></Bounds>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.Colors.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="not self.Colors.HideBackground">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
 
@@ -294,11 +294,13 @@
           </att.Columns>
 
           <Cell Site="row:1 column:1 rowSpan:3">
-            <SolidBackground Color-bind="self.Selected ? vistaColors.MenuItemButtonNormalActive.G2 : vistaColors.Transparent"/>
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Selected">
+              <SolidBackground Color-eval="vistaColors.MenuItemButtonNormalActive.G2"/>
+            </Bounds>
             <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" MinSizeLimitation="NoLimit" Visible-bind="self.Selected and self.Image is null"><Polygon ref.Style="buttonPolygon" Size="x:10 y:10"><att.Points><Point>x:1 y:5</Point><Point>x:4 y:8</Point><Point>x:9 y:1</Point><Point>x:4 y:6</Point></att.Points></Polygon></Bounds>
             <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/></Bounds>
           </Cell>
-          <Cell Site="row:0 column:2 rowSpan:5"><Bounds AlignmentToParent="left:0 top:0 right:6 bottom:0"><Gui3DSplitterElement Direction="Vertical" Color1-bind="self.Colors.G3" Color2-bind="self.Colors.G4"/></Bounds></Cell>
+          <Cell Site="row:0 column:2 rowSpan:5" Visible-bind="not self.Selected or self.SubMenuOpening or not self.VisuallyEnabled"><Bounds AlignmentToParent="left:0 top:0 right:6 bottom:0"><Gui3DSplitterElement Direction="Vertical" Color1-bind="self.Colors.G3" Color2-bind="self.Colors.G4"/></Bounds></Cell>
           <Cell Site="row:1 column:3 rowSpan:3">
             <SharedSizeItem Group="MenuItem-Text" SharedWidth="true" AlignmentToParent="left:0 top:0 right:0 bottom:0">
               <SolidLabel Color-bind="self.Colors.Text" Text-bind="self.Text" Font-bind="self.Font" HorizontalAlignment="Left" VerticalAlignment="Center"/>

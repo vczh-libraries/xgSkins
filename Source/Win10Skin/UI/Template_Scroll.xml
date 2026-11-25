@@ -36,18 +36,22 @@
       ]]></ref.Members>
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>GetScrollArrowColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
-        <SolidBackground Color-bind="self.Colors.Fill"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground">
+          <SolidBackground Color-bind="self.Colors.Fill"/>
+        </Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <Polygon Size="x:6 y:9" BorderColor-eval="win10Colors.Transparent" BackgroundColor-bind="self.Colors.Text">
-            <att.Points>
-              <Point>x:4 y:0</Point>
-              <Point>x:5 y:0</Point>
-              <Point>x:1 y:4</Point>
-              <Point>x:5 y:8</Point>
-              <Point>x:4 y:8</Point>
-              <Point>x:0 y:4</Point>
-            </att.Points>
-          </Polygon>
+          <PartialView WidthRatio="0.5" WidthPageSize="0" HeightRatio="0.5" HeightPageSize="0" PreferredMinSize="x:6 y:9">
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <Polygon Size="x:6 y:9" BorderColor-bind="self.Colors.Text" BackgroundColor-bind="self.Colors.Text">
+                <att.Points>
+                  <Point>x:5 y:0</Point>
+                  <Point>x:1 y:4</Point>
+                  <Point>x:5 y:8</Point>
+                  <Point>x:1 y:4</Point>
+                </att.Points>
+              </Polygon>
+            </Bounds>
+          </PartialView>
         </Bounds>
       </ButtonTemplate>
     </Instance>
@@ -60,18 +64,22 @@
       ]]></ref.Members>
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>GetScrollArrowColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
-        <SolidBackground Color-bind="self.Colors.Fill"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground">
+          <SolidBackground Color-bind="self.Colors.Fill"/>
+        </Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <Polygon Size="x:6 y:9" BorderColor-eval="win10Colors.Transparent" BackgroundColor-bind="self.Colors.Text">
-            <att.Points>
-              <Point>x:0 y:0</Point>
-              <Point>x:1 y:0</Point>
-              <Point>x:5 y:4</Point>
-              <Point>x:1 y:8</Point>
-              <Point>x:0 y:8</Point>
-              <Point>x:4 y:4</Point>
-            </att.Points>
-          </Polygon>
+          <PartialView WidthRatio="0.5" WidthPageSize="0" HeightRatio="0.5" HeightPageSize="0" PreferredMinSize="x:6 y:9">
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <Polygon Size="x:6 y:9" BorderColor-bind="self.Colors.Text" BackgroundColor-bind="self.Colors.Text">
+                <att.Points>
+                  <Point>x:0 y:0</Point>
+                  <Point>x:4 y:4</Point>
+                  <Point>x:0 y:8</Point>
+                  <Point>x:4 y:4</Point>
+                </att.Points>
+              </Polygon>
+            </Bounds>
+          </PartialView>
         </Bounds>
       </ButtonTemplate>
     </Instance>
@@ -84,18 +92,22 @@
       ]]></ref.Members>
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>GetScrollArrowColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
-        <SolidBackground Color-bind="self.Colors.Fill"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground">
+          <SolidBackground Color-bind="self.Colors.Fill"/>
+        </Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <Polygon Size="x:9 y:6" BorderColor-eval="win10Colors.Transparent" BackgroundColor-bind="self.Colors.Text">
-            <att.Points>
-              <Point>x:0 y:4</Point>
-              <Point>x:4 y:0</Point>
-              <Point>x:8 y:4</Point>
-              <Point>x:8 y:5</Point>
-              <Point>x:4 y:1</Point>
-              <Point>x:0 y:5</Point>
-            </att.Points>
-          </Polygon>
+          <PartialView WidthRatio="0.5" WidthPageSize="0" HeightRatio="0.5" HeightPageSize="0" PreferredMinSize="x:9 y:6">
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <Polygon Size="x:9 y:6" BorderColor-bind="self.Colors.Text" BackgroundColor-bind="self.Colors.Text">
+                <att.Points>
+                  <Point>x:0 y:5</Point>
+                  <Point>x:4 y:1</Point>
+                  <Point>x:8 y:5</Point>
+                  <Point>x:4 y:1</Point>
+                </att.Points>
+              </Polygon>
+            </Bounds>
+          </PartialView>
         </Bounds>
       </ButtonTemplate>
     </Instance>
@@ -108,18 +120,22 @@
       ]]></ref.Members>
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>GetScrollArrowColors(self.VisuallyEnabled, self.State)</att.Colors-bind>
-        <SolidBackground Color-bind="self.Colors.Fill"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground">
+          <SolidBackground Color-bind="self.Colors.Fill"/>
+        </Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <Polygon Size="x:9 y:6" BorderColor-eval="win10Colors.Transparent" BackgroundColor-bind="self.Colors.Text">
-            <att.Points>
-              <Point>x:0 y:0</Point>
-              <Point>x:4 y:4</Point>
-              <Point>x:8 y:0</Point>
-              <Point>x:8 y:1</Point>
-              <Point>x:4 y:5</Point>
-              <Point>x:0 y:1</Point>
-            </att.Points>
-          </Polygon>
+          <PartialView WidthRatio="0.5" WidthPageSize="0" HeightRatio="0.5" HeightPageSize="0" PreferredMinSize="x:9 y:6">
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <Polygon Size="x:9 y:6" BorderColor-bind="self.Colors.Text" BackgroundColor-bind="self.Colors.Text">
+                <att.Points>
+                  <Point>x:0 y:0</Point>
+                  <Point>x:4 y:4</Point>
+                  <Point>x:8 y:0</Point>
+                  <Point>x:4 y:4</Point>
+                </att.Points>
+              </Polygon>
+            </Bounds>
+          </PartialView>
         </Bounds>
       </ButtonTemplate>
     </Instance>

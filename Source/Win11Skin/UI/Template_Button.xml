@@ -12,6 +12,8 @@
         Face : Color;
         Text : Color;
         Bullet : Color;
+        HideBackground : bool;
+        HideBorder : bool;
       }
 
       class ButtonColorState
@@ -20,6 +22,8 @@
         prop Face : Color = {} {}
         prop Text : Color = {} {}
         prop Bullet : Color = {} {}
+        prop BackgroundProgress : double = 1.0 {}
+        prop BorderProgress : double = 1.0 {}
 
         new() {}
 
@@ -29,6 +33,8 @@
           Face = colors.Face;
           Text = colors.Text;
           Bullet = colors.Bullet;
+          BackgroundProgress = colors.HideBackground ? 0.0 : 1.0;
+          BorderProgress = colors.HideBackground or colors.HideBorder ? 0.0 : 1.0;
         }
       }
 
@@ -93,6 +99,8 @@
         <Target Name="Face"/>
         <Target Name="Text"/>
         <Target Name="Bullet"/>
+        <Target Name="BackgroundProgress"/>
+        <Target Name="BorderProgress"/>
       </Targets>
     </Gradient>
   </Animation>
@@ -168,7 +176,7 @@
                 <SolidBackground Color-bind="self.animationBuilder.Current.Face" Shape="shapeType:RoundRect radiusX:1 radiusY:1"/>
               </Bounds>
             </Bounds>
-            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Selected or self.animationBuilder.Current.Bullet != self.animationBuilder.Current.Face">
               <Polygon Size="x:9 y:7" BorderColor-bind="self.animationBuilder.Current.Bullet" BackgroundColor-bind="self.animationBuilder.Current.Bullet">
                 <att.Points>
                   <Point>x:0 y:3</Point><Point>x:1 y:2</Point><Point>x:3 y:4</Point>
@@ -229,7 +237,7 @@
                 <SolidBackground Color-bind="self.animationBuilder.Current.Face" Shape="shapeType:Ellipse"/>
               </Bounds>
             </Bounds>
-            <Bounds AlignmentToParent="left:6 top:6 right:6 bottom:6">
+            <Bounds AlignmentToParent="left:6 top:6 right:6 bottom:6" Visible-bind="self.Selected or self.animationBuilder.Current.Bullet != self.animationBuilder.Current.Face">
               <SolidBackground Color-bind="self.animationBuilder.Current.Bullet" Shape="shapeType:Ellipse"/>
             </Bounds>
           </Cell>

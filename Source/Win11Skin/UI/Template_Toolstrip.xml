@@ -49,7 +49,7 @@
       <ControlTemplate MinSizeLimitation="LimitToElementAndChildren">
         <SolidBackground ref.Style="generalBackground"/>
         <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1">
-          <Gui3DSplitterElement Direction="Vertical" Color1-eval="win11Colors.Stroke" Color2-eval="win11Colors.Transparent"/>
+          <Gui3DSplitterElement Direction="Vertical" Color1-eval="win11Colors.Stroke" Color2-eval="win11Colors.Canvas"/>
         </Bounds>
       </ControlTemplate>
     </Instance>
@@ -90,8 +90,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BorderProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animation.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -118,8 +118,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BorderProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animation.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -197,8 +197,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BorderProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animation.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:11 bottom:1">
@@ -223,8 +223,8 @@
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.SubtleDisabled : self.SubMenuOpening or self.State == ButtonState::Pressed ? win11Colors.SubtlePressed : self.State == ButtonState::Active ? win11Colors.SubtleHovered : win11Colors.SubtleNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground and not self.Colors.HideBorder"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground">
           <SolidBackground Color-bind="self.Colors.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
 
@@ -241,9 +241,9 @@
         prop Colors : ButtonColors = win11Colors.SubtleNormal {}
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.SubtleDisabled : self.SubMenuOpening or self.State != ButtonState::Normal ? win11Colors.SubtleHovered : self.Selected ? win11Colors.SubtleSelected : win11Colors.SubtleNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.SubtleDisabled : self.SubMenuOpening or self.State != ButtonState::Normal or self.Selected ? win11Colors.MenuItemHovered : win11Colors.SubtleNormal</att.Colors-bind>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground and not self.Colors.HideBorder"><SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground">
           <SolidBackground Color-bind="self.Colors.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
 

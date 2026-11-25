@@ -4,6 +4,10 @@ This extension provides additional template-based skins for GacUI applications.
 Each skin supplies a default color theme. FullControlTest starts with DarkSkin;
 use Window Manager to select another skin.
 
+The custom skins use opaque RGB colors on both Direct2D and GDI. A control that
+shows its parent surface leaves that part unpainted, including at the end of an
+animation. Highlights use colors blended with their intended surface.
+
 The custom skins use a four-pixel visible frame along the sides and bottom of a
 resizable window. The close button ends at the inside edge of this frame. Beside
 and below the client, five more pixels of client background also accept resizing.

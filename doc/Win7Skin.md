@@ -60,8 +60,8 @@ Change the XML resources and regenerate with the `Source/GacUI.xml` build entry;
 do not edit generated C++. Preserve the supplied layout and command contracts
 when changing appearance: container compositions, focusable compositions,
 scroll commands, submenu hosts and ribbon group/gallery hosts are part of the
-control-template interface. Colors belong in the package, including transparent
-colors, text, glyphs, gradients and newly researched artwork.
+control-template interface. Colors belong in the package, including text,
+glyphs, gradients and newly researched artwork.
 
 Color transitions remain XML `Gradient` animations with linear 120 ms timing.
 The imported finite-animation runtime omits its final callback, so the Workflow

@@ -82,7 +82,6 @@
         GeneralAccent : Color;
         ContentBackground : Color;
         ContentBorder : Color;
-        Transparent : Color;
         WindowBorderActive : Color;
         TextSecondary : Color;
         TextDisabled : Color;
@@ -167,14 +166,15 @@
           TreeArrowBackgroundHovered: cast Color "#82DFFB";
           ListItemSeparator: cast Color "#DCDCDC";
           ItemNormal: {
-            Border: cast Color "#B8D6FB00";
-            Background: cast Color "#FCFDFE00";
-            G1: cast Color "#FAFBFD00";
-            G2: cast Color "#F2F7FD00";
-            G3: cast Color "#F2F7FD00";
-            G4: cast Color "#EBF3FD00";
+            HideBackground: true;
+            Border: cast Color "#FFFFFF";
+            Background: cast Color "#FFFFFF";
+            G1: cast Color "#FFFFFF";
+            G2: cast Color "#FFFFFF";
+            G3: cast Color "#FFFFFF";
+            G4: cast Color "#FFFFFF";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           ItemHovered: {
             Border: cast Color "#B8D6FB";
@@ -184,7 +184,7 @@
             G3: cast Color "#F2F7FD";
             G4: cast Color "#EBF3FD";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           ItemSelected: {
             Border: cast Color "#769ECE";
@@ -194,17 +194,18 @@
             G3: cast Color "#D0E3FC";
             G4: cast Color "#C1DBFC";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           ItemDisabled: {
-            Border: cast Color "#B8D6FB00";
-            Background: cast Color "#FCFDFE00";
-            G1: cast Color "#FAFBFD00";
-            G2: cast Color "#F2F7FD00";
-            G3: cast Color "#F2F7FD00";
-            G4: cast Color "#EBF3FD00";
+            HideBackground: true;
+            Border: cast Color "#FFFFFF";
+            Background: cast Color "#FFFFFF";
+            G1: cast Color "#FFFFFF";
+            G2: cast Color "#FFFFFF";
+            G3: cast Color "#FFFFFF";
+            G4: cast Color "#FFFFFF";
             Text: cast Color "#838383";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#838383";
           };
           TabNormal: {
             Border: cast Color "#898C95";
@@ -214,7 +215,7 @@
             G3: cast Color "#D6D6D6";
             G4: cast Color "#CBCBCB";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           TabHovered: {
             Border: cast Color "#3C7FB1";
@@ -224,7 +225,7 @@
             G3: cast Color "#BCE5FC";
             G4: cast Color "#A7D9F5";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           TabSelected: {
             Border: cast Color "#898C95";
@@ -234,7 +235,7 @@
             G3: cast Color "#FFFFFF";
             G4: cast Color "#FFFFFF";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           ScrollSink: cast Color "#E3E3E3";
           TrackerDark: cast Color "#B0B0B0";
@@ -257,7 +258,7 @@
             G3: cast Color "#DDDDDD";
             G4: cast Color "#CFCFCF";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           ButtonHovered: {
             Border: cast Color "#3C7FB1";
@@ -267,7 +268,7 @@
             G3: cast Color "#E1F5FE";
             G4: cast Color "#D7F5FE";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           ButtonPressed: {
             Border: cast Color "#2C628B";
@@ -277,7 +278,7 @@
             G3: cast Color "#B5E7FD";
             G4: cast Color "#A4E1FB";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           ButtonDisabled: {
             Border: cast Color "#ADB2B5";
@@ -287,7 +288,7 @@
             G3: cast Color "#F4F4F4";
             G4: cast Color "#F4F4F4";
             Text: cast Color "#838383";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#838383";
           };
           CheckedNormal: {
             Border: cast Color "#8E8F8F";
@@ -330,14 +331,15 @@
             Bullet: cast Color "#B1B1B1";
           };
           RibbonButtonNormal: {
-            Border: cast Color "#FCC45B00";
-            Background: cast Color "#FFFFF100";
-            G1: cast Color "#FFFBD600";
-            G2: cast Color "#FFFBD600";
-            G3: cast Color "#FFE69F00";
-            G4: cast Color "#FFE69F00";
+            HideBackground: true;
+            Border: cast Color "#E9F1FA";
+            Background: cast Color "#E9F1FA";
+            G1: cast Color "#F5FBFF";
+            G2: cast Color "#E9F1FA";
+            G3: cast Color "#E9F1FA";
+            G4: cast Color "#DCE7F5";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           RibbonButtonActive: {
             Border: cast Color "#FCC45B";
@@ -347,7 +349,7 @@
             G3: cast Color "#FFE69F";
             G4: cast Color "#FFE69F";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           RibbonButtonPressed: {
             Border: cast Color "#C28A30";
@@ -357,7 +359,7 @@
             G3: cast Color "#FFC45B";
             G4: cast Color "#FFC45B";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           RibbonButtonSelected: {
             Border: cast Color "#CCA96A";
@@ -367,17 +369,18 @@
             G3: cast Color "#FFC45B";
             G4: cast Color "#FFFFB8";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           RibbonButtonDisabled: {
-            Border: cast Color "#FCC45B00";
-            Background: cast Color "#FFFFF100";
-            G1: cast Color "#FFFBD600";
-            G2: cast Color "#FFFBD600";
-            G3: cast Color "#FFE69F00";
-            G4: cast Color "#FFE69F00";
+            HideBackground: true;
+            Border: cast Color "#E9F1FA";
+            Background: cast Color "#E9F1FA";
+            G1: cast Color "#F5FBFF";
+            G2: cast Color "#E9F1FA";
+            G3: cast Color "#E9F1FA";
+            G4: cast Color "#DCE7F5";
             Text: cast Color "#838383";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#838383";
           };
           ToolstripButtonNormal: {
             Border: cast Color "#F0F0F0";
@@ -387,7 +390,7 @@
             G3: cast Color "#F0F0F0";
             G4: cast Color "#F0F0F0";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           ToolstripButtonActive: {
             Border: cast Color "#A8A8A8";
@@ -397,7 +400,7 @@
             G3: cast Color "#DADADA";
             G4: cast Color "#F0F0F0";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           ToolstripButtonPressed: {
             Border: cast Color "#545454";
@@ -407,7 +410,7 @@
             G3: cast Color "#DEDEDE";
             G4: cast Color "#E6E6E6";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           ToolstripButtonSelected: {
             Border: cast Color "#545454";
@@ -417,7 +420,7 @@
             G3: cast Color "#FAFAFA";
             G4: cast Color "#FAFAFA";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           ToolstripButtonDisabled: {
             Border: cast Color "#F0F0F0";
@@ -427,17 +430,18 @@
             G3: cast Color "#F0F0F0";
             G4: cast Color "#F0F0F0";
             Text: cast Color "#838383";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#838383";
           };
           MenuBarButtonNormal: {
-            Border: cast Color "#B0B0B000";
-            Background: cast Color "#EAEEF700";
-            G1: cast Color "#F6F8FA00";
-            G2: cast Color "#D3D9E700";
-            G3: cast Color "#C7CCDA00";
-            G4: cast Color "#E0E4F300";
+            HideBackground: true;
+            Border: cast Color "#E5EAF5";
+            Background: cast Color "#E5EAF5";
+            G1: cast Color "#E5EAF5";
+            G2: cast Color "#E5EAF5";
+            G3: cast Color "#E5EAF5";
+            G4: cast Color "#E5EAF5";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           MenuBarButtonActive: {
             Border: cast Color "#B0B0B0";
@@ -447,7 +451,7 @@
             G3: cast Color "#C7CCDA";
             G4: cast Color "#E0E4F3";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           MenuBarButtonPressed: {
             Border: cast Color "#585859";
@@ -457,27 +461,29 @@
             G3: cast Color "#C5CCDD";
             G4: cast Color "#D5DAE9";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           MenuBarButtonDisabled: {
-            Border: cast Color "#B0B0B000";
-            Background: cast Color "#EAEEF700";
-            G1: cast Color "#F6F8FA00";
-            G2: cast Color "#D3D9E700";
-            G3: cast Color "#C7CCDA00";
-            G4: cast Color "#E0E4F300";
+            HideBackground: true;
+            Border: cast Color "#E5EAF5";
+            Background: cast Color "#E5EAF5";
+            G1: cast Color "#E5EAF5";
+            G2: cast Color "#E5EAF5";
+            G3: cast Color "#E5EAF5";
+            G4: cast Color "#E5EAF5";
             Text: cast Color "#838383";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#838383";
           };
           MenuItemButtonNormal: {
-            Border: cast Color "#00000000";
-            Background: cast Color "#00000000";
-            G1: cast Color "#00000000";
-            G2: cast Color "#00000000";
+            HideBackground: true;
+            Border: cast Color "#F0F0F0";
+            Background: cast Color "#F0F0F0";
+            G1: cast Color "#F0F0F0";
+            G2: cast Color "#F0F0F0";
             G3: cast Color "#E3E3E3";
             G4: cast Color "#FFFFFF";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           MenuItemButtonNormalActive: {
             Border: cast Color "#AFD0F7";
@@ -487,37 +493,38 @@
             G3: cast Color "#E5E9EE";
             G4: cast Color "#F5F9FF";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           MenuItemButtonSelected: {
             Border: cast Color "#AFD0F7";
             Background: cast Color "#F8F8FA";
-            G1: cast Color "#00000000";
-            G2: cast Color "#00000000";
-            G3: cast Color "#00000000";
-            G4: cast Color "#00000000";
+            G1: cast Color "#F8F8FA";
+            G2: cast Color "#F8F8FA";
+            G3: cast Color "#F8F8FA";
+            G4: cast Color "#F8F8FA";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           MenuItemButtonSelectedActive: {
             Border: cast Color "#AFD0F7";
             Background: cast Color "#F8F8FA";
             G1: cast Color "#F3F5F7";
             G2: cast Color "#E7EEF7";
-            G3: cast Color "#00000000";
-            G4: cast Color "#00000000";
+            G3: cast Color "#F8F8FA";
+            G4: cast Color "#F8F8FA";
             Text: cast Color "#000000";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#000000";
           };
           MenuItemButtonDisabled: {
-            Border: cast Color "#00000000";
-            Background: cast Color "#00000000";
-            G1: cast Color "#00000000";
-            G2: cast Color "#00000000";
+            HideBackground: true;
+            Border: cast Color "#F0F0F0";
+            Background: cast Color "#F0F0F0";
+            G1: cast Color "#F0F0F0";
+            G2: cast Color "#F0F0F0";
             G3: cast Color "#E3E3E3";
             G4: cast Color "#FFFFFF";
             Text: cast Color "#838383";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#838383";
           };
           MenuItemButtonDisabledActive: {
             Border: cast Color "#D4D4D4";
@@ -527,14 +534,13 @@
             G3: cast Color "#E8E8E8";
             G4: cast Color "#EFEFEF";
             Text: cast Color "#838383";
-            Bullet: cast Color "#00000000";
+            Bullet: cast Color "#838383";
           };
           GeneralBackground: cast Color "#F0F0F0";
           GeneralBorder: cast Color "#646464";
           GeneralAccent: cast Color "#3399FF";
           ContentBackground: cast Color "#FFFFFF";
           ContentBorder: cast Color "#D5DFE5";
-          Transparent: cast Color "#00000000";
           WindowBorderActive: cast Color "#6B8BA5";
           TextSecondary: cast Color "#838383";
           TextDisabled: cast Color "#838383";

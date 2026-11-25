@@ -51,7 +51,7 @@ This follows the XML/template organization of
 [GacUI/Source/Skins/DarkSkin](https://github.com/vczh-libraries/GacUI/tree/master/Source/Skins/DarkSkin).
 Edit the XML resources, then regenerate through `Source/GacUI.xml`. Preserve
 container, focus, scrolling, menu-host and ribbon-layout contracts when changing
-appearance. Every color, including transparent colors and helper artwork,
+appearance. Every color, including the colors for helper artwork,
 belongs in the color package. The
 [color specification](../spec/Win8Skin/ColorPackage.md),
 [animation specification](../spec/Win8Skin/Animation.md) and
@@ -116,9 +116,10 @@ frame to Windows. These areas use documented visual reconstructions:
 - Microsoft's [Ribbon color documentation](https://learn.microsoft.com/en-us/windows/win32/windowsribbon/ribbon-color)
   explains that Windows 8 ties the highlight color to the background color.
   The reconstructed ribbon therefore uses the measured Win8 toolbar blue
-  interaction palettes. Its normal/disabled faces preserve those RGB values
-  with zero alpha over the ribbon surface. Ribbon-specific layouts, contextual
-  tabs, split regions, gallery outlines and popup combinations follow current
+  interaction palettes. Resting and disabled commands expose the ribbon surface.
+  A command blends from the ribbon color on hover and returns to it when the
+  pointer leaves. Ribbon-specific layouts, contextual tabs, split regions,
+  gallery outlines and popup combinations follow current
   GacUI template contracts. Their appearance and 120 ms command transitions
   extend the legacy data rather than reproducing a missing old ribbon style.
 - [DwmEnableBlurBehindWindow](https://learn.microsoft.com/en-us/windows/win32/api/dwmapi/nf-dwmapi-dwmenableblurbehindwindow)

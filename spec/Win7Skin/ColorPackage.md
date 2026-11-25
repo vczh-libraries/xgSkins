@@ -6,8 +6,8 @@ feedback, green progress and pale-blue ribbon should remain recognizable across
 all controls. Disabled, focused, selected and hovered states must remain
 distinguishable. Tooltip and keytip surfaces are pale yellow.
 
-Every skin color belongs to `win7skin::ColorPackage`, including transparent
-colors and colors used only by a helper template. The package is declared in
+Every skin color belongs to `win7skin::ColorPackage`, including colors
+used only by a helper template. The package is declared in
 [Win7Skin.xml](../../Source/Win7Skin/UI/Win7Skin.xml). The following names state
 the purpose of each item; technical provenance and integration are documented in
 [doc/Win7Skin.md](../../doc/Win7Skin.md).
@@ -39,8 +39,9 @@ surface, `G1`/`G2` for the first gradient and `G3`/`G4` for the second gradient,
 `Text` for foreground text or arrows, and `Bullet` for a check/radio mark.
 Pushbuttons use the two gradients as upper/lower halves; check/radio controls
 use them as nested diagonal gradients. Menu-item packages use `G1`/`G2` for the
-row gradient and `G3`/`G4` for the icon-gutter bevel. A transparent mark or
-background retains its RGB value while its alpha becomes zero.
+row gradient and `G3`/`G4` for the icon-gutter bevel. Set `HideBackground` to leave the parent surface visible.
+Animated faces blend through opaque RGB values and stop drawing at the idle endpoint.
+Unchecked marks blend into their face before the mark is hidden.
 
 | ColorPackage item | Required use |
 | --- | --- |
@@ -52,10 +53,10 @@ background retains its RGB value while its alpha becomes zero.
 | `CheckedHovered` | Hovered checkbox/radio frame, gradients, text and selected mark. |
 | `CheckedPressed` | Pressed checkbox/radio frame, gradients, text and selected mark. |
 | `CheckedDisabled` | Disabled checkbox/radio frame, gradients, text and selected mark. |
-| `ItemNormal` | Transparent normal list/tree/gallery item and calendar-date chrome. |
+| `ItemNormal` | Leaves the backing visible on resting list, tree, gallery and calendar items. |
 | `ItemHovered` | Pale-blue hovered list/tree/gallery item and calendar-date chrome. |
 | `ItemSelected` | Blue selected or pressed list/tree/gallery item and calendar-date chrome. |
-| `ItemDisabled` | Transparent disabled list/tree/gallery item and calendar-date chrome with disabled foreground. |
+| `ItemDisabled` | Leaves the backing visible on disabled list, tree, gallery and calendar items and supplies the disabled foreground. |
 | `TabNormal` | Normal unselected tab header. |
 | `TabHovered` | Hovered or pressed unselected tab header. |
 | `TabSelected` | Selected tab header joined visually to its white page. |
@@ -100,7 +101,6 @@ item selection colors.
 | `GeneralAccent` | Document selection background. |
 | `ContentBackground` | White content surfaces and selected-page interiors. |
 | `ContentBorder` | Light group-box border and shared inset surfaces. |
-| `Transparent` | Fully transparent backgrounds and the alpha for hidden chrome/marks. |
 | `TextNormal` | Ordinary enabled labels, control/list text, active caption text and editor caret. |
 | `TextBright` | Primary document/calendar foreground, document-label caret and active shared arrows. |
 | `TextSecondary` | Secondary calendar text, secondary glyphs and inactive detail text. |

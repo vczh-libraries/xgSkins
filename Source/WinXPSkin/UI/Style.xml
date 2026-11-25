@@ -1,17 +1,7 @@
 <Styles>
   <Style ref.Path="(//Bounds + //Table + //RepeatStack + //RepeatFlow)" MinSizeLimitation="LimitToElementAndChildren"/>
   <Style ref.Path="//*.generalBackground" Color-eval="winxpskin::winxpColors.GeneralBackground"/>
-  <Style ref.Path="//*.windowBorder">
-    <att.Color-bind>
-      <![CDATA[
-        cast Color let margin = self.CustomFramePadding in (
-          (not self.Border) or (margin.left + margin.top + margin.right + margin.bottom == 0) ? winxpskin::winxpColors.Transparent :
-          self.VisuallyEnabled and self.Activated ? winxpskin::winxpColors.WindowBorderActive :
-          winxpskin::winxpColors.WindowBorderInactive
-        )
-      ]]>
-    </att.Color-bind>
-  </Style>
+  <Style ref.Path="//*.windowBorder" Color-bind="self.VisuallyEnabled and self.Activated ? winxpskin::winxpColors.WindowBorderActive : winxpskin::winxpColors.WindowBorderInactive"/>
   <Style ref.Path="//*.windowTitle">
     <att.Color-bind>
       <![CDATA[
@@ -82,28 +72,7 @@
   <Style ref.Path="//*.ribbonGroupBorder" Color-eval="winxpskin::winxpColors.RibbonBorder"/>
   <Style ref.Path="//*.ribbonGroupTitle" Color-eval="winxpskin::winxpColors.RibbonGroupText"/>
   <Style ref.Path="//*.ribbonMenuBorder" Color-eval="winxpskin::winxpColors.MenuBorder"/>
-  <Style ref.Path="//*.ribbonExpandableArrow">
-    <att.BorderColor-bind>
-      <![CDATA[
-        cast Color let state = self.State in (
-          not self.VisuallyEnabled ? winxpskin::winxpColors.RibbonExpandingArrow :
-          state == ButtonState::Pressed ? winxpskin::winxpColors.RibbonExpandingArrowPressed :
-          state == ButtonState::Active ? winxpskin::winxpColors.RibbonExpandingArrow :
-          winxpskin::winxpColors.RibbonExpandingArrow
-        )
-      ]]>
-    </att.BorderColor-bind>
-    <att.BackgroundColor-bind>
-      <![CDATA[
-        cast Color let state = self.State in (
-          not self.VisuallyEnabled ? winxpskin::winxpColors.Transparent :
-          state == ButtonState::Pressed ? winxpskin::winxpColors.RibbonExpandingArrowPressed :
-          state == ButtonState::Active ? winxpskin::winxpColors.RibbonExpandingArrow :
-          winxpskin::winxpColors.Transparent
-        )
-      ]]>
-    </att.BackgroundColor-bind>
-  </Style>
+  <Style ref.Path="//*.ribbonExpandableArrow" BorderColor-bind="self.VisuallyEnabled and self.State == ButtonState::Pressed ? winxpskin::winxpColors.RibbonExpandingArrowPressed : winxpskin::winxpColors.RibbonExpandingArrow" BackgroundColor-bind="self.VisuallyEnabled and self.State == ButtonState::Pressed ? winxpskin::winxpColors.RibbonExpandingArrowPressed : winxpskin::winxpColors.RibbonExpandingArrow"/>
   <Style ref.Path="//*.documentBoxBackgroundAndColor" BaselineDocument-eval="winxpskin::CreateBaselineDocument()">
     <att.CaretColor-eval>winxpskin::winxpColors.TextBright</att.CaretColor-eval>
     <SolidBackground Color-eval="winxpskin::winxpColors.ContentBackground"/>

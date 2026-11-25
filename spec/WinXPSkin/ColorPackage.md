@@ -6,17 +6,17 @@ scrollbars, green progress chunks and a vivid blue caption should be
 recognizable. Disabled, focused, selected and hovered states must remain
 legible and distinct. Tooltips and keytips use pale-yellow surfaces.
 
-Every skin color belongs to `winxpskin::ColorPackage`, including transparency
-and helper artwork. The package is declared in
+Every skin color belongs to `winxpskin::ColorPackage`, including colors
+used for helper artwork. The package is declared in
 [WinXPSkin.xml](../../Source/WinXPSkin/UI/WinXPSkin.xml). The tables below define
 required uses; provenance and integration belong in
 [doc/WinXPSkin.md](../../doc/WinXPSkin.md).
 
-`ButtonColors` has six fields: `Border` for the outer outline, `Inner` for
+`ButtonColors` uses `Border` for the outer outline, `Inner` for
 its inner accent, `G1`/`G2` for the face gradient, `Text` for text/arrows or
 grip highlights, and `Bullet` for marks or auxiliary chrome. Flat faces use
-equal gradient endpoints. Transparent normal toolbar/ribbon states must reveal the intended
-background, without painting an opaque rectangle over it.
+equal gradient endpoints. The `HideBackground` flag leaves the underlying surface visible
+on resting commands and rows. The selected state controls check and radio marks.
 
 `EditorColors` has `Border` and `Background`, shared by editors and the
 outer borders of list/tree controls. It does not define item selection.
@@ -30,7 +30,7 @@ outer borders of list/tree controls. It does not define item selection.
 | `ButtonFocused` | Enabled, focused pushbutton at rest, with a blue inner rim. |
 | `ButtonPressed` | Pressed pushbutton with an inset face. |
 | `ButtonDisabled` | Disabled pushbutton face, border and foreground. |
-| `ItemNormal` | Transparent normal list/tree/gallery item and calendar-date chrome. |
+| `ItemNormal` | Leaves the backing visible on resting list, tree, gallery and calendar items. |
 | `ItemHovered` | Pale-blue hovered list/tree/gallery item and calendar-date chrome. |
 | `ItemSelected` | Pale selected or pressed list/tree/gallery item and calendar-date chrome with a blue outline. |
 | `ItemDisabled` | Muted disabled list/tree/gallery item and calendar-date chrome. |
@@ -69,11 +69,11 @@ outer borders of list/tree controls. It does not define item selection.
 | `TabHovered` | Hovered or pressed unselected tab header. |
 | `TabSelected` | Selected tab header joined visually to its near-white page. |
 | `TabDisabled` | Disabled tab face, outline and foreground. |
-| `RibbonButtonNormal` | Transparent normal command face shared with the default toolstrip palette. |
+| `RibbonButtonNormal` | Leaves the ribbon surface visible behind a resting command, as in the default toolstrip palette. |
 | `RibbonButtonActive` | Pale blue hovered command face with the toolstrip’s blue outline. |
 | `RibbonButtonPressed` | Deeper blue toolstrip face for a pressed command or open dropdown. |
 | `RibbonButtonSelected` | Selected command face with the toolstrip’s gray-blue fill and blue outline. |
-| `RibbonButtonDisabled` | Transparent disabled ribbon command chrome with disabled foreground. |
+| `RibbonButtonDisabled` | Leaves the ribbon surface visible and supplies the disabled foreground. |
 
 ## Editor packages
 
@@ -92,7 +92,6 @@ outer borders of list/tree controls. It does not define item selection.
 | `GeneralBorder` | General control outlines and generic scroll-view borders. |
 | `GeneralAccent` | Document selection background and focused combo-box text background. |
 | `ContentBackground` | White document, list and tree content surfaces. |
-| `Transparent` | Fully transparent backgrounds and the alpha for hidden chrome/marks. |
 | `TextNormal` | Ordinary enabled labels, control/list text, document-label/viewer carets and shared split arrows. |
 | `TextBright` | Default document/calendar foreground and text-box caret. |
 | `TextSecondary` | Secondary calendar text for adjacent-month dates. |

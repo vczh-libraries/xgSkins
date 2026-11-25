@@ -2,6 +2,10 @@
 
 <!-- When a new first level category is added, keep the following order: Vlpp, VlppOS, VlppRegex, VlppReflection, VlppParser2, Workflow, GacUI, others -->
 
+## Workflow
+
+- [A bound polygon point list can crash GacGen during template validation.](Workflow/BoundPolygonPoints.md)
+
 ## GacUI
 
 - **P1**
@@ -18,7 +22,7 @@
   - [A selected calendar day keeps its month’s text color when the button changes to its selection color.](GacUI/SelectedCalendarDayForeground.md)
 - **TO BE TRIAGED**
   - [Selecting a list or tree row changes its background while its label keeps the normal text color.](GacUI/SelectedItemForeground.md)
-  - [GDI draws the Windows 11 tab hover tint as solid black or white.](GacUI/GdiTabHoverOpacity.md)
+  - [GDI draws partial-alpha fills as opaque. Win11Skin uses solid hover colors.](GacUI/GdiTabHoverOpacity.md)
 
 ## FullControlTest
 

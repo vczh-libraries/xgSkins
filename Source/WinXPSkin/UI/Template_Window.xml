@@ -98,7 +98,9 @@
           </Table>
         </Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBorder ref.Style="windowBorder" Shape="shapeType:RoundRect radiusX:5 radiusY:5"/>
+          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="let margin = self.CustomFramePadding in (self.Border and margin.left + margin.top + margin.right + margin.bottom != 0)">
+            <SolidBorder ref.Style="windowBorder" Shape="shapeType:RoundRect radiusX:5 radiusY:5"/>
+          </Bounds>
 
           <Bounds AlignmentToParent-bind="{left:(self.CustomFramePadding.left &gt; 0 ? 4 : 0) top:(self.CustomFramePadding.top + clientCell.CachedBounds.y1)
                                           right:(self.CustomFramePadding.right &gt; 0 ? 4 : 0) bottom:(self.CustomFramePadding.bottom &gt; 0 ? 4 : 0)}">

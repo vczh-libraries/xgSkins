@@ -25,7 +25,9 @@
 
   <Instance name="CustomFrameWindowTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::CustomFrameWindowTemplate" ref.Styles="res://UbuntuSkin/Style">
+      <ref.Members><![CDATA[prop MaximizeGlyph : Color = ubuntuColors.HeaderInk {}]]></ref.Members>
       <WindowTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.MaximizeGlyph-bind>self.VisuallyEnabled and self.Activated and self.MaximizedBox ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk</att.MaximizeGlyph-bind>
         <att.CustomFrameEnabled>true</att.CustomFrameEnabled>
         <att.TooltipTemplate>ubuntuskin::TooltipTemplate</att.TooltipTemplate>
 
@@ -66,7 +68,9 @@
           <SolidBackground Color-eval="ubuntuColors.FrameBorder"/>
         </Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBorder ref.Style="windowBorder"/>
+          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="let margin = self.CustomFramePadding in (self.Border and margin.left + margin.top + margin.right + margin.bottom != 0)">
+            <SolidBorder ref.Style="windowBorder"/>
+          </Bounds>
 
           <Bounds AlignmentToParent-bind="{left:(self.CustomFramePadding.left &gt; 0 ? 4 : 0) top:(self.CustomFramePadding.top + clientCell.CachedBounds.y1)
                                           right:(self.CustomFramePadding.right &gt; 0 ? 4 : 0) bottom:(self.CustomFramePadding.bottom &gt; 0 ? 4 : 0)}">
@@ -135,26 +139,19 @@
                 <att.Visible-bind>self.MinimizedBox or self.MaximizedBox</att.Visible-bind>
                 <att.ContainerComposition-set>
                   <BoundsComposition Visible-bind="not self.Maximized" AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:24 y:24" MinSizeLimitation="LimitToElement">
-                    <Polygon BorderColor-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk" BackgroundColor-eval="ubuntuColors.Clear" Size="x:8 y:8">
-                      <att.Points>
-                        <Point>x:0 y:0</Point><Point>x:7 y:0</Point><Point>x:7 y:7</Point><Point>x:0 y:7</Point>
-                      </att.Points>
-                    </Polygon>
+                    <PartialView WidthRatio="0.5" WidthPageSize="0" HeightRatio="0.5" HeightPageSize="0" PreferredMinSize="x:8 y:8">
+                      <SolidBorder Color-bind="self.MaximizeGlyph"/>
+                    </PartialView>
                   </BoundsComposition>
                   <BoundsComposition Visible-bind="self.Maximized" AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:24 y:24" MinSizeLimitation="LimitToElement">
-                    <Polygon BorderColor-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk" BackgroundColor-eval="ubuntuColors.Clear" Size="x:10 y:10">
-                      <att.Points>
-                        <Point>x:3 y:0</Point><Point>x:9 y:0</Point><Point>x:9 y:6</Point>
-                        <Point>x:6 y:6</Point><Point>x:6 y:3</Point><Point>x:3 y:3</Point>
-                      </att.Points>
-                    </Polygon>
-                    <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-                      <Polygon BorderColor-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? ubuntuColors.HeaderInk : ubuntuColors.InactiveHeaderInk" BackgroundColor-eval="ubuntuColors.Clear" Size="x:10 y:10">
-                        <att.Points>
-                          <Point>x:0 y:3</Point><Point>x:6 y:3</Point><Point>x:6 y:9</Point><Point>x:0 y:9</Point>
-                        </att.Points>
-                      </Polygon>
-                    </Bounds>
+                    <PartialView WidthRatio="0.5" WidthPageSize="0" HeightRatio="0.5" HeightPageSize="0" PreferredMinSize="x:10 y:10">
+                      <!-- Draw the exposed edges of the rear window around the front outline. -->
+                      <Bounds ExpectedBounds="x1:3 y1:0 x2:10 y2:1"><SolidBackground Color-bind="self.MaximizeGlyph"/></Bounds>
+                      <Bounds ExpectedBounds="x1:9 y1:1 x2:10 y2:7"><SolidBackground Color-bind="self.MaximizeGlyph"/></Bounds>
+                      <Bounds ExpectedBounds="x1:3 y1:1 x2:4 y2:3"><SolidBackground Color-bind="self.MaximizeGlyph"/></Bounds>
+                      <Bounds ExpectedBounds="x1:7 y1:6 x2:9 y2:7"><SolidBackground Color-bind="self.MaximizeGlyph"/></Bounds>
+                      <Bounds AlignmentToParent="left:0 top:3 right:3 bottom:0"><SolidBorder Color-bind="self.MaximizeGlyph"/></Bounds>
+                    </PartialView>
                   </BoundsComposition>
                 </att.ContainerComposition-set>
               </Button>

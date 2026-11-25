@@ -82,7 +82,7 @@
 
   <Instance name="DateButtonTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win11skin::DateButtonTemplate" xmlns:x="win11skin::*">
-      <x:ItemBackgroundTemplate ref.Name="self" ShowIndicator="false">
+      <x:ItemBackgroundTemplate ref.Name="self" ShowIndicator="false" OnCanvas="true">
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Selected and self.VisuallyEnabled">
           <SolidBorder Color-eval="win11Colors.Accent" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
         </Bounds>

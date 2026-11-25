@@ -6,8 +6,8 @@ feedback, green progress and pale-blue ribbon should remain recognizable across
 all controls. Disabled, focused, selected and hovered states must remain
 distinguishable. Tooltip and keytip surfaces are pale yellow.
 
-Every skin color belongs to `winvistaskin::ColorPackage`, including transparent
-colors and colors used only by a helper template. The package is declared in
+Every skin color belongs to `winvistaskin::ColorPackage`, including colors
+used only by a helper template. The package is declared in
 [WinVistaSkin.xml](../../Source/WinVistaSkin/UI/WinVistaSkin.xml). The following names state
 the purpose of each item; design references and frame details are documented in
 [doc/WinVistaSkin.md](../../doc/WinVistaSkin.md).
@@ -42,8 +42,9 @@ surface, `G1`/`G2` for the first gradient and `G3`/`G4` for the second gradient,
 `Text` for foreground text or arrows, and `Bullet` for a check/radio mark.
 Pushbuttons use the two gradients as upper/lower halves; check/radio controls
 use them as nested diagonal gradients. Menu-item packages use `G1`/`G2` for the
-row gradient and `G3`/`G4` for the icon-gutter bevel. A transparent mark or
-background retains its RGB value while its alpha becomes zero.
+row gradient and `G3`/`G4` for the icon-gutter bevel. Set `HideBackground` to leave the parent surface visible.
+Animated faces blend through opaque RGB values and stop drawing at the idle endpoint.
+Unchecked marks blend into their face before the mark is hidden.
 
 | ColorPackage item | Required use |
 | --- | --- |
@@ -55,10 +56,10 @@ background retains its RGB value while its alpha becomes zero.
 | `CheckedHovered` | Hovered checkbox/radio frame, gradients, text and selected mark. |
 | `CheckedPressed` | Pressed checkbox/radio frame, gradients, text and selected mark. |
 | `CheckedDisabled` | Disabled checkbox/radio frame, gradients, text and selected mark. |
-| `ItemNormal` | Transparent normal list/tree/gallery item and calendar-date chrome. |
+| `ItemNormal` | Leaves the backing visible on resting list, tree, gallery and calendar items. |
 | `ItemHovered` | Pale-blue hovered list/tree/gallery item and calendar-date chrome. |
 | `ItemSelected` | Blue selected or pressed list/tree/gallery item and calendar-date chrome. |
-| `ItemDisabled` | Transparent disabled list/tree/gallery item and calendar-date chrome with disabled foreground. |
+| `ItemDisabled` | Leaves the backing visible on disabled list, tree, gallery and calendar items and supplies the disabled foreground. |
 | `TabNormal` | Normal unselected tab header. |
 | `TabHovered` | Hovered or pressed unselected tab header. |
 | `TabSelected` | Selected tab header joined visually to its white page. |
@@ -103,7 +104,6 @@ item selection colors.
 | `GeneralAccent` | Document selection background. |
 | `ContentBackground` | White content surfaces and selected-page interiors. |
 | `ContentBorder` | Light group-box border and shared inset surfaces. |
-| `Transparent` | Fully transparent backgrounds and the alpha for hidden chrome/marks. |
 | `TextNormal` | Ordinary enabled labels, control/list text, active caption text and editor caret. |
 | `TextBright` | Primary document/calendar foreground, document-label caret and active shared arrows. |
 | `TextSecondary` | Secondary calendar text, secondary glyphs and inactive detail text. |
@@ -189,12 +189,12 @@ item selection colors.
 | ColorPackage item | Required use |
 | --- | --- |
 | `WindowBorderActive` | Active custom-frame outline. |
-| `CaptionReflection`, `CaptionReflectionEdge` | Top and bottom stops of the gloss band across the title and caption buttons. |
+| `CaptionReflection`, `CaptionReflectionEdge` | Tints mixed with each caption or button surface at the top and bottom of the gloss band. |
 | `CaptionHalo` | Light offset behind title text on colored glass. |
 | `CaptionButtonTop`, `CaptionButtonBottom` | Resting caption-button face. |
 | `CaptionButtonHotTop`, `CaptionButtonHotBottom` | Cyan hover highlight on minimize and maximize. |
 | `CaptionButtonGlyph` | White minimize, maximize and restore marks. |
-| `ProgressGlow` | Short highlight at the advancing edge of the green progress fill. |
+| `ProgressGlowStart`, `ProgressGlow` | Dark and light tints sampled along the advancing edge of the progress fill. The strongest highlight is at the tip. |
 | `WindowCaptionTop` | Pale blue at the outside edges of the active glass frame. |
 | `WindowCaptionBottom` | Deeper blue toward the center of the active glass caption and the bottom frame edge. |
 | `WindowCaptionInactive` | Inactive caption surface. |

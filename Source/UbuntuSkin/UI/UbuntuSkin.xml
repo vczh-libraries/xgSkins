@@ -31,7 +31,6 @@
         Focus : Color;
         SelectedText : Color;
         SelectionBackground : Color;
-        Clear : Color;
         HoverSurface : Color;
         PressedSurface : Color;
         SelectedSurface : Color;
@@ -85,14 +84,13 @@
         return { Border: border; G1: face; G2: face; Text: text; Bullet: bullet; };
       }
 
-      func Transparent(color : Color) : Color
+      func UnpaintedButtonColors(surface : Color, text : Color) : ButtonColors
       {
-        return {r:color.r; g:color.g; b:color.b; a:0;};
+        return { HideBackground: true; Border: surface; G1: surface; G2: surface; Text: text; Bullet: text; };
       }
 
       func CreateDefaultColorPackage() : ColorPackage
       {
-        var clear = cast Color "#00000000";
         var window = cast Color "#FAFAFA";
         var view = cast Color "#FFFFFF";
         var entry = cast Color "#EBEBEB";
@@ -132,7 +130,6 @@
           Focus: focus;
           SelectedText: cast Color "#6B4132";
           SelectionBackground: cast Color "#E4BAAB";
-          Clear: clear;
           HoverSurface: cast Color "#E2E2E2";
           PressedSurface: cast Color "#C5C5C5";
           SelectedSurface: selected;
@@ -150,43 +147,43 @@
           EditorBackdrop: { Border: disabledFace; Background: disabledFace; };
           EditorDisabled: { Border: disabledFace; Background: disabledFace; };
 
-          ButtonNormal: FlatButtonColors(buttonFace, buttonFace, ink, clear);
-          ButtonHovered: FlatButtonColors(hover, hover, ink, clear);
-          ButtonPressed: FlatButtonColors(pressed, pressed, ink, clear);
-          ButtonDisabled: FlatButtonColors(disabledFace, disabledFace, disabledInk, clear);
-          ComboNormal: FlatButtonColors(border, view, ink, clear);
+          ButtonNormal: FlatButtonColors(buttonFace, buttonFace, ink, ink);
+          ButtonHovered: FlatButtonColors(hover, hover, ink, ink);
+          ButtonPressed: FlatButtonColors(pressed, pressed, ink, ink);
+          ButtonDisabled: FlatButtonColors(disabledFace, disabledFace, disabledInk, disabledInk);
+          ComboNormal: FlatButtonColors(border, view, ink, ink);
 
           CheckedNormal: FlatButtonColors(cast Color "#D5D5D5", view, ink, view);
           CheckedHovered: FlatButtonColors(cast Color "#B5B5B5", window, ink, view);
           CheckedPressed: FlatButtonColors(cast Color "#B5B5B5", cast Color "#F0F0F0", ink, view);
           CheckedDisabled: FlatButtonColors(hover, disabledFace, disabledInk, window);
 
-          ItemNormal: FlatButtonColors(clear, clear, ink, clear);
-          ItemHovered: FlatButtonColors(clear, cast Color "#F7F7F7", ink, clear);
-          ItemPressed: FlatButtonColors(clear, cast Color "#F0F0F0", ink, clear);
-          ItemSelected: FlatButtonColors(clear, selected, ink, clear);
-          ItemDisabled: FlatButtonColors(clear, clear, disabledInk, clear);
+          ItemNormal: UnpaintedButtonColors(view, ink);
+          ItemHovered: FlatButtonColors(cast Color "#F7F7F7", cast Color "#F7F7F7", ink, ink);
+          ItemPressed: FlatButtonColors(cast Color "#F0F0F0", cast Color "#F0F0F0", ink, ink);
+          ItemSelected: FlatButtonColors(selected, selected, ink, ink);
+          ItemDisabled: UnpaintedButtonColors(view, disabledInk);
 
-          TabNormal: FlatButtonColors(border, window, ink, clear);
-          TabHovered: FlatButtonColors(border, window, ink, clear);
+          TabNormal: FlatButtonColors(border, window, ink, ink);
+          TabHovered: FlatButtonColors(border, window, ink, ink);
           TabSelected: FlatButtonColors(cast Color "#F2A98F", window, ink, accent);
 
-          HeaderActionNormal: FlatButtonColors(clear, window, ink, clear);
-          HeaderActionHovered: FlatButtonColors(border, hover, ink, clear);
-          HeaderActionPressed: FlatButtonColors(accent, hover, ink, clear);
-          HeaderActionDisabled: FlatButtonColors(clear, window, disabledInk, clear);
+          HeaderActionNormal: FlatButtonColors(window, window, ink, ink);
+          HeaderActionHovered: FlatButtonColors(border, hover, ink, ink);
+          HeaderActionPressed: FlatButtonColors(accent, hover, ink, ink);
+          HeaderActionDisabled: FlatButtonColors(window, window, disabledInk, disabledInk);
 
-          CommandNormal: FlatButtonColors(Transparent(border), Transparent(disabledFace), ink, clear);
-          CommandHovered: FlatButtonColors(border, disabledFace, ink, clear);
-          CommandPressed: FlatButtonColors(border, commandPressed, ink, clear);
-          CommandOpen: FlatButtonColors(cast Color "#BABABA", window, ink, clear);
+          CommandNormal: UnpaintedButtonColors(window, ink);
+          CommandHovered: FlatButtonColors(border, disabledFace, ink, ink);
+          CommandPressed: FlatButtonColors(border, commandPressed, ink, ink);
+          CommandOpen: FlatButtonColors(cast Color "#BABABA", window, ink, ink);
           CommandSelected: FlatButtonColors(border, commandPressed, ink, controlAccent);
-          CommandDisabled: FlatButtonColors(Transparent(border), Transparent(disabledFace), disabledInk, clear);
+          CommandDisabled: UnpaintedButtonColors(window, disabledInk);
 
-          ScrollHandleNormal: FlatButtonColors(clear, cast Color "#898989", ink, clear);
-          ScrollHandleActive: FlatButtonColors(clear, cast Color "#727272", ink, clear);
-          ScrollHandlePressed: FlatButtonColors(clear, cast Color "#595959", ink, clear);
-          ScrollHandleDisabled: FlatButtonColors(clear, clear, disabledInk, clear);
+          ScrollHandleNormal: FlatButtonColors(cast Color "#898989", cast Color "#898989", ink, ink);
+          ScrollHandleActive: FlatButtonColors(cast Color "#727272", cast Color "#727272", ink, ink);
+          ScrollHandlePressed: FlatButtonColors(cast Color "#595959", cast Color "#595959", ink, ink);
+          ScrollHandleDisabled: UnpaintedButtonColors(window, disabledInk);
         };
       }
 

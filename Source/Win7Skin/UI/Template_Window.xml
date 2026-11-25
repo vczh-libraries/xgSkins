@@ -66,7 +66,9 @@
 
         <GradientBackground Direction="Vertical" Color1-bind="self.Activated ? win7Colors.WindowCaptionTop : win7Colors.WindowCaptionInactive" Color2-bind="self.Activated ? win7Colors.WindowCaptionBottom : win7Colors.WindowCaptionInactive"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBorder ref.Style="windowBorder"/>
+          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="let margin = self.CustomFramePadding in (self.Border and margin.left + margin.top + margin.right + margin.bottom != 0)">
+            <SolidBorder ref.Style="windowBorder"/>
+          </Bounds>
 
           <Bounds AlignmentToParent-bind="{left:(self.CustomFramePadding.left &gt; 0 ? 4 : 0) top:(self.CustomFramePadding.top + clientCell.CachedBounds.y1)
                                           right:(self.CustomFramePadding.right &gt; 0 ? 4 : 0) bottom:(self.CustomFramePadding.bottom &gt; 0 ? 4 : 0)}">

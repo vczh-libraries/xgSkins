@@ -29,13 +29,12 @@ UbuntuSkin follows the light appearance in the supplied Ubuntu 26.04 LTS screens
 | `SelectedSurface` | `#E4E4E4` | Selected calendar day behind the current- or adjacent-month text. |
 | `Track` | `#E2E2E2` | Unfilled scale and progress track. |
 | `KeytipBackground`, `KeytipText` | `#323232`, `#FFFFFF` | Tooltips and keyboard access keys. A default label inside a tooltip uses the light foreground. |
-| `Clear` | Transparent | Unpainted surfaces and marks. |
 
 The window title and its three right-hand actions sit above a separate command area. All three actions have a gray disc and dark glyph in an active window. [Writer frame and menu](../../screenshots/LibreOfficeReference/MenuBarAndDropdownMenu.png).
 
 ## Control states
 
-`ButtonColors` contains the border, the two face colors `G1` and `G2`, the text and the indicator color `Bullet`. Both face colors match in the default package. An `EditorColors` value contains a border and a background.
+`ButtonColors` contains the border, the two face colors `G1` and `G2`, the text and the indicator color `Bullet`. Both face colors match in the default package. `HideBackground` leaves resting commands and rows unpainted. An `EditorColors` value contains a border and a background.
 
 | Fields | Use |
 | --- | --- |

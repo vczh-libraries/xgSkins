@@ -68,7 +68,6 @@
         GeneralBorder : Color;
         GeneralAccent : Color;
         ContentBackground : Color;
-        Transparent : Color;
         WindowBorderActive : Color;
         TextSecondary : Color;
         TextDisabled : Color;
@@ -162,9 +161,10 @@
           TreeArrowBackgroundHovered: cast Color "#82DFFB";
           ListItemSeparator: cast Color "#DCDCDC";
           ItemNormal: {
-            Border: cast Color "#70C0E700";
-            G1: cast Color "#E5F3FB00";
-            G2: cast Color "#E5F3FB00";
+            HideBackground: true;
+            Border: cast Color "#FFFFFF";
+            G1: cast Color "#FFFFFF";
+            G2: cast Color "#FFFFFF";
             Text: cast Color "#000000";
             Bullet: cast Color "#000000";
           };
@@ -183,9 +183,10 @@
             Bullet: cast Color "#000000";
           };
           ItemDisabled: {
-            Border: cast Color "#70C0E700";
-            G1: cast Color "#E5F3FB00";
-            G2: cast Color "#E5F3FB00";
+            HideBackground: true;
+            Border: cast Color "#FFFFFF";
+            G1: cast Color "#FFFFFF";
+            G2: cast Color "#FFFFFF";
             Text: cast Color "#838383";
             Bullet: cast Color "#000000";
           };
@@ -267,9 +268,10 @@
             Bullet: cast Color "#707070";
           };
           RibbonButtonNormal: {
-            Border: cast Color "#F0F0F000";
-            G1: cast Color "#F0F0F000";
-            G2: cast Color "#F0F0F000";
+            HideBackground: true;
+            Border: cast Color "#F5F6F7";
+            G1: cast Color "#F5F6F7";
+            G2: cast Color "#F5F6F7";
             Text: cast Color "#000000";
             Bullet: cast Color "#000000";
           };
@@ -295,9 +297,10 @@
             Bullet: cast Color "#000000";
           };
           RibbonButtonDisabled: {
-            Border: cast Color "#F0F0F000";
-            G1: cast Color "#F0F0F000";
-            G2: cast Color "#F0F0F000";
+            HideBackground: true;
+            Border: cast Color "#F5F6F7";
+            G1: cast Color "#F5F6F7";
+            G2: cast Color "#F5F6F7";
             Text: cast Color "#838383";
             Bullet: cast Color "#000000";
           };
@@ -337,9 +340,10 @@
             Bullet: cast Color "#000000";
           };
           MenuBarButtonNormal: {
-            Border: cast Color "#F5F6F700";
-            G1: cast Color "#F5F6F700";
-            G2: cast Color "#F5F6F700";
+            HideBackground: true;
+            Border: cast Color "#F5F6F7";
+            G1: cast Color "#F5F6F7";
+            G2: cast Color "#F5F6F7";
             Text: cast Color "#000000";
             Bullet: cast Color "#000000";
           };
@@ -358,9 +362,10 @@
             Bullet: cast Color "#000000";
           };
           MenuBarButtonDisabled: {
-            Border: cast Color "#F5F6F700";
-            G1: cast Color "#F5F6F700";
-            G2: cast Color "#F5F6F700";
+            HideBackground: true;
+            Border: cast Color "#F5F6F7";
+            G1: cast Color "#F5F6F7";
+            G2: cast Color "#F5F6F7";
             Text: cast Color "#838383";
             Bullet: cast Color "#000000";
           };
@@ -410,7 +415,6 @@
           GeneralBorder: cast Color "#ABADB3";
           GeneralAccent: cast Color "#3399FF";
           ContentBackground: cast Color "#FFFFFF";
-          Transparent: cast Color "#00000000";
           WindowBorderActive: cast Color "#92ACC6";
           TextSecondary: cast Color "#838383";
           TextDisabled: cast Color "#838383";

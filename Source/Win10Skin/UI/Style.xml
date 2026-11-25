@@ -1,17 +1,7 @@
 <Styles>
   <Style ref.Path="(//Bounds + //Table + //RepeatStack + //RepeatFlow)" MinSizeLimitation="LimitToElementAndChildren"/>
   <Style ref.Path="//*.generalBackground" Color-eval="win10skin::win10Colors.Page"/>
-  <Style ref.Path="//*.windowBorder">
-    <att.Color-bind>
-      <![CDATA[
-        cast Color let margin = self.CustomFramePadding in (
-          (not self.Border) or (margin.left + margin.top + margin.right + margin.bottom == 0) ? win10skin::win10Colors.Transparent :
-          self.VisuallyEnabled and self.Activated ? win10skin::win10Colors.WindowEdge :
-          win10skin::win10Colors.WindowEdgeInactive
-        )
-      ]]>
-    </att.Color-bind>
-  </Style>
+  <Style ref.Path="//*.windowBorder" Color-bind="self.VisuallyEnabled and self.Activated ? win10skin::win10Colors.WindowEdge : win10skin::win10Colors.WindowEdgeInactive"/>
   <Style ref.Path="//*.windowTitle">
     <att.Color-bind>
       <![CDATA[
@@ -82,28 +72,7 @@
   <Style ref.Path="//*.ribbonGroupBorder" Color-eval="win10skin::win10Colors.Divider"/>
   <Style ref.Path="//*.ribbonGroupTitle" Color-eval="win10skin::win10Colors.SecondaryText"/>
   <Style ref.Path="//*.ribbonMenuBorder" Color-eval="win10skin::win10Colors.Outline"/>
-  <Style ref.Path="//*.ribbonExpandableArrow">
-    <att.BorderColor-bind>
-      <![CDATA[
-        cast Color let state = self.State in (
-          not self.VisuallyEnabled ? win10skin::win10Colors.SecondaryText :
-          state == ButtonState::Pressed ? win10skin::win10Colors.Text :
-          state == ButtonState::Active ? win10skin::win10Colors.SecondaryText :
-          win10skin::win10Colors.SecondaryText
-        )
-      ]]>
-    </att.BorderColor-bind>
-    <att.BackgroundColor-bind>
-      <![CDATA[
-        cast Color let state = self.State in (
-          not self.VisuallyEnabled ? win10skin::win10Colors.Transparent :
-          state == ButtonState::Pressed ? win10skin::win10Colors.Text :
-          state == ButtonState::Active ? win10skin::win10Colors.SecondaryText :
-          win10skin::win10Colors.Transparent
-        )
-      ]]>
-    </att.BackgroundColor-bind>
-  </Style>
+  <Style ref.Path="//*.ribbonExpandableArrow" BorderColor-bind="self.VisuallyEnabled and self.State == ButtonState::Pressed ? win10skin::win10Colors.Text : win10skin::win10Colors.SecondaryText" BackgroundColor-bind="self.VisuallyEnabled and self.State == ButtonState::Pressed ? win10skin::win10Colors.Text : win10skin::win10Colors.SecondaryText"/>
   <Style ref.Path="//*.documentBoxBackgroundAndColor" BaselineDocument-eval="win10skin::CreateBaselineDocument()">
     <att.CaretColor-eval>win10skin::win10Colors.Text</att.CaretColor-eval>
     <SolidBackground Color-eval="win10skin::win10Colors.Page"/>

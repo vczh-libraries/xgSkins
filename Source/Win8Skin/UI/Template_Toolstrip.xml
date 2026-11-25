@@ -234,8 +234,8 @@
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? win8Colors.MenuBarButtonDisabled : self.SubMenuOpening or self.State == ButtonState::Pressed ? win8Colors.MenuBarButtonPressed : self.State == ButtonState::Active ? win8Colors.MenuBarButtonActive : win8Colors.MenuBarButtonNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground">
           <GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/>
         </Bounds>
 
@@ -280,7 +280,9 @@
           </att.Columns>
 
           <Cell Site="row:1 column:1 rowSpan:3">
-            <SolidBackground Color-bind="self.Selected ? win8Colors.MenuItemButtonNormalActive.G2 : win8Colors.Transparent"/>
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Selected">
+              <SolidBackground Color-eval="win8Colors.MenuItemButtonNormalActive.G2"/>
+            </Bounds>
             <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" MinSizeLimitation="NoLimit" Visible-bind="self.Selected and self.Image is null"><Polygon BorderColor-bind="self.Colors.Text" BackgroundColor-bind="self.Colors.Text" Size="x:10 y:10"><att.Points><Point>x:1 y:5</Point><Point>x:4 y:8</Point><Point>x:9 y:1</Point><Point>x:4 y:6</Point></att.Points></Polygon></Bounds>
             <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/></Bounds>
           </Cell>

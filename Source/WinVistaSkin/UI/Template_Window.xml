@@ -26,6 +26,29 @@
     </Instance>
   </Instance>
 
+  <Instance name="CaptionReflectionRowTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::CaptionReflectionRowTemplate">
+      <ref.Members><![CDATA[
+        prop Step : int = 0 {}
+
+        func Reflection(surface : Color, step : int) : Color
+        {
+          var top = MixRgb(surface, vistaColors.CaptionReflection, 196);
+          var bottom = MixRgb(surface, vistaColors.CaptionReflectionEdge, 56);
+          return MixRgb(top, bottom, step);
+        }
+      ]]></ref.Members>
+      <ControlTemplate ref.Name="self" PreferredMinSize="y:1">
+        <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
+          <att.Rows><_>composeType:Percentage percentage:1.0</_></att.Rows>
+          <att.Columns><_>composeType:Percentage percentage:0.5</_><_>composeType:Percentage percentage:0.5</_></att.Columns>
+          <Cell Site="row:0 column:0"><GradientBackground Direction="Horizontal" Color1-bind="self.Reflection(vistaColors.WindowCaptionTop, self.Step)" Color2-bind="self.Reflection(vistaColors.WindowCaptionBottom, self.Step)"/></Cell>
+          <Cell Site="row:0 column:1"><GradientBackground Direction="Horizontal" Color1-bind="self.Reflection(vistaColors.WindowCaptionBottom, self.Step)" Color2-bind="self.Reflection(vistaColors.WindowCaptionTop, self.Step)"/></Cell>
+        </Table>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
   <Instance name="CustomFrameWindowTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="winvistaskin::CustomFrameWindowTemplate" ref.Styles="res://WinVistaSkin/Style">
       <WindowTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
@@ -66,7 +89,9 @@
 
         <GradientBackground Direction="Vertical" Color1-bind="self.Activated ? vistaColors.WindowCaptionTop : vistaColors.WindowCaptionInactive" Color2-bind="self.Activated ? vistaColors.WindowCaptionBottom : vistaColors.WindowCaptionInactive"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBorder ref.Style="windowBorder"/>
+          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="let margin = self.CustomFramePadding in (self.Border and margin.left + margin.top + margin.right + margin.bottom != 0)">
+            <SolidBorder ref.Style="windowBorder"/>
+          </Bounds>
 
           <Table AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Activated">
             <att.Rows><_>composeType:Percentage percentage:1.0</_></att.Rows>
@@ -82,7 +107,18 @@
             </Cell>
           </Table>
           <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:-1" PreferredMinSize="y:12" Visible-bind="self.TitleBar">
-            <GradientBackground Direction="Vertical" Color1-eval="vistaColors.CaptionReflection" Color2-eval="vistaColors.CaptionReflectionEdge"/>
+            <GradientBackground Direction="Vertical" Color1-eval="MixRgb(vistaColors.WindowCaptionInactive, vistaColors.CaptionReflection, 196)" Color2-eval="MixRgb(vistaColors.WindowCaptionInactive, vistaColors.CaptionReflectionEdge, 56)"/>
+            <RepeatStack Direction="Vertical" AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="NoLimit" Visible-bind="self.Activated">
+              <att.ItemTemplate-eval><![CDATA[
+                func(value : object) : presentation::templates::GuiTemplate*
+                {
+                  var row = new CaptionReflectionRowTemplate*();
+                  row.Step = ((cast int value) * 2 + 1) * 255 / 24;
+                  return row;
+                }
+              ]]></att.ItemTemplate-eval>
+              <att.ItemSource-eval>range[0, 12)</att.ItemSource-eval>
+            </RepeatStack>
           </Bounds>
 
           <Bounds AlignmentToParent-bind="{left:(self.CustomFramePadding.left &gt; 0 ? 4 : 0) top:(self.CustomFramePadding.top + clientCell.CachedBounds.y1)
@@ -253,7 +289,7 @@
             </Cell>
             <Cell Site="row:0 column:1" AssociatedHitTestResult="Title">
               <Bounds AlignmentToParent="left:6 top:6 right:4 bottom:4">
-                <SolidLabel Color-eval="vistaColors.CaptionHalo" VerticalAlignment="Center" Text-bind="self.Text" Ellipse="true" Font-bind="self.Font"/>
+                <SolidLabel Color-bind="MixRgb(self.Activated ? vistaColors.WindowCaptionTop : vistaColors.WindowCaptionInactive, vistaColors.CaptionHalo, 184)" VerticalAlignment="Center" Text-bind="self.Text" Ellipse="true" Font-bind="self.Font"/>
               </Bounds>
               <Bounds AlignmentToParent="left:5 top:5 right:5 bottom:5">
                 <SolidLabel ref.Style="windowTitle" Text-bind="self.Text" Ellipse="true" Font-bind="self.Font"/>
@@ -270,10 +306,16 @@
   </Instance>
   <Instance name="CaptionButtonTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="winvistaskin::CaptionButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop FaceTop : Color = vistaColors.WindowCaptionInactive {}
+        prop FaceBottom : Color = vistaColors.WindowCaptionInactive {}
+      ]]></ref.Members>
       <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <GradientBackground Direction="Vertical" Color1-bind="not self.VisuallyEnabled ? vistaColors.WindowCaptionInactive : self.State == ButtonState::Pressed ? vistaColors.ScrollHandlePressed : self.State == ButtonState::Active ? vistaColors.CaptionButtonHotTop : vistaColors.CaptionButtonTop" Color2-bind="not self.VisuallyEnabled ? vistaColors.WindowCaptionInactive : self.State == ButtonState::Pressed ? vistaColors.ScrollHandlePressed : self.State == ButtonState::Active ? vistaColors.CaptionButtonHotBottom : vistaColors.CaptionButtonBottom"/>
+        <att.FaceTop-bind>not self.VisuallyEnabled ? vistaColors.WindowCaptionInactive : self.State == ButtonState::Pressed ? vistaColors.ScrollHandlePressed : self.State == ButtonState::Active ? vistaColors.CaptionButtonHotTop : vistaColors.CaptionButtonTop</att.FaceTop-bind>
+        <att.FaceBottom-bind>not self.VisuallyEnabled ? vistaColors.WindowCaptionInactive : self.State == ButtonState::Pressed ? vistaColors.ScrollHandlePressed : self.State == ButtonState::Active ? vistaColors.CaptionButtonHotBottom : vistaColors.CaptionButtonBottom</att.FaceBottom-bind>
+        <GradientBackground Direction="Vertical" Color1-bind="self.FaceTop" Color2-bind="self.FaceBottom"/>
         <SideAligned Direction="Top" MaxLength="12" MaxRatio="0.48">
-          <GradientBackground Direction="Vertical" Color1-eval="vistaColors.CaptionReflection" Color2-eval="vistaColors.CaptionReflectionEdge"/>
+          <GradientBackground Direction="Vertical" Color1-bind="MixRgb(self.FaceTop, vistaColors.CaptionReflection, 196)" Color2-bind="MixRgb(MixRgb(self.FaceTop, self.FaceBottom, 122), vistaColors.CaptionReflectionEdge, 56)"/>
         </SideAligned>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.VisuallyEnabled ? vistaColors.WindowBorderActive : vistaColors.GeneralBorder"/></Bounds>
         <Bounds ref.Name="container" AlignmentToParent="left:2 top:0 right:2 bottom:2"/>
@@ -282,10 +324,16 @@
   </Instance>
   <Instance name="CaptionCloseButtonTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="winvistaskin::CaptionCloseButtonTemplate" ref.Styles="res://WinVistaSkin/Style">
+      <ref.Members><![CDATA[
+        prop FaceTop : Color = vistaColors.WindowCaptionInactive {}
+        prop FaceBottom : Color = vistaColors.WindowCaptionInactive {}
+      ]]></ref.Members>
       <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <GradientBackground Direction="Vertical" Color1-bind="not self.VisuallyEnabled ? vistaColors.WindowCaptionInactive : self.State == ButtonState::Pressed ? vistaColors.WindowClosePressed : self.State == ButtonState::Active ? vistaColors.WindowCloseHovered : vistaColors.WindowCloseTop" Color2-bind="not self.VisuallyEnabled ? vistaColors.WindowCaptionInactive : self.State == ButtonState::Pressed ? vistaColors.WindowClosePressed : self.State == ButtonState::Active ? vistaColors.WindowCloseHovered : vistaColors.WindowCloseBottom"/>
+        <att.FaceTop-bind>not self.VisuallyEnabled ? vistaColors.WindowCaptionInactive : self.State == ButtonState::Pressed ? vistaColors.WindowClosePressed : self.State == ButtonState::Active ? vistaColors.WindowCloseHovered : vistaColors.WindowCloseTop</att.FaceTop-bind>
+        <att.FaceBottom-bind>not self.VisuallyEnabled ? vistaColors.WindowCaptionInactive : self.State == ButtonState::Pressed ? vistaColors.WindowClosePressed : self.State == ButtonState::Active ? vistaColors.WindowCloseHovered : vistaColors.WindowCloseBottom</att.FaceBottom-bind>
+        <GradientBackground Direction="Vertical" Color1-bind="self.FaceTop" Color2-bind="self.FaceBottom"/>
         <SideAligned Direction="Top" MaxLength="12" MaxRatio="0.48">
-          <GradientBackground Direction="Vertical" Color1-eval="vistaColors.CaptionReflection" Color2-eval="vistaColors.CaptionReflectionEdge"/>
+          <GradientBackground Direction="Vertical" Color1-bind="MixRgb(self.FaceTop, vistaColors.CaptionReflection, 196)" Color2-bind="MixRgb(MixRgb(self.FaceTop, self.FaceBottom, 122), vistaColors.CaptionReflectionEdge, 56)"/>
         </SideAligned>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Shape="shapeType:RoundRect radiusX:2 radiusY:2" Color-bind="self.VisuallyEnabled ? vistaColors.WindowCloseBorder : vistaColors.GeneralBorder"/></Bounds>
         <Bounds ref.Name="container" AlignmentToParent="left:2 top:0 right:2 bottom:2"/>

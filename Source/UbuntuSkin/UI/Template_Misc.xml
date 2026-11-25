@@ -86,7 +86,9 @@
     <Instance ref.CodeBehind="false" ref.Class="ubuntuskin::DateButtonTemplate" ref.Styles="res://UbuntuSkin/Style">
       <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
-          <SolidBackground Color-bind="self.Selected ? ubuntuColors.SelectedSurface : self.State == ButtonState::Pressed ? ubuntuColors.PressedSurface : self.State == ButtonState::Active ? ubuntuColors.HoverSurface : ubuntuColors.Clear"/>
+          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Selected or self.State != ButtonState::Normal">
+            <SolidBackground Color-bind="self.Selected ? ubuntuColors.SelectedSurface : self.State == ButtonState::Pressed ? ubuntuColors.PressedSurface : ubuntuColors.HoverSurface"/>
+          </Bounds>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.Focused or self.Selected">
           <SolidBorder Color-bind="self.Focused ? ubuntuColors.Focus : ubuntuColors.Accent"/>

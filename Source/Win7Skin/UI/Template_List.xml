@@ -4,7 +4,7 @@
       <ref.Members><![CDATA[prop Colors : ButtonColors = win7Colors.ItemNormal {}]]></ref.Members>
       <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? win7Colors.ItemDisabled : self.Selected or self.State == ButtonState::Pressed ? win7Colors.ItemSelected : self.State == ButtonState::Active ? win7Colors.ItemHovered : win7Colors.ItemNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="NoLimit">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="NoLimit" Visible-bind="not self.Colors.HideBackground">
           <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <SolidBackground Color-bind="self.Colors.Background"/>
           </Bounds>

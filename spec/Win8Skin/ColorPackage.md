@@ -7,18 +7,18 @@ surfaces are flat and square; pushbuttons and tab headers retain their subtle
 vertical gradients. Disabled, focused, selected and hovered states must remain
 distinguishable. Tooltips and keytips retain pale-yellow surfaces.
 
-Every skin color belongs to `win8skin::ColorPackage`, including transparency
-and helper artwork. The package is declared in
+Every skin color belongs to `win8skin::ColorPackage`, including colors
+used for helper artwork. The package is declared in
 [Win8Skin.xml](../../Source/Win8Skin/UI/Win8Skin.xml). The following items define
 its required uses; technical provenance and integration are in
 [doc/Win8Skin.md](../../doc/Win8Skin.md).
 
-`ButtonColors` has five fields: `Border` for the outline, `G1`/`G2` for a single
+`ButtonColors` uses `Border` for the outline, `G1`/`G2` for a single
 vertical gradient, `Text` for text/arrows, and `Bullet` for check/radio marks.
 Flat faces give `G1` and `G2` the same color. Menu-item packages use `Bullet`
 for their one-pixel icon-gutter separator and `Text` for the check/submenu glyphs.
-Unchecked marks and hidden normal/disabled menu-bar or ribbon chrome retain
-RGB values with zero alpha. Scrollbar arrows and thumbs have their own state
+The unchecked mark blends into the face. `HideBackground` leaves the parent
+visible in resting or disabled rows, menu headers and ribbon commands. Scrollbar arrows and thumbs have their own state
 packages, separate from pushbuttons and tracker thumbs.
 
 `EditorColors` has `Border` and `Background`, shared by editable text/document
@@ -35,10 +35,10 @@ The Windows 8 Explorer capture shows a selected file with a `#D1E8FF` interior a
 | `ButtonHovered` | Hovered pushbuttons, combo boxes and tracker thumbs. |
 | `ButtonPressed` | Pressed pushbuttons, open combo boxes and pressed tracker thumbs. |
 | `ButtonDisabled` | Disabled pushbuttons, combo boxes and tracker thumbs. |
-| `ItemNormal` | Transparent normal list/tree/gallery item and calendar-date chrome. |
+| `ItemNormal` | Leaves the backing visible on resting list, tree, gallery and calendar items. |
 | `ItemHovered` | Pale-blue hovered list/tree/gallery item and calendar-date chrome. |
 | `ItemSelected` | Blue selected or pressed list/tree/gallery item and calendar-date chrome. |
-| `ItemDisabled` | Transparent disabled list/tree/gallery item and calendar-date chrome with disabled foreground. |
+| `ItemDisabled` | Leaves the backing visible on disabled list, tree, gallery and calendar items and supplies the disabled foreground. |
 | `CheckedNormal` | Normal check/radio frame, flat face, text and selected mark. |
 | `CheckedHovered` | Hovered check/radio frame, flat face, text and selected mark. |
 | `CheckedPressed` | Pressed check/radio frame, flat face, text and selected mark. |
@@ -69,11 +69,11 @@ The Windows 8 Explorer capture shows a selected file with a `#D1E8FF` interior a
 | `TabNormal` | Normal unselected tab header. |
 | `TabHovered` | Hovered or pressed unselected tab header. |
 | `TabSelected` | Selected tab header joined visually to its white page. |
-| `RibbonButtonNormal` | Transparent normal ribbon command chrome over the flat ribbon surface. |
+| `RibbonButtonNormal` | Leaves the flat ribbon surface visible behind a resting command. |
 | `RibbonButtonActive` | Blue hovered ribbon command chrome. |
 | `RibbonButtonPressed` | Blue pressed ribbon command or open dropdown chrome. |
 | `RibbonButtonSelected` | Selected ribbon command with a `#C9E0F7` face and a `#60A1E2` edge. |
-| `RibbonButtonDisabled` | Transparent disabled ribbon command chrome with disabled foreground. |
+| `RibbonButtonDisabled` | Leaves the ribbon surface visible and supplies the disabled foreground. |
 
 ## Editor packages
 | ColorPackage item | Required use |
@@ -90,7 +90,6 @@ The Windows 8 Explorer capture shows a selected file with a `#D1E8FF` interior a
 | `GeneralBorder` | General control outlines and generic scroll-view borders. |
 | `GeneralAccent` | Document selection background. |
 | `ContentBackground` | White content surfaces and selected-page interiors. |
-| `Transparent` | Fully transparent backgrounds and the alpha for hidden chrome/marks. |
 | `TextNormal` | Ordinary enabled labels, control/list text, active caption text and editor caret. |
 | `TextBright` | Primary document/calendar foreground, document-label caret and active shared arrows. |
 | `TextSecondary` | Secondary calendar text, secondary glyphs and inactive detail text. |

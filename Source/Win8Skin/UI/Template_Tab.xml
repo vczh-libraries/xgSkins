@@ -18,8 +18,10 @@
         <att.RibbonHeader-bind>not self.Vertical and (self.Context is RibbonTabPage*)</att.RibbonHeader-bind>
         <att.TabFocused-bind>(cast (TabPage*) self.Context).OwnerTab.Focused ?? false</att.TabFocused-bind>
         <att.Colors-bind>self.Selected ? win8Colors.TabSelected : self.VisuallyEnabled and self.State != ButtonState::Normal ? win8Colors.TabHovered : self.RibbonHeader ? win8Colors.RibbonButtonNormal : win8Colors.TabNormal</att.Colors-bind>
-        <SolidBorder Color-bind="self.Selected and self.RibbonHeader ? win8Colors.RibbonBorder : self.Colors.Border"/>
-        <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:1 top:1 right:1 bottom:(self.Selected ? 0 : 1)})">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground">
+          <SolidBorder Color-bind="self.Selected and self.RibbonHeader ? win8Colors.RibbonBorder : self.Colors.Border"/>
+        </Bounds>
+        <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:1 top:1 right:1 bottom:(self.Selected ? 0 : 1)})" Visible-bind="not self.Colors.HideBackground">
           <GradientBackground Direction-bind="self.Vertical ? GuiGradientBackgroundElement::Direction::Horizontal : GuiGradientBackgroundElement::Direction::Vertical" Color1-bind="self.Selected and self.RibbonHeader ? win8Colors.RibbonBackground : self.Colors.G1" Color2-bind="self.Selected and self.RibbonHeader ? win8Colors.RibbonBackground : self.Colors.G2"/>
         </Bounds>
         <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:1 top:1 right:1 bottom:-1})" PreferredMinSize-bind="self.DecorationAxis.VirtualSizeToRealSize({x:0 y:2})" Visible-bind="self.Highlighted">

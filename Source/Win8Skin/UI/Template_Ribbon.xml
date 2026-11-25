@@ -13,8 +13,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -54,8 +54,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -119,8 +119,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:11 bottom:1">
@@ -165,8 +165,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -211,8 +211,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -279,8 +279,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1" PreferredMinSize="x:9 y:7">
@@ -325,8 +325,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -374,8 +374,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <GradientBackground Direction="Vertical" Color1-bind="self.animation.Current.G1" Color2-bind="self.animation.Current.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -518,12 +518,19 @@
   <Instance name="RibbonGroupExpandButtonTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win8skin::RibbonGroupExpandButtonTemplate" ref.Styles="res://Win8Skin/Style">
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
-        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" MinSizeLimitation="LimitToElementAndChildren">
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" MinSizeLimitation="LimitToElementAndChildren" Visible-bind="not self.VisuallyEnabled or self.State == ButtonState::Normal">
+          <!-- Retrace the outline to leave the center open at rest. -->
           <Polygon ref.Style="ribbonExpandableArrow" Size="x:7 y:7">
             <att.Points>
-              <Point>x:6 y:0</Point>
-              <Point>x:6 y:6</Point>
-              <Point>x:0 y:6</Point>
+              <Point>x:6 y:0</Point><Point>x:6 y:6</Point><Point>x:0 y:6</Point>
+              <Point>x:6 y:0</Point><Point>x:0 y:6</Point><Point>x:6 y:6</Point>
+            </att.Points>
+          </Polygon>
+        </Bounds>
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" MinSizeLimitation="LimitToElementAndChildren" Visible-bind="self.VisuallyEnabled and self.State != ButtonState::Normal">
+          <Polygon ref.Style="ribbonExpandableArrow" Size="x:7 y:7">
+            <att.Points>
+              <Point>x:6 y:0</Point><Point>x:6 y:6</Point><Point>x:0 y:6</Point>
             </att.Points>
           </Polygon>
         </Bounds>

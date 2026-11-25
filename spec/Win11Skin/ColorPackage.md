@@ -15,7 +15,8 @@ WinUI list selection uses the secondary subtle fill at rest, the tertiary subtle
 | `Canvas` | `#F3F3F3` | `#202020` | Title bar, window frame, system-framed window background, ribbon and toolbar base. |
 | `Layer` | `#FFFFFF` | `#2B2B2B` | Custom-frame window client, content pane, page or document surface. |
 | `TabSurface` | `#F9F9F9` | `#282828` | Selected property tab header and pane. |
-| `TabHover` | `#0000000A` | `#FFFFFF0F` | Hovered tab face over the strip. |
+| `TabHover` | `#E9E9E9` | `#2D2D2D` | Hovered horizontal or vertical tab on the canvas strip. |
+| `RibbonTabHover` | `#F5F5F5` | `#373737` | Hovered ribbon tab on the content layer. |
 | `Flyout` | `#F9F9F9` | `#2C2C2C` | Menu, tooltip, keytip and ribbon popup surface. |
 | `Stroke` | `#E1E1E1` | `#454545` | Control outlines, dividers, groups and unobtrusive window outlines. |
 | `ButtonBottomStroke` | `#BEBEBE` | `#262626` | Lower edge of a resting or hovered command button or combo. Pressing the control flattens this edge. |
@@ -28,11 +29,10 @@ WinUI list selection uses the secondary subtle fill at rest, the tertiary subtle
 | `CloseHover` | `#C42B1C` | `#C42B1C` | Close caption button on pointer over. |
 | `ClosePressed` | `#AA2619` | `#AA2619` | Close caption button while pressed. |
 | `CloseGlyph` | `#FFFFFF` | `#FFFFFF` | Foreground of the highlighted close caption button. |
-| `Transparent` | `#00000000` | `#00000000` | Unpainted surfaces and hidden glyphs. |
 
 ## Control states
 
-Each `ButtonColors` value has an outline (`Border`), interior (`Face`), foreground (`Text`) and optional check or radio mark (`Bullet`). Translucent backplates allow the underlying canvas, page or flyout to show through. Each state is independently customizable.
+Each `ButtonColors` value has an outline (`Border`), interior (`Face`), foreground (`Text`) and optional check or radio mark (`Bullet`). `HideBackground` leaves the supporting surface visible. `HideBorder` draws the face alone. The hover and pressed RGB values include the tint for the surface on which each state appears.
 
 | Field | Use |
 | --- | --- |
@@ -49,9 +49,12 @@ Each `ButtonColors` value has an outline (`Border`), interior (`Face`), foregrou
 | `CheckedPressed` | Pressed selected checkbox, radio or ribbon toggle. |
 | `CheckedDisabled` | Disabled selected checkbox, radio or ribbon toggle. |
 | `SubtleNormal` | Resting menu, toolbar and ribbon commands, item backplates and tab headers. |
-| `SubtleHovered` | Hovered command, menu row, list row and calendar day. |
-| `SubtlePressed` | Pressed command or open menu header. Its face also serves the hovered selected list row. |
-| `SubtleSelected` | Selected list row, menu choice or calendar day. |
+| `SubtleHovered` | Hovered commands, calendar days and gallery items on the canvas. |
+| `ItemHovered` | Hovered rows and headers on the content layer. |
+| `ItemPressed` | Pressed rows and headers, and hovered selected rows on the content layer. |
+| `MenuItemHovered` | Hovered or selected menu items on the flyout. |
+| `SubtlePressed` | Pressed commands and open menu headers on the canvas. |
+| `SubtleSelected` | Selected list row on the content layer. |
 | `SubtleDisabled` | Disabled menu, list, calendar and command chrome. |
 | `ThumbNormal` | Resting scrollbar thumb. |
 | `ThumbHovered` | Hovered scrollbar thumb. |

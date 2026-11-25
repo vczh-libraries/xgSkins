@@ -64,7 +64,6 @@
         GeneralBorder : Color;
         GeneralAccent : Color;
         ContentBackground : Color;
-        Transparent : Color;
         TextNormal : Color;
         TextBright : Color;
         TextSecondary : Color;
@@ -165,10 +164,11 @@
       func CreateDefaultColorPackage() : ColorPackage
       {
         var toolstripButtonNormal : ButtonColors = {
-          Border: cast Color "#00000000";
-          Inner: cast Color "#00000000";
-          G1: cast Color "#00000000";
-          G2: cast Color "#00000000";
+          HideBackground: true;
+          Border: cast Color "#ECE9D8";
+          Inner: cast Color "#ECE9D8";
+          G1: cast Color "#ECE9D8";
+          G2: cast Color "#ECE9D8";
           Text: cast Color "#000000";
           Bullet: cast Color "#000000";
         };
@@ -197,10 +197,11 @@
           Bullet: cast Color "#000000";
         };
         var toolstripButtonDisabled : ButtonColors = {
-          Border: cast Color "#00000000";
-          Inner: cast Color "#00000000";
-          G1: cast Color "#00000000";
-          G2: cast Color "#00000000";
+          HideBackground: true;
+          Border: cast Color "#ECE9D8";
+          Inner: cast Color "#ECE9D8";
+          G1: cast Color "#ECE9D8";
+          G2: cast Color "#ECE9D8";
           Text: cast Color "#A1A192";
           Bullet: cast Color "#A1A192";
         };
@@ -390,10 +391,11 @@
             Bullet: cast Color "#BCBAAE";
           };
           ItemNormal: {
-            Border: cast Color "#00000000";
-            Inner: cast Color "#00000000";
-            G1: cast Color "#00000000";
-            G2: cast Color "#00000000";
+            HideBackground: true;
+            Border: cast Color "#FFFFFF";
+            Inner: cast Color "#FFFFFF";
+            G1: cast Color "#FFFFFF";
+            G2: cast Color "#FFFFFF";
             Text: cast Color "#000000";
             Bullet: cast Color "#000000";
           };
@@ -464,10 +466,11 @@
           ToolstripButtonSelected: toolstripButtonSelected;
           ToolstripButtonDisabled: toolstripButtonDisabled;
           MenuBarButtonNormal: {
-            Border: cast Color "#00000000";
-            Inner: cast Color "#00000000";
-            G1: cast Color "#00000000";
-            G2: cast Color "#00000000";
+            HideBackground: true;
+            Border: cast Color "#ECE9D8";
+            Inner: cast Color "#ECE9D8";
+            G1: cast Color "#ECE9D8";
+            G2: cast Color "#ECE9D8";
             Text: cast Color "#000000";
             Bullet: cast Color "#000000";
           };
@@ -488,10 +491,11 @@
             Bullet: cast Color "#FFFFFF";
           };
           MenuBarButtonDisabled: {
-            Border: cast Color "#00000000";
-            Inner: cast Color "#00000000";
-            G1: cast Color "#00000000";
-            G2: cast Color "#00000000";
+            HideBackground: true;
+            Border: cast Color "#ECE9D8";
+            Inner: cast Color "#ECE9D8";
+            G1: cast Color "#ECE9D8";
+            G2: cast Color "#ECE9D8";
             Text: cast Color "#808080";
             Bullet: cast Color "#808080";
           };
@@ -547,7 +551,6 @@
           GeneralBorder: cast Color "#ACA899";
           GeneralAccent: cast Color "#316AC5";
           ContentBackground: cast Color "#FFFFFF";
-          Transparent: cast Color "#00000000";
           TextNormal: cast Color "#000000";
           TextBright: cast Color "#000000";
           TextSecondary: cast Color "#717163";

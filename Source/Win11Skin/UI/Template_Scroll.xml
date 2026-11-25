@@ -44,10 +44,10 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BorderProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -92,10 +92,10 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BorderProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -140,10 +140,10 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BorderProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -188,10 +188,10 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BorderProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -236,7 +236,7 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent-bind="self.State == ButtonState::Normal ? {left:1 top:6 right:1 bottom:6} : {left:1 top:4 right:1 bottom:4}">
+        <Bounds AlignmentToParent-bind="self.State == ButtonState::Normal ? {left:1 top:6 right:1 bottom:6} : {left:1 top:4 right:1 bottom:4}" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Face" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
         </Bounds>
       </ButtonTemplate>
@@ -259,7 +259,7 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent-bind="self.State == ButtonState::Normal ? {left:6 top:1 right:6 bottom:1} : {left:4 top:1 right:4 bottom:1}">
+        <Bounds AlignmentToParent-bind="self.State == ButtonState::Normal ? {left:6 top:1 right:6 bottom:1} : {left:4 top:1 right:4 bottom:1}" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Face" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
         </Bounds>
       </ButtonTemplate>

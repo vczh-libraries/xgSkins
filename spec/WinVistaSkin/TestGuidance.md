@@ -24,6 +24,7 @@ changes; creating the skin requires the full showcase verification described in
 - winvistaskin::CustomControlTemplate: Control / Document Editor (Ribbon), Control / Document Editor (Toolstrip), Layout / Responsive, Misc / TouchingList.
 - winvistaskin::TooltipTemplate: Control / Document Editor (Ribbon).
 - winvistaskin::SystemFrameWindowTemplate: Window Manager, Misc / Dialogs.
+- winvistaskin::CaptionReflectionRowTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - winvistaskin::CustomFrameWindowTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - winvistaskin::CaptionButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
 - winvistaskin::CaptionCloseButtonTemplate: Window Manager, Layout / Easy Layout (Responsive), Misc / Dialogs.
@@ -64,6 +65,7 @@ changes; creating the skin requires the full showcase verification described in
 - winvistaskin::VScrollTemplate: Layout / Repeat, List / TextList, Control / TextBox, Control / Document Editor (Ribbon).
 - winvistaskin::HTrackerTemplate: Layout / Repeat.
 - winvistaskin::VTrackerTemplate: Layout / Repeat.
+- winvistaskin::ProgressFillTemplate: Layout / Repeat.
 - winvistaskin::ProgressBarTemplate: Layout / Repeat.
 - winvistaskin::ScrollViewTemplate: Layout / Repeat, Layout / Responsive, Control / Embedded Controls, Misc / TouchingList.
 - winvistaskin::ToolstripTemplate: Control / Document Editor (Toolstrip), Layout / Easy Layout (Responsive).

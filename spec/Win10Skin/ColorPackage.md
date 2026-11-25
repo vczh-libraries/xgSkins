@@ -19,7 +19,6 @@ The Text command under the pointer in the Windows 10 Paint ribbon has a `#D5E6F7
 | `Accent` | `#0078D7` | `#0078D7` | Hovered checkbox and radio marks, slider value and thumb, contextual ribbon tabs, keyboard focus and document selection. |
 | `OnAccent` | `#FFFFFF` | `#FFFFFF` | Selected document text and the close glyph over its red button. |
 | `Link` | `#0063B1` | `#60CDFF` | Default document hyperlinks over the page. |
-| `Transparent` | `#00000000` | `#00000000` | Unpainted areas of unselected or inactive controls. |
 | `ScrollThumb` | `#A6A6A6` | `#737373` | Mouse scrollbar thumb at rest. |
 | `ScrollThumbHovered` | `#767676` | `#A6A6A6` | Mouse scrollbar thumb under the pointer. |
 | `ScrollThumbPressed` | `#606060` | `#C2C2C2` | Mouse scrollbar thumb during a drag. |
@@ -32,7 +31,7 @@ The Text command under the pointer in the Windows 10 Paint ribbon has a `#D5E6F7
 | `RibbonBorder` | `#DADBDC` | `#404040` | Ribbon band outline and selected header edge. |
 | `MenuHighlight` | `#99D1FF` | `#414141` | Hovered popup-menu item or open submenu. |
 
-Each state below has a `Border` for its edge, a `Fill` for the interior and a `Text` color for its foreground. List content can supply its own primary and secondary foregrounds.
+Each state below has a `Border` for its edge, a `Fill` for the interior and a `Text` color for its foreground. Set `HideBackground` to show the parent through a resting or disabled row or command. List content can supply its own primary and secondary foregrounds.
 
 | State | Used for |
 | --- | --- |

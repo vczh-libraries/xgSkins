@@ -49,7 +49,7 @@
       <ControlTemplate MinSizeLimitation="LimitToElementAndChildren">
         <SolidBackground Color-eval="win10Colors.Chrome"/>
         <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1">
-          <Gui3DSplitterElement Direction="Vertical" Color1-eval="win10Colors.Divider" Color2-eval="win10Colors.Transparent"/>
+          <Gui3DSplitterElement Direction="Vertical" Color1-eval="win10Colors.Divider" Color2-eval="win10Colors.Chrome"/>
         </Bounds>
       </ControlTemplate>
     </Instance>
@@ -91,8 +91,8 @@
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win10Colors.RibbonPressed : self.Selected ? win10Colors.RibbonSelected : self.State == ButtonState::Active ? win10Colors.RibbonHovered : win10Colors.CommandNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground">
           <SolidBackground Color-bind="self.Colors.Fill"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -112,8 +112,8 @@
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win10Colors.RibbonPressed : self.Selected ? win10Colors.RibbonSelected : self.State == ButtonState::Active ? win10Colors.RibbonHovered : win10Colors.CommandNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground">
           <SolidBackground Color-bind="self.Colors.Fill"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -184,8 +184,8 @@
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.CommandDisabled : self.State == ButtonState::Pressed or self.SubMenuOpening ? win10Colors.RibbonPressed : self.Selected ? win10Colors.RibbonSelected : self.State == ButtonState::Active ? win10Colors.RibbonHovered : win10Colors.CommandNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground">
           <SolidBackground Color-bind="self.Colors.Fill"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:11 bottom:1">
@@ -210,8 +210,8 @@
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.CommandDisabled : self.SubMenuOpening or self.State == ButtonState::Pressed ? win10Colors.CommandPressed : self.State == ButtonState::Active ? win10Colors.CommandHovered : win10Colors.CommandNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground">
           <SolidBackground Color-bind="self.Colors.Fill"/>
         </Bounds>
 
@@ -229,8 +229,8 @@
       ]]></ref.Members>
       <ToolstripButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <att.Colors-bind>not self.VisuallyEnabled ? win10Colors.CommandDisabled : self.SubMenuOpening or self.State != ButtonState::Normal ? {Border: win10Colors.MenuHighlight; Fill: win10Colors.MenuHighlight; Text: win10Colors.Text;} : win10Colors.CommandNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground"><SolidBorder Color-bind="self.Colors.Border"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="not self.Colors.HideBackground">
           <SolidBackground Color-bind="self.Colors.Fill"/>
         </Bounds>
 
@@ -256,7 +256,9 @@
           </att.Columns>
 
           <Cell Site="row:1 column:1 rowSpan:3">
-            <SolidBackground Color-bind="self.Selected ? win10Colors.CommandHovered.Fill : win10Colors.Transparent"/>
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Selected">
+              <SolidBackground Color-eval="win10Colors.CommandHovered.Fill"/>
+            </Bounds>
             <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" MinSizeLimitation="NoLimit" Visible-bind="self.Selected and self.Image is null"><Polygon BorderColor-bind="self.Colors.Text" BackgroundColor-bind="self.Colors.Text" Size="x:10 y:10"><att.Points><Point>x:1 y:5</Point><Point>x:4 y:8</Point><Point>x:9 y:1</Point><Point>x:4 y:6</Point></att.Points></Polygon></Bounds>
             <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><ImageFrame Image-bind="self.Image.Image ?? null" FrameIndex-bind="self.Image.FrameIndex ?? 0" Enabled-bind="self.VisuallyEnabled"/></Bounds>
           </Cell>

@@ -13,8 +13,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BorderProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animation.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -54,8 +54,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BorderProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animation.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -119,8 +119,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BorderProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animation.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Bounds AlignmentToParent="left:1 top:1 right:11 bottom:1">
@@ -165,8 +165,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BorderProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animation.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -211,8 +211,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BorderProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animation.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -279,8 +279,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BorderProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animation.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1" PreferredMinSize="x:9 y:7">
@@ -325,8 +325,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BorderProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animation.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -374,8 +374,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BorderProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animation.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Table AlignmentToParent="left:1 top:1 right:1 bottom:1">
@@ -520,12 +520,19 @@
   <Instance name="RibbonGroupExpandButtonTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win11skin::RibbonGroupExpandButtonTemplate" ref.Styles="res://Win11Skin/Style">
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
-        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" MinSizeLimitation="LimitToElementAndChildren">
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" MinSizeLimitation="LimitToElementAndChildren" Visible-bind="not self.VisuallyEnabled or self.State == ButtonState::Normal">
+          <!-- Retrace the outline to leave the center open at rest. -->
           <Polygon ref.Style="ribbonExpandableArrow" Size="x:7 y:7">
             <att.Points>
-              <Point>x:6 y:0</Point>
-              <Point>x:6 y:6</Point>
-              <Point>x:0 y:6</Point>
+              <Point>x:6 y:0</Point><Point>x:6 y:6</Point><Point>x:0 y:6</Point>
+              <Point>x:6 y:0</Point><Point>x:0 y:6</Point><Point>x:6 y:6</Point>
+            </att.Points>
+          </Polygon>
+        </Bounds>
+        <Bounds AlignmentToParent="left:2 top:2 right:2 bottom:2" MinSizeLimitation="LimitToElementAndChildren" Visible-bind="self.VisuallyEnabled and self.State != ButtonState::Normal">
+          <Polygon ref.Style="ribbonExpandableArrow" Size="x:7 y:7">
+            <att.Points>
+              <Point>x:6 y:0</Point><Point>x:6 y:6</Point><Point>x:0 y:6</Point>
             </att.Points>
           </Polygon>
         </Bounds>
@@ -596,7 +603,7 @@
         <att.ItemListTemplate>x:RibbonGalleryItemListTemplate</att.ItemListTemplate>
         <att.MenuTemplate>x:RibbonToolstripMenuTemplate</att.MenuTemplate>
         <att.HeaderTemplate>x:RibbonToolstripHeaderTemplate</att.HeaderTemplate>
-        <att.BackgroundTemplate>win11skin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.BackgroundTemplate>win11skin::RibbonGalleryItemBackgroundTemplate</att.BackgroundTemplate>
         <att.GroupContainerTemplate>win11skin::ScrollViewTemplate</att.GroupContainerTemplate>
 
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -643,8 +650,14 @@
   <Instance name="RibbonGalleryItemListResource">
     <Instance ref.CodeBehind="false" ref.Class="win11skin::RibbonGalleryItemListTemplate" ref.Styles="res://Win11Skin/Style">
       <TextListTemplate ref.Name="self">
-        <att.BackgroundTemplate>win11skin::ItemBackgroundTemplate</att.BackgroundTemplate>
+        <att.BackgroundTemplate>win11skin::RibbonGalleryItemBackgroundTemplate</att.BackgroundTemplate>
       </TextListTemplate>
+    </Instance>
+  </Instance>
+
+  <Instance name="RibbonGalleryItemBackgroundTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="win11skin::RibbonGalleryItemBackgroundTemplate" xmlns:x="win11skin::*">
+      <x:ItemBackgroundTemplate OnCanvas="true"/>
     </Instance>
   </Instance>
 
@@ -707,8 +720,8 @@
           self.lastAnimation = CompleteColorAnimation(self.animation.CreateAnimation(new ButtonColorState^(self.Colors), cast UInt64 120), func():void { self.animation.Interpolate(1.0); });
           self.AddAnimation(self.lastAnimation);
         }]]></ev.ColorsChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animation.Current.BorderProgress &gt; 0.0"><SolidBorder Color-bind="self.animation.Current.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/></Bounds>
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animation.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animation.Current.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
         </Bounds>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -746,7 +759,7 @@
     <Instance ref.CodeBehind="false" ref.Class="win11skin::RibbonSplitterTemplate" ref.Styles="res://Win11Skin/Style">
       <ControlTemplate MinSizeLimitation="LimitToElementAndChildren">
         <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1">
-          <Gui3DSplitterElement Direction="Vertical" Color1-eval="win11Colors.Stroke" Color2-eval="win11Colors.Transparent"/>
+          <Gui3DSplitterElement Direction="Vertical" Color1-eval="win11Colors.Stroke" Color2-eval="win11Colors.Canvas"/>
         </Bounds>
       </ControlTemplate>
     </Instance>

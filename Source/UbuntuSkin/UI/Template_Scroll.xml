@@ -15,10 +15,10 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -63,10 +63,10 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <GradientBackground Direction="Vertical" Color1-bind="self.animationBuilder.Current.G1" Color2-bind="self.animationBuilder.Current.G2"/>
         </Bounds>
         <Table AlignmentToParent="left:0 top:0 right:0 bottom:0">
@@ -111,7 +111,7 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:1 top:3 right:1 bottom:3">
+        <Bounds AlignmentToParent="left:1 top:3 right:1 bottom:3" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.G1"/>
         </Bounds>
       </ButtonTemplate>
@@ -134,7 +134,7 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1">
+        <Bounds AlignmentToParent="left:3 top:1 right:3 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.G1"/>
         </Bounds>
       </ButtonTemplate>

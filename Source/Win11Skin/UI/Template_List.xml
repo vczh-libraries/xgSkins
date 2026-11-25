@@ -4,15 +4,22 @@
       <ref.Members><![CDATA[
         prop Colors : ButtonColors = win11Colors.SubtleNormal {}
         prop ShowIndicator : bool = true {}
+        prop OnCanvas : bool = false {}
       ]]></ref.Members>
       <SelectableButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <att.Colors-bind>not self.VisuallyEnabled ? win11Colors.SubtleDisabled : self.Selected
-          ? (self.State == ButtonState::Active ? win11Colors.SubtlePressed : win11Colors.SubtleSelected)
-          : self.State == ButtonState::Pressed ? win11Colors.SubtlePressed : self.State == ButtonState::Active ? win11Colors.SubtleHovered : win11Colors.SubtleNormal</att.Colors-bind>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <att.Colors-bind><![CDATA[
+          let hover = self.OnCanvas ? win11Colors.SubtleHovered : win11Colors.ItemHovered,
+              pressed = self.OnCanvas ? win11Colors.SubtlePressed : win11Colors.ItemPressed,
+              selected = self.OnCanvas ? win11Colors.SubtleHovered : win11Colors.SubtleSelected in (
+            not self.VisuallyEnabled ? win11Colors.SubtleDisabled :
+            self.Selected ? (self.State == ButtonState::Active ? pressed : selected) :
+            self.State == ButtonState::Pressed ? pressed : self.State == ButtonState::Active ? hover : win11Colors.SubtleNormal
+          )
+        ]]></att.Colors-bind>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground and not self.Colors.HideBorder">
           <SolidBorder Color-bind="self.Colors.Border" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="NoLimit">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="NoLimit" Visible-bind="not self.Colors.HideBackground">
           <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
             <SolidBackground Color-bind="self.Colors.Face" Shape="shapeType:RoundRect radiusX:3 radiusY:3"/>
           </Bounds>
@@ -117,7 +124,7 @@
   <Instance name="ListViewColumnHeaderTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win11skin::ListViewColumnHeaderTemplate" ref.Styles="res://Win11Skin/Style">
       <ListViewColumnHeaderTemplate ref.Name="self" ContainerComposition-ref="container" SubMenuHost-ref="buttonArrow" MinSizeLimitation="LimitToElementAndChildren">
-        <SolidBackground Color-bind="not self.VisuallyEnabled ? win11Colors.Layer : self.State == ButtonState::Pressed ? win11Colors.SubtlePressed.Face : self.State == ButtonState::Active ? win11Colors.SubtleHovered.Face : win11Colors.Layer" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
+        <SolidBackground Color-bind="not self.VisuallyEnabled ? win11Colors.Layer : self.State == ButtonState::Pressed ? win11Colors.ItemPressed.Face : self.State == ButtonState::Active ? win11Colors.ItemHovered.Face : win11Colors.Layer" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
         <Bounds AlignmentToParent="left:-1 top:3 right:0 bottom:3" PreferredMinSize="x:1 y:0">
           <SolidBackground Color-eval="win11Colors.Stroke"/>
         </Bounds>
@@ -191,28 +198,32 @@
     <Instance ref.CodeBehind="false" ref.Class="win11skin::ExpandingDecoratorTemplate" ref.Styles="res://Win11Skin/Style">
       <SelectableButtonTemplate ref.Name="self" PreferredMinSize="x:7 y:9" MinSizeLimitation="NoLimit">
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Selected">
-          <Polygon Size="x:6 y:9" BorderColor-eval="win11Colors.Transparent" BackgroundColor-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground">
-            <att.Points>
-              <Point>x:0 y:0</Point>
-              <Point>x:1 y:0</Point>
-              <Point>x:5 y:4</Point>
-              <Point>x:1 y:8</Point>
-              <Point>x:0 y:8</Point>
-              <Point>x:4 y:4</Point>
-            </att.Points>
-          </Polygon>
+          <PartialView WidthRatio="0.5" WidthPageSize="0" HeightRatio="0.5" HeightPageSize="0" PreferredMinSize="x:6 y:9">
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <Polygon Size="x:6 y:9" BorderColor-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground" BackgroundColor-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground">
+                <att.Points>
+                  <Point>x:0 y:0</Point>
+                  <Point>x:4 y:4</Point>
+                  <Point>x:0 y:8</Point>
+                  <Point>x:4 y:4</Point>
+                </att.Points>
+              </Polygon>
+            </Bounds>
+          </PartialView>
         </Bounds>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.Selected">
-          <Polygon Size="x:7 y:5" BorderColor-eval="win11Colors.Transparent" BackgroundColor-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground">
-            <att.Points>
-              <Point>x:0 y:0</Point>
-              <Point>x:3 y:3</Point>
-              <Point>x:6 y:0</Point>
-              <Point>x:6 y:1</Point>
-              <Point>x:3 y:4</Point>
-              <Point>x:0 y:1</Point>
-            </att.Points>
-          </Polygon>
+          <PartialView WidthRatio="0.5" WidthPageSize="0" HeightRatio="0.5" HeightPageSize="0" PreferredMinSize="x:7 y:5">
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <Polygon Size="x:7 y:5" BorderColor-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground" BackgroundColor-bind="not self.VisuallyEnabled ? win11Colors.Disabled : self.State == ButtonState::Normal ? win11Colors.Secondary : win11Colors.Foreground">
+                <att.Points>
+                  <Point>x:0 y:0</Point>
+                  <Point>x:3 y:3</Point>
+                  <Point>x:6 y:0</Point>
+                  <Point>x:3 y:3</Point>
+                </att.Points>
+              </Polygon>
+            </Bounds>
+          </PartialView>
         </Bounds>
       </SelectableButtonTemplate>
     </Instance>
@@ -240,7 +251,9 @@
   <Instance name="ListViewColumnDropDownTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win11skin::ListViewColumnDropDownTemplate" ref.Styles="res://Win11Skin/Style">
       <SelectableButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren" PreferredMinSize="x:11 y:9">
-        <SolidBackground Color-bind="self.VisuallyEnabled and (self.Selected or self.State != ButtonState::Normal) ? win11Colors.SubtleHovered.Face : win11Colors.Transparent" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and (self.Selected or self.State != ButtonState::Normal)">
+          <SolidBackground Color-eval="win11Colors.ItemHovered.Face" Shape="shapeType:RoundRect radiusX:4 radiusY:4"/>
+        </Bounds>
         <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>

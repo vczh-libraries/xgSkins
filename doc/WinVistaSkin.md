@@ -6,8 +6,7 @@ glyphs and a red close button. Dialog controls use split gradients, blue hover
 and focus feedback, white edit fields and continuous green progress. With a
 system-managed frame, Windows draws the non-client area.
 
-The frame represents glass using opaque color and translucent highlights.
-The background behind the window does not participate in the rendering.
+The frame represents glass by mixing the reflection with the caption and button gradients. Both renderers draw the resulting opaque colors.
 The control and title treatments follow the [Vista Aero control screenshot,
 slide 25](https://archive.esug.org/ESUG2007/Thu/esug07-VAST75.pdf#page=25)
 and Microsoft's [Vista Aero wizard illustrations](https://learn.microsoft.com/en-us/archive/msdn-magazine/2006/july/transactions-aero-wizards-and-task-dialogs-in-windows-vista).

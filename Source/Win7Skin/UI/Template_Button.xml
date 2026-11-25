@@ -16,6 +16,7 @@
         G4 : Color;
         Text : Color;
         Bullet : Color;
+        HideBackground : bool;
       }
 
       class ButtonColorState
@@ -28,6 +29,7 @@
         prop G4 : Color = {} {}
         prop Text : Color = {} {}
         prop Bullet : Color = {} {}
+        prop BackgroundProgress : double = 1.0 {}
 
         new() {}
 
@@ -41,6 +43,7 @@
           G4 = colors.G4;
           Text = colors.Text;
           Bullet = colors.Bullet;
+          BackgroundProgress = colors.HideBackground ? 0.0 : 1.0;
         }
       }
 
@@ -70,7 +73,7 @@
           G3: colors.G3;
           G4: colors.G4;
           Text: colors.Text;
-          Bullet: selected ? colors.Bullet : {r:colors.Bullet.r; g:colors.Bullet.g; b:colors.Bullet.b; a:win7Colors.Transparent.a;};
+          Bullet: selected ? colors.Bullet : colors.G3;
         };
       }
 
@@ -80,12 +83,13 @@
         if (not enabled or (arrow and state == ButtonState::Normal))
         {
           return {
-            Border: {r:colors.Border.r; g:colors.Border.g; b:colors.Border.b; a:win7Colors.Transparent.a;};
-            Background: {r:colors.Background.r; g:colors.Background.g; b:colors.Background.b; a:win7Colors.Transparent.a;};
-            G1: {r:colors.G1.r; g:colors.G1.g; b:colors.G1.b; a:win7Colors.Transparent.a;};
-            G2: {r:colors.G2.r; g:colors.G2.g; b:colors.G2.b; a:win7Colors.Transparent.a;};
-            G3: {r:colors.G3.r; g:colors.G3.g; b:colors.G3.b; a:win7Colors.Transparent.a;};
-            G4: {r:colors.G4.r; g:colors.G4.g; b:colors.G4.b; a:win7Colors.Transparent.a;};
+            HideBackground: true;
+            Border: win7Colors.ScrollSink;
+            Background: win7Colors.GeneralBackground;
+            G1: win7Colors.GeneralBackground;
+            G2: win7Colors.GeneralBackground;
+            G3: win7Colors.GeneralBackground;
+            G4: win7Colors.GeneralBackground;
             Text: colors.Text;
             Bullet: colors.Bullet;
           };
@@ -107,6 +111,7 @@
         <Target Name="G4"/>
         <Target Name="Text"/>
         <Target Name="Bullet"/>
+        <Target Name="BackgroundProgress"/>
       </Targets>
     </Gradient>
   </Animation>
@@ -200,7 +205,7 @@
                 <GradientBackground Direction="Backslash" Color1-bind="self.animationBuilder.Current.G3" Color2-bind="self.animationBuilder.Current.G4"/>
               </Bounds>
             </Bounds>
-            <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3">
+            <Bounds AlignmentToParent="left:3 top:3 right:3 bottom:3" Visible-bind="self.Selected or self.animationBuilder.Current.Bullet != self.animationBuilder.Current.G3">
               <Polygon BorderColor-bind="self.animationBuilder.Current.Bullet" BackgroundColor-bind="self.animationBuilder.Current.Bullet" Size="x:11 y:11">
                 <att.Points>
                   <Point>x:0 y:6</Point>
@@ -272,7 +277,7 @@
                 <GradientBackground Direction="Backslash" Color1-bind="self.animationBuilder.Current.G3" Color2-bind="self.animationBuilder.Current.G4" Shape="shapeType:Ellipse"/>
               </Bounds>
             </Bounds>
-            <Bounds AlignmentToParent="left:5 top:5 right:5 bottom:5">
+            <Bounds AlignmentToParent="left:5 top:5 right:5 bottom:5" Visible-bind="self.Selected or self.animationBuilder.Current.Bullet != self.animationBuilder.Current.G3">
               <SolidBackground Color-bind="self.animationBuilder.Current.Bullet" Shape="shapeType:Ellipse"/>
             </Bounds>
           </Cell>

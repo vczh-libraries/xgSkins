@@ -22,11 +22,13 @@
           self.VisuallyEnabled and self.State != ButtonState::Normal ? vistaColors.TabHovered :
           not self.Vertical and (self.Context is RibbonTabPage*) ? vistaColors.RibbonButtonNormal : vistaColors.TabNormal
         </att.Colors-bind>
-        <SolidBorder Color-bind="self.SelectedRibbonTab ? vistaColors.RibbonBorder : self.Colors.Border"/>
-        <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:1 top:1 right:1 bottom:0})">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="not self.Colors.HideBackground">
+          <SolidBorder Color-bind="self.SelectedRibbonTab ? vistaColors.RibbonBorder : self.Colors.Border"/>
+        </Bounds>
+        <Bounds AlignmentToParent-bind="self.DecorationAxis.VirtualMarginToRealMargin({left:1 top:1 right:1 bottom:0})" Visible-bind="not self.Colors.HideBackground">
           <SolidBackground Color-bind="self.SelectedRibbonTab ? vistaColors.RibbonBackgroundTop : self.Colors.Background"/>
         </Bounds>
-        <Table AlignmentToParent="left:2 top:2 right:2 bottom:0" Visible-bind="not self.Vertical">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:0" Visible-bind="not self.Vertical and not self.Colors.HideBackground">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
@@ -35,7 +37,7 @@
           <Cell Site="row:0 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.Colors.G1" Color2-bind="self.Colors.G2"/></Cell>
           <Cell Site="row:1 column:0"><GradientBackground Direction="Vertical" Color1-bind="self.Colors.G3" Color2-bind="self.SelectedRibbonTab ? vistaColors.RibbonBackgroundTop : self.Colors.G4"/></Cell>
         </Table>
-        <Table AlignmentToParent="left:2 top:2 right:0 bottom:2" Visible-bind="self.Vertical">
+        <Table AlignmentToParent="left:2 top:2 right:0 bottom:2" Visible-bind="self.Vertical and not self.Colors.HideBackground">
           <att.Rows><CellOption>composeType:Percentage percentage:1.0</CellOption></att.Rows>
           <att.Columns>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>

@@ -15,13 +15,13 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Background"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
-        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
@@ -78,13 +78,13 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Background"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
-        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
@@ -141,13 +141,13 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Background"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
-        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Rows>
@@ -204,13 +204,13 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Background"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
-        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Rows>
@@ -267,13 +267,13 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Background"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
-        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
             <CellOption>composeType:Percentage percentage:0.5</CellOption>
@@ -308,13 +308,13 @@
       <ButtonTemplate ref.Name="self" MinSizeLimitation="LimitToElementAndChildren">
         <ev.StateChanged-eval>self.UpdateColors();</ev.StateChanged-eval>
         <ev.VisuallyEnabledChanged-eval>self.UpdateColors();</ev.VisuallyEnabledChanged-eval>
-        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1">
+        <Bounds AlignmentToParent="left:1 top:1 right:1 bottom:1" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBackground Color-bind="self.animationBuilder.Current.Background"/>
         </Bounds>
-        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <SolidBorder Color-bind="self.animationBuilder.Current.Border" Shape="shapeType:RoundRect radiusX:2 radiusY:2"/>
         </Bounds>
-        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2">
+        <Table AlignmentToParent="left:2 top:2 right:2 bottom:2" Visible-bind="self.animationBuilder.Current.BackgroundProgress &gt; 0.0">
           <att.Rows>
             <CellOption>composeType:Percentage percentage:1.0</CellOption>
           </att.Rows>
@@ -603,8 +603,31 @@
     </Instance>
   </Instance>
 
+  <Instance name="ProgressFillTemplateResource">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ProgressFillTemplate">
+      <ref.Members><![CDATA[
+        prop GlowPosition : int = 0 {}
+
+        func Highlight(surface : Color, position : int) : Color
+        {
+          var tint = MixRgb(vistaColors.ProgressGlowStart, vistaColors.ProgressGlow, position);
+          return MixRgb(surface, tint, (position * 112 + 127) / 255);
+        }
+      ]]></ref.Members>
+      <ControlTemplate ref.Name="self">
+        <GradientBackground Direction="Vertical" Color1-bind="self.Highlight(vistaColors.ProgressFill3, self.GlowPosition)" Color2-bind="self.Highlight(vistaColors.ProgressFill4, self.GlowPosition)"/>
+        <SideAligned Direction="Top" MaxLength="6" MaxRatio="0.5">
+          <GradientBackground Direction="Vertical" Color1-bind="self.Highlight(vistaColors.ProgressFill1, self.GlowPosition)" Color2-bind="self.Highlight(vistaColors.ProgressFill2, self.GlowPosition)"/>
+        </SideAligned>
+        <SideAligned Direction="Bottom" MaxLength="6" MaxRatio="0.5">
+          <GradientBackground Direction="Vertical" Color1-bind="self.Highlight(vistaColors.ProgressFill4, self.GlowPosition)" Color2-bind="self.Highlight(vistaColors.ProgressFill5, self.GlowPosition)"/>
+        </SideAligned>
+      </ControlTemplate>
+    </Instance>
+  </Instance>
+
   <Instance name="ProgressBarTemplateResource">
-    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ProgressBarTemplate" ref.Styles="res://WinVistaSkin/Style">
+    <Instance ref.CodeBehind="false" ref.Class="winvistaskin::ProgressBarTemplate" xmlns:x="winvistaskin::*" ref.Styles="res://WinVistaSkin/Style">
       <ScrollTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
         <Bounds ref.Name="container" AlignmentToParent="left:1 top:1 right:1 bottom:1">
           <GradientBackground Direction="Vertical" Color1-eval="winvistaskin::vistaColors.ProgressTrack3" Color2-eval="winvistaskin::vistaColors.ProgressTrack4"/>
@@ -619,15 +642,20 @@
               self.Position >= self.TotalSize - self.PageSize ? 1.0 :
               (cast double self.Position) / (self.TotalSize - self.PageSize)
             ]]></att.WidthPageSize-bind>
-            <GradientBackground Direction="Vertical" Color1-eval="winvistaskin::vistaColors.ProgressFill3" Color2-eval="winvistaskin::vistaColors.ProgressFill4"/>
-            <SideAligned Direction="Top" MaxLength="6" MaxRatio="0.5">
-              <GradientBackground Direction="Vertical" Color1-eval="winvistaskin::vistaColors.ProgressFill1" Color2-eval="winvistaskin::vistaColors.ProgressFill2"/>
-            </SideAligned>
-            <SideAligned Direction="Bottom" MaxLength="6" MaxRatio="0.5">
-              <GradientBackground Direction="Vertical" Color1-eval="winvistaskin::vistaColors.ProgressFill4" Color2-eval="winvistaskin::vistaColors.ProgressFill5"/>
-            </SideAligned>
+            <x:ProgressFillTemplate AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
             <SideAligned Direction="Right" MaxLength="12" MaxRatio="0.5">
-              <GradientBackground Direction="Horizontal" Color1-eval="vistaColors.Transparent" Color2-eval="vistaColors.ProgressGlow"/>
+              <RepeatStack Direction="ReversedHorizontal" AlignmentToParent="left:0 top:0 right:0 bottom:0" MinSizeLimitation="NoLimit">
+                <att.ItemTemplate-eval><![CDATA[
+                  func(value : object) : presentation::templates::GuiTemplate*
+                  {
+                    var band = new ProgressFillTemplate*();
+                    band.PreferredMinSize = {x:1; y:0;};
+                    band.GlowPosition = (23 - (cast int value) * 2) * 255 / 24;
+                    return band;
+                  }
+                ]]></att.ItemTemplate-eval>
+                <att.ItemSource-eval>range[0, 12)</att.ItemSource-eval>
+              </RepeatStack>
             </SideAligned>
           </PartialView>
         </Bounds>

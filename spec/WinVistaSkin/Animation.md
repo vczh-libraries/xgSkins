@@ -33,8 +33,8 @@ current transition smoothly, without briefly returning to an older state.
 
 ## Immediate states
 
-- Ordinary toolbar split-arrow regions (`ToolstripSplitArrowTemplate`) have a
-  transparent face. Their two-pixel beveled separator appears immediately on
+- Ordinary toolbar split-arrow regions (`ToolstripSplitArrowTemplate`) leave
+  the underlying toolbar face visible. Their two-pixel beveled separator appears immediately on
   enabled hover or press; the parent toolbar button retains its 120-millisecond
   face transition.
 

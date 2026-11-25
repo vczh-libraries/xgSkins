@@ -10,6 +10,7 @@
         Border : Color;
         Fill : Color;
         Text : Color;
+        HideBackground : bool;
       }
 
       struct ColorPackage
@@ -25,7 +26,6 @@
         Accent : Color;
         OnAccent : Color;
         Link : Color;
-        Transparent : Color;
         ScrollThumb : Color;
         ScrollThumbHovered : Color;
         ScrollThumbPressed : Color;
@@ -74,7 +74,6 @@
         var accent = cast Color "#0078D7";
         var onAccent = cast Color "#FFFFFF";
         var link = dark ? cast Color "#60CDFF" : cast Color "#0063B1";
-        var transparent = cast Color "#00000000";
         var scrollThumb = dark ? cast Color "#737373" : cast Color "#A6A6A6";
         var scrollThumbHovered = dark ? cast Color "#A6A6A6" : cast Color "#767676";
         var scrollThumbPressed = dark ? cast Color "#C2C2C2" : cast Color "#606060";
@@ -106,7 +105,6 @@
           Accent: accent;
           OnAccent: onAccent;
           Link: link;
-          Transparent: transparent;
           ScrollThumb: scrollThumb;
           ScrollThumbHovered: scrollThumbHovered;
           ScrollThumbPressed: scrollThumbPressed;
@@ -122,15 +120,15 @@
           InputHovered: {Border: (dark ? strongOutline : cast Color "#171717"); Fill: page; Text: text;};
           InputFocused: {Border: accent; Fill: page; Text: text;};
           InputDisabled: {Border: (dark ? disabledEdge : disabledFace); Fill: page; Text: disabledText;};
-          CommandNormal: {Border: transparent; Fill: transparent; Text: text;};
+          CommandNormal: {HideBackground: true; Border: chrome; Fill: chrome; Text: text;};
           CommandHovered: {Border: commandDown; Fill: commandHot; Text: text;};
           CommandPressed: {Border: menuHighlight; Fill: commandDown; Text: text;};
-          CommandDisabled: {Border: transparent; Fill: transparent; Text: disabledText;};
-          ItemNormal: {Border: transparent; Fill: transparent; Text: text;};
+          CommandDisabled: {HideBackground: true; Border: chrome; Fill: chrome; Text: disabledText;};
+          ItemNormal: {HideBackground: true; Border: page; Fill: page; Text: text;};
           ItemHovered: {Border: (dark ? cast Color "#4C4C4C" : commandHot); Fill: (dark ? cast Color "#4C4C4C" : commandHot); Text: text;};
           ItemSelected: {Border: (dark ? cast Color "#333333" : cast Color "#99D1FF"); Fill: selected; Text: text;};
           ItemSelectedHovered: {Border: (dark ? cast Color "#333333" : cast Color "#80C3FF"); Fill: selectedHover; Text: text;};
-          ItemDisabled: {Border: transparent; Fill: transparent; Text: disabledText;};
+          ItemDisabled: {HideBackground: true; Border: page; Fill: page; Text: disabledText;};
           WindowSurface: windowSurface;
           MenuHighlight: menuHighlight;
           RibbonSurface: (dark ? cast Color "#212121" : cast Color "#F5F6F7");

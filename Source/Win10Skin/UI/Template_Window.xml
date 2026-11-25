@@ -28,7 +28,9 @@
 
   <Instance name="CustomFrameWindowTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win10skin::CustomFrameWindowTemplate" ref.Styles="res://Win10Skin/Style">
+      <ref.Members><![CDATA[prop MaximizeGlyph : Color = win10Colors.Text {}]]></ref.Members>
       <WindowTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
+        <att.MaximizeGlyph-bind>self.VisuallyEnabled and self.Activated and self.MaximizedBox ? win10Colors.Text : win10Colors.DisabledText</att.MaximizeGlyph-bind>
         <att.CustomFrameEnabled>true</att.CustomFrameEnabled>
         <att.TooltipTemplate>win10skin::TooltipTemplate</att.TooltipTemplate>
 
@@ -66,7 +68,9 @@
 
         <SolidBackground Color-eval="win10Colors.Page"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBorder ref.Style="windowBorder"/>
+          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="let margin = self.CustomFramePadding in (self.Border and margin.left + margin.top + margin.right + margin.bottom != 0)">
+            <SolidBorder ref.Style="windowBorder"/>
+          </Bounds>
 
           <Bounds AlignmentToParent-bind="{left:(self.CustomFramePadding.left &gt; 0 ? 4 : 0) top:(self.CustomFramePadding.top + clientCell.CachedBounds.y1)
                                           right:(self.CustomFramePadding.right &gt; 0 ? 4 : 0) bottom:(self.CustomFramePadding.bottom &gt; 0 ? 4 : 0)}">
@@ -117,14 +121,9 @@
                 <att.Visible-bind>self.MinimizedBox or self.MaximizedBox</att.Visible-bind>
                 <att.ContainerComposition-set>
                   <BoundsComposition AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:46 y:32" MinSizeLimitation="LimitToElement">
-                    <Polygon Size="x:10 y:10" BorderColor-eval="win10Colors.Transparent" BackgroundColor-bind="self.VisuallyEnabled and self.Activated and self.MinimizedBox ? win10Colors.Text : win10Colors.DisabledText">
-                      <att.Points>
-                        <Point>x:0 y:4</Point>
-                        <Point>x:10 y:4</Point>
-                        <Point>x:10 y:5</Point>
-                        <Point>x:0 y:5</Point>
-                      </att.Points>
-                    </Polygon>
+                    <PartialView WidthRatio="0.5" WidthPageSize="0" HeightRatio="0.5" HeightPageSize="0" PreferredMinSize="x:10 y:10">
+                      <Bounds ExpectedBounds="x1:0 y1:4 x2:10 y2:5"><SolidBackground Color-bind="self.VisuallyEnabled and self.Activated and self.MinimizedBox ? win10Colors.Text : win10Colors.DisabledText"/></Bounds>
+                    </PartialView>
                   </BoundsComposition>
                 </att.ContainerComposition-set>
               </Button>
@@ -137,30 +136,19 @@
                 <att.Visible-bind>self.MinimizedBox or self.MaximizedBox</att.Visible-bind>
                 <att.ContainerComposition-set>
                   <BoundsComposition Visible-bind="not self.Maximized" AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:46 y:32" MinSizeLimitation="LimitToElement">
-                    <Polygon Size="x:10 y:10" BorderColor-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? win10Colors.Text : win10Colors.DisabledText" BackgroundColor-eval="win10Colors.Transparent">
-                      <att.Points>
-                        <Point>x:0 y:0</Point>
-                        <Point>x:9 y:0</Point>
-                        <Point>x:9 y:9</Point>
-                        <Point>x:0 y:9</Point>
-                      </att.Points>
-                    </Polygon>
+                    <PartialView WidthRatio="0.5" WidthPageSize="0" HeightRatio="0.5" HeightPageSize="0" PreferredMinSize="x:10 y:10">
+                      <SolidBorder Color-bind="self.MaximizeGlyph"/>
+                    </PartialView>
                   </BoundsComposition>
                   <BoundsComposition Visible-bind="self.Maximized" AlignmentToParent="left:0 top:0 right:0 bottom:0" PreferredMinSize="x:46 y:32" MinSizeLimitation="LimitToElement">
-                    <Polygon Size="x:10 y:10" BorderColor-bind="self.VisuallyEnabled and self.Activated and self.MaximizedBox ? win10Colors.Text : win10Colors.DisabledText" BackgroundColor-eval="win10Colors.Transparent">
-                      <att.Points>
-                        <Point>x:7 y:2</Point>
-                        <Point>x:2 y:2</Point>
-                        <Point>x:2 y:0</Point>
-                        <Point>x:9 y:0</Point>
-                        <Point>x:9 y:7</Point>
-                        <Point>x:7 y:7</Point>
-                        <Point>x:7 y:2</Point>
-                        <Point>x:0 y:2</Point>
-                        <Point>x:0 y:9</Point>
-                        <Point>x:7 y:9</Point>
-                      </att.Points>
-                    </Polygon>
+                    <PartialView WidthRatio="0.5" WidthPageSize="0" HeightRatio="0.5" HeightPageSize="0" PreferredMinSize="x:10 y:10">
+                      <!-- Draw the exposed edges of the rear window around the front outline. -->
+                      <Bounds ExpectedBounds="x1:2 y1:0 x2:10 y2:1"><SolidBackground Color-bind="self.MaximizeGlyph"/></Bounds>
+                      <Bounds ExpectedBounds="x1:9 y1:1 x2:10 y2:8"><SolidBackground Color-bind="self.MaximizeGlyph"/></Bounds>
+                      <Bounds ExpectedBounds="x1:2 y1:1 x2:3 y2:2"><SolidBackground Color-bind="self.MaximizeGlyph"/></Bounds>
+                      <Bounds ExpectedBounds="x1:8 y1:7 x2:9 y2:8"><SolidBackground Color-bind="self.MaximizeGlyph"/></Bounds>
+                      <Bounds AlignmentToParent="left:0 top:2 right:2 bottom:0"><SolidBorder Color-bind="self.MaximizeGlyph"/></Bounds>
+                    </PartialView>
                   </BoundsComposition>
                 </att.ContainerComposition-set>
               </Button>
@@ -204,7 +192,9 @@
   <Instance name="CaptionButtonTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win10skin::CaptionButtonTemplate" ref.Styles="res://Win10Skin/Style">
       <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <SolidBackground Color-bind="not self.VisuallyEnabled ? win10Colors.Transparent : self.State == ButtonState::Pressed ? win10Colors.CommandPressed.Fill : self.State == ButtonState::Active ? win10Colors.CommandHovered.Fill : win10Colors.Transparent"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and self.State != ButtonState::Normal">
+          <SolidBackground Color-bind="self.State == ButtonState::Pressed ? win10Colors.CommandPressed.Fill : win10Colors.CommandHovered.Fill"/>
+        </Bounds>
         <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0"/>
       </ButtonTemplate>
     </Instance>
@@ -212,24 +202,24 @@
   <Instance name="CaptionCloseButtonTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win10skin::CaptionCloseButtonTemplate" ref.Styles="res://Win10Skin/Style">
       <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" PreferredMinSize="x:46 y:32" MinSizeLimitation="LimitToElementAndChildren">
-        <SolidBackground Color-bind="not self.VisuallyEnabled ? win10Colors.Transparent : self.State == ButtonState::Pressed ? win10Colors.ClosePressed : self.State == ButtonState::Active ? win10Colors.CloseHovered : win10Colors.Transparent"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and self.State != ButtonState::Normal">
+          <SolidBackground Color-bind="self.State == ButtonState::Pressed ? win10Colors.ClosePressed : win10Colors.CloseHovered"/>
+        </Bounds>
         <Bounds ref.Name="container" AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <Polygon Size="x:10 y:10" BorderColor-eval="win10Colors.Transparent" BackgroundColor-bind="not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.Text : win10Colors.OnAccent">
-            <att.Points>
-              <Point>x:6 y:5</Point>
-              <Point>x:10 y:9</Point>
-              <Point>x:9 y:10</Point>
-              <Point>x:5 y:6</Point>
-              <Point>x:1 y:10</Point>
-              <Point>x:0 y:9</Point>
-              <Point>x:4 y:5</Point>
-              <Point>x:0 y:1</Point>
-              <Point>x:1 y:0</Point>
-              <Point>x:5 y:4</Point>
-              <Point>x:9 y:0</Point>
-              <Point>x:10 y:1</Point>
-            </att.Points>
-          </Polygon>
+          <PartialView WidthRatio="0.5" WidthPageSize="0" HeightRatio="0.5" HeightPageSize="0" PreferredMinSize="x:10 y:10">
+            <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
+              <Polygon Size="x:10 y:10" BorderColor-bind="not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.Text : win10Colors.OnAccent" BackgroundColor-bind="not self.VisuallyEnabled ? win10Colors.DisabledText : self.State == ButtonState::Normal ? win10Colors.Text : win10Colors.OnAccent">
+                <att.Points>
+                  <Point>x:0 y:0</Point>
+                  <Point>x:10 y:10</Point>
+                  <Point>x:5 y:5</Point>
+                  <Point>x:10 y:0</Point>
+                  <Point>x:0 y:10</Point>
+                  <Point>x:5 y:5</Point>
+                </att.Points>
+              </Polygon>
+            </Bounds>
+          </PartialView>
         </Bounds>
       </ButtonTemplate>
     </Instance>

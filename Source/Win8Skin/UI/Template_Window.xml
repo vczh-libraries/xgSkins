@@ -66,7 +66,9 @@
 
         <SolidBackground Color-bind="self.Activated ? win8Colors.WindowCaption : win8Colors.WindowCaptionInactive"/>
         <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0">
-          <SolidBorder ref.Style="windowBorder"/>
+          <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="let margin = self.CustomFramePadding in (self.Border and margin.left + margin.top + margin.right + margin.bottom != 0)">
+            <SolidBorder ref.Style="windowBorder"/>
+          </Bounds>
 
           <Bounds AlignmentToParent-bind="{left:(self.CustomFramePadding.left &gt; 0 ? 4 : 0) top:(self.CustomFramePadding.top + clientCell.CachedBounds.y1)
                                           right:(self.CustomFramePadding.right &gt; 0 ? 4 : 0) bottom:(self.CustomFramePadding.bottom &gt; 0 ? 4 : 0)}">
@@ -252,7 +254,9 @@
   <Instance name="CaptionButtonTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win8skin::CaptionButtonTemplate" ref.Styles="res://Win8Skin/Style">
       <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <SolidBackground Color-bind="not self.VisuallyEnabled ? win8Colors.Transparent : self.State == ButtonState::Pressed ? win8Colors.WindowCaptionButtonPressed : self.State == ButtonState::Active ? win8Colors.WindowCaptionButtonHovered : win8Colors.Transparent"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and self.State != ButtonState::Normal">
+          <SolidBackground Color-bind="self.State == ButtonState::Pressed ? win8Colors.WindowCaptionButtonPressed : win8Colors.WindowCaptionButtonHovered"/>
+        </Bounds>
         <Bounds ref.Name="container" AlignmentToParent="left:2 top:0 right:2 bottom:0"/>
       </ButtonTemplate>
     </Instance>
@@ -260,7 +264,9 @@
   <Instance name="CaptionCloseButtonTemplateResource">
     <Instance ref.CodeBehind="false" ref.Class="win8skin::CaptionCloseButtonTemplate" ref.Styles="res://Win8Skin/Style">
       <ButtonTemplate ref.Name="self" ContainerComposition-ref="container" MinSizeLimitation="LimitToElementAndChildren">
-        <SolidBackground Color-bind="not self.VisuallyEnabled ? win8Colors.Transparent : self.State == ButtonState::Pressed ? win8Colors.WindowClosePressed : self.State == ButtonState::Active ? win8Colors.WindowCloseHovered : win8Colors.Transparent"/>
+        <Bounds AlignmentToParent="left:0 top:0 right:0 bottom:0" Visible-bind="self.VisuallyEnabled and self.State != ButtonState::Normal">
+          <SolidBackground Color-bind="self.State == ButtonState::Pressed ? win8Colors.WindowClosePressed : win8Colors.WindowCloseHovered"/>
+        </Bounds>
         <Bounds ref.Name="container" AlignmentToParent="left:1 top:0 right:1 bottom:0"/>
       </ButtonTemplate>
     </Instance>
