@@ -1,0 +1,1320 @@
+//
+//  GuiGraphicsLayoutProviderCoreText.mm
+//  GacOSX
+//
+//  Created by Robert Bu on 12/18/14.
+//  Copyright (c) 2014 Robert Bu. All rights reserved.
+//
+
+#include "GuiGraphicsLayoutProviderCoreText.h"
+
+#include "../../NativeWindow/OSX/CocoaHelper.h"
+#include "../../NativeWindow/OSX/CocoaNativeController.h"
+#include "../../NativeWindow/OSX/ServicesImpl/CocoaImageService.h"
+
+#include "GuiGraphicsCoreGraphics.h"
+#include "GuiGraphicsCoreGraphicsRenderers.h"
+
+#import <VlppRegex.h>
+
+using namespace vl::presentation;
+using namespace vl::presentation::elements_coregraphics;
+
+class IGuiTextCellCallback {
+public:
+    virtual vl::presentation::Point GetParagraphOffset() = 0;
+    virtual IGuiGraphicsParagraphCallback* GetParagraphCallback() = 0;
+};
+
+@interface GuiElementsTextCell: NSObject<NSTextAttachmentCell>
+{
+    NSTextAttachment* attachment;
+}
+
+@property (nonatomic) NSRange textRange;
+@property (nonatomic) NSRect cellFrame;
+@property (nonatomic) vl::Ptr<IGuiGraphicsElement> graphicsElement;
+@property (nonatomic) IGuiGraphicsParagraph::InlineObjectProperties properties;
+@property (nonatomic) IGuiTextCellCallback* callback;
+
+#ifndef NS_DESIGNATED_INITIALIZER
+#define NS_DESIGNATED_INITIALIZER
+#endif
+
+- (instancetype)initWithGraphicsElement:(vl::Ptr<IGuiGraphicsElement>)element properties:(IGuiGraphicsParagraph::InlineObjectProperties)properties andCallback:(IGuiTextCellCallback*)callback NS_DESIGNATED_INITIALIZER;
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+
+@end
+
+@implementation GuiElementsTextCell
+
+- (instancetype)initWithGraphicsElement:(vl::Ptr<IGuiGraphicsElement>)element properties:(IGuiGraphicsParagraph::InlineObjectProperties)properties andCallback:(IGuiTextCellCallback*)callback
+{
+    if(self = [super init])
+    {
+        _graphicsElement = element;
+        _properties = properties;
+        _callback = callback;
+    }
+    return self;
+}
+
+
+- (void)draw:(NSRect)cellFrame
+{
+    _cellFrame = cellFrame;
+    
+    if(_properties.backgroundImage)
+    {
+        IGuiGraphicsRenderer* graphicsRenderer = _properties.backgroundImage->GetRenderer();
+        if(graphicsRenderer)
+        {
+            vl::presentation::Rect bounds(vl::presentation::Point((vl::vint)cellFrame.origin.x,
+                                                                  (vl::vint)cellFrame.origin.y),
+                                          _properties.size);
+            graphicsRenderer->Render(bounds);
+        }
+    }
+    
+    vl::presentation::Color bgColor = _properties.backgroundColor;
+    if(bgColor.a != 0)
+    {
+        bgColor.a /= 2;
+        CGContextRef context = (CGContextRef)(vl::presentation::elements_coregraphics::GetCurrentRenderTarget()->GetCGContext());
+        CGContextSetRGBFillColor(context, bgColor.r / 255.0f, bgColor.g / 255.0f, bgColor.b / 255.0f, bgColor.a / 255.0f);
+        CGRect bgRect = CGRectMake(cellFrame.origin.x - 0.5f, cellFrame.origin.y - 0.5f,
+                                   _properties.size.x + 1.0f, _properties.size.y + 1.0f);
+        CGContextFillRect(context, bgRect);
+    }
+    
+    if(_properties.callbackId != -1)
+    {
+        if(auto paraCallback = _callback->GetParagraphCallback())
+        {
+            auto offset = _callback->GetParagraphOffset();
+            vl::presentation::Rect bounds(vl::presentation::Point((vl::vint)cellFrame.origin.x - offset.x,
+                                                                  (vl::vint)cellFrame.origin.y - offset.y),
+                                          _properties.size);
+            auto size = paraCallback->OnRenderInlineObject(_properties.callbackId, bounds);
+            _properties.size = size;
+        }
+    }
+    
+}
+
+- (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
+{
+    [self draw:cellFrame];
+}
+
+- (BOOL)wantsToTrackMouse
+{
+    return NO;
+}
+
+- (void)highlight:(BOOL)flag withFrame:(NSRect)cellFrame inView:(NSView *)controlView
+{
+    
+}
+
+- (BOOL)trackMouse:(NSEvent *)theEvent inRect:(NSRect)cellFrame ofView:(NSView *)controlView untilMouseUp:(BOOL)flag
+{
+    return NO;
+}
+
+- (BOOL)wantsToTrackMouseForEvent:(NSEvent *)theEvent inRect:(NSRect)cellFrame ofView:(NSView *)controlView atCharacterIndex:(NSUInteger)charIndex
+{
+    return NO;
+}
+
+- (BOOL)trackMouse:(NSEvent *)theEvent inRect:(NSRect)cellFrame ofView:(NSView *)controlView atCharacterIndex:(NSUInteger)charIndex untilMouseUp:(BOOL)flag
+{
+    return NO;
+}
+
+- (NSSize)cellSize
+{
+    return NSMakeSize(_properties.size.x, _properties.size.y);
+}
+
+- (NSPoint)cellBaselineOffset
+{
+    return NSMakePoint(0, _properties.baseline == -1 ? _properties.size.y : _properties.baseline);
+}
+
+- (void)setAttachment:(NSTextAttachment *)anObject
+{
+    attachment = anObject;
+}
+
+- (NSTextAttachment *)attachment
+{
+    return attachment;
+}
+
+- (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView characterIndex:(NSUInteger)charIndex
+{
+    [self drawWithFrame:cellFrame inView:controlView];
+}
+
+- (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView characterIndex:(NSUInteger)charIndex layoutManager:(NSLayoutManager *)layoutManager
+{
+    [self drawWithFrame:cellFrame inView:controlView];
+}
+
+- (NSRect)cellFrameForTextContainer:(NSTextContainer *)textContainer proposedLineFragment:(NSRect)lineFrag glyphPosition:(NSPoint)position characterIndex:(NSUInteger)charIndex
+{
+    _cellFrame = NSMakeRect(position.x, position.y, _properties.size.x, _properties.size.y);
+    return NSMakeRect(0, 0, _properties.size.x, _properties.size.y);
+}
+
+@end
+
+namespace vl {
+    
+    namespace presentation {
+        
+        using namespace elements;
+        using namespace collections;
+        using namespace osx;
+        
+        namespace elements_coregraphics {
+            
+            class CoreTextParagraph : public Object, public IGuiGraphicsParagraph, public IGuiTextCellCallback
+            {
+            protected:
+                struct TextRange
+                {
+                    vint    start;
+                    vint    end;
+                    
+                    TextRange() { }
+                    TextRange(vint _start, vint _end):
+                        start(_start),
+                        end(_end)
+                    {
+                    }
+
+					GUI_DEFINE_COMPARE_OPERATORS(TextRange)
+                };
+                
+                struct TextCellContainer
+                {
+                    __unsafe_unretained GuiElementsTextCell* textCell;
+                    
+                    TextCellContainer(GuiElementsTextCell* c): textCell(c) {}
+                    TextCellContainer() {}
+                };
+                
+                typedef Dictionary<IGuiGraphicsElement*, TextCellContainer>     InlineElementMap;
+                typedef Dictionary<TextRange, IGuiGraphicsElement*>             GraphicsElementMap;
+                typedef Dictionary<TextRange, Color>                            BackgroundColorMap;
+                
+                struct BoundingMetrics
+                {
+                    vint textPosition;
+                    vint textLength;
+                    CGFloat lineHeight;
+                    CGFloat yOffset;
+                    Rect boundingRect;
+                    
+                    BoundingMetrics():textPosition(-1), textLength(-1), lineHeight(0), yOffset(0) {}
+                    BoundingMetrics(vint _textPosition, vint _textLength, CGFloat _lineHeight, CGFloat _yOffset, const Rect& _rect):
+                        textPosition(_textPosition),
+                        textLength(_textLength),
+                        lineHeight(_lineHeight),
+                        yOffset(_yOffset),
+                        boundingRect(_rect)
+                    {
+                        
+                    }
+                };
+                
+            protected:
+                IGuiGraphicsLayoutProvider*				provider;
+                ICoreGraphicsRenderTarget*              renderTarget;
+                WString									paragraphText;
+                Array<vint>                             utf16Offsets;
+                Array<vint>                             nativeOffsets;
+                bool									wrapLine;
+                vint									maxWidth;
+                List<Color>								usedColors;
+                
+                GraphicsElementMap						graphicsElements;
+                InlineElementMap                        inlineElements;
+                BackgroundColorMap                      backgroundColors;
+                
+                NSMutableArray*                         textCellStorage;
+                
+                vint									caretPos;
+                Color									caretColor;
+                bool									caretFrontSide;
+                bool                                    caretVisible;
+                
+                Alignment                               textAlignment;
+                
+                NSTextStorage*                          textStorage;
+                NSTextContainer*                        textContainer;
+                NSLayoutManager*                        layoutManager;
+
+                bool                                    needFormatData;
+                Dictionary<vint, BoundingMetrics>       glyphBoundingRects;
+                Array<vint>                             charBoundingMetricsMap;
+                Array<BoundingMetrics>                  lineFragments;
+                Dictionary<vint, vint>                  charLineFragmentsMap;
+                
+                IGuiGraphicsParagraphCallback*          paraCallback;
+                vl::presentation::Point                 paraOffset;
+                
+            public:
+                // todo callback
+                CoreTextParagraph(IGuiGraphicsLayoutProvider* _provider, const WString& _text, ICoreGraphicsRenderTarget* _renderTarget, IGuiGraphicsParagraphCallback* _callback):
+                    provider(_provider),
+                    renderTarget(_renderTarget),
+                    paragraphText(_text),
+                    wrapLine(true),
+                    maxWidth(-1),
+                    caretPos(-1),
+                    caretFrontSide(false),
+                    caretVisible(false),
+                    textAlignment(Alignment::Left),
+                    paraCallback(_callback)
+                {
+                    usedColors.Add(Color(0, 0, 0));
+                    
+                    graphicsElements.Add(TextRange(0, _text.Length()), 0);
+                    backgroundColors.Add(TextRange(0, _text.Length()), Color(0, 0, 0, 0));
+
+                    FontProperties defaultFontProperties = GetOSXNativeController()->ResourceService()->GetDefaultFont();
+                    NSFont* defaultFont = CreateFontWithGacFont(defaultFontProperties);
+                    if (!defaultFont)
+                    {
+                        defaultFont = CreateFontWithFontFamily(GAC_APPLE_DEFAULT_FONT_FAMILY_NAME, 0, 12);
+                    }
+                    textStorage = [[NSTextStorage alloc] initWithString:WStringToNSString(_text) attributes:@{
+                        NSParagraphStyleAttributeName: [NSParagraphStyle defaultParagraphStyle],
+                        NSFontAttributeName: defaultFont
+                    }];
+                    
+                    // GacUI offsets count native wchar_t scalars; AppKit offsets count UTF-16 units.
+                    utf16Offsets.Resize(_text.Length() + 1);
+                    nativeOffsets.Resize(textStorage.length + 1);
+                    vint utf16 = 0;
+                    for (vint i = 0; i < _text.Length(); i++)
+                    {
+                        utf16Offsets[i] = utf16;
+                        nativeOffsets[utf16++] = i;
+                        if (_text[i] > 0xFFFF) nativeOffsets[utf16++] = i;
+                    }
+                    utf16Offsets[_text.Length()] = utf16;
+                    nativeOffsets[utf16] = _text.Length();
+
+                    textContainer = [[NSTextContainer alloc] initWithContainerSize:NSMakeSize(maxWidth == -1 ? CGFLOAT_MAX : maxWidth, CGFLOAT_MAX)];
+                    layoutManager = [[NSLayoutManager alloc] init];
+                    
+                    [layoutManager addTextContainer:textContainer];
+                    [textStorage addLayoutManager:layoutManager];
+                    
+                    textCellStorage = [NSMutableArray new];
+                    
+                    needFormatData = true;
+                }
+                
+                ~CoreTextParagraph()
+                {
+                    
+                }
+                
+            public:
+                IGuiGraphicsLayoutProvider* GetProvider() override
+                {
+                    return provider;
+                }
+                
+                IGuiGraphicsRenderTarget* GetRenderTarget() override
+                {
+                    return renderTarget;
+                }
+                
+                bool GetWrapLine() override
+                {
+                    return wrapLine;
+                }
+                
+                void SetWrapLine(bool value) override
+                {
+                    wrapLine = value;
+                    
+                    NSMutableParagraphStyle* paragrahStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+                    [paragrahStyle setLineBreakMode:value ? NSLineBreakByWordWrapping : NSLineBreakByClipping];
+                    
+                    // When wrapLine=false, container must be wide enough to prevent wrapping
+                    // When wrapLine=true, container uses maxWidth
+                    CGFloat containerWidth = value
+                        ? (maxWidth != -1 ? maxWidth : CGFLOAT_MAX)
+                        : CGFLOAT_MAX;
+                    [textContainer setContainerSize:NSMakeSize(containerWidth, CGFLOAT_MAX)];
+                    
+                    [textStorage beginEditing];
+                    [textStorage enumerateAttributesInRange:NSMakeRange(0, textStorage.length)
+                                                    options:0
+                                                 usingBlock:^(NSDictionary *attrs, NSRange range, BOOL *stop)
+                     {
+                         NSParagraphStyle* style = [attrs objectForKey:NSParagraphStyleAttributeName];
+                         if(style)
+                         {
+                             [textStorage removeAttribute:NSParagraphStyleAttributeName range:range];
+                         }
+                     }];
+                    [textStorage addAttribute:NSParagraphStyleAttributeName
+                                        value:paragrahStyle
+                                        range:NSMakeRange(0, textStorage.length)];
+                    [textStorage endEditing];
+                    
+                    needFormatData = true;
+                }
+                
+                vint GetMaxWidth() override
+                {
+                    return maxWidth;
+                }
+                
+                void SetMaxWidth(vint value) override
+                {
+                    maxWidth = value;
+                    // When wrapLine=false, container stays wide regardless of maxWidth
+                    CGFloat containerWidth = wrapLine
+                        ? (value != -1 ? value : CGFLOAT_MAX)
+                        : CGFLOAT_MAX;
+                    [textContainer setContainerSize:NSMakeSize(containerWidth, CGFLOAT_MAX)];
+                    needFormatData = true;
+                }
+                
+                Alignment GetParagraphAlignment() override
+                {
+                    return textAlignment;
+                }
+                
+                void SetParagraphAlignment(Alignment value) override
+                {
+                    NSMutableParagraphStyle* paragrahStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+                    
+                    switch(value)
+                    {
+                        case Alignment::Left:
+                            [paragrahStyle setAlignment:NSTextAlignmentLeft];
+                            break;
+                            
+                        case Alignment::Right:
+                            [paragrahStyle setAlignment:NSTextAlignmentRight];
+                            break;
+                            
+                        case Alignment::Center:
+                            [paragrahStyle setAlignment:NSTextAlignmentCenter];
+                            break;
+                    }
+                    textAlignment = value;
+                    
+                    
+                    [textStorage beginEditing];
+                    [textStorage enumerateAttributesInRange:NSMakeRange(0, textStorage.length)
+                                                    options:0
+                                                usingBlock:^(NSDictionary *attrs, NSRange range, BOOL *stop)
+                     {
+                         NSParagraphStyle* style = [attrs objectForKey:NSParagraphStyleAttributeName];
+                         if(style)
+                         {
+                             [textStorage removeAttribute:NSParagraphStyleAttributeName range:range];
+                         }
+                     }];
+                    [textStorage addAttribute:NSParagraphStyleAttributeName
+                                        value:paragrahStyle
+                                        range:NSMakeRange(0, textStorage.length)];
+                    [textStorage endEditing];
+                    
+                    needFormatData = true;
+                }
+                
+                bool SetFont(vint start, vint length, const WString& value) override
+                {
+                    // remove old fonts
+                    [textStorage beginEditing];
+                    [textStorage enumerateAttributesInRange:GetStorageRange(start, length)
+                                                    options:0
+                                                usingBlock:^(NSDictionary *attrs, NSRange range, BOOL *stop)
+                    {
+                        NSFont* font = [attrs objectForKey:NSFontAttributeName];
+                        if(font)
+                        {
+                            [textStorage removeAttribute:NSFontAttributeName range:range];
+                            
+                            font = [[NSFontManager sharedFontManager] convertFont:font toFamily:WStringToNSString(value)];
+                        }
+                        
+                        if(!font)
+                        {
+                            font = CreateFontWithFontFamily(GAC_APPLE_DEFAULT_FONT_FAMILY_NAME, 0, 12);
+                            
+                        }
+                        
+                        [textStorage addAttribute:NSFontAttributeName value:font range:range];
+                        needFormatData = true;
+                    }];
+                    [textStorage endEditing];
+                    
+                    return true;
+                }
+                
+                bool SetSize(vint start, vint length, vint value) override
+                {
+                    [textStorage beginEditing];
+                    [textStorage enumerateAttributesInRange:GetStorageRange(start, length)
+                                                    options:0
+                                                usingBlock:^(NSDictionary *attrs, NSRange range, BOOL *stop)
+                     {
+                         
+                         NSFont* font = [attrs objectForKey:NSFontAttributeName];
+                         if(font)
+                         {
+                             [textStorage removeAttribute:NSFontAttributeName range:range];
+                             font = [[NSFontManager sharedFontManager] convertFont:font toSize:value];
+                         }
+                         if(!font)
+                         {
+                             font = CreateFontWithFontFamily(GAC_APPLE_DEFAULT_FONT_FAMILY_NAME, 0, 12);
+                         }
+                         [textStorage addAttribute:NSFontAttributeName value:font range:range];
+                         needFormatData = true;
+                     }];
+                    [textStorage endEditing];
+                    
+                    return true;
+                }
+                
+                bool SetStyle(vint start, vint length, TextStyle value) override
+                {
+                    [textStorage beginEditing];
+                    [textStorage enumerateAttributesInRange:GetStorageRange(start, length)
+                                                options:0
+                                            usingBlock:^(NSDictionary *attrs, NSRange range, BOOL *stop)
+                     {
+                         NSFontTraitMask traitMask = 0;
+                         if(value & TextStyle::Bold)
+                             traitMask |= NSBoldFontMask;
+                         if(value & TextStyle::Italic)
+                             traitMask |= NSItalicFontMask;
+                         
+                         NSFont* font = [attrs objectForKey:NSFontAttributeName];
+                         if(font)
+                         {
+                             [textStorage removeAttribute:NSFontAttributeName range:range];
+                           //  font = [[NSFontManager sharedFontManager] convertFont:font toNotHaveTrait:traitMask];
+                             
+                             NSFontDescriptor* desp = font.fontDescriptor;
+                             
+                             NSInteger originalSize = [[desp.fontAttributes
+                                                        objectForKey:NSFontSizeAttribute] integerValue];
+                             if(!originalSize)
+                                 originalSize = 12;
+                             font = [[NSFontManager sharedFontManager] fontWithFamily:font.familyName
+                                                                               traits:traitMask
+                                                                               weight:5
+                                                                                 size:originalSize];
+                             
+                         }
+                         if(!font)
+                         {
+                             font = CreateFontWithFontFamily(GAC_APPLE_DEFAULT_FONT_FAMILY_NAME, traitMask, 12);
+                         }
+                         [textStorage addAttribute:NSFontAttributeName value:font range:range];
+                         
+                         // Always remove underline/strikeline attributes first;
+                         // they will be re-added below only if the flags are set.
+                         // This matches Windows D2D behavior where SetUnderline/SetStrikethrough
+                         // are always called with TRUE or FALSE.
+                         NSNumber* underlineStyle = [attrs objectForKey:NSUnderlineStyleAttributeName];
+                         if(underlineStyle)
+                         {
+                             [textStorage removeAttribute:NSUnderlineStyleAttributeName range:range];
+                         }
+                         
+                         NSNumber* strikeStyle = [attrs objectForKey:NSStrikethroughStyleAttributeName];
+                         if(strikeStyle)
+                         {
+                             [textStorage removeAttribute:NSStrikethroughStyleAttributeName range:range];
+                         }
+                         needFormatData = true;
+                    }];
+                    
+                    if(value & TextStyle::Strikeline)
+                    {
+                        [textStorage addAttribute:NSStrikethroughStyleAttributeName
+                                            value:[NSNumber numberWithInteger:NSUnderlinePatternSolid | NSUnderlineStyleSingle]
+                                            range:GetStorageRange(start, length)];
+                        needFormatData = true;
+                    }
+                    
+                    if(value & TextStyle::Underline)
+                    {
+                        [textStorage addAttribute:NSUnderlineStyleAttributeName
+                                            value:[NSNumber numberWithInteger:NSUnderlinePatternSolid | NSUnderlineStyleSingle]
+                                            range:GetStorageRange(start, length)];
+                        needFormatData = true;
+                    }
+                    [textStorage endEditing];
+                    
+                    return true;
+                }
+                
+                bool SetColor(vint start, vint length, Color value) override
+                {
+                    [textStorage beginEditing];
+                    [textStorage enumerateAttributesInRange:GetStorageRange(start, length)
+                                                    options:0
+                                                 usingBlock:^(NSDictionary *attrs, NSRange range, BOOL *stop)
+                     {
+                         NSColor* color = [attrs objectForKey:NSForegroundColorAttributeName];
+                         if(color)
+                         {
+                             [textStorage removeAttribute:NSForegroundColorAttributeName range:range];
+                         }
+                     }];
+                    
+                    [textStorage addAttribute:NSForegroundColorAttributeName
+                                        value:[NSColor colorWithRed:value.r / 255.0f
+                                                              green:value.g / 255.0f
+                                                               blue:value.b / 255.0f
+                                                              alpha:value.a / 255.0f]
+                                        range:GetStorageRange(start, length)];
+                    [textStorage endEditing];
+                    
+                    needFormatData = true;
+                    
+                    return true;
+                }
+                
+                bool SetBackgroundColor(vint start, vint length, Color value) override
+                {
+                    SetMap(backgroundColors, start, length, value);
+                    return true;
+                }
+                
+                bool SetInlineObject(vint start, vint length, const InlineObjectProperties& properties) override
+                {
+                    if(length == 0) return true;
+                    if(start < 0 || length < 0 || start > paragraphText.Length() - length) return false;
+                    vint reuseIndex = -1;
+                    for(vint i = 0; i < inlineElements.Count(); ++i)
+                    {
+                        GuiElementsTextCell* cell = inlineElements.Values().Get(i).textCell;
+                        if(start == (vint)cell.textRange.location && length == (vint)cell.textRange.length)
+                        {
+                            auto&& inlineProps = cell.properties;
+                            if(inlineProps.callbackId != properties.callbackId) return false;
+                            if(inlineProps.backgroundImage != properties.backgroundImage) return false;
+                            reuseIndex = i;
+                        }
+                        else
+                        {
+                            if(properties.backgroundImage && inlineElements.Keys()[i] == properties.backgroundImage.Obj())
+                            {
+                                return false;
+                            }
+                            if(start < (vint)(cell.textRange.location + cell.textRange.length) &&
+                               (vint)cell.textRange.location < start + length)
+                                return false;
+                        }
+                    }
+                    
+                    if(reuseIndex != -1)
+                    {
+                        GuiElementsTextCell* cell = inlineElements.Values().Get(reuseIndex).textCell;
+                        cell.properties = properties;
+                        needFormatData = true;
+                        return true;
+                    }
+                    
+                    GuiElementsTextCell* textCell = [[GuiElementsTextCell alloc] initWithGraphicsElement:properties.backgroundImage
+                                                                                              properties:properties
+                                                                                             andCallback:this];
+                    textCell.textRange = NSMakeRange(start, length);
+                    
+                    NSTextAttachment* attachment = [[NSTextAttachment alloc] init];
+                    [attachment setAttachmentCell:textCell];
+                    
+                    NSAttributedString* attachmentStr = [NSAttributedString attributedStringWithAttachment:attachment];
+                    
+                    [textCellStorage addObject:textCell];
+                    
+                    
+                    [textStorage beginEditing];
+                    [textStorage replaceCharactersInRange:NSMakeRange(utf16Offsets[start], 1)
+                                     withAttributedString:attachmentStr];
+                    
+                    auto storageRange = GetStorageRange(start, length);
+                    if(storageRange.length > 1)
+                    {
+                        // well, this is really a hack too
+                        // NSTextAttachment has a special character NSAttachmentCharacter 0xfffc to identify attachments
+                        // it does NOT run through N characters
+                        //
+                        // so here we are replacing unused chars with ZERO WIDTH SPACE
+                        // we cannot just remove them because it will effect length and also attributes applied at different locations
+                        // maybe there are better solutions here?
+                        
+                        NSString* str = [@"" stringByPaddingToLength:storageRange.length-1 withString:@"\u200d" startingAtIndex:0];
+                        [textStorage replaceCharactersInRange:NSMakeRange(storageRange.location+1, storageRange.length-1) withString:str];
+                    }
+                    [textStorage endEditing];
+                    
+                    if(properties.backgroundImage)
+                    {
+                        IGuiGraphicsRenderer* renderer = properties.backgroundImage->GetRenderer();
+                        if(renderer)
+                        {
+                            renderer->SetRenderTarget(renderTarget);
+                        }
+                        inlineElements.Add(properties.backgroundImage.Obj(), textCell);
+                    }
+                    
+                    SetMap(graphicsElements, start, length, properties.backgroundImage.Obj());
+                    needFormatData = true;
+                    
+                    return true;
+                }
+                
+                bool ResetInlineObject(vint start, vint length) override
+                {
+                    IGuiGraphicsElement* element = nullptr;
+                    if(!GetMap(graphicsElements, start, element) || !element) return false;
+                    GuiElementsTextCell* textCell = inlineElements[element].textCell;
+                    if(start != (vint)textCell.textRange.location || length != (vint)textCell.textRange.length) return false;
+
+                    auto storageRange = GetStorageRange(start, length);
+                    [textStorage beginEditing];
+                    [textStorage removeAttribute:NSAttachmentAttributeName range:storageRange];
+                    [textStorage replaceCharactersInRange:storageRange withString:WStringToNSString(paragraphText.Sub(start, length))];
+                    [textStorage endEditing];
+                    if(auto renderer = element->GetRenderer()) renderer->SetRenderTarget(nullptr);
+                    inlineElements.Remove(element);
+                    SetMap(graphicsElements, start, length, static_cast<IGuiGraphicsElement*>(nullptr));
+                    [textCellStorage removeObject:textCell];
+                    needFormatData = true;
+                    return true;
+                }
+                
+                Size GetSize() override
+                {
+                    [layoutManager glyphRangeForTextContainer:textContainer];
+                    auto size = [layoutManager usedRectForTextContainer:textContainer].size;
+                    if (size.height < 1 && textStorage.length == 0)
+                    {
+                        // Empty text: NSLayoutManager reports 0 height since there are no glyphs.
+                        // Match D2D/GDI behavior: return the default font's line height.
+                        FontProperties defaultFontProperties = GetOSXNativeController()->ResourceService()->GetDefaultFont();
+                        NSFont* font = CreateFontWithGacFont(defaultFontProperties);
+                        if (!font)
+                        {
+                            font = CreateFontWithFontFamily(GAC_APPLE_DEFAULT_FONT_FAMILY_NAME, 0, 12);
+                        }
+                        size.height = [layoutManager defaultLineHeightForFont:font];
+                    }
+                    return Size(wrapLine ? 0 : size.width, size.height);
+                }
+                
+                bool EnableCaret(vint _caret, Color _color, bool _frontSide) override
+                {
+                    if(!IsValidCaret(_caret))
+                        return false;
+                    if(caretPos != -1)
+                        DisableCaret();
+
+                    caretPos = _caret;
+                    caretColor = _color;
+                    caretFrontSide = _frontSide;
+                    caretVisible = true;
+                    return true;
+                }
+                
+                void DisableCaret() override
+                {
+                    caretVisible = false;
+                    caretPos = -1;
+                }
+
+                bool BlinkCaret() override
+                {
+                    if (caretPos == -1) return false;
+                    caretVisible = !caretVisible;
+                    return true;
+                }
+                
+                void Render(Rect bounds) override
+                {
+                    paraOffset = bounds.LeftTop();
+                    
+                    GenerateFormatData();
+                    CGContextRef context = (CGContextRef)(GetCurrentRenderTarget()->GetCGContext());
+
+                    for(vint i = 0; i < backgroundColors.Count(); i++)
+                    {
+                        TextRange key = backgroundColors.Keys()[i];
+                        Color color = backgroundColors.Values()[i];
+                        if(color.a > 0)
+                        {
+                            vint start = key.start;
+                            if(start < 0)
+                            {
+                                start = 0;
+                            }
+                            
+                            CGContextSetRGBFillColor(context, color.r / 255.0f, color.g / 255.0f, color.b / 255.0f, color.a / 255.0f);
+
+                            while(start < charBoundingMetricsMap.Count() && start < key.end)
+                            {
+                                vint index = charBoundingMetricsMap[start];
+                                const BoundingMetrics& charMetrics = glyphBoundingRects[index];
+                                
+                                CGRect rect = CGRectMake(charMetrics.boundingRect.Left() + (CGFloat)bounds.x1,
+                                                         charMetrics.boundingRect.Top() + (CGFloat)bounds.y1,
+                                                         charMetrics.boundingRect.Width() + 1.0f,
+                                                         charMetrics.boundingRect.Height() + 1.0f);
+                                
+                                CGContextFillRect(context, rect);
+                                
+                                start = charMetrics.textPosition + charMetrics.textLength;
+                            }
+                        }
+                    }
+                    
+                    NSRect rect = NSMakeRect((CGFloat)bounds.Left(),
+                                             (CGFloat)bounds.Top(),
+                                             maxWidth,
+                                             CGFLOAT_MAX);
+                    
+                    NSRange glyphRange = [layoutManager glyphRangeForTextContainer:textContainer];
+                    [layoutManager drawGlyphsForGlyphRange:glyphRange atPoint:rect.origin];
+
+                    if(caretVisible && caretColor.a > 0)
+                    {
+                        Rect caretBounds = GetCaretBounds(caretPos, caretFrontSide);
+                        vint x = caretBounds.x1 + bounds.x1;
+                        vint y1 = caretBounds.y1 + bounds.y1;
+                        vint y2 = y1 + (vint)(caretBounds.Height() * 1.5);
+                        
+                        CGPoint points[2];
+                        CGContextSetLineWidth(context, 2.0f);
+                        CGContextSetRGBStrokeColor(context, caretColor.r / 255.0f, caretColor.g / 255.0f, caretColor.b / 255.0f, caretColor.a / 255.0f);
+                        
+                        points[0] = CGPointMake(x, y1);
+                        points[1] = CGPointMake(x, y2);
+                        CGContextStrokeLineSegments(context, points, 2);
+                    }
+                }
+                
+                vint GetCaret(vint comparingCaret, CaretRelativePosition position, bool& preferFrontSide) override
+                {
+                    GenerateFormatData();
+                    if(position == CaretFirst) return 0;
+                    if(position == CaretLast) return paragraphText.Length();
+                    if(!IsValidCaret(comparingCaret)) return -1;
+                    
+                    vint frontLineIndex = -1;
+                    vint backLineIndex = -1;
+                    GetLineIndexFromTextPos(comparingCaret, frontLineIndex, backLineIndex);
+                    vint lineIndex = preferFrontSide ? frontLineIndex : backLineIndex;
+                    
+                    if(lineIndex == -1)
+                        return 0;
+                    
+                    BoundingMetrics& lineMetrics = lineFragments[lineIndex];
+                    
+                    vint lineStart = lineMetrics.textPosition;
+                    vint lineEnd = lineMetrics.textPosition + lineMetrics.textLength;
+                    
+                    switch(position)
+                    {
+                        case CaretLineFirst:
+                            return lineStart;
+                            
+                        case CaretLineLast:
+                            return lineEnd;
+                            
+                        case CaretMoveLeft:
+                        {
+                            if(comparingCaret == 0)
+                            {
+                                return 0;
+                            }
+                            
+                            const BoundingMetrics& metrics = glyphBoundingRects[charBoundingMetricsMap[comparingCaret-1]];
+                            return metrics.textPosition;
+                        }
+                            
+                        case CaretMoveRight:
+                        {
+                            if(comparingCaret == paragraphText.Length()) return comparingCaret;
+                            const auto& metrics = glyphBoundingRects[charBoundingMetricsMap[comparingCaret]];
+                            auto newCaret = metrics.textPosition + metrics.textLength;
+                            if(newCaret == lineEnd) preferFrontSide = false;
+                            return newCaret;
+                        }
+
+                        case CaretMoveUp:
+                        {
+                            if(lineIndex == 0)
+                            {
+                                return comparingCaret;
+                            }
+                            else
+                            {
+                                Rect bounds = GetCaretBounds(comparingCaret, preferFrontSide);
+                                preferFrontSide = true;
+                                return GetCaretFromXWithLine(bounds.x1, lineIndex-1);
+                            }
+                        }
+                        case CaretMoveDown:
+                        {
+                            if(lineIndex == lineFragments.Count()-1)
+                            {
+                                return comparingCaret;
+                            }
+                            else
+                            {
+                                Rect bounds = GetCaretBounds(comparingCaret, preferFrontSide);
+                                preferFrontSide = false;
+                                return GetCaretFromXWithLine(bounds.x1, lineIndex+1);
+                            }
+                        }
+                            
+                        default:
+                            break;
+                    }
+                    return -1;
+                }
+                
+                Rect GetCaretBounds(vint caret, bool frontSide) override
+                {
+                    GenerateFormatData();
+                    
+                    if(!IsValidCaret(caret)) return Rect();
+                    if(paragraphText.Length() == 0) return Rect(Point(0, 0), Size(0, GetSize().y));
+                    
+                    vint frontLineIndex = -1;
+                    vint backLineIndex = -1;
+                    GetLineIndexFromTextPos(caret, frontLineIndex, backLineIndex);
+                    vint lineIndex = frontSide ? frontLineIndex : backLineIndex;
+                    
+                    if(lineIndex == -1) return Rect(Point(0, 0), Size(0, GetSize().y));
+                    
+                    BoundingMetrics& lineMetrics = lineFragments[lineIndex];
+                    
+                    vint lineStart = lineMetrics.textPosition;
+                    vint lineEnd = lineMetrics.textPosition + lineMetrics.textLength;
+                    if(caret == lineStart)
+                        frontSide = false;
+                    else if(caret == lineEnd)
+                        frontSide = true;
+                    
+                    if(frontSide)
+                        caret--;
+                    
+                    const BoundingMetrics& charMetrics = glyphBoundingRects[charBoundingMetricsMap[caret]];
+                    
+                    if(frontSide)
+                    {
+                        return Rect(Point(charMetrics.boundingRect.Right(),
+                                          charMetrics.boundingRect.Top() + charMetrics.yOffset),
+                                    Size(0, charMetrics.lineHeight));
+                    }
+                    else
+                    {
+                        return Rect(Point(charMetrics.boundingRect.Left(),
+                                          charMetrics.boundingRect.Top() + charMetrics.yOffset),
+                                    Size(0, charMetrics.lineHeight));
+                    }
+                }
+                
+                vint GetCaretFromPoint(Point point) override
+                {
+                    GenerateFormatData();
+                    if(paragraphText.Length() == 0) return 0;
+                    
+                    vint lineIndex = GetLineIndexFromY(point.y);
+                    return GetCaretFromXWithLine(point.x, lineIndex);
+                }
+                
+                Nullable<InlineObjectProperties> GetInlineObjectFromPoint(Point point, vint& start, vint& length) override
+                {
+                    GenerateFormatData();
+                    
+                    NSPoint nsp = NSMakePoint(point.x, point.y);
+                    for(vint i=0; i<inlineElements.Count(); ++i)
+                    {
+                        GuiElementsTextCell* cell = inlineElements.Values().Get(i).textCell;
+                        
+                        if(NSPointInRect(nsp, cell.cellFrame))
+                        {
+                            IGuiGraphicsElement* element = 0;
+                            if(GetMap(graphicsElements, cell.textRange.location, element) && element)
+                            {
+                                start = cell.textRange.location;
+                                length = cell.textRange.length;
+                                
+                                return cell.properties;
+                            }
+                        }
+                    }
+                    return Nullable<InlineObjectProperties>();
+                }
+                
+                vint GetNearestCaretFromTextPos(vint textPos, bool frontSide) override
+                {
+                    GenerateFormatData();
+                    
+                    if(!IsValidTextPos(textPos)) return -1;
+                    if(textPos == 0 || textPos == paragraphText.Length()) return textPos;
+                    
+                    vint index = charBoundingMetricsMap[textPos];
+                    const BoundingMetrics& metrics = glyphBoundingRects[index];
+                    if(metrics.textPosition == textPos)
+                        return textPos;
+                    else if(frontSide)
+                        return metrics.textPosition;
+                    else
+                        return metrics.textPosition + metrics.textLength;
+                }
+                
+                bool IsValidCaret(vint caret) override
+                {
+                    GenerateFormatData();
+                    
+                    if(!IsValidTextPos(caret)) return false;
+                    if(caret == 0 || caret == paragraphText.Length()) return true;
+                    if(glyphBoundingRects[charBoundingMetricsMap[caret]].textPosition == caret) return true;
+                    
+                    return false;
+                }
+                
+                bool IsValidTextPos(vint textPos) override
+                {
+                    return 0 <= textPos && textPos <= paragraphText.Length();
+                }
+                
+                ///// IGuiTextCellBack
+                
+                vl::presentation::Point GetParagraphOffset() override
+                {
+                    return paraOffset;
+                }
+                
+                IGuiGraphicsParagraphCallback* GetParagraphCallback() override
+                {
+                    return paraCallback;
+                }
+                
+            protected:
+                NSRange GetStorageRange(vint start, vint length)
+                {
+                    return NSMakeRange(utf16Offsets[start], utf16Offsets[start + length] - utf16Offsets[start]);
+                }
+
+                void GenerateFormatData()
+                {
+                    if(!needFormatData) return;
+                    needFormatData = false;
+                    auto glyphRange = [layoutManager glyphRangeForTextContainer:textContainer];
+                    glyphBoundingRects.Clear();
+                    charBoundingMetricsMap.Resize(paragraphText.Length());
+
+                    for(vint start = 0; start < paragraphText.Length();)
+                    {
+                        IGuiGraphicsElement* element = nullptr;
+                        GuiElementsTextCell* cell = nil;
+                        if(GetMap(graphicsElements, start, element) && element)
+                        {
+                            cell = inlineElements.Get(element).textCell;
+                        }
+                        auto textLength = cell ? (vint)cell.textRange.length : (vint)1;
+                        if(!cell && paragraphText[start] == L'\r' && start + 1 < paragraphText.Length() && paragraphText[start + 1] == L'\n') textLength = 2;
+                        auto storageRange = GetStorageRange(start, textLength);
+                        auto cluster = [layoutManager glyphRangeForCharacterRange:storageRange actualCharacterRange:nullptr];
+                        auto characters = [layoutManager characterRangeForGlyphRange:cluster actualGlyphRange:nullptr];
+                        auto end = nativeOffsets[NSMaxRange(characters)];
+                        if(end < start + textLength) end = start + textLength;
+                        CHECK_ERROR(end > start, L"CoreTextParagraph#Layout cluster must advance the native text position.");
+                        auto bounding = [layoutManager boundingRectForGlyphRange:cluster inTextContainer:textContainer];
+                        auto attrs = [textStorage attributesAtIndex:storageRange.location effectiveRange:nullptr];
+                        NSFont* font = [attrs objectForKey:NSFontAttributeName];
+                        auto fontLineHeight = font ? [layoutManager defaultLineHeightForFont:font] : bounding.size.height;
+                        CGFloat yOffset = 0;
+                        if(cell)
+                        {
+                            fontLineHeight = cell.properties.size.y;
+                        }
+                        else if(bounding.size.height != fontLineHeight)
+                        {
+                            auto baseline = [[layoutManager typesetter] baselineOffsetInLayoutManager:layoutManager glyphIndex:cluster.location];
+                            yOffset = bounding.size.height - baseline - [font descender] - fontLineHeight + 1;
+                        }
+                        glyphBoundingRects.Add(start, BoundingMetrics(start, end - start, fontLineHeight, yOffset,
+                            Rect(bounding.origin.x, bounding.origin.y, NSMaxX(bounding), NSMaxY(bounding))));
+                        for(vint i = start; i < end; i++) charBoundingMetricsMap[i] = start;
+                        start = end;
+                    }
+
+                    List<BoundingMetrics> metrics;
+                    charLineFragmentsMap.Clear();
+                    for(NSUInteger glyphIndex = glyphRange.location; glyphIndex < NSMaxRange(glyphRange);)
+                    {
+                        NSRange lineRange;
+                        auto bounds = [layoutManager lineFragmentRectForGlyphAtIndex:glyphIndex effectiveRange:&lineRange];
+                        auto characters = [layoutManager characterRangeForGlyphRange:lineRange actualGlyphRange:nullptr];
+                        auto start = nativeOffsets[characters.location];
+                        auto end = nativeOffsets[NSMaxRange(characters)];
+                        auto contentEnd = end;
+                        if(contentEnd > start && paragraphText[contentEnd - 1] == L'\n') contentEnd--;
+                        if(contentEnd > start && paragraphText[contentEnd - 1] == L'\r') contentEnd--;
+                        for(vint i = start; i < end; i++) charLineFragmentsMap.Set(i, metrics.Count());
+                        metrics.Add(BoundingMetrics(start, contentEnd - start, bounds.size.height, 0,
+                            Rect(bounds.origin.x, bounds.origin.y, NSMaxX(bounds), NSMaxY(bounds))));
+                        glyphIndex = NSMaxRange(lineRange);
+                    }
+                    CopyFrom(lineFragments, metrics);
+                }
+
+                vint GetLineIndexFromY(vint y)
+                {
+                    if(paragraphText.Length() == 0) return 0;
+                    if(lineFragments.Count() == 0) return 0;
+                    if(y < lineFragments[0].boundingRect.Top())
+                    {
+                        return 0;
+                    }
+                    const BoundingMetrics& lastLine = lineFragments[lineFragments.Count()-1];
+                    if(y >= lastLine.boundingRect.Bottom())
+                    {
+                        return lineFragments.Count()-1;
+                    }
+                    for(vint i=0; i<lineFragments.Count(); ++i)
+                    {
+                        const BoundingMetrics& metrics = lineFragments[i];
+                        if(metrics.boundingRect.Top() <= y &&
+                           metrics.boundingRect.Bottom() >= y)
+                        {
+                            return i;
+                        }
+                    }
+                    return 0;
+                }
+                
+                vint GetCaretFromXWithLine(vint x, vint lineIndex)
+                {
+                    if(lineIndex == -1) return -1;
+                    
+                    const BoundingMetrics& metrics = lineFragments[lineIndex];
+                    vint lineStart = metrics.textPosition;
+                    vint lineEnd = metrics.textPosition + metrics.textLength;
+                    
+                    float minLineX = 0;
+                    float maxLineX = 0;
+                    
+                    for(vint i = lineStart; i < lineEnd; )
+                    {
+                        const BoundingMetrics& charMetrics = glyphBoundingRects[charBoundingMetricsMap[i]];
+
+                        float minX = charMetrics.boundingRect.Left();
+                        float maxX = minX + charMetrics.boundingRect.Width();
+                        
+                        if(minLineX > minX) minLineX = minX;
+                        if(maxLineX < maxX) maxLineX = maxX;
+                        
+                        if(minX <= x && x < maxX)
+                        {
+                            // todo, check NSGlyphAttributeBidiLevel for layout direction
+                            float d1 = x-minX;
+                            float d2 = maxX-x;
+                            if(d1 <= d2)
+                            {
+                                return i;
+                            }
+                            else
+                            {
+                                return i + charMetrics.textLength;
+                            }
+                        }
+                        i += charMetrics.textLength;
+                    }
+                    
+                    if(x < minLineX) return lineStart;
+                    if(x >= maxLineX) return lineEnd;
+                    return lineStart;
+                }
+                
+                void GetLineIndexFromTextPos(vint textPos, vint& frontLineIndex, vint& backLineIndex)
+                {
+                    frontLineIndex = -1;
+                    backLineIndex = -1;
+                    vint start = 0;
+                    vint end = lineFragments.Count() - 1;
+                    while(start <= end)
+                    {
+                        vint middle = (start + end) / 2;
+                        BoundingMetrics& metrics = lineFragments[middle];
+                        vint lineStart = metrics.textPosition;
+                        vint lineEnd = metrics.textPosition + metrics.textLength;
+                        
+                        if(textPos < lineStart)
+                        {
+                            end = middle - 1;
+                        }
+                        else if(textPos > lineEnd)
+                        {
+                            start = middle + 1;
+                        }
+                        else if(textPos == lineStart && middle != 0)
+                        {
+                            // BoundingMetrics& anotherLine = lineFragments[middle - 1];
+                            frontLineIndex = middle - 1;
+                            backLineIndex = middle;
+                            return;
+                        }
+                        else if(textPos == lineEnd && middle != lineFragments.Count() - 1)
+                        {
+                            frontLineIndex = middle;
+                            backLineIndex = middle + 1;
+                            return;
+                        }
+                        else
+                        {
+                            frontLineIndex = middle;
+                            backLineIndex = middle;
+                            return;
+                        }
+                    }
+                }
+                
+                // copy pasta!
+                 template<typename T>
+                 void CutMap(Dictionary<TextRange, T>& map, vint start, vint length)
+                 {
+                     vint end=start+length;
+                     for(vint i=map.Count()-1;i>=0;i--)
+                     {
+                         TextRange key=map.Keys()[i];
+                         if(key.start<end && start<key.end)
+                         {
+                             T value=map.Values()[i];
+                             
+                             vint s1=key.start;
+                             vint s2=key.start>start?key.start:start;
+                             vint s3=key.end<end?key.end:end;
+                             vint s4=key.end;
+                             
+                             map.Remove(key);
+                             if(s1<s2)
+                             {
+                                 map.Add(TextRange(s1, s2), value);
+                             }
+                             if(s2<s3)
+                             {
+                                 map.Add(TextRange(s2, s3), value);
+                             }
+                             if(s3<s4)
+                             {
+                                 map.Add(TextRange(s3, s4), value);
+                             }
+                         }
+                     }
+                 }
+                 
+                 template<typename T>
+                 void UpdateOverlappedMap(Dictionary<TextRange, T>& map, vint start, vint length, const T& value)
+                 {
+                     vint end=start+length;
+                     for(vint i=map.Count()-1;i>=0;i--)
+                     {
+                         TextRange key=map.Keys()[i];
+                         if(key.start<end && start<key.end)
+                         {
+                             map.Set(key, value);
+                         }
+                     }
+                 }
+                 
+                 template<typename T>
+                 void DefragmentMap(Dictionary<TextRange, T>& map)
+                 {
+                     vint lastIndex=map.Count()-1;
+                     T lastValue=map.Values()[lastIndex];
+                     for(vint i=map.Count()-2;i>=-1;i--)
+                     {
+                         if(i==-1 || map.Values()[i]!=lastValue)
+                         {
+                             if(lastIndex-i>0)
+                             {
+                                 vint start=map.Keys()[i+1].start;
+                                 vint end=map.Keys()[lastIndex].end;
+                                 TextRange key(start, end);
+                                 
+                                 for(vint j=lastIndex;j>i;j--)
+                                 {
+                                     map.Remove(map.Keys()[j]);
+                                 }
+                                 map.Add(key, lastValue);
+                             }
+                             lastIndex=i;
+                             if(i!=-1)
+                             {
+                                 lastValue=map.Values()[i];
+                             }
+                         }
+                     }
+                 }
+                 
+                 template<typename T>
+                 void SetMap(Dictionary<TextRange, T>& map, vint start, vint length, const T& value)
+                 {
+                     CutMap(map, start, length);
+                     UpdateOverlappedMap(map, start, length, value);
+                     DefragmentMap(map);
+                 }
+                 
+                 template<typename T>
+                 bool GetMap(Dictionary<TextRange, T>& map, vint textPosition, T& value)
+                 {
+                     vint start=0;
+                     vint end=map.Count()-1;
+                     while(start<=end)
+                     {
+                         vint middle=(start+end)/2;
+                         TextRange key=map.Keys()[middle];
+                         if(textPosition<key.start)
+                         {
+                             end=middle-1;
+                         }
+                         else if(textPosition>=key.end)
+                         {
+                             start=middle+1;
+                         }
+                         else
+                         {
+                             value=map.Values()[middle];
+                             return true;
+                         }
+                     }
+                     return false;
+                 }
+            };
+            
+            Ptr<elements::IGuiGraphicsParagraph> CoreTextLayoutProvider::CreateParagraph(const WString& text, elements::IGuiGraphicsRenderTarget* renderTarget, elements::IGuiGraphicsParagraphCallback* callback)
+            {
+                return Ptr(new CoreTextParagraph(this, text, dynamic_cast<ICoreGraphicsRenderTarget*>(renderTarget), callback));
+            }
+            
+        }
+        
+    }
+    
+}

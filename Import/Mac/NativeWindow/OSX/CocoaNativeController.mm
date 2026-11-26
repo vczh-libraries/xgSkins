@@ -1,0 +1,545 @@
+//
+//  OSXNativeWindow.cpp
+//  GacTest
+//
+//  Created by Robert Bu on 12/2/14.
+//  Copyright (c) 2014 Robert Bu. All rights reserved.
+//
+
+#include "CocoaNativeController.h"
+
+#include "CocoaWindow.h"
+#include "CocoaHelper.h"
+
+#include "ServicesImpl/CocoaInputService.h"
+#include "ServicesImpl/CocoaScreenService.h"
+#include "ServicesImpl/CocoaResourceService.h"
+#include "ServicesImpl/CocoaClipboardService.h"
+#include "ServicesImpl/CocoaDialogService.h"
+#include "ServicesImpl/CocoaImageService.h"
+
+#include <Cocoa/Cocoa.h>
+
+// _NSGetProgname
+#import <crt_externs.h>
+
+namespace vl::presentation::osx
+{
+    void RefreshCocoaDefaultFont();
+    bool DispatchCocoaTimerEvent(NSEvent* event);
+}
+
+@interface CocoaApplication: NSApplication
+@end
+
+@implementation CocoaApplication
+- (void)sendEvent:(NSEvent*)event
+{
+    if (!vl::presentation::osx::DispatchCocoaTimerEvent(event))
+    {
+        [super sendEvent:event];
+    }
+}
+@end
+
+@interface CocoaApplicationDelegate: NSObject<NSApplicationDelegate>
+
+
+@end
+
+@implementation CocoaApplicationDelegate {
+    NSMenu* mainMenu;
+}
+
+- (void)dealloc
+{
+    [mainMenu release];
+    [super dealloc];
+}
+
+- (NSString*)findAppName
+{
+    size_t i;
+    NSDictionary* infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    
+    // Keys to search for as potential application names
+    NSString* GacNameKeys[] = {
+        @"CFBundleDisplayName",
+        @"CFBundleName",
+        @"CFBundleExecutable",
+    };
+    
+    for (i = 0;  i < sizeof(GacNameKeys) / sizeof(GacNameKeys[0]);  i++)
+    {
+        id name = [infoDictionary objectForKey:GacNameKeys[i]];
+        if (name &&
+            [name isKindOfClass:[NSString class]] &&
+            ![name isEqualToString:@""])
+        {
+            return name;
+        }
+    }
+    
+    char** progname = _NSGetProgname();
+    if (progname && *progname)
+        return [NSString stringWithUTF8String:*progname];
+    
+    // Really shouldn't get here
+    return @"Gac Application";
+}
+
+- (void)createMenu
+{
+    NSString* appName = [self findAppName];
+    
+    mainMenu = [[NSMenu alloc] init];
+    [NSApp setMainMenu:mainMenu];
+    
+    NSMenuItem* appMenuItem = [mainMenu addItemWithTitle:@"" action:NULL keyEquivalent:@""];
+    NSMenu* appMenu = [[NSMenu alloc] init];
+    [appMenuItem setSubmenu:appMenu];
+    
+    [appMenu addItemWithTitle:[NSString stringWithFormat:@"About %@", appName]
+                       action:@selector(orderFrontStandardAboutPanel:)
+                keyEquivalent:@""];
+    [appMenu addItem:[NSMenuItem separatorItem]];
+    NSMenu* servicesMenu = [[NSMenu alloc] init];
+    [NSApp setServicesMenu:servicesMenu];
+    [[appMenu addItemWithTitle:@"Services"
+                        action:NULL
+                 keyEquivalent:@""] setSubmenu:servicesMenu];
+    [appMenu addItem:[NSMenuItem separatorItem]];
+    [appMenu addItemWithTitle:[NSString stringWithFormat:@"Hide %@", appName]
+                       action:@selector(hide:)
+                keyEquivalent:@"h"];
+    [[appMenu addItemWithTitle:@"Hide Others"
+                        action:@selector(hideOtherApplications:)
+                 keyEquivalent:@"h"]
+     setKeyEquivalentModifierMask:NSEventModifierFlagOption | NSEventModifierFlagCommand];
+    [appMenu addItemWithTitle:@"Show All"
+                       action:@selector(unhideAllApplications:)
+                keyEquivalent:@""];
+    [appMenu addItem:[NSMenuItem separatorItem]];
+    [appMenu addItemWithTitle:[NSString stringWithFormat:@"Quit %@", appName]
+                       action:@selector(terminate:)
+                keyEquivalent:@"q"];
+    
+    NSMenuItem* windowMenuItem =
+    [mainMenu addItemWithTitle:@"" action:NULL keyEquivalent:@""];
+    NSMenu* windowMenu = [[NSMenu alloc] initWithTitle:@"Window"];
+    [NSApp setWindowsMenu:windowMenu];
+    [windowMenuItem setSubmenu:windowMenu];
+    
+    [windowMenu addItemWithTitle:@"Minimize"
+                          action:@selector(performMiniaturize:)
+                   keyEquivalent:@"m"];
+    [windowMenu addItemWithTitle:@"Zoom"
+                          action:@selector(performZoom:)
+                   keyEquivalent:@""];
+    [windowMenu addItem:[NSMenuItem separatorItem]];
+    [windowMenu addItemWithTitle:@"Bring All to Front"
+                          action:@selector(arrangeInFront:)
+                   keyEquivalent:@""];
+    
+#if MAC_OS_X_VERSION_MAX_ALLOWED >= 1070
+    if (floor(NSAppKitVersionNumber) > NSAppKitVersionNumber10_6)
+    {
+        [windowMenu addItem:[NSMenuItem separatorItem]];
+        [[windowMenu addItemWithTitle:@"Enter Full Screen"
+                               action:@selector(toggleFullScreen:)
+                        keyEquivalent:@"f"]
+         setKeyEquivalentModifierMask:NSEventModifierFlagControl | NSEventModifierFlagCommand];
+    }
+#endif
+}
+
+- (void)applicationDidFinishLaunching:(NSNotification *)notification
+{
+    [self createMenu];
+}
+
+- (void)applicationDidBecomeActive:(NSNotification *)notification
+{
+    vl::presentation::osx::RefreshCocoaDefaultFont();
+}
+
+- (void)applicationDidResignActive:(NSNotification *)notification
+{
+    vl::presentation::osx::ClosePopupsOnActivation(nullptr, nullptr);
+}
+
+@end
+
+
+namespace vl {
+    
+    namespace presentation {
+        
+        namespace osx {
+            
+            using namespace collections;
+            
+            void GlobalTimerFunc();
+            constexpr short GlobalTimerEventSubtype = 1;
+            
+            class CocoaController : public Object, public virtual INativeController, public virtual INativeWindowService
+            {
+            protected:
+                List<CocoaWindow*>                      windows;
+                INativeWindow*                          mainWindow;
+                
+                SharedCallbackService                   callbackService;
+                CocoaInputService                       inputService;
+                CocoaResourceService                    resourceService;
+                CocoaScreenService                      screenService;
+                SharedAsyncService                      asyncService;
+                CocoaClipboardService                   clipboardService;
+                CocoaImageService                       imageService;
+                CocoaDialogService                      dialogService;
+                
+                CocoaApplicationDelegate*               appDelegate;
+                INativeCallbackService*                 applicationEnvironmentCallbackService = nullptr;
+                bool                                    globalTimerEventPending = false;
+                                
+            public:
+                CocoaController():
+                    mainWindow(0),
+                    inputService(&GlobalTimerFunc, &callbackService),
+                    clipboardService(&callbackService, &imageService)
+                {
+                    [CocoaApplication sharedApplication];
+                    
+                    appDelegate = [[CocoaApplicationDelegate alloc] init];
+                    [[NSApplication sharedApplication] setDelegate:appDelegate];
+                    applicationEnvironmentCallbackService = &callbackService;
+                    
+                    // dock icon
+                    [NSApp setActivationPolicy:NSApplicationActivationPolicyRegular];
+                    
+                    [NSApp finishLaunching];
+                }
+                
+                ~CocoaController()
+                {
+                    inputService.StopTimer();
+                    if ([NSApp delegate] == appDelegate)
+                    {
+                        [NSApp setDelegate:nil];
+                    }
+                    [appDelegate release];
+                    appDelegate = nil;
+                }
+
+                const NativeWindowFrameConfig&	GetMainWindowFrameConfig() override
+                {
+                    return NativeWindowFrameConfig::Default;
+                }
+
+                const NativeWindowFrameConfig&	GetNonMainWindowFrameConfig() override
+                {
+                    return NativeWindowFrameConfig::Default;
+                }
+                
+                INativeWindow* CreateNativeWindow(INativeWindow::WindowMode windowMode) override
+                {
+                    CocoaWindow* window = new CocoaWindow(this, windowMode);
+                    callbackService.InvokeNativeWindowCreated(window);
+                    windows.Add(window);
+                    return window;
+                }
+                
+                void DestroyNativeWindow(INativeWindow* window) override
+                {
+                    CocoaWindow* cocoaWindow = dynamic_cast<CocoaWindow*>(window);
+                    if(window != 0 && windows.Contains(cocoaWindow))
+                    {
+                        cocoaWindow->InvokeDestroying();
+                        callbackService.InvokeNativeWindowDestroying(window);
+                        windows.Remove(cocoaWindow);
+                        
+                        bool isMainWindow = (cocoaWindow == mainWindow);
+                        if(isMainWindow)
+                        {
+                            mainWindow = nullptr;
+                        }
+                        delete cocoaWindow;
+                        
+                        if(isMainWindow)
+                        {
+                            // Post a dummy event to wake nextEventMatchingMask:
+                            // so RunOneCycle returns and the while loop checks
+                            // the now-null mainWindow to exit.
+                            NSEvent* event = [NSEvent otherEventWithType:NSEventTypeApplicationDefined
+                                                                location:NSMakePoint(0, 0)
+                                                           modifierFlags:0
+                                                               timestamp:0
+                                                            windowNumber:0
+                                                                 context:nil
+                                                                 subtype:0
+                                                                   data1:0
+                                                                   data2:0];
+                            [NSApp postEvent:event atStart:YES];
+                        }
+                    }
+                }
+                
+                INativeWindow* GetMainWindow() override
+                {
+                    return mainWindow;
+                }
+                
+                void Run(INativeWindow* window) override
+                {
+                    mainWindow = window;
+                    mainWindow->Show();
+                    while(RunOneCycle());
+                }
+
+                bool RunOneCycle() override
+                {
+                    @autoreleasepool
+                    {
+                        NSEvent* event = [NSApp nextEventMatchingMask:NSEventMaskAny
+                                                            untilDate:[NSDate distantFuture]
+                                                               inMode:NSDefaultRunLoopMode
+                                                              dequeue:YES];
+                        if (event != nil)
+                        {
+                            [NSApp sendEvent:event];
+                            [NSApp updateWindows];
+                        }
+                        asyncService.ExecuteAsyncTasks();
+                    }
+                    return mainWindow != nullptr;
+                }
+                
+                INativeWindow* GetWindow(NativePoint location) override
+                {
+                    CocoaWindow* result = 0;
+                    NativeRect minRect(0, 0, 99999, 99999);
+                    for(vint i=0; i<windows.Count(); ++i)
+                    {
+                        CocoaWindow* window = (CocoaWindow*)windows[i];
+                        NativeRect r = window->GetClientBoundsInScreen();
+                        if(r.Contains(location))
+                        {
+                            if(!result)
+                            {
+                                result = window;
+                                minRect = r;
+                                continue;
+                            }
+                            
+                            if(([window->GetNativeWindow() level] > [result->GetNativeWindow() level]) || [window->GetNativeWindow() level] == NSFloatingWindowLevel)
+                            {
+                                minRect = r;
+                                result = window;
+                            }
+                            else if([window->GetNativeWindow() level] == [result->GetNativeWindow() level])
+                            {
+                                // encapsulates
+                                if(r.Width() * r.Height() < minRect.Width() * minRect.Height())
+                                {
+                                    minRect = r;
+                                    result = window;
+                                }
+                            }
+                        }
+                    }
+                    return result;
+                }
+                
+                //=======================================================================
+                
+                INativeCallbackService* CallbackService() override
+                {
+                    return &callbackService;
+                }
+                
+                INativeResourceService* ResourceService() override
+                {
+                    return &resourceService;
+                }
+                
+                INativeAsyncService* AsyncService() override
+                {
+                    return &asyncService;
+                }
+                
+                INativeClipboardService* ClipboardService() override
+                {
+                    return &clipboardService;
+                }
+                
+                INativeImageService* ImageService() override
+                {
+                    return &imageService;
+                }
+                
+                INativeScreenService* ScreenService() override
+                {
+                    return &screenService;
+                }
+                
+                INativeInputService* InputService() override
+                {
+                    return &inputService;
+                }
+                
+                INativeDialogService* DialogService() override
+                {
+                    return &dialogService;
+                }
+
+                INativeAutomationService* AutomationService() override
+                {
+                    // GuiInitializeUtilities substitutes
+                    // INativeAutomationService::UnavailableService().
+                    return nullptr;
+                }
+                
+                INativeWindowService* WindowService() override
+                {
+                    return this;
+                }
+                
+                WString GetOSVersion()
+                {
+                    return NSStringToWString(vl::presentation::osx::GetOSVersion());
+                }
+                
+                WString GetExecutablePath() override
+                {
+                    return NSStringToWString(GetApplicationPath());
+                }
+                
+                //=======================================================================
+                
+                void DispatchGlobalTimerEvent()
+                {
+                    globalTimerEventPending = false;
+                    if (inputService.IsTimerEnabled())
+                    {
+                        asyncService.ExecuteAsyncTasks();
+                        callbackService.InvokeGlobalTimer();
+                    }
+                }
+
+                void PostGlobalTimerEvent()
+                {
+                    if (globalTimerEventPending) return;
+                    globalTimerEventPending = true;
+                    // Leave the GCD callback before running application code. A task
+                    // can open a hosted modal and pump another Cocoa event loop.
+                    NSEvent* event = [NSEvent otherEventWithType:NSEventTypeApplicationDefined
+                                                      location:NSMakePoint(0, 0)
+                                                 modifierFlags:0
+                                                     timestamp:0
+                                                  windowNumber:0
+                                                       context:nil
+                                                       subtype:GlobalTimerEventSubtype
+                                                         data1:0
+                                                         data2:0];
+                    [NSApp postEvent:event atStart:NO];
+                }
+
+                void SetApplicationEnvironmentCallbackService(INativeCallbackService* value)
+                {
+                    applicationEnvironmentCallbackService = value;
+                }
+
+                void RefreshDefaultFont()
+                {
+                    if (resourceService.RefreshDefaultFontFromSystem() && applicationEnvironmentCallbackService)
+                    {
+                        applicationEnvironmentCallbackService->Invoker()->InvokeEnvironmentChanged();
+                    }
+                }
+
+                List<CocoaWindow*>& GetWindows()
+                {
+                    return windows;
+                }
+            };
+
+            CocoaController* cocoaController = nullptr;
+
+            bool DispatchCocoaTimerEvent(NSEvent* event)
+            {
+                if ([event type] != NSEventTypeApplicationDefined || [event subtype] != GlobalTimerEventSubtype)
+                {
+                    return false;
+                }
+                if (cocoaController) cocoaController->DispatchGlobalTimerEvent();
+                return true;
+            }
+            
+            INativeController* GetOSXNativeController()
+            {
+                return cocoaController;
+            }
+
+            void RefreshCocoaDefaultFont()
+            {
+                if (cocoaController)
+                {
+                    cocoaController->RefreshDefaultFont();
+                }
+            }
+
+            void SetOSXApplicationEnvironmentCallbackService(INativeCallbackService* callbackService)
+            {
+                if (cocoaController)
+                {
+                    cocoaController->SetApplicationEnvironmentCallbackService(callbackService);
+                }
+            }
+            
+            void StartOSXNativeController()
+            {
+                if (cocoaController) return;
+                cocoaController = new CocoaController();
+            }
+            
+            void StopOSXNativeController()
+            {
+                if (!cocoaController) return;
+                delete cocoaController;
+                cocoaController = nullptr;
+            }
+
+            void GetAllCreatedCocoaWindows(List<CocoaWindow*>& windows)
+            {
+                CopyFrom(windows, cocoaController->GetWindows());
+            }
+    
+            void GlobalTimerFunc()
+            {
+                if (cocoaController)
+                {
+                    cocoaController->PostGlobalTimerEvent();
+                }
+            }
+
+            void ClosePopupsOnActivation(CocoaWindow* activatedWindow, SortedList<CocoaWindow*>* exceptions)
+            {
+                if (!cocoaController) return;
+
+                SortedList<CocoaWindow*> emptyExceptions;
+                SortedList<CocoaWindow*>& exRef = exceptions ? *exceptions : emptyExceptions;
+
+                auto& allWindows = cocoaController->GetWindows();
+                for (vint i = 0; i < allWindows.Count(); i++)
+                {
+                    auto window = allWindows[i];
+                    if (window->GetWindowMode() == INativeWindow::Normal)
+                    {
+                        CocoaWindow::ClosePopupsOf(window, exRef);
+                    }
+                }
+            }
+        }
+        
+    }
+    
+}
