@@ -1,6 +1,50 @@
 # Building and running FullControlTest
 
-Development requires Windows, Visual Studio C++ Build Tools with the `v145`
+## macOS
+
+Install the Xcode Command Line Tools (`xcode-select --install`) and CMake
+(`brew install cmake`). From the repository root, build and run with:
+
+```bash
+scripts/macOS/build.sh
+scripts/macOS/test.sh --app:fct
+```
+
+The checked-in imports and generated resources are sufficient for this build.
+To refresh the Cocoa backend, clone the
+[iGac repository](https://github.com/vczh-libraries/iGac) beside this repository,
+then run the development sequence:
+
+```bash
+scripts/macOS/import.sh
+scripts/macOS/syncProj.sh
+scripts/macOS/build.sh
+scripts/macOS/test.sh --app:fct --hosted
+```
+
+`import.sh` mirrors `iGac/Mac` and `iGac/MacShared` into `Import`. `syncProj.sh`
+checks that the imported helpers and checked-in shared sources are present;
+the current snapshots need no source patches. Synchronizing `Release` and the
+showcase XML, or regenerating skins, still requires the Windows workflow below.
+The document editor uses the existing `Test/FullControlTest/SharedDocumentEditor.cpp`
+because the current `iGac/MacShared` snapshot does not contain that helper.
+
+`build.sh` configures a C++20/Objective-C++20 Debug build with reflection disabled
+and builds all test apps. Pass CMake options such as `-DCMAKE_BUILD_TYPE=Release`
+to change the configuration; set `CMAKE_BUILD_PARALLEL_LEVEL` to change the
+default four build jobs. All output goes into the ignored `scripts/macOS/.build`
+directory. The app bundle is `scripts/macOS/.build/bin/FullControlTest.app`.
+No sibling repository or downloaded resource is required to run it.
+
+CoreGraphics renders both window modes. Hosted mode is the default;
+`scripts/macOS/test.sh --app:fct --multiwindow` uses separate native windows.
+The executable also accepts `/Hosted` and `/MultiWindow` directly, with
+`--hosted` and `--multiwindow` aliases. Conflicting modes and unknown arguments
+are rejected. The automation endpoint below is available in both modes.
+
+## Windows
+
+Development on Windows requires Visual Studio C++ Build Tools with the `v145`
 toolset, the latest Windows 10 SDK, and the sibling
 [Release repository](https://github.com/vczh-libraries/Release). Configure
 `VLPP_VSDEVCMD_PATH` as described in `<Release-repo>/.github/Guidelines/Building.md`.
@@ -42,7 +86,7 @@ memory leak checking.
 
 ## Running
 
-Launch `Test/<Platform>/<Configuration>/FullControlTest.exe`, for example
+On Windows, launch `Test/<Platform>/<Configuration>/FullControlTest.exe`, for example
 `Test/x64/Debug/FullControlTest.exe`. `/Hosted` and `/D2D` are the defaults.
 Use `/MultiWindow` for native windows or `/GDI` for the GDI renderer.
 `/Hosted` and `/MultiWindow` are mutually
@@ -71,6 +115,14 @@ $automationUrl = 'http://localhost:8888/Automation/FullControlTest'
 Invoke-RestMethod "$automationUrl/Controls"
 Invoke-RestMethod "$automationUrl/IO" -Method Post `
     -ContentType 'application/json; charset=utf8' -SkipHeaderValidation -Body '!Exit'
+```
+
+On macOS:
+
+```bash
+curl --fail http://localhost:8888/Automation/FullControlTest/Controls
+curl --fail -H 'Content-Type: application/json; charset=utf8' \
+  --data-binary '!Exit' http://localhost:8888/Automation/FullControlTest/IO
 ```
 
 The IO body is a command string, and the content type must match the example.

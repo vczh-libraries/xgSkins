@@ -6,6 +6,7 @@ expose their parent when the state’s `HideBackground` flag is set. Win11Skin a
 former `Transparent` color (`Clear` in UbuntuSkin).
 
 - [Building and running FullControlTest](FullControlTest.md)
+- [macOS FullControlTest verification](macOSVerification.md)
 
 - [Using Win7Skin and its design references](Win7Skin.md)
 - [Win7Skin verification results and limitations](Win7SkinVerification.md)

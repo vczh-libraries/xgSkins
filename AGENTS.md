@@ -3,7 +3,7 @@
 Must read instructions before starting:
 - [Project.md](./Project.md) -- Project structure, build commands, script descriptions.
 - [GacUIExtension.md](./GacUIExtension.md) -- Repo organization and instructions to follow in development activities.
-  - Supported platform for development activities: Windows.
+  - Supported platforms for development activities: Windows, macOS.
 - [job.createSkin.prompt.md](./Jobs/job.createSkin.prompt.md) -- Instructions of creating a new skin. Requirements in this document should also be followed when updating an existing skin.
 
 Additional material:

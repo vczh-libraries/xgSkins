@@ -426,6 +426,7 @@ FodyWeavers.xsd
 #*.lscache
 
 # Repo-specific files
+/scripts/macOS/.build/
 !/Import/Release/
 !/Import/Release/**
 /Test/GacUI.xml.log/

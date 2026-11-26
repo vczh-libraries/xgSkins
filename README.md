@@ -1,6 +1,8 @@
 # GacUI Extra Skins
 
 This repository hosts additional GacUI skins and the `FullControlTest` showcase.
+The showcase builds on Windows and macOS; see the
+[build and launch instructions](doc/FullControlTest.md).
 FullControlTest starts with the built-in `DarkSkin`. Select another appearance
 under **Window Manager → Color Theme**. The [skin index](spec/README.md)
 lists the available designs and palettes.
