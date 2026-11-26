@@ -7,6 +7,7 @@ former `Transparent` color (`Clear` in UbuntuSkin).
 
 - [Building and running FullControlTest](FullControlTest.md)
 - [macOS FullControlTest verification](macOSVerification.md)
+- [Ubuntu verification results and limitations](UbuntuVerification.md)
 
 - [Using Win7Skin and its design references](Win7Skin.md)
 - [Win7Skin verification results and limitations](Win7SkinVerification.md)

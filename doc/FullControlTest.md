@@ -84,13 +84,73 @@ to `Debug|x64`; use `-Configuration Release` and/or `-Platform Win32` for the ot
 configurations. The project compiles without reflection. Debug builds enable CRT
 memory leak checking.
 
-## Running
+## Ubuntu
+
+For development, place the [wGac repository](https://github.com/vczh-libraries/wGac)
+beside this checkout, then run from this repository:
+
+```bash
+./scripts/Linux/import.sh
+./scripts/Linux/syncProj.sh
+./scripts/Linux/build.sh
+```
+
+`import.sh` mirrors `wGac/WGac` and `wGac/WGacShared` into `Import`. It does not
+run upstream scripts or change sibling checkouts. `syncProj.sh` checks the shared
+generated showcase and Wayland drawing sources; no compatibility rewrites are
+currently necessary. The existing `Import/Release` snapshot supplies GacUI. A
+fresh checkout already contains all imported/generated sources and can run
+`build.sh` directly without sibling repositories.
+
+The build uses CMake, C++20 and Clang by default, with reflection disabled.
+Override `CC` and `CXX` on the first build to select another compiler.
+Build products live in the ignored `scripts/Linux/.build` directory.
+Use `build.sh --rebuild` for a clean build. Builds are serial by default because
+the amalgamated framework sources consume substantial memory; set
+`CMAKE_BUILD_PARALLEL_LEVEL` if more build workers fit in memory.
+
+If the build fails because a system dependency is missing, run:
+
+```bash
+sudo ./scripts/Linux/build-prerequisites-ubuntu.sh
+./scripts/Linux/build.sh
+```
+
+The prerequisite script installs packages through Ubuntu's package manager:
+the compiler/build tools, Wayland, XKBCommon, Cairo/Pango, Fontconfig, GIO,
+liburing and libdecor (including its GTK decoration plugin). The build itself
+does not download or install dependencies.
+
+Run from a Wayland desktop session with `WAYLAND_DISPLAY` and `XDG_RUNTIME_DIR`
+available:
+
+```bash
+./scripts/Linux/test.sh --app:fct --hosted
+./scripts/Linux/test.sh --app:fct
+```
+
+The launcher selects hosted mode with `--hosted` and native multi-window mode
+without it. The executable `scripts/Linux/.build/bin/FullControlTest` accepts
+`/Hosted` (its default) or `/MultiWindow`, exclusively. Rendering uses
+Wayland/Cairo/Pango, including the Raw Clock and Touching painters. Native
+Wayland touch acquisition is not supported by wGac.
+
+Local shortcuts work through the application. The GlobalShortcuts portal also
+requires an installed desktop identity for a terminal-launched application,
+with its matching `WGAC_APPLICATION_ID`; otherwise Window Manager reports
+`Global shortcut unavailable`. This launcher does not install files in the
+user's desktop application directory. See
+[wGac's shortcut setup](https://github.com/vczh-libraries/wGac#readme).
+
+## Running on Windows
 
 On Windows, launch `Test/<Platform>/<Configuration>/FullControlTest.exe`, for example
 `Test/x64/Debug/FullControlTest.exe`. `/Hosted` and `/D2D` are the defaults.
 Use `/MultiWindow` for native windows or `/GDI` for the GDI renderer.
 `/Hosted` and `/MultiWindow` are mutually
 exclusive, as are `/D2D` and `/GDI`.
+
+## Selecting a skin
 
 The skin list contains `DarkSkin`, `Win7Skin`, `Win8Skin`, `WinXPSkin`, `WinVistaSkin`, `Win10Skin`, `Win10Skin/Dark`, `Win11Skin`, `Win11Skin/Dark`, `UbuntuSkin`.
 Startup always selects `DarkSkin`; choose a skin in `Window Manager`. The manually maintained
@@ -130,6 +190,16 @@ The IO body is a command string, and the content type must match the example.
 `Queued` means the input was accepted; inspect `Controls` afterward to verify its
 effect. Hosted mode uses `/IO` without a window ID. Multi-window mode also accepts
 `/IO/<windowId>` using IDs from `Controls`.
+
+Ubuntu exposes the same endpoints through MiniHTTP. For example:
+
+```bash
+curl --fail http://localhost:8888/Automation/FullControlTest/Controls
+curl --fail -H 'Content-Type: application/json; charset=utf8' \
+    --data-binary '!Exit' http://localhost:8888/Automation/FullControlTest/IO
+```
+
+Run one showcase process at a time because both modes use port 8888.
 
 For a startup smoke check, inspect the initial `List` / `TextList` page, click
 `Add 10 items`, and verify that both lists contain ten items. `Clear` should empty
