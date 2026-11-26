@@ -92,11 +92,31 @@ These folders should be added to C++ include list:
 
 ### Linux Specific
 
-<!-- to be edited -->
+Project structure:
+- `Import/WGac` folder: a copy of `<wGac-repo>/WGac`.
+- `Import/WGacShared` folder: a copy of `<wGac-repo>/WGacShared`.
+- `Test` folder:
+  - `Linux/<PROJECT-NAME>` folder: Additional files to make a test app work.
+- `Product` folder:
+  - `Linux/<PROJECt-NAME>` folder: Additional files to make a production app work.
+
+These folders should be added to C++ include list:
+- `Import/WGac`
+- `Import/WGacShared`
 
 ### macOS Specific
 
-<!-- to be edited -->
+Project structure:
+- `Import/Mac` folder: a copy of `<iGac-repo>/Mac`.
+- `Import/MacShared` folder: a copy of `<wGac-repo>/MacShared`.
+- `Test` folder:
+  - `macOS/<PROJECT-NAME>` folder: Additional files to make a test app work.
+- `Product` folder:
+  - `macOS/<PROJECt-NAME>` folder: Additional files to make a production app work.
+
+These folders should be added to C++ include list:
+- `Import/Mac`
+- `Import/MacShared`
 
 ### GacJS Specific
 

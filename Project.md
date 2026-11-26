@@ -17,10 +17,15 @@ These repos under the same organization must be cloned as sibling folders:
 - [Tools](https://github.com/vczh-libraries/Tools)
 - [GacUI](https://github.com/vczh-libraries/GacUI)
 - [Release](https://github.com/vczh-libraries/Release)
+- [wGac](https://github.com/vczh-libraries/wGac)
+- [iGac](https://github.com/vczh-libraries/iGac)
 
 ### Updating from Upstream Repos
 
 Instruction here must be followed before doing any actual coding task.
+If any script fails, it could be possible that manual maintained source files need to update according to upstream changes. Fix those files and rerun the script.
+
+#### Windows Specific
 
 Run `scripts/Windows/import.ps1`, which does:
 - Update `Import` folder.
@@ -36,7 +41,20 @@ Run `scripts/Windows/build.ps1`, which does:
 - Build the following solution files, you could use `<Release-repo>/.github/Scripts/copilotBuild.ps1`:
   - `Test/TestApps.sln`
 
-If any script fails, it could be possible that manual maintained source files need to update according to upstream changes. Fix those files and rerun the script.
+#### Linux/macOS Specific
+
+Currently synchronization with `Release` and `GacUI` repos is only doable on Windows.
+- Run `scripts/Linux/build-prerequisites-ubuntu.sh` if any dependency is missing on Linux. Only run this script when failed to build.
+- Run `scripts/(Linux|macOS)/import.sh`, which does:
+  - Update `Import` from `wGac` or `iGac`.
+- Run `scripts/(Linux|macOS)/syncProj.sh`, which does:
+  - Perform any necessary minimal fixing on copied files.
+  - Limit these fixing on build breaks only, do not introduce feature changes or upgrades.
+- Run `scripts/(Linux|macOS)/build.sh` to build on Linux or macOS.
+  - The script run `cmake` to prepare for all test apps and then build all of them.
+
+Any dependency should be installed appropriately, DO NOT download them to any temporary folder and make `build.sh` or `CMakeLists.txt` depend on them.
+The goal is to make sure this repo being able to just work by running these scripts on a new environment.
 
 ## Project Structure
 
@@ -52,6 +70,7 @@ If any script fails, it could be possible that manual maintained source files ne
       - `UI/FullControlTest` folder.
       - `FullControlTestRaw*.(h|cpp)`
       - `SharedDocumentEditor.(h|cpp)`
+      - For Linux and macOS, same group of files will be copied to `Import/(WGac|Mac)Shared`, no need to copy again.
     - Generated files:
       - `UI/Source` folder: generated files from `UI/FullControlTest/Resource.xml`. The generated `FullControlTestResource.cpp` will be used to avoid the need of loading a binary resource file in runtime.
     - Manual maintained files:
@@ -63,12 +82,33 @@ If any script fails, it could be possible that manual maintained source files ne
           - `<SKIN-NAME>/THEME`: the skin from `Source/<SKIN-NAME>`, only when such skin has multiple color themes.
       - `Main.cpp`: start the test app for demoing skins.
   - `TestApps.sln`
+  - `Linux` folder
+    - `FullControlTest` folder: Additional manual maintained files.
+  - `macOS` folder
+    - `FullControlTest` folder: Additional manual maintained files.
   - `GacUI.xml`
 - `Spec` folder
   - `<SKIN-NAME>` folder
     - `Animation.md`: Explaining animations for a skin.
     - `ColorPackage.md`: Explaining colors for a skin.
     - `TestGuidance.md`: Test guidance when changing a skin.
+- `scripts` folder
+  - `Windows` folder
+    - `import.ps1`
+    - `syncProj.ps1`
+    - `build.ps1`
+  - `Linux` folder
+    - `build-prerequisites-ubuntu.sh`: Calls `<wGac-repo>/build-prerequisites-ubuntu.sh` with additional prerequisites only for this repo.
+    - `import.sh`
+    - `build.ps1`: Run `CMakeLists.txt` to prepare `.build` folder and build.
+    - `CMakeLists.txt`
+    - `.build` folder, it should be gitignored.
+  - `macOS` folder
+    - `import.sh`
+    - `build.ps1`: Run `CMakeLists.txt` to prepare `.build` folder and build.
+    - `CMakeLists.txt`
+    - `.build` folder, it should be gitignored.
+  - `CMakeLists.txt`: Shared content for `(Linux|macOS)/CMakeLists.txt`.
 
 The initial content of `GacUI.xml` is just one line `<GacUI/>`, other contents are added only when necessary.
 Only run `GacBuild.ps1` on `Source/GacUI.xml` when any files in `Source/<SKIN-NAME>/UI` is changed.
