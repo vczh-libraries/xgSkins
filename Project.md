@@ -94,20 +94,16 @@ The goal is to make sure this repo being able to just work by running these scri
     - `TestGuidance.md`: Test guidance when changing a skin.
 - `scripts` folder
   - `Windows` folder
-    - `import.ps1`
-    - `syncProj.ps1`
-    - `build.ps1`
   - `Linux` folder
-    - `build-prerequisites-ubuntu.sh`: Calls `<wGac-repo>/build-prerequisites-ubuntu.sh` with additional prerequisites only for this repo.
-    - `import.sh`
-    - `build.ps1`: Run `CMakeLists.txt` to prepare `.build` folder and build.
     - `CMakeLists.txt`
-    - `.build` folder, it should be gitignored.
+    - `.build` folder, `cmake` put all generated files here, it should be gitignored.
+    - `test.sh`: A script for launch test apps:
+      - `--app:fct (--hosted)?`: Launch `FullControlTest` with or without hosted mode.
   - `macOS` folder
-    - `import.sh`
-    - `build.ps1`: Run `CMakeLists.txt` to prepare `.build` folder and build.
     - `CMakeLists.txt`
-    - `.build` folder, it should be gitignored.
+    - `.build` folder, `cmake` put all generated files here, it should be gitignored.
+    - `test.sh`: A script for launch test apps:
+      - `--app:fct (--hosted)?`: Launch `FullControlTest` with or without hosted mode.
   - `CMakeLists.txt`: Shared content for `(Linux|macOS)/CMakeLists.txt`.
 
 The initial content of `GacUI.xml` is just one line `<GacUI/>`, other contents are added only when necessary.
